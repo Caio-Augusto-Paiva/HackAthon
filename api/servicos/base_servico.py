@@ -22,8 +22,13 @@ def sincronizar_indice(ctx: Contexto) -> None:
     """Registra em ``versoes_base`` as versões do disco que ainda faltam (com o hash do arquivo).
 
     Quem grava uma execução de casos chama isto antes: ``execucoes_casos.versao`` tem chave estrangeira para
-    ``versoes_base``. Uma versão já registrada não é lida nem alterada; a escrita é uma transação só, e duas
-    requisições simultâneas não colidem (``ON CONFLICT DO NOTHING``).
+    ``versoes_base``. Uma versão já registrada não é lida nem alterada; duas requisições simultâneas não
+    colidem (``ON CONFLICT DO NOTHING``).
+
+    **Transação:** a função abre e confirma a própria transação (``with ctx.conn:``). Por isso deve ser chamada
+    **antes** do ``with ctx.conn:`` de quem grava a execução, nunca dentro dele: o ``with`` interno faria
+    ``commit`` de tudo o que o bloco externo já escreveu, antes da hora, e um erro depois disso não desfaria
+    mais essas escritas. Sem versão faltando, não escreve nem abre transação.
     """
     registradas = {linha["versao"] for linha in repo.listar_versoes_base(ctx.conn)}
     faltam = [v for v in ctx.repo.listar_versoes() if v not in registradas]

@@ -163,6 +163,41 @@ def test_grafo_ida_e_volta(cliente: TestClient, base_dir: Path, grafo: dict):
     validar_contrato("obter_grafo", grafo)
 
 
+def test_grafo_sem_nulos_superfluos_nas_arestas(grafo: dict):
+    """Cada aresta traz só os campos do seu papel (o formato do exemplo), não os do outro papel como ``null``."""
+    condicoes = [a for a in grafo["arestas"] if a["papel"] == "condicao"]
+    conclusoes = [a for a in grafo["arestas"] if a["papel"] == "conclusao"]
+    assert condicoes and conclusoes
+    for aresta in condicoes:
+        assert "cf" not in aresta
+        assert {"ordem", "op", "valor", "negado"} <= set(aresta)
+    for aresta in conclusoes:
+        assert set(aresta) == {"id", "papel", "origem", "destino", "cf"}
+    # cf_minimo só aparece onde a base o define (R-URG-d1), nunca como null nas demais
+    com_limite = {a["destino"] for a in condicoes if "cf_minimo" in a}
+    assert com_limite == {"R-URG-d1"}
+    assert all(v is not None for a in grafo["arestas"] for k, v in a.items() if k != "valor")
+    validar_contrato("obter_grafo", grafo)
+
+
+def test_grafo_mantem_valor_nulo_quando_a_base_o_informa(cliente: TestClient, base_dir: Path):
+    """``valor: null`` explícito numa condição é informação (não "padrão verdadeiro"): vai à resposta e volta igual."""
+    dados = json.loads((base_dir / "versoes" / "v0001.json").read_text(encoding="utf-8"))
+    regra = next(r for r in dados["regras"] if r["id"] == "R-D1-01")
+    regra["se"][0]["valor"] = None
+    arquivo = base_dir / "versoes" / "v0002.json"
+    arquivo.write_text(json.dumps(dados, ensure_ascii=False), encoding="utf-8")
+
+    corpo = cliente.get("/api/base/versoes/v0002/grafo").json()
+    aresta = next(a for a in corpo["arestas"] if a["id"] == "R-D1-01:se:0")
+    assert "valor" in aresta and aresta["valor"] is None
+    outra = next(a for a in corpo["arestas"] if a["id"] == "R-D1-02:se:0")  # a condição sem valor explícito nulo
+    assert outra["valor"] is True
+    base = carregar_base(arquivo)
+    assert base.regras[1].se[0].valor is None
+    assert grafo_para_base(Grafo.model_validate(corpo)) == base
+
+
 def test_get_nao_escreve_nada(cliente: TestClient, base_dir: Path, config: Configuracao):
     antes = sorted(p.name for p in (base_dir / "versoes").iterdir())
     for rota in ("/api/base/versoes", "/api/base/versoes/v0001", "/api/base/versoes/v0001/grafo"):
@@ -283,6 +318,12 @@ def test_validar_estrutura_quebrada_em_varias_formas(cliente: TestClient, grafo:
     assert relatorio["valida"] is False
     assert {e["codigo"] for e in relatorio["erros"]} == {"estrutura"}
     assert relatorio["resumo"] == {"simbolos": 0, "regras": 0, "suposicao_a_validar": 0}
+
+
+def test_openapi_documenta_a_excecao_do_422_em_validar(app):
+    descricao = app.openapi()["paths"]["/api/base/validar"]["post"]["description"]
+    assert "sempre 200" in descricao
+    assert "surrogate" in descricao and "422" in descricao and "entrada_invalida" in descricao
 
 
 @pytest.mark.parametrize("corpo", [[], [1, 2], "texto", 7, None])
