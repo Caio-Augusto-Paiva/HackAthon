@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "versao": "minima-v1",
+    "autor": "fixture",
+    "nota": "fixture de software, sem significado clínico",
+    "triagem": [
+      {
+        "id": "dias",
+        "selecao": "unica",
+        "simbolos": ["dias_em_lactacao"],
+        "texto": {
+          "produtor": "Há quantos dias a vaca está em lactação?",
+          "veterinario": "Dias em lactação (DEL)?"
+        }
+      },
+      {
+        "id": "sinais",
+        "selecao": "multipla",
+        "simbolos": ["sinal_a", "sinal_b"],
+        "texto": {
+          "produtor": "Marque o que você observa no animal.",
+          "veterinario": "Sinais presentes ao exame."
+        },
+        "opcoes": {
+          "sinal_a": {"produtor": "Sinal A", "veterinario": "Sinal A (exame)"},
+          "sinal_b": {"produtor": "Sinal B", "veterinario": "Sinal B (exame)"}
+        }
+      }
+    ]
+  },
+  "simbolos": [
+    {
+      "id": "dias_em_lactacao",
+      "tipo": "ficha",
+      "nome": "Dias em lactação",
+      "dominio": {"tipo": "numerico", "min": 0, "max": 400, "unidade": "dias"},
+      "pergunta": {
+        "produtor": "Há quantos dias a vaca está em lactação?",
+        "veterinario": "Dias em lactação (DEL)?"
+      },
+      "campo_ficha": "dias_em_lactacao"
+    },
+    {
+      "id": "sinal_a",
+      "tipo": "pergunta",
+      "nome": "Sinal A",
+      "dominio": {"tipo": "booleano"},
+      "pergunta": {
+        "produtor": "O animal apresenta o sinal A?",
+        "veterinario": "Sinal A presente?"
+      }
+    },
+    {
+      "id": "sinal_b",
+      "tipo": "pergunta",
+      "nome": "Sinal B",
+      "dominio": {"tipo": "booleano"},
+      "pergunta": {
+        "produtor": "O animal apresenta o sinal B?",
+        "veterinario": "Sinal B presente?"
+      }
+    },
+    {
+      "id": "recente",
+      "tipo": "derivado",
+      "nome": "Lactação recente",
+      "dominio": {"tipo": "booleano"}
+    },
+    {
+      "id": "pergunta_x",
+      "tipo": "pergunta",
+      "nome": "Pergunta X",
+      "dominio": {"tipo": "booleano"},
+      "pergunta": {
+        "produtor": "Você notou o fato X?",
+        "veterinario": "Fato X confirmado?"
+      },
+      "por_que": {
+        "produtor": "Ajuda a separar a hipótese D1 de outras.",
+        "veterinario": "Discrimina D1 no diferencial."
+      }
+    },
+    {
+      "id": "exame_v",
+      "tipo": "pergunta",
+      "nome": "Exame V",
+      "dominio": {"tipo": "booleano"},
+      "pergunta": {
+        "veterinario": "Resultado do exame V é positivo?"
+      }
+    },
+    {
+      "id": "d1",
+      "tipo": "doenca",
+      "nome": "Doença D1",
+      "dominio": {"tipo": "booleano"},
+      "gravidade": "alta"
+    },
+    {
+      "id": "chamar_agora",
+      "tipo": "urgencia",
+      "nome": "Chamar o veterinário agora",
+      "dominio": {"tipo": "booleano"}
+    },
+    {
+      "id": "observar",
+      "tipo": "urgencia",
+      "nome": "Observar",
+      "dominio": {"tipo": "booleano"}
+    },
+    {
+      "id": "sem_problema",
+      "tipo": "urgencia",
+      "nome": "Sem problema aparente",
+      "dominio": {"tipo": "booleano"}
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-REC-01",
+      "se": [{"simbolo": "dias_em_lactacao", "op": "≤", "valor": 21}],
+      "entao": {"simbolo": "recente", "cf": 0.99},
+      "fonte": "fixture de software",
+      "status": "validada",
+      "nota": "fixture de software, sem significado clínico"
+    },
+    {
+      "id": "R-D1-01",
+      "se": [{"simbolo": "sinal_a"}],
+      "entao": {"simbolo": "d1", "cf": 0.6},
+      "fonte": "fixture de software",
+      "status": "validada",
+      "nota": "fixture de software, sem significado clínico"
+    },
+    {
+      "id": "R-D1-02",
+      "se": [{"simbolo": "recente"}, {"simbolo": "pergunta_x"}],
+      "entao": {"simbolo": "d1", "cf": 0.5},
+      "fonte": "fixture de software",
+      "status": "validada",
+      "nota": "fixture de software, sem significado clínico"
+    },
+    {
+      "id": "R-D1-03",
+      "se": [{"simbolo": "exame_v"}],
+      "entao": {"simbolo": "d1", "cf": 0.8},
+      "fonte": "fixture de software",
+      "status": "validada",
+      "nota": "fixture de software, sem significado clínico"
+    },
+    {
+      "id": "R-URG-d1",
+      "se": [{"simbolo": "d1", "cf_minimo": 0.5}],
+      "entao": {"simbolo": "chamar_agora", "cf": 0.9},
+      "classe": "urgencia",
+      "fonte": "fixture de software",
+      "status": "validada",
+      "nota": "fixture de software, sem significado clínico"
+    },
+    {
+      "id": "R-BV-01",
+      "se": [{"simbolo": "sinal_b"}],
+      "entao": {"simbolo": "chamar_agora", "cf": 0.99},
+      "classe": "bandeira_vermelha",
+      "fonte": "fixture de software",
+      "status": "validada",
+      "nota": "fixture de software, sem significado clínico"
+    }
+  ]
+}

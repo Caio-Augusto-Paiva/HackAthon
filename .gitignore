@@ -10,3 +10,8 @@ graphify-out/.graphify_root
 
 # Obsidian: estado de tela de cada pessoa (gera conflito entre PCs)
 obsidian/**/.obsidian/workspace*.json
+
+# workspace do subagent-driven-development
+.superpowers/
+.venv/
+*.egg-info/
