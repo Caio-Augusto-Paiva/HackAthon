@@ -219,7 +219,7 @@ Aplicados (aprovados em 20/10):
 4. "OU" com sinais redundantes vira derivado com `combinacao: max`; com sinais independentes, vira regras separadas.
 5. Hipóteses entre 20% e 50% aparecem num bloco separado na interface: "Diagnóstico diferencial / sinais inespecíficos".
 
-6. `sem_problema` sai das regras e vira resultado padrão (evita regra da camada 3 lendo bandeira da mesma camada). **Decisão minha, a confirmar.**
+6. `sem_problema` sai das regras e vira resultado padrão (evita regra da camada 3 lendo bandeira da mesma camada). **Confirmada pela equipe em 20/10/2026.**
 
 ### 3.9 Riscos de domínio
 

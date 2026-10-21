@@ -2,7 +2,7 @@
 
 > **Agente:** Gemini Pro (app web) (alternativa: Codex). **Skills:** `writing-plans`, `verification-before-completion` (obra/superpowers); `pptx` (anthropics/skills, source-available) ou Google Slides para os slides. **Por quê:** a revisão é de comunicação e de riscos, não de código; um revisor de outra família de modelo avalia melhor se a apresentação convence a banca. Ver `docs/agentes-e-skills.md`.
 
-> Status da seção: **RASCUNHO, pendente de aprovação** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
+> Status da seção: **aprovada** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
 
 ---
 
@@ -124,7 +124,7 @@ Meta **(suposição)**: ao menos 8 a 10 entradas por pessoa, com ao menos 2 "rej
 | 15 | 1 | segundo especialista consultado pela equipe | Limiar 0,35 misturado com hipóteses que recebem perguntas | **procedeu**: "hipótese aberta" (−0,2 a 0,80) separada de `hipotese_relevante` (0,35) |
 | 16 | 3 e 5 | subagente Sonnet (rascunho da Seção 5) | R-MET-06 e R-CET-08 nunca disparavam (derivado de período só recebe evidência positiva) | **procedeu**: regras testam `dias_em_lactacao`; validador barra o padrão |
 | 17 | 3 | subagente Sonnet | Contagem de perguntas exclusivas do veterinário (7 em vez de 8) | **procedeu**: corrigido |
-| 18 | 3 | Claude (decisão) | `sem_problema` como regra lia bandeira da mesma camada | decisão: virou resultado padrão; **confirmar com a equipe** |
+| 18 | 3 | Claude (decisão) | `sem_problema` como regra lia bandeira da mesma camada | **procedeu**: virou resultado padrão (confirmado pela equipe) |
 
 Regra de ouro do log: **achado numérico só é aceito ou recusado com execução** (aritmética exata, caso-limite, permutações); achado de domínio só com fonte. Isso vira um ponto forte na apresentação ([A] slide 5: habilidade com agentes de IA).
 
