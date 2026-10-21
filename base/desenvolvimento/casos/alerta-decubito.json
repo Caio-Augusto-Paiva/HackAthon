@@ -1,0 +1,28 @@
+{
+  "id": "DEV-BV-01",
+  "descricao": "Demonstração sintética de alerta por incapacidade de se levantar. Suposição a validar; não constitui caso clínico validado.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 2
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": ["decubito"],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {},
+  "limite_dinamico": 0,
+  "esperado": {
+    "urgencia": "chamar_agora",
+    "bandeira": "R-BV-01",
+    "top1": "hipocalcemia",
+    "faixas": {
+      "hipocalcemia": [64, 65]
+    },
+    "alerta": {
+      "pausa": true
+    }
+  }
+}
