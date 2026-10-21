@@ -1,0 +1,696 @@
+{
+  "$defs": {
+    "Conclusao": {
+      "additionalProperties": false,
+      "properties": {
+        "simbolo": {
+          "title": "Simbolo",
+          "type": "string"
+        },
+        "cf": {
+          "title": "Cf",
+          "type": "number"
+        }
+      },
+      "required": [
+        "simbolo",
+        "cf"
+      ],
+      "title": "Conclusao",
+      "type": "object"
+    },
+    "Condicao": {
+      "additionalProperties": false,
+      "properties": {
+        "simbolo": {
+          "title": "Simbolo",
+          "type": "string"
+        },
+        "op": {
+          "default": "=",
+          "enum": [
+            "=",
+            "≠",
+            "<",
+            "≤",
+            ">",
+            "≥",
+            "em"
+          ],
+          "title": "Op",
+          "type": "string"
+        },
+        "valor": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": true,
+          "title": "Valor"
+        },
+        "negado": {
+          "default": false,
+          "title": "Negado",
+          "type": "boolean"
+        },
+        "cf_minimo": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cf Minimo"
+        },
+        "cf_maximo": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cf Maximo"
+        }
+      },
+      "required": [
+        "simbolo"
+      ],
+      "title": "Condicao",
+      "type": "object"
+    },
+    "DominioBooleano": {
+      "additionalProperties": false,
+      "properties": {
+        "tipo": {
+          "const": "booleano",
+          "default": "booleano",
+          "title": "Tipo",
+          "type": "string"
+        }
+      },
+      "title": "DominioBooleano",
+      "type": "object"
+    },
+    "DominioCategorico": {
+      "additionalProperties": false,
+      "properties": {
+        "tipo": {
+          "const": "categorico",
+          "default": "categorico",
+          "title": "Tipo",
+          "type": "string"
+        },
+        "valores": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Valores",
+          "type": "array"
+        }
+      },
+      "required": [
+        "valores"
+      ],
+      "title": "DominioCategorico",
+      "type": "object"
+    },
+    "DominioNumerico": {
+      "additionalProperties": false,
+      "properties": {
+        "tipo": {
+          "const": "numerico",
+          "default": "numerico",
+          "title": "Tipo",
+          "type": "string"
+        },
+        "min": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min"
+        },
+        "max": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max"
+        },
+        "unidade": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unidade"
+        }
+      },
+      "title": "DominioNumerico",
+      "type": "object"
+    },
+    "Limiares": {
+      "additionalProperties": false,
+      "properties": {
+        "descarte": {
+          "default": -0.2,
+          "title": "Descarte",
+          "type": "number"
+        },
+        "premissa": {
+          "default": 0.2,
+          "title": "Premissa",
+          "type": "number"
+        },
+        "hipotese_relevante": {
+          "default": 0.35,
+          "title": "Hipotese Relevante",
+          "type": "number"
+        },
+        "exaustao": {
+          "default": 0.6,
+          "title": "Exaustao",
+          "type": "number"
+        },
+        "potencial": {
+          "default": 0.7,
+          "title": "Potencial",
+          "type": "number"
+        },
+        "confirmacao": {
+          "default": 0.8,
+          "title": "Confirmacao",
+          "type": "number"
+        },
+        "bloco_principal": {
+          "default": 0.5,
+          "title": "Bloco Principal",
+          "type": "number"
+        },
+        "bloco_diferencial": {
+          "default": 0.2,
+          "title": "Bloco Diferencial",
+          "type": "number"
+        }
+      },
+      "title": "Limiares",
+      "type": "object"
+    },
+    "LimiteDinamico": {
+      "additionalProperties": false,
+      "properties": {
+        "produtor": {
+          "default": 12,
+          "title": "Produtor",
+          "type": "integer"
+        },
+        "veterinario": {
+          "default": 25,
+          "title": "Veterinario",
+          "type": "integer"
+        }
+      },
+      "title": "LimiteDinamico",
+      "type": "object"
+    },
+    "Meta": {
+      "additionalProperties": false,
+      "properties": {
+        "versao": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Versao"
+        },
+        "pai": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pai"
+        },
+        "autor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Autor"
+        },
+        "data": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Data"
+        },
+        "nota": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nota"
+        },
+        "limiares": {
+          "$ref": "#/$defs/Limiares"
+        },
+        "limite_dinamico": {
+          "$ref": "#/$defs/LimiteDinamico"
+        },
+        "triagem": {
+          "items": {
+            "$ref": "#/$defs/Tela"
+          },
+          "title": "Triagem",
+          "type": "array"
+        }
+      },
+      "title": "Meta",
+      "type": "object"
+    },
+    "Posicao": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "title": "Posicao",
+      "type": "object"
+    },
+    "Regra": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "se": {
+          "items": {
+            "$ref": "#/$defs/Condicao"
+          },
+          "minItems": 1,
+          "title": "Se",
+          "type": "array"
+        },
+        "entao": {
+          "$ref": "#/$defs/Conclusao"
+        },
+        "classe": {
+          "default": "evidencia",
+          "enum": [
+            "evidencia",
+            "bandeira_vermelha",
+            "urgencia"
+          ],
+          "title": "Classe",
+          "type": "string"
+        },
+        "prioridade": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prioridade"
+        },
+        "fonte": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fonte"
+        },
+        "status": {
+          "default": "suposicao_a_validar",
+          "enum": [
+            "suposicao_a_validar",
+            "validada"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "nota": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nota"
+        }
+      },
+      "required": [
+        "id",
+        "se",
+        "entao"
+      ],
+      "title": "Regra",
+      "type": "object"
+    },
+    "Simbolo": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "tipo": {
+          "enum": [
+            "pergunta",
+            "ficha",
+            "derivado",
+            "doenca",
+            "urgencia"
+          ],
+          "title": "Tipo",
+          "type": "string"
+        },
+        "nome": {
+          "title": "Nome",
+          "type": "string"
+        },
+        "dominio": {
+          "discriminator": {
+            "mapping": {
+              "booleano": "#/$defs/DominioBooleano",
+              "categorico": "#/$defs/DominioCategorico",
+              "numerico": "#/$defs/DominioNumerico"
+            },
+            "propertyName": "tipo"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/DominioBooleano"
+            },
+            {
+              "$ref": "#/$defs/DominioCategorico"
+            },
+            {
+              "$ref": "#/$defs/DominioNumerico"
+            }
+          ],
+          "title": "Dominio"
+        },
+        "pergunta": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ]
+          },
+          "title": "Pergunta",
+          "type": "object"
+        },
+        "por_que": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ]
+          },
+          "title": "Por Que",
+          "type": "object"
+        },
+        "campo_ficha": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Campo Ficha"
+        },
+        "fonte": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fonte"
+        },
+        "gravidade": {
+          "anyOf": [
+            {
+              "enum": [
+                "alta",
+                "media",
+                "baixa"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Gravidade"
+        },
+        "combinacao": {
+          "default": "mycin",
+          "enum": [
+            "mycin",
+            "max"
+          ],
+          "title": "Combinacao",
+          "type": "string"
+        },
+        "nota": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nota"
+        }
+      },
+      "required": [
+        "id",
+        "tipo",
+        "nome",
+        "dominio"
+      ],
+      "title": "Simbolo",
+      "type": "object"
+    },
+    "Tela": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "selecao": {
+          "enum": [
+            "unica",
+            "multipla"
+          ],
+          "title": "Selecao",
+          "type": "string"
+        },
+        "simbolos": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Simbolos",
+          "type": "array"
+        },
+        "texto": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ]
+          },
+          "title": "Texto",
+          "type": "object"
+        },
+        "opcoes": {
+          "additionalProperties": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "enum": [
+                "produtor",
+                "veterinario"
+              ]
+            },
+            "type": "object"
+          },
+          "title": "Opcoes",
+          "type": "object"
+        },
+        "simbolos_por_modo": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "propertyNames": {
+                "enum": [
+                  "produtor",
+                  "veterinario"
+                ]
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Simbolos Por Modo"
+        }
+      },
+      "required": [
+        "id",
+        "selecao",
+        "simbolos"
+      ],
+      "title": "Tela",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "$ref": "#/$defs/Meta"
+    },
+    "simbolos": {
+      "items": {
+        "$ref": "#/$defs/Simbolo"
+      },
+      "title": "Simbolos",
+      "type": "array"
+    },
+    "regras": {
+      "items": {
+        "$ref": "#/$defs/Regra"
+      },
+      "title": "Regras",
+      "type": "array"
+    },
+    "layout": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Posicao"
+      },
+      "title": "Layout",
+      "type": "object"
+    }
+  },
+  "required": [
+    "meta",
+    "simbolos",
+    "regras"
+  ],
+  "title": "Base",
+  "type": "object"
+}

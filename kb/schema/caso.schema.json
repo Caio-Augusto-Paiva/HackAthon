@@ -1,0 +1,232 @@
+{
+  "$defs": {
+    "Alerta": {
+      "additionalProperties": false,
+      "properties": {
+        "pausa": {
+          "title": "Pausa",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "pausa"
+      ],
+      "title": "Alerta",
+      "type": "object"
+    },
+    "Continuacao": {
+      "additionalProperties": false,
+      "properties": {
+        "modo": {
+          "enum": [
+            "produtor",
+            "veterinario"
+          ],
+          "title": "Modo",
+          "type": "string"
+        },
+        "triagem": {
+          "additionalProperties": true,
+          "title": "Triagem",
+          "type": "object"
+        },
+        "respostas": {
+          "additionalProperties": true,
+          "title": "Respostas",
+          "type": "object"
+        }
+      },
+      "required": [
+        "modo"
+      ],
+      "title": "Continuacao",
+      "type": "object"
+    },
+    "Esperado": {
+      "additionalProperties": false,
+      "properties": {
+        "urgencia": {
+          "anyOf": [
+            {
+              "enum": [
+                "chamar_agora",
+                "observar",
+                "sem_problema"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Urgencia"
+        },
+        "bandeira": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bandeira"
+        },
+        "top1": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Top1"
+        },
+        "top3_contem": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Top3 Contem"
+        },
+        "faixas": {
+          "additionalProperties": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Faixas",
+          "type": "object"
+        },
+        "motivo_parada": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Motivo Parada"
+        },
+        "inconclusivas": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inconclusivas"
+        },
+        "alerta": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Alerta"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Esperado",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "descricao": {
+      "title": "Descricao",
+      "type": "string"
+    },
+    "modo": {
+      "enum": [
+        "produtor",
+        "veterinario"
+      ],
+      "title": "Modo",
+      "type": "string"
+    },
+    "ficha": {
+      "additionalProperties": true,
+      "title": "Ficha",
+      "type": "object"
+    },
+    "triagem": {
+      "additionalProperties": true,
+      "title": "Triagem",
+      "type": "object"
+    },
+    "respostas": {
+      "additionalProperties": true,
+      "title": "Respostas",
+      "type": "object"
+    },
+    "continuacao": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Continuacao"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "limite_dinamico": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Limite Dinamico"
+    },
+    "esperado": {
+      "$ref": "#/$defs/Esperado"
+    }
+  },
+  "required": [
+    "id",
+    "descricao",
+    "modo",
+    "esperado"
+  ],
+  "title": "Caso",
+  "type": "object"
+}
