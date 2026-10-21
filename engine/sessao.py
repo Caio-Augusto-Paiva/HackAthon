@@ -2,7 +2,7 @@
 from copy import deepcopy
 from .modelos import Base, MODOS
 from .memoria import Memoria
-from .selecao import analisar
+from .selecao import analisar, _fontes
 from .parada import motivo_parada
 from .parecer import montar_parecer
 from .explicacao import como
@@ -13,6 +13,8 @@ from .avaliacao import avaliar_condicao
 class Sessao:
     def __init__(self, base, modo='produtor', ficha=None, limite_dinamico=None):
         self.base=Base.de_dict(base)
+        self._dependencias_bandeiras={r['id']:{folha for c in r['se'] for folha in _fontes(c['simbolo'],self.base)}
+                                     for r in self.base.regras if r.get('classe')=='bandeira_vermelha'}
         if modo not in MODOS: raise ValueError('Modo inválido')
         if limite_dinamico is not None and (type(limite_dinamico) is not int or limite_dinamico<0):
             raise ValueError('Limite inválido')
@@ -102,10 +104,11 @@ class Sessao:
     @property
     def resultado(self): return self.analise.resultado
 
-    def _calcular(self, *, correcao=False):
+    def _calcular(self, *, corrigidos=()):
         self.analise=analisar(self.base,self.memoria.fatos,self.modo)
-        if correcao:
-            self.bandeiras_historicas={}
+        # A dependência estrutural inclui caminhos que não disparam no cálculo atual.
+        self.bandeiras_historicas={id:dados for id,dados in self.bandeiras_historicas.items()
+                                   if self._dependencias_bandeiras[id].isdisjoint(corrigidos)}
         for id in self.resultado.bandeiras:
             if id not in self.bandeiras_historicas:
                 self.bandeiras_historicas[id]=deepcopy(como(self.resultado,'chamar_agora'))
@@ -193,7 +196,7 @@ class Sessao:
         self.memoria.registrar(entradas,tela_id=tela_id)
         if corrigir: self._registrar_correcao(anteriores)
         self.finalizada_por_alerta=False
-        self._calcular(correcao=corrigir)
+        self._calcular(corrigidos=anteriores)
         return self.estado()
 
     def responder(self,simbolo,valor,*,corrigir=False):
@@ -208,7 +211,7 @@ class Sessao:
         if corrigir: self._registrar_correcao(anteriores)
         if not corrigir: self.dinamicas.append(simbolo)
         self.finalizada_por_alerta=False
-        self._calcular(correcao=corrigir)
+        self._calcular(corrigidos=anteriores)
         return self.estado()
 
     def trocar_modo(self,modo):
