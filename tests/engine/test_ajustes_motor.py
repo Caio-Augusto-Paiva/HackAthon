@@ -1,5 +1,6 @@
 """Regressões dos seis ajustes do motor a partir de aaa7841."""
 import unittest
+from fractions import Fraction
 
 from engine.sessao import Sessao
 from engine.casos import executar_caso
@@ -87,3 +88,19 @@ class CfUrgenciaTests(unittest.TestCase):
                     self.assertLessEqual(resultado.cfs['chamar_agora'],0)
                     self.assertEqual(resultado.urgencia,'sem_problema')
                     self.assertEqual(resultado.bandeiras,())
+
+
+class ModelDumpTests(unittest.TestCase):
+    def test_model_dump_descarta_limites_de_cf_nulos(self):
+        class ObjetoBase:
+            def model_dump(self,mode='python',exclude_none=False):
+                dados=base([simbolo('x'),doenca()],[regra('r','d',0.8,condicao('x'))])
+                if not exclude_none:
+                    dados['regras'][0]['se'][0].update(cf_minimo=None,cf_maximo=None)
+                return dados
+
+        try:
+            normalizada=Base.de_dict(ObjetoBase())
+        except ValueError as erro:
+            self.fail(f'Base válida com campos opcionais nulos foi recusada: {erro}')
+        self.assertEqual(inferir(normalizada,{'x':True}).cfs['d'],Fraction(4,5))

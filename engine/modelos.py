@@ -37,7 +37,7 @@ class Base:
         if isinstance(dados, cls):
             return dados
         if hasattr(dados, 'model_dump'):
-            dados = dados.model_dump(mode='json')
+            dados = dados.model_dump(mode='json',exclude_none=True)
         dados = deepcopy(dados)
         from .validacao import validar
         validar(dados)
