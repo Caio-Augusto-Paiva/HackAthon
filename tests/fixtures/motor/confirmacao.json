@@ -1,0 +1,32 @@
+{
+  "id": "demo-confirmacao",
+  "modo": "produtor",
+  "triagem": {
+    "dias": {
+      "dias": 10
+    },
+    "medida": {
+      "medida": 5
+    },
+    "grupo1": [
+      "sinal1"
+    ],
+    "grupo2": [],
+    "grupo3": [],
+    "grupo4": []
+  },
+  "respostas": {
+    "confirmar1": true
+  },
+  "esperado": {
+    "top1": "hipotese1",
+    "urgencia": "observar",
+    "motivo_parada": "confirmacao",
+    "faixas": {
+      "hipotese1": [
+        85,
+        85
+      ]
+    }
+  }
+}

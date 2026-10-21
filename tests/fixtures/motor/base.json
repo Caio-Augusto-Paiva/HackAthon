@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "versao": "sintetica-v1",
+    "nota": "Base sintetica para demonstrar o motor. Nao contem conhecimento veterinario.",
+    "triagem": [
+      {
+        "id": "dias",
+        "selecao": "unica",
+        "simbolos": [
+          "dias"
+        ],
+        "texto": {
+          "produtor": "Dias ficticios?",
+          "veterinario": "Dias ficticios?"
+        }
+      },
+      {
+        "id": "medida",
+        "selecao": "unica",
+        "simbolos": [
+          "medida"
+        ],
+        "texto": {
+          "produtor": "Medida ficticia?",
+          "veterinario": "Medida ficticia?"
+        }
+      },
+      {
+        "id": "grupo1",
+        "selecao": "multipla",
+        "simbolos": [
+          "sinal1",
+          "sinal2"
+        ],
+        "texto": {
+          "produtor": "Grupo sintetico 1",
+          "veterinario": "Grupo sintetico 1"
+        }
+      },
+      {
+        "id": "grupo2",
+        "selecao": "multipla",
+        "simbolos": [
+          "sinal3",
+          "sinal4"
+        ],
+        "texto": {
+          "produtor": "Grupo sintetico 2",
+          "veterinario": "Grupo sintetico 2"
+        }
+      },
+      {
+        "id": "grupo3",
+        "selecao": "multipla",
+        "simbolos": [
+          "sinal5",
+          "sinal6"
+        ],
+        "texto": {
+          "produtor": "Grupo sintetico 3",
+          "veterinario": "Grupo sintetico 3"
+        }
+      },
+      {
+        "id": "grupo4",
+        "selecao": "multipla",
+        "simbolos": [
+          "sinal7",
+          "sinal8"
+        ],
+        "texto": {
+          "produtor": "Grupo sintetico 4",
+          "veterinario": "Grupo sintetico 4"
+        }
+      }
+    ]
+  },
+  "simbolos": [
+    {
+      "id": "dias",
+      "tipo": "ficha",
+      "nome": "dias",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0,
+        "max": 400
+      },
+      "pergunta": {
+        "produtor": "Responder dias",
+        "veterinario": "Responder dias"
+      }
+    },
+    {
+      "id": "medida",
+      "tipo": "pergunta",
+      "nome": "medida",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0,
+        "max": 100
+      },
+      "pergunta": {
+        "produtor": "Responder medida",
+        "veterinario": "Responder medida"
+      }
+    },
+    {
+      "id": "sinal1",
+      "tipo": "pergunta",
+      "nome": "sinal1",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal1",
+        "veterinario": "Responder sinal1"
+      }
+    },
+    {
+      "id": "sinal2",
+      "tipo": "pergunta",
+      "nome": "sinal2",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal2",
+        "veterinario": "Responder sinal2"
+      }
+    },
+    {
+      "id": "sinal3",
+      "tipo": "pergunta",
+      "nome": "sinal3",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal3",
+        "veterinario": "Responder sinal3"
+      }
+    },
+    {
+      "id": "sinal4",
+      "tipo": "pergunta",
+      "nome": "sinal4",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal4",
+        "veterinario": "Responder sinal4"
+      }
+    },
+    {
+      "id": "sinal5",
+      "tipo": "pergunta",
+      "nome": "sinal5",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal5",
+        "veterinario": "Responder sinal5"
+      }
+    },
+    {
+      "id": "sinal6",
+      "tipo": "pergunta",
+      "nome": "sinal6",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal6",
+        "veterinario": "Responder sinal6"
+      }
+    },
+    {
+      "id": "sinal7",
+      "tipo": "pergunta",
+      "nome": "sinal7",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal7",
+        "veterinario": "Responder sinal7"
+      }
+    },
+    {
+      "id": "sinal8",
+      "tipo": "pergunta",
+      "nome": "sinal8",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder sinal8",
+        "veterinario": "Responder sinal8"
+      }
+    },
+    {
+      "id": "confirmar1",
+      "tipo": "pergunta",
+      "nome": "confirmar1",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar1",
+        "veterinario": "Responder confirmar1"
+      }
+    },
+    {
+      "id": "confirmar2",
+      "tipo": "pergunta",
+      "nome": "confirmar2",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar2",
+        "veterinario": "Responder confirmar2"
+      }
+    },
+    {
+      "id": "confirmar3",
+      "tipo": "pergunta",
+      "nome": "confirmar3",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar3",
+        "veterinario": "Responder confirmar3"
+      }
+    },
+    {
+      "id": "confirmar4",
+      "tipo": "pergunta",
+      "nome": "confirmar4",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar4",
+        "veterinario": "Responder confirmar4"
+      }
+    },
+    {
+      "id": "confirmar5",
+      "tipo": "pergunta",
+      "nome": "confirmar5",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar5",
+        "veterinario": "Responder confirmar5"
+      }
+    },
+    {
+      "id": "confirmar6",
+      "tipo": "pergunta",
+      "nome": "confirmar6",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar6",
+        "veterinario": "Responder confirmar6"
+      }
+    },
+    {
+      "id": "confirmar7",
+      "tipo": "pergunta",
+      "nome": "confirmar7",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar7",
+        "veterinario": "Responder confirmar7"
+      }
+    },
+    {
+      "id": "confirmar8",
+      "tipo": "pergunta",
+      "nome": "confirmar8",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Responder confirmar8",
+        "veterinario": "Responder confirmar8"
+      }
+    },
+    {
+      "id": "hipotese1",
+      "tipo": "doenca",
+      "nome": "hipotese1",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese2",
+      "tipo": "doenca",
+      "nome": "hipotese2",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese3",
+      "tipo": "doenca",
+      "nome": "hipotese3",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese4",
+      "tipo": "doenca",
+      "nome": "hipotese4",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese5",
+      "tipo": "doenca",
+      "nome": "hipotese5",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese6",
+      "tipo": "doenca",
+      "nome": "hipotese6",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese7",
+      "tipo": "doenca",
+      "nome": "hipotese7",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "hipotese8",
+      "tipo": "doenca",
+      "nome": "hipotese8",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "gravidade": "media"
+    },
+    {
+      "id": "chamar_agora",
+      "tipo": "urgencia",
+      "nome": "chamar_agora",
+      "dominio": {
+        "tipo": "booleano"
+      }
+    },
+    {
+      "id": "observar",
+      "tipo": "urgencia",
+      "nome": "observar",
+      "dominio": {
+        "tipo": "booleano"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "sinal-1",
+      "se": [
+        {
+          "simbolo": "sinal1",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese1",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-1",
+      "se": [
+        {
+          "simbolo": "sinal1",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar1",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese1",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-1",
+      "se": [
+        {
+          "simbolo": "hipotese1",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-2",
+      "se": [
+        {
+          "simbolo": "sinal2",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese2",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-2",
+      "se": [
+        {
+          "simbolo": "sinal2",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar2",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese2",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-2",
+      "se": [
+        {
+          "simbolo": "hipotese2",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-3",
+      "se": [
+        {
+          "simbolo": "sinal3",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese3",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-3",
+      "se": [
+        {
+          "simbolo": "sinal3",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar3",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese3",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-3",
+      "se": [
+        {
+          "simbolo": "hipotese3",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-4",
+      "se": [
+        {
+          "simbolo": "sinal4",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese4",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-4",
+      "se": [
+        {
+          "simbolo": "sinal4",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar4",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese4",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-4",
+      "se": [
+        {
+          "simbolo": "hipotese4",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-5",
+      "se": [
+        {
+          "simbolo": "sinal5",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese5",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-5",
+      "se": [
+        {
+          "simbolo": "sinal5",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar5",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese5",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-5",
+      "se": [
+        {
+          "simbolo": "hipotese5",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-6",
+      "se": [
+        {
+          "simbolo": "sinal6",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese6",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-6",
+      "se": [
+        {
+          "simbolo": "sinal6",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar6",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese6",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-6",
+      "se": [
+        {
+          "simbolo": "hipotese6",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-7",
+      "se": [
+        {
+          "simbolo": "sinal7",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese7",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-7",
+      "se": [
+        {
+          "simbolo": "sinal7",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar7",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese7",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-7",
+      "se": [
+        {
+          "simbolo": "hipotese7",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "sinal-8",
+      "se": [
+        {
+          "simbolo": "sinal8",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese8",
+        "cf": 0.7
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "confirmar-8",
+      "se": [
+        {
+          "simbolo": "sinal8",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "confirmar8",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotese8",
+        "cf": 0.5
+      },
+      "prioridade": 0,
+      "classe": "evidencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "urgencia-8",
+      "se": [
+        {
+          "simbolo": "hipotese8",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "urgencia",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    },
+    {
+      "id": "bandeira-sintetica",
+      "se": [
+        {
+          "simbolo": "sinal2",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.9
+      },
+      "prioridade": 0,
+      "classe": "bandeira_vermelha",
+      "fonte": "Fixture de software sem significado clinico",
+      "status": "suposicao_a_validar"
+    }
+  ]
+}

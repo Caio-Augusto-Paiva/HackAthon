@@ -1,0 +1,23 @@
+{
+  "id": "demo-bandeira",
+  "modo": "produtor",
+  "triagem": {
+    "dias": {
+      "dias": 10
+    },
+    "medida": {
+      "medida": 5
+    },
+    "grupo1": [
+      "sinal2"
+    ],
+    "grupo2": [],
+    "grupo3": [],
+    "grupo4": []
+  },
+  "esperado": {
+    "top1": "hipotese2",
+    "urgencia": "chamar_agora",
+    "bandeira": "bandeira-sintetica"
+  }
+}
