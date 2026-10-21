@@ -67,6 +67,7 @@ R-DER-11  SE parto_distocico                    ENTÃO parto_complicado    +0,90
 ```
 `febre` e `hipotermia` usam MYCIN (termômetro e extremidades são evidências independentes e podem se contradizer). `parto_complicado` usa `max` (distocia e retenção de placenta são correlacionadas).
 Derivados de triagem (contam para a cobertura): `periparto_imediato`, `puerperio`, `inicio_lactacao`, `febre`, `hipotermia` — todas as entradas vêm de `meta.triagem`. `parto_complicado` **não** conta.
+Os derivados de período (`periparto_imediato`, `puerperio`, `inicio_lactacao`) só recebem evidência positiva: fora da janela ficam em CF 0, não −1. Por isso as regras de exclusão por período (R-MET-06, R-CET-08, R-HIP-06) testam `dias_em_lactacao` direto, nunca o derivado negado.
 
 ### 3.4 Perguntas da fase dinâmica
 
@@ -96,7 +97,7 @@ Derivados de triagem (contam para a cobertura): `periparto_imediato`, `puerperio
 | `inchaco_simetrico_acima_casco` | sim | sim | dermatite digital — exclusão (F12, sugere foot rot) |
 | `casos_podais_no_rebanho` | sim (se a ficha não tiver) | sim | dermatite digital (F12) |
 
-Total: 23 perguntas dinâmicas (7 exclusivas do veterinário) + cerca de 15 símbolos gravados pela triagem.
+Total: 23 perguntas dinâmicas (8 exclusivas do veterinário) + cerca de 15 símbolos gravados pela triagem.
 
 ### 3.5 Regras por doença (camada 2)
 
@@ -120,7 +121,7 @@ R-MET-02 [T] SE febre E puerperio E apetite ∈ {reduzido, ausente} ENTÃO metri
 R-MET-03 [P] SE corrimento_fetido E puerperio          ENTÃO metrite +0,80 | F2
 R-MET-04 [P] SE parto_complicado                       ENTÃO metrite +0,30 | suposição
 R-MET-05 [V] SE utero_aumentado_palpacao E puerperio   ENTÃO metrite +0,50 | F2
-R-MET-06 [T] SE puerperio = não                        ENTÃO metrite −0,80 | F2 (janela de 21 dias)
+R-MET-06 [T] SE dias_em_lactacao > 21                  ENTÃO metrite −0,80 | F2 (janela de 21 dias)
 ```
 
 **Tristeza parasitária bovina (`tpb`, gravidade alta)**
@@ -143,7 +144,7 @@ R-CET-04 [P] SE perda_condicao_corporal E inicio_lactacao ENTÃO cetose +0,30 | 
 R-CET-05 [P] SE abdomen_vazio E inicio_lactacao        ENTÃO cetose +0,25 | F6
 R-CET-06 [V] SE bhb_sanguineo ≥ 1,2                    ENTÃO cetose +0,85 | F6
 R-CET-07 [T] SE febre                                  ENTÃO cetose −0,30 | suposição (cetose primária é afebril)
-R-CET-08 [T] SE inicio_lactacao = não                  ENTÃO cetose −0,60 | F6 (risco nas 6 primeiras semanas)
+R-CET-08 [T] SE dias_em_lactacao > 42                  ENTÃO cetose −0,60 | F6 (risco nas 6 primeiras semanas)
 ```
 
 **Hipocalcemia / febre do leite (`hipocalcemia`, gravidade alta)**

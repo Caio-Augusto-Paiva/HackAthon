@@ -427,7 +427,7 @@ Os arquivos de `base/` continuam sendo a fonte da verdade da base (Seção 2); o
 
 - **Passo 0 (primeira hora):** congelar `api/schemas/` e os exemplos em `contratos/exemplos/` (os deste documento). Daí saem `openapi.json` e `tipos.gerado.ts`. Depois, mudança de contrato é um commit pequeno que toca só `api/schemas/` + arquivos gerados, avisado aos outros dois.
 - **Frontend sem backend:** `web/src/api/mocks/` responde com os arquivos de `contratos/exemplos/` por um módulo simples ativado por variável de ambiente (sem biblioteca extra), então a pessoa do web trabalha desde o início. O backend, por sua vez, cobre os exemplos com `tests/api/`.
-- **Dono por pasta (sugestão):** A = `engine/`, `kb/`, `tests/engine`, `tests/kb`; B = `api/`, `tests/api`, `scripts/`; C = `web/`, `e2e/`. Quem precisa de algo de outra pasta pede por contrato, não edita.
+- **Dono por pasta (sugestão):** A = `engine/`, `kb/modelos.py`, `kb/carregador.py`, `kb/analise.py`, `tests/engine`; B = `api/`, `kb/validador.py`, `kb/grafo.py`, `tests/kb`, `tests/api`, `scripts/`; C = `web/`, `e2e/`. (Ajustado na Seção 5: B assume validador e grafo para equilibrar a carga de quarta.) Quem precisa de algo de outra pasta pede por contrato, não edita.
 - **Ligação final:** B troca a implementação falsa do serviço de sessão pelo motor real de A (`inferencia.py`) quando `tests/engine` passar; o web só desliga os mocks.
 
 ### 4.9 Decisões tomadas pelo arquiteto
