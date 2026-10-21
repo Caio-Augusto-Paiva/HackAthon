@@ -9,6 +9,7 @@ from starlette.datastructures import MutableHeaders
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from api.config import VERSAO_API, Configuracao, carregar_configuracao
+from api.db.conexao import inicializar
 from api.erros import CABECALHO_REQUISICAO_ID, novo_requisicao_id, registrar_handlers
 from api.rotas import sistema
 
@@ -37,8 +38,7 @@ class MiddlewareRequisicaoId:
 @asynccontextmanager
 async def _ciclo_de_vida(app: FastAPI) -> AsyncIterator[None]:
     config: Configuracao = app.state.config
-    config.db_path.parent.mkdir(parents=True, exist_ok=True)
-    # a Task 2 inicializa aqui o esquema SQLite (api.db.conexao.inicializar)
+    inicializar(config.db_path)  # cria a pasta do .db e o esquema SQLite (idempotente)
     yield
 
 

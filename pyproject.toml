@@ -21,6 +21,9 @@ dev = ["pytest>=8", "hypothesis>=6.170,<6.171", "httpx==0.28.1"]
 [tool.setuptools]
 packages = ["kb", "engine", "api", "api.db", "api.rotas", "api.schemas", "api.servicos"]
 
+[tool.setuptools.package-data]
+"api.db" = ["esquema.sql"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 filterwarnings = [
