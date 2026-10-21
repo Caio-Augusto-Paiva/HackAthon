@@ -2,6 +2,7 @@
 import unittest
 
 from engine.sessao import Sessao
+from engine.casos import executar_caso
 from .apoio import base, simbolo, doenca, regra, condicao
 
 
@@ -36,3 +37,21 @@ class DependenciasBandeiraTests(unittest.TestCase):
         self.assertEqual(s.estado()['bandeiras'],[])
         self.assertNotEqual(s.estado()['urgencia'],'chamar_agora')
         self.assertEqual(s.reconhecidas,set())
+
+
+class InconclusivasExecutorTests(unittest.TestCase):
+    def executar_com_esperado(self,esperado):
+        b=base([simbolo('x'),doenca('d1'),doenca('d2'),doenca('d3')],
+               [regra('r1','d1',0.5,condicao('x')),regra('r2','d2',0.5,condicao('x'))])
+        return executar_caso(b,{'modo':'produtor','ficha':{'x':True},'limite_dinamico':0,
+                                'esperado':{'inconclusivas':esperado}})
+
+    def test_inconclusivas_aceita_doencas_adicionais_ao_esperado(self):
+        resultado=self.executar_com_esperado(['d1'])
+        self.assertEqual(resultado['obtido']['inconclusivas'],['d1','d2'])
+        self.assertEqual(resultado['status'],'passou',resultado)
+
+    def test_inconclusivas_falha_quando_falta_doenca_esperada(self):
+        resultado=self.executar_com_esperado(['d1','d3'])
+        self.assertEqual(resultado['status'],'falhou',resultado)
+        self.assertEqual(resultado['falhas'][0]['campo'],'inconclusivas')

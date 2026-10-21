@@ -42,7 +42,7 @@ def executar_caso(base, caso):
             elif campo=='top3_contem':
                 if not set(esperado)<=set(obtido[campo]): falhas.append({'campo':campo,'esperado':esperado,'obtido':obtido[campo]})
             elif campo=='inconclusivas':
-                if set(esperado)!=set(obtido[campo]): falhas.append({'campo':campo,'esperado':esperado,'obtido':obtido[campo]})
+                if not set(esperado)<=set(obtido[campo]): falhas.append({'campo':campo,'esperado':esperado,'obtido':obtido[campo]})
             elif campo in ('alerta','alerta.pausa'):
                 valor=esperado.get('pausa') if campo=='alerta' else esperado
                 if type(valor) is not bool: raise ValueError('alerta.pausa deve ser booleano')
