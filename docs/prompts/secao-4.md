@@ -1,6 +1,6 @@
 # Prompt de revisão — Seção 4: Tecnologias, monorepo e contratos da API
 
-> Status da seção: **RASCUNHO, pendente de aprovação** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
+> Status da seção: **aprovada** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
 
 ---
 
@@ -36,7 +36,7 @@ Regras: não elogie por cortesia; diga qual pergunta responderia o que depender 
 
 ---
 
-## SEÇÃO 4 — Tecnologias, monorepo e contratos da API (rascunho)
+## SEÇÃO 4 — Tecnologias, monorepo e contratos da API
 
 ### 4.1 Tecnologias e versões
 
