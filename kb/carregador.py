@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 from collections.abc import Callable
 from datetime import date
@@ -16,7 +17,8 @@ from pathlib import Path
 from kb.modelos import Base, Caso, carregar_base
 from kb.validador import Relatorio, validar
 
-_NOME_VERSAO = re.compile(r"v(\d{4})\.json")
+_ID_VERSAO = re.compile(r"v[0-9]{4}")
+_NOME_VERSAO = re.compile(r"v[0-9]{4}\.json")
 
 
 class BaseInvalida(Exception):
@@ -40,7 +42,14 @@ class Repositorio:
 
     # --- caminhos ---------------------------------------------------------
 
+    @staticmethod
+    def _checar_id(versao: str) -> str:
+        if not isinstance(versao, str) or not _ID_VERSAO.fullmatch(versao):
+            raise ValueError(f"Identificador de versão inválido: '{versao}'")
+        return versao
+
     def _arquivo(self, versao: str) -> Path:
+        self._checar_id(versao)
         return self.raiz / "versoes" / f"{versao}.json"
 
     @property
@@ -64,7 +73,13 @@ class Repositorio:
     def versao_ativa(self) -> str | None:
         if not self._ativa.is_file():
             return None
-        return json.loads(self._ativa.read_text(encoding="utf-8"))["versao"]
+        try:
+            versao = json.loads(self._ativa.read_text(encoding="utf-8"))["versao"]
+            return self._checar_id(versao)
+        except (ValueError, KeyError, TypeError) as exc:  # JSONDecodeError é ValueError
+            raise ValueError(
+                f"Arquivo {self._ativa.name} corrompido ou com ponteiro inválido: {exc}"
+            ) from exc
 
     def carregar_ativa(self) -> Base:
         versao = self.versao_ativa()
@@ -115,13 +130,27 @@ class Repositorio:
         texto = _json(nova.model_dump(mode="json", exclude_none=True))
         arquivo = self._arquivo(versao)
         arquivo.parent.mkdir(parents=True, exist_ok=True)
-        with open(arquivo, "x", encoding="utf-8", newline="\n") as f:
-            f.write(texto)
+        try:
+            f = open(arquivo, "x", encoding="utf-8", newline="\n")
+        except FileExistsError as exc:
+            raise FileExistsError(f"Versão {versao} já existe; nada foi sobrescrito.") from exc
+        try:
+            with f:
+                f.write(texto)
+        except BaseException:
+            arquivo.unlink(missing_ok=True)  # nunca deixar meia versão
+            raise
         return versao
 
     def ativar(self, versao: str) -> None:
         if not self._arquivo(versao).is_file():
             raise FileNotFoundError(f"Não é possível ativar {versao}: versão não encontrada.")
         self.raiz.mkdir(parents=True, exist_ok=True)
-        with open(self._ativa, "w", encoding="utf-8", newline="\n") as f:
-            f.write(_json({"versao": versao}))
+        temporario = self._ativa.with_name(self._ativa.name + ".tmp")
+        try:
+            with open(temporario, "w", encoding="utf-8", newline="\n") as f:
+                f.write(_json({"versao": versao}))
+            os.replace(temporario, self._ativa)
+        except BaseException:
+            temporario.unlink(missing_ok=True)
+            raise

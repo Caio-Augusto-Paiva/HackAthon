@@ -1,9 +1,11 @@
 """Testes do repositório de versões imutáveis da base (kb.carregador)."""
+import hashlib
 import json
 from datetime import date
 
 import pytest
 
+from kb import carregador
 from kb.carregador import BaseInvalida, Repositorio
 from kb.modelos import carregar_base
 from tests.kb.apoio import carregar_minima
@@ -127,6 +129,7 @@ def test_hash_estavel(tmp_path):
     assert h.startswith("sha256:") and len(h) == len("sha256:") + 64
     assert repo.hash(versao) == h
     arquivo = tmp_path / "versoes" / f"{versao}.json"
+    assert h == "sha256:" + hashlib.sha256(arquivo.read_bytes()).hexdigest()
     arquivo.write_text(arquivo.read_text(encoding="utf-8") + " ", encoding="utf-8")
     assert repo.hash(versao) != h
 
@@ -162,3 +165,70 @@ def test_carregar_casos(tmp_path):
     casos = _repo(tmp_path).carregar_casos()
     assert [c.id for c in casos] == ["c1"]
     assert casos[0].esperado.urgencia == "observar"
+
+
+@pytest.mark.parametrize(
+    "ruim", ["../x", "..\\..\\y", "v1", "v00001", "v000a", "v０００１", "V0001", "", "v0001/../v0001"]
+)
+def test_id_de_versao_invalido_rejeitado(tmp_path, ruim):
+    repo = _repo(tmp_path)
+    (tmp_path / "x.json").write_text("{}", encoding="utf-8")
+    for acao in (repo.carregar, repo.hash, repo.ativar):
+        with pytest.raises(ValueError, match="Identificador de versão inválido"):
+            acao(ruim)
+    assert not (tmp_path / "ativa.json").exists()
+
+
+def test_falha_na_escrita_nao_deixa_meia_versao(tmp_path, monkeypatch):
+    class Quebrado:
+        def __init__(self, f):
+            self._f = f
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            self._f.close()
+
+        def write(self, _):
+            raise OSError("disco cheio")
+
+    monkeypatch.setattr(
+        carregador, "open", lambda *a, **k: Quebrado(open(*a, **k)), raising=False
+    )
+    repo = _repo(tmp_path)
+    with pytest.raises(OSError, match="disco cheio"):
+        repo.salvar_nova(_base(), autor="a", nota="n")
+    assert list((tmp_path / "versoes").iterdir()) == []
+    monkeypatch.undo()
+    assert repo.salvar_nova(_base(), autor="a", nota="n") == "v0001"
+
+
+def test_existente_traduz_mensagem(tmp_path):
+    (tmp_path / "versoes").mkdir()
+    manual = tmp_path / "versoes" / "v0001.json"
+
+    class Corrida(Repositorio):
+        def _proxima(self):
+            manual.write_text("x", encoding="utf-8")
+            return "v0001"
+
+    with pytest.raises(FileExistsError, match="v0001 já existe"):
+        Corrida(tmp_path).salvar_nova(_base(), autor="a", nota="n")
+
+
+@pytest.mark.parametrize(
+    "conteudo", ["{nao e json", "{}", '{"versao": 3}', '{"versao": "../x"}', "[]"]
+)
+def test_ponteiro_corrompido_erro_claro(tmp_path, conteudo):
+    (tmp_path / "ativa.json").write_text(conteudo, encoding="utf-8")
+    with pytest.raises(ValueError, match="ativa.json"):
+        _repo(tmp_path).versao_ativa()
+
+
+def test_ativar_nao_deixa_temporario(tmp_path):
+    repo = _repo(tmp_path)
+    repo.salvar_nova(_base(), autor="a", nota="n")
+    repo.ativar("v0001")
+    repo.ativar("v0001")
+    assert sorted(p.name for p in tmp_path.iterdir()) == ["ativa.json", "versoes"]
