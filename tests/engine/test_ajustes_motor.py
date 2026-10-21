@@ -3,6 +3,8 @@ import unittest
 
 from engine.sessao import Sessao
 from engine.casos import executar_caso
+from engine.modelos import Base
+from engine.inferencia import inferir
 from .apoio import base, simbolo, doenca, regra, condicao
 
 
@@ -55,3 +57,33 @@ class InconclusivasExecutorTests(unittest.TestCase):
         resultado=self.executar_com_esperado(['d1','d3'])
         self.assertEqual(resultado['status'],'falhou',resultado)
         self.assertEqual(resultado['falhas'][0]['campo'],'inconclusivas')
+
+
+class CfUrgenciaTests(unittest.TestCase):
+    def verificar_rejeicao(self,classe):
+        for cf in (-0.9,0):
+            with self.subTest(cf=cf):
+                b=base([simbolo('x'),doenca(),simbolo('chamar_agora','urgencia')],
+                       [regra('r','chamar_agora',cf,condicao('x'),classe=classe)])
+                with self.assertRaisesRegex(ValueError,'^CF de urgência ou bandeira deve ser positivo$'):
+                    Base.de_dict(b)
+
+    def test_urgencia_rejeita_cf_negativo_e_zero(self):
+        self.verificar_rejeicao('urgencia')
+
+    def test_bandeira_rejeita_cf_negativo_e_zero(self):
+        self.verificar_rejeicao('bandeira_vermelha')
+
+    def test_inferencia_nao_ativa_alerta_quando_cf_final_nao_e_positivo(self):
+        for classe in ('urgencia','bandeira_vermelha'):
+            for cf in (0.6,0.8):
+                with self.subTest(classe=classe,cf=cf):
+                    b=Base.de_dict(base([simbolo('x'),doenca(),simbolo('chamar_agora','urgencia')],
+                                        [regra('a','chamar_agora',0.6,condicao('x'),classe=classe),
+                                         regra('z','chamar_agora',cf,condicao('x'),classe=classe)]))
+                    # Exercita a defesa quando uma Base pronta evita nova validação.
+                    b.regras[1]['entao']['cf']=-cf
+                    resultado=inferir(b,{'x':True})
+                    self.assertLessEqual(resultado.cfs['chamar_agora'],0)
+                    self.assertEqual(resultado.urgencia,'sem_problema')
+                    self.assertEqual(resultado.bandeiras,())

@@ -30,6 +30,8 @@ def validar(dados):
         classe = r.get('classe','evidencia')
         if classe not in ('evidencia','urgencia','bandeira_vermelha'):
             raise ValueError('Classe inválida')
+        if classe in ('urgencia','bandeira_vermelha') and cf<=0:
+            raise ValueError('CF de urgência ou bandeira deve ser positivo')
         if (classe == 'evidencia') != (destino['tipo'] in ('doenca','derivado')):
             raise ValueError('Classe incompatível com a camada da conclusão')
         if classe == 'bandeira_vermelha' and alvo != 'chamar_agora':

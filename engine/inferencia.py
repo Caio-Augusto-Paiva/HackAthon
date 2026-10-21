@@ -32,7 +32,6 @@ def inferir(base, fatos):
         cfs[id]=fato.cf
         evento(traco,'fato_adicionado',**dados_fato(fato))
     disparadas=[]
-    bandeiras=[]
     urgencias=[]
     for r in agenda(base):
         condicoes=[avaliar_condicao(c,memoria,base.simbolos) for c in r['se']]
@@ -54,8 +53,10 @@ def inferir(base, fatos):
         memoria[id]=Fato(id,True,depois,'regra')
         evento(traco,'fato_adicionado',**dados_fato(memoria[id]),regra_id=r['id'])
         disparadas.append(r)
-        if r.get('classe')=='bandeira_vermelha': bandeiras.append(r['id'])
         if r.get('classe') in ('urgencia','bandeira_vermelha'): urgencias.append(id)
+    bandeiras=[r['id'] for r in disparadas if r.get('classe')=='bandeira_vermelha'
+               and cfs[r['entao']['simbolo']]>0]
+    urgencias={id for id in urgencias if cfs[id]>0}
     if 'chamar_agora' in urgencias:
         urgencia='chamar_agora'
     elif 'observar' in urgencias or any(cfs[id]>base.meta['limiares']['hipotese_relevante']
