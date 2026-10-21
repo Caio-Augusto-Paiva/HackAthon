@@ -11,7 +11,7 @@ from starlette.types import ASGIApp, Message, Receive, Scope, Send
 from api.config import VERSAO_API, Configuracao, carregar_configuracao
 from api.db.conexao import inicializar
 from api.erros import CABECALHO_REQUISICAO_ID, novo_requisicao_id, registrar_handlers
-from api.rotas import animais, sistema
+from api.rotas import animais, sessoes, sistema
 
 
 class MiddlewareRequisicaoId:
@@ -60,6 +60,7 @@ def criar_app(config: Configuracao | None = None) -> FastAPI:
     roteador = APIRouter(prefix="/api")
     roteador.include_router(sistema.router)
     roteador.include_router(animais.router)
+    roteador.include_router(sessoes.router)
     app.include_router(roteador)
     return app
 

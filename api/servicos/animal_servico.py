@@ -17,7 +17,7 @@ from api.schemas.animal import (
     SessaoDoAnimal,
 )
 from api.servicos.ficha import CAMPO_DATA_PARTO, completar_ficha, dias_em_lactacao, validar_ficha
-from engine.sessao import Sessao
+from api.servicos.sessao_motor import restaurar_motor, resumo_do_motor
 from kb.modelos import Base, para_motor
 
 
@@ -120,23 +120,24 @@ def listar_animais(ctx: Contexto, busca: str | None) -> ListaAnimais:
 def listar_sessoes_do_animal(ctx: Contexto, animal_id: str) -> ListaSessoesAnimal:
     if repo.obter_animal(ctx.conn, animal_id) is None:
         raise nao_encontrado("Animal não encontrado.")
-    bases: dict[str, dict] = {}  # a base de cada versão, carregada uma vez
+    bases: dict[str, dict] = {}  # a base de cada versão, carregada só se algum snapshot não tiver o resumo
     itens = []
     for linha in repo.listar_sessoes_do_animal(ctx.conn, animal_id):
         versao = linha["versao_base"]
-        if versao not in bases:
-            bases[versao] = para_motor(ctx.repo.carregar(versao))
-        # só leitura: restaura o motor do snapshot (D1: {"motor": Sessao.exportar(), ...}) e pede o parecer, sem regravar
-        parecer = Sessao.restaurar(bases[versao], **linha["snapshot"]["motor"]).parecer()
-        hipoteses = sorted((i for b in parecer["blocos"] for i in b["itens"]), key=lambda i: (-i["cf"], i["doenca"]))
+        # o snapshot grava o resumo a cada salvamento; sem ele (gravado por fora), roda o motor só para esta linha
+        resumo = linha["snapshot"].get("resumo")
+        if resumo is None:
+            if versao not in bases:
+                bases[versao] = para_motor(ctx.repo.carregar(versao))
+            resumo = resumo_do_motor(restaurar_motor(linha["snapshot"], bases[versao]))
         itens.append(
             SessaoDoAnimal(
                 sessao_id=linha["id"],
                 modo=linha["modo"],
                 versao_base=versao,
                 fase=linha["fase"],
-                urgencia=parecer["urgencia"],
-                top1=hipoteses[0]["doenca"] if hipoteses and hipoteses[0]["situacao"] == "com_evidencia" else None,
+                urgencia=resumo["urgencia"],
+                top1=resumo["top1"],
                 criada_em=linha["criada_em"],
             )
         )
