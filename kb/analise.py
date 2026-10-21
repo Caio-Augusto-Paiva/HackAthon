@@ -107,6 +107,26 @@ def simbolos_triagem(base: Base) -> set[str]:
     return ids
 
 
+def simbolos_triagem_produtor(base: Base) -> set[str]:
+    """Símbolos que as telas realmente apresentam ao produtor (espelha ``Sessao._ids_tela``).
+
+    Com ``simbolos_por_modo``, vale a lista do modo produtor; sem ela, os símbolos da tela
+    sem pergunta ou com texto de pergunta para o produtor. Símbolos indefinidos contam como
+    presentes (quem os reporta é ``kb.validador``).
+    """
+    existentes = simbolos_por_id(base)
+    ids: set[str] = set()
+    for tela in base.meta.triagem:
+        if tela.simbolos_por_modo is not None:
+            ids.update(tela.simbolos_por_modo.get("produtor", []))
+            continue
+        for sid in tela.simbolos:
+            s = existentes.get(sid)
+            if s is None or not s.pergunta or s.pergunta.get("produtor"):
+                ids.add(sid)
+    return ids
+
+
 def derivados_de_triagem(base: Base) -> set[str]:
     """Derivados com ao menos uma regra e cujas regras só leem símbolos de triagem."""
     triagem = simbolos_triagem(base)

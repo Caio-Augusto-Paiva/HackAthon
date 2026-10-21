@@ -266,6 +266,57 @@ def _m_e17_blocos_invertidos(d):
     d["meta"]["limiares"] = {"bloco_diferencial": 0.6, "bloco_principal": 0.5}
 
 
+def _d2_so_com_exame_t(d, tela_mutar):
+    _novo_simbolo(d, "exame_t", "pergunta", pergunta={"veterinario": "Resultado do exame T é positivo?"})
+    _novo_simbolo(d, "d2", "doenca", gravidade="baixa")
+    _nova_regra(d, "R-D2-01", [{"simbolo": "exame_t"}], "d2", 0.5)
+    tela = next(t for t in d["meta"]["triagem"] if t["id"] == "sinais")
+    tela["simbolos"].append("exame_t")
+    tela_mutar(tela)
+
+
+def _m_e10_so_por_modo_veterinario(d):
+    def mutar(tela):
+        tela["simbolos_por_modo"] = {"produtor": ["sinal_a", "sinal_b"], "veterinario": ["sinal_a", "sinal_b", "exame_t"]}
+    _d2_so_com_exame_t(d, mutar)
+
+
+def _m_e10_tela_sem_texto_do_produtor(d):
+    _d2_so_com_exame_t(d, lambda tela: None)  # exame_t só tem pergunta do veterinário
+
+
+def _urgencia_le_d1(d, condicao):
+    _nova_regra(d, "R-URG-x", [condicao, {"simbolo": "sinal_a"}], "observar", 0.5, classe="urgencia")
+
+
+def _m_e06_cf_maximo_sem_regra_negativa(d):
+    _urgencia_le_d1(d, {"simbolo": "d1", "cf_maximo": 0.1})
+
+
+def _m_e06_negado_cf_minimo(d):
+    _urgencia_le_d1(d, {"simbolo": "d1", "cf_minimo": 0.2, "negado": True})
+
+
+def _m_e06_negado_cf_maximo_zero(d):
+    _urgencia_le_d1(d, {"simbolo": "d1", "cf_maximo": 0.0, "negado": True})
+
+
+def _m_e06_sem_regra_positiva(d):
+    _novo_simbolo(d, "d3", "doenca", gravidade="baixa")
+    _nova_regra(d, "R-D3-01", [{"simbolo": "sinal_a"}], "d3", -0.5)
+    _urgencia_le_d1(d, {"simbolo": "d3", "cf_minimo": 0.3})
+
+
+def _m_e06_derivado_max_negado(d):
+    _simbolo(d, "recente")["combinacao"] = "max"
+    _nova_regra(d, "R-X", [{"simbolo": "recente", "negado": True}], "d1", 0.4)
+
+
+def _m_sem_e06_cf_maximo_com_regra_negativa(d):
+    _nova_regra(d, "R-D1-neg", [{"simbolo": "sinal_b"}], "d1", -0.5)
+    _urgencia_le_d1(d, {"simbolo": "d1", "cf_maximo": 0.1})
+
+
 def _m_w01(d):
     _novo_simbolo(d, "nunca", "pergunta", pergunta={"produtor": "Pergunta nunca usada?"})
 
@@ -315,6 +366,13 @@ MUTACOES_ERRO = {
     "E18": (_m_e18, {"E18"}),
     "E19": (_m_e19, {"E19"}),
     "E20": (_m_e20, {"E20"}),
+    "E06-cf-maximo": (_m_e06_cf_maximo_sem_regra_negativa, {"E06"}),
+    "E06-negado-cf-minimo": (_m_e06_negado_cf_minimo, {"E06"}),
+    "E06-negado-cf-maximo-zero": (_m_e06_negado_cf_maximo_zero, {"E06"}),
+    "E06-sem-regra-positiva": (_m_e06_sem_regra_positiva, {"E06"}),
+    "E06-derivado-max-negado": (_m_e06_derivado_max_negado, {"E06"}),
+    "E10-por-modo-veterinario": (_m_e10_so_por_modo_veterinario, {"E10"}),
+    "E10-sem-pergunta-do-produtor": (_m_e10_tela_sem_texto_do_produtor, {"E10"}),
     "E22-negativo": (_m_e22_negativo, {"E22"}),
     "E22-zero": (_m_e22_zero, {"E22"}),
     "E22-bandeira": (_m_e22_bandeira, {"E22"}),
@@ -377,6 +435,11 @@ def test_codigo_aviso(numero):
     assert rel.valida is True
     assert numero in _numeros(rel.avisos)
     assert all(p.severidade == "aviso" for p in rel.avisos)
+
+
+def test_cf_maximo_com_regra_negativa_nao_e_inalcancavel():
+    rel = _relatorio(_m_sem_e06_cf_maximo_com_regra_negativa)
+    assert "E06" not in _numeros(rel.erros), [(p.numero, p.mensagem) for p in rel.erros]
 
 
 def test_codigos_textuais_por_numero():
@@ -448,6 +511,8 @@ def test_e02_cobre_dois_simbolos_com_mesmo_id():
 def test_e03_nao_dispara_para_derivado_com_cf_minimo():
     # a base mínima já tem cond. d1 com cf_minimo; derivado com cf_maximo também vale
     def m(d):
+        # cf_maximo só é alcançável se alguma regra conclui 'recente' com cf negativo (E06)
+        _nova_regra(d, "R-REC-02", [{"simbolo": "sinal_a"}], "recente", -0.3)
         _nova_regra(d, "R-X", [{"simbolo": "recente", "cf_maximo": 0.5}], "d1", 0.3)
     assert _relatorio(m).erros == []
 

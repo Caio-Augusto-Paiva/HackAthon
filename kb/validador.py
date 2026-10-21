@@ -21,6 +21,7 @@ from kb.analise import (
     regras_que_concluem,
     simbolos_por_id,
     simbolos_triagem,
+    simbolos_triagem_produtor,
 )
 from kb.grafo import Grafo, grafo_para_base
 from kb.modelos import Base, Condicao, DominioCategorico, DominioNumerico, Regra, Simbolo
@@ -193,10 +194,41 @@ def _e05_ciclo(base: Base) -> list[Problema]:
                f"Ciclo: {' -> '.join(fluxo)}. Um símbolo não pode depender, direta ou indiretamente, de si mesmo.")]
 
 
+def _motivo_polaridade(c: Condicao, s: Simbolo, positivos: set[str], negativos: set[str]) -> str | None:
+    """Motivo pelo qual a condição sobre um conceito nunca fica positiva (ou ``None``).
+
+    Espelha ``engine.avaliacao.avaliar_condicao`` sobre o CF do conceito: sem limites, o
+    valor é ``cf`` (``-cf`` se negado); ``cf_minimo`` dá ``cf`` com ``cf >= min >= 0``;
+    ``cf_maximo`` dá ``-cf`` com ``cf <= max``; ``negado`` inverte o sinal. A condição só
+    passa da premissa quando o valor é positivo.
+    """
+    if c.cf_minimo is not None:
+        if c.negado:
+            return f"'{s.id}' é negado com cf_minimo, o que nunca dá valor positivo"
+        precisa = "positivo"
+    elif c.cf_maximo is not None:
+        if c.negado:
+            if c.cf_maximo <= 0:
+                return f"'{s.id}' é negado com cf_maximo {c.cf_maximo}, o que exige cf positivo e no máximo {c.cf_maximo}"
+            precisa = "positivo"
+        else:
+            precisa = "negativo"
+    else:
+        precisa = "negativo" if c.negado else "positivo"
+    if precisa == "positivo" and s.id not in positivos:
+        return f"a condição sobre '{s.id}' exige cf positivo, mas nenhuma regra o conclui com cf positivo"
+    if precisa == "negativo" and s.id not in negativos:
+        return f"a condição sobre '{s.id}' exige cf negativo, mas nenhuma regra o conclui com cf negativo"
+    return None
+
+
 def _e06_regra_inalcancavel(base: Base) -> list[Problema]:
     existentes = simbolos_por_id(base)
     concluidos = {r.entao.simbolo for r in base.regras}
-    negativos = {r.entao.simbolo for r in base.regras if r.entao.cf < 0}
+    positivos = {r.entao.simbolo for r in base.regras if r.entao.cf > 0}
+    # derivado 'max' nunca fica negativo: max(0, saída negativa) = 0
+    negativos = {r.entao.simbolo for r in base.regras
+                 if r.entao.cf < 0 and (s := existentes.get(r.entao.simbolo)) is not None and s.combinacao != "max"}
     triagem = simbolos_triagem(base)
     saida = []
     for r in base.regras:
@@ -208,8 +240,10 @@ def _e06_regra_inalcancavel(base: Base) -> list[Problema]:
             if _conceito(s):
                 if s.id not in concluidos:
                     motivos.append(f"nenhuma regra conclui '{s.id}'")
-                elif c.negado and s.id not in negativos:
-                    motivos.append(f"'{s.id}' é negado, mas nenhuma regra o conclui com cf negativo")
+                else:
+                    motivo = _motivo_polaridade(c, s, positivos, negativos)
+                    if motivo:
+                        motivos.append(motivo)
             elif not (perguntavel(s, "produtor") or perguntavel(s, "veterinario") or s.id in triagem or s.campo_ficha):
                 motivos.append(f"'{s.id}' não tem texto de pergunta, não está na triagem nem tem campo de ficha")
         for motivo in dict.fromkeys(motivos):
@@ -254,7 +288,9 @@ def _regras_de_doenca(base: Base):
 
 def _produtor_ok(base: Base, existentes: dict, triagem: set, sid: str,
                  memo: dict[str, bool] | None = None) -> bool:
-    """O símbolo é obtido do produtor: perguntável a ele, de triagem/ficha ou derivado disso.
+    """O símbolo é obtido do produtor: perguntável a ele, na triagem que ele vê, ficha ou derivado disso.
+
+    ``triagem`` é o conjunto de ``simbolos_triagem_produtor`` (o que as telas mostram ao produtor).
 
     ``memo`` guarda o resultado por símbolo (sem ele, cadeias de derivados lidos por
     várias regras custam tempo exponencial); um símbolo ainda em andamento (ciclo) conta
@@ -277,7 +313,7 @@ def _produtor_ok(base: Base, existentes: dict, triagem: set, sid: str,
 
 
 def _e10_doenca_sem_regra_produtor(base: Base) -> list[Problema]:
-    existentes, triagem = simbolos_por_id(base), simbolos_triagem(base)
+    existentes, triagem = simbolos_por_id(base), simbolos_triagem_produtor(base)
     memo: dict[str, bool] = {}
     return [
         _p("E10", _simb(s), f"Nenhuma regra da doença '{s.id}' usa só informações que o produtor pode fornecer.")
