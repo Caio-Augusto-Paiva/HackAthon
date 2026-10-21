@@ -3,6 +3,7 @@ from copy import deepcopy
 from .modelos import Base, MODOS
 from .memoria import Memoria
 from .selecao import analisar, _fontes
+from .inferencia import inferir
 from .parada import motivo_parada
 from .parecer import montar_parecer
 from .explicacao import como
@@ -13,8 +14,6 @@ from .avaliacao import avaliar_condicao
 class Sessao:
     def __init__(self, base, modo='produtor', ficha=None, limite_dinamico=None, *, _calcular_inicial=True):
         self.base=Base.de_dict(base)
-        self._dependencias_bandeiras={r['id']:{folha for c in r['se'] for folha in _fontes(c['simbolo'],self.base)}
-                                     for r in self.base.regras if r.get('classe')=='bandeira_vermelha'}
         if modo not in MODOS: raise ValueError('Modo inválido')
         if limite_dinamico is not None and (type(limite_dinamico) is not int or limite_dinamico<0):
             raise ValueError('Limite inválido')
@@ -37,13 +36,14 @@ class Sessao:
     def restaurar(cls, base, *, modo='produtor', fatos, perguntas_dinamicas=(),
                   perguntas_feitas=None, bandeiras_reconhecidas=(),
                   finalizada_por_alerta=False, limite_dinamico=None,
-                  correcoes=(), bandeiras_ativas=None):
+                  correcoes=(), bandeiras_ativas=None):  # bandeiras_ativas: só compatibilidade, ignorado
         """Reconstrói dados persistidos diretamente, sem repetir o diálogo.
 
         A API decodifica suas colunas JSON e fornece os fatos por símbolo,
         ids dinâmicos em ordem e eventos de perguntas com o motivo original.
         Dados são validados como observações; não se exige que cada resposta
-        antiga ainda seja a próxima pergunta após uma correção.
+        antiga ainda seja a próxima pergunta após uma correção. As bandeiras
+        travadas são derivadas reprocessando as respostas em ordem.
         """
         sessao=cls(base,modo=modo,limite_dinamico=limite_dinamico,_calcular_inicial=False)
         sessao.memoria.registrar(fatos)
@@ -68,12 +68,8 @@ class Sessao:
                 raise ValueError('Somente perguntas e correções pertencem ao histórico')
             item=evento(sessao._historico,e['tipo'],**{k:v for k,v in e.items() if k not in ('id','tipo')})
             if item['tipo']=='pergunta_feita': sessao.perguntas[id]=item
-        sessao.bandeiras_historicas=deepcopy(bandeiras_ativas or {})
-        ids_bandeira={r['id'] for r in sessao.base.regras if r.get('classe')=='bandeira_vermelha'}
-        if not set(sessao.bandeiras_historicas)<=ids_bandeira:
-            raise ValueError('Bandeira persistida inexistente')
         sessao.reconhecidas=set(bandeiras_reconhecidas)
-        sessao._calcular()
+        sessao._calcular(reprocessar=True)
         if type(finalizada_por_alerta) is not bool or (finalizada_por_alerta and not sessao.bandeiras_historicas):
             raise ValueError('Encerramento por alerta inválido')
         sessao.finalizada_por_alerta=finalizada_por_alerta
@@ -87,8 +83,7 @@ class Sessao:
         return deepcopy({'modo':self.modo,'fatos':fatos,'perguntas_dinamicas':self.dinamicas,
                          'perguntas_feitas':self.perguntas,'bandeiras_reconhecidas':sorted(self.reconhecidas),
                          'finalizada_por_alerta':self.finalizada_por_alerta,'limite_dinamico':self.limite_dinamico,
-                         'correcoes':[e for e in self._historico if e.get('correcao')],
-                         'bandeiras_ativas':self.bandeiras_historicas})
+                         'correcoes':[e for e in self._historico if e.get('correcao')]})
 
     @property
     def traco(self):
@@ -104,14 +99,35 @@ class Sessao:
     @property
     def resultado(self): return self.analise.resultado
 
-    def _calcular(self, *, corrigidos=()):
+    def _lotes(self):
+        """Respostas atuais em ordem: ficha, telas de triagem, perguntas dinâmicas."""
+        fatos=self.memoria.fatos
+        telas=[(t['id'],{id:f for id,f in fatos.items() if f.tela_id==t['id'] and f.origem!='ficha'})
+               for t in self.base.meta['triagem']]
+        dinamicas=[{id:fatos[id]} for id in self.dinamicas if id in fatos]
+        usados={id for _,lote in telas for id in lote}|{id for lote in dinamicas for id in lote}
+        lotes=[{id:f for id,f in fatos.items() if id not in usados}]+[lote for _,lote in telas]+dinamicas
+        return [lote for lote in lotes if lote]
+
+    def _reprocessar_bandeiras(self):
+        """União das bandeiras de cada prefixo de lotes, na ordem de entrada."""
+        historicas={}
+        acumulado={}
+        for lote in self._lotes():
+            acumulado.update(lote)
+            resultado=inferir(self.base,acumulado)
+            for id in resultado.bandeiras:
+                if id not in historicas: historicas[id]=deepcopy(como(resultado,'chamar_agora'))
+        return historicas
+
+    def _calcular(self, *, reprocessar=False):
         self.analise=analisar(self.base,self.memoria.fatos,self.modo)
-        # A dependência estrutural inclui caminhos que não disparam no cálculo atual.
-        self.bandeiras_historicas={id:dados for id,dados in self.bandeiras_historicas.items()
-                                   if self._dependencias_bandeiras[id].isdisjoint(corrigidos)}
-        for id in self.resultado.bandeiras:
-            if id not in self.bandeiras_historicas:
-                self.bandeiras_historicas[id]=deepcopy(como(self.resultado,'chamar_agora'))
+        if reprocessar:
+            self.bandeiras_historicas=self._reprocessar_bandeiras()
+        else:
+            for id in self.resultado.bandeiras:
+                if id not in self.bandeiras_historicas:
+                    self.bandeiras_historicas[id]=deepcopy(como(self.resultado,'chamar_agora'))
         self.reconhecidas.intersection_update(self.bandeiras_historicas)
 
     def _registrar_correcao(self, anteriores):
@@ -207,7 +223,7 @@ class Sessao:
         self.memoria.registrar(entradas,tela_id=tela_id)
         if corrigir: self._registrar_correcao(anteriores)
         self.finalizada_por_alerta=False
-        self._calcular(corrigidos=anteriores)
+        self._calcular(reprocessar=corrigir)
         return self.estado()
 
     def responder(self,simbolo,valor,*,corrigir=False):
@@ -222,7 +238,7 @@ class Sessao:
         if corrigir: self._registrar_correcao(anteriores)
         if not corrigir: self.dinamicas.append(simbolo)
         self.finalizada_por_alerta=False
-        self._calcular(corrigidos=anteriores)
+        self._calcular(reprocessar=corrigir)
         return self.estado()
 
     def trocar_modo(self,modo):
