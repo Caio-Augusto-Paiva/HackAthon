@@ -318,8 +318,11 @@ def test_alvos_de_simbolo_tela_e_meta():
 
 def test_ciclo_na_ordem_do_fluxo_de_dados():
     erro = next(p for p in _relatorio(_m_e05).erros if p.numero == "E05")
-    # R-X: y -> x ; R-Y: x -> y  (lê -> conclui)
-    assert "x -> y -> x" in erro.mensagem or "y -> x -> y" in erro.mensagem
+    # R-X: y -> x ; R-Y: x -> y  (lê -> conclui); o ciclo é achado a partir de 'x'
+    assert erro.alvo == Alvo(tipo="simbolo", id="x")
+    assert erro.mensagem == (
+        "Ciclo: x -> y -> x. Um símbolo não pode depender, direta ou indiretamente, de si mesmo."
+    )
 
 
 def test_e02_cobre_simbolo_e_regra_com_mesmo_id():
@@ -369,6 +372,46 @@ def test_e17_ordem_completa():
     def m(d):
         d["meta"]["limiares"] = {"descarte": 0.5}
     assert _numeros(_relatorio(m).erros) == {"E17"}
+
+
+@pytest.mark.parametrize("limiares", [
+    {"premissa": 0.35},                       # premissa == hipotese_relevante
+    {"hipotese_relevante": 0.6},              # == exaustao
+    {"exaustao": 0.7},                        # == potencial
+    {"potencial": 0.8},                       # == confirmacao
+    {"bloco_diferencial": 0.5},               # == bloco_principal
+    {"descarte": 0.1},                        # descarte deve ser negativo
+    {"descarte": 0.0},
+    {"premissa": -0.1},                       # premissa deve ser positiva
+    {"premissa": 0.0},
+])
+def test_e17_ordem_estrita_com_zero_como_pivo(limiares):
+    def m(d):
+        d["meta"]["limiares"] = limiares
+    rel = _relatorio(m)
+    assert _numeros(rel.erros) == {"E17"}, limiares
+
+
+def test_e17_limiares_padrao_validos():
+    assert _relatorio().erros == []
+
+
+def test_e08_basta_uma_condicao_da_triagem():
+    def m(d):
+        _regra(d, "R-BV-01")["se"].append({"simbolo": "pergunta_x"})  # sinal_b (triagem) + pergunta_x
+    assert "E08" not in _numeros(_relatorio(m).erros)
+
+
+def test_e08_aceita_derivado_de_triagem():
+    def m(d):
+        _regra(d, "R-BV-01")["se"] = [{"simbolo": "recente"}, {"simbolo": "pergunta_x"}]
+    assert "E08" not in _numeros(_relatorio(m).erros)
+
+
+def test_e08_so_condicoes_fora_da_triagem():
+    def m(d):
+        _regra(d, "R-BV-01")["se"] = [{"simbolo": "pergunta_x"}, {"simbolo": "exame_v"}]
+    assert _numeros(_relatorio(m).erros) == {"E08"}
 
 
 def test_w02_exige_mesmas_condicoes():

@@ -40,7 +40,7 @@ CODIGOS: dict[str, str] = {
 _ID_SIMBOLO = re.compile(r"[a-z0-9_]+")
 _ID_REGRA = re.compile(r"[A-Za-z0-9_-]+")
 _CONCEITOS = ("derivado", "doenca", "urgencia")  # símbolos concluídos por regras (booleanos)
-_ORDEM_LIMIARES = ("descarte", "premissa", "hipotese_relevante", "exaustao", "potencial", "confirmacao")
+_ORDEM_LIMIARES = ("descarte", "0", "premissa", "hipotese_relevante", "exaustao", "potencial", "confirmacao")
 _MODOS = ("produtor", "veterinario")
 
 
@@ -222,9 +222,9 @@ def _e08_bandeira_sem_triagem(base: Base) -> list[Problema]:
     for r in base.regras:
         if r.classe != "bandeira_vermelha":
             continue
-        fora = [c.simbolo for c in r.se if c.simbolo in existentes and c.simbolo not in permitidos]
-        if fora:
-            saida.append(_p("E08", _regra(r), f"A bandeira vermelha '{r.id}' lê {sorted(set(fora))}, que não vêm da triagem."))
+        lidos = sorted({c.simbolo for c in r.se if c.simbolo in existentes})
+        if lidos and not any(i in permitidos for i in lidos):
+            saida.append(_p("E08", _regra(r), f"A bandeira vermelha '{r.id}' lê só {lidos}, nenhum vindo da triagem."))
     return saida
 
 
@@ -339,10 +339,13 @@ def _e16_tela_sem_texto(base: Base) -> list[Problema]:
 def _e17_limiares_fora_de_ordem(base: Base) -> list[Problema]:
     lim = base.meta.limiares
     alvo = Alvo(tipo="meta", id="limiares")
-    pares = list(zip(_ORDEM_LIMIARES, _ORDEM_LIMIARES[1:])) + [("bloco_diferencial", "bloco_principal")]
+    cadeia = [(n, 0.0 if n == "0" else getattr(lim, n)) for n in _ORDEM_LIMIARES]
+    pares = list(zip(cadeia, cadeia[1:])) + [
+        (("bloco_diferencial", lim.bloco_diferencial), ("bloco_principal", lim.bloco_principal))
+    ]
     return [
-        _p("E17", alvo, f"Limiares fora de ordem: {a} ({getattr(lim, a)}) deve ser menor ou igual a {b} ({getattr(lim, b)}).")
-        for a, b in pares if getattr(lim, a) > getattr(lim, b)
+        _p("E17", alvo, f"Limiares fora de ordem: {a} ({va}) deve ser estritamente menor que {b} ({vb}).")
+        for (a, va), (b, vb) in pares if va >= vb
     ]
 
 
