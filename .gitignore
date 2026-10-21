@@ -7,3 +7,6 @@ htmlcov/
 # graphify: caminhos locais da máquina
 graphify-out/.graphify_python
 graphify-out/.graphify_root
+
+# Obsidian: estado de tela de cada pessoa (gera conflito entre PCs)
+obsidian/**/.obsidian/workspace*.json
