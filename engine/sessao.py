@@ -34,19 +34,21 @@ class Sessao:
                      if valor is not None and not (isinstance(valor,dict) and valor.get('valor') is None
                                                   and not valor.get('nao_sei',False))}
         self.memoria.registrar(preenchidos,origem='ficha')
+        self._ordem=[list(preenchidos)] if preenchidos else []
 
     @classmethod
     def restaurar(cls, base, *, modo='produtor', fatos, perguntas_dinamicas=(),
                   perguntas_feitas=None, bandeiras_reconhecidas=(),
                   finalizada_por_alerta=False, limite_dinamico=None,
-                  correcoes=(), bandeiras_ativas=None):  # bandeiras_ativas: só compatibilidade, ignorado
+                  correcoes=(), bandeiras_ativas=None, ordem_respostas=None):  # bandeiras_ativas: só compatibilidade, ignorado
         """Reconstrói dados persistidos diretamente, sem repetir o diálogo.
 
         A API decodifica suas colunas JSON e fornece os fatos por símbolo,
         ids dinâmicos em ordem e eventos de perguntas com o motivo original.
         Dados são validados como observações; não se exige que cada resposta
         antiga ainda seja a próxima pergunta após uma correção. As bandeiras
-        travadas são derivadas reprocessando as respostas em ordem.
+        travadas são derivadas reprocessando as respostas em ordem. Sem
+        `ordem_respostas`, a ordem é derivada (ficha, telas, dinâmicas).
         """
         sessao=cls.__new__(cls)
         sessao._iniciar(base,modo,None,limite_dinamico)
@@ -72,6 +74,7 @@ class Sessao:
                 raise ValueError('Somente perguntas e correções pertencem ao histórico')
             item=evento(sessao._historico,e['tipo'],**{k:v for k,v in e.items() if k not in ('id','tipo')})
             if item['tipo']=='pergunta_feita': sessao.perguntas[id]=item
+        sessao._ordem=sessao._validar_ordem(ordem_respostas) if ordem_respostas is not None else sessao._ordem_derivada()
         sessao.reconhecidas=set(bandeiras_reconhecidas)
         sessao._calcular(reprocessar=True)
         if type(finalizada_por_alerta) is not bool or (finalizada_por_alerta and not sessao.bandeiras_historicas):
@@ -87,7 +90,8 @@ class Sessao:
         return deepcopy({'modo':self.modo,'fatos':fatos,'perguntas_dinamicas':self.dinamicas,
                          'perguntas_feitas':self.perguntas,'bandeiras_reconhecidas':sorted(self.reconhecidas),
                          'finalizada_por_alerta':self.finalizada_por_alerta,'limite_dinamico':self.limite_dinamico,
-                         'correcoes':[e for e in self._historico if e.get('correcao')]})
+                         'correcoes':[e for e in self._historico if e.get('correcao')],
+                         'ordem_respostas':self._ordem})
 
     @property
     def traco(self):
@@ -103,14 +107,37 @@ class Sessao:
     @property
     def resultado(self): return self.analise.resultado
 
-    def _lotes(self):
-        """Respostas atuais em ordem: ficha, telas de triagem, perguntas dinâmicas."""
+    def _validar_ordem(self, ordem):
+        if not isinstance(ordem,(list,tuple)) or not all(isinstance(l,(list,tuple)) for l in ordem):
+            raise ValueError('Ordem das respostas inválida')
+        ids=[id for lote in ordem for id in lote]
+        if len(ids)!=len(set(ids)) or any(id not in self.memoria.fatos for id in ids):
+            raise ValueError('Ordem das respostas com símbolos duplicados ou sem resposta persistida')
+        return [list(l) for l in ordem if l]
+
+    def _ordem_derivada(self):
+        """Ordem aproximada: ficha, telas na ordem da base, perguntas dinâmicas."""
         fatos=self.memoria.fatos
-        telas=[(t['id'],{id:f for id,f in fatos.items() if f.tela_id==t['id'] and f.origem!='ficha'})
+        telas=[[id for id,f in fatos.items() if f.tela_id==t['id'] and f.origem!='ficha']
                for t in self.base.meta['triagem']]
-        dinamicas=[{id:fatos[id]} for id in self.dinamicas if id in fatos]
-        usados={id for _,lote in telas for id in lote}|{id for lote in dinamicas for id in lote}
-        lotes=[{id:f for id,f in fatos.items() if id not in usados}]+[lote for _,lote in telas]+dinamicas
+        dinamicas=[[id] for id in self.dinamicas if id in fatos]
+        usados={id for lote in telas+dinamicas for id in lote}
+        return [lote for lote in [[id for id in fatos if id not in usados]]+telas+dinamicas if lote]
+
+    def _registrar_ordem(self, ids):
+        conhecidos={id for lote in self._ordem for id in lote}
+        novos=[id for id in ids if id not in conhecidos]
+        if novos: self._ordem.append(novos)
+
+    def _lotes(self):
+        """Respostas atuais, em lotes, na ordem real de entrada."""
+        fatos=self.memoria.fatos
+        conhecidos={id for lote in self._ordem for id in lote}
+        lotes=[{id:fatos[id] for id in lote if id in fatos} for lote in self._ordem]
+        soltos={id:f for id,f in fatos.items() if id not in conhecidos}
+        if soltos:
+            if lotes: lotes[0]={**soltos,**lotes[0]}
+            else: lotes=[soltos]
         return [lote for lote in lotes if lote]
 
     def _reprocessar_bandeiras(self):
@@ -204,6 +231,7 @@ class Sessao:
         estado=self.estado()
         if corrigir:
             if not all(id in self.memoria.fatos for id in ids): raise ValueError('Tela ainda não respondida')
+            ids=[id for id in ids if self.memoria.fatos[id].origem!='ficha'] or ids  # tela só de ficha: correção explícita
         elif estado['proxima'] is None or estado['proxima']['id']!=tela_id or estado['proxima']['tipo']!='tela_triagem':
             raise ValueError('Tela não é a próxima ou já foi respondida')
         else:
@@ -227,6 +255,7 @@ class Sessao:
         anteriores={id:self.memoria.fatos[id] for id in ids} if corrigir else {}
         self.memoria.registrar(entradas,tela_id=tela_id)
         if corrigir: self._registrar_correcao(anteriores)
+        else: self._registrar_ordem(entradas)
         self.finalizada_por_alerta=False
         self._calcular(reprocessar=corrigir)
         return self.estado()
@@ -241,7 +270,7 @@ class Sessao:
         anteriores={simbolo:self.memoria.fatos[simbolo]} if corrigir else {}
         self.memoria.registrar({simbolo:valor})
         if corrigir: self._registrar_correcao(anteriores)
-        if not corrigir: self.dinamicas.append(simbolo)
+        if not corrigir: self.dinamicas.append(simbolo); self._registrar_ordem([simbolo])
         self.finalizada_por_alerta=False
         self._calcular(reprocessar=corrigir)
         return self.estado()
