@@ -1,7 +1,7 @@
 """Validação semântica da base de conhecimento (sem I/O, determinística).
 
 ``validar`` recebe uma ``Base`` já carregada e devolve um ``Relatorio`` com erros
-(E01-E21) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
+(E01-E23) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
 o payload do editor (grafo); ambas convertem falhas de estrutura em erros ``E00`` e
 nunca levantam. Cada código é uma função privada.
 """
@@ -35,7 +35,8 @@ CODIGOS: dict[str, str] = {
     "E15": "limite_cf_invalido", "E16": "tela_sem_texto",
     "E17": "limiares_fora_de_ordem", "E18": "regra_sem_fonte",
     "E19": "classe_incompativel", "E20": "id_invalido",
-    "E21": "tela_simbolo_invalido",
+    "E21": "tela_simbolo_invalido", "E22": "cf_urgencia_nao_positivo",
+    "E23": "dominio_conceito_nao_booleano",
     "W01": "simbolo_nao_usado", "W02": "regras_contraditorias", "W03": "suposicoes_pendentes",
 }
 
@@ -364,14 +365,23 @@ def _e16_tela_sem_texto(base: Base) -> list[Problema]:
 def _e17_limiares_fora_de_ordem(base: Base) -> list[Problema]:
     lim = base.meta.limiares
     alvo = Alvo(tipo="meta", id="limiares")
+    valores = {n: getattr(lim, n) for n in _ORDEM_LIMIARES if n != "0"}
+    valores.update(bloco_principal=lim.bloco_principal, bloco_diferencial=lim.bloco_diferencial)
+    saida = [
+        _p("E17", alvo, f"O limiar '{n}' ({v}) está fora de [-1, 1].")
+        for n, v in valores.items() if not -1 <= v <= 1
+    ]
     cadeia = [(n, 0.0 if n == "0" else getattr(lim, n)) for n in _ORDEM_LIMIARES]
     pares = list(zip(cadeia, cadeia[1:])) + [
         (("bloco_diferencial", lim.bloco_diferencial), ("bloco_principal", lim.bloco_principal))
     ]
-    return [
+    saida.extend(
         _p("E17", alvo, f"Limiares fora de ordem: {a} ({va}) deve ser estritamente menor que {b} ({vb}).")
         for (a, va), (b, vb) in pares if va >= vb
-    ]
+    )
+    if lim.bloco_diferencial < 0:
+        saida.append(_p("E17", alvo, f"O corte 'bloco_diferencial' ({lim.bloco_diferencial}) não pode ser negativo."))
+    return saida
 
 
 def _e18_regra_sem_fonte(base: Base) -> list[Problema]:
@@ -380,20 +390,24 @@ def _e18_regra_sem_fonte(base: Base) -> list[Problema]:
 
 
 def _e19_classe_incompativel(base: Base) -> list[Problema]:
+    """Espelha o motor: evidência conclui derivado/doença; urgência e bandeira, símbolo de tipo urgência."""
     existentes = simbolos_por_id(base)
     saida = []
     for r in base.regras:
         s = existentes.get(r.entao.simbolo)
-        if s is None or r.classe == "bandeira_vermelha":  # bandeira: ver E07
+        if s is None:
             continue
-        if r.classe == "urgencia" and (s.tipo != "urgencia" or s.id == "sem_problema"):
-            motivo = "deve concluir 'chamar_agora' ou 'observar'"
-        elif r.classe == "evidencia" and s.tipo not in ("derivado", "doenca"):
+        conceito = s.tipo in ("derivado", "doenca")
+        if r.classe == "evidencia" and not conceito:
             motivo = "deve concluir um derivado ou uma doença"
-        elif s.id == "sem_problema":
-            motivo = "'sem_problema' nunca é conclusão de regra"
+        elif r.classe != "evidencia" and conceito:
+            motivo = "só pode concluir um símbolo de tipo urgência, e ele é " + s.tipo
+        elif r.classe != "evidencia" and s.tipo != "urgencia":
+            motivo = "só pode concluir um símbolo de tipo urgência, e ele é " + s.tipo
+        elif r.classe == "urgencia" and s.id not in ("observar", "chamar_agora"):
+            motivo = "deve concluir 'chamar_agora' ou 'observar' ('sem_problema' é calculado)"
         else:
-            continue
+            continue  # bandeira com destino diferente de 'chamar_agora': ver E07
         saida.append(_p("E19", _regra(r), f"A regra '{r.id}' (classe {r.classe}) conclui '{s.id}', mas {motivo}."))
     return saida
 
@@ -417,7 +431,25 @@ def _e21_tela_simbolo_invalido(base: Base) -> list[Problema]:
             if s is not None and s.tipo not in ("pergunta", "ficha"):
                 saida.append(_p("E21", Alvo(tipo="tela", id=tela.id),
                                 f"A tela '{tela.id}' lista '{sid}', que é {s.tipo}; só pergunta ou ficha pode estar na triagem."))
+            elif s is not None and tela.selecao == "multipla" and s.dominio.tipo != "booleano":
+                saida.append(_p("E21", Alvo(tipo="tela", id=tela.id),
+                                f"A tela '{tela.id}' é de seleção múltipla, mas '{sid}' tem domínio {s.dominio.tipo}; "
+                                "só símbolos booleanos podem estar em tela múltipla."))
     return saida
+
+
+def _e22_cf_urgencia_nao_positivo(base: Base) -> list[Problema]:
+    return [
+        _p("E22", _regra(r), f"A regra '{r.id}' (classe {r.classe}) tem cf {r.entao.cf}; urgência e bandeira exigem cf positivo.")
+        for r in base.regras if r.classe in ("urgencia", "bandeira_vermelha") and r.entao.cf <= 0
+    ]
+
+
+def _e23_dominio_conceito_nao_booleano(base: Base) -> list[Problema]:
+    return [
+        _p("E23", _simb(s), f"O símbolo '{s.id}' ({s.tipo}) tem domínio {s.dominio.tipo}; derivado, doença e urgência são booleanos.")
+        for s in base.simbolos if _conceito(s) and s.dominio.tipo != "booleano"
+    ]
 
 
 # --- avisos ---------------------------------------------------------------
@@ -464,6 +496,7 @@ _VERIFICACOES = (
     _e13_doenca_sem_gravidade, _e14_derivado_max_negativo, _e15_limite_cf_invalido,
     _e16_tela_sem_texto, _e17_limiares_fora_de_ordem, _e18_regra_sem_fonte,
     _e19_classe_incompativel, _e20_id_invalido, _e21_tela_simbolo_invalido,
+    _e22_cf_urgencia_nao_positivo, _e23_dominio_conceito_nao_booleano,
     _w01_simbolo_nao_usado, _w02_regras_contraditorias, _w03_suposicoes_pendentes,
 )
 

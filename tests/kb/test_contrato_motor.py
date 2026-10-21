@@ -45,6 +45,13 @@ def _m_limite_dinamico_nan(d):
     d["meta"]["limite_dinamico"] = {"produtor": 12, "veterinario": float("nan")}
 
 
+def _carrega(nome_mut):
+    from tests.kb.test_validador import MUTACOES_ERRO
+    dados = carregar_minima()
+    MUTACOES_ERRO[nome_mut][0](dados)
+    return dados
+
+
 CASOS_QUE_O_MOTOR_RECUSA = {
     "tela-com-derivado": (_m_tela_com_derivado, "E21"),
     "tela-duplicada": (_m_tela_duplicada, "E02"),
@@ -55,6 +62,22 @@ CASOS_QUE_O_MOTOR_RECUSA = {
     "cf-infinito": (_m_cf_infinito, "E00"),
     "limite-dinamico-nan": (_m_limite_dinamico_nan, "E00"),
 }
+
+# mutações (de tests/kb/test_validador.py) que o motor recusa e o kb precisa recusar também
+MUTACOES_QUE_O_MOTOR_RECUSA = {
+    "E22-negativo": "E22", "E22-zero": "E22", "E22-bandeira": "E22",
+    "E19-urgencia-monitorar": "E19", "E19-bandeira-derivado": "E19", "E19-urgencia-em-doenca": "E19",
+    "E17-confirmacao": "E17", "E17-descarte": "E17", "E17-bloco-principal": "E17",
+    "E17-bloco-diferencial-negativo": "E17", "E17-blocos-invertidos": "E17",
+}
+
+
+@pytest.mark.parametrize("nome", list(MUTACOES_QUE_O_MOTOR_RECUSA))
+def test_motor_recusa_o_que_o_kb_recusa(nome):
+    dados = _carrega(nome)
+    assert MUTACOES_QUE_O_MOTOR_RECUSA[nome] in {p.numero for p in validar_dados(dados).erros}
+    with pytest.raises(ValueError):
+        BaseMotor.de_dict(para_motor(carregar_base(dados)))
 
 
 @pytest.mark.parametrize("nome", list(CASOS_QUE_O_MOTOR_RECUSA))
@@ -87,3 +110,15 @@ def test_valida_implica_motor_carrega(nome, dados):
 def test_para_motor_e_o_dump_sem_none():
     base = carregar_base(carregar_minima())
     assert para_motor(base) == base.model_dump(mode="json", exclude_none=True)
+
+
+def test_motor_quebra_na_inferencia_com_derivado_nao_booleano():
+    """O motor avalia a condição pelo domínio declarado: derivado numérico quebra (E23 evita isso)."""
+    from engine.inferencia import inferir
+
+    dados = _carrega("E23")
+    assert "E23" in {p.numero for p in validar_dados(dados).erros}
+    motor = para_motor(carregar_base(dados))
+    BaseMotor.de_dict(motor)  # carrega; o problema só aparece ao inferir
+    with pytest.raises(ValueError):
+        inferir(motor, {"dias_em_lactacao": 10, "pergunta_x": True})

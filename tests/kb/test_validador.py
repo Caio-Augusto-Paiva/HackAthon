@@ -202,6 +202,70 @@ def _m_e20(d):
     _renomear_simbolo(d, "sinal_a", "Sinal-A")
 
 
+def _m_e22_negativo(d):
+    _regra(d, "R-URG-d1")["entao"]["cf"] = -0.9
+
+
+def _m_e22_zero(d):
+    _regra(d, "R-URG-d1")["entao"]["cf"] = 0.0
+
+
+def _m_e22_bandeira(d):
+    _regra(d, "R-BV-01")["entao"]["cf"] = -0.5
+
+
+def _m_e19_urgencia_monitorar(d):
+    _novo_simbolo(d, "monitorar", "urgencia")
+    _nova_regra(d, "R-MON", [{"simbolo": "sinal_a"}], "monitorar", 0.5, classe="urgencia")
+
+
+def _m_e19_bandeira_derivado(d):
+    _simbolo(d, "chamar_agora")["tipo"] = "derivado"
+    _remover_regras(d, "R-URG-d1")
+
+
+def _m_e19_urgencia_em_doenca(d):
+    _nova_regra(d, "R-X", [{"simbolo": "sinal_a"}], "d1", 0.5, classe="urgencia")
+
+
+def _m_e23(d):
+    _simbolo(d, "recente")["dominio"] = {"tipo": "numerico", "min": 0, "max": 1}
+
+
+def _m_e23_doenca(d):
+    _simbolo(d, "d1")["dominio"] = {"tipo": "categorico", "valores": ["a"]}
+
+
+def _m_e21_multipla_numerica(d):
+    tela = next(t for t in d["meta"]["triagem"] if t["id"] == "dias")
+    tela["selecao"] = "multipla"
+
+
+def _m_e21_multipla_por_modo(d):
+    tela = next(t for t in d["meta"]["triagem"] if t["id"] == "sinais")
+    tela["simbolos_por_modo"] = {"produtor": ["sinal_a"], "veterinario": ["sinal_a", "dias_em_lactacao"]}
+
+
+def _m_e17_confirmacao(d):
+    d["meta"]["limiares"] = {"confirmacao": 1.5}
+
+
+def _m_e17_descarte(d):
+    d["meta"]["limiares"] = {"descarte": -1.5}
+
+
+def _m_e17_bloco_principal(d):
+    d["meta"]["limiares"] = {"bloco_principal": 1.5}
+
+
+def _m_e17_bloco_diferencial_negativo(d):
+    d["meta"]["limiares"] = {"bloco_diferencial": -0.1}
+
+
+def _m_e17_blocos_invertidos(d):
+    d["meta"]["limiares"] = {"bloco_diferencial": 0.6, "bloco_principal": 0.5}
+
+
 def _m_w01(d):
     _novo_simbolo(d, "nunca", "pergunta", pergunta={"produtor": "Pergunta nunca usada?"})
 
@@ -251,6 +315,21 @@ MUTACOES_ERRO = {
     "E18": (_m_e18, {"E18"}),
     "E19": (_m_e19, {"E19"}),
     "E20": (_m_e20, {"E20"}),
+    "E22-negativo": (_m_e22_negativo, {"E22"}),
+    "E22-zero": (_m_e22_zero, {"E22"}),
+    "E22-bandeira": (_m_e22_bandeira, {"E22"}),
+    "E19-urgencia-monitorar": (_m_e19_urgencia_monitorar, {"E19"}),
+    "E19-bandeira-derivado": (_m_e19_bandeira_derivado, {"E19"}),
+    "E19-urgencia-em-doenca": (_m_e19_urgencia_em_doenca, {"E19"}),
+    "E23": (_m_e23, {"E23"}),
+    "E23-doenca": (_m_e23_doenca, {"E23"}),
+    "E21-multipla-numerica": (_m_e21_multipla_numerica, {"E21"}),
+    "E21-multipla-por-modo": (_m_e21_multipla_por_modo, {"E21"}),
+    "E17-confirmacao": (_m_e17_confirmacao, {"E17"}),
+    "E17-descarte": (_m_e17_descarte, {"E17"}),
+    "E17-bloco-principal": (_m_e17_bloco_principal, {"E17"}),
+    "E17-bloco-diferencial-negativo": (_m_e17_bloco_diferencial_negativo, {"E17"}),
+    "E17-blocos-invertidos": (_m_e17_blocos_invertidos, {"E17"}),
 }
 
 MUTACOES_AVISO = {"W01": _m_w01, "W02": _m_w02, "W03": _m_w03}
@@ -310,7 +389,8 @@ def test_codigos_textuais_por_numero():
         "E14": "derivado_max_negativo", "E15": "limite_cf_invalido",
         "E16": "tela_sem_texto", "E17": "limiares_fora_de_ordem",
         "E18": "regra_sem_fonte", "E19": "classe_incompativel", "E20": "id_invalido",
-        "E21": "tela_simbolo_invalido",
+        "E21": "tela_simbolo_invalido", "E22": "cf_urgencia_nao_positivo",
+        "E23": "dominio_conceito_nao_booleano",
     }
     obtidos = {}
     for nome, (mutacao, _) in MUTACOES_ERRO.items():
