@@ -12,8 +12,10 @@ import json
 import os
 import subprocess
 import sys
+import tomllib
 from pathlib import Path
 
+import pydantic
 import pytest
 from pydantic import ValidationError
 
@@ -209,12 +211,20 @@ def test_discriminadores_literais(openapi):
 
     # o nó do grafo é bipartido: `tipo_no` é um enum fechado, não um texto livre
     assert schemas["No"]["properties"]["tipo_no"]["enum"] == ["simbolo", "regra"]
+    # a aresta tem papel fechado: `condicao` (símbolo -> regra) ou `conclusao` (regra -> símbolo)
+    assert schemas["Aresta"]["properties"]["papel"]["enum"] == ["condicao", "conclusao"]
 
     # o discriminador está ligado no modelo (não é só uma união simples): tipo desconhecido é `union_tag_invalid`
     exemplo = json.loads((PASTA_EXEMPLOS / "obter_sessao.json").read_text(encoding="utf-8"))["resposta"]
     with pytest.raises(ValidationError) as erro:
         EstadoSessao.model_validate({**exemplo, "proxima": {**exemplo["proxima"], "tipo": "outra"}})
     assert [e["type"] for e in erro.value.errors()] == ["union_tag_invalid"]
+
+
+def test_pydantic_fixado_na_versao_instalada():
+    """Um patch do Pydantic pode mudar o texto do JSON Schema: o ``openapi.json`` versionado depende da versão exata."""
+    dependencias = tomllib.loads((RAIZ / "pyproject.toml").read_text(encoding="utf-8"))["project"]["dependencies"]
+    assert f"pydantic=={pydantic.VERSION}" in dependencias
 
 
 # --- erros documentados --------------------------------------------------------------------------

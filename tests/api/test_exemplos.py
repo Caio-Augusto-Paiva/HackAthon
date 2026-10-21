@@ -208,13 +208,13 @@ def test_exemplo_do_parecer_respeita_os_invariantes():
     parecer = _exemplo("obter_parecer")["resposta"]
     assert [b["id"] for b in parecer["blocos"]] == ["hipoteses_principais", "diagnostico_diferencial", "pouco_provavel"]
     itens = [(b["id"], i) for b in parecer["blocos"] for i in b["itens"]]
-    cfs = [i["cf"] for _, i in itens]
-    assert cfs == sorted(cfs, reverse=True)
+    ordem = [i for _, i in itens]  # CF decrescente; empate pelo id da doença
+    assert ordem == sorted(ordem, key=lambda x: (-Fraction(str(x["cf"])), x["doenca"]))
     assert len({i["doenca"] for _, i in itens}) == len(itens)
 
     for bloco, item in itens:
         cf = Fraction(str(item["cf"]))
-        assert item["percentual"] == percentual(cf) == round(max(0, item["cf"]) * 100)
+        assert item["percentual"] == percentual(cf)  # o arredondamento é o do motor, não o do Python
         assert item["situacao"] == (
             "com_evidencia" if cf > Fraction(1, 5) else "descartada" if cf < -Fraction(1, 5) else "sem_evidencia"
         )

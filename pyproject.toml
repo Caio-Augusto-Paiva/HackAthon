@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Sistema especialista de anamnese de bovinos leiteiros (PoC, dados ficticios)"
 requires-python = ">=3.12"
 dependencies = [
-    "pydantic>=2.14,<2.15",
+    "pydantic==2.14.1",
     "fastapi==0.156.8",
     "starlette==1.9.0",
     "uvicorn==0.54.0",
