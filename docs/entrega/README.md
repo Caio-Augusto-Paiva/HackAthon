@@ -46,11 +46,11 @@ Dados dos exemplos são sintéticos. Todas as **56 regras** permanecem em `supos
 
 Os papéis abaixo vêm do planejamento e não identificam pessoas por inferência do nome de uma branch ou de um autor de commit.
 
-| Papel planejado | Nome completo | Telefone | Responsabilidade prevista |
+| Papel planejado | Nome completo | Responsabilidade prevista |
 |---|---|---|---|
-| A | A preencher | A preencher | Motor, base, casos e calibração |
-| B | A preencher | A preencher | API, contratos, validador e persistência |
-| C | A preencher | A preencher | Interface, testes de navegador e apresentação |
+| A | Caio Augusto de Paiva Teixeira | Arquitetura dos sistemas, Arquitetura dos prompts |
+| B | Davi MOnção Fernades | Motor de inferência, Documentação |
+| C | Luis Henrique Poubel Buettel | Base de conhecimento, Banco de Dados(Jason) |
 
 ## Mapa do pacote e trabalho restante
 
