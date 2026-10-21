@@ -12,6 +12,7 @@ members: 30
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - concept - docs/agentes-e-skills.md
 - [[Antigravity (plano Pro)]] - concept - docs/agentes-e-skills.md
 - [[Arvore da secao 4.3 da especificacao (sessao, validacao, modelos)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
+- [[Cinco tarefas TDD do motor (vermelho antes do verde)]] - concept - docs/superpowers/plans/2026-10-20-motor-secao-1.md
 - [[Claude Code (Claude Pro)]] - concept - docs/agentes-e-skills.md
 - [[Claude Code fica com o critico e fora da revisao]] - rationale - docs/agentes-e-skills.md
 - [[Codex (ChatGPT Plus)]] - concept - docs/agentes-e-skills.md
@@ -23,7 +24,6 @@ members: 30
 - [[Evidencia final 56 testes sem falhas]] - concept - docs/superpowers/plans/2026-10-20-motor-secao-1.md
 - [[Ficha com null tratada como nao sei (deve ser ausente)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
 - [[Focos da revisao (sem valor, contradicoes, loops, bandeiras)]] - concept - docs/superpowers/plans/2026-10-20-motor-secao-1.md
-- [[Fontes de dados externas]] - concept - CLAUDE.md
 - [[Fontes do projeto (fontes oficiais e de dominio)]] - document - docs/fontes/fontes.md
 - [[Gemini Pro (Google AI Pro, app web)]] - concept - docs/agentes-e-skills.md
 - [[Implementacao por pessoa (A, B, C) com agente principal e reserva]] - concept - docs/agentes-e-skills.md
@@ -47,12 +47,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Instruções e regras do hackathon]]
-- 1 edge to [[_COMMUNITY_Interface, memória e lacunas da API]]
+- 6 edges to [[_COMMUNITY_Instruções e regras do hackathon]]
+- 1 edge to [[_COMMUNITY_Instruções e regras do hackathon (2)]]
 
 ## Top bridge nodes
-- [[Fontes de dados externas]] - degree 3, connects to 2 communities
 - [[Motor de inferencia da secao 1 (pacote engine)]] - degree 10, connects to 1 community
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - degree 9, connects to 1 community
 - [[Motor de regras em Python independente de interface]] - degree 3, connects to 1 community
 - [[Desenvolvimento de Sistemas Especialistas com Vibe Coding]] - degree 2, connects to 1 community
+- [[Cinco tarefas TDD do motor (vermelho antes do verde)]] - degree 2, connects to 1 community

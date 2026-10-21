@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Interface, memória e lacunas da API"
+community: "Instruções e regras do hackathon"
 location: "L65"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Interface_memória_e_lacunas_da_API
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Interface do usuario
@@ -19,4 +19,4 @@ tags:
 - [[Parecer final em tres blocos]] - `implements` [INFERRED]
 - [[Sessao dialogo com triagem, perguntas, correcao e modo]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Interface_memória_e_lacunas_da_API
+#graphify/concept #graphify/INFERRED #community/Instruções_e_regras_do_hackathon

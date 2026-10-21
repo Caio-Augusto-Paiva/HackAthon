@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Planejamento, agentes e alocação"
+community: "Instruções e regras do hackathon"
 location: "L67"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planejamento_agentes_e_alocação
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Fontes de dados externas
@@ -16,4 +16,4 @@ tags:
 - [[Memoria de trabalho]] - `shares_data_with` [EXTRACTED]
 - [[Origens de observacao resposta, ficha, importacao]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

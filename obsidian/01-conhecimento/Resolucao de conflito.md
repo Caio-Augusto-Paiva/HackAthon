@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Instruções e regras do hackathon (3)"
 location: "L62"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Instruções_e_regras_do_hackathon_3
 ---
 
 # Resolucao de conflito
@@ -15,4 +15,4 @@ tags:
 - [[Agenda em camadas (prioridade, especificidade, id)]] - `implements` [INFERRED]
 - [[Motor de inferencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_3

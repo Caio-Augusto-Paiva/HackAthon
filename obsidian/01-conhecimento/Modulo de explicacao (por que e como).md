@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Interface, memória e lacunas da API"
+community: "Instruções e regras do hackathon"
 location: "L64"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Interface_memória_e_lacunas_da_API
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Modulo de explicacao (por que e como)
@@ -18,4 +18,4 @@ tags:
 - [[Interface do usuario]] - `conceptually_related_to` [INFERRED]
 - [[Traco de inferencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Interface_memória_e_lacunas_da_API
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

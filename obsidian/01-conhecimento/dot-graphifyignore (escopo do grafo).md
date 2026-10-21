@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Grafo de conhecimento e Obsidian"
+community: "Instruções e regras do hackathon (2)"
 location: "L17"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Grafo_de_conhecimento_e_Obsidian
+  - community/Instruções_e_regras_do_hackathon_2
 ---
 
 # .graphifyignore (escopo do grafo)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Grafo de conhecimento — ler PRIMEIRO, em todo prompt]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Grafo_de_conhecimento_e_Obsidian
+#graphify/document #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_2

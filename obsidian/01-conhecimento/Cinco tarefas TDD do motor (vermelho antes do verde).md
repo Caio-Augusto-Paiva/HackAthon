@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Planejamento, agentes e alocação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Cinco tarefas TDD do motor (vermelho antes do verde)
@@ -14,4 +14,4 @@ tags:
 - [[Motor de inferencia da secao 1 (pacote engine)]] - `implements` [EXTRACTED]
 - [[Testes com casos conhecidos por versao da base]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação

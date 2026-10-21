@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Interface, memória e lacunas da API"
+community: "Instruções e regras do hackathon"
 location: "L113"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Interface_memória_e_lacunas_da_API
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Traco de inferencia
@@ -18,4 +18,4 @@ tags:
 - [[Motor de inferencia]] - `references` [EXTRACTED]
 - [[Traco da sessao reacumula eventos (parcial)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Interface_memória_e_lacunas_da_API
+#graphify/concept #graphify/INFERRED #community/Instruções_e_regras_do_hackathon

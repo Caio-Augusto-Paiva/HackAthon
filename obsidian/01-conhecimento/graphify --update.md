@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Grafo de conhecimento e Obsidian"
+community: "Instruções e regras do hackathon (2)"
 location: "L24"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Grafo_de_conhecimento_e_Obsidian
+  - community/Instruções_e_regras_do_hackathon_2
 ---
 
 # graphify --update
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Manter o grafo atualizado]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Grafo_de_conhecimento_e_Obsidian
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_2
