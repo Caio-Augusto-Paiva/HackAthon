@@ -13,6 +13,7 @@ from api.config import carregar_configuracao
 from api.erros import (
     base_invalida,
     conflito,
+    entrada_invalida,
     importacao_invalida,
     nao_encontrado,
     resposta_invalida,
@@ -70,6 +71,7 @@ FABRICAS = {
         409,
         "ja_respondida",
     ),
+    "entrada_invalida": (lambda: entrada_invalida("Dados fora do formato."), 422, "entrada_invalida"),
     "resposta_invalida": (lambda: resposta_invalida("Valor fora do domínio."), 422, "resposta_invalida"),
     "base_invalida": (lambda: base_invalida("A base tem 1 erro.", [_problema()]), 422, "base_invalida"),
     "simbolo_invalido": (lambda: simbolo_invalido("Símbolo sem explicação."), 422, "simbolo_invalido"),

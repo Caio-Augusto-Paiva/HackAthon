@@ -41,6 +41,11 @@ def conflito(mensagem: str, codigo: str = "conflito") -> ErroApi:
     return ErroApi(409, codigo, mensagem)
 
 
+def entrada_invalida(mensagem: str, detalhes: list[dict] | None = None) -> ErroApi:
+    """422 ``entrada_invalida`` levantado pelo serviço (o handler de validação do FastAPI usa o mesmo código)."""
+    return ErroApi(422, "entrada_invalida", mensagem, detalhes)
+
+
 def resposta_invalida(mensagem: str) -> ErroApi:
     return ErroApi(422, "resposta_invalida", mensagem)
 

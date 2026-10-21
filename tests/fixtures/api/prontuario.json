@@ -1,0 +1,19 @@
+{
+  "animais": [
+    {
+      "brinco": "BR-0007",
+      "nome": "Estrela",
+      "ficha": { "data_ultimo_parto": "2026-09-30", "raca_grupo": "europeia", "historico_mastite_12m": false }
+    },
+    {
+      "brinco": "BR-0001",
+      "nome": "Mimosa",
+      "ficha": { "data_ultimo_parto": "2026-10-14", "raca_grupo": "cruzada", "historico_mastite_12m": true }
+    },
+    {
+      "brinco": "BR-0009",
+      "nome": "Fumaça",
+      "ficha": { "data_ultimo_parto": "2026-10-01", "raca_grupo": "nelore", "historico_mastite_12m": false }
+    }
+  ]
+}
