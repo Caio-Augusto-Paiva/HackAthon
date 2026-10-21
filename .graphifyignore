@@ -1,6 +1,7 @@
 # Grafo 1 (obsidian/01-conhecimento): só conhecimento do projeto.
 # Código fica para o grafo 2 (obsidian/02-a-definir).
 engine/*.py
+scripts/*.py
 tests/
 # Histórico já consolidado na especificação canônica
 docs/rascunhos/

@@ -1,12 +1,12 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "CF MYCIN com Fraction"
+community: "Sessao: triagem, perguntas e correções"
 location: "L5-L11; L94"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CF_MYCIN_com_Fraction
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Testes unittest e coleta pytest
@@ -15,4 +15,4 @@ tags:
 - [[CF MYCIN com Fraction]] - `references` [EXTRACTED]
 - [[Motor de inferência da seção 1]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CF_MYCIN_com_Fraction
+#graphify/concept #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

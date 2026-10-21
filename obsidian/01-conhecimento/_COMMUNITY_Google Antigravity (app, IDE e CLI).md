@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.42
 members: 9
 ---
 
 # Google Antigravity (app, IDE e CLI)
 
-**Cohesion:** 0.42 - moderately connected
 **Members:** 9 nodes
 
 ## Members

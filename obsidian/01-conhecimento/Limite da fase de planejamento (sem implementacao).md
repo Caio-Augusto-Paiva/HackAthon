@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Limite da fase de planejamento (sem implementacao)"
+community: "MSD Vet Manual"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Limite_da_fase_de_planejamento_sem_implementacao
+  - community/MSD_Vet_Manual
 ---
 
 # Limite da fase de planejamento (sem implementacao)
@@ -16,4 +16,4 @@ tags:
 - [[Skill superpowersbrainstorming]] - `references` [EXTRACTED]
 - [[Skill superpowerswriting-plans]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Limite_da_fase_de_planejamento_sem_implementacao
+#graphify/concept #graphify/EXTRACTED #community/MSD_Vet_Manual

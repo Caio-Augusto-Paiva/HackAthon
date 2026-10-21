@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Sessao: triagem, perguntas e correções"
+community: "Motor de inferência da seção 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Sessao_triagem_perguntas_e_correções
+  - community/Motor_de_inferência_da_seção_1
 ---
 
 # Especificacao canonica do projeto (anamnese bovinos)
@@ -16,4 +16,4 @@ tags:
 - [[Revisao do motor de inferencia (21102026)]] - `references` [EXTRACTED]
 - [[Tabela de conformidade com a especificacao (16 itens)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções
+#graphify/document #graphify/EXTRACTED #community/Motor_de_inferência_da_seção_1

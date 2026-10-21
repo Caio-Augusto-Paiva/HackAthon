@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 1.00
 members: 1
 ---
 
 # Agentes e skills por prompt (decisao de 20/10/2026)
 
-**Cohesion:** 1.00 - tightly connected
 **Members:** 1 nodes
 
 ## Members

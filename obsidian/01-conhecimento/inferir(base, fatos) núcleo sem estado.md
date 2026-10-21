@@ -1,12 +1,12 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "CF MYCIN com Fraction"
+community: "Sessao: triagem, perguntas e correções"
 location: "L56; L86"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CF_MYCIN_com_Fraction
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # inferir(base, fatos): núcleo sem estado
@@ -16,4 +16,4 @@ tags:
 - [[CF MYCIN com Fraction]] - `references` [EXTRACTED]
 - [[Sessao triagem, perguntas e correções]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CF_MYCIN_com_Fraction
+#graphify/concept #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

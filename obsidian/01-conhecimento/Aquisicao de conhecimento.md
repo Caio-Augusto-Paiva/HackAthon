@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Testes com casos conhecidos por versao da base"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Testes_com_casos_conhecidos_por_versao_da_base
+  - community/Motor_de_inferencia
 ---
 
 # Aquisicao de conhecimento
@@ -14,4 +14,4 @@ tags:
 - [[Base de conhecimento]] - `conceptually_related_to` [EXTRACTED]
 - [[Editor grafico do fluxo da anamnese]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Testes_com_casos_conhecidos_por_versao_da_base
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

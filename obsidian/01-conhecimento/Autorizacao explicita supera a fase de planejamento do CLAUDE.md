@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Limite da fase de planejamento (sem implementacao)"
+community: "MSD Vet Manual"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Limite_da_fase_de_planejamento_sem_implementacao
+  - community/MSD_Vet_Manual
 ---
 
 # Autorizacao explicita supera a fase de planejamento do CLAUDE.md
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Limite da fase de planejamento (sem implementacao)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Limite_da_fase_de_planejamento_sem_implementacao
+#graphify/rationale #graphify/EXTRACTED #community/MSD_Vet_Manual

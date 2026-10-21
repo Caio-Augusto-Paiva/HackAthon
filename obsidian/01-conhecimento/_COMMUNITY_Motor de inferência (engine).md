@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.07
 members: 53
 ---
 
 # Motor de inferência (engine/)
 
-**Cohesion:** 0.07 - loosely connected
 **Members:** 53 nodes
 
 ## Members

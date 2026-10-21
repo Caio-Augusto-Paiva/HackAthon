@@ -1,0 +1,39 @@
+{
+  "verificado_em_utc": "2026-10-21T14:27:58.734491+00:00",
+  "python": "3.12.14",
+  "codigo_base_referencia": "898512c",
+  "base": "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json",
+  "versao_base": "3.1.0-revisao1",
+  "sha256_json_canonico": "395e2b49eb7db736b779b3eb9404707c81c27a60eac31eb6ecbcff2c9aaba1cf",
+  "testes_automatizados": 135,
+  "casos_sinteticos": 2,
+  "validacao_clinica": "pendente",
+  "roteiro_python_executado": true,
+  "links_locais_verificados": 32,
+  "links_quebrados": [],
+  "resultados": [
+    {
+      "comando": [
+        "python",
+        "-m",
+        "unittest",
+        "discover"
+      ],
+      "codigo_saida": 0,
+      "saida": ".......................................................................................................................................\n----------------------------------------------------------------------\nRan 135 tests in 3.796s\n\nOK\n"
+    },
+    {
+      "comando": [
+        "python",
+        "scripts/gerar_doc_regras.py",
+        "--base",
+        "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json",
+        "--casos",
+        "base/desenvolvimento/casos",
+        "--verificar"
+      ],
+      "codigo_saida": 0,
+      "saida": "Documentação sincronizada com a base e os casos.\n"
+    }
+  ]
+}

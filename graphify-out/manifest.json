@@ -72,15 +72,123 @@
     "semantic_hash": "b1603f13995d2ec42416e5ff94223686"
   },
   "engine/README.md": {
-    "mtime": 1792553878.571261,
-    "seen": 1792554649.2468472,
-    "ast_hash": "b2b612268f15d170ebdbe1948e530115",
-    "semantic_hash": "b2b612268f15d170ebdbe1948e530115"
+    "mtime": 1792590754.7368493,
+    "seen": 1792593454.7676528,
+    "ast_hash": "59e8ce2bb1188e155b06226f368066cc",
+    "semantic_hash": "59e8ce2bb1188e155b06226f368066cc"
   },
   "CLAUDE.md": {
     "mtime": 1792553327.1277964,
     "seen": 1792554649.2468472,
     "ast_hash": "dcadb0165dfb54807275c7f25fb939e5",
     "semantic_hash": "dcadb0165dfb54807275c7f25fb939e5"
+  },
+  "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": {
+    "mtime": 1792589983.3202612,
+    "seen": 1792593454.7676528,
+    "ast_hash": "6c83217d70e84a11dd69236cf679fcf3",
+    "semantic_hash": "6c83217d70e84a11dd69236cf679fcf3"
+  },
+  "base/desenvolvimento/casos/alerta-decubito.json": {
+    "mtime": 1792590965.2307801,
+    "seen": 1792593454.7676528,
+    "ast_hash": "6608c8fce77a73f8bcd013daf37e067e",
+    "semantic_hash": "6608c8fce77a73f8bcd013daf37e067e"
+  },
+  "base/desenvolvimento/casos/sinais-mamarios.json": {
+    "mtime": 1792590965.2317808,
+    "seen": 1792593454.7676528,
+    "ast_hash": "69988894abcf8a27e1a7fd1c6da196b1",
+    "semantic_hash": "69988894abcf8a27e1a7fd1c6da196b1"
+  },
+  "docs/entrega/evidencias-verificacao.json": {
+    "mtime": 1792592878.735997,
+    "seen": 1792593454.7676528,
+    "ast_hash": "4b3d8078204ae6480c0ed39840c1a4bd",
+    "semantic_hash": "4b3d8078204ae6480c0ed39840c1a4bd"
+  },
+  "README.md": {
+    "mtime": 1792592577.5273068,
+    "seen": 1792593454.7676528,
+    "ast_hash": "f168dee2276bf719e8777129d7321a33",
+    "semantic_hash": "f168dee2276bf719e8777129d7321a33"
+  },
+  "base/desenvolvimento/LEIA-ME.txt": {
+    "mtime": 1792590965.2329876,
+    "seen": 1792593454.7676528,
+    "ast_hash": "434bc0e4614fb9943e62d59f57f00f8d",
+    "semantic_hash": "434bc0e4614fb9943e62d59f57f00f8d"
+  },
+  "docs/entrega/01-processo.md": {
+    "mtime": 1792592577.5303097,
+    "seen": 1792593454.7676528,
+    "ast_hash": "9a8fbb4e22a9193c1bac9642f5eb13a2",
+    "semantic_hash": "9a8fbb4e22a9193c1bac9642f5eb13a2"
+  },
+  "docs/entrega/02-arquitetura.md": {
+    "mtime": 1792592577.5313077,
+    "seen": 1792593454.7676528,
+    "ast_hash": "8d3aec7e364dbf128126d87f0ba8656a",
+    "semantic_hash": "8d3aec7e364dbf128126d87f0ba8656a"
+  },
+  "docs/entrega/03-regras-de-producao.md": {
+    "mtime": 1792592229.2176335,
+    "seen": 1792593454.7676528,
+    "ast_hash": "eab09fd073dcea1f0204cc4e85f9c80c",
+    "semantic_hash": "eab09fd073dcea1f0204cc4e85f9c80c"
+  },
+  "docs/entrega/04-casos-de-teste.md": {
+    "mtime": 1792592229.219722,
+    "seen": 1792593454.7676528,
+    "ast_hash": "f8bc9afaa445c69a98f9f7d2c234bd73",
+    "semantic_hash": "f8bc9afaa445c69a98f9f7d2c234bd73"
+  },
+  "docs/entrega/05-apresentacao-e-demo.md": {
+    "mtime": 1792592788.9256332,
+    "seen": 1792593454.7676528,
+    "ast_hash": "09acfa491c807e18ba0aee7b53c57846",
+    "semantic_hash": "09acfa491c807e18ba0aee7b53c57846"
+  },
+  "docs/entrega/06-riscos-e-pendencias.md": {
+    "mtime": 1792592788.9266417,
+    "seen": 1792593454.7676528,
+    "ast_hash": "c7dcbcddf0c0a5149e9e8e3c69103b39",
+    "semantic_hash": "c7dcbcddf0c0a5149e9e8e3c69103b39"
+  },
+  "docs/entrega/README.md": {
+    "mtime": 1792592577.5283093,
+    "seen": 1792593454.7676528,
+    "ast_hash": "c9b9b63386ed687e2972c5e32ec08c6a",
+    "semantic_hash": "c9b9b63386ed687e2972c5e32ec08c6a"
+  },
+  "docs/processo/A.md": {
+    "mtime": 1792592788.9276412,
+    "seen": 1792593454.7676528,
+    "ast_hash": "a3e011573b309903a7a9c9abebcec649",
+    "semantic_hash": "a3e011573b309903a7a9c9abebcec649"
+  },
+  "docs/processo/B.md": {
+    "mtime": 1792592788.9286497,
+    "seen": 1792593454.7676528,
+    "ast_hash": "ab8ee627722562cda046fbc084338e5d",
+    "semantic_hash": "ab8ee627722562cda046fbc084338e5d"
+  },
+  "docs/processo/C.md": {
+    "mtime": 1792592788.9316485,
+    "seen": 1792593454.7676528,
+    "ast_hash": "b9eec3b44799e330b6dc6a74b905950a",
+    "semantic_hash": "b9eec3b44799e330b6dc6a74b905950a"
+  },
+  "docs/processo/revisoes-cruzadas.md": {
+    "mtime": 1792592788.932658,
+    "seen": 1792593454.7676528,
+    "ast_hash": "e91d72c7d9951ff089f06a47fa341e45",
+    "semantic_hash": "e91d72c7d9951ff089f06a47fa341e45"
+  },
+  "docs/superpowers/plans/2026-10-21-documentacao-entrega-parcial.md": {
+    "mtime": 1792591996.0473628,
+    "seen": 1792593454.7676528,
+    "ast_hash": "d5792a1c45596998bf04263562965560",
+    "semantic_hash": "d5792a1c45596998bf04263562965560"
   }
 }

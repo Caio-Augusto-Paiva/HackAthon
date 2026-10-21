@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Testes com casos conhecidos por versao da base"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Testes_com_casos_conhecidos_por_versao_da_base
+  - community/Motor_de_inferencia
 ---
 
 # Skills nao confirmadas (FastAPI, pytest, React Flow, Vite)
@@ -15,4 +15,4 @@ tags:
 - [[React Flow]] - `references` [EXTRACTED]
 - [[pytest]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Testes_com_casos_conhecidos_por_versao_da_base
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

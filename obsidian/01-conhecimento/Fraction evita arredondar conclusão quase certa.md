@@ -1,12 +1,12 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "CF MYCIN com Fraction"
+community: "Sessao: triagem, perguntas e correções"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CF_MYCIN_com_Fraction
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Fraction evita arredondar conclusão quase certa
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CF MYCIN com Fraction]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CF_MYCIN_com_Fraction
+#graphify/rationale #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções
