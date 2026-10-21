@@ -31,7 +31,8 @@
       }
     ],
     "mudancas": [
-      { "caso_id": "C-MAS-01", "antes": "passou", "depois": "falhou" }
+      { "caso_id": "C-MAS-01", "antes": "passou", "depois": "falhou" },
+      { "caso_id": "C-MAS-02", "antes": "passou", "depois": "falhou" }
     ]
   }
 }

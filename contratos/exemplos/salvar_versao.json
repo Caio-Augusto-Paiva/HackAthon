@@ -327,7 +327,8 @@
     "execucao_nova": { "execucao_id": "ex_0008", "total": 30, "passou": 28, "falhou": 2 },
     "execucao_pai": { "execucao_id": "ex_0007", "total": 30, "passou": 30, "falhou": 0 },
     "mudancas": [
-      { "caso_id": "C-MAS-01", "antes": "passou", "depois": "falhou" }
+      { "caso_id": "C-MAS-01", "antes": "passou", "depois": "falhou" },
+      { "caso_id": "C-MAS-02", "antes": "passou", "depois": "falhou" }
     ]
   }
 }

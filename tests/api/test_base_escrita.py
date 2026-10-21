@@ -12,6 +12,7 @@ from __future__ import annotations
 import copy
 import json
 import re
+from collections.abc import Iterator
 from contextlib import closing
 from pathlib import Path
 
@@ -19,13 +20,26 @@ import pytest
 from fastapi.testclient import TestClient
 
 from api.config import Configuracao
-from api.db.conexao import abrir
+from api.contexto import Contexto
+from api.db.conexao import abrir, inicializar
+from api.servicos import casos_servico
 from kb.carregador import Repositorio
 from kb.modelos import carregar_base
 from tests.api.apoio import criar_animal_teste, criar_sessao_teste, validar_contrato
 
 PASTA_EXEMPLOS = Path(__file__).resolve().parents[2] / "contratos" / "exemplos"
 SINAIS = {"valores": {"sinal_a": True, "sinal_b": False}}
+
+
+@pytest.fixture
+def ctx(config: Configuracao) -> Iterator[Contexto]:
+    """Contexto montado à mão (sem HTTP) sobre o banco e a base do teste."""
+    inicializar(config.db_path)
+    conn = abrir(config.db_path)
+    try:
+        yield Contexto(config=config, conn=conn, repo=Repositorio(config.base_dir, hoje=config.hoje))
+    finally:
+        conn.close()
 
 
 def _cf_d1(parecer: dict) -> float:
@@ -245,6 +259,39 @@ def test_salvar_sem_pai_usa_a_versao_ativa(cliente: TestClient, com_casos: Path,
     assert json.loads((base_dir / "versoes" / "v0004.json").read_text(encoding="utf-8"))["meta"]["pai"] == "v0001"
 
 
+def test_salvar_pai_vazio_vale_a_versao_ativa(cliente: TestClient, com_casos: Path):
+    # comportamento fixado: "" é falso, então `pai or versao_ativa` o trata como se não viesse pai
+    grafo = _grafo(cliente)
+    primeira = _salvar(cliente, _edicao(_com_cf(grafo, "R-D1-01:entao", 0.65), pai=""))
+    assert (primeira["versao"], primeira["pai"]) == ("v0002", "v0001")
+
+    assert _ativar(cliente, "v0002", confirmar_falhas=True).status_code == 200
+    segunda = _salvar(cliente, _edicao(_com_cf(grafo, "R-D1-01:entao", 0.7), pai=""))
+    assert (segunda["versao"], segunda["pai"]) == ("v0003", "v0002")
+
+
+def test_salvar_execucao_dos_casos_falha_depois_de_gravar_500_e_a_versao_fica(
+    cliente: TestClient, com_casos: Path, base_dir: Path, config: Configuracao, caplog: pytest.LogCaptureFixture
+):
+    com_casos.write_text("{ isto não é JSON", encoding="utf-8")
+
+    resposta = cliente.post("/api/base/versoes", json=_edicao(_com_cf(_grafo(cliente), "R-D1-01:entao", 0.65)))
+    erro = _erro(resposta, 500, "erro_interno")
+    assert erro["mensagem"] == "Erro interno. Tente novamente."
+    # a versão já estava gravada e indexada quando a execução falhou
+    assert _versoes_no_disco(base_dir) == ["v0001", "v0002"]
+    assert [l["versao"] for l in _linhas(config, "SELECT versao FROM versoes_base ORDER BY versao")] == [
+        "v0001",
+        "v0002",
+    ]
+    assert _linhas(config, "SELECT id FROM execucoes_casos") == []
+    assert "versão v0002 gravada; a execução dos casos falhou" in caplog.text
+
+    # sem execução, pelo Ruling 15 ela ativa sem confirmação (mesmo com o casos.json ainda quebrado)
+    assert _ativar(cliente, "v0002").status_code == 200
+    assert _ativa_no_disco(base_dir) == "v0002"
+
+
 def test_salvar_sem_pai_e_sem_versao_ativa(cliente: TestClient, com_casos: Path, base_dir: Path):
     (base_dir / "ativa.json").unlink()
     corpo = _salvar(cliente, _edicao(_grafo(cliente), pai=None))
@@ -391,6 +438,62 @@ def test_ativar_olha_a_ultima_execucao(cliente: TestClient, com_casos: Path, bas
     assert _ativa_no_disco(base_dir) == "v0002"
 
 
+def test_ativar_usa_o_status_mais_recente_de_cada_caso(cliente: TestClient, com_casos: Path, base_dir: Path):
+    # Ruling 15: vale o último status de cada caso, não o da última execução inteira
+    salva = _salvar(cliente, _edicao(_com_cf(_grafo(cliente), "R-D1-01:entao", 0.65)))
+    assert salva["execucao_nova"]["falhou"] == 1  # execução completa, com o C-FALHA falhando
+    parcial = cliente.post("/api/base/versoes/v0002/execucoes", json={"casos": ["C-D1-OK"]}).json()
+    assert (parcial["total"], parcial["falhou"]) == (1, 0)  # a execução mais nova é toda verde
+
+    erro = _erro(_ativar(cliente, "v0002"), 409, "casos_falhando")
+    assert "1 caso(s) falhando" in erro["mensagem"]  # o C-FALHA, que só a execução completa rodou
+    assert _ativa_no_disco(base_dir) == "v0001"
+
+    resposta = _ativar(cliente, "v0002", confirmar_falhas=True)
+    assert resposta.status_code == 200, resposta.text
+    assert resposta.json() == {"versao": "v0002", "anterior": "v0001"}
+    assert _ativa_no_disco(base_dir) == "v0002"
+
+
+def test_ativar_ignora_caso_que_saiu_do_casos_json(cliente: TestClient, com_casos: Path, base_dir: Path):
+    # o status do caso removido não vira fantasma: só valem os ids do casos.json atual
+    _salvar(cliente, _edicao(_com_cf(_grafo(cliente), "R-D1-01:entao", 0.65)))
+    _erro(_ativar(cliente, "v0002"), 409, "casos_falhando")
+
+    casos = json.loads(com_casos.read_text(encoding="utf-8"))
+    com_casos.write_text(json.dumps([c for c in casos if c["id"] != "C-FALHA"]), encoding="utf-8")
+    resposta = _ativar(cliente, "v0002")
+    assert resposta.status_code == 200, resposta.text
+    assert _ativa_no_disco(base_dir) == "v0002"
+
+
+def test_status_dos_casos_e_o_mais_recente_de_cada_um(cliente: TestClient, com_casos: Path, ctx: Contexto):
+    assert casos_servico.status_dos_casos(ctx, "v0001") == {}  # sem execução, sem status (e sem ler o casos.json)
+    assert cliente.post("/api/base/versoes/v0001/execucoes", json={"casos": None}).status_code == 201
+    assert casos_servico.status_dos_casos(ctx, "v0001") == {"C-D1-OK": "passou", "C-BV-OK": "passou", "C-FALHA": "falhou"}
+
+    _consertar_c_falha(com_casos)  # o C-FALHA passa numa execução parcial, mais nova
+    assert cliente.post("/api/base/versoes/v0001/execucoes", json={"casos": ["C-FALHA"]}).status_code == 201
+    assert casos_servico.status_dos_casos(ctx, "v0001") == {"C-D1-OK": "passou", "C-BV-OK": "passou", "C-FALHA": "passou"}
+
+    casos = json.loads(com_casos.read_text(encoding="utf-8"))
+    com_casos.write_text(json.dumps([c for c in casos if c["id"] != "C-BV-OK"]), encoding="utf-8")
+    assert casos_servico.status_dos_casos(ctx, "v0001") == {"C-D1-OK": "passou", "C-FALHA": "passou"}  # o removido sai
+
+
+def test_ativar_com_ativa_json_corrompido_conserta_o_ponteiro(
+    cliente: TestClient, base_dir: Path, caplog: pytest.LogCaptureFixture
+):
+    (base_dir / "ativa.json").write_text("{ isto não é JSON", encoding="utf-8")
+
+    resposta = _ativar(cliente, "v0001")
+    assert resposta.status_code == 200, resposta.text
+    assert resposta.json() == {"versao": "v0001", "anterior": None}  # o ponteiro ilegível não vira 500
+    assert _ativa_no_disco(base_dir) == "v0001"  # a própria ativação regravou o ponteiro
+    assert "sem versão anterior" in caplog.text
+    assert cliente.get("/api/base/versoes").json()["ativa"] == "v0001"
+
+
 @pytest.mark.parametrize("versao", ["v0099", "abc", "", "\ud800"])
 def test_ativar_inexistente_404(cliente: TestClient, com_casos: Path, base_dir: Path, versao: str):
     texto = json.dumps({"versao": versao})  # o surrogate segue como \ud800
@@ -433,6 +536,25 @@ def test_exemplos_do_contrato_tem_a_forma_das_respostas_reais(cliente: TestClien
     resposta = _ativar(cliente, "v0002", **{k: v for k, v in ativar["requisicao"].items() if k != "versao"})
     assert resposta.status_code == ativar["status"]
     assert set(resposta.json()) == set(ativar["resposta"])
+
+
+def test_exemplos_contam_a_mesma_historia_de_mudancas():
+    """A execução ex_0008 da v0003 aparece em três exemplos; as mudanças fecham com os casos que passaram a falhar."""
+    salvar = _exemplo("salvar_versao")["resposta"]
+    nova, pai = salvar["execucao_nova"], salvar["execucao_pai"]
+    mudancas = salvar["mudancas"]
+    assert all((m["antes"], m["depois"]) == ("passou", "falhou") for m in mudancas)
+    assert len(mudancas) == nova["falhou"] - pai["falhou"] == 2  # cada caso novo com falha é uma mudança
+    assert len({m["caso_id"] for m in mudancas}) == len(mudancas)
+
+    for operacao in ("executar_casos", "obter_execucao"):
+        execucao = _exemplo(operacao)["resposta"]
+        assert execucao["execucao_id"] == nova["execucao_id"]
+        assert (execucao["total"], execucao["passou"], execucao["falhou"]) == (nova["total"], nova["passou"], nova["falhou"])
+        assert execucao["comparada_com"] == salvar["pai"]
+        assert execucao["mudancas"] == mudancas
+        for resultado in execucao["resultados"]:  # o que a lista mostra confere com as mudanças
+            assert (resultado["mudou_vs_pai"] is not None) == (resultado["caso_id"] in {m["caso_id"] for m in mudancas})
 
 
 # --- Review Focus 5: a sessão fica na versão em que nasceu ----------------------------------

@@ -3,9 +3,10 @@
 Os casos vêm de ``casos/casos.json`` (iguais para todas as versões); cada execução fica em ``execucoes_casos``
 e ``resultados_casos``. A decisão de cada caso é do motor (``engine.casos.executar_caso``), sem LLM.
 
-**Para a ativação (Task 11, ruling 7):** o cabeçalho conta em ``falhou`` só o status ``falhou``; um caso ``erro``
-(mal formado ou recusado pelo motor) entra em ``total`` e em nenhum dos dois. Quem decide se uma versão pode ser
-ativada deve contar como falhando os resultados ``falhou`` **e** ``erro``, olhando ``resultados``, não ``falhou``.
+**Para a ativação (Task 11, ruling 15):** o cabeçalho conta em ``falhou`` só o status ``falhou``; um caso ``erro``
+(mal formado ou recusado pelo motor) entra em ``total`` e em nenhum dos dois. E a última execução pode ser parcial.
+Quem decide se uma versão pode ser ativada usa ``status_dos_casos``: o status mais recente de cada caso do
+``casos.json`` atual, com ``falhou`` e ``erro`` contando como falhando.
 """
 from __future__ import annotations
 
@@ -132,14 +133,14 @@ def _rodar(motor: dict, lido: _CasoLido) -> dict:
     return _resultado(lido, saida["status"], obtido=saida["obtido"], falhas=saida["falhas"])
 
 
-def _status_no_pai(ctx: Contexto, pai: str, casos: set[str]) -> dict[str, str] | None:
-    """O status de cada caso de ``casos`` no pai, ou ``None`` se o pai nunca foi executado (ruling 14).
+def _status_mais_recente(ctx: Contexto, versao: str, casos: set[str]) -> dict[str, str] | None:
+    """O status de cada caso de ``casos`` na versão, ou ``None`` se ela nunca foi executada (rulings 14 e 15).
 
-    Por caso: vale a execução **mais recente do pai que contém o caso**; percorre da mais nova para a mais antiga
-    e guarda o primeiro status de cada um (para quando já achou todos). Um caso que nenhuma execução do pai rodou
-    não entra no dicionário.
+    Por caso: vale a execução **mais recente da versão que contém o caso**; percorre da mais nova para a mais antiga
+    e guarda o primeiro status de cada um (para quando já achou todos). Um caso que nenhuma execução da versão rodou
+    não entra no dicionário. Serve à comparação com o pai (``executar``) e ao portão de ativação (``status_dos_casos``).
     """
-    cabecalhos = repo.listar_execucoes(ctx.conn, pai)  # a mais nova primeiro
+    cabecalhos = repo.listar_execucoes(ctx.conn, versao)  # a mais nova primeiro
     if not cabecalhos:
         return None
     status: dict[str, str] = {}
@@ -149,6 +150,22 @@ def _status_no_pai(ctx: Contexto, pai: str, casos: set[str]) -> dict[str, str] |
         if casos <= status.keys():
             break
     return status
+
+
+def status_dos_casos(ctx: Contexto, versao: str) -> dict[str, str]:
+    """O status mais recente de cada caso do ``casos.json`` atual na versão (ruling 15); vazio se ela nunca rodou.
+
+    "Mais recente" é o da execução mais nova da versão que contém o caso, mesmo que uma execução parcial posterior
+    tenha rodado só outros casos. Só contam os ids do ``casos.json`` de agora: o status de um caso que saiu do
+    arquivo não volta como fantasma, e um caso que nenhuma execução rodou não aparece. Sem nenhuma execução da versão
+    devolve ``{}`` sem ler o ``casos.json`` (um arquivo quebrado não impede decidir sobre uma versão sem execução).
+    Não valida a existência da versão.
+    """
+    if not repo.listar_execucoes(ctx.conn, versao):
+        return {}
+    ids = {caso.id for caso in _ler_casos(ctx)}
+    status = _status_mais_recente(ctx, versao, ids) or {}
+    return {caso_id: s for caso_id, s in status.items() if caso_id in ids}
 
 
 def _comparar_com_o_pai(resultados: list[dict], antes_por_caso: dict[str, str]) -> None:
@@ -220,7 +237,7 @@ def executar(ctx: Contexto, versao: str, ids: list[str] | None = None) -> Execuc
     resultados = [_rodar(motor, lido) for lido in lidos]
 
     pai = base.meta.pai
-    antes_por_caso = _status_no_pai(ctx, pai, {r["caso_id"] for r in resultados}) if pai else None
+    antes_por_caso = _status_mais_recente(ctx, pai, {r["caso_id"] for r in resultados}) if pai else None
     if antes_por_caso is not None:
         _comparar_com_o_pai(resultados, antes_por_caso)
 

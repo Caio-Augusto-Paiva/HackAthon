@@ -14,7 +14,7 @@ from api.schemas.base import (
     ListaVersoes,
     SalvarResposta,
 )
-from api.servicos import base_servico, casos_servico
+from api.servicos import base_servico, casos_servico, versoes_servico
 from kb.grafo import Grafo
 from kb.modelos import Base
 from kb.validador import Relatorio
@@ -83,12 +83,13 @@ def salvar_versao(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) ->
     """Grava a próxima versão (`vNNNN`) a partir do grafo editado, sem ativá-la, e roda os casos nela e no pai.
 
     Com erro de validação (inclusive estrutura quebrada): 422 `base_invalida`, com os erros em `detalhes`, e nada
-    é gravado. `pai` nulo vale a versão ativa; um `pai` que não existe é 404 `nao_encontrado`. O pai só é executado
-    se ainda não tem execução. `mudancas` lista os casos cujo status mudou em relação ao pai. Se outra gravação
-    criou a mesma versão ao mesmo tempo: 409 `conflito`, sem sobrescrever nada. O autor da versão é sempre
-    `equipe` (suposição: não há login).
+    é gravado. `pai` nulo ou vazio vale a versão ativa; um `pai` que não existe é 404 `nao_encontrado`. O pai só é
+    executado se ainda não tem execução. `mudancas` lista os casos cujo status mudou em relação ao pai. Se outra
+    gravação criou a mesma versão ao mesmo tempo: 409 `conflito`, sem sobrescrever nada. Se a execução dos casos
+    falhar depois de gravar: 500 `erro_interno`, mas a versão fica no disco (sem execução). O autor da versão é
+    sempre `equipe` (suposição: não há login).
     """
-    return base_servico.salvar_versao(ctx, corpo)
+    return versoes_servico.salvar_versao(ctx, corpo)
 
 
 @router.put(
@@ -101,11 +102,14 @@ def salvar_versao(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) ->
 def ativar_versao(corpo: AtivarBody, ctx: Contexto = Depends(obter_contexto)) -> AtivarResposta:
     """Aponta a base ativa para a versão e devolve a que estava ativa (`anterior`).
 
-    Sessões em andamento continuam na versão em que nasceram; só as novas usam a ativa. Se a última execução da
-    versão tem caso que falhou ou deu erro e `confirmar_falhas` não é `true`: 409 `casos_falhando`. Versão que nunca
-    foi executada ativa sem confirmação. Versão inexistente: 404 `nao_encontrado`.
+    Sessões em andamento continuam na versão em que nasceram; só as novas usam a ativa. Se o status mais recente de
+    algum caso da versão é `falhou` ou `erro` e `confirmar_falhas` não é `true`: 409 `casos_falhando`. "Mais
+    recente" é o da execução mais nova da versão que contém o caso, só entre os casos do `casos.json` atual: uma
+    execução parcial só de casos verdes não apaga uma falha que ela não rodou. Versão que nunca foi executada ativa
+    sem confirmação. Versão inexistente: 404 `nao_encontrado`. Um `ativa.json` ilegível não impede a ativação
+    (`anterior` vem nulo).
     """
-    return base_servico.ativar_versao(ctx, corpo)
+    return versoes_servico.ativar_versao(ctx, corpo)
 
 
 @router.post(
