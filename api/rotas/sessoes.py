@@ -4,7 +4,15 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends
 
 from api.contexto import Contexto, obter_contexto
-from api.schemas.sessao import CorrecaoPergunta, EstadoSessao, NovaSessao, RespostaPergunta, RespostaTriagem
+from api.schemas.sessao import (
+    AcaoBandeira,
+    CorrecaoPergunta,
+    EstadoSessao,
+    NovaSessao,
+    RespostaPergunta,
+    RespostaTriagem,
+    TrocaModo,
+)
 from api.servicos import sessao_servico
 
 router = APIRouter()
@@ -22,6 +30,13 @@ def criar_sessao(corpo: NovaSessao, ctx: Contexto = Depends(obter_contexto)) -> 
 )
 def obter_sessao(sessao_id: str, ctx: Contexto = Depends(obter_contexto)) -> EstadoSessao:
     return sessao_servico.obter_estado(ctx, sessao_id)
+
+
+@router.patch(
+    "/sessoes/{sessao_id}", operation_id="trocar_modo", response_model=EstadoSessao, summary="Trocar o modo da anamnese"
+)
+def trocar_modo(sessao_id: str, corpo: TrocaModo, ctx: Contexto = Depends(obter_contexto)) -> EstadoSessao:
+    return sessao_servico.trocar_modo(ctx, sessao_id, corpo.modo)
 
 
 @router.post(
@@ -70,3 +85,13 @@ def corrigir_resposta(
     sessao_id: str, simbolo: str, corpo: CorrecaoPergunta, ctx: Contexto = Depends(obter_contexto)
 ) -> EstadoSessao:
     return sessao_servico.responder_pergunta(ctx, sessao_id, simbolo, corpo, corrigir=True)
+
+
+@router.post(
+    "/sessoes/{sessao_id}/acoes/bandeira",
+    operation_id="acao_bandeira",
+    response_model=EstadoSessao,
+    summary="Continuar a anamnese ou ver o parecer após a bandeira vermelha",
+)
+def acao_bandeira(sessao_id: str, corpo: AcaoBandeira, ctx: Contexto = Depends(obter_contexto)) -> EstadoSessao:
+    return sessao_servico.acao_bandeira(ctx, sessao_id, corpo.acao)

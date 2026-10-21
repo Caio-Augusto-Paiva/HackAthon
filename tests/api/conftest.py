@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 from collections.abc import Callable, Iterator
+from contextlib import ExitStack
 from datetime import date, datetime
 from pathlib import Path
 
@@ -74,3 +75,25 @@ def app(config: Configuracao) -> FastAPI:
 def cliente(app: FastAPI) -> Iterator[TestClient]:
     with TestClient(app, raise_server_exceptions=False) as c:
         yield c
+
+
+@pytest.fixture
+def cliente_com(
+    tmp_path: Path, fabrica_base_dir: Callable[..., Path], hoje: date, agora: datetime
+) -> Iterator[Callable[..., tuple[Configuracao, TestClient]]]:
+    """``cliente_com(ajustar)`` -> ``(config, cliente)`` de um app cuja base mínima foi ajustada por ``ajustar``."""
+    pilha = ExitStack()
+    contador = iter(range(100))
+
+    def abrir_cliente(ajustar: Callable[[dict], dict | None] | None) -> tuple[Configuracao, TestClient]:
+        n = next(contador)
+        config = Configuracao(
+            base_dir=fabrica_base_dir(tmp_path / f"base_{n}", ajustar),
+            db_path=tmp_path / f"dados_{n}" / "anamnese.db", web_dist=tmp_path / "web",
+            hoje=lambda: hoje, agora=lambda: agora,
+        )
+        cliente = pilha.enter_context(TestClient(criar_app(config), raise_server_exceptions=False))
+        return config, cliente
+
+    with pilha:
+        yield abrir_cliente

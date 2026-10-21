@@ -5,7 +5,7 @@ Base mínima (``tests/fixtures/kb/base_minima.json``), dados fictícios, ``hoje`
 from __future__ import annotations
 
 import json
-from contextlib import ExitStack, closing, contextmanager
+from contextlib import closing, contextmanager
 
 import pytest
 from fastapi.testclient import TestClient
@@ -15,7 +15,6 @@ from api.contexto import Contexto
 from api.db.conexao import abrir
 from api.db.repositorios import inserir_animal, inserir_sessao
 from api.erros import ErroApi
-from api.main import criar_app
 from api.servicos import sessao_motor
 from api.servicos.sessao_motor import aplicar, carregar
 from engine.sessao import Sessao
@@ -378,26 +377,6 @@ def _ajustar_tela_no_fim(dados: dict) -> None:
             "texto": {"produtor": "Notou o fato X?", "veterinario": "Fato X?"},
         }
     )
-
-
-@pytest.fixture
-def cliente_com(tmp_path, fabrica_base_dir, hoje, agora):
-    """``cliente_com(ajustar)`` -> ``(config, cliente)`` de um app cuja base mínima foi ajustada por ``ajustar``."""
-    pilha = ExitStack()
-    contador = iter(range(100))
-
-    def abrir_cliente(ajustar):
-        n = next(contador)
-        config = Configuracao(
-            base_dir=fabrica_base_dir(tmp_path / f"base_{n}", ajustar),
-            db_path=tmp_path / f"dados_{n}" / "anamnese.db", web_dist=tmp_path / "web",
-            hoje=lambda: hoje, agora=lambda: agora,
-        )
-        cliente = pilha.enter_context(TestClient(criar_app(config), raise_server_exceptions=False))
-        return config, cliente
-
-    with pilha:
-        yield abrir_cliente
 
 
 def _motor(config: Configuracao, modo: str = "produtor") -> Sessao:

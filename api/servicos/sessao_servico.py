@@ -1,4 +1,7 @@
-"""Sessões de anamnese: criar, consultar e responder. Os 404 e 409 são pré-verificados, nunca deduzidos de exceção."""
+"""Sessões de anamnese: criar, consultar, responder, trocar de modo e agir sobre a bandeira vermelha.
+
+Os 404 e 409 são pré-verificados, nunca deduzidos de exceção.
+"""
 from __future__ import annotations
 
 from api.contexto import Contexto
@@ -182,3 +185,19 @@ def responder_pergunta(
         raise conflito("Esta pergunta já foi respondida; para mudar a resposta, corrija-a.", "ja_respondida")
     valor = None if corpo.nao_sei else _valor_do_dominio(simbolos[simbolo], corpo.valor)
     return aplicar(ctx, carregada, lambda m: m.responder(simbolo, valor, corrigir=corrigir), muda=True)
+
+
+# --- modo e bandeira vermelha ----------------------------------------------------------------
+
+
+def trocar_modo(ctx: Contexto, sessao_id: str, modo: str) -> EstadoSessao:
+    """Troca o modo (``produtor``/``veterinario``) sem perder resposta. O modo inválido já caiu no schema (422)."""
+    return aplicar(ctx, carregar(ctx, sessao_id), lambda motor: motor.trocar_modo(modo), muda=True)
+
+
+def acao_bandeira(ctx: Contexto, sessao_id: str, acao: str) -> EstadoSessao:
+    """``continuar`` ou ``ver_parecer``. Sem bandeira registrada o motor recusa: 422 ``resposta_invalida``.
+
+    Com a sessão já encerrada, ``continuar`` é aceito (o motor o aceita e ele só tira a pausa): não vira 422.
+    """
+    return aplicar(ctx, carregar(ctx, sessao_id), lambda motor: motor.acao_bandeira(acao), muda=True)
