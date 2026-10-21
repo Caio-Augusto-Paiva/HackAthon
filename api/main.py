@@ -11,6 +11,7 @@ from starlette.types import ASGIApp, Message, Receive, Scope, Send
 from api.config import VERSAO_API, Configuracao, carregar_configuracao
 from api.db.conexao import inicializar
 from api.erros import CABECALHO_REQUISICAO_ID, novo_requisicao_id, registrar_handlers
+from api.frontend import montar_frontend
 from api.rotas import animais, base, sessoes, sistema
 
 
@@ -63,6 +64,7 @@ def criar_app(config: Configuracao | None = None) -> FastAPI:
     roteador.include_router(sessoes.router)
     roteador.include_router(base.router)
     app.include_router(roteador)
+    montar_frontend(app, app.state.config.web_dist)  # por último: a rota coringa só pega o que a API não pegou
     return app
 
 
