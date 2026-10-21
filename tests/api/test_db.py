@@ -384,6 +384,13 @@ def test_sincronizar_versao_insere_so_se_faltar(conn: sqlite3.Connection, agora:
     assert versoes[1]["pai"] == "v0001"
 
 
+def test_sincronizar_versao_ignora_so_o_conflito_de_chave(conn: sqlite3.Connection, agora: datetime) -> None:
+    # `INSERT OR IGNORE` engoliria também a violação de NOT NULL e a versão nunca seria registrada, sem aviso
+    with pytest.raises(sqlite3.IntegrityError, match="NOT NULL"):
+        _versao(conn, "v0001", agora, hash=None)
+    assert repo.listar_versoes_base(conn) == []
+
+
 # --- execuções de casos ---------------------------------------------------------------------
 
 

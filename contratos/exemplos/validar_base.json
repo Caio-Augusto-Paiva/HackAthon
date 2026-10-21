@@ -326,11 +326,25 @@
     "valida": false,
     "erros": [
       {
+        "codigo": "regra_inalcancavel",
+        "numero": "E06",
+        "severidade": "erro",
+        "alvo": { "tipo": "regra", "id": "R-MAS-99" },
+        "mensagem": "A regra 'R-MAS-99' nunca pode disparar: nenhuma regra conclui 'metrite'."
+      },
+      {
+        "codigo": "doenca_sem_regra",
+        "numero": "E09",
+        "severidade": "erro",
+        "alvo": { "tipo": "simbolo", "id": "metrite" },
+        "mensagem": "A doença 'metrite' não é concluída por nenhuma regra."
+      },
+      {
         "codigo": "camada",
         "numero": "E12",
         "severidade": "erro",
         "alvo": { "tipo": "regra", "id": "R-MAS-99" },
-        "mensagem": "Regra de doença lê outra doença (metrite -> R-MAS-99 -> mastite)."
+        "mensagem": "A regra 'R-MAS-99' conclui 'mastite' (camada 2) mas lê ['metrite'], de camada igual ou superior."
       }
     ],
     "avisos": [
@@ -339,9 +353,16 @@
         "numero": "W01",
         "severidade": "aviso",
         "alvo": { "tipo": "simbolo", "id": "cmt_positivo" },
-        "mensagem": "Pergunta nunca usada."
+        "mensagem": "O símbolo 'cmt_positivo' não é lido por nenhuma regra nem aparece na triagem."
+      },
+      {
+        "codigo": "suposicoes_pendentes",
+        "numero": "W03",
+        "severidade": "aviso",
+        "alvo": null,
+        "mensagem": "5 regra(s) ainda são suposição a validar: R-MAS-01, R-MAS-02, R-MAS-03, R-URG-mastite, R-MAS-99."
       }
     ],
-    "resumo": { "simbolos": 71, "regras": 104, "suposicao_a_validar": 104 }
+    "resumo": { "simbolos": 9, "regras": 5, "suposicao_a_validar": 5 }
   }
 }

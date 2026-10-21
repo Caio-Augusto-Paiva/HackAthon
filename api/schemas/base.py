@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from api.schemas import CONFIG_REQUISICAO
 from kb.validador import Relatorio
@@ -42,9 +42,14 @@ class ListaVersoes(BaseModel):
 # --- edição (corpo de validar e de salvar) -------------------------------------------------
 
 class GrafoEdicao(BaseModel):
-    """Nós e arestas como dicts soltos: erro de estrutura chega ao ``kb`` e volta como ``E00`` (decisão D4)."""
+    """Nós e arestas como dicts soltos: erro de estrutura chega ao ``kb`` e volta como ``E00`` (decisão D4).
 
-    model_config = CONFIG_REQUISICAO
+    Ignora campos extras (``extra="ignore"``, só aqui): o editor costuma devolver o ``Grafo`` inteiro em ``grafo``,
+    com ``versao``, ``meta`` e ``layout`` junto de ``nos`` e ``arestas``; ``meta`` e ``layout`` valem os do
+    envelope ``EdicaoBase``. Não é dado clínico nem CF, então o 422 de campo desconhecido não se aplica.
+    """
+
+    model_config = ConfigDict(extra="ignore", allow_inf_nan=False)  # como CONFIG_REQUISICAO, menos o extra="forbid"
 
     nos: list[dict[str, Any]]
     arestas: list[dict[str, Any]]

@@ -238,10 +238,14 @@ def sincronizar_versao(
     hash: str,
     agora: datetime,
 ) -> None:
-    """Registra a versão no índice se ainda não estiver (uma já registrada não é alterada)."""
+    """Registra a versão no índice se ainda não estiver (uma já registrada não é alterada).
+
+    Só o conflito da chave ``versao`` é ignorado (``ON CONFLICT DO NOTHING``); outra violação, como um ``NOT NULL``,
+    levanta ``sqlite3.IntegrityError`` (``INSERT OR IGNORE`` a engoliria em silêncio).
+    """
     conn.execute(
-        "INSERT OR IGNORE INTO versoes_base (versao, pai, autor, data, nota, hash, criada_em)"
-        " VALUES (?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO versoes_base (versao, pai, autor, data, nota, hash, criada_em)"
+        " VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (versao) DO NOTHING",
         (versao, pai, autor, data, nota, hash, _instante(agora)),
     )
 

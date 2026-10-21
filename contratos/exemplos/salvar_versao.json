@@ -313,8 +313,16 @@
     "validacao": {
       "valida": true,
       "erros": [],
-      "avisos": [],
-      "resumo": { "simbolos": 71, "regras": 105, "suposicao_a_validar": 105 }
+      "avisos": [
+        {
+          "codigo": "suposicoes_pendentes",
+          "numero": "W03",
+          "severidade": "aviso",
+          "alvo": null,
+          "mensagem": "5 regra(s) ainda são suposição a validar: R-MAS-01, R-MAS-02, R-MAS-03, R-MAS-05, R-URG-mastite."
+        }
+      ],
+      "resumo": { "simbolos": 8, "regras": 5, "suposicao_a_validar": 5 }
     },
     "execucao_nova": { "execucao_id": "ex_0008", "total": 30, "passou": 28, "falhou": 2 },
     "execucao_pai": { "execucao_id": "ex_0007", "total": 30, "passou": 30, "falhou": 0 },
