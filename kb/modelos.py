@@ -21,7 +21,7 @@ OPERADORES_ASCII: dict[str, str] = {"!=": "≠", "<=": "≤", ">=": "≥"}
 
 
 class _Modelo(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
 
 
 # --- símbolos -------------------------------------------------------------
@@ -122,8 +122,8 @@ class Limiares(_Modelo):
 
 
 class LimiteDinamico(_Modelo):
-    produtor: int = 12
-    veterinario: int = 25
+    produtor: int = Field(default=12, ge=0)
+    veterinario: int = Field(default=25, ge=0)
 
 
 class Meta(_Modelo):
@@ -187,7 +187,12 @@ class Caso(_Modelo):
 # --- carga ----------------------------------------------------------------
 
 def carregar_base(dados: dict | str | Path) -> Base:
-    """Carrega uma base de um dict, de um texto JSON ou de um caminho ``.json`` (UTF-8)."""
+    """Carrega uma base de um dict, de um texto JSON ou de um caminho ``.json`` (UTF-8).
+
+    Atenção: um ``str`` que não começa com ``{`` é tratado como **caminho de arquivo**.
+    Nunca passe texto vindo de requisição não confiável; use ``validar_dados`` com o
+    JSON já decodificado (dict).
+    """
     if isinstance(dados, Path):
         dados = json.loads(dados.read_text(encoding="utf-8"))
     elif isinstance(dados, str):
@@ -196,3 +201,11 @@ def carregar_base(dados: dict | str | Path) -> Base:
         else:
             dados = json.loads(Path(dados).read_text(encoding="utf-8"))
     return Base.model_validate(dados)
+
+
+def para_motor(base: Base) -> dict:
+    """Dict que o motor (``engine.modelos.Base.de_dict``) aceita.
+
+    ``exclude_none=True`` é obrigatório: o motor rejeita ``cf_minimo: null``.
+    """
+    return base.model_dump(mode="json", exclude_none=True)

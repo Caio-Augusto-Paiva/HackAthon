@@ -238,11 +238,13 @@
       "properties": {
         "produtor": {
           "default": 12,
+          "minimum": 0,
           "title": "Produtor",
           "type": "integer"
         },
         "veterinario": {
           "default": 25,
+          "minimum": 0,
           "title": "Veterinario",
           "type": "integer"
         }

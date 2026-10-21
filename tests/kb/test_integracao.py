@@ -4,14 +4,14 @@ import json
 
 from engine.inferencia import inferir
 from engine.modelos import Base as BaseMotor
-from kb.modelos import carregar_base
+from kb.modelos import carregar_base, para_motor
 from tests.kb.apoio import CAMINHO_BASE_MOTOR, RAIZ, carregar_minima
 
 SCHEMAS = ("base.schema.json", "caso.schema.json")
 
 
 def _dump_kb(dados: dict) -> dict:
-    return carregar_base(dados).model_dump(mode="json", exclude_none=True)
+    return para_motor(carregar_base(dados))
 
 
 def test_motor_aceita_dump_do_kb():

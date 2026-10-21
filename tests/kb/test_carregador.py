@@ -232,3 +232,21 @@ def test_ativar_nao_deixa_temporario(tmp_path):
     repo.ativar("v0001")
     repo.ativar("v0001")
     assert sorted(p.name for p in tmp_path.iterdir()) == ["ativa.json", "versoes"]
+
+
+def test_pai_explicito_inexistente_rejeitado(tmp_path):
+    repo = _repo(tmp_path)
+    repo.salvar_nova(_base(), autor="a", nota="n")
+    with pytest.raises(ValueError, match="v0009"):
+        repo.salvar_nova(_base(), autor="a", nota="n", pai="v0009")
+    assert repo.listar_versoes() == ["v0001"]  # nada foi gravado
+
+
+def test_pai_explicito_com_formato_invalido_rejeitado(tmp_path):
+    with pytest.raises(ValueError, match="inválido"):
+        _repo(tmp_path).salvar_nova(_base(), autor="a", nota="n", pai="../x")
+
+
+def test_pai_explicito_numa_raiz_vazia_rejeitado(tmp_path):
+    with pytest.raises(ValueError, match="v0001"):
+        _repo(tmp_path).salvar_nova(_base(), autor="a", nota="n", pai="v0001")

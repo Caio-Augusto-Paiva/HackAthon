@@ -147,6 +147,29 @@ def _m_e14(d):
     _nova_regra(d, "R-REC-02", [{"simbolo": "sinal_a"}], "recente", -0.3)
 
 
+def _m_e14_max_em_nao_derivado(d):
+    _simbolo(d, "d1")["combinacao"] = "max"
+
+
+def _m_e14_max_com_cf_zero(d):
+    _simbolo(d, "recente")["combinacao"] = "max"
+    _nova_regra(d, "R-REC-02", [{"simbolo": "sinal_a"}], "recente", 0.0)
+
+
+def _m_e21(d):
+    tela = next(t for t in d["meta"]["triagem"] if t["id"] == "sinais")
+    tela["simbolos"].append("recente")  # derivado não é pergunta nem ficha
+
+
+def _m_e21_por_modo(d):
+    tela = next(t for t in d["meta"]["triagem"] if t["id"] == "sinais")
+    tela["simbolos_por_modo"] = {"produtor": ["sinal_a", "d1"]}
+
+
+def _m_e02_tela(d):
+    d["meta"]["triagem"].append(copy.deepcopy(d["meta"]["triagem"][1]))
+
+
 def _m_e15(d):
     _regra(d, "R-URG-d1")["se"][0]["cf_minimo"] = 1.5
     _regra(d, "R-D1-01")["se"][0]["cf_minimo"] = 0.5  # sinal_a não é doença nem derivado
@@ -216,6 +239,11 @@ MUTACOES_ERRO = {
     "E12": (_m_e12, {"E12", "E05"}),
     "E13": (_m_e13, {"E13"}),
     "E14": (_m_e14, {"E14"}),
+    "E14-max-em-nao-derivado": (_m_e14_max_em_nao_derivado, {"E14"}),
+    "E14-max-com-cf-zero": (_m_e14_max_com_cf_zero, {"E14"}),
+    "E02-tela": (_m_e02_tela, {"E02"}),
+    "E21": (_m_e21, {"E21"}),
+    "E21-por-modo": (_m_e21_por_modo, {"E21"}),
     "E15": (_m_e15, {"E15"}),
     "E15-minimo-e-maximo": (_m_e15_minimo_e_maximo, {"E15"}),
     "E16": (_m_e16, {"E16"}),
@@ -282,6 +310,7 @@ def test_codigos_textuais_por_numero():
         "E14": "derivado_max_negativo", "E15": "limite_cf_invalido",
         "E16": "tela_sem_texto", "E17": "limiares_fora_de_ordem",
         "E18": "regra_sem_fonte", "E19": "classe_incompativel", "E20": "id_invalido",
+        "E21": "tela_simbolo_invalido",
     }
     obtidos = {}
     for nome, (mutacao, _) in MUTACOES_ERRO.items():
@@ -533,3 +562,118 @@ def test_fixture_motor_sem_erro_estrutural():
 def test_problema_e_modelos_publicos():
     p = Problema(codigo="x", numero="E99", severidade="erro", alvo=None, mensagem="m")
     assert p.alvo is None
+
+
+# --- validar_edicao: payload do editor (Grafo) ------------------------------------
+
+def _payload_do_editor(mutacao=None) -> dict:
+    from kb.grafo import base_para_grafo
+    dados = base_para_grafo(carregar_base(carregar_minima())).model_dump(mode="json", exclude_none=True)
+    if mutacao:
+        mutacao(dados)
+    return dados
+
+
+def test_validar_edicao_payload_valido():
+    from kb.validador import validar_edicao
+    base, rel = validar_edicao(_payload_do_editor())
+    assert base == carregar_base(carregar_minima())
+    assert rel.valida and rel.erros == []
+
+
+def test_validar_edicao_payload_com_erro_semantico_devolve_base_e_relatorio():
+    from kb.validador import validar_edicao
+
+    def m(dados):
+        next(a for a in dados["arestas"] if a["id"] == "R-D1-03:entao")["cf"] = 1.0
+    base, rel = validar_edicao(_payload_do_editor(m))
+    assert base is not None
+    assert rel.valida is False
+    assert _numeros(rel.erros) == {"E04"}
+
+
+@pytest.mark.parametrize("payload", [
+    None, "texto", 42, [], {},
+    {"meta": {}, "nos": "não é lista", "arestas": []},
+    {"meta": {}, "nos": [], "arestas": [], "extra": 1},
+])
+def test_validar_edicao_payload_malformado_vira_e00(payload):
+    from kb.validador import validar_edicao
+    base, rel = validar_edicao(payload)
+    assert base is None
+    assert rel.valida is False
+    assert rel.erros and {p.numero for p in rel.erros} == {"E00"}
+    assert all(p.mensagem for p in rel.erros)
+
+
+def test_validar_edicao_falha_de_conversao_vira_e00_em_portugues():
+    from kb.validador import validar_edicao
+
+    def m(dados):
+        dados["arestas"] = [a for a in dados["arestas"] if a["id"] != "R-D1-01:entao"]
+    base, rel = validar_edicao(_payload_do_editor(m))
+    assert base is None and rel.valida is False
+    (erro,) = rel.erros
+    assert erro.numero == "E00" and "R-D1-01" in erro.mensagem and "conclusão" in erro.mensagem
+
+
+def test_validar_edicao_erro_pydantic_na_conversao_vira_e00():
+    from kb.validador import validar_edicao
+
+    def m(dados):
+        next(n for n in dados["nos"] if n["id"] == "sinal_a")["dados"]["tipo"] = "inexistente"
+    base, rel = validar_edicao(_payload_do_editor(m))
+    assert base is None
+    assert {p.numero for p in rel.erros} == {"E00"}
+    assert "tipo" in rel.erros[0].mensagem
+
+
+def test_validar_edicao_nunca_levanta_com_lixo():
+    from kb.validador import validar_edicao
+    azar = random.Random(7)
+    lixo = [None, "", "x", 0, -1, 1.5, True, [], {}, ["a"], {"a": 1}]
+    for _ in range(200):
+        dados = _payload_do_editor()
+        alvo = azar.choice([dados, dados["nos"][azar.randrange(len(dados["nos"]))],
+                            dados["arestas"][azar.randrange(len(dados["arestas"]))]])
+        chave = azar.choice(list(alvo))
+        alvo[chave] = azar.choice(lixo)
+        base, rel = validar_edicao(dados)
+        assert isinstance(rel, Relatorio) and rel.valida == (not rel.erros)
+
+
+# --- desempenho de _produtor_ok ----------------------------------------------------
+
+def test_cadeia_longa_de_derivados_valida_rapido():
+    """Cada derivado é lido por duas regras: sem memoização, 2**40 chamadas em E10."""
+    import time
+    d = carregar_minima()
+    n = 40
+    _novo_simbolo(d, "c0", "derivado")
+    _nova_regra(d, "R-C0-a", [{"simbolo": "sinal_a"}], "c0", 0.5)
+    _nova_regra(d, "R-C0-b", [{"simbolo": "sinal_b"}], "c0", 0.5)
+    for i in range(1, n):
+        _novo_simbolo(d, f"c{i}", "derivado")
+        _nova_regra(d, f"R-C{i}-a", [{"simbolo": f"c{i - 1}"}], f"c{i}", 0.5)
+        _nova_regra(d, f"R-C{i}-b", [{"simbolo": f"c{i - 1}", "cf_minimo": 0.2}], f"c{i}", 0.4)
+    # a doença d2 só tem regras que entram na cadeia pelo fim
+    _novo_simbolo(d, "d2", "doenca", gravidade="baixa")
+    _nova_regra(d, "R-D2-a", [{"simbolo": f"c{n - 1}"}], "d2", 0.3)
+    _nova_regra(d, "R-D2-b", [{"simbolo": f"c{n - 1}", "cf_minimo": 0.5}], "d2", 0.2)
+    inicio = time.perf_counter()
+    rel = validar_dados(d)
+    assert time.perf_counter() - inicio < 2
+    # derivado lendo derivado é E12 (camadas estritas), mas a cadeia é obtida do produtor: sem E10
+    assert "E10" not in _numeros(rel.erros)
+
+
+def test_e10_derivado_em_ciclo_nao_conta_como_produtor():
+    def m(d):
+        _novo_simbolo(d, "x", "derivado")
+        _novo_simbolo(d, "y", "derivado")
+        _nova_regra(d, "R-X", [{"simbolo": "y"}], "x", 0.5)
+        _nova_regra(d, "R-Y", [{"simbolo": "x"}], "y", 0.5)
+        _novo_simbolo(d, "d2", "doenca", gravidade="baixa")
+        _nova_regra(d, "R-D2", [{"simbolo": "x"}], "d2", 0.5)
+    rel = _relatorio(m)
+    assert any(p.numero == "E10" and p.alvo.id == "d2" for p in rel.erros)

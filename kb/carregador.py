@@ -111,7 +111,13 @@ class Repositorio:
         return f"v{max(numeros, default=0) + 1:04d}"
 
     def salvar_nova(self, base: Base, *, autor: str, nota: str, pai: str | None = None) -> str:
-        """Valida e grava a próxima versão (sem ativá-la); devolve o id da versão."""
+        """Valida e grava a próxima versão (sem ativá-la); devolve o id da versão.
+
+        ``pai`` explícito deve ser uma versão existente (``ValueError`` caso contrário);
+        sem ele, o pai é a versão ativa.
+        """
+        if pai is not None and not self._arquivo(pai).is_file():
+            raise ValueError(f"A versão pai {pai} não existe; informe uma versão já salva.")
         relatorio = validar(base)
         if not relatorio.valida:
             raise BaseInvalida(relatorio)

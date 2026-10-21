@@ -7,7 +7,7 @@ name = "anamnese-bovinos"
 version = "0.1.0"
 description = "Sistema especialista de anamnese de bovinos leiteiros (PoC, dados ficticios)"
 requires-python = ">=3.12"
-dependencies = ["pydantic>=2.7"]
+dependencies = ["pydantic>=2.14,<2.15"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "hypothesis>=6"]

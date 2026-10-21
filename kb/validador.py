@@ -1,8 +1,9 @@
 """Validação semântica da base de conhecimento (sem I/O, determinística).
 
 ``validar`` recebe uma ``Base`` já carregada e devolve um ``Relatorio`` com erros
-(E01-E20) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e converte falhas
-de estrutura em erros ``E00``; nunca levanta. Cada código é uma função privada.
+(E01-E21) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
+o payload do editor (grafo); ambas convertem falhas de estrutura em erros ``E00`` e
+nunca levantam. Cada código é uma função privada.
 """
 from __future__ import annotations
 
@@ -14,7 +15,6 @@ from pydantic import BaseModel, ValidationError
 
 from kb.analise import (
     CAMADA,
-    derivados_com_cf_negativo,
     derivados_de_triagem,
     encontrar_ciclo,
     perguntavel,
@@ -22,6 +22,7 @@ from kb.analise import (
     simbolos_por_id,
     simbolos_triagem,
 )
+from kb.grafo import Grafo, grafo_para_base
 from kb.modelos import Base, Condicao, DominioCategorico, DominioNumerico, Regra, Simbolo
 
 CODIGOS: dict[str, str] = {
@@ -34,6 +35,7 @@ CODIGOS: dict[str, str] = {
     "E15": "limite_cf_invalido", "E16": "tela_sem_texto",
     "E17": "limiares_fora_de_ordem", "E18": "regra_sem_fonte",
     "E19": "classe_incompativel", "E20": "id_invalido",
+    "E21": "tela_simbolo_invalido",
     "W01": "simbolo_nao_usado", "W02": "regras_contraditorias", "W03": "suposicoes_pendentes",
 }
 
@@ -117,11 +119,17 @@ def _e01_simbolo_indefinido(base: Base) -> list[Problema]:
 def _e02_id_duplicado(base: Base) -> list[Problema]:
     ids_simbolos = {s.id for s in base.simbolos}
     contagem = Counter([s.id for s in base.simbolos] + [r.id for r in base.regras])
-    return [
+    saida = [
         _p("E02", Alvo(tipo="simbolo" if i in ids_simbolos else "regra", id=i),
            f"O id '{i}' aparece {n} vezes entre símbolos e regras; os ids devem ser únicos.")
         for i, n in sorted(contagem.items()) if n > 1
     ]
+    telas = Counter(t.id for t in base.meta.triagem)  # telas têm espaço de ids próprio
+    saida.extend(
+        _p("E02", Alvo(tipo="tela", id=i), f"O id de tela '{i}' aparece {n} vezes na triagem; os ids devem ser únicos.")
+        for i, n in sorted(telas.items()) if n > 1
+    )
+    return saida
 
 
 def _motivo_valor(s: Simbolo, c: Condicao) -> str | None:
@@ -243,25 +251,37 @@ def _regras_de_doenca(base: Base):
                 yield s, regras
 
 
-def _produtor_ok(base: Base, existentes: dict, triagem: set, sid: str, visitando: frozenset = frozenset()) -> bool:
-    """O símbolo é obtido do produtor: perguntável a ele, de triagem/ficha ou derivado disso."""
+def _produtor_ok(base: Base, existentes: dict, triagem: set, sid: str,
+                 memo: dict[str, bool] | None = None) -> bool:
+    """O símbolo é obtido do produtor: perguntável a ele, de triagem/ficha ou derivado disso.
+
+    ``memo`` guarda o resultado por símbolo (sem ele, cadeias de derivados lidos por
+    várias regras custam tempo exponencial); um símbolo ainda em andamento (ciclo) conta
+    como ``False``.
+    """
+    memo = {} if memo is None else memo
+    if sid in memo:
+        return memo[sid]
     s = existentes.get(sid)
     if s is None or s.tipo in ("doenca", "urgencia"):
         return True  # indefinido: E01; doença/urgência lida: E12
-    if s.tipo == "derivado":
-        regras = regras_que_concluem(base, sid)
-        return sid not in visitando and bool(regras) and all(
-            _produtor_ok(base, existentes, triagem, c.simbolo, visitando | {sid}) for r in regras for c in r.se
-        )
-    return sid in triagem or perguntavel(s, "produtor") or bool(s.campo_ficha)
+    if s.tipo != "derivado":
+        return sid in triagem or perguntavel(s, "produtor") or bool(s.campo_ficha)
+    memo[sid] = False  # em andamento
+    regras = regras_que_concluem(base, sid)
+    memo[sid] = bool(regras) and all(
+        _produtor_ok(base, existentes, triagem, c.simbolo, memo) for r in regras for c in r.se
+    )
+    return memo[sid]
 
 
 def _e10_doenca_sem_regra_produtor(base: Base) -> list[Problema]:
     existentes, triagem = simbolos_por_id(base), simbolos_triagem(base)
+    memo: dict[str, bool] = {}
     return [
         _p("E10", _simb(s), f"Nenhuma regra da doença '{s.id}' usa só informações que o produtor pode fornecer.")
         for s, regras in _regras_de_doenca(base)
-        if not any(all(_produtor_ok(base, existentes, triagem, c.simbolo) for c in r.se) for r in regras)
+        if not any(all(_produtor_ok(base, existentes, triagem, c.simbolo, memo) for c in r.se) for r in regras)
     ]
 
 
@@ -297,11 +317,16 @@ def _e13_doenca_sem_gravidade(base: Base) -> list[Problema]:
 
 
 def _e14_derivado_max_negativo(base: Base) -> list[Problema]:
-    negativos = derivados_com_cf_negativo(base)
-    return [
-        _p("E14", _simb(s), f"O derivado '{s.id}' usa combinação 'max', que não admite regras com cf negativo.")
-        for s in base.simbolos if s.tipo == "derivado" and s.combinacao == "max" and s.id in negativos
-    ]
+    saida = []
+    for s in base.simbolos:
+        if s.combinacao != "max":
+            continue
+        if s.tipo != "derivado":
+            saida.append(_p("E14", _simb(s), f"O símbolo '{s.id}' ({s.tipo}) usa combinação 'max', que só vale para derivados."))
+        elif any(r.entao.cf <= 0 for r in regras_que_concluem(base, s.id)):
+            saida.append(_p("E14", _simb(s),
+                            f"O derivado '{s.id}' usa combinação 'max', que exige cf positivo em todas as suas regras."))
+    return saida
 
 
 def _e15_limite_cf_invalido(base: Base) -> list[Problema]:
@@ -383,6 +408,18 @@ def _e20_id_invalido(base: Base) -> list[Problema]:
     ]
 
 
+def _e21_tela_simbolo_invalido(base: Base) -> list[Problema]:
+    existentes = simbolos_por_id(base)
+    saida = []
+    for tela in base.meta.triagem:
+        for sid in _ids_da_tela(tela):
+            s = existentes.get(sid)  # indefinido: E01
+            if s is not None and s.tipo not in ("pergunta", "ficha"):
+                saida.append(_p("E21", Alvo(tipo="tela", id=tela.id),
+                                f"A tela '{tela.id}' lista '{sid}', que é {s.tipo}; só pergunta ou ficha pode estar na triagem."))
+    return saida
+
+
 # --- avisos ---------------------------------------------------------------
 
 def _w01_simbolo_nao_usado(base: Base) -> list[Problema]:
@@ -426,7 +463,7 @@ _VERIFICACOES = (
     _e09_doenca_sem_regra, _e10_doenca_sem_regra_produtor, _e11_cobertura_triagem, _e12_camada,
     _e13_doenca_sem_gravidade, _e14_derivado_max_negativo, _e15_limite_cf_invalido,
     _e16_tela_sem_texto, _e17_limiares_fora_de_ordem, _e18_regra_sem_fonte,
-    _e19_classe_incompativel, _e20_id_invalido,
+    _e19_classe_incompativel, _e20_id_invalido, _e21_tela_simbolo_invalido,
     _w01_simbolo_nao_usado, _w02_regras_contraditorias, _w03_suposicoes_pendentes,
 )
 
@@ -453,6 +490,13 @@ def _relatorio_estrutura(mensagens: list[str]) -> Relatorio:
     return Relatorio(valida=False, erros=erros, avisos=[], resumo=Resumo(simbolos=0, regras=0, suposicao_a_validar=0))
 
 
+def _mensagens_estrutura(exc: ValidationError) -> list[str]:
+    return [
+        f"Estrutura inválida em '{'.'.join(str(parte) for parte in e['loc']) or '(raiz)'}': {e['msg']}"
+        for e in exc.errors()
+    ]
+
+
 def validar_dados(dados) -> Relatorio:
     """Valida JSON cru: falhas de estrutura viram erros ``E00``; nunca levanta."""
     if not isinstance(dados, dict):
@@ -460,8 +504,22 @@ def validar_dados(dados) -> Relatorio:
     try:
         base = Base.model_validate(dados)
     except ValidationError as exc:
-        return _relatorio_estrutura([
-            f"Estrutura inválida em '{'.'.join(str(parte) for parte in e['loc']) or '(raiz)'}': {e['msg']}"
-            for e in exc.errors()
-        ])
+        return _relatorio_estrutura(_mensagens_estrutura(exc))
     return validar(base)
+
+
+def validar_edicao(dados) -> tuple[Base | None, Relatorio]:
+    """Valida o payload do editor (um ``Grafo`` em dict): converte em ``Base`` e valida.
+
+    Devolve ``(base, relatorio)``; se a conversão falhar, ``base`` é ``None`` e o
+    relatório traz erros ``E00``. Nunca levanta.
+    """
+    if not isinstance(dados, dict):
+        return None, _relatorio_estrutura([f"O grafo deve ser um objeto JSON, mas veio {type(dados).__name__}."])
+    try:
+        base = grafo_para_base(Grafo.model_validate(dados))
+    except ValidationError as exc:
+        return None, _relatorio_estrutura(_mensagens_estrutura(exc))
+    except ValueError as exc:
+        return None, _relatorio_estrutura([f"Grafo inválido: {exc}"])
+    return base, validar(base)
