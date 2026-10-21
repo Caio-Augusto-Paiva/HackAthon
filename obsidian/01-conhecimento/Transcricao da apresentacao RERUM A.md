@@ -1,0 +1,13 @@
+---
+source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
+type: "document"
+community: "Transcrição da apresentação [A]"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Transcrição_da_apresentação_A
+---
+
+# Transcricao da apresentacao RERUM [A]
+
+#graphify/document #graphify/EXTRACTED #community/Transcrição_da_apresentação_A

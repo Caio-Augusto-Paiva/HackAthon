@@ -4,6 +4,26 @@ Projeto: sistema especialista para o Hackathon UFJF 2026 (XXVIII Semana da Compu
 
 Fontes oficiais: **[A]** = `apresentacaoRerun.pdf` (16 slides); **[D]** = `DocumentárioRerun.pdf` (3 páginas).
 
+## Grafo de conhecimento — ler PRIMEIRO, em todo prompt
+
+Para economizar tokens, **não leia o projeto inteiro**. O conhecimento do projeto (instruções, especificação, fontes, transcrições dos PDFs, pesquisas, revisões, plano e README do motor) está num grafo:
+
+1. **Antes de qualquer tarefa**, leia `graphify-out/GRAPH_REPORT.md` (mapa: nós centrais, comunidades, conexões). Para perguntas específicas, use `graphify query "<pergunta>"` (ou `/graphify query`), que percorre `graphify-out/graph.json`.
+2. Abra um arquivo do repositório **só** quando o grafo apontar para ele (`source_file`/`source_location`) ou quando for editá-lo.
+3. A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
+4. O escopo do grafo está em `.graphifyignore` (código e testes ficam de fora; serão o grafo 2).
+
+## Manter o grafo atualizado — sempre que houver documento novo ou alterado
+
+Sempre que criar ou alterar um documento de conhecimento (qualquer `.md` em `docs/`, este `CLAUDE.md`, `engine/README.md`, ou um JSON de referência em `docs/referencias/`), **no mesmo trabalho**:
+
+1. Se for PDF só de imagem, crie antes uma transcrição `.md` em `docs/fontes/` (PDFs ficam fora do grafo; a transcrição entra).
+2. Atualize o grafo de forma incremental: `/graphify . --update` (reextrai só o que mudou).
+3. Regenere o cofre do Obsidian: `graphify export obsidian --dir obsidian/01-conhecimento`.
+4. Faça o commit junto: o documento, `graphify-out/` e `obsidian/01-conhecimento/`.
+
+Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Obsidian) e `obsidian/02-a-definir/` (grafo 2, reservado).
+
 ## Papel e limite da sessão de planejamento
 
 - Esta fase é só de **planejamento**: arquitetura, motor de inferência, base de conhecimento, linguagens e bibliotecas, estrutura de pastas, contratos de API, estratégia de testes e execução em localhost.

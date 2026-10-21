@@ -1,0 +1,19 @@
+---
+source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
+type: "concept"
+community: "Especificação: entrega e arquitetura"
+location: "Seções 4.9, 5.5, 6.4"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Especificação_entrega_e_arquitetura
+---
+
+# Decisões do arquiteto (4.9, 5.5, 6.4)
+
+## Connections
+- [[Especificação PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
+- [[Grafo bipartido símbolo-regra (conversão 11)]] - `references` [INFERRED]
+- [[Trabalho em paralelo ABC por pasta]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura

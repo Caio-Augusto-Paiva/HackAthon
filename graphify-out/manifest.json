@@ -1,0 +1,80 @@
+{
+  "docs/referencias/exemplo-base-usuario.json": {
+    "mtime": 1792544440.928389,
+    "seen": 1792553138.974145,
+    "ast_hash": "7d51f023627b2c6b8ed0431654993edf",
+    "semantic_hash": "7d51f023627b2c6b8ed0431654993edf"
+  },
+  "docs/agentes-e-skills.md": {
+    "mtime": 1792548138.369521,
+    "seen": 1792553138.974145,
+    "ast_hash": "b99735ef908ac9b4822477c7c5258f6d",
+    "semantic_hash": "b99735ef908ac9b4822477c7c5258f6d"
+  },
+  "docs/fontes/fontes.md": {
+    "mtime": 1792544440.923281,
+    "seen": 1792553138.974145,
+    "ast_hash": "86f2656c75ad627f08b0485c9b943464",
+    "semantic_hash": "86f2656c75ad627f08b0485c9b943464"
+  },
+  "docs/fontes/transcricao-apresentacao-rerum.md": {
+    "mtime": 1792552672.3230083,
+    "seen": 1792553138.974145,
+    "ast_hash": "b65b3ffc927090580716b12d2db41636",
+    "semantic_hash": "b65b3ffc927090580716b12d2db41636"
+  },
+  "docs/fontes/transcricao-documentario-rerum.md": {
+    "mtime": 1792552672.3790262,
+    "seen": 1792553138.974145,
+    "ast_hash": "8166b36cb2d89546cc4c28ab98086763",
+    "semantic_hash": "8166b36cb2d89546cc4c28ab98086763"
+  },
+  "docs/pesquisa/agentes-e-skills.md": {
+    "mtime": 1792548070.4463396,
+    "seen": 1792553138.974145,
+    "ast_hash": "529bdb4960b45165d96f5af8670dfdce",
+    "semantic_hash": "529bdb4960b45165d96f5af8670dfdce"
+  },
+  "docs/pesquisa/execucao-local.md": {
+    "mtime": 1792546651.7471035,
+    "seen": 1792553138.974145,
+    "ast_hash": "aa83599a04582c4846071e86936fca46",
+    "semantic_hash": "aa83599a04582c4846071e86936fca46"
+  },
+  "docs/pesquisa/suposicoes.md": {
+    "mtime": 1792548329.7562387,
+    "seen": 1792553138.974145,
+    "ast_hash": "e3cad130f9e0006780e3d07aaa5c0e92",
+    "semantic_hash": "e3cad130f9e0006780e3d07aaa5c0e92"
+  },
+  "docs/pesquisa/versoes-bibliotecas.md": {
+    "mtime": 1792544600.2472858,
+    "seen": 1792553138.974145,
+    "ast_hash": "193b7fd511a71f037f8e9d4532f63530",
+    "semantic_hash": "193b7fd511a71f037f8e9d4532f63530"
+  },
+  "docs/revisoes/2026-10-21-revisao-motor.md": {
+    "mtime": 1792551966.8172452,
+    "seen": 1792553138.974145,
+    "ast_hash": "0edb9698a3f0e133384af56c4ef2113f",
+    "semantic_hash": "0edb9698a3f0e133384af56c4ef2113f"
+  },
+  "docs/superpowers/plans/2026-10-20-motor-secao-1.md": {
+    "mtime": 1792551354.6287284,
+    "seen": 1792553138.974145,
+    "ast_hash": "6f013bf6d062940c80d25fc0fd8066cc",
+    "semantic_hash": "6f013bf6d062940c80d25fc0fd8066cc"
+  },
+  "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md": {
+    "mtime": 1792550752.8223877,
+    "seen": 1792553138.974145,
+    "ast_hash": "1355d27bf0db4d5b684ac9208fce1a12",
+    "semantic_hash": "1355d27bf0db4d5b684ac9208fce1a12"
+  },
+  "engine/README.md": {
+    "mtime": 1792551354.6297457,
+    "seen": 1792553138.974145,
+    "ast_hash": "6f74a28b070151597a037e92d921735e",
+    "semantic_hash": "6f74a28b070151597a037e92d921735e"
+  }
+}

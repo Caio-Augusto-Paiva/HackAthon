@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# graphify: caminhos locais da máquina
+graphify-out/.graphify_python
+graphify-out/.graphify_root
