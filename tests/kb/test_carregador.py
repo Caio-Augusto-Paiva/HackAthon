@@ -323,3 +323,25 @@ def test_falha_durante_a_escrita_nao_deixa_versao_nem_temporario(tmp_path, monke
 def test_salvar_nao_deixa_temporario_no_sucesso(tmp_path):
     _repo(tmp_path).salvar_nova(_base(), autor="a", nota="n")
     assert [p.name for p in (tmp_path / "versoes").iterdir()] == ["v0001.json"]
+
+
+def test_prioridade_padrao_nao_e_persistida_e_acompanha_a_classe(tmp_path):
+    repo = _repo(tmp_path)
+    base = _base()
+    regra = next(r for r in base.regras if r.id == "R-D1-02")
+    assert regra.prioridade is None
+    repo.salvar_nova(base, autor="a", nota="n")
+    gravado = json.loads((tmp_path / "versoes" / "v0001.json").read_text(encoding="utf-8"))
+    assert all("prioridade" not in r for r in gravado["regras"])
+
+    relida = repo.carregar("v0001")
+    alvo = next(r for r in relida.regras if r.id == "R-D1-02")
+    assert alvo.prioridade_efetiva == 10
+    # trocar a classe depois não deixa a prioridade antiga para trás
+    alvo.classe = "bandeira_vermelha"
+    alvo.entao.simbolo = "chamar_agora"
+    assert alvo.prioridade_efetiva == 100
+    repo.salvar_nova(relida, autor="a", nota="n")
+    gravado = json.loads((tmp_path / "versoes" / "v0002.json").read_text(encoding="utf-8"))
+    assert all("prioridade" not in r for r in gravado["regras"])
+    assert repo.carregar("v0002").regras[2].prioridade_efetiva == 100

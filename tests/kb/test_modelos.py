@@ -24,17 +24,29 @@ def test_base_minima_carrega():
 
 @pytest.mark.parametrize("classe,esperada", [
     ("bandeira_vermelha", 100), ("urgencia", 50), ("evidencia", 10)])
-def test_prioridade_default_por_classe(classe, esperada):
-    assert Regra.model_validate(_regra(classe=classe)).prioridade == esperada
+def test_prioridade_efetiva_por_classe(classe, esperada):
+    regra = Regra.model_validate(_regra(classe=classe))
+    assert regra.prioridade is None  # o padrão não é gravado no campo
+    assert regra.prioridade_efetiva == esperada
 
 
-def test_prioridade_default_e_evidencia_sem_classe():
-    assert Regra.model_validate(_regra()).prioridade == 10
+def test_prioridade_efetiva_e_evidencia_sem_classe():
+    regra = Regra.model_validate(_regra())
+    assert regra.prioridade is None
+    assert regra.prioridade_efetiva == 10
+
+
+def test_prioridade_efetiva_acompanha_a_troca_de_classe():
+    regra = Regra.model_validate(_regra())
+    trocada = regra.model_copy(update={"classe": "bandeira_vermelha"})
+    assert trocada.prioridade is None and trocada.prioridade_efetiva == 100
 
 
 def test_prioridade_explicita_mantida():
     assert Regra.model_validate(_regra(classe="bandeira_vermelha", prioridade=0)).prioridade == 0
     assert Regra.model_validate(_regra(prioridade=7)).prioridade == 7
+    assert Regra.model_validate(_regra(prioridade=7)).prioridade_efetiva == 7
+    assert Regra.model_validate(_regra(classe="bandeira_vermelha", prioridade=0)).prioridade_efetiva == 0
 
 
 @pytest.mark.parametrize("ascii_,canonico", [("!=", "≠"), ("<=", "≤"), (">=", "≥")])

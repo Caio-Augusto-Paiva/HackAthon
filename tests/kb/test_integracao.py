@@ -49,7 +49,7 @@ def test_schema_sincronizado(tmp_path):
 
 
 def test_motor_mesmo_cf_sem_prioridade_explicita():
-    """O kb injeta prioridade por classe; o motor assume 0. Só a ordem do traço muda, não os CF."""
+    """Sem prioridade explícita, o kb não grava padrão e o motor aplica o da classe; os CF não mudam."""
     crua = json.loads(CAMINHO_BASE_MOTOR.read_text(encoding="utf-8"))
     for regra in crua["regras"]:
         regra.pop("prioridade", None)

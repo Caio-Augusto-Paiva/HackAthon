@@ -67,7 +67,10 @@ def base_para_grafo(base: Base) -> Grafo:
     arestas: list[Aresta] = []
     for regra in base.regras:
         nos.append(No(id=regra.id, tipo_no="regra",
-                      dados=regra.model_dump(mode="json", exclude={"se", "entao"})))
+                      dados=regra.model_dump(
+                          mode="json",
+                          exclude={"se", "entao"} | ({"prioridade"} if regra.prioridade is None else set()),
+                      )))
         for i, cond in enumerate(regra.se):
             # campos com valor, mais os definidos explicitamente (inclusive ``valor=None``)
             extras = {c: getattr(cond, c) for c in _CAMPOS_CONDICAO

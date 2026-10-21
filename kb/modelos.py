@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 Modo = Literal["produtor", "veterinario"]
 TipoSimbolo = Literal["pergunta", "ficha", "derivado", "doenca", "urgencia"]
@@ -92,11 +92,10 @@ class Regra(_Modelo):
     status: Literal["suposicao_a_validar", "validada"] = "suposicao_a_validar"
     nota: str | None = None
 
-    @model_validator(mode="after")
-    def _prioridade_padrao(self):
-        if self.prioridade is None:
-            self.prioridade = PRIORIDADE_POR_CLASSE[self.classe]
-        return self
+    @property
+    def prioridade_efetiva(self) -> int:
+        """Prioridade explícita ou, na falta dela, o padrão da classe (nunca é gravada)."""
+        return self.prioridade if self.prioridade is not None else PRIORIDADE_POR_CLASSE[self.classe]
 
 
 # --- meta e base ----------------------------------------------------------

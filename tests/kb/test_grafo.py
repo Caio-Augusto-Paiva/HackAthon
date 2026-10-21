@@ -61,7 +61,7 @@ def test_dados_da_regra_sem_se_e_entao():
     dados = _no(grafo, "R-D1-02").dados
     assert "se" not in dados and "entao" not in dados
     assert dados["id"] == "R-D1-02"
-    assert dados["prioridade"] == 10
+    assert "prioridade" not in dados  # padrão por classe não é gravado
 
 
 def test_ordem_das_condicoes_preservada():
