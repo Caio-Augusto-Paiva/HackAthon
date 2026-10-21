@@ -7,13 +7,18 @@ name = "anamnese-bovinos"
 version = "0.1.0"
 description = "Sistema especialista de anamnese de bovinos leiteiros (PoC, dados ficticios)"
 requires-python = ">=3.12"
-dependencies = ["pydantic>=2.14,<2.15"]
+dependencies = [
+    "pydantic>=2.14,<2.15",
+    "fastapi==0.156.8",
+    "uvicorn==0.54.0",
+    "python-multipart==0.0.32",
+]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "hypothesis>=6.170,<6.171"]
+dev = ["pytest>=8", "hypothesis>=6.170,<6.171", "httpx==0.28.1"]
 
 [tool.setuptools]
-packages = ["kb", "engine"]
+packages = ["kb", "engine", "api", "api.db", "api.rotas", "api.schemas", "api.servicos"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

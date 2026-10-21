@@ -15,3 +15,6 @@ obsidian/**/.obsidian/workspace*.json
 .superpowers/
 .venv/
 *.egg-info/
+
+# banco SQLite local da API
+dados/
