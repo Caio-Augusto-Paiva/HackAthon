@@ -133,6 +133,19 @@ class Sessao:
             pergunta=evento(self._historico,'pergunta_feita',simbolo=id,origem=origem,motivo=motivo,**extras)
             self.perguntas[id]=pergunta
 
+    def _formatar_serve_a(self,regras_por_doenca):
+        return [{'doenca':d,'nome':self.base.simbolos[d]['nome'],'gravidade':self.base.simbolos[d]['gravidade'],
+                 'cf_atual':self.resultado.cfs[d],'regras':sorted(regras)}
+                for d,regras in sorted(regras_por_doenca.items())]
+
+    def _serve_a_triagem(self,id):
+        regras_por_doenca={}
+        for r in self.base.regras:
+            d=r['entao']['simbolo']
+            if self.base.simbolos[d]['tipo']=='doenca' and any(id in _fontes(c['simbolo'],self.base) for c in r['se']):
+                regras_por_doenca.setdefault(d,set()).add(r['id'])
+        return self._formatar_serve_a(regras_por_doenca)
+
     def estado(self):
         pendentes=self._telas_pendentes()
         motivo=motivo_parada(self.analise,not pendentes,len(self.dinamicas),self.limite_dinamico)
@@ -146,13 +159,11 @@ class Sessao:
                 proxima={'tipo':'tela_triagem','id':t['id'],'selecao':t['selecao'],'simbolos':ids,
                          'texto':t.get('texto',t.get('textos',{})).get(self.modo,t['id'])}
                 for id in ids:
-                    self._pergunta(id,'triagem',f'Triagem obrigatória, tela {indice} de {len(self.base.meta["triagem"])}',tela_id=t['id'])
+                    self._pergunta(id,'triagem',f'Triagem obrigatória, tela {indice} de {len(self.base.meta["triagem"])}',
+                                   tela_id=t['id'],serve_a=self._serve_a_triagem(id))
             else:
                 id=self.analise.proxima; s=self.base.simbolos[id]; candidato=self.analise.candidatos[id]
-                serve=[]
-                for d,regras in sorted(candidato['serve_a'].items()):
-                    serve.append({'doenca':d,'nome':self.base.simbolos[d]['nome'],'gravidade':self.base.simbolos[d]['gravidade'],
-                                  'cf_atual':self.resultado.cfs[d],'regras':sorted(regras)})
+                serve=self._formatar_serve_a(candidato['serve_a'])
                 motivo_pergunta=('Verificar bandeira vermelha parcialmente ativada.' if candidato['seguranca']
                                  else s.get('por_que',{}).get(self.modo,'Esclarecer hipóteses abertas: '+', '.join(x['doenca'] for x in serve)+'.'))
                 proxima={'tipo':'pergunta','id':id,'pergunta':s['pergunta'][self.modo],'entrada':s['dominio']}

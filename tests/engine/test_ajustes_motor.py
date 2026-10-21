@@ -118,3 +118,30 @@ class RestauracaoUnicaTests(unittest.TestCase):
         self.assertEqual(restaurada.estado(),sessao.estado())
         self.assertEqual(restaurada.fatos,sessao.fatos)
         self.assertEqual(restaurada.traco,sessao.traco)
+
+
+class PorqueTriagemTests(unittest.TestCase):
+    def test_porque_triagem_lista_regras_diretas_e_por_derivado_em_ordem(self):
+        b=base([simbolo('x'),simbolo('y'),simbolo('z','derivado'),doenca('d2'),doenca('d1')],
+               [regra('r_d2','d2',0.5,condicao('x')),
+                regra('r_z','d1',0.4,condicao('x')),
+                regra('r_a','d1',0.6,condicao('z'),condicao('y')),
+                regra('der','z',0.9,condicao('x'))],
+               triagem=[{'id':'tela_x','selecao':'unica','simbolos':['x']}])
+        # Mesmo uma regra atualmente inviável pertence à dependência estrutural.
+        s=Sessao(b,ficha={'y':False})
+        s.estado()
+        porque=s.porque('x')
+        self.assertEqual(porque['origem'],'triagem')
+        self.assertEqual(porque['motivo'],'Triagem obrigatória, tela 1 de 1')
+        self.assertEqual(porque.get('serve_a'),[
+            {'doenca':'d1','nome':'d1','gravidade':'media','cf_atual':0,'regras':['r_a','r_z']},
+            {'doenca':'d2','nome':'d2','gravidade':'media','cf_atual':0,'regras':['r_d2']}])
+
+    def test_porque_triagem_sem_caminho_para_doenca_tem_lista_vazia(self):
+        b=base([simbolo('x'),simbolo('solto'),doenca()],
+               [regra('r','d',0.8,condicao('x'))],
+               triagem=[{'id':'tela_solto','selecao':'unica','simbolos':['solto']}])
+        s=Sessao(b)
+        s.estado()
+        self.assertEqual(s.porque('solto').get('serve_a'),[])
