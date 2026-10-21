@@ -2,13 +2,14 @@
 from __future__ import annotations
 
 from contextlib import closing
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
 
 from api.config import Configuracao
+from api.db import repositorios
 from api.db.conexao import abrir
 from api.db.repositorios import inserir_sessao
 from api.main import criar_app
@@ -216,10 +217,27 @@ def test_brinco_so_com_espacos_422(cliente):
     _erro(cliente.post("/api/animais", json={"brinco": "   ", "nome": "Mimosa"}), 422, "entrada_invalida")
 
 
+def test_corrida_do_brinco_na_criacao_409_conflito(cliente, monkeypatch):
+    assert _criar(cliente).status_code == 201
+    # outra requisição gravou o brinco entre a pré-checagem e o insert: a pré-checagem "não acha", o UNIQUE acha
+    monkeypatch.setattr(repositorios, "obter_animal_por_brinco", lambda conn, brinco: None)
+    erro = _erro(_criar(cliente), 409, "conflito")
+    assert "BR-0001" in erro["mensagem"]
+    monkeypatch.undo()
+    assert _brincos(cliente) == ["BR-0001"]
+
+
 def test_brinco_e_nome_sem_espacos_nas_pontas(cliente):
     corpo = cliente.post("/api/animais", json={"brinco": " BR-0005 ", "nome": " Estrela "}).json()
     assert (corpo["brinco"], corpo["nome"]) == ("BR-0005", "Estrela")
     _erro(cliente.post("/api/animais", json={"brinco": "BR-0005", "nome": "Outra"}), 409, "conflito")
+
+
+@pytest.mark.parametrize("nome", ["", "   "])
+def test_nome_em_branco_na_criacao_manual_vira_none(cliente, nome):
+    corpo = cliente.post("/api/animais", json={"brinco": "BR-0070", "nome": nome}).json()
+    assert corpo["nome"] is None
+    validar_contrato("obter_animal", corpo)
 
 
 def test_obter_e_listar_animais(cliente):
@@ -272,6 +290,40 @@ def test_listar_sessoes_do_animal_com_sessao(cliente, config, base):
     }
     validar_contrato("listar_sessoes_animal", corpo)
     assert cliente.get("/api/animais").json()["itens"][0]["ultima_sessao_id"] == "ses_0001"
+
+
+def test_listar_sessoes_do_animal_duas_sessoes_mais_nova_primeiro(cliente, config, base):
+    animal = criar_animal_teste(cliente)
+    motor_base = para_motor(base)
+    # snapshots feitos pelo próprio motor (Sessao + exportar), como a Task 5 os grava
+    antiga = Sessao(motor_base, "produtor", {"dias_em_lactacao": 6})
+    antiga.responder_triagem("sinais", {"sinal_a": True, "sinal_b": False})  # d1 com evidência (cf 0,6)
+    nova = Sessao(motor_base, "veterinario", {"dias_em_lactacao": 6})  # sem nada marcado
+    antiga_estado, nova_estado = antiga.estado(), nova.estado()
+    assert antiga.parecer()["blocos"][0]["itens"][0]["situacao"] == "com_evidencia"  # premissa do teste
+    assert (antiga_estado["fase"], nova_estado["fase"]) == ("dinamica", "triagem")
+    with closing(abrir(config.db_path)) as conn, conn:
+        for motor, estado, agora in (
+            (antiga, antiga_estado, config.agora()),
+            (nova, nova_estado, config.agora() + timedelta(hours=1)),
+        ):
+            inserir_sessao(
+                conn, animal_id=animal["id"], modo=estado["modo"], versao_base="v0001",
+                snapshot={"motor": motor.exportar(), "origens_ficha": {}}, fase=estado["fase"], agora=agora,
+            )
+
+    corpo = cliente.get(f"/api/animais/{animal['id']}/sessoes").json()
+    validar_contrato("listar_sessoes_animal", corpo)
+    assert [i["sessao_id"] for i in corpo["itens"]] == ["ses_0002", "ses_0001"]  # a mais nova primeiro
+    segunda, primeira = corpo["itens"]
+    assert segunda["criada_em"] > primeira["criada_em"]
+    assert (primeira["modo"], primeira["fase"], primeira["versao_base"]) == ("produtor", "dinamica", "v0001")
+    assert primeira["top1"] == "d1"  # a com evidência
+    assert primeira["urgencia"] == antiga.parecer()["urgencia"] == "chamar_agora"
+    assert (segunda["modo"], segunda["fase"]) == ("veterinario", "triagem")
+    assert segunda["top1"] is None  # sem evidência não há hipótese a destacar
+    assert segunda["urgencia"] == nova.parecer()["urgencia"] == "sem_problema"
+    assert cliente.get("/api/animais").json()["itens"][0]["ultima_sessao_id"] == "ses_0002"
 
 
 def test_sem_base_ativa_409(tmp_path, config, hoje, agora):
@@ -336,6 +388,17 @@ def test_importacao_grava_e_marca_origem(cliente, mimosa):
     assert novo["dias_em_lactacao"] == 20
     assert novo["origens"] == {"data_ultimo_parto": "importacao", "raca_grupo": "importacao", "historico_mastite_12m": "importacao"}
     validar_contrato("obter_animal", novo)
+
+
+def test_corrida_do_brinco_na_importacao_409_e_nada_gravado(cliente, mimosa, monkeypatch):
+    # a pré-checagem não vê BR-0001 (gravado "por outra requisição"): o insert falha e a transação inteira volta,
+    # inclusive BR-0007, que foi inserido antes dele
+    monkeypatch.setattr(repositorios, "obter_animal_por_brinco", lambda conn, brinco: None)
+    erro = _erro(_enviar(cliente, (FIXTURES / "prontuario.csv").read_bytes()), 409, "conflito")
+    assert "Nada foi gravado" in erro["mensagem"]
+    monkeypatch.undo()
+    assert _brincos(cliente) == ["BR-0001"]
+    assert cliente.get(f"/api/animais/{mimosa['id']}").json()["ficha"]["historico_mastite_12m"] is False
 
 
 def test_importacao_json_equivalente(cliente, mimosa):
@@ -408,6 +471,21 @@ def test_importacao_valores_invalidos_por_linha(cliente):
     assert _brincos(cliente) == ["BR-0043"]  # linha com erro não grava nada, nem parcialmente
 
 
+@pytest.mark.parametrize(
+    "celula",
+    ["9" * 5000, "-" + "9" * 5000, "9" * 5000 + ".5", "9" * 4300, "9" * 20, "9" * 15],
+    ids=["inteiro_5000", "negativo_5000", "decimal_5000", "inteiro_4300", "inteiro_20", "inteiro_15"],
+)
+def test_importacao_numero_gigante_e_rejeitado_nunca_500(cliente, celula):
+    # int() de texto com mais de 4300 dígitos levanta ValueError no Python 3.12: a linha vira rejeitada, o resto segue
+    resposta = _enviar(cliente, f"brinco,numero_lactacoes\nBR-0060,{celula}\nBR-0061,2\n".encode())
+    assert resposta.status_code == 200, resposta.text[:300]
+    corpo = resposta.json()
+    assert [(r["linha"], r["erros"][0]["campo"]) for r in corpo["rejeitados"]] == [(2, "numero_lactacoes")]
+    assert corpo["criados"] == [{"linha": 3, "brinco": "BR-0061"}]
+    assert _brincos(cliente) == ["BR-0061"]
+
+
 def test_importacao_so_atualiza_o_que_mudou(cliente, mimosa):
     # nada novo para BR-0001: continua na lista, sem campos, e nada é gravado
     iguais = "brinco,nome,raca_grupo,historico_mastite_12m\nBR-0001,Outro Nome,cruzada,não\n"
@@ -456,7 +534,6 @@ def test_importacao_json_com_itens_invalidos(cliente):
         pytest.param("prontuario.json", b"[" * 100000, id="json_aninhado_demais"),
     ],
 )
-
 def test_importacao_arquivo_ilegivel_422(cliente, nome, conteudo):
     _erro(_enviar(cliente, conteudo, nome=nome), 422, "importacao_invalida")
     assert _brincos(cliente) == []
@@ -479,6 +556,15 @@ def test_importacao_sem_arquivo_ou_com_parametro_invalido_422(cliente):
     resposta = cliente.post("/api/animais/importacao?gravar=talvez", files={"arquivo": ("p.csv", b"brinco\nBR-0001\n")})
     _erro(resposta, 422, "entrada_invalida")
     assert _brincos(cliente) == []
+
+
+def test_nome_em_branco_na_importacao_vira_none(cliente):
+    _enviar(cliente, b"brinco,nome\nBR-0072,   \nBR-0073,\nBR-0074\n")
+    dados = b'{"animais": [{"brinco": "BR-0075", "nome": "   "}, {"brinco": "BR-0076", "nome": ""}, {"brinco": "BR-0077"}]}'
+    _enviar(cliente, dados, nome="p.json")
+    itens = cliente.get("/api/animais").json()["itens"]
+    assert [i["brinco"] for i in itens] == [f"BR-00{n}" for n in range(72, 78)]
+    assert [i["nome"] for i in itens] == [None] * 6
 
 
 def test_importacao_so_cabecalho_nao_cria_nada(cliente):

@@ -11,11 +11,12 @@ import csv
 import io
 import json
 import re
+import sqlite3
 from dataclasses import dataclass, field
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
-from api.erros import importacao_invalida
+from api.erros import conflito, importacao_invalida
 from api.schemas.animal import ErroCampo, LinhaAtualizada, LinhaImportada, LinhaRejeitada, ResultadoImportacao
 from api.servicos.animal_servico import base_ativa, texto_legivel
 from api.servicos.ficha import campos_da_ficha, completar_ficha, mostrar_valor, validar_ficha
@@ -25,8 +26,9 @@ LIMITE_BYTES = 5 * 1024 * 1024
 
 _VERDADEIRO = frozenset({"true", "sim", "1"})
 _FALSO = frozenset({"false", "não", "nao", "0"})
-_INTEIRO = re.compile(r"[+-]?[0-9]+")
-_DECIMAL = re.compile(r"[+-]?[0-9]+[.,][0-9]+")
+# até 15 dígitos por parte: mais que isso não é medida da ficha e o int() de texto longo (> 4300 dígitos) levanta erro
+_INTEIRO = re.compile(r"[+-]?[0-9]{1,15}")
+_DECIMAL = re.compile(r"[+-]?[0-9]{1,15}[.,][0-9]{1,15}")
 
 
 @dataclass
@@ -150,10 +152,14 @@ def _ler_json(texto: str) -> list[_Linha]:
 
 
 def _numero(texto: str) -> int | float | None:
-    if _INTEIRO.fullmatch(texto):
-        return int(texto)
-    if _DECIMAL.fullmatch(texto):
-        return float(texto.replace(",", "."))
+    """O número da célula, ou ``None`` se não é numérico (ou grande demais para ser uma medida da ficha)."""
+    try:
+        if _INTEIRO.fullmatch(texto):
+            return int(texto)
+        if _DECIMAL.fullmatch(texto):
+            return float(texto.replace(",", "."))
+    except (ValueError, OverflowError):  # defesa: os limites do regex já evitam os dois
+        pass
     return None
 
 
@@ -245,13 +251,19 @@ def importar(ctx: Contexto, nome_arquivo: str, conteudo: bytes, gravar: bool) ->
 
     if gravar:
         agora = ctx.config.agora()
-        with ctx.conn:  # tudo ou nada
-            for brinco, nome, ficha, origens in a_criar:
-                repo.inserir_animal(ctx.conn, brinco=brinco, nome=nome, ficha=ficha, origens=origens, agora=agora)
-            for atual, mudaram, informados in a_atualizar:
-                ficha = {**completar_ficha(base, atual["ficha"]), **{c: informados[c] for c in mudaram}}
-                origens = {**atual["origens"], **{c: "importacao" for c in mudaram}}
-                repo.atualizar_animal(ctx.conn, atual["id"], ficha=ficha, origens=origens, agora=agora)
+        try:
+            with ctx.conn:  # tudo ou nada
+                for brinco, nome, ficha, origens in a_criar:
+                    repo.inserir_animal(ctx.conn, brinco=brinco, nome=nome, ficha=ficha, origens=origens, agora=agora)
+                for atual, mudaram, informados in a_atualizar:
+                    ficha = {**completar_ficha(base, atual["ficha"]), **{c: informados[c] for c in mudaram}}
+                    origens = {**atual["origens"], **{c: "importacao" for c in mudaram}}
+                    repo.atualizar_animal(ctx.conn, atual["id"], ficha=ficha, origens=origens, agora=agora)
+        except sqlite3.IntegrityError:  # outra requisição gravou um dos brincos depois da pré-checagem (UNIQUE)
+            raise conflito(
+                "Um brinco do arquivo foi cadastrado por outra requisição durante a importação. "
+                "Nada foi gravado; tente de novo."
+            ) from None
     return ResultadoImportacao(
         formato=formato, gravado=gravar, criados=criados, atualizados=atualizados, rejeitados=rejeitados
     )

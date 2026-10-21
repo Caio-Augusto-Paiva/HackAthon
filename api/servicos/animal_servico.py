@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import sqlite3
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
@@ -66,7 +67,7 @@ def _animal(ctx: Contexto, linha: dict) -> Animal:
 
 def criar_animal(ctx: Contexto, corpo: NovoAnimal) -> Animal:
     base = base_ativa(ctx)
-    brinco, nome = corpo.brinco.strip(), corpo.nome.strip()
+    brinco, nome = corpo.brinco.strip(), corpo.nome.strip() or None  # nome em branco = sem nome, como na importação
     if not brinco:
         raise entrada_invalida(
             "Brinco obrigatório.",
@@ -79,15 +80,18 @@ def criar_animal(ctx: Contexto, corpo: NovoAnimal) -> Animal:
         raise erro_de_ficha(erros)
     if repo.obter_animal_por_brinco(ctx.conn, brinco) is not None:
         raise conflito(f"Já existe um animal com o brinco '{brinco}'.")
-    with ctx.conn:
-        animal_id = repo.inserir_animal(
-            ctx.conn,
-            brinco=brinco,
-            nome=nome,
-            ficha=completar_ficha(base, corpo.ficha),
-            origens={},  # só "importacao" é registrado; o que não está em origens vale "manual"
-            agora=ctx.config.agora(),
-        )
+    try:
+        with ctx.conn:
+            animal_id = repo.inserir_animal(
+                ctx.conn,
+                brinco=brinco,
+                nome=nome,
+                ficha=completar_ficha(base, corpo.ficha),
+                origens={},  # só "importacao" é registrado; o que não está em origens vale "manual"
+                agora=ctx.config.agora(),
+            )
+    except sqlite3.IntegrityError:  # outra requisição gravou o brinco depois da pré-checagem (UNIQUE)
+        raise conflito(f"Já existe um animal com o brinco '{brinco}'.") from None
     return obter_animal(ctx, animal_id)
 
 
