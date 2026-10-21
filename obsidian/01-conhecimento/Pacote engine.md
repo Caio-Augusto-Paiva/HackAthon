@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "code"
-community: "Motor: CF, parada e bandeiras"
+community: "Especificação: entrega e arquitetura"
 location: "Seção 4.3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motor_CF_parada_e_bandeiras
+  - community/Especificação_entrega_e_arquitetura
 ---
 
 # Pacote engine
@@ -19,4 +19,4 @@ tags:
 - [[Pacote api (FastAPI)]] - `references` [EXTRACTED]
 - [[Pacote kb]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motor_CF_parada_e_bandeiras
+#graphify/code #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura

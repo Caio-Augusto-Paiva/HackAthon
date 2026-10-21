@@ -76,5 +76,11 @@
     "seen": 1792553138.974145,
     "ast_hash": "6f74a28b070151597a037e92d921735e",
     "semantic_hash": "6f74a28b070151597a037e92d921735e"
+  },
+  "CLAUDE.md": {
+    "mtime": 1792553789.0914888,
+    "seen": 1792554022.426117,
+    "ast_hash": "5fec02f4e7d1b52535536e6c4a4c6312",
+    "semantic_hash": "5fec02f4e7d1b52535536e6c4a4c6312"
   }
 }

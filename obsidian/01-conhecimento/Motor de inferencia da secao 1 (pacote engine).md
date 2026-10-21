@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Planejamento, agentes e alocação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Motor de inferencia da secao 1 (pacote engine)
@@ -22,4 +22,4 @@ tags:
 - [[Revisao do motor de inferencia (21102026)]] - `references` [EXTRACTED]
 - [[Somente biblioteca padrao do Python 3.12+, sem dependencias]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Componentes do sistema especialista"
+community: "Instruções e regras do hackathon"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Componentes_do_sistema_especialista
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Guardas de validacao do nucleo
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Guardas nao substituem a validacao editorial de kb]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Componentes_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

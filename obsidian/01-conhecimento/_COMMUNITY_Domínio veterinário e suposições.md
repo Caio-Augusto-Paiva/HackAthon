@@ -1,21 +1,21 @@
 ---
 type: community
-cohesion: 0.13
-members: 20
+members: 22
 ---
 
 # Domínio veterinário e suposições
 
-**Cohesion:** 0.13 - loosely connected
-**Members:** 20 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[Acidose ruminal (categoria)]] - concept - docs/fontes/fontes.md
 - [[Acidose ruminal subaguda]] - concept - docs/fontes/fontes.md
 - [[Anaplasmose]] - concept - docs/fontes/fontes.md
 - [[Babesiose]] - concept - docs/fontes/fontes.md
+- [[Base artificial sem conhecimento veterinario, nao serve para triagem]] - rationale - engine/README.md
+- [[Base de demonstracao artificial (testsfixturesmotorbase.json)]] - concept - engine/README.md
 - [[Cetose bovina (hiperCetonemia)]] - concept - docs/fontes/fontes.md
-- [[Conteudo obrigatorio do plano final (12 itens)]] - concept - CLAUDE.md
+- [[Dados ficticios apenas]] - rationale - CLAUDE.md
 - [[Dermatite digital]] - concept - docs/fontes/fontes.md
 - [[Deslocamento de abomaso]] - concept - docs/fontes/fontes.md
 - [[Embrapa ADM158 (tristeza parasitaria)]] - document - docs/fontes/fontes.md
@@ -39,7 +39,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Planejamento, agentes e alocação]]
+- 3 edges to [[_COMMUNITY_Instruções e regras do hackathon]]
 
 ## Top bridge nodes
-- [[Conteudo obrigatorio do plano final (12 itens)]] - degree 2, connects to 1 community
+- [[Marcacao de suposicao a validar (conhecimento veterinario)]] - degree 5, connects to 1 community
+- [[Dados ficticios apenas]] - degree 3, connects to 1 community

@@ -1,17 +1,19 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Revisão do motor e conformidade"
+community: "Planejamento, agentes e alocação"
+location: "L67"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Revisão_do_motor_e_conformidade
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Fontes de dados externas
 
 ## Connections
-- [[Memoria de trabalho]] - `conceptually_related_to` [EXTRACTED]
+- [[Componentes da arquitetura (modelo conceitual)]] - `references` [EXTRACTED]
+- [[Memoria de trabalho]] - `shares_data_with` [EXTRACTED]
 - [[Origens de observacao resposta, ficha, importacao]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Revisão_do_motor_e_conformidade
+#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação

@@ -2,6 +2,7 @@
 source_file: "CLAUDE.md"
 type: "concept"
 community: "Instruções e regras do hackathon"
+location: "L113"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
@@ -11,6 +12,7 @@ tags:
 # Fatores de certeza (CF)
 
 ## Connections
+- [[Base de conhecimento]] - `references` [EXTRACTED]
 - [[CF estilo MYCIN em Fraction]] - `implements` [INFERRED]
 - [[Motor de inferencia]] - `conceptually_related_to` [EXTRACTED]
 

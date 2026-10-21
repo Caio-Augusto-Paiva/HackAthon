@@ -6,12 +6,15 @@ Fontes oficiais: **[A]** = `apresentacaoRerun.pdf` (16 slides); **[D]** = `Docum
 
 ## Grafo de conhecimento — ler PRIMEIRO, em todo prompt
 
-Para economizar tokens, **não leia o projeto inteiro**. O conhecimento do projeto (instruções, especificação, fontes, transcrições dos PDFs, pesquisas, revisões, plano e README do motor) está num grafo:
+Para economizar tokens, **não leia o projeto inteiro e não recapitule o projeto lendo os arquivos originais**. O conhecimento do projeto (instruções, especificação, fontes, transcrições dos PDFs, pesquisas, revisões, plano e README do motor) está no grafo do Obsidian. **Sempre que precisar ler, consultar ou recapitular arquivos do projeto, leia do grafo do Obsidian em `obsidian/01-conhecimento/`**, nesta ordem:
 
-1. **Antes de qualquer tarefa**, leia `graphify-out/GRAPH_REPORT.md` (mapa: nós centrais, comunidades, conexões). Para perguntas específicas, use `graphify query "<pergunta>"` (ou `/graphify query`), que percorre `graphify-out/graph.json`.
-2. Abra um arquivo do repositório **só** quando o grafo apontar para ele (`source_file`/`source_location`) ou quando for editá-lo.
-3. A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
-4. O escopo do grafo está em `.graphifyignore` (código e testes ficam de fora; serão o grafo 2).
+1. **Índice:** `graphify-out/GRAPH_REPORT.md` (nós centrais, comunidades, hiperarestas, lacunas).
+2. **Comunidade:** a nota `obsidian/01-conhecimento/_COMMUNITY_<nome>.md` do assunto.
+3. **Conceitos:** siga os links `[[...]]` até as notas de conceito. Cada nota traz `source_file`, `location` e as conexões com o tipo de relação.
+4. **Pergunta pontual:** `graphify query "<pergunta>"` (ou `/graphify query`), que percorre `graphify-out/graph.json`.
+5. **Arquivo original, só se:** for editá-lo; a nota não tiver o detalhe necessário (abra só o trecho indicado em `location`); ou o arquivo estiver fora do grafo (código e testes, ver `.graphifyignore`).
+6. A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
+7. O escopo do grafo está em `.graphifyignore` (código e testes ficam de fora; serão o grafo 2).
 
 ## Manter o grafo atualizado — sempre que houver documento novo ou alterado
 

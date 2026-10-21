@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Skills Anthropic e licença"
+community: "Execução local e ferramentas"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Skills_Anthropic_e_licença
+  - community/Execução_local_e_ferramentas
 ---
 
 # anthropics/skills (repositorio)
@@ -16,4 +16,4 @@ tags:
 - [[skill-creator (skill)]] - `references` [EXTRACTED]
 - [[webapp-testing (skill)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Skills_Anthropic_e_licença
+#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas

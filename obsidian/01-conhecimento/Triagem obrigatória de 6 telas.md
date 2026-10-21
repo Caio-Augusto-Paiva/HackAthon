@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Motor: CF, parada e bandeiras"
+community: "Especificação: entrega e arquitetura"
 location: "Seção 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_CF_parada_e_bandeiras
+  - community/Especificação_entrega_e_arquitetura
 ---
 
 # Triagem obrigatória de 6 telas
@@ -16,4 +16,4 @@ tags:
 - [[Critérios de parada (confirmação, limite, exaustão)]] - `references` [EXTRACTED]
 - [[Motor de inferência (engine)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_CF_parada_e_bandeiras
+#graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura

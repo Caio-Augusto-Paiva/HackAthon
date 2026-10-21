@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "concept"
-community: "Skills Anthropic e licença"
+community: "Execução local e ferramentas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Skills_Anthropic_e_licença
+  - community/Execução_local_e_ferramentas
 ---
 
 # Restricao de open source do hackathon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pptx (skill, source-available)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Skills_Anthropic_e_licença
+#graphify/concept #graphify/EXTRACTED #community/Execução_local_e_ferramentas

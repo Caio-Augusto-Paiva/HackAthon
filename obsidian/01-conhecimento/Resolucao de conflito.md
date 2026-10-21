@@ -2,6 +2,7 @@
 source_file: "CLAUDE.md"
 type: "concept"
 community: "Instruções e regras do hackathon"
+location: "L62"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

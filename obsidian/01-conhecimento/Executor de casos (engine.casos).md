@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Componentes do sistema especialista"
+community: "Instruções e regras do hackathon"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Componentes_do_sistema_especialista
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Executor de casos (engine.casos)
@@ -14,4 +14,4 @@ tags:
 - [[Executor de casos incompleto (inconclusivas e pausa)]] - `references` [EXTRACTED]
 - [[Testes com casos conhecidos por versao da base]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Componentes_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Revisão do motor e conformidade"
+community: "Planejamento, agentes e alocação"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Revisão_do_motor_e_conformidade
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Revisao do motor de inferencia (21/10/2026)
@@ -17,4 +17,4 @@ tags:
 - [[Focos da revisao (sem valor, contradicoes, loops, bandeiras)]] - `conceptually_related_to` [INFERRED]
 - [[Motor de inferencia da secao 1 (pacote engine)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Revisão_do_motor_e_conformidade
+#graphify/document #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação

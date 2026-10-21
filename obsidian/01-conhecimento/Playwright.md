@@ -1,13 +1,18 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Playwright"
+community: "Instruções e regras do hackathon"
+location: "L106"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Playwright
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Playwright
 
-#graphify/concept #graphify/EXTRACTED #community/Playwright
+## Connections
+- [[Proposta inicial de arquitetura (hipotese a validar)]] - `references` [EXTRACTED]
+- [[Testes com casos conhecidos por versao da base]] - `conceptually_related_to` [INFERRED]
+
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

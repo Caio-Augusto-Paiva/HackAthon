@@ -6,8 +6,8 @@
       "label": "Instru\u00e7\u00f5es e regras do hackathon",
       "x": 0,
       "y": 0,
-      "width": 1320,
-      "height": 720,
+      "width": 1760,
+      "height": 920,
       "color": "1"
     },
     {
@@ -20,10 +20,37 @@
       "height": 60
     },
     {
+      "id": "n_claude_aquisicao_conhecimento",
+      "type": "file",
+      "file": "Aquisicao de conhecimento.md",
+      "x": 220,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_autorizacao",
+      "type": "file",
+      "file": "Autorizacao explicita supera a fase de planejamento do CLAUDE.md",
+      "x": 420,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_base_conhecimento",
+      "type": "file",
+      "file": "Base de conhecimento.md",
+      "x": 620,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
       "id": "n_engine_readme_cf_mycin",
       "type": "file",
       "file": "CF estilo MYCIN em Fraction.md",
-      "x": 220,
+      "x": 820,
       "y": 80,
       "width": 180,
       "height": 60
@@ -32,1010 +59,25 @@
       "id": "n_claude",
       "type": "file",
       "file": "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros).md",
-      "x": 420,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_criterios_avaliacao",
-      "type": "file",
-      "file": "Criterios de avaliacao do hackathon.md",
-      "x": 620,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_cronograma_hackathon",
-      "type": "file",
-      "file": "Cronograma e entrega do hackathon (20 a 2310).md",
-      "x": 820,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_restricao_decisao_deterministica",
-      "type": "file",
-      "file": "Decisao deterministica e auditavel.md",
       "x": 1020,
       "y": 80,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_dicas",
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
       "type": "file",
-      "file": "Dicas do hackathon (slide 13).md",
-      "x": 20,
-      "y": 160,
+      "file": "Cinco tarefas TDD do motor (vermelho antes do verde).md",
+      "x": 1220,
+      "y": 80,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_passo_a_passo",
+      "id": "n_claude_componentes_arquitetura",
       "type": "file",
-      "file": "Diretrizes passo a passo (slide 12).md",
-      "x": 220,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_encadeamento",
-      "type": "file",
-      "file": "Encadeamento para frente e para tras.md",
-      "x": 420,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_entrega_localhost",
-      "type": "file",
-      "file": "Entrega, demonstracao e localhost (slides 10 e 15).md",
-      "x": 620,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_rationale_escopo_secao1",
-      "type": "file",
-      "file": "Escopo API, persistencia, interface e base clinica fora da entrega.md",
-      "x": 820,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_fatores_certeza",
-      "type": "file",
-      "file": "Fatores de certeza (CF).md",
-      "x": 1020,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_rationale_cf_fraction",
-      "type": "file",
-      "file": "Fraction evita arredondar conclusao quase certa.md",
-      "x": 20,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_modelo_conceitual",
-      "type": "file",
-      "file": "Modelo conceitual de sistema especialista (slide 14).md",
-      "x": 220,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_motor_de_inferencia",
-      "type": "file",
-      "file": "Motor de inferencia.md",
-      "x": 420,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_motor_secao_1",
-      "type": "file",
-      "file": "Motor de inferencia da secao 1 (pacote engine).md",
-      "x": 620,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_arquitetura_motor_python",
-      "type": "file",
-      "file": "Motor de regras em Python independente de interface.md",
-      "x": 820,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_inferir",
-      "type": "file",
-      "file": "Nucleo inferir(base, fatos), sem estado.md",
-      "x": 1020,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_correcoes_prioridade",
-      "type": "file",
-      "file": "Prioridade padrao por classe (1005010) e demais correcoes menores.md",
-      "x": 20,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_projeto_proposto",
-      "type": "file",
-      "file": "Projeto proposto (slide 8).md",
-      "x": 220,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_documentario_rerum_projeto_proposto",
-      "type": "file",
-      "file": "Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3).md",
-      "x": 420,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_regulamento",
-      "type": "file",
-      "file": "Regulamento, pontuacao e cronograma (slide 3).md",
-      "x": 620,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_resolucao_conflito",
-      "type": "file",
-      "file": "Resolucao de conflito.md",
-      "x": 820,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_restricao_localhost",
-      "type": "file",
-      "file": "Restricao execucao completa em localhost.md",
-      "x": 1020,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_restricao_nao_usar_llm",
-      "type": "file",
-      "file": "Restricao nao usar a LLM como sistema especialista.md",
-      "x": 20,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_restricao_open_source",
-      "type": "file",
-      "file": "Restricao open source.md",
-      "x": 220,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_sistema_especialista",
-      "type": "file",
-      "file": "Sistema especialista.md",
-      "x": 420,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_rationale_biblioteca_padrao",
-      "type": "file",
-      "file": "Somente biblioteca padrao do Python 3.12+, sem dependencias.md",
-      "x": 620,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_tema_t1_anamnese",
-      "type": "file",
-      "file": "Tema T1 Anamnese.md",
-      "x": 820,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_documentario_rerum_temas",
-      "type": "file",
-      "file": "Temas T1 a T3 (documento D, pagina 3).md",
-      "x": 1020,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_temas",
-      "type": "file",
-      "file": "Temas T1 a T3 (slide 9).md",
-      "x": 20,
-      "y": 480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g1",
-      "type": "group",
-      "label": "Especifica\u00e7\u00e3o: entrega e arquitetura",
-      "x": 1400,
-      "y": 0,
-      "width": 1320,
-      "height": 620,
-      "color": "2"
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_apresentacao_demo",
-      "type": "file",
-      "file": "Apresenta\u00e7\u00e3o e roteiro da demonstra\u00e7\u00e3o.md",
+      "file": "Componentes da arquitetura (modelo conceitual).md",
       "x": 1420,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_base_conhecimento_json",
-      "type": "file",
-      "file": "Base de conhecimento JSON versionada (kb).md",
-      "x": 1620,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_casos_teste",
-      "type": "file",
-      "file": "Casos de teste conhecidos (31 casos).md",
-      "x": 1820,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
-      "type": "file",
-      "file": "Conhecimento de dom\u00ednio 8 doen\u00e7as.md",
-      "x": 2020,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_contratos_api",
-      "type": "file",
-      "file": "Contratos da API e formato \u00fanico de erro.md",
-      "x": 2220,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cronograma",
-      "type": "file",
-      "file": "Cronograma por blocos at\u00e9 quinta 2210.md",
-      "x": 2420,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_decisoes_arquiteto",
-      "type": "file",
-      "file": "Decis\u00f5es do arquiteto (4.9, 5.5, 6.4).md",
-      "x": 1420,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_diario_ia_processo",
-      "type": "file",
-      "file": "Di\u00e1rio de uso da IA e revis\u00f5es cruzadas.md",
-      "x": 1620,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_documentacao_entrega",
-      "type": "file",
-      "file": "Documenta\u00e7\u00e3o de entrega (processo, arquitetura, regras).md",
-      "x": 1820,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_editor_grafico",
-      "type": "file",
-      "file": "Editor gr\u00e1fico da base (n\u00edvel B).md",
-      "x": 2020,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "type": "file",
-      "file": "Especifica\u00e7\u00e3o PoC Anamnese de Bovinos Leiteiros.md",
-      "x": 2220,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_estado_sessao",
-      "type": "file",
-      "file": "EstadoSessao (contrato da API).md",
-      "x": 2420,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_testes_quatro_camadas",
-      "type": "file",
-      "file": "Estrat\u00e9gia de testes em quatro camadas.md",
-      "x": 1420,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost",
-      "type": "file",
-      "file": "Execu\u00e7\u00e3o em localhost e offline (rodar.ps1).md",
-      "x": 1620,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_dominio_f1_f12",
-      "type": "file",
-      "file": "Fontes de dom\u00ednio F1 a F12.md",
-      "x": 1820,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_grafo_bipartido",
-      "type": "file",
-      "file": "Grafo bipartido s\u00edmbolo-regra (convers\u00e3o 11).md",
-      "x": 2020,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
-      "type": "file",
-      "file": "Modelo conceitual - m\u00f3dulos (diagrama).md",
-      "x": 2220,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb",
-      "type": "file",
-      "file": "Pacote kb.md",
-      "x": 2420,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_web",
-      "type": "file",
-      "file": "Pacote web (React + TypeScript).md",
-      "x": 1420,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte",
-      "type": "file",
-      "file": "Plano de corte.md",
-      "x": 1620,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_restricao_sem_llm",
-      "type": "file",
-      "file": "Restri\u00e7\u00e3o sem LLM no caminho da decis\u00e3o.md",
-      "x": 1820,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "type": "file",
-      "file": "Riscos e pontos em aberto.md",
-      "x": 2020,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivados_sinais",
-      "type": "file",
-      "file": "Sinais derivados (camada 1).md",
-      "x": 2220,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_suposicao_a_validar",
-      "type": "file",
-      "file": "Status suposicao_a_validar.md",
-      "x": 2420,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_tipos_typescript",
-      "type": "file",
-      "file": "Tipos TypeScript gerados do OpenAPI.md",
-      "x": 1420,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_trabalho_paralelo",
-      "type": "file",
-      "file": "Trabalho em paralelo ABC por pasta.md",
-      "x": 1620,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres",
-      "type": "file",
-      "file": "Tr\u00eas camadas estritas (derivado, doen\u00e7a, urg\u00eancia).md",
-      "x": 1820,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_validador_kb",
-      "type": "file",
-      "file": "Validador da base (erros e avisos).md",
-      "x": 2020,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_versionamento_imutavel",
-      "type": "file",
-      "file": "Vers\u00f5es imut\u00e1veis vNNNN.json com pai.md",
-      "x": 2220,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g2",
-      "type": "group",
-      "label": "Motor: CF, parada e bandeiras",
-      "x": 2800,
-      "y": 0,
-      "width": 1100,
-      "height": 620,
-      "color": "3"
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "type": "file",
-      "file": "Bandeiras vermelhas (chamar_agora).md",
-      "x": 2820,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
-      "type": "file",
-      "file": "Combina\u00e7\u00e3o de CF estilo MYCIN.md",
-      "x": 3020,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo",
-      "type": "file",
-      "file": "Corre\u00e7\u00f5es e rec\u00e1lculo dos fatos.md",
-      "x": 3220,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "type": "file",
-      "file": "Crit\u00e9rios de parada (confirma\u00e7\u00e3o, limite, exaust\u00e3o).md",
-      "x": 3420,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivado_max",
-      "type": "file",
-      "file": "Derivado com combina\u00e7\u00e3o max.md",
-      "x": 3620,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_encadeamento_misto",
-      "type": "file",
-      "file": "Encadeamento para frente + sele\u00e7\u00e3o para tr\u00e1s.md",
-      "x": 2820,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
-      "type": "file",
-      "file": "Explica\u00e7\u00e3o por qu\u00ea e como.md",
-      "x": 3020,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fatos_condicoes",
-      "type": "file",
-      "file": "Fatos (vari\u00e1vel, valor, CF) e avalia\u00e7\u00e3o de condi\u00e7\u00f5es.md",
-      "x": 3220,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
-      "type": "file",
-      "file": "Hip\u00f3tese aberta.md",
-      "x": 3420,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
-      "type": "file",
-      "file": "Importa\u00e7\u00e3o de prontu\u00e1rio CSVJSON.md",
-      "x": 3620,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_limiares_meta",
-      "type": "file",
-      "file": "Limiares nomeados em meta.limiares.md",
-      "x": 2820,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "type": "file",
-      "file": "Mem\u00f3ria de trabalho (enginememoria.py).md",
-      "x": 3020,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "type": "file",
-      "file": "Motor de infer\u00eancia (engine).md",
-      "x": 3220,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "type": "file",
-      "file": "Pacote api (FastAPI).md",
-      "x": 3420,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "type": "file",
-      "file": "Pacote engine.md",
-      "x": 3620,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "type": "file",
-      "file": "Parecer 8 doen\u00e7as, % e tr\u00eas blocos.md",
-      "x": 2820,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_sqlite_persistencia",
-      "type": "file",
-      "file": "Persist\u00eancia SQLite.md",
-      "x": 3020,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
-      "type": "file",
-      "file": "Potencial m\u00e1ximo de hip\u00f3tese.md",
-      "x": 3220,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_resolucao_conflito",
-      "type": "file",
-      "file": "Resolu\u00e7\u00e3o de conflito (agenda).md",
-      "x": 3420,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_selecao_proxima_pergunta",
-      "type": "file",
-      "file": "Sele\u00e7\u00e3o da pr\u00f3xima pergunta (regra vi\u00e1vel).md",
-      "x": 3620,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_traco_inferencia",
-      "type": "file",
-      "file": "Tra\u00e7o de infer\u00eancia.md",
-      "x": 2820,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "type": "file",
-      "file": "Triagem obrigat\u00f3ria de 6 telas.md",
-      "x": 3020,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
-      "type": "file",
-      "file": "Troca de modo produtorveterin\u00e1rio sem perder dados.md",
-      "x": 3220,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_urgencia_gravidade_confianca",
-      "type": "file",
-      "file": "Urg\u00eancia por gravidade x confian\u00e7a.md",
-      "x": 3420,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g3",
-      "type": "group",
-      "label": "Execu\u00e7\u00e3o local e ferramentas",
-      "x": 3980,
-      "y": 0,
-      "width": 1100,
-      "height": 620,
-      "color": "4"
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_playwright_test",
-      "type": "file",
-      "file": "@playwrighttest 1.64.1.md",
-      "x": 4000,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_node_lifecycle",
-      "type": "file",
-      "file": "Cronograma do Node.js (24 em Maintenance, 26 LTS em 28102026).md",
-      "x": 4200,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_windows_11_demo",
-      "type": "file",
-      "file": "Demonstracao em Windows 11.md",
-      "x": 4400,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_fastapi",
-      "type": "file",
-      "file": "FastAPI 0.156.4.md",
-      "x": 4600,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_fastapi_frontend",
-      "type": "file",
-      "file": "FastAPI app.frontend() servindo SPA do Vite.md",
-      "x": 4800,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_linha_24_node",
-      "type": "file",
-      "file": "Linha 24 do Node.js (a confirmar).md",
-      "x": 4000,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_nodejs_lts",
-      "type": "file",
-      "file": "Node.js LTS 24 (Krypton).md",
-      "x": 4200,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_playwright_webserver",
-      "type": "file",
-      "file": "Playwright Test webServer.md",
-      "x": 4400,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_powershell_execution_policy",
-      "type": "file",
-      "file": "PowerShell ExecutionPolicy Bypass.md",
-      "x": 4600,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_pydantic",
-      "type": "file",
-      "file": "Pydantic v2 2.14.1.md",
-      "x": 4800,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_typescript",
-      "type": "file",
-      "file": "TypeScript 7.0.2.md",
-      "x": 4000,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_vite_mocks",
-      "type": "file",
-      "file": "VITE_USAR_MOCKS (modo dev).md",
-      "x": 4200,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_vite",
-      "type": "file",
-      "file": "Vite (build e server.proxy).md",
-      "x": 4400,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_vite",
-      "type": "file",
-      "file": "Vite 8.3.4.md",
-      "x": 4600,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_playwright_skill",
-      "type": "file",
-      "file": "playwright-skill (lackeyjb).md",
-      "x": 4800,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_rodar_ps1",
-      "type": "file",
-      "file": "rodar.ps1 (script de execucao).md",
-      "x": 4000,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_uv",
-      "type": "file",
-      "file": "uv (sync, run, python pin).md",
-      "x": 4200,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_uv",
-      "type": "file",
-      "file": "uv 0.13.4.md",
-      "x": 4400,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_uvicorn",
-      "type": "file",
-      "file": "uvicorn 0.54.0.md",
-      "x": 4600,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_webapp_testing",
-      "type": "file",
-      "file": "webapp-testing (skill).md",
-      "x": 4800,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_winget_uv_id",
-      "type": "file",
-      "file": "winget install astral-sh.uv (id suposto).md",
-      "x": 4000,
-      "y": 400,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g4",
-      "type": "group",
-      "label": "Dom\u00ednio veterin\u00e1rio e suposi\u00e7\u00f5es",
-      "x": 5160,
-      "y": 0,
-      "width": 1100,
-      "height": 520,
-      "color": "5"
-    },
-    {
-      "id": "n_docs_fontes_fontes_acidose_ruminal",
-      "type": "file",
-      "file": "Acidose ruminal (categoria).md",
-      "x": 5180,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_acidose_subaguda",
-      "type": "file",
-      "file": "Acidose ruminal subaguda.md",
-      "x": 5380,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_anaplasmose",
-      "type": "file",
-      "file": "Anaplasmose.md",
-      "x": 5580,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_babesiose",
-      "type": "file",
-      "file": "Babesiose.md",
-      "x": 5780,
-      "y": 80,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_cetose",
-      "type": "file",
-      "file": "Cetose bovina (hiperCetonemia).md",
-      "x": 5980,
       "y": 80,
       "width": 180,
       "height": 60
@@ -1044,261 +86,170 @@
       "id": "n_claude_conteudo_plano_final",
       "type": "file",
       "file": "Conteudo obrigatorio do plano final (12 itens).md",
-      "x": 5180,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_dermatite_digital",
-      "type": "file",
-      "file": "Dermatite digital.md",
-      "x": 5380,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_deslocamento_abomaso",
-      "type": "file",
-      "file": "Deslocamento de abomaso.md",
-      "x": 5580,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_embrapa_adm158",
-      "type": "file",
-      "file": "Embrapa ADM158 (tristeza parasitaria).md",
-      "x": 5780,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_rationale_f6_sem_acetona",
-      "type": "file",
-      "file": "Fonte F6 (cetose) nao menciona cheiro de acetona.md",
-      "x": 5980,
-      "y": 160,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_foot_rot",
-      "type": "file",
-      "file": "Foot rot (podridao de casco).md",
-      "x": 5180,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_hipocalcemia",
-      "type": "file",
-      "file": "Hipocalcemia puerperal (paresia parturiente).md",
-      "x": 5380,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_msd_vet_manual",
-      "type": "file",
-      "file": "MSD Vet Manual.md",
-      "x": 5580,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_regra_suposicao_validar",
-      "type": "file",
-      "file": "Marcacao de suposicao a validar (conhecimento veterinario).md",
-      "x": 5780,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_mastite",
-      "type": "file",
-      "file": "Mastite bovina.md",
-      "x": 5980,
-      "y": 240,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_metrite",
-      "type": "file",
-      "file": "Metrite puerperal.md",
-      "x": 5180,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_rationale_f12_nao_laminite",
-      "type": "file",
-      "file": "Pagina F12 trata de dermatite digital e foot rot, nao de laminite.md",
-      "x": 5380,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_sobrecarga_grao",
-      "type": "file",
-      "file": "Sobrecarga de grao.md",
-      "x": 5580,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_status_conferencia",
-      "type": "file",
-      "file": "Status de conferencia das fontes (L, R, N).md",
-      "x": 5780,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_fontes_fontes_tristeza_parasitaria_bovina",
-      "type": "file",
-      "file": "Tristeza parasitaria bovina (TPB).md",
-      "x": 5980,
-      "y": 320,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g5",
-      "type": "group",
-      "label": "Planejamento, agentes e aloca\u00e7\u00e3o",
-      "x": 0,
-      "y": 800,
-      "width": 1100,
-      "height": 520,
-      "color": "6"
-    },
-    {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum_agentes_codificacao",
-      "type": "file",
-      "file": "Agentes de codificacao com IA (Codex, Claude Code, Copilot, Gemini Code Assist, Opencode).md",
       "x": 20,
-      "y": 880,
+      "y": 160,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_alocacao_revisao",
+      "id": "n_claude_criterios_avaliacao",
       "type": "file",
-      "file": "Alocacao de agente principal e alternativa por prompt de revisao.md",
+      "file": "Criterios de avaliacao do hackathon.md",
       "x": 220,
-      "y": 880,
+      "y": 160,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_antigravity",
+      "id": "n_claude_cronograma_hackathon",
       "type": "file",
-      "file": "Antigravity (plano Pro).md",
+      "file": "Cronograma e entrega do hackathon (20 a 2310).md",
       "x": 420,
-      "y": 880,
+      "y": 160,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_autorizacao",
+      "id": "n_claude_restricao_decisao_deterministica",
       "type": "file",
-      "file": "Autorizacao explicita supera a fase de planejamento do CLAUDE.md",
+      "file": "Decisao deterministica e auditavel.md",
       "x": 620,
-      "y": 880,
+      "y": 160,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_claude_code",
+      "id": "n_claude_decisoes_tomadas",
       "type": "file",
-      "file": "Claude Code (Claude Pro).md",
+      "file": "Decisoes ja tomadas (tema, motor grafico, linguagens).md",
       "x": 820,
-      "y": 880,
+      "y": 160,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_principio_claude_fora_revisao",
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_dicas",
       "type": "file",
-      "file": "Claude Code fica com o critico e fora da revisao.md",
+      "file": "Dicas do hackathon (slide 13).md",
+      "x": 1020,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_passo_a_passo",
+      "type": "file",
+      "file": "Diretrizes passo a passo (slide 12).md",
+      "x": 1220,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_editor_grafico",
+      "type": "file",
+      "file": "Editor grafico do fluxo da anamnese.md",
+      "x": 1420,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_encadeamento",
+      "type": "file",
+      "file": "Encadeamento para frente e para tras.md",
       "x": 20,
-      "y": 960,
+      "y": 240,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_codex",
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_entrega_localhost",
       "type": "file",
-      "file": "Codex (ChatGPT Plus).md",
+      "file": "Entrega, demonstracao e localhost (slides 10 e 15).md",
       "x": 220,
-      "y": 960,
+      "y": 240,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_fontes_transcricao_documentario_rerum_vibe_coding",
+      "id": "n_claude_spec_canonica",
       "type": "file",
-      "file": "Desenvolvimento de Sistemas Especialistas com Vibe Coding.md",
+      "file": "Especificacao canonica docssuperpowersspecs2026-10-20-anamnese-bovinos-design.md",
       "x": 420,
-      "y": 960,
+      "y": 240,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_principio_janelas_5h",
+      "id": "n_engine_readme_executar_casos",
       "type": "file",
-      "file": "Espalhar as janelas de 5 h entre assentos.md",
+      "file": "Executor de casos (engine.casos).md",
       "x": 620,
-      "y": 960,
+      "y": 240,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_fontes_fontes",
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_executor_casos",
       "type": "file",
-      "file": "Fontes do projeto (fontes oficiais e de dominio).md",
+      "file": "Executor de casos incompleto (inconclusivas e pausa).md",
       "x": 820,
-      "y": 960,
+      "y": 240,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_gemini_pro",
+      "id": "n_claude_stack_fastapi_pydantic",
       "type": "file",
-      "file": "Gemini Pro (Google AI Pro, app web).md",
+      "file": "FastAPI + Pydantic.md",
+      "x": 1020,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_fatores_certeza",
+      "type": "file",
+      "file": "Fatores de certeza (CF).md",
+      "x": 1220,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_fontes_oficiais",
+      "type": "file",
+      "file": "Fontes oficiais A apresentacaoRerun.pdf e D DocumentarioRerun.pdf.md",
+      "x": 1420,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_rationale_cf_fraction",
+      "type": "file",
+      "file": "Fraction evita arredondar conclusao quase certa.md",
       "x": 20,
-      "y": 1040,
+      "y": 320,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_implementacao_pessoas",
+      "id": "n_engine_readme_guardas_validacao",
       "type": "file",
-      "file": "Implementacao por pessoa (A, B, C) com agente principal e reserva.md",
+      "file": "Guardas de validacao do nucleo.md",
       "x": 220,
-      "y": 1040,
+      "y": 320,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_licenca_skills",
+      "id": "n_engine_readme_rationale_guardas_vs_kb",
       "type": "file",
-      "file": "Licenca source-available das skills pptx e docx.md",
+      "file": "Guardas nao substituem a validacao editorial de kb.md",
       "x": 420,
-      "y": 1040,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -1307,16 +258,187 @@
       "type": "file",
       "file": "Limite da fase de planejamento (sem implementacao).md",
       "x": 620,
-      "y": 1040,
+      "y": 320,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_docs_agentes_e_skills_principio_revisor_outra_familia",
+      "id": "n_claude_linguagens_escolhidas",
       "type": "file",
-      "file": "Revisor de outra familia de modelo.md",
+      "file": "Linguagens escolhidas Python no backend, React no frontend.md",
       "x": 820,
-      "y": 1040,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_modelo_conceitual",
+      "type": "file",
+      "file": "Modelo conceitual de sistema especialista (slide 14).md",
+      "x": 1020,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_motor_de_inferencia",
+      "type": "file",
+      "file": "Motor de inferencia.md",
+      "x": 1220,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_inferir",
+      "type": "file",
+      "file": "Nucleo inferir(base, fatos), sem estado.md",
+      "x": 1420,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_passo_a_passo",
+      "type": "file",
+      "file": "Passo a passo sugerido do hackathon.md",
+      "x": 20,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_stack_playwright",
+      "type": "file",
+      "file": "Playwright.md",
+      "x": 220,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_correcoes_prioridade",
+      "type": "file",
+      "file": "Prioridade padrao por classe (1005010) e demais correcoes menores.md",
+      "x": 420,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_processo_obrigatorio",
+      "type": "file",
+      "file": "Processo obrigatorio de planejamento.md",
+      "x": 620,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_projeto_proposto",
+      "type": "file",
+      "file": "Projeto proposto (slide 8).md",
+      "x": 820,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_documentario_rerum_projeto_proposto",
+      "type": "file",
+      "file": "Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3).md",
+      "x": 1020,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_proposta_arquitetura",
+      "type": "file",
+      "file": "Proposta inicial de arquitetura (hipotese a validar).md",
+      "x": 1220,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_stack_react_flow",
+      "type": "file",
+      "file": "React Flow.md",
+      "x": 1420,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_regras_conduta",
+      "type": "file",
+      "file": "Regras de conduta.md",
+      "x": 20,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_regulamento",
+      "type": "file",
+      "file": "Regulamento, pontuacao e cronograma (slide 3).md",
+      "x": 220,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_resolucao_conflito",
+      "type": "file",
+      "file": "Resolucao de conflito.md",
+      "x": 420,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_restricao_localhost",
+      "type": "file",
+      "file": "Restricao execucao completa em localhost.md",
+      "x": 620,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_restricao_nao_usar_llm",
+      "type": "file",
+      "file": "Restricao nao usar a LLM como sistema especialista.md",
+      "x": 820,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_restricao_open_source",
+      "type": "file",
+      "file": "Restricao open source.md",
+      "x": 1020,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_stack_sqlite",
+      "type": "file",
+      "file": "SQLite.md",
+      "x": 1220,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_sistema_especialista",
+      "type": "file",
+      "file": "Sistema especialista.md",
+      "x": 1420,
+      "y": 480,
       "width": 180,
       "height": 60
     },
@@ -1325,7 +447,7 @@
       "type": "file",
       "file": "Skill superpowersbrainstorming.md",
       "x": 20,
-      "y": 1120,
+      "y": 560,
       "width": 180,
       "height": 60
     },
@@ -1334,7 +456,7 @@
       "type": "file",
       "file": "Skill superpowerswriting-plans.md",
       "x": 220,
-      "y": 1120,
+      "y": 560,
       "width": 180,
       "height": 60
     },
@@ -1343,288 +465,7 @@
       "type": "file",
       "file": "Skills em formato aberto (.agentsskills, .claudeskills, AGENTS.md).md",
       "x": 420,
-      "y": 1120,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_agentes_e_skills_anthropics_skills",
-      "type": "file",
-      "file": "anthropicsskills (pptx, docx, pdf, webapp-testing, frontend-design).md",
-      "x": 620,
-      "y": 1120,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_agentes_e_skills_obra_superpowers",
-      "type": "file",
-      "file": "obrasuperpowers (skills em formato aberto).md",
-      "x": 820,
-      "y": 1120,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g6",
-      "type": "group",
-      "label": "Skills obra/superpowers",
-      "x": 1400,
-      "y": 800,
-      "width": 1100,
-      "height": 520,
-      "color": "1"
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_casos_de_teste",
-      "type": "file",
-      "file": "Casos de teste inventados (enginecasos.py).md",
-      "x": 1420,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_fatores_certeza",
-      "type": "file",
-      "file": "Fatores de certeza (CF) sem calibracao.md",
-      "x": 1620,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_hypothesis",
-      "type": "file",
-      "file": "Hypothesis (floats, lists, permutations).md",
-      "x": 1820,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_python",
-      "type": "file",
-      "file": "Python 3.15.0.md",
-      "x": 2020,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_registro",
-      "type": "file",
-      "file": "Registro de suposicoes e lacunas (68 itens).md",
-      "x": 2220,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_suposicoes_suposicoes_clinicas",
-      "type": "file",
-      "file": "Suposicoes clinicas veterinarias (suposicao a validar).md",
-      "x": 1420,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_brainstorming",
-      "type": "file",
-      "file": "brainstorming (skill).md",
-      "x": 1620,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_executing_plans",
-      "type": "file",
-      "file": "executing-plans (skill).md",
-      "x": 1820,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_hypothesis",
-      "type": "file",
-      "file": "hypothesis 6.170.5.md",
-      "x": 2020,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_superpowers_repo",
-      "type": "file",
-      "file": "obrasuperpowers (repositorio de skills).md",
-      "x": 2220,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_versoes_bibliotecas_pytest",
-      "type": "file",
-      "file": "pytest 9.1.1.md",
-      "x": 1420,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_execucao_local_pytest_parametrize",
-      "type": "file",
-      "file": "pytest parametrize com pytest.param(id=...).md",
-      "x": 1620,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_subagent_driven_development",
-      "type": "file",
-      "file": "subagent-driven-development (skill).md",
-      "x": 1820,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_systematic_debugging",
-      "type": "file",
-      "file": "systematic-debugging (skill).md",
-      "x": 2020,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_test_driven_development",
-      "type": "file",
-      "file": "test-driven-development (skill).md",
-      "x": 2220,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_verification_before_completion",
-      "type": "file",
-      "file": "verification-before-completion (skill).md",
-      "x": 1420,
-      "y": 1120,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_writing_plans",
-      "type": "file",
-      "file": "writing-plans (skill).md",
-      "x": 1620,
-      "y": 1120,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g7",
-      "type": "group",
-      "label": "Componentes do sistema especialista",
-      "x": 2800,
-      "y": 800,
-      "width": 880,
-      "height": 520,
-      "color": "2"
-    },
-    {
-      "id": "n_claude_aquisicao_conhecimento",
-      "type": "file",
-      "file": "Aquisicao de conhecimento.md",
-      "x": 2820,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_base_conhecimento",
-      "type": "file",
-      "file": "Base de conhecimento.md",
-      "x": 3020,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
-      "type": "file",
-      "file": "Cinco tarefas TDD do motor (vermelho antes do verde).md",
-      "x": 3220,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_editor_grafico",
-      "type": "file",
-      "file": "Editor grafico do fluxo da anamnese.md",
-      "x": 3420,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_executar_casos",
-      "type": "file",
-      "file": "Executor de casos (engine.casos).md",
-      "x": 2820,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_executor_casos",
-      "type": "file",
-      "file": "Executor de casos incompleto (inconclusivas e pausa).md",
-      "x": 3020,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_stack_fastapi_pydantic",
-      "type": "file",
-      "file": "FastAPI + Pydantic.md",
-      "x": 3220,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_guardas_validacao",
-      "type": "file",
-      "file": "Guardas de validacao do nucleo.md",
-      "x": 3420,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_rationale_guardas_vs_kb",
-      "type": "file",
-      "file": "Guardas nao substituem a validacao editorial de kb.md",
-      "x": 2820,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_stack_react_flow",
-      "type": "file",
-      "file": "React Flow.md",
-      "x": 3020,
-      "y": 1040,
+      "y": 560,
       "width": 180,
       "height": 60
     },
@@ -1632,8 +473,35 @@
       "id": "n_docs_agentes_e_skills_skills_nao_confirmadas",
       "type": "file",
       "file": "Skills nao confirmadas (FastAPI, pytest, React Flow, Vite).md",
-      "x": 3220,
-      "y": 1040,
+      "x": 620,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_tema_t1_anamnese",
+      "type": "file",
+      "file": "Tema T1 Anamnese.md",
+      "x": 820,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_documentario_rerum_temas",
+      "type": "file",
+      "file": "Temas T1 a T3 (documento D, pagina 3).md",
+      "x": 1020,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_temas",
+      "type": "file",
+      "file": "Temas T1 a T3 (slide 9).md",
+      "x": 1220,
+      "y": 560,
       "width": 180,
       "height": 60
     },
@@ -1641,8 +509,17 @@
       "id": "n_claude_casos_teste_conhecidos",
       "type": "file",
       "file": "Testes com casos conhecidos por versao da base.md",
-      "x": 3420,
-      "y": 1040,
+      "x": 1420,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_obra_superpowers",
+      "type": "file",
+      "file": "obrasuperpowers (skills em formato aberto).md",
+      "x": 20,
+      "y": 640,
       "width": 180,
       "height": 60
     },
@@ -1650,27 +527,595 @@
       "id": "n_claude_stack_pytest",
       "type": "file",
       "file": "pytest.md",
-      "x": 2820,
-      "y": 1120,
+      "x": 220,
+      "y": 640,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g8",
+      "id": "g1",
       "type": "group",
-      "label": "Revis\u00e3o do motor e conformidade",
-      "x": 3980,
-      "y": 800,
-      "width": 880,
-      "height": 420,
+      "label": "Especifica\u00e7\u00e3o: entrega e arquitetura",
+      "x": 1840,
+      "y": 0,
+      "width": 1760,
+      "height": 820,
+      "color": "2"
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_apresentacao_demo",
+      "type": "file",
+      "file": "Apresenta\u00e7\u00e3o e roteiro da demonstra\u00e7\u00e3o.md",
+      "x": 1860,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
+      "type": "file",
+      "file": "Bandeiras vermelhas (chamar_agora).md",
+      "x": 2060,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_base_conhecimento_json",
+      "type": "file",
+      "file": "Base de conhecimento JSON versionada (kb).md",
+      "x": 2260,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_casos_teste",
+      "type": "file",
+      "file": "Casos de teste conhecidos (31 casos).md",
+      "x": 2460,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
+      "type": "file",
+      "file": "Combina\u00e7\u00e3o de CF estilo MYCIN.md",
+      "x": 2660,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
+      "type": "file",
+      "file": "Conhecimento de dom\u00ednio 8 doen\u00e7as.md",
+      "x": 2860,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_contratos_api",
+      "type": "file",
+      "file": "Contratos da API e formato \u00fanico de erro.md",
+      "x": 3060,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo",
+      "type": "file",
+      "file": "Corre\u00e7\u00f5es e rec\u00e1lculo dos fatos.md",
+      "x": 3260,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "type": "file",
+      "file": "Crit\u00e9rios de parada (confirma\u00e7\u00e3o, limite, exaust\u00e3o).md",
+      "x": 1860,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cronograma",
+      "type": "file",
+      "file": "Cronograma por blocos at\u00e9 quinta 2210.md",
+      "x": 2060,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_decisoes_arquiteto",
+      "type": "file",
+      "file": "Decis\u00f5es do arquiteto (4.9, 5.5, 6.4).md",
+      "x": 2260,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivado_max",
+      "type": "file",
+      "file": "Derivado com combina\u00e7\u00e3o max.md",
+      "x": 2460,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_diario_ia_processo",
+      "type": "file",
+      "file": "Di\u00e1rio de uso da IA e revis\u00f5es cruzadas.md",
+      "x": 2660,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_documentacao_entrega",
+      "type": "file",
+      "file": "Documenta\u00e7\u00e3o de entrega (processo, arquitetura, regras).md",
+      "x": 2860,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_editor_grafico",
+      "type": "file",
+      "file": "Editor gr\u00e1fico da base (n\u00edvel B).md",
+      "x": 3060,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_encadeamento_misto",
+      "type": "file",
+      "file": "Encadeamento para frente + sele\u00e7\u00e3o para tr\u00e1s.md",
+      "x": 3260,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
+      "type": "file",
+      "file": "Especifica\u00e7\u00e3o PoC Anamnese de Bovinos Leiteiros.md",
+      "x": 1860,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_estado_sessao",
+      "type": "file",
+      "file": "EstadoSessao (contrato da API).md",
+      "x": 2060,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_testes_quatro_camadas",
+      "type": "file",
+      "file": "Estrat\u00e9gia de testes em quatro camadas.md",
+      "x": 2260,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost",
+      "type": "file",
+      "file": "Execu\u00e7\u00e3o em localhost e offline (rodar.ps1).md",
+      "x": 2460,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
+      "type": "file",
+      "file": "Explica\u00e7\u00e3o por qu\u00ea e como.md",
+      "x": 2660,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fatos_condicoes",
+      "type": "file",
+      "file": "Fatos (vari\u00e1vel, valor, CF) e avalia\u00e7\u00e3o de condi\u00e7\u00f5es.md",
+      "x": 2860,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_dominio_f1_f12",
+      "type": "file",
+      "file": "Fontes de dom\u00ednio F1 a F12.md",
+      "x": 3060,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_grafo_bipartido",
+      "type": "file",
+      "file": "Grafo bipartido s\u00edmbolo-regra (convers\u00e3o 11).md",
+      "x": 3260,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
+      "type": "file",
+      "file": "Hip\u00f3tese aberta.md",
+      "x": 1860,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
+      "type": "file",
+      "file": "Importa\u00e7\u00e3o de prontu\u00e1rio CSVJSON.md",
+      "x": 2060,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_limiares_meta",
+      "type": "file",
+      "file": "Limiares nomeados em meta.limiares.md",
+      "x": 2260,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
+      "type": "file",
+      "file": "Mem\u00f3ria de trabalho (enginememoria.py).md",
+      "x": 2460,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
+      "type": "file",
+      "file": "Modelo conceitual - m\u00f3dulos (diagrama).md",
+      "x": 2660,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
+      "type": "file",
+      "file": "Motor de infer\u00eancia (engine).md",
+      "x": 2860,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
+      "type": "file",
+      "file": "Pacote api (FastAPI).md",
+      "x": 3060,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "type": "file",
+      "file": "Pacote engine.md",
+      "x": 3260,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb",
+      "type": "file",
+      "file": "Pacote kb.md",
+      "x": 1860,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_web",
+      "type": "file",
+      "file": "Pacote web (React + TypeScript).md",
+      "x": 2060,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
+      "type": "file",
+      "file": "Parecer 8 doen\u00e7as, % e tr\u00eas blocos.md",
+      "x": 2260,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_sqlite_persistencia",
+      "type": "file",
+      "file": "Persist\u00eancia SQLite.md",
+      "x": 2460,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte",
+      "type": "file",
+      "file": "Plano de corte.md",
+      "x": 2660,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
+      "type": "file",
+      "file": "Potencial m\u00e1ximo de hip\u00f3tese.md",
+      "x": 2860,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_resolucao_conflito",
+      "type": "file",
+      "file": "Resolu\u00e7\u00e3o de conflito (agenda).md",
+      "x": 3060,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_restricao_sem_llm",
+      "type": "file",
+      "file": "Restri\u00e7\u00e3o sem LLM no caminho da decis\u00e3o.md",
+      "x": 3260,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
+      "type": "file",
+      "file": "Riscos e pontos em aberto.md",
+      "x": 1860,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_selecao_proxima_pergunta",
+      "type": "file",
+      "file": "Sele\u00e7\u00e3o da pr\u00f3xima pergunta (regra vi\u00e1vel).md",
+      "x": 2060,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivados_sinais",
+      "type": "file",
+      "file": "Sinais derivados (camada 1).md",
+      "x": 2260,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_suposicao_a_validar",
+      "type": "file",
+      "file": "Status suposicao_a_validar.md",
+      "x": 2460,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_tipos_typescript",
+      "type": "file",
+      "file": "Tipos TypeScript gerados do OpenAPI.md",
+      "x": 2660,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_trabalho_paralelo",
+      "type": "file",
+      "file": "Trabalho em paralelo ABC por pasta.md",
+      "x": 2860,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_traco_inferencia",
+      "type": "file",
+      "file": "Tra\u00e7o de infer\u00eancia.md",
+      "x": 3060,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
+      "type": "file",
+      "file": "Triagem obrigat\u00f3ria de 6 telas.md",
+      "x": 3260,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
+      "type": "file",
+      "file": "Troca de modo produtorveterin\u00e1rio sem perder dados.md",
+      "x": 1860,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres",
+      "type": "file",
+      "file": "Tr\u00eas camadas estritas (derivado, doen\u00e7a, urg\u00eancia).md",
+      "x": 2060,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_urgencia_gravidade_confianca",
+      "type": "file",
+      "file": "Urg\u00eancia por gravidade x confian\u00e7a.md",
+      "x": 2260,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_validador_kb",
+      "type": "file",
+      "file": "Validador da base (erros e avisos).md",
+      "x": 2460,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_versionamento_imutavel",
+      "type": "file",
+      "file": "Vers\u00f5es imut\u00e1veis vNNNN.json com pai.md",
+      "x": 2660,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "Planejamento, agentes e aloca\u00e7\u00e3o",
+      "x": 3680,
+      "y": 0,
+      "width": 1320,
+      "height": 620,
       "color": "3"
+    },
+    {
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum_agentes_codificacao",
+      "type": "file",
+      "file": "Agentes de codificacao com IA (Codex, Claude Code, Copilot, Gemini Code Assist, Opencode).md",
+      "x": 3700,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_alocacao_revisao",
+      "type": "file",
+      "file": "Alocacao de agente principal e alternativa por prompt de revisao.md",
+      "x": 3900,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_antigravity",
+      "type": "file",
+      "file": "Antigravity (plano Pro).md",
+      "x": 4100,
+      "y": 80,
+      "width": 180,
+      "height": 60
     },
     {
       "id": "n_docs_revisoes_2026_10_21_revisao_motor_arvore_secao_4_3",
       "type": "file",
       "file": "Arvore da secao 4.3 da especificacao (sessao, validacao, modelos).md",
-      "x": 4000,
-      "y": 880,
+      "x": 4300,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_claude_code",
+      "type": "file",
+      "file": "Claude Code (Claude Pro).md",
+      "x": 4500,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_principio_claude_fora_revisao",
+      "type": "file",
+      "file": "Claude Code fica com o critico e fora da revisao.md",
+      "x": 4700,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_codex",
+      "type": "file",
+      "file": "Codex (ChatGPT Plus).md",
+      "x": 3700,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_transcricao_documentario_rerum_vibe_coding",
+      "type": "file",
+      "file": "Desenvolvimento de Sistemas Especialistas com Vibe Coding.md",
+      "x": 3900,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_rationale_escopo_secao1",
+      "type": "file",
+      "file": "Escopo API, persistencia, interface e base clinica fora da entrega.md",
+      "x": 4100,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_principio_janelas_5h",
+      "type": "file",
+      "file": "Espalhar as janelas de 5 h entre assentos.md",
+      "x": 4300,
+      "y": 160,
       "width": 180,
       "height": 60
     },
@@ -1678,8 +1123,8 @@
       "id": "n_docs_prompts_secao_1",
       "type": "file",
       "file": "Especificacao autorizada da secao 1 (docspromptssecao-1.md).md",
-      "x": 4200,
-      "y": 880,
+      "x": 4500,
+      "y": 160,
       "width": 180,
       "height": 60
     },
@@ -1687,8 +1132,8 @@
       "id": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design",
       "type": "file",
       "file": "Especificacao canonica do projeto (anamnese bovinos).md",
-      "x": 4400,
-      "y": 880,
+      "x": 4700,
+      "y": 160,
       "width": 180,
       "height": 60
     },
@@ -1696,8 +1141,8 @@
       "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_evidencia_final",
       "type": "file",
       "file": "Evidencia final 56 testes sem falhas.md",
-      "x": 4600,
-      "y": 880,
+      "x": 3700,
+      "y": 240,
       "width": 180,
       "height": 60
     },
@@ -1705,8 +1150,8 @@
       "id": "n_docs_revisoes_2026_10_21_revisao_motor_ficha_null",
       "type": "file",
       "file": "Ficha com null tratada como nao sei (deve ser ausente).md",
-      "x": 4000,
-      "y": 960,
+      "x": 3900,
+      "y": 240,
       "width": 180,
       "height": 60
     },
@@ -1714,8 +1159,8 @@
       "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_focos_revisao",
       "type": "file",
       "file": "Focos da revisao (sem valor, contradicoes, loops, bandeiras).md",
-      "x": 4200,
-      "y": 960,
+      "x": 4100,
+      "y": 240,
       "width": 180,
       "height": 60
     },
@@ -1723,8 +1168,62 @@
       "id": "n_claude_fontes_dados_externas",
       "type": "file",
       "file": "Fontes de dados externas.md",
-      "x": 4400,
-      "y": 960,
+      "x": 4300,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes",
+      "type": "file",
+      "file": "Fontes do projeto (fontes oficiais e de dominio).md",
+      "x": 4500,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_gemini_pro",
+      "type": "file",
+      "file": "Gemini Pro (Google AI Pro, app web).md",
+      "x": 4700,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_implementacao_pessoas",
+      "type": "file",
+      "file": "Implementacao por pessoa (A, B, C) com agente principal e reserva.md",
+      "x": 3700,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_licenca_skills",
+      "type": "file",
+      "file": "Licenca source-available das skills pptx e docx.md",
+      "x": 3900,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_motor_secao_1",
+      "type": "file",
+      "file": "Motor de inferencia da secao 1 (pacote engine).md",
+      "x": 4100,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_arquitetura_motor_python",
+      "type": "file",
+      "file": "Motor de regras em Python independente de interface.md",
+      "x": 4300,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -1732,8 +1231,8 @@
       "id": "n_engine_readme_organizacao_modulos",
       "type": "file",
       "file": "Organizacao em modulos (cf, inferencia, selecao, parada, sessao, parecer).md",
-      "x": 4600,
-      "y": 960,
+      "x": 4500,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -1741,8 +1240,8 @@
       "id": "n_engine_readme_origens_observacao",
       "type": "file",
       "file": "Origens de observacao resposta, ficha, importacao.md",
-      "x": 4000,
-      "y": 1040,
+      "x": 4700,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -1750,8 +1249,8 @@
       "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1",
       "type": "file",
       "file": "Plano de implementacao do motor (secao 1).md",
-      "x": 4200,
-      "y": 1040,
+      "x": 3700,
+      "y": 400,
       "width": 180,
       "height": 60
     },
@@ -1759,8 +1258,26 @@
       "id": "n_docs_revisoes_2026_10_21_revisao_motor",
       "type": "file",
       "file": "Revisao do motor de inferencia (21102026).md",
-      "x": 4400,
-      "y": 1040,
+      "x": 3900,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_agentes_e_skills_principio_revisor_outra_familia",
+      "type": "file",
+      "file": "Revisor de outra familia de modelo.md",
+      "x": 4100,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_rationale_biblioteca_padrao",
+      "type": "file",
+      "file": "Somente biblioteca padrao do Python 3.12+, sem dependencias.md",
+      "x": 4300,
+      "y": 400,
       "width": 180,
       "height": 60
     },
@@ -1768,227 +1285,126 @@
       "id": "n_docs_revisoes_2026_10_21_revisao_motor_conformidade",
       "type": "file",
       "file": "Tabela de conformidade com a especificacao (16 itens).md",
-      "x": 4600,
-      "y": 1040,
+      "x": 4500,
+      "y": 400,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g9",
+      "id": "n_docs_agentes_e_skills_anthropics_skills",
+      "type": "file",
+      "file": "anthropicsskills (pptx, docx, pdf, webapp-testing, frontend-design).md",
+      "x": 4700,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g3",
       "type": "group",
-      "label": "Interface, mem\u00f3ria e lacunas da API",
-      "x": 5160,
-      "y": 800,
-      "width": 880,
-      "height": 420,
+      "label": "Execu\u00e7\u00e3o local e ferramentas",
+      "x": 5080,
+      "y": 0,
+      "width": 1320,
+      "height": 620,
       "color": "4"
     },
     {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_api_adaptacoes",
+      "id": "n_docs_pesquisa_versoes_bibliotecas_playwright_test",
       "type": "file",
-      "file": "Adaptacoes que a API precisa fazer sobre o motor.md",
-      "x": 5180,
-      "y": 880,
+      "file": "@playwrighttest 1.64.1.md",
+      "x": 5100,
+      "y": 80,
       "width": 180,
       "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_cortes_bloco",
-      "type": "file",
-      "file": "Cortes de bloco nao lidos de meta.limiares.md",
-      "x": 5380,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_interface_usuario",
-      "type": "file",
-      "file": "Interface do usuario.md",
-      "x": 5580,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_intervalo_neutro",
-      "type": "file",
-      "file": "Intervalo neutro -0,2; 0,2 aparece como 0% sem evidencia.md",
-      "x": 5780,
-      "y": 880,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_memoria_de_trabalho",
-      "type": "file",
-      "file": "Memoria de trabalho.md",
-      "x": 5180,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_modos_produtor_veterinario",
-      "type": "file",
-      "file": "Modos produtor e veterinario.md",
-      "x": 5380,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_parecer",
-      "type": "file",
-      "file": "Parecer final em tres blocos.md",
-      "x": 5580,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_percentual_parecer",
-      "type": "file",
-      "file": "Percentual do parecer max(0, CF) x 100 (divergencia).md",
-      "x": 5780,
-      "y": 960,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_restauracao_sessao",
-      "type": "file",
-      "file": "Restauracao da sessao a partir do banco (ausente, bloqueia a API).md",
-      "x": 5180,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_sessao_api",
-      "type": "file",
-      "file": "Sessao dialogo com triagem, perguntas, correcao e modo.md",
-      "x": 5380,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_nao_sei",
-      "type": "file",
-      "file": "nao_sei e registrado e nao e repetido automaticamente.md",
-      "x": 5580,
-      "y": 1040,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g10",
-      "type": "group",
-      "label": "Agentes e arquivos de instru\u00e7\u00e3o",
-      "x": 0,
-      "y": 1400,
-      "width": 660,
-      "height": 420,
-      "color": "5"
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_agents_md",
-      "type": "file",
-      "file": "AGENTS.md (instrucoes do projeto).md",
-      "x": 20,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_claude_md",
-      "type": "file",
-      "file": "CLAUDE.md (instrucoes do projeto).md",
-      "x": 220,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_claude_code",
-      "type": "file",
-      "file": "Claude Code.md",
-      "x": 420,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_skill_md_format",
-      "type": "file",
-      "file": "Formato SKILL.md (Agent Skills).md",
-      "x": 20,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_gemini_md",
-      "type": "file",
-      "file": "GEMINI.md (instrucoes do projeto).md",
-      "x": 220,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "type": "file",
-      "file": "Gemini CLI.md",
-      "x": 420,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_antigravity",
-      "type": "file",
-      "file": "Google Antigravity (app, IDE e CLI).md",
-      "x": 20,
-      "y": 1640,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_limites_de_uso",
-      "type": "file",
-      "file": "Limites de uso dos planos.md",
-      "x": 220,
-      "y": 1640,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_pesquisa_agentes_e_skills_codex_cli",
-      "type": "file",
-      "file": "OpenAI Codex (CLI, IDE, app desktop).md",
-      "x": 420,
-      "y": 1640,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g11",
-      "type": "group",
-      "label": "Skills Anthropic e licen\u00e7a",
-      "x": 1400,
-      "y": 1400,
-      "width": 660,
-      "height": 420,
-      "color": "6"
     },
     {
       "id": "n_docs_pesquisa_versoes_bibliotecas_xyflow_react",
       "type": "file",
       "file": "@xyflowreact 12.12.0 (React Flow).md",
-      "x": 1420,
-      "y": 1480,
+      "x": 5300,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_node_lifecycle",
+      "type": "file",
+      "file": "Cronograma do Node.js (24 em Maintenance, 26 LTS em 28102026).md",
+      "x": 5500,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_windows_11_demo",
+      "type": "file",
+      "file": "Demonstracao em Windows 11.md",
+      "x": 5700,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_fastapi",
+      "type": "file",
+      "file": "FastAPI 0.156.4.md",
+      "x": 5900,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_execucao_local_fastapi_frontend",
+      "type": "file",
+      "file": "FastAPI app.frontend() servindo SPA do Vite.md",
+      "x": 6100,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_linha_24_node",
+      "type": "file",
+      "file": "Linha 24 do Node.js (a confirmar).md",
+      "x": 5100,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_nodejs_lts",
+      "type": "file",
+      "file": "Node.js LTS 24 (Krypton).md",
+      "x": 5300,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_execucao_local_playwright_webserver",
+      "type": "file",
+      "file": "Playwright Test webServer.md",
+      "x": 5500,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_execucao_local_powershell_execution_policy",
+      "type": "file",
+      "file": "PowerShell ExecutionPolicy Bypass.md",
+      "x": 5700,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_pydantic",
+      "type": "file",
+      "file": "Pydantic v2 2.14.1.md",
+      "x": 5900,
+      "y": 160,
       "width": 180,
       "height": 60
     },
@@ -1996,8 +1412,8 @@
       "id": "n_docs_pesquisa_versoes_bibliotecas_react",
       "type": "file",
       "file": "React 19.3.1.md",
-      "x": 1620,
-      "y": 1480,
+      "x": 6100,
+      "y": 160,
       "width": 180,
       "height": 60
     },
@@ -2005,8 +1421,44 @@
       "id": "n_docs_pesquisa_agentes_e_skills_restricao_open_source",
       "type": "file",
       "file": "Restricao de open source do hackathon.md",
-      "x": 1820,
-      "y": 1480,
+      "x": 5100,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_typescript",
+      "type": "file",
+      "file": "TypeScript 7.0.2.md",
+      "x": 5300,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_vite_mocks",
+      "type": "file",
+      "file": "VITE_USAR_MOCKS (modo dev).md",
+      "x": 5500,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_execucao_local_vite",
+      "type": "file",
+      "file": "Vite (build e server.proxy).md",
+      "x": 5700,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_vite",
+      "type": "file",
+      "file": "Vite 8.3.4.md",
+      "x": 5900,
+      "y": 240,
       "width": 180,
       "height": 60
     },
@@ -2014,8 +1466,8 @@
       "id": "n_docs_pesquisa_agentes_e_skills_anthropic_skills_repo",
       "type": "file",
       "file": "anthropicsskills (repositorio).md",
-      "x": 1420,
-      "y": 1560,
+      "x": 6100,
+      "y": 240,
       "width": 180,
       "height": 60
     },
@@ -2023,8 +1475,17 @@
       "id": "n_docs_pesquisa_agentes_e_skills_frontend_design",
       "type": "file",
       "file": "frontend-design (skill).md",
-      "x": 1620,
-      "y": 1560,
+      "x": 5100,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_playwright_skill",
+      "type": "file",
+      "file": "playwright-skill (lackeyjb).md",
+      "x": 5300,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -2032,8 +1493,8 @@
       "id": "n_docs_pesquisa_agentes_e_skills_pptx_skill",
       "type": "file",
       "file": "pptx (skill, source-available).md",
-      "x": 1820,
-      "y": 1560,
+      "x": 5500,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -2041,8 +1502,17 @@
       "id": "n_docs_pesquisa_versoes_bibliotecas_reactflow_legacy",
       "type": "file",
       "file": "reactflow 11.11.4 (legado, nao usar).md",
-      "x": 1420,
-      "y": 1640,
+      "x": 5700,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_rodar_ps1",
+      "type": "file",
+      "file": "rodar.ps1 (script de execucao).md",
+      "x": 5900,
+      "y": 320,
       "width": 180,
       "height": 60
     },
@@ -2050,174 +1520,108 @@
       "id": "n_docs_pesquisa_agentes_e_skills_skill_creator",
       "type": "file",
       "file": "skill-creator (skill).md",
-      "x": 1620,
-      "y": 1640,
+      "x": 6100,
+      "y": 320,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g12",
+      "id": "n_docs_pesquisa_execucao_local_uv",
+      "type": "file",
+      "file": "uv (sync, run, python pin).md",
+      "x": 5100,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_uv",
+      "type": "file",
+      "file": "uv 0.13.4.md",
+      "x": 5300,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_uvicorn",
+      "type": "file",
+      "file": "uvicorn 0.54.0.md",
+      "x": 5500,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_webapp_testing",
+      "type": "file",
+      "file": "webapp-testing (skill).md",
+      "x": 5700,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_winget_uv_id",
+      "type": "file",
+      "file": "winget install astral-sh.uv (id suposto).md",
+      "x": 5900,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g4",
       "type": "group",
-      "label": "Potencial e parada (implementa\u00e7\u00e3o)",
-      "x": 2800,
-      "y": 1400,
-      "width": 660,
-      "height": 400,
-      "color": "1"
-    },
-    {
-      "id": "n_engine_readme_parada",
-      "type": "file",
-      "file": "Criterios de parada (triagem, comorbidade, limite, exaustao).md",
-      "x": 2820,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_comorbidade",
-      "type": "file",
-      "file": "Doencas confirmadas nao bloqueiam umas as outras na parada.md",
-      "x": 3020,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_potencial",
-      "type": "file",
-      "file": "Potencial com limites inferior e superior.md",
-      "x": 3220,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_rationale_potencial_conservador",
-      "type": "file",
-      "file": "Potencial conservador pode superestimar, nunca subestimar.md",
-      "x": 2820,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_potencial_uma_vez",
-      "type": "file",
-      "file": "Potencial usa cada regra uma unica vez.md",
-      "x": 3020,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g13",
-      "type": "group",
-      "label": "Explica\u00e7\u00e3o e tra\u00e7o",
-      "x": 3980,
-      "y": 1400,
-      "width": 600,
-      "height": 400,
-      "color": "2"
-    },
-    {
-      "id": "n_engine_readme_porque_como",
-      "type": "file",
-      "file": "Explicacoes por que e como.md",
-      "x": 4000,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_modulo_explicacao",
-      "type": "file",
-      "file": "Modulo de explicacao (por que e como).md",
-      "x": 4200,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_traco_sessao",
-      "type": "file",
-      "file": "Traco da sessao reacumula eventos (parcial).md",
-      "x": 4000,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_claude_traco_inferencia",
-      "type": "file",
-      "file": "Traco de inferencia.md",
-      "x": 4200,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g14",
-      "type": "group",
-      "label": "Bandeira ap\u00f3s corre\u00e7\u00e3o",
-      "x": 5160,
-      "y": 1400,
-      "width": 600,
-      "height": 400,
-      "color": "3"
-    },
-    {
-      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_bandeira_permanece",
-      "type": "file",
-      "file": "Bandeira disparada permanece apos correcao (urgencia irreversivel).md",
-      "x": 5180,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_bandeira_apos_correcao",
-      "type": "file",
-      "file": "Bandeira some apos correcao (divergencia).md",
-      "x": 5380,
-      "y": 1480,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_engine_readme_bandeira",
-      "type": "file",
-      "file": "Bandeira alerta com pausa e encerramento.md",
-      "x": 5180,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "n_docs_revisoes_2026_10_21_revisao_motor_bandeiras_nao_verificadas",
-      "type": "file",
-      "file": "bandeiras_nao_verificadas restrito a regras viaveis e perguntaveis.md",
-      "x": 5380,
-      "y": 1560,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g15",
-      "type": "group",
-      "label": "Dados fict\u00edcios e base de demonstra\u00e7\u00e3o",
+      "label": "Dom\u00ednio veterin\u00e1rio e suposi\u00e7\u00f5es",
       "x": 0,
-      "y": 1900,
-      "width": 600,
-      "height": 400,
-      "color": "4"
+      "y": 1000,
+      "width": 1100,
+      "height": 620,
+      "color": "5"
+    },
+    {
+      "id": "n_docs_fontes_fontes_acidose_ruminal",
+      "type": "file",
+      "file": "Acidose ruminal (categoria).md",
+      "x": 20,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_acidose_subaguda",
+      "type": "file",
+      "file": "Acidose ruminal subaguda.md",
+      "x": 220,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_anaplasmose",
+      "type": "file",
+      "file": "Anaplasmose.md",
+      "x": 420,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_babesiose",
+      "type": "file",
+      "file": "Babesiose.md",
+      "x": 620,
+      "y": 1080,
+      "width": 180,
+      "height": 60
     },
     {
       "id": "n_engine_readme_rationale_base_artificial",
       "type": "file",
       "file": "Base artificial sem conhecimento veterinario, nao serve para triagem.md",
-      "x": 20,
-      "y": 1980,
+      "x": 820,
+      "y": 1080,
       "width": 180,
       "height": 60
     },
@@ -2225,8 +1629,17 @@
       "id": "n_engine_readme_base_demonstracao",
       "type": "file",
       "file": "Base de demonstracao artificial (testsfixturesmotorbase.json).md",
+      "x": 20,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_cetose",
+      "type": "file",
+      "file": "Cetose bovina (hiperCetonemia).md",
       "x": 220,
-      "y": 1980,
+      "y": 1160,
       "width": 180,
       "height": 60
     },
@@ -2234,157 +1647,995 @@
       "id": "n_claude_dados_ficticios",
       "type": "file",
       "file": "Dados ficticios apenas.md",
-      "x": 20,
-      "y": 2060,
+      "x": 420,
+      "y": 1160,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g16",
+      "id": "n_docs_fontes_fontes_dermatite_digital",
+      "type": "file",
+      "file": "Dermatite digital.md",
+      "x": 620,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_deslocamento_abomaso",
+      "type": "file",
+      "file": "Deslocamento de abomaso.md",
+      "x": 820,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_embrapa_adm158",
+      "type": "file",
+      "file": "Embrapa ADM158 (tristeza parasitaria).md",
+      "x": 20,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_rationale_f6_sem_acetona",
+      "type": "file",
+      "file": "Fonte F6 (cetose) nao menciona cheiro de acetona.md",
+      "x": 220,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_foot_rot",
+      "type": "file",
+      "file": "Foot rot (podridao de casco).md",
+      "x": 420,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_hipocalcemia",
+      "type": "file",
+      "file": "Hipocalcemia puerperal (paresia parturiente).md",
+      "x": 620,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_msd_vet_manual",
+      "type": "file",
+      "file": "MSD Vet Manual.md",
+      "x": 820,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_regra_suposicao_validar",
+      "type": "file",
+      "file": "Marcacao de suposicao a validar (conhecimento veterinario).md",
+      "x": 20,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_mastite",
+      "type": "file",
+      "file": "Mastite bovina.md",
+      "x": 220,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_metrite",
+      "type": "file",
+      "file": "Metrite puerperal.md",
+      "x": 420,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_rationale_f12_nao_laminite",
+      "type": "file",
+      "file": "Pagina F12 trata de dermatite digital e foot rot, nao de laminite.md",
+      "x": 620,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_sobrecarga_grao",
+      "type": "file",
+      "file": "Sobrecarga de grao.md",
+      "x": 820,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_status_conferencia",
+      "type": "file",
+      "file": "Status de conferencia das fontes (L, R, N).md",
+      "x": 20,
+      "y": 1400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_fontes_fontes_tristeza_parasitaria_bovina",
+      "type": "file",
+      "file": "Tristeza parasitaria bovina (TPB).md",
+      "x": 220,
+      "y": 1400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g5",
       "type": "group",
-      "label": "Playwright",
-      "x": 1400,
-      "y": 1900,
+      "label": "Skills obra/superpowers",
+      "x": 1840,
+      "y": 1000,
+      "width": 1100,
+      "height": 520,
+      "color": "6"
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_casos_de_teste",
+      "type": "file",
+      "file": "Casos de teste inventados (enginecasos.py).md",
+      "x": 1860,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_fatores_certeza",
+      "type": "file",
+      "file": "Fatores de certeza (CF) sem calibracao.md",
+      "x": 2060,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_execucao_local_hypothesis",
+      "type": "file",
+      "file": "Hypothesis (floats, lists, permutations).md",
+      "x": 2260,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_python",
+      "type": "file",
+      "file": "Python 3.15.0.md",
+      "x": 2460,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_registro",
+      "type": "file",
+      "file": "Registro de suposicoes e lacunas (68 itens).md",
+      "x": 2660,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_suposicoes_suposicoes_clinicas",
+      "type": "file",
+      "file": "Suposicoes clinicas veterinarias (suposicao a validar).md",
+      "x": 1860,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_brainstorming",
+      "type": "file",
+      "file": "brainstorming (skill).md",
+      "x": 2060,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_executing_plans",
+      "type": "file",
+      "file": "executing-plans (skill).md",
+      "x": 2260,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_hypothesis",
+      "type": "file",
+      "file": "hypothesis 6.170.5.md",
+      "x": 2460,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_superpowers_repo",
+      "type": "file",
+      "file": "obrasuperpowers (repositorio de skills).md",
+      "x": 2660,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_versoes_bibliotecas_pytest",
+      "type": "file",
+      "file": "pytest 9.1.1.md",
+      "x": 1860,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_execucao_local_pytest_parametrize",
+      "type": "file",
+      "file": "pytest parametrize com pytest.param(id=...).md",
+      "x": 2060,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_subagent_driven_development",
+      "type": "file",
+      "file": "subagent-driven-development (skill).md",
+      "x": 2260,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_systematic_debugging",
+      "type": "file",
+      "file": "systematic-debugging (skill).md",
+      "x": 2460,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_test_driven_development",
+      "type": "file",
+      "file": "test-driven-development (skill).md",
+      "x": 2660,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_verification_before_completion",
+      "type": "file",
+      "file": "verification-before-completion (skill).md",
+      "x": 1860,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_writing_plans",
+      "type": "file",
+      "file": "writing-plans (skill).md",
+      "x": 2060,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g6",
+      "type": "group",
+      "label": "Interface, mem\u00f3ria e lacunas da API",
+      "x": 3680,
+      "y": 1000,
+      "width": 880,
+      "height": 520,
+      "color": "1"
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_api_adaptacoes",
+      "type": "file",
+      "file": "Adaptacoes que a API precisa fazer sobre o motor.md",
+      "x": 3700,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_cortes_bloco",
+      "type": "file",
+      "file": "Cortes de bloco nao lidos de meta.limiares.md",
+      "x": 3900,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_porque_como",
+      "type": "file",
+      "file": "Explicacoes por que e como.md",
+      "x": 4100,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_interface_usuario",
+      "type": "file",
+      "file": "Interface do usuario.md",
+      "x": 4300,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_intervalo_neutro",
+      "type": "file",
+      "file": "Intervalo neutro -0,2; 0,2 aparece como 0% sem evidencia.md",
+      "x": 3700,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_memoria_de_trabalho",
+      "type": "file",
+      "file": "Memoria de trabalho.md",
+      "x": 3900,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_modos_produtor_veterinario",
+      "type": "file",
+      "file": "Modos produtor e veterinario.md",
+      "x": 4100,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_modulo_explicacao",
+      "type": "file",
+      "file": "Modulo de explicacao (por que e como).md",
+      "x": 4300,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_parecer",
+      "type": "file",
+      "file": "Parecer final em tres blocos.md",
+      "x": 3700,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_percentual_parecer",
+      "type": "file",
+      "file": "Percentual do parecer max(0, CF) x 100 (divergencia).md",
+      "x": 3900,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_restauracao_sessao",
+      "type": "file",
+      "file": "Restauracao da sessao a partir do banco (ausente, bloqueia a API).md",
+      "x": 4100,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_sessao_api",
+      "type": "file",
+      "file": "Sessao dialogo com triagem, perguntas, correcao e modo.md",
+      "x": 4300,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_traco_sessao",
+      "type": "file",
+      "file": "Traco da sessao reacumula eventos (parcial).md",
+      "x": 3700,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_traco_inferencia",
+      "type": "file",
+      "file": "Traco de inferencia.md",
+      "x": 3900,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_nao_sei",
+      "type": "file",
+      "file": "nao_sei e registrado e nao e repetido automaticamente.md",
+      "x": 4100,
+      "y": 1320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g7",
+      "type": "group",
+      "label": "Agentes e arquivos de instru\u00e7\u00e3o",
+      "x": 5080,
+      "y": 1000,
+      "width": 660,
+      "height": 420,
+      "color": "2"
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_agents_md",
+      "type": "file",
+      "file": "AGENTS.md (instrucoes do projeto).md",
+      "x": 5100,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_claude_md",
+      "type": "file",
+      "file": "CLAUDE.md (instrucoes do projeto).md",
+      "x": 5300,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_claude_code",
+      "type": "file",
+      "file": "Claude Code.md",
+      "x": 5500,
+      "y": 1080,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_skill_md_format",
+      "type": "file",
+      "file": "Formato SKILL.md (Agent Skills).md",
+      "x": 5100,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_gemini_md",
+      "type": "file",
+      "file": "GEMINI.md (instrucoes do projeto).md",
+      "x": 5300,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_gemini_cli",
+      "type": "file",
+      "file": "Gemini CLI.md",
+      "x": 5500,
+      "y": 1160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_antigravity",
+      "type": "file",
+      "file": "Google Antigravity (app, IDE e CLI).md",
+      "x": 5100,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_limites_de_uso",
+      "type": "file",
+      "file": "Limites de uso dos planos.md",
+      "x": 5300,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_pesquisa_agentes_e_skills_codex_cli",
+      "type": "file",
+      "file": "OpenAI Codex (CLI, IDE, app desktop).md",
+      "x": 5500,
+      "y": 1240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g8",
+      "type": "group",
+      "label": "Grafo de conhecimento e Obsidian",
+      "x": 0,
+      "y": 1700,
+      "width": 660,
+      "height": 420,
+      "color": "3"
+    },
+    {
+      "id": "n_claude_graphifyignore",
+      "type": "file",
+      "file": "dot-graphifyignore (escopo do grafo).md",
+      "x": 20,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_obsidian_vault_conhecimento",
+      "type": "file",
+      "file": "Cofre Obsidian obsidian01-conhecimento (grafo 1).md",
+      "x": 220,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_grafo_conhecimento",
+      "type": "file",
+      "file": "Grafo de conhecimento \u2014 ler PRIMEIRO, em todo prompt.md",
+      "x": 420,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_manter_grafo_atualizado",
+      "type": "file",
+      "file": "Manter o grafo atualizado.md",
+      "x": 20,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_transcricao_fontes",
+      "type": "file",
+      "file": "Transcricao .md de PDFs de imagem em docsfontes.md",
+      "x": 220,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_graphify_update",
+      "type": "file",
+      "file": "graphify --update.md",
+      "x": 420,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_graphify_query",
+      "type": "file",
+      "file": "graphify query.md",
+      "x": 20,
+      "y": 1940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_claude_graph_report",
+      "type": "file",
+      "file": "graphify-outGRAPH_REPORT.md (indice do grafo).md",
+      "x": 220,
+      "y": 1940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g9",
+      "type": "group",
+      "label": "Potencial e parada (implementa\u00e7\u00e3o)",
+      "x": 1840,
+      "y": 1700,
+      "width": 660,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_engine_readme_parada",
+      "type": "file",
+      "file": "Criterios de parada (triagem, comorbidade, limite, exaustao).md",
+      "x": 1860,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_comorbidade",
+      "type": "file",
+      "file": "Doencas confirmadas nao bloqueiam umas as outras na parada.md",
+      "x": 2060,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_potencial",
+      "type": "file",
+      "file": "Potencial com limites inferior e superior.md",
+      "x": 2260,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_rationale_potencial_conservador",
+      "type": "file",
+      "file": "Potencial conservador pode superestimar, nunca subestimar.md",
+      "x": 1860,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_potencial_uma_vez",
+      "type": "file",
+      "file": "Potencial usa cada regra uma unica vez.md",
+      "x": 2060,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g10",
+      "type": "group",
+      "label": "Bandeira ap\u00f3s corre\u00e7\u00e3o",
+      "x": 3680,
+      "y": 1700,
       "width": 600,
       "height": 400,
       "color": "5"
     },
     {
-      "id": "n_claude_stack_playwright",
+      "id": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_bandeira_permanece",
       "type": "file",
-      "file": "Playwright.md",
-      "x": 1420,
-      "y": 1980,
+      "file": "Bandeira disparada permanece apos correcao (urgencia irreversivel).md",
+      "x": 3700,
+      "y": 1780,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g17",
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_bandeira_apos_correcao",
+      "type": "file",
+      "file": "Bandeira some apos correcao (divergencia).md",
+      "x": 3900,
+      "y": 1780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_engine_readme_bandeira",
+      "type": "file",
+      "file": "Bandeira alerta com pausa e encerramento.md",
+      "x": 3700,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docs_revisoes_2026_10_21_revisao_motor_bandeiras_nao_verificadas",
+      "type": "file",
+      "file": "bandeiras_nao_verificadas restrito a regras viaveis e perguntaveis.md",
+      "x": 3900,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g11",
       "type": "group",
-      "label": "SQLite",
-      "x": 2800,
-      "y": 1900,
+      "label": "Agentes e skills por prompt",
+      "x": 5080,
+      "y": 1700,
       "width": 600,
       "height": 400,
       "color": "6"
     },
     {
-      "id": "n_claude_stack_sqlite",
+      "id": "n_docs_agentes_e_skills",
       "type": "file",
-      "file": "SQLite.md",
-      "x": 2820,
-      "y": 1980,
+      "file": "Agentes e skills por prompt (decisao de 20102026).md",
+      "x": 5100,
+      "y": 1780,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g18",
+      "id": "g12",
       "type": "group",
-      "label": "Agentes e skills por prompt",
-      "x": 3980,
-      "y": 1900,
+      "label": "Transcri\u00e7\u00e3o da apresenta\u00e7\u00e3o [A]",
+      "x": 0,
+      "y": 2200,
       "width": 600,
       "height": 400,
       "color": "1"
     },
     {
-      "id": "n_docs_agentes_e_skills",
+      "id": "n_docs_fontes_transcricao_apresentacao_rerum",
       "type": "file",
-      "file": "Agentes e skills por prompt (decisao de 20102026).md",
-      "x": 4000,
-      "y": 1980,
+      "file": "Transcricao da apresentacao RERUM A.md",
+      "x": 20,
+      "y": 2280,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g19",
+      "id": "g13",
       "type": "group",
-      "label": "Transcri\u00e7\u00e3o da apresenta\u00e7\u00e3o [A]",
-      "x": 5160,
-      "y": 1900,
+      "label": "Transcri\u00e7\u00e3o do document\u00e1rio [D]",
+      "x": 1840,
+      "y": 2200,
       "width": 600,
       "height": 400,
       "color": "2"
     },
     {
-      "id": "n_docs_fontes_transcricao_apresentacao_rerum",
+      "id": "n_docs_fontes_transcricao_documentario_rerum",
       "type": "file",
-      "file": "Transcricao da apresentacao RERUM A.md",
-      "x": 5180,
-      "y": 1980,
+      "file": "Transcricao do documentario RERUM D.md",
+      "x": 1860,
+      "y": 2280,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g20",
+      "id": "g14",
       "type": "group",
-      "label": "Transcri\u00e7\u00e3o do document\u00e1rio [D]",
-      "x": 0,
-      "y": 2380,
+      "label": "README do motor",
+      "x": 3680,
+      "y": 2200,
       "width": 600,
       "height": 400,
       "color": "3"
     },
     {
-      "id": "n_docs_fontes_transcricao_documentario_rerum",
+      "id": "n_engine_readme",
       "type": "file",
-      "file": "Transcricao do documentario RERUM D.md",
-      "x": 20,
-      "y": 2460,
+      "file": "README do motor de inferencia (secao 1).md",
+      "x": 3700,
+      "y": 2280,
       "width": 180,
       "height": 60
     },
     {
-      "id": "g21",
+      "id": "g15",
       "type": "group",
-      "label": "README do motor",
-      "x": 1400,
-      "y": 2380,
+      "label": "Fun\u00e7\u00e3o analisar()",
+      "x": 5080,
+      "y": 2200,
       "width": 600,
       "height": 400,
       "color": "4"
     },
     {
-      "id": "n_engine_readme",
-      "type": "file",
-      "file": "README do motor de inferencia (secao 1).md",
-      "x": 1420,
-      "y": 2460,
-      "width": 180,
-      "height": 60
-    },
-    {
-      "id": "g22",
-      "type": "group",
-      "label": "Fun\u00e7\u00e3o analisar()",
-      "x": 2800,
-      "y": 2380,
-      "width": 600,
-      "height": 400,
-      "color": "5"
-    },
-    {
       "id": "n_engine_readme_analisar",
       "type": "file",
       "file": "analisar(base, fatos, modo) potencial, viabilidade e escolha de perguntas.md",
-      "x": 2820,
-      "y": 2460,
+      "x": 5100,
+      "y": 2280,
       "width": 180,
       "height": 60
     }
   ],
   "edges": [
     {
-      "id": "e_claude_arquitetura_motor_python_claude_motor_de_inferencia",
-      "fromNode": "n_claude_arquitetura_motor_python",
-      "toNode": "n_claude_motor_de_inferencia",
+      "id": "e_claude_aquisicao_conhecimento_claude_base_conhecimento",
+      "fromNode": "n_claude_aquisicao_conhecimento",
+      "toNode": "n_claude_base_conhecimento",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_aquisicao_conhecimento_claude_editor_grafico",
+      "fromNode": "n_claude_aquisicao_conhecimento",
+      "toNode": "n_claude_editor_grafico",
       "label": "implements [EXTRACTED]"
     },
     {
-      "id": "e_claude_arquitetura_motor_python_engine_readme_motor_secao_1",
-      "fromNode": "n_claude_arquitetura_motor_python",
-      "toNode": "n_engine_readme_motor_secao_1",
+      "id": "e_claude_aquisicao_conhecimento_claude_componentes_arquitetura",
+      "fromNode": "n_claude_aquisicao_conhecimento",
+      "toNode": "n_claude_componentes_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_casos_teste_conhecidos",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_casos_teste_conhecidos",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_motor_de_inferencia",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_motor_de_inferencia",
+      "label": "shares_data_with [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_engine_readme_rationale_guardas_vs_kb",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_engine_readme_rationale_guardas_vs_kb",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_fatores_certeza",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_fatores_certeza",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_componentes_arquitetura",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_componentes_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_conteudo_plano_final",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_conteudo_plano_final",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_editor_grafico",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_editor_grafico",
+      "label": "shares_data_with [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_base_conhecimento_claude_sistema_especialista",
+      "fromNode": "n_claude_base_conhecimento",
+      "toNode": "n_claude_sistema_especialista",
       "label": "implements [INFERRED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_claude_stack_pytest",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_claude_stack_pytest",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_docs_fontes_transcricao_apresentacao_rerum_dicas",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_docs_fontes_transcricao_apresentacao_rerum_dicas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
+      "label": "semantically_similar_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_engine_readme_executar_casos",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_engine_readme_executar_casos",
+      "label": "implements [INFERRED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_claude_fontes_oficiais",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_claude_fontes_oficiais",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_claude",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_claude",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_claude_conteudo_plano_final",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_claude_conteudo_plano_final",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_casos_teste_conhecidos_claude_stack_playwright",
+      "fromNode": "n_claude_casos_teste_conhecidos",
+      "toNode": "n_claude_stack_playwright",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_fase_planejamento_limite",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_fase_planejamento_limite",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_regra_suposicao_validar",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_regra_suposicao_validar",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_componentes_arquitetura",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_componentes_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_motor_de_inferencia",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_motor_de_inferencia",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_linguagens_escolhidas",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_linguagens_escolhidas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_restricao_localhost",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_restricao_localhost",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_cronograma_hackathon",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_cronograma_hackathon",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_modulo_explicacao",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_modulo_explicacao",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_processo_obrigatorio",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_processo_obrigatorio",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_conteudo_plano_final_claude_skill_writing_plans",
+      "fromNode": "n_claude_conteudo_plano_final",
+      "toNode": "n_claude_skill_writing_plans",
+      "label": "references [INFERRED]"
     },
     {
       "id": "e_claude_criterios_avaliacao_docs_fontes_transcricao_apresentacao_rerum_regulamento",
@@ -2393,9 +2644,51 @@
       "label": "references [EXTRACTED]"
     },
     {
+      "id": "e_claude_criterios_avaliacao_claude_fontes_oficiais",
+      "fromNode": "n_claude_criterios_avaliacao",
+      "toNode": "n_claude_fontes_oficiais",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_criterios_avaliacao_claude",
+      "fromNode": "n_claude_criterios_avaliacao",
+      "toNode": "n_claude",
+      "label": "references [EXTRACTED]"
+    },
+    {
       "id": "e_claude_cronograma_hackathon_docs_fontes_transcricao_apresentacao_rerum_regulamento",
       "fromNode": "n_claude_cronograma_hackathon",
       "toNode": "n_docs_fontes_transcricao_apresentacao_rerum_regulamento",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_cronograma_hackathon_claude_fontes_oficiais",
+      "fromNode": "n_claude_cronograma_hackathon",
+      "toNode": "n_claude_fontes_oficiais",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_cronograma_hackathon_claude",
+      "fromNode": "n_claude_cronograma_hackathon",
+      "toNode": "n_claude",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_editor_grafico_claude_stack_react_flow",
+      "fromNode": "n_claude_editor_grafico",
+      "toNode": "n_claude_stack_react_flow",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_editor_grafico_claude_decisoes_tomadas",
+      "fromNode": "n_claude_editor_grafico",
+      "toNode": "n_claude_decisoes_tomadas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_editor_grafico_claude_proposta_arquitetura",
+      "fromNode": "n_claude_editor_grafico",
+      "toNode": "n_claude_proposta_arquitetura",
       "label": "references [EXTRACTED]"
     },
     {
@@ -2411,6 +2704,48 @@
       "label": "implements [INFERRED]"
     },
     {
+      "id": "e_claude_encadeamento_claude_processo_obrigatorio",
+      "fromNode": "n_claude_encadeamento",
+      "toNode": "n_claude_processo_obrigatorio",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_fase_planejamento_limite_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_autorizacao",
+      "fromNode": "n_claude_fase_planejamento_limite",
+      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_autorizacao",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_fase_planejamento_limite_claude_skill_brainstorming",
+      "fromNode": "n_claude_fase_planejamento_limite",
+      "toNode": "n_claude_skill_brainstorming",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_fase_planejamento_limite_claude_skill_writing_plans",
+      "fromNode": "n_claude_fase_planejamento_limite",
+      "toNode": "n_claude_skill_writing_plans",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_fase_planejamento_limite_claude",
+      "fromNode": "n_claude_fase_planejamento_limite",
+      "toNode": "n_claude",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_fase_planejamento_limite_claude_passo_a_passo",
+      "fromNode": "n_claude_fase_planejamento_limite",
+      "toNode": "n_claude_passo_a_passo",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_fase_planejamento_limite_claude_processo_obrigatorio",
+      "fromNode": "n_claude_fase_planejamento_limite",
+      "toNode": "n_claude_processo_obrigatorio",
+      "label": "references [EXTRACTED]"
+    },
+    {
       "id": "e_claude_fatores_certeza_claude_motor_de_inferencia",
       "fromNode": "n_claude_fatores_certeza",
       "toNode": "n_claude_motor_de_inferencia",
@@ -2423,21 +2758,9 @@
       "label": "implements [INFERRED]"
     },
     {
-      "id": "e_claude_motor_de_inferencia_claude_base_conhecimento",
-      "fromNode": "n_claude_motor_de_inferencia",
-      "toNode": "n_claude_base_conhecimento",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
       "id": "e_claude_motor_de_inferencia_claude_interface_usuario",
       "fromNode": "n_claude_motor_de_inferencia",
       "toNode": "n_claude_interface_usuario",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
-      "id": "e_claude_motor_de_inferencia_claude_memoria_de_trabalho",
-      "fromNode": "n_claude_motor_de_inferencia",
-      "toNode": "n_claude_memoria_de_trabalho",
       "label": "conceptually_related_to [EXTRACTED]"
     },
     {
@@ -2447,10 +2770,10 @@
       "label": "conceptually_related_to [EXTRACTED]"
     },
     {
-      "id": "e_claude_motor_de_inferencia_claude_sistema_especialista",
+      "id": "e_claude_motor_de_inferencia_claude_arquitetura_motor_python",
       "fromNode": "n_claude_motor_de_inferencia",
-      "toNode": "n_claude_sistema_especialista",
-      "label": "conceptually_related_to [EXTRACTED]"
+      "toNode": "n_claude_arquitetura_motor_python",
+      "label": "implements [EXTRACTED]"
     },
     {
       "id": "e_claude_motor_de_inferencia_claude_restricao_decisao_deterministica",
@@ -2477,10 +2800,34 @@
       "label": "references [EXTRACTED]"
     },
     {
+      "id": "e_claude_motor_de_inferencia_claude_sistema_especialista",
+      "fromNode": "n_claude_motor_de_inferencia",
+      "toNode": "n_claude_sistema_especialista",
+      "label": "implements [INFERRED]"
+    },
+    {
       "id": "e_claude_motor_de_inferencia_engine_readme_motor_secao_1",
       "fromNode": "n_claude_motor_de_inferencia",
       "toNode": "n_engine_readme_motor_secao_1",
       "label": "implements [INFERRED]"
+    },
+    {
+      "id": "e_claude_motor_de_inferencia_claude_memoria_de_trabalho",
+      "fromNode": "n_claude_motor_de_inferencia",
+      "toNode": "n_claude_memoria_de_trabalho",
+      "label": "shares_data_with [INFERRED]"
+    },
+    {
+      "id": "e_claude_motor_de_inferencia_claude_componentes_arquitetura",
+      "fromNode": "n_claude_motor_de_inferencia",
+      "toNode": "n_claude_componentes_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_motor_de_inferencia_claude_traco_inferencia",
+      "fromNode": "n_claude_motor_de_inferencia",
+      "toNode": "n_claude_traco_inferencia",
+      "label": "references [EXTRACTED]"
     },
     {
       "id": "e_claude_resolucao_conflito_engine_readme_agenda_camadas",
@@ -2495,6 +2842,132 @@
       "label": "conceptually_related_to [EXTRACTED]"
     },
     {
+      "id": "e_claude_sistema_especialista_claude_passo_a_passo",
+      "fromNode": "n_claude_sistema_especialista",
+      "toNode": "n_claude_passo_a_passo",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_sistema_especialista_claude_processo_obrigatorio",
+      "fromNode": "n_claude_sistema_especialista",
+      "toNode": "n_claude_processo_obrigatorio",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_sistema_especialista_claude_tema_t1_anamnese",
+      "fromNode": "n_claude_sistema_especialista",
+      "toNode": "n_claude_tema_t1_anamnese",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_skill_brainstorming_docs_agentes_e_skills_obra_superpowers",
+      "fromNode": "n_claude_skill_brainstorming",
+      "toNode": "n_docs_agentes_e_skills_obra_superpowers",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_skill_brainstorming_claude_processo_obrigatorio",
+      "fromNode": "n_claude_skill_brainstorming",
+      "toNode": "n_claude_processo_obrigatorio",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_skill_brainstorming_claude_proposta_arquitetura",
+      "fromNode": "n_claude_skill_brainstorming",
+      "toNode": "n_claude_proposta_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_skill_brainstorming_claude_spec_canonica",
+      "fromNode": "n_claude_skill_brainstorming",
+      "toNode": "n_claude_spec_canonica",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_skill_writing_plans_docs_agentes_e_skills_obra_superpowers",
+      "fromNode": "n_claude_skill_writing_plans",
+      "toNode": "n_docs_agentes_e_skills_obra_superpowers",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_skill_writing_plans_claude_processo_obrigatorio",
+      "fromNode": "n_claude_skill_writing_plans",
+      "toNode": "n_claude_processo_obrigatorio",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_fastapi_pydantic_docs_agentes_e_skills_skills_nao_confirmadas",
+      "fromNode": "n_claude_stack_fastapi_pydantic",
+      "toNode": "n_docs_agentes_e_skills_skills_nao_confirmadas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_fastapi_pydantic_claude_proposta_arquitetura",
+      "fromNode": "n_claude_stack_fastapi_pydantic",
+      "toNode": "n_claude_proposta_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_fastapi_pydantic_claude_interface_usuario",
+      "fromNode": "n_claude_stack_fastapi_pydantic",
+      "toNode": "n_claude_interface_usuario",
+      "label": "shares_data_with [INFERRED]"
+    },
+    {
+      "id": "e_claude_stack_fastapi_pydantic_claude_linguagens_escolhidas",
+      "fromNode": "n_claude_stack_fastapi_pydantic",
+      "toNode": "n_claude_linguagens_escolhidas",
+      "label": "references [INFERRED]"
+    },
+    {
+      "id": "e_claude_stack_playwright_claude_proposta_arquitetura",
+      "fromNode": "n_claude_stack_playwright",
+      "toNode": "n_claude_proposta_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_pytest_docs_agentes_e_skills_skills_nao_confirmadas",
+      "fromNode": "n_claude_stack_pytest",
+      "toNode": "n_docs_agentes_e_skills_skills_nao_confirmadas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_pytest_claude_proposta_arquitetura",
+      "fromNode": "n_claude_stack_pytest",
+      "toNode": "n_claude_proposta_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_react_flow_docs_agentes_e_skills_skills_nao_confirmadas",
+      "fromNode": "n_claude_stack_react_flow",
+      "toNode": "n_docs_agentes_e_skills_skills_nao_confirmadas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_react_flow_claude_proposta_arquitetura",
+      "fromNode": "n_claude_stack_react_flow",
+      "toNode": "n_claude_proposta_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_react_flow_claude_linguagens_escolhidas",
+      "fromNode": "n_claude_stack_react_flow",
+      "toNode": "n_claude_linguagens_escolhidas",
+      "label": "references [INFERRED]"
+    },
+    {
+      "id": "e_claude_stack_sqlite_claude_proposta_arquitetura",
+      "fromNode": "n_claude_stack_sqlite",
+      "toNode": "n_claude_proposta_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_stack_sqlite_claude_restricao_localhost",
+      "fromNode": "n_claude_stack_sqlite",
+      "toNode": "n_claude_restricao_localhost",
+      "label": "rationale_for [INFERRED]"
+    },
+    {
       "id": "e_claude_tema_t1_anamnese_docs_fontes_transcricao_apresentacao_rerum_temas",
       "fromNode": "n_claude_tema_t1_anamnese",
       "toNode": "n_docs_fontes_transcricao_apresentacao_rerum_temas",
@@ -2507,6 +2980,36 @@
       "label": "references [EXTRACTED]"
     },
     {
+      "id": "e_claude_tema_t1_anamnese_claude_fontes_oficiais",
+      "fromNode": "n_claude_tema_t1_anamnese",
+      "toNode": "n_claude_fontes_oficiais",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_tema_t1_anamnese_claude",
+      "fromNode": "n_claude_tema_t1_anamnese",
+      "toNode": "n_claude",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_tema_t1_anamnese_claude_decisoes_tomadas",
+      "fromNode": "n_claude_tema_t1_anamnese",
+      "toNode": "n_claude_decisoes_tomadas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_agentes_e_skills_formato_aberto_skills_docs_agentes_e_skills_obra_superpowers",
+      "fromNode": "n_docs_agentes_e_skills_formato_aberto_skills",
+      "toNode": "n_docs_agentes_e_skills_obra_superpowers",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_agentes_e_skills_obra_superpowers_docs_agentes_e_skills_alocacao_revisao",
+      "fromNode": "n_docs_agentes_e_skills_obra_superpowers",
+      "toNode": "n_docs_agentes_e_skills_alocacao_revisao",
+      "label": "references [EXTRACTED]"
+    },
+    {
       "id": "e_docs_fontes_transcricao_apresentacao_rerum_dicas_claude",
       "fromNode": "n_docs_fontes_transcricao_apresentacao_rerum_dicas",
       "toNode": "n_claude",
@@ -2516,12 +3019,6 @@
       "id": "e_docs_fontes_transcricao_apresentacao_rerum_dicas_claude_restricao_nao_usar_llm",
       "fromNode": "n_docs_fontes_transcricao_apresentacao_rerum_dicas",
       "toNode": "n_claude_restricao_nao_usar_llm",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_fontes_transcricao_apresentacao_rerum_dicas_claude_casos_teste_conhecidos",
-      "fromNode": "n_docs_fontes_transcricao_apresentacao_rerum_dicas",
-      "toNode": "n_claude_casos_teste_conhecidos",
       "label": "references [EXTRACTED]"
     },
     {
@@ -2633,57 +3130,105 @@
       "label": "references [EXTRACTED]"
     },
     {
+      "id": "e_docs_revisoes_2026_10_21_revisao_motor_executor_casos_engine_readme_executar_casos",
+      "fromNode": "n_docs_revisoes_2026_10_21_revisao_motor_executor_casos",
+      "toNode": "n_engine_readme_executar_casos",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd_engine_readme_motor_secao_1",
+      "fromNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
+      "toNode": "n_engine_readme_motor_secao_1",
+      "label": "implements [EXTRACTED]"
+    },
+    {
       "id": "e_engine_readme_cf_mycin_engine_readme_rationale_cf_fraction",
       "fromNode": "n_engine_readme_cf_mycin",
       "toNode": "n_engine_readme_rationale_cf_fraction",
       "label": "rationale_for [EXTRACTED]"
     },
     {
-      "id": "e_engine_readme_motor_secao_1_engine_readme_organizacao_modulos",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_engine_readme_organizacao_modulos",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_motor_secao_1_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_tarefas_tdd",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_motor_secao_1_engine_readme_rationale_biblioteca_padrao",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_engine_readme_rationale_biblioteca_padrao",
+      "id": "e_engine_readme_guardas_validacao_engine_readme_rationale_guardas_vs_kb",
+      "fromNode": "n_engine_readme_guardas_validacao",
+      "toNode": "n_engine_readme_rationale_guardas_vs_kb",
       "label": "rationale_for [EXTRACTED]"
     },
     {
-      "id": "e_engine_readme_motor_secao_1_engine_readme_rationale_escopo_secao1",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_engine_readme_rationale_escopo_secao1",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_motor_secao_1_docs_agentes_e_skills_alocacao_revisao",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_docs_agentes_e_skills_alocacao_revisao",
+      "id": "e_claude_claude_regras_conduta",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_regras_conduta",
       "label": "references [EXTRACTED]"
     },
     {
-      "id": "e_engine_readme_motor_secao_1_docs_agentes_e_skills_implementacao_pessoas",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_docs_agentes_e_skills_implementacao_pessoas",
+      "id": "e_claude_claude_manter_grafo_atualizado",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_manter_grafo_atualizado",
       "label": "references [EXTRACTED]"
     },
     {
-      "id": "e_engine_readme_motor_secao_1_docs_revisoes_2026_10_21_revisao_motor",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_docs_revisoes_2026_10_21_revisao_motor",
+      "id": "e_claude_claude_processo_obrigatorio",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_processo_obrigatorio",
       "label": "references [EXTRACTED]"
     },
     {
-      "id": "e_engine_readme_motor_secao_1_docs_superpowers_plans_2026_10_20_motor_secao_1",
-      "fromNode": "n_engine_readme_motor_secao_1",
-      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1",
+      "id": "e_claude_claude_restricao_nao_usar_llm",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_restricao_nao_usar_llm",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_fontes_oficiais",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_fontes_oficiais",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_restricao_decisao_deterministica",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_restricao_decisao_deterministica",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_restricao_open_source",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_restricao_open_source",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_restricao_localhost",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_restricao_localhost",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_componentes_arquitetura",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_componentes_arquitetura",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_grafo_conhecimento",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_grafo_conhecimento",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_passo_a_passo",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_passo_a_passo",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_decisoes_tomadas",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_decisoes_tomadas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_claude_proposta_arquitetura",
+      "fromNode": "n_claude",
+      "toNode": "n_claude_proposta_arquitetura",
       "label": "references [EXTRACTED]"
     },
     {
@@ -2691,6 +3236,90 @@
       "fromNode": "n_claude_restricao_decisao_deterministica",
       "toNode": "n_engine_readme_rationale_cf_fraction",
       "label": "semantically_similar_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_restricao_decisao_deterministica_claude_traco_inferencia",
+      "fromNode": "n_claude_restricao_decisao_deterministica",
+      "toNode": "n_claude_traco_inferencia",
+      "label": "rationale_for [INFERRED]"
+    },
+    {
+      "id": "e_claude_restricao_decisao_deterministica_claude_restricao_nao_usar_llm",
+      "fromNode": "n_claude_restricao_decisao_deterministica",
+      "toNode": "n_claude_restricao_nao_usar_llm",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_claude_restricao_nao_usar_llm_claude_regras_conduta",
+      "fromNode": "n_claude_restricao_nao_usar_llm",
+      "toNode": "n_claude_regras_conduta",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_claude_restricao_open_source_claude_linguagens_escolhidas",
+      "fromNode": "n_claude_restricao_open_source",
+      "toNode": "n_claude_linguagens_escolhidas",
+      "label": "rationale_for [INFERRED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_estado_sessao",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_estado_sessao",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_sqlite_persistencia",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_sqlite_persistencia",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb",
+      "label": "references [EXTRACTED]"
     },
     {
       "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_base_conhecimento_json",
@@ -2714,12 +3343,6 @@
       "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
       "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb",
       "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_kb",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
       "label": "references [EXTRACTED]"
     },
     {
@@ -2757,6 +3380,36 @@
       "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_apresentacao_demo",
       "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
       "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
+      "label": "shares_data_with [EXTRACTED]"
     },
     {
       "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_base_conhecimento_json_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_grafo_bipartido",
@@ -2805,12 +3458,6 @@
       "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_base_conhecimento_json",
       "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_documentacao_entrega",
       "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "label": "references [EXTRACTED]"
     },
     {
       "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_camadas_tres_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivados_sinais",
@@ -2891,6 +3538,48 @@
       "label": "references [INFERRED]"
     },
     {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
+      "label": "references [INFERRED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_limiares_meta",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_limiares_meta",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
+      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
+      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
+      "label": "references [EXTRACTED]"
+    },
+    {
       "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cronograma_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte",
       "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cronograma",
       "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte",
@@ -2957,12 +3646,6 @@
       "label": "cites [EXTRACTED]"
     },
     {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "label": "references [EXTRACTED]"
-    },
-    {
       "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_suposicao_a_validar",
       "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
       "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_suposicao_a_validar",
@@ -2973,606 +3656,6 @@
       "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
       "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_urgencia_gravidade_confianca",
       "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_dominio_8_doencas",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_editor_grafico_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_grafo_bipartido",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_editor_grafico",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_grafo_bipartido",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_editor_grafico_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_validador_kb",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_editor_grafico",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_validador_kb",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_estado_sessao_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_estado_sessao",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_testes_quatro_camadas",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_execucao_localhost",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_testes_quatro_camadas",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_modelo_conceitual",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_plano_corte",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_suposicao_a_validar",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_riscos",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_suposicao_a_validar",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_testes_quatro_camadas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_testes_quatro_camadas",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_spec",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_restricao_sem_llm_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_restricao_sem_llm",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_agents_md_docs_pesquisa_agentes_e_skills_antigravity",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_agents_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_antigravity",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_agents_md_docs_pesquisa_agentes_e_skills_codex_cli",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_agents_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_codex_cli",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_agents_md_docs_pesquisa_agentes_e_skills_claude_md",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_agents_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_claude_md",
-      "label": "semantically_similar_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_agents_md_docs_pesquisa_agentes_e_skills_gemini_md",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_agents_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_gemini_md",
-      "label": "semantically_similar_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_claude_md_docs_pesquisa_agentes_e_skills_claude_code",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_claude_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_claude_code",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_gemini_md_docs_pesquisa_agentes_e_skills_antigravity",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_gemini_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_antigravity",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_gemini_md_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_gemini_md",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_limites_de_uso_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_limites_de_uso",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "label": "references [AMBIGUOUS]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_limites_de_uso_docs_pesquisa_agentes_e_skills_antigravity",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_limites_de_uso",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_antigravity",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_limites_de_uso_docs_pesquisa_agentes_e_skills_claude_code",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_limites_de_uso",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_claude_code",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_limites_de_uso_docs_pesquisa_agentes_e_skills_codex_cli",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_limites_de_uso",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_codex_cli",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_skill_md_format_docs_pesquisa_agentes_e_skills_antigravity",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_skill_md_format",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_antigravity",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_skill_md_format_docs_pesquisa_agentes_e_skills_claude_code",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_skill_md_format",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_claude_code",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_skill_md_format_docs_pesquisa_agentes_e_skills_codex_cli",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_skill_md_format",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_codex_cli",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_antigravity_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_antigravity",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_gemini_cli",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_restricao_open_source_docs_pesquisa_agentes_e_skills_pptx_skill",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_restricao_open_source",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_pptx_skill",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_anthropic_skills_repo_docs_pesquisa_agentes_e_skills_frontend_design",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_anthropic_skills_repo",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_frontend_design",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_anthropic_skills_repo_docs_pesquisa_agentes_e_skills_pptx_skill",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_anthropic_skills_repo",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_pptx_skill",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_anthropic_skills_repo_docs_pesquisa_agentes_e_skills_skill_creator",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_anthropic_skills_repo",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_skill_creator",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_anthropic_skills_repo_docs_pesquisa_agentes_e_skills_webapp_testing",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_anthropic_skills_repo",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_webapp_testing",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_frontend_design_docs_pesquisa_versoes_bibliotecas_react",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_frontend_design",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_react",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_versoes_bibliotecas_react_docs_pesquisa_versoes_bibliotecas_xyflow_react",
-      "fromNode": "n_docs_pesquisa_versoes_bibliotecas_react",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_xyflow_react",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_versoes_bibliotecas_reactflow_legacy_docs_pesquisa_versoes_bibliotecas_xyflow_react",
-      "fromNode": "n_docs_pesquisa_versoes_bibliotecas_reactflow_legacy",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_xyflow_react",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_parada_engine_readme_potencial",
-      "fromNode": "n_engine_readme_parada",
-      "toNode": "n_engine_readme_potencial",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_parada_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_comorbidade",
-      "fromNode": "n_engine_readme_parada",
-      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_comorbidade",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_potencial_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_potencial_uma_vez",
-      "fromNode": "n_engine_readme_potencial",
-      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_potencial_uma_vez",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_potencial_engine_readme_rationale_potencial_conservador",
-      "fromNode": "n_engine_readme_potencial",
-      "toNode": "n_engine_readme_rationale_potencial_conservador",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_claude_modulo_explicacao_claude_traco_inferencia",
-      "fromNode": "n_claude_modulo_explicacao",
-      "toNode": "n_claude_traco_inferencia",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
-      "id": "e_claude_modulo_explicacao_engine_readme_porque_como",
-      "fromNode": "n_claude_modulo_explicacao",
-      "toNode": "n_engine_readme_porque_como",
-      "label": "implements [INFERRED]"
-    },
-    {
-      "id": "e_claude_traco_inferencia_docs_revisoes_2026_10_21_revisao_motor_traco_sessao",
-      "fromNode": "n_claude_traco_inferencia",
-      "toNode": "n_docs_revisoes_2026_10_21_revisao_motor_traco_sessao",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_claude_traco_inferencia_engine_readme_porque_como",
-      "fromNode": "n_claude_traco_inferencia",
-      "toNode": "n_engine_readme_porque_como",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_revisoes_2026_10_21_revisao_motor_bandeira_apos_correcao_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_bandeira_permanece",
-      "fromNode": "n_docs_revisoes_2026_10_21_revisao_motor_bandeira_apos_correcao",
-      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_bandeira_permanece",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_revisoes_2026_10_21_revisao_motor_bandeira_apos_correcao_engine_readme_bandeira",
-      "fromNode": "n_docs_revisoes_2026_10_21_revisao_motor_bandeira_apos_correcao",
-      "toNode": "n_engine_readme_bandeira",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_revisoes_2026_10_21_revisao_motor_bandeiras_nao_verificadas_engine_readme_bandeira",
-      "fromNode": "n_docs_revisoes_2026_10_21_revisao_motor_bandeiras_nao_verificadas",
-      "toNode": "n_engine_readme_bandeira",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_bandeira_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_bandeira_permanece",
-      "fromNode": "n_engine_readme_bandeira",
-      "toNode": "n_docs_superpowers_plans_2026_10_20_motor_secao_1_rationale_bandeira_permanece",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_base_demonstracao_engine_readme_rationale_base_artificial",
-      "fromNode": "n_engine_readme_base_demonstracao",
-      "toNode": "n_engine_readme_rationale_base_artificial",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_engine_readme_base_demonstracao_claude_dados_ficticios",
-      "fromNode": "n_engine_readme_base_demonstracao",
-      "toNode": "n_claude_dados_ficticios",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_sqlite_persistencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_api",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_sqlite_persistencia",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_pacote_engine",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "label": "implements [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "label": "conceptually_related_to [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_bandeiras_vermelhas",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "label": "shares_data_with [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_correcoes_recalculo",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_limiares_meta",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_limiares_meta",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_criterio_parada",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_traco_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_traco_inferencia",
-      "label": "rationale_for [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_explicacao_porque_como",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fatos_condicoes_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fatos_condicoes",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_fontes_externas_importacao",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "label": "shares_data_with [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_selecao_proxima_pergunta",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_hipotese_aberta",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_selecao_proxima_pergunta",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_memoria_trabalho",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_encadeamento_misto",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_encadeamento_misto",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_resolucao_conflito",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_resolucao_conflito",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_traco_inferencia",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_traco_inferencia",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_triagem_obrigatoria",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_motor_inferencia",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_troca_modo",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_urgencia_gravidade_confianca",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_parecer",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_urgencia_gravidade_confianca",
-      "label": "shares_data_with [INFERRED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_potencial_maximo",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_selecao_proxima_pergunta_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_encadeamento_misto",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_selecao_proxima_pergunta",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_encadeamento_misto",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivado_max",
-      "fromNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_cf_mycin",
-      "toNode": "n_docs_superpowers_specs_2026_10_20_anamnese_bovinos_design_derivado_max",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_suposicoes_linha_24_node_docs_pesquisa_versoes_bibliotecas_node_lifecycle",
-      "fromNode": "n_docs_pesquisa_suposicoes_linha_24_node",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_node_lifecycle",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_suposicoes_linha_24_node_docs_pesquisa_versoes_bibliotecas_nodejs_lts",
-      "fromNode": "n_docs_pesquisa_suposicoes_linha_24_node",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_nodejs_lts",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_suposicoes_vite_mocks_docs_pesquisa_execucao_local_vite",
-      "fromNode": "n_docs_pesquisa_suposicoes_vite_mocks",
-      "toNode": "n_docs_pesquisa_execucao_local_vite",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_suposicoes_windows_11_demo_docs_pesquisa_execucao_local_powershell_execution_policy",
-      "fromNode": "n_docs_pesquisa_suposicoes_windows_11_demo",
-      "toNode": "n_docs_pesquisa_execucao_local_powershell_execution_policy",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_suposicoes_winget_uv_id_docs_pesquisa_versoes_bibliotecas_uv",
-      "fromNode": "n_docs_pesquisa_suposicoes_winget_uv_id",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_uv",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_versoes_bibliotecas_node_lifecycle_docs_pesquisa_versoes_bibliotecas_nodejs_lts",
-      "fromNode": "n_docs_pesquisa_versoes_bibliotecas_node_lifecycle",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_nodejs_lts",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_playwright_skill_docs_pesquisa_agentes_e_skills_webapp_testing",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_playwright_skill",
-      "toNode": "n_docs_pesquisa_agentes_e_skills_webapp_testing",
-      "label": "semantically_similar_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_playwright_skill_docs_pesquisa_versoes_bibliotecas_playwright_test",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_playwright_skill",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_playwright_test",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_agentes_e_skills_webapp_testing_docs_pesquisa_execucao_local_playwright_webserver",
-      "fromNode": "n_docs_pesquisa_agentes_e_skills_webapp_testing",
-      "toNode": "n_docs_pesquisa_execucao_local_playwright_webserver",
-      "label": "conceptually_related_to [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_execucao_local_uv_docs_pesquisa_versoes_bibliotecas_python",
-      "fromNode": "n_docs_pesquisa_execucao_local_uv",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_python",
-      "label": "conceptually_related_to [AMBIGUOUS]"
-    },
-    {
-      "id": "e_docs_pesquisa_execucao_local_uv_docs_pesquisa_execucao_local_playwright_webserver",
-      "fromNode": "n_docs_pesquisa_execucao_local_uv",
-      "toNode": "n_docs_pesquisa_execucao_local_playwright_webserver",
-      "label": "references [EXTRACTED]"
-    },
-    {
-      "id": "e_docs_pesquisa_execucao_local_uv_docs_pesquisa_suposicoes_rodar_ps1",
-      "fromNode": "n_docs_pesquisa_execucao_local_uv",
-      "toNode": "n_docs_pesquisa_suposicoes_rodar_ps1",
-      "label": "references [INFERRED]"
-    },
-    {
-      "id": "e_docs_pesquisa_execucao_local_uv_docs_pesquisa_versoes_bibliotecas_uv",
-      "fromNode": "n_docs_pesquisa_execucao_local_uv",
-      "toNode": "n_docs_pesquisa_versoes_bibliotecas_uv",
-      "label": "references [INFERRED]"
     }
   ]
 }

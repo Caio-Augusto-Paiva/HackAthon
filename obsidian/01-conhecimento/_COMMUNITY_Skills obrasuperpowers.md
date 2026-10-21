@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.16
 members: 17
 ---
 
 # Skills obra/superpowers
 
-**Cohesion:** 0.16 - loosely connected
 **Members:** 17 nodes
 
 ## Members

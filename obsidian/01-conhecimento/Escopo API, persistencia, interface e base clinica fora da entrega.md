@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Instruções e regras do hackathon"
+community: "Planejamento, agentes e alocação"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Escopo: API, persistencia, interface e base clinica fora da entrega
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Motor de inferencia da secao 1 (pacote engine)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/rationale #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
