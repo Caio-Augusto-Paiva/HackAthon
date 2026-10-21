@@ -1,6 +1,8 @@
 """Testes do repositório de versões imutáveis da base (kb.carregador)."""
+import errno
 import hashlib
 import json
+import os
 from datetime import date
 
 import pytest
@@ -193,9 +195,8 @@ def test_falha_na_escrita_nao_deixa_meia_versao(tmp_path, monkeypatch):
         def write(self, _):
             raise OSError("disco cheio")
 
-    monkeypatch.setattr(
-        carregador, "open", lambda *a, **k: Quebrado(open(*a, **k)), raising=False
-    )
+    real = os.fdopen
+    monkeypatch.setattr(carregador.os, "fdopen", lambda *a, **k: Quebrado(real(*a, **k)))
     repo = _repo(tmp_path)
     with pytest.raises(OSError, match="disco cheio"):
         repo.salvar_nova(_base(), autor="a", nota="n")
@@ -311,7 +312,8 @@ def test_falha_durante_a_escrita_nao_deixa_versao_nem_temporario(tmp_path, monke
             def write(self, _):
                 raise OSError("disco cheio")
 
-        monkeypatch.setattr(carregador, "open", lambda *a, **k: Quebrado(open(*a, **k)), raising=False)
+        real = os.fdopen
+        monkeypatch.setattr(carregador.os, "fdopen", lambda *a, **k: Quebrado(real(*a, **k)))
     repo = _repo(tmp_path)
     with pytest.raises(OSError, match="disco cheio"):
         repo.salvar_nova(_base(), autor="a", nota="n")
@@ -345,3 +347,74 @@ def test_prioridade_padrao_nao_e_persistida_e_acompanha_a_classe(tmp_path):
     gravado = json.loads((tmp_path / "versoes" / "v0002.json").read_text(encoding="utf-8"))
     assert all("prioridade" not in r for r in gravado["regras"])
     assert repo.carregar("v0002").regras[2].prioridade_efetiva == 100
+
+
+def test_carregar_base_texto_json_com_bom():
+    texto = "﻿" + json.dumps(carregar_minima(), ensure_ascii=False)
+    assert carregar_base(texto).meta.versao == "minima-v1"
+
+
+def test_gravacoes_concorrentes_nao_alteram_a_versao_publicada(tmp_path, monkeypatch):
+    class Fixo(Repositorio):
+        def _proxima(self):
+            return "v0001"
+
+    repo = Fixo(tmp_path, hoje=lambda: date(2026, 10, 21))
+    real = os.link
+    estado = {"n": 0, "erro": None}
+
+    def intercalado(origem, destino, *a, **k):
+        estado["n"] += 1
+        if estado["n"] == 1:  # a segunda gravação roda inteira antes da primeira publicar
+            try:
+                repo.salvar_nova(_base(), autor="segunda", nota="segunda")
+            except BaseException as exc:
+                estado["erro"] = exc
+        return real(origem, destino, *a, **k)
+
+    monkeypatch.setattr(carregador.os, "link", intercalado)
+    # a segunda publica primeiro (n=2 chama real direto); a primeira então encontra o destino
+    with pytest.raises(FileExistsError, match="v0001 já existe"):
+        repo.salvar_nova(_base(), autor="primeira", nota="primeira")
+    assert estado["erro"] is None  # a que publicou primeiro (a "segunda") teve sucesso
+    arquivo = tmp_path / "versoes" / "v0001.json"
+    assert json.loads(arquivo.read_text(encoding="utf-8"))["meta"]["autor"] == "segunda"
+    assert [p.name for p in (tmp_path / "versoes").iterdir()] == ["v0001.json"]
+
+
+def test_publicada_nao_muda_quando_outra_gravacao_falha(tmp_path, monkeypatch):
+    repo = _repo(tmp_path)
+    repo.salvar_nova(_base(), autor="primeira", nota="p")
+    antes = repo.hash("v0001")
+
+    class Fixo(Repositorio):
+        def _proxima(self):
+            return "v0001"
+
+    with pytest.raises(FileExistsError, match="v0001 já existe"):
+        Fixo(tmp_path).salvar_nova(_base(), autor="outra", nota="o")
+    assert repo.hash("v0001") == antes
+    assert [p.name for p in (tmp_path / "versoes").iterdir()] == ["v0001.json"]
+
+
+@pytest.mark.skipif(os.name != "nt", reason="fallback por rename só no Windows")
+def test_sem_hard_link_publica_via_rename(tmp_path, monkeypatch):
+    def sem_link(*a, **k):
+        raise OSError(errno.EPERM, "sem hard link")
+
+    monkeypatch.setattr(carregador.os, "link", sem_link)
+    repo = _repo(tmp_path)
+    assert repo.salvar_nova(_base(), autor="a", nota="n") == "v0001"
+    assert [p.name for p in (tmp_path / "versoes").iterdir()] == ["v0001.json"]
+    with pytest.raises(FileExistsError, match="v0001 já existe"):
+        type("F", (Repositorio,), {"_proxima": lambda self: "v0001"})(tmp_path).salvar_nova(_base(), autor="a", nota="n")
+
+
+def test_ativar_usa_temporario_unico(tmp_path):
+    repo = _repo(tmp_path)
+    repo.salvar_nova(_base(), autor="a", nota="n")
+    (tmp_path / "ativa.json.tmp").write_text("lixo", encoding="utf-8")  # o nome antigo não é mais usado
+    repo.ativar("v0001")
+    assert repo.versao_ativa() == "v0001"
+    assert (tmp_path / "ativa.json.tmp").read_text(encoding="utf-8") == "lixo"
+    assert sorted(p.name for p in tmp_path.iterdir() if p.is_file()) == ["ativa.json", "ativa.json.tmp"]

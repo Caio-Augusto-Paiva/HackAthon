@@ -6,7 +6,7 @@ carregue a base e rode uma sessão de fumaça sem levantar.
 """
 import random
 
-from hypothesis import given, settings, strategies as st
+from hypothesis import event, given, settings, strategies as st
 
 from engine.modelos import Base as BaseMotor
 from engine.sessao import Sessao
@@ -118,7 +118,7 @@ def _sessao_de_fumaca(motor: dict, modo: str, semente: int) -> None:
     sessao.como("chamar_agora")
 
 
-@settings(derandomize=True, max_examples=200, deadline=None)
+@settings(derandomize=True, max_examples=400, deadline=None)
 @given(
     mutacoes=st.lists(_mutacao, min_size=1, max_size=3),
     modo=st.sampled_from(("produtor", "veterinario")),
@@ -128,7 +128,9 @@ def test_validador_aceita_implica_motor_executa(mutacoes, modo, semente):
     dados = _aplicar(carregar_minima(), mutacoes)
     relatorio = validar_dados(dados)
     if not relatorio.valida:
+        event("invalida")
         return
+    event("valida")
     motor = para_motor(carregar_base(dados))
     BaseMotor.de_dict(motor)
     _sessao_de_fumaca(motor, modo, semente)

@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, field_validator
 
 Modo = Literal["produtor", "veterinario"]
 TipoSimbolo = Literal["pergunta", "ficha", "derivado", "doenca", "urgencia"]
@@ -121,8 +121,8 @@ class Limiares(_Modelo):
 
 
 class LimiteDinamico(_Modelo):
-    produtor: int = Field(default=12, ge=0)
-    veterinario: int = Field(default=25, ge=0)
+    produtor: StrictInt = Field(default=12, ge=0)
+    veterinario: StrictInt = Field(default=25, ge=0)
 
 
 class Meta(_Modelo):
@@ -195,6 +195,7 @@ def carregar_base(dados: dict | str | Path) -> Base:
     if isinstance(dados, Path):
         dados = json.loads(dados.read_text(encoding="utf-8-sig"))
     elif isinstance(dados, str):
+        dados = dados.lstrip("\ufeff")  # BOM no início do texto
         if dados.lstrip().startswith("{"):
             dados = json.loads(dados)
         else:

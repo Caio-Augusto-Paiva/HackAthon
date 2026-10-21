@@ -48,11 +48,15 @@ def test_schema_sincronizado(tmp_path):
         assert gerado.endswith(b"\n") and b"\r" not in gerado
 
 
-def test_motor_mesmo_cf_sem_prioridade_explicita():
-    """Sem prioridade explícita, o kb não grava padrão e o motor aplica o da classe; os CF não mudam."""
-    crua = json.loads(CAMINHO_BASE_MOTOR.read_text(encoding="utf-8"))
-    for regra in crua["regras"]:
-        regra.pop("prioridade", None)
-    fatos = {"sinal1": True, "dias": 120}
+def test_motor_aplica_a_prioridade_efetiva_do_kb():
+    """Sem prioridade gravada, o motor preenche exatamente o que o kb chama de efetiva."""
+    base = carregar_base(carregar_minima())
+    assert all(r.prioridade is None for r in base.regras)
+    do_motor = [r["prioridade"] for r in BaseMotor.de_dict(para_motor(base)).regras]
+    assert do_motor == [r.prioridade_efetiva for r in base.regras]
 
-    assert inferir(crua, fatos).cfs == inferir(_dump_kb(crua), fatos).cfs
+
+def test_prioridades_padrao_iguais_no_kb_e_no_motor():
+    from engine.modelos import PRIORIDADES
+    from kb.modelos import PRIORIDADE_POR_CLASSE
+    assert PRIORIDADE_POR_CLASSE == PRIORIDADES

@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import re
+import tempfile
 from collections.abc import Callable
 from datetime import date
 from pathlib import Path
@@ -115,6 +116,11 @@ class Repositorio:
 
         ``pai`` explícito deve ser uma versão existente (``ValueError`` caso contrário);
         sem ele, o pai é a versão ativa.
+
+        Levanta ``ValueError`` (pai inexistente ou id de versão inválido), ``BaseInvalida``
+        (a base tem erros de validação), ``FileExistsError`` (a versão já existe, por
+        exemplo numa gravação concorrente; nada é sobrescrito) e ``OSError`` (falha de
+        disco ou de publicação; não deixa versão parcial nem temporário).
         """
         if pai is not None and not self._arquivo(pai).is_file():
             raise ValueError(f"A versão pai {pai} não existe; informe uma versão já salva.")
@@ -136,15 +142,24 @@ class Repositorio:
         texto = _json(nova.model_dump(mode="json", exclude_none=True))
         arquivo = self._arquivo(versao)
         arquivo.parent.mkdir(parents=True, exist_ok=True)
-        # grava num temporário (nome que listar_versoes ignora) e publica com link: nunca há meia versão
-        temporario = arquivo.with_name(f".{arquivo.name}.tmp-{os.getpid()}")
+        # temporário exclusivo (nome que listar_versoes ignora); publicar por link/rename nunca
+        # reabre o arquivo final: não há meia versão nem escrita sobre uma versão já publicada
+        descritor, caminho = tempfile.mkstemp(dir=arquivo.parent, prefix=f".{arquivo.name}.tmp-")
+        temporario = Path(caminho)
         try:
-            with open(temporario, "w", encoding="utf-8", newline="\n") as f:
+            with os.fdopen(descritor, "w", encoding="utf-8", newline="\n") as f:
                 f.write(texto)
                 f.flush()
                 os.fsync(f.fileno())
             try:
-                os.link(temporario, arquivo)  # FileExistsError se o destino já existe
+                try:
+                    os.link(temporario, arquivo)  # FileExistsError se o destino já existe
+                except FileExistsError:
+                    raise
+                except OSError:
+                    if os.name != "nt":  # sem hard link (ex.: certos sistemas de arquivos)
+                        raise
+                    os.rename(temporario, arquivo)  # no Windows também falha se o destino existe
             except FileExistsError as exc:
                 raise FileExistsError(f"Versão {versao} já existe; nada foi sobrescrito.") from exc
         finally:
@@ -155,11 +170,13 @@ class Repositorio:
         if not self._arquivo(versao).is_file():
             raise FileNotFoundError(f"Não é possível ativar {versao}: versão não encontrada.")
         self.raiz.mkdir(parents=True, exist_ok=True)
-        temporario = self._ativa.with_name(self._ativa.name + ".tmp")
+        descritor, caminho = tempfile.mkstemp(dir=self.raiz, prefix=f".{self._ativa.name}.tmp-")
+        temporario = Path(caminho)
         try:
-            with open(temporario, "w", encoding="utf-8", newline="\n") as f:
+            with os.fdopen(descritor, "w", encoding="utf-8", newline="\n") as f:
                 f.write(_json({"versao": versao}))
-            os.replace(temporario, self._ativa)
-        except BaseException:
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(temporario, self._ativa)  # sobrescrever o ponteiro é o desejado
+        finally:
             temporario.unlink(missing_ok=True)
-            raise

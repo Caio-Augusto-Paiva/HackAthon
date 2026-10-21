@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = ["pydantic>=2.14,<2.15"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "hypothesis>=6"]
+dev = ["pytest>=8", "hypothesis>=6.170,<6.171"]
 
 [tool.setuptools]
 packages = ["kb", "engine"]

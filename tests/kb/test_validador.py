@@ -822,3 +822,10 @@ def test_e10_derivado_em_ciclo_nao_conta_como_produtor():
         _nova_regra(d, "R-D2", [{"simbolo": "x"}], "d2", 0.5)
     rel = _relatorio(m)
     assert any(p.numero == "E10" and p.alvo.id == "d2" for p in rel.erros)
+
+
+def test_limite_dinamico_booleano_e_recusado():
+    dados = carregar_minima()
+    dados["meta"]["limite_dinamico"] = {"produtor": True, "veterinario": 25}
+    rel = validar_dados(dados)
+    assert not rel.valida and {p.numero for p in rel.erros} == {"E00"}
