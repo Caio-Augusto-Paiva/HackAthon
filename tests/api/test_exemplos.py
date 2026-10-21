@@ -7,6 +7,7 @@ da Seção 4.7 valem (discriminadores, corpos de requisição fechados, valor ou
 from __future__ import annotations
 
 import json
+from fractions import Fraction
 from pathlib import Path
 
 import pytest
@@ -22,12 +23,15 @@ from api.schemas.sessao import (
     RespostaTriagem,
     TelaTriagem,
 )
+from engine.parecer import percentual
+from kb import validar
 from kb.grafo import Grafo, grafo_para_base
 from kb.modelos import Base
 
 PASTA_EXEMPLOS = Path(__file__).resolve().parents[2] / "contratos" / "exemplos"
 OPERACOES = sorted(CONTRATOS)
 CHAVES_DO_EXEMPLO = {"operacao", "metodo", "rota", "status", "requisicao", "resposta"}
+CRIADORES = {"criar_sessao", "criar_animal", "salvar_versao", "executar_casos"}  # as rotas que respondem 201
 
 
 def _exemplo(operation_id: str) -> dict:
@@ -67,7 +71,7 @@ def test_exemplo_valida_contra_schema(operation_id: str):
     assert exemplo["operacao"] == operation_id
     assert exemplo["metodo"] in {"GET", "POST", "PUT", "PATCH"}
     assert exemplo["rota"].startswith("/api/")
-    assert exemplo["status"] in {200, 201}
+    assert exemplo["status"] == (201 if operation_id in CRIADORES else 200)
     # corpo JSON e modelo de corpo andam juntos (a importação é multipart: sem corpo JSON)
     assert (exemplo["requisicao"] is None) == (modelo_corpo is None)
 
@@ -197,3 +201,32 @@ def test_como_aceita_evidencias_aninhadas_de_derivado():
     assert entrada.evidencias[0].regra_id == "R-DER-01"
     assert entrada.evidencias[0].entradas[0].valor is None  # "não sei" chega como None
     assert entrada.evidencias[0].entradas[0].evidencias is None
+
+
+def test_exemplo_do_parecer_respeita_os_invariantes():
+    """Ordem decrescente de CF, ``percentual`` e ``situacao`` pelas regras do motor (4.5.1), blocos pelos cortes."""
+    parecer = _exemplo("obter_parecer")["resposta"]
+    assert [b["id"] for b in parecer["blocos"]] == ["hipoteses_principais", "diagnostico_diferencial", "pouco_provavel"]
+    itens = [(b["id"], i) for b in parecer["blocos"] for i in b["itens"]]
+    cfs = [i["cf"] for _, i in itens]
+    assert cfs == sorted(cfs, reverse=True)
+    assert len({i["doenca"] for _, i in itens}) == len(itens)
+
+    for bloco, item in itens:
+        cf = Fraction(str(item["cf"]))
+        assert item["percentual"] == percentual(cf) == round(max(0, item["cf"]) * 100)
+        assert item["situacao"] == (
+            "com_evidencia" if cf > Fraction(1, 5) else "descartada" if cf < -Fraction(1, 5) else "sem_evidencia"
+        )
+        assert bloco == (
+            "hipoteses_principais" if cf >= Fraction(1, 2)
+            else "diagnostico_diferencial" if cf > Fraction(1, 5)
+            else "pouco_provavel"
+        )
+
+
+def test_exemplo_da_versao_passa_no_validador():
+    """O exemplo de ``obter_versao`` é uma base de verdade: sem erros no validador (avisos são permitidos)."""
+    relatorio = validar(Base.model_validate(_exemplo("obter_versao")["resposta"]))
+    assert relatorio.erros == []
+    assert relatorio.valida is True

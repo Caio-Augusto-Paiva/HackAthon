@@ -4,19 +4,31 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, UploadFile
 
 from api.contexto import Contexto, obter_contexto
+from api.rotas.respostas import ERROS_DE_CADASTRO, ERROS_DE_ENTRADA, ERROS_DE_RECURSO
 from api.schemas.animal import Animal, ListaAnimais, ListaSessoesAnimal, NovoAnimal, ResultadoImportacao
 from api.servicos import animal_servico, importacao
 
 router = APIRouter()
 
 
-@router.get("/animais", operation_id="listar_animais", response_model=ListaAnimais, summary="Listar animais")
+@router.get(
+    "/animais",
+    operation_id="listar_animais",
+    responses=ERROS_DE_ENTRADA,
+    response_model=ListaAnimais,
+    summary="Listar animais",
+)
 def listar_animais(busca: str | None = None, ctx: Contexto = Depends(obter_contexto)) -> ListaAnimais:
     return animal_servico.listar_animais(ctx, busca)
 
 
 @router.post(
-    "/animais", operation_id="criar_animal", status_code=201, response_model=Animal, summary="Cadastrar animal"
+    "/animais",
+    operation_id="criar_animal",
+    status_code=201,
+    responses=ERROS_DE_CADASTRO,
+    response_model=Animal,
+    summary="Cadastrar animal",
 )
 def criar_animal(corpo: NovoAnimal, ctx: Contexto = Depends(obter_contexto)) -> Animal:
     return animal_servico.criar_animal(ctx, corpo)
@@ -26,6 +38,7 @@ def criar_animal(corpo: NovoAnimal, ctx: Contexto = Depends(obter_contexto)) -> 
 @router.post(
     "/animais/importacao",
     operation_id="importar_animais",
+    responses=ERROS_DE_CADASTRO,
     response_model=ResultadoImportacao,
     summary="Importar prontuário (CSV ou JSON)",
 )
@@ -38,7 +51,13 @@ def importar_animais(
     return importacao.importar(ctx, arquivo.filename or "", conteudo, gravar)
 
 
-@router.get("/animais/{animal_id}", operation_id="obter_animal", response_model=Animal, summary="Ficha do animal")
+@router.get(
+    "/animais/{animal_id}",
+    operation_id="obter_animal",
+    responses=ERROS_DE_RECURSO,
+    response_model=Animal,
+    summary="Ficha do animal",
+)
 def obter_animal(animal_id: str, ctx: Contexto = Depends(obter_contexto)) -> Animal:
     return animal_servico.obter_animal(ctx, animal_id)
 
@@ -46,6 +65,7 @@ def obter_animal(animal_id: str, ctx: Contexto = Depends(obter_contexto)) -> Ani
 @router.get(
     "/animais/{animal_id}/sessoes",
     operation_id="listar_sessoes_animal",
+    responses=ERROS_DE_RECURSO,
     response_model=ListaSessoesAnimal,
     summary="Sessões de anamnese do animal",
 )

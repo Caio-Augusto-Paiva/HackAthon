@@ -1,0 +1,4962 @@
+{
+  "components": {
+    "schemas": {
+      "AcaoBandeira": {
+        "additionalProperties": false,
+        "properties": {
+          "acao": {
+            "enum": [
+              "ver_parecer",
+              "continuar"
+            ],
+            "title": "Acao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "acao"
+        ],
+        "title": "AcaoBandeira",
+        "type": "object"
+      },
+      "Alerta": {
+        "description": "Bandeira vermelha. ``pausa`` só é verdadeiro no modo produtor, com bandeira ainda não reconhecida.",
+        "properties": {
+          "acoes": {
+            "items": {
+              "enum": [
+                "ver_parecer",
+                "continuar"
+              ],
+              "type": "string"
+            },
+            "title": "Acoes",
+            "type": "array"
+          },
+          "nivel": {
+            "const": "chamar_agora",
+            "title": "Nivel",
+            "type": "string"
+          },
+          "pausa": {
+            "title": "Pausa",
+            "type": "boolean"
+          },
+          "regras": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Regras",
+            "type": "array"
+          },
+          "texto": {
+            "title": "Texto",
+            "type": "string"
+          }
+        },
+        "required": [
+          "nivel",
+          "regras",
+          "pausa",
+          "acoes",
+          "texto"
+        ],
+        "title": "Alerta",
+        "type": "object"
+      },
+      "Alvo": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "tipo": {
+            "enum": [
+              "simbolo",
+              "regra",
+              "tela",
+              "meta"
+            ],
+            "title": "Tipo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tipo",
+          "id"
+        ],
+        "title": "Alvo",
+        "type": "object"
+      },
+      "Animal": {
+        "description": "A ficha completa. ``origens`` marca por campo ``manual`` ou ``importacao``; campo ``null`` = ausente.",
+        "properties": {
+          "brinco": {
+            "title": "Brinco",
+            "type": "string"
+          },
+          "dias_em_lactacao": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dias Em Lactacao"
+          },
+          "ficha": {
+            "additionalProperties": true,
+            "title": "Ficha",
+            "type": "object"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "nome": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nome"
+          },
+          "origens": {
+            "additionalProperties": {
+              "enum": [
+                "manual",
+                "importacao"
+              ],
+              "type": "string"
+            },
+            "title": "Origens",
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "brinco",
+          "nome",
+          "dias_em_lactacao",
+          "ficha",
+          "origens"
+        ],
+        "title": "Animal",
+        "type": "object"
+      },
+      "AnimalResumo": {
+        "properties": {
+          "brinco": {
+            "title": "Brinco",
+            "type": "string"
+          },
+          "dias_em_lactacao": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dias Em Lactacao"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "nome": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nome"
+          },
+          "ultima_sessao_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ultima Sessao Id"
+          }
+        },
+        "required": [
+          "id",
+          "brinco",
+          "nome",
+          "dias_em_lactacao",
+          "ultima_sessao_id"
+        ],
+        "title": "AnimalResumo",
+        "type": "object"
+      },
+      "Aresta": {
+        "additionalProperties": false,
+        "description": "``condicao``: símbolo -> regra; ``conclusao``: regra -> símbolo.\n\n``ordem`` é opcional: sem ela, as condições de uma regra seguem a ordem das\narestas em ``Grafo.arestas``; com ela, as numeradas vêm antes das sem número.",
+        "properties": {
+          "cf": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cf"
+          },
+          "cf_maximo": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cf Maximo"
+          },
+          "cf_minimo": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cf Minimo"
+          },
+          "destino": {
+            "title": "Destino",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "negado": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Negado"
+          },
+          "op": {
+            "anyOf": [
+              {
+                "enum": [
+                  "=",
+                  "≠",
+                  "<",
+                  "≤",
+                  ">",
+                  "≥",
+                  "em"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Op"
+          },
+          "ordem": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ordem"
+          },
+          "origem": {
+            "title": "Origem",
+            "type": "string"
+          },
+          "papel": {
+            "enum": [
+              "condicao",
+              "conclusao"
+            ],
+            "title": "Papel",
+            "type": "string"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor"
+          }
+        },
+        "required": [
+          "id",
+          "papel",
+          "origem",
+          "destino"
+        ],
+        "title": "Aresta",
+        "type": "object"
+      },
+      "AtivarBody": {
+        "additionalProperties": false,
+        "properties": {
+          "confirmar_falhas": {
+            "default": false,
+            "title": "Confirmar Falhas",
+            "type": "boolean"
+          },
+          "versao": {
+            "title": "Versao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "versao"
+        ],
+        "title": "AtivarBody",
+        "type": "object"
+      },
+      "AtivarResposta": {
+        "properties": {
+          "anterior": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Anterior"
+          },
+          "versao": {
+            "title": "Versao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "versao",
+          "anterior"
+        ],
+        "title": "AtivarResposta",
+        "type": "object"
+      },
+      "Base": {
+        "additionalProperties": false,
+        "properties": {
+          "layout": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Posicao"
+            },
+            "title": "Layout",
+            "type": "object"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "regras": {
+            "items": {
+              "$ref": "#/components/schemas/Regra"
+            },
+            "title": "Regras",
+            "type": "array"
+          },
+          "simbolos": {
+            "items": {
+              "$ref": "#/components/schemas/Simbolo"
+            },
+            "title": "Simbolos",
+            "type": "array"
+          }
+        },
+        "required": [
+          "meta",
+          "simbolos",
+          "regras"
+        ],
+        "title": "Base",
+        "type": "object"
+      },
+      "Bloco": {
+        "properties": {
+          "id": {
+            "enum": [
+              "hipoteses_principais",
+              "diagnostico_diferencial",
+              "pouco_provavel"
+            ],
+            "title": "Id",
+            "type": "string"
+          },
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/ItemDoenca"
+            },
+            "title": "Itens",
+            "type": "array"
+          },
+          "titulo": {
+            "title": "Titulo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "titulo",
+          "itens"
+        ],
+        "title": "Bloco",
+        "type": "object"
+      },
+      "Body_importar_animais": {
+        "properties": {
+          "arquivo": {
+            "contentMediaType": "application/octet-stream",
+            "title": "Arquivo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "arquivo"
+        ],
+        "title": "Body_importar_animais",
+        "type": "object"
+      },
+      "Campo": {
+        "description": "Um símbolo de uma tela de triagem. Categórico traz ``opcoes``; numérico, ``unidade``, ``min`` e ``max``.",
+        "properties": {
+          "entrada": {
+            "enum": [
+              "booleano",
+              "categorico",
+              "numerico"
+            ],
+            "title": "Entrada",
+            "type": "string"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "opcoes": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Opcao"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Opcoes"
+          },
+          "rotulo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rotulo"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          },
+          "unidade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unidade"
+          }
+        },
+        "required": [
+          "simbolo",
+          "entrada"
+        ],
+        "title": "Campo",
+        "type": "object"
+      },
+      "Combinacao": {
+        "description": "O CF do símbolo depois de combinar a saída de uma regra (``antes`` e ``depois``).",
+        "properties": {
+          "antes": {
+            "title": "Antes",
+            "type": "number"
+          },
+          "apos_regra": {
+            "title": "Apos Regra",
+            "type": "string"
+          },
+          "depois": {
+            "title": "Depois",
+            "type": "number"
+          }
+        },
+        "required": [
+          "apos_regra",
+          "antes",
+          "depois"
+        ],
+        "title": "Combinacao",
+        "type": "object"
+      },
+      "Como": {
+        "properties": {
+          "cf": {
+            "title": "Cf",
+            "type": "number"
+          },
+          "combinacao": {
+            "items": {
+              "$ref": "#/components/schemas/Combinacao"
+            },
+            "title": "Combinacao",
+            "type": "array"
+          },
+          "evidencias": {
+            "items": {
+              "$ref": "#/components/schemas/Evidencia"
+            },
+            "title": "Evidencias",
+            "type": "array"
+          },
+          "nome": {
+            "title": "Nome",
+            "type": "string"
+          },
+          "percentual": {
+            "title": "Percentual",
+            "type": "integer"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "simbolo",
+          "nome",
+          "cf",
+          "percentual",
+          "combinacao",
+          "evidencias"
+        ],
+        "title": "Como",
+        "type": "object"
+      },
+      "Conclusao": {
+        "additionalProperties": false,
+        "properties": {
+          "cf": {
+            "title": "Cf",
+            "type": "number"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "simbolo",
+          "cf"
+        ],
+        "title": "Conclusao",
+        "type": "object"
+      },
+      "Condicao": {
+        "additionalProperties": false,
+        "properties": {
+          "cf_maximo": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cf Maximo"
+          },
+          "cf_minimo": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cf Minimo"
+          },
+          "negado": {
+            "default": false,
+            "title": "Negado",
+            "type": "boolean"
+          },
+          "op": {
+            "default": "=",
+            "enum": [
+              "=",
+              "≠",
+              "<",
+              "≤",
+              ">",
+              "≥",
+              "em"
+            ],
+            "title": "Op",
+            "type": "string"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": true,
+            "title": "Valor"
+          }
+        },
+        "required": [
+          "simbolo"
+        ],
+        "title": "Condicao",
+        "type": "object"
+      },
+      "CorpoErro": {
+        "properties": {
+          "codigo": {
+            "title": "Codigo",
+            "type": "string"
+          },
+          "detalhes": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Detalhe"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Detalhes"
+          },
+          "mensagem": {
+            "title": "Mensagem",
+            "type": "string"
+          },
+          "requisicao_id": {
+            "title": "Requisicao Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "codigo",
+          "mensagem",
+          "requisicao_id"
+        ],
+        "title": "CorpoErro",
+        "type": "object"
+      },
+      "CorrecaoPergunta": {
+        "additionalProperties": false,
+        "description": "Corpo do ``PUT /respostas/{simbolo}``: o símbolo vai na rota.",
+        "properties": {
+          "nao_sei": {
+            "default": false,
+            "title": "Nao Sei",
+            "type": "boolean"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor"
+          }
+        },
+        "title": "CorrecaoPergunta",
+        "type": "object"
+      },
+      "Detalhe": {
+        "description": "Um item de ``detalhes``; o mesmo formato serve ao validador da base.",
+        "properties": {
+          "alvo": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Alvo"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "codigo": {
+            "title": "Codigo",
+            "type": "string"
+          },
+          "mensagem": {
+            "title": "Mensagem",
+            "type": "string"
+          },
+          "severidade": {
+            "enum": [
+              "erro",
+              "aviso"
+            ],
+            "title": "Severidade",
+            "type": "string"
+          }
+        },
+        "required": [
+          "codigo",
+          "severidade",
+          "mensagem"
+        ],
+        "title": "Detalhe",
+        "type": "object"
+      },
+      "DominioBooleano": {
+        "additionalProperties": false,
+        "properties": {
+          "tipo": {
+            "const": "booleano",
+            "default": "booleano",
+            "title": "Tipo",
+            "type": "string"
+          }
+        },
+        "title": "DominioBooleano",
+        "type": "object"
+      },
+      "DominioCategorico": {
+        "additionalProperties": false,
+        "properties": {
+          "tipo": {
+            "const": "categorico",
+            "default": "categorico",
+            "title": "Tipo",
+            "type": "string"
+          },
+          "valores": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Valores",
+            "type": "array"
+          }
+        },
+        "required": [
+          "valores"
+        ],
+        "title": "DominioCategorico",
+        "type": "object"
+      },
+      "DominioNumerico": {
+        "additionalProperties": false,
+        "properties": {
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "tipo": {
+            "const": "numerico",
+            "default": "numerico",
+            "title": "Tipo",
+            "type": "string"
+          },
+          "unidade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unidade"
+          }
+        },
+        "title": "DominioNumerico",
+        "type": "object"
+      },
+      "EdicaoBase": {
+        "additionalProperties": false,
+        "properties": {
+          "grafo": {
+            "$ref": "#/components/schemas/GrafoEdicao"
+          },
+          "layout": {
+            "additionalProperties": true,
+            "title": "Layout",
+            "type": "object"
+          },
+          "meta": {
+            "additionalProperties": true,
+            "title": "Meta",
+            "type": "object"
+          },
+          "nota": {
+            "title": "Nota",
+            "type": "string"
+          },
+          "pai": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pai"
+          }
+        },
+        "required": [
+          "pai",
+          "nota",
+          "meta",
+          "grafo"
+        ],
+        "title": "EdicaoBase",
+        "type": "object"
+      },
+      "Entrada": {
+        "description": "Um fato que alimentou a regra; com ``origem: \"regra\"`` traz as ``evidencias`` que o produziram.",
+        "properties": {
+          "cf": {
+            "title": "Cf",
+            "type": "number"
+          },
+          "evidencias": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Evidencia"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidencias"
+          },
+          "origem": {
+            "enum": [
+              "resposta",
+              "ficha",
+              "importacao",
+              "regra"
+            ],
+            "title": "Origem",
+            "type": "string"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          },
+          "tela_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tela Id"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor"
+          }
+        },
+        "required": [
+          "simbolo",
+          "valor",
+          "cf",
+          "origem",
+          "tela_id"
+        ],
+        "title": "Entrada",
+        "type": "object"
+      },
+      "ErroCampo": {
+        "properties": {
+          "campo": {
+            "title": "Campo",
+            "type": "string"
+          },
+          "mensagem": {
+            "title": "Mensagem",
+            "type": "string"
+          }
+        },
+        "required": [
+          "campo",
+          "mensagem"
+        ],
+        "title": "ErroCampo",
+        "type": "object"
+      },
+      "ErroResposta": {
+        "properties": {
+          "erro": {
+            "$ref": "#/components/schemas/CorpoErro"
+          }
+        },
+        "required": [
+          "erro"
+        ],
+        "title": "ErroResposta",
+        "type": "object"
+      },
+      "EstadoSessao": {
+        "properties": {
+          "alerta": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Alerta"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "animal_id": {
+            "title": "Animal Id",
+            "type": "string"
+          },
+          "fase": {
+            "enum": [
+              "triagem",
+              "dinamica",
+              "encerrada"
+            ],
+            "title": "Fase",
+            "type": "string"
+          },
+          "modo": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ],
+            "title": "Modo",
+            "type": "string"
+          },
+          "progresso": {
+            "$ref": "#/components/schemas/Progresso"
+          },
+          "proxima": {
+            "anyOf": [
+              {
+                "discriminator": {
+                  "mapping": {
+                    "pergunta": "#/components/schemas/PerguntaDinamica",
+                    "tela_triagem": "#/components/schemas/TelaTriagem"
+                  },
+                  "propertyName": "tipo"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/TelaTriagem"
+                  },
+                  {
+                    "$ref": "#/components/schemas/PerguntaDinamica"
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proxima"
+          },
+          "revisao": {
+            "title": "Revisao",
+            "type": "integer"
+          },
+          "sessao_id": {
+            "title": "Sessao Id",
+            "type": "string"
+          },
+          "urgencia": {
+            "$ref": "#/components/schemas/UrgenciaEstado"
+          },
+          "versao_base": {
+            "title": "Versao Base",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sessao_id",
+          "animal_id",
+          "modo",
+          "versao_base",
+          "revisao",
+          "fase",
+          "progresso",
+          "proxima",
+          "urgencia",
+          "alerta"
+        ],
+        "title": "EstadoSessao",
+        "type": "object"
+      },
+      "Evidencia": {
+        "properties": {
+          "cf_regra": {
+            "title": "Cf Regra",
+            "type": "number"
+          },
+          "cf_saida": {
+            "title": "Cf Saida",
+            "type": "number"
+          },
+          "entradas": {
+            "items": {
+              "$ref": "#/components/schemas/Entrada"
+            },
+            "title": "Entradas",
+            "type": "array"
+          },
+          "fonte": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fonte"
+          },
+          "premissa": {
+            "title": "Premissa",
+            "type": "number"
+          },
+          "regra_id": {
+            "title": "Regra Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "suposicao_a_validar",
+              "validada"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "texto": {
+            "title": "Texto",
+            "type": "string"
+          }
+        },
+        "required": [
+          "regra_id",
+          "texto",
+          "fonte",
+          "status",
+          "premissa",
+          "cf_regra",
+          "cf_saida",
+          "entradas"
+        ],
+        "title": "Evidencia",
+        "type": "object"
+      },
+      "Execucao": {
+        "properties": {
+          "comparada_com": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Comparada Com"
+          },
+          "execucao_id": {
+            "title": "Execucao Id",
+            "type": "string"
+          },
+          "executada_em": {
+            "title": "Executada Em",
+            "type": "string"
+          },
+          "falhou": {
+            "title": "Falhou",
+            "type": "integer"
+          },
+          "mudancas": {
+            "items": {
+              "$ref": "#/components/schemas/Mudanca"
+            },
+            "title": "Mudancas",
+            "type": "array"
+          },
+          "passou": {
+            "title": "Passou",
+            "type": "integer"
+          },
+          "resultados": {
+            "items": {
+              "$ref": "#/components/schemas/ResultadoCaso"
+            },
+            "title": "Resultados",
+            "type": "array"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          },
+          "versao": {
+            "title": "Versao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "execucao_id",
+          "versao",
+          "executada_em",
+          "total",
+          "passou",
+          "falhou",
+          "comparada_com",
+          "resultados",
+          "mudancas"
+        ],
+        "title": "Execucao",
+        "type": "object"
+      },
+      "ExecucaoCabecalho": {
+        "properties": {
+          "execucao_id": {
+            "title": "Execucao Id",
+            "type": "string"
+          },
+          "executada_em": {
+            "title": "Executada Em",
+            "type": "string"
+          },
+          "falhou": {
+            "title": "Falhou",
+            "type": "integer"
+          },
+          "passou": {
+            "title": "Passou",
+            "type": "integer"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "execucao_id",
+          "executada_em",
+          "total",
+          "passou",
+          "falhou"
+        ],
+        "title": "ExecucaoCabecalho",
+        "type": "object"
+      },
+      "ExecucaoResumo": {
+        "properties": {
+          "execucao_id": {
+            "title": "Execucao Id",
+            "type": "string"
+          },
+          "falhou": {
+            "title": "Falhou",
+            "type": "integer"
+          },
+          "passou": {
+            "title": "Passou",
+            "type": "integer"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "execucao_id",
+          "total",
+          "passou",
+          "falhou"
+        ],
+        "title": "ExecucaoResumo",
+        "type": "object"
+      },
+      "ExecutarBody": {
+        "additionalProperties": false,
+        "properties": {
+          "casos": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Casos"
+          }
+        },
+        "title": "ExecutarBody",
+        "type": "object"
+      },
+      "FalhaCaso": {
+        "properties": {
+          "campo": {
+            "title": "Campo",
+            "type": "string"
+          },
+          "esperado": {
+            "title": "Esperado"
+          },
+          "obtido": {
+            "title": "Obtido"
+          }
+        },
+        "required": [
+          "campo",
+          "esperado",
+          "obtido"
+        ],
+        "title": "FalhaCaso",
+        "type": "object"
+      },
+      "Grafo": {
+        "additionalProperties": false,
+        "properties": {
+          "arestas": {
+            "items": {
+              "$ref": "#/components/schemas/Aresta"
+            },
+            "title": "Arestas",
+            "type": "array"
+          },
+          "layout": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Posicao"
+            },
+            "title": "Layout",
+            "type": "object"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "nos": {
+            "items": {
+              "$ref": "#/components/schemas/No"
+            },
+            "title": "Nos",
+            "type": "array"
+          },
+          "versao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Versao"
+          }
+        },
+        "required": [
+          "meta",
+          "nos",
+          "arestas"
+        ],
+        "title": "Grafo",
+        "type": "object"
+      },
+      "GrafoEdicao": {
+        "description": "Nós e arestas como dicts soltos: erro de estrutura chega ao ``kb`` e volta como ``E00`` (decisão D4).\n\nIgnora campos extras (``extra=\"ignore\"``, só aqui): o editor costuma devolver o ``Grafo`` inteiro em ``grafo``,\ncom ``versao``, ``meta`` e ``layout`` junto de ``nos`` e ``arestas``; ``meta`` e ``layout`` valem os do\nenvelope ``EdicaoBase``. Não é dado clínico nem CF, então o 422 de campo desconhecido não se aplica.",
+        "properties": {
+          "arestas": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Arestas",
+            "type": "array"
+          },
+          "nos": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Nos",
+            "type": "array"
+          }
+        },
+        "required": [
+          "nos",
+          "arestas"
+        ],
+        "title": "GrafoEdicao",
+        "type": "object"
+      },
+      "ItemDoenca": {
+        "description": "``situacao``: ``com_evidencia`` (CF > 0,2), ``sem_evidencia`` (-0,2 a 0,2) ou ``descartada`` (CF < -0,2).",
+        "properties": {
+          "cf": {
+            "title": "Cf",
+            "type": "number"
+          },
+          "doenca": {
+            "title": "Doenca",
+            "type": "string"
+          },
+          "gravidade": {
+            "enum": [
+              "alta",
+              "media",
+              "baixa"
+            ],
+            "title": "Gravidade",
+            "type": "string"
+          },
+          "nome": {
+            "title": "Nome",
+            "type": "string"
+          },
+          "percentual": {
+            "title": "Percentual",
+            "type": "integer"
+          },
+          "situacao": {
+            "enum": [
+              "com_evidencia",
+              "sem_evidencia",
+              "descartada"
+            ],
+            "title": "Situacao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "doenca",
+          "nome",
+          "gravidade",
+          "cf",
+          "percentual",
+          "situacao"
+        ],
+        "title": "ItemDoenca",
+        "type": "object"
+      },
+      "Limiares": {
+        "additionalProperties": false,
+        "properties": {
+          "bloco_diferencial": {
+            "default": 0.2,
+            "title": "Bloco Diferencial",
+            "type": "number"
+          },
+          "bloco_principal": {
+            "default": 0.5,
+            "title": "Bloco Principal",
+            "type": "number"
+          },
+          "confirmacao": {
+            "default": 0.8,
+            "title": "Confirmacao",
+            "type": "number"
+          },
+          "descarte": {
+            "default": -0.2,
+            "title": "Descarte",
+            "type": "number"
+          },
+          "exaustao": {
+            "default": 0.6,
+            "title": "Exaustao",
+            "type": "number"
+          },
+          "hipotese_relevante": {
+            "default": 0.35,
+            "title": "Hipotese Relevante",
+            "type": "number"
+          },
+          "potencial": {
+            "default": 0.7,
+            "title": "Potencial",
+            "type": "number"
+          },
+          "premissa": {
+            "default": 0.2,
+            "title": "Premissa",
+            "type": "number"
+          }
+        },
+        "title": "Limiares",
+        "type": "object"
+      },
+      "LimiteDinamico": {
+        "additionalProperties": false,
+        "properties": {
+          "produtor": {
+            "default": 12,
+            "minimum": 0.0,
+            "title": "Produtor",
+            "type": "integer"
+          },
+          "veterinario": {
+            "default": 25,
+            "minimum": 0.0,
+            "title": "Veterinario",
+            "type": "integer"
+          }
+        },
+        "title": "LimiteDinamico",
+        "type": "object"
+      },
+      "LinhaAtualizada": {
+        "properties": {
+          "brinco": {
+            "title": "Brinco",
+            "type": "string"
+          },
+          "campos": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Campos",
+            "type": "array"
+          },
+          "linha": {
+            "title": "Linha",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "linha",
+          "brinco",
+          "campos"
+        ],
+        "title": "LinhaAtualizada",
+        "type": "object"
+      },
+      "LinhaImportada": {
+        "properties": {
+          "brinco": {
+            "title": "Brinco",
+            "type": "string"
+          },
+          "linha": {
+            "title": "Linha",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "linha",
+          "brinco"
+        ],
+        "title": "LinhaImportada",
+        "type": "object"
+      },
+      "LinhaRejeitada": {
+        "properties": {
+          "erros": {
+            "items": {
+              "$ref": "#/components/schemas/ErroCampo"
+            },
+            "title": "Erros",
+            "type": "array"
+          },
+          "linha": {
+            "title": "Linha",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "linha",
+          "erros"
+        ],
+        "title": "LinhaRejeitada",
+        "type": "object"
+      },
+      "ListaAnimais": {
+        "properties": {
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/AnimalResumo"
+            },
+            "title": "Itens",
+            "type": "array"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "total",
+          "itens"
+        ],
+        "title": "ListaAnimais",
+        "type": "object"
+      },
+      "ListaExecucoes": {
+        "properties": {
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/ExecucaoCabecalho"
+            },
+            "title": "Itens",
+            "type": "array"
+          }
+        },
+        "required": [
+          "itens"
+        ],
+        "title": "ListaExecucoes",
+        "type": "object"
+      },
+      "ListaSessoesAnimal": {
+        "properties": {
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/SessaoDoAnimal"
+            },
+            "title": "Itens",
+            "type": "array"
+          }
+        },
+        "required": [
+          "itens"
+        ],
+        "title": "ListaSessoesAnimal",
+        "type": "object"
+      },
+      "ListaVersoes": {
+        "properties": {
+          "ativa": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ativa"
+          },
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/VersaoItem"
+            },
+            "title": "Itens",
+            "type": "array"
+          }
+        },
+        "required": [
+          "ativa",
+          "itens"
+        ],
+        "title": "ListaVersoes",
+        "type": "object"
+      },
+      "Meta": {
+        "additionalProperties": false,
+        "properties": {
+          "autor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Autor"
+          },
+          "data": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data"
+          },
+          "limiares": {
+            "$ref": "#/components/schemas/Limiares"
+          },
+          "limite_dinamico": {
+            "$ref": "#/components/schemas/LimiteDinamico"
+          },
+          "nota": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nota"
+          },
+          "pai": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pai"
+          },
+          "triagem": {
+            "items": {
+              "$ref": "#/components/schemas/Tela"
+            },
+            "title": "Triagem",
+            "type": "array"
+          },
+          "versao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Versao"
+          }
+        },
+        "title": "Meta",
+        "type": "object"
+      },
+      "Mudanca": {
+        "properties": {
+          "antes": {
+            "enum": [
+              "passou",
+              "falhou",
+              "erro",
+              "ausente"
+            ],
+            "title": "Antes",
+            "type": "string"
+          },
+          "caso_id": {
+            "title": "Caso Id",
+            "type": "string"
+          },
+          "depois": {
+            "enum": [
+              "passou",
+              "falhou",
+              "erro",
+              "ausente"
+            ],
+            "title": "Depois",
+            "type": "string"
+          }
+        },
+        "required": [
+          "caso_id",
+          "antes",
+          "depois"
+        ],
+        "title": "Mudanca",
+        "type": "object"
+      },
+      "No": {
+        "additionalProperties": false,
+        "properties": {
+          "dados": {
+            "additionalProperties": true,
+            "title": "Dados",
+            "type": "object"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "tipo_no": {
+            "enum": [
+              "simbolo",
+              "regra"
+            ],
+            "title": "Tipo No",
+            "type": "string"
+          },
+          "triagem": {
+            "default": false,
+            "title": "Triagem",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "tipo_no",
+          "dados"
+        ],
+        "title": "No",
+        "type": "object"
+      },
+      "NovaSessao": {
+        "additionalProperties": false,
+        "properties": {
+          "animal_id": {
+            "title": "Animal Id",
+            "type": "string"
+          },
+          "modo": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ],
+            "title": "Modo",
+            "type": "string"
+          },
+          "versao_base": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Versao Base"
+          }
+        },
+        "required": [
+          "animal_id",
+          "modo"
+        ],
+        "title": "NovaSessao",
+        "type": "object"
+      },
+      "NovoAnimal": {
+        "additionalProperties": false,
+        "properties": {
+          "brinco": {
+            "minLength": 1,
+            "title": "Brinco",
+            "type": "string"
+          },
+          "ficha": {
+            "additionalProperties": true,
+            "default": {},
+            "title": "Ficha",
+            "type": "object"
+          },
+          "nome": {
+            "title": "Nome",
+            "type": "string"
+          }
+        },
+        "required": [
+          "brinco",
+          "nome"
+        ],
+        "title": "NovoAnimal",
+        "type": "object"
+      },
+      "Opcao": {
+        "properties": {
+          "rotulo": {
+            "title": "Rotulo",
+            "type": "string"
+          },
+          "valor": {
+            "title": "Valor",
+            "type": "string"
+          }
+        },
+        "required": [
+          "valor",
+          "rotulo"
+        ],
+        "title": "Opcao",
+        "type": "object"
+      },
+      "Parecer": {
+        "properties": {
+          "aviso": {
+            "title": "Aviso",
+            "type": "string"
+          },
+          "bandeiras_nao_verificadas": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Bandeiras Nao Verificadas",
+            "type": "array"
+          },
+          "blocos": {
+            "items": {
+              "$ref": "#/components/schemas/Bloco"
+            },
+            "title": "Blocos",
+            "type": "array"
+          },
+          "final": {
+            "title": "Final",
+            "type": "boolean"
+          },
+          "inconclusivas": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Inconclusivas",
+            "type": "array"
+          },
+          "modo": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ],
+            "title": "Modo",
+            "type": "string"
+          },
+          "motivo_parada": {
+            "anyOf": [
+              {
+                "enum": [
+                  "confirmacao",
+                  "sem_perguntas",
+                  "limite",
+                  "sem_potencial"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Motivo Parada"
+          },
+          "sessao_id": {
+            "title": "Sessao Id",
+            "type": "string"
+          },
+          "urgencia": {
+            "$ref": "#/components/schemas/UrgenciaParecer"
+          },
+          "versao_base": {
+            "title": "Versao Base",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sessao_id",
+          "versao_base",
+          "modo",
+          "final",
+          "motivo_parada",
+          "urgencia",
+          "aviso",
+          "blocos",
+          "inconclusivas",
+          "bandeiras_nao_verificadas"
+        ],
+        "title": "Parecer",
+        "type": "object"
+      },
+      "PerguntaDinamica": {
+        "properties": {
+          "entrada": {
+            "enum": [
+              "booleano",
+              "categorico",
+              "numerico"
+            ],
+            "title": "Entrada",
+            "type": "string"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "motivo_resumo": {
+            "title": "Motivo Resumo",
+            "type": "string"
+          },
+          "opcoes": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Opcao"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Opcoes"
+          },
+          "permite_nao_sei": {
+            "title": "Permite Nao Sei",
+            "type": "boolean"
+          },
+          "porque_disponivel": {
+            "title": "Porque Disponivel",
+            "type": "boolean"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          },
+          "texto": {
+            "title": "Texto",
+            "type": "string"
+          },
+          "tipo": {
+            "const": "pergunta",
+            "title": "Tipo",
+            "type": "string"
+          },
+          "unidade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unidade"
+          }
+        },
+        "required": [
+          "tipo",
+          "simbolo",
+          "entrada",
+          "permite_nao_sei",
+          "texto",
+          "motivo_resumo",
+          "porque_disponivel"
+        ],
+        "title": "PerguntaDinamica",
+        "type": "object"
+      },
+      "PorQue": {
+        "properties": {
+          "evento_traco": {
+            "title": "Evento Traco",
+            "type": "string"
+          },
+          "motivo": {
+            "title": "Motivo",
+            "type": "string"
+          },
+          "origem": {
+            "enum": [
+              "triagem",
+              "fase_dinamica"
+            ],
+            "title": "Origem",
+            "type": "string"
+          },
+          "pergunta": {
+            "title": "Pergunta",
+            "type": "string"
+          },
+          "serve_a": {
+            "items": {
+              "$ref": "#/components/schemas/ServeA"
+            },
+            "title": "Serve A",
+            "type": "array"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "simbolo",
+          "origem",
+          "pergunta",
+          "motivo",
+          "serve_a",
+          "evento_traco"
+        ],
+        "title": "PorQue",
+        "type": "object"
+      },
+      "Posicao": {
+        "additionalProperties": false,
+        "properties": {
+          "x": {
+            "title": "X",
+            "type": "number"
+          },
+          "y": {
+            "title": "Y",
+            "type": "number"
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ],
+        "title": "Posicao",
+        "type": "object"
+      },
+      "Problema": {
+        "properties": {
+          "alvo": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Alvo"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "codigo": {
+            "title": "Codigo",
+            "type": "string"
+          },
+          "mensagem": {
+            "title": "Mensagem",
+            "type": "string"
+          },
+          "numero": {
+            "title": "Numero",
+            "type": "string"
+          },
+          "severidade": {
+            "enum": [
+              "erro",
+              "aviso"
+            ],
+            "title": "Severidade",
+            "type": "string"
+          }
+        },
+        "required": [
+          "codigo",
+          "numero",
+          "severidade",
+          "alvo",
+          "mensagem"
+        ],
+        "title": "Problema",
+        "type": "object"
+      },
+      "Progresso": {
+        "properties": {
+          "dinamicas_feitas": {
+            "title": "Dinamicas Feitas",
+            "type": "integer"
+          },
+          "limite_dinamico": {
+            "title": "Limite Dinamico",
+            "type": "integer"
+          },
+          "triagem_respondidas": {
+            "title": "Triagem Respondidas",
+            "type": "integer"
+          },
+          "triagem_total": {
+            "title": "Triagem Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "triagem_respondidas",
+          "triagem_total",
+          "dinamicas_feitas",
+          "limite_dinamico"
+        ],
+        "title": "Progresso",
+        "type": "object"
+      },
+      "Regra": {
+        "additionalProperties": false,
+        "properties": {
+          "classe": {
+            "default": "evidencia",
+            "enum": [
+              "evidencia",
+              "bandeira_vermelha",
+              "urgencia"
+            ],
+            "title": "Classe",
+            "type": "string"
+          },
+          "entao": {
+            "$ref": "#/components/schemas/Conclusao"
+          },
+          "fonte": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fonte"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "nota": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nota"
+          },
+          "prioridade": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Prioridade"
+          },
+          "se": {
+            "items": {
+              "$ref": "#/components/schemas/Condicao"
+            },
+            "minItems": 1,
+            "title": "Se",
+            "type": "array"
+          },
+          "status": {
+            "default": "suposicao_a_validar",
+            "enum": [
+              "suposicao_a_validar",
+              "validada"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "se",
+          "entao"
+        ],
+        "title": "Regra",
+        "type": "object"
+      },
+      "Relatorio": {
+        "properties": {
+          "avisos": {
+            "items": {
+              "$ref": "#/components/schemas/Problema"
+            },
+            "title": "Avisos",
+            "type": "array"
+          },
+          "erros": {
+            "items": {
+              "$ref": "#/components/schemas/Problema"
+            },
+            "title": "Erros",
+            "type": "array"
+          },
+          "resumo": {
+            "$ref": "#/components/schemas/Resumo"
+          },
+          "valida": {
+            "title": "Valida",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "valida",
+          "erros",
+          "avisos",
+          "resumo"
+        ],
+        "title": "Relatorio",
+        "type": "object"
+      },
+      "RespostaPergunta": {
+        "additionalProperties": false,
+        "description": "Corpo do ``POST /respostas``: o ``simbolo`` respondido e o valor ou ``nao_sei``.",
+        "properties": {
+          "nao_sei": {
+            "default": false,
+            "title": "Nao Sei",
+            "type": "boolean"
+          },
+          "simbolo": {
+            "title": "Simbolo",
+            "type": "string"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor"
+          }
+        },
+        "required": [
+          "simbolo"
+        ],
+        "title": "RespostaPergunta",
+        "type": "object"
+      },
+      "RespostaTriagem": {
+        "additionalProperties": false,
+        "description": "Resposta a uma tela da triagem: os ``valores`` por símbolo ou ``nao_sei``, nunca os dois nem nenhum.",
+        "properties": {
+          "nao_sei": {
+            "default": false,
+            "title": "Nao Sei",
+            "type": "boolean"
+          },
+          "valores": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valores"
+          }
+        },
+        "title": "RespostaTriagem",
+        "type": "object"
+      },
+      "ResultadoCaso": {
+        "properties": {
+          "caso_id": {
+            "title": "Caso Id",
+            "type": "string"
+          },
+          "descricao": {
+            "title": "Descricao",
+            "type": "string"
+          },
+          "erro": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Erro"
+          },
+          "falhas": {
+            "items": {
+              "$ref": "#/components/schemas/FalhaCaso"
+            },
+            "title": "Falhas",
+            "type": "array"
+          },
+          "mudou_vs_pai": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mudou Vs Pai"
+          },
+          "obtido": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Obtido"
+          },
+          "status": {
+            "enum": [
+              "passou",
+              "falhou",
+              "erro"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "caso_id",
+          "descricao",
+          "status",
+          "falhas"
+        ],
+        "title": "ResultadoCaso",
+        "type": "object"
+      },
+      "ResultadoImportacao": {
+        "description": "``gravado: false`` quando só simulou (``?gravar=false``).",
+        "properties": {
+          "atualizados": {
+            "items": {
+              "$ref": "#/components/schemas/LinhaAtualizada"
+            },
+            "title": "Atualizados",
+            "type": "array"
+          },
+          "criados": {
+            "items": {
+              "$ref": "#/components/schemas/LinhaImportada"
+            },
+            "title": "Criados",
+            "type": "array"
+          },
+          "formato": {
+            "enum": [
+              "csv",
+              "json"
+            ],
+            "title": "Formato",
+            "type": "string"
+          },
+          "gravado": {
+            "title": "Gravado",
+            "type": "boolean"
+          },
+          "rejeitados": {
+            "items": {
+              "$ref": "#/components/schemas/LinhaRejeitada"
+            },
+            "title": "Rejeitados",
+            "type": "array"
+          }
+        },
+        "required": [
+          "formato",
+          "gravado",
+          "criados",
+          "atualizados",
+          "rejeitados"
+        ],
+        "title": "ResultadoImportacao",
+        "type": "object"
+      },
+      "Resumo": {
+        "properties": {
+          "regras": {
+            "title": "Regras",
+            "type": "integer"
+          },
+          "simbolos": {
+            "title": "Simbolos",
+            "type": "integer"
+          },
+          "suposicao_a_validar": {
+            "title": "Suposicao A Validar",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "simbolos",
+          "regras",
+          "suposicao_a_validar"
+        ],
+        "title": "Resumo",
+        "type": "object"
+      },
+      "SalvarResposta": {
+        "properties": {
+          "execucao_nova": {
+            "$ref": "#/components/schemas/ExecucaoResumo"
+          },
+          "execucao_pai": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ExecucaoResumo"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "hash": {
+            "title": "Hash",
+            "type": "string"
+          },
+          "mudancas": {
+            "items": {
+              "$ref": "#/components/schemas/Mudanca"
+            },
+            "title": "Mudancas",
+            "type": "array"
+          },
+          "pai": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pai"
+          },
+          "validacao": {
+            "$ref": "#/components/schemas/Relatorio"
+          },
+          "versao": {
+            "title": "Versao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "versao",
+          "pai",
+          "hash",
+          "validacao",
+          "execucao_nova",
+          "mudancas"
+        ],
+        "title": "SalvarResposta",
+        "type": "object"
+      },
+      "Saude": {
+        "properties": {
+          "status": {
+            "const": "ok",
+            "title": "Status",
+            "type": "string"
+          },
+          "versao_api": {
+            "title": "Versao Api",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "versao_api"
+        ],
+        "title": "Saude",
+        "type": "object"
+      },
+      "ServeA": {
+        "description": "Uma doença que a pergunta ajuda a confirmar ou afastar.",
+        "properties": {
+          "cf_atual": {
+            "title": "Cf Atual",
+            "type": "number"
+          },
+          "doenca": {
+            "title": "Doenca",
+            "type": "string"
+          },
+          "gravidade": {
+            "enum": [
+              "alta",
+              "media",
+              "baixa"
+            ],
+            "title": "Gravidade",
+            "type": "string"
+          },
+          "nome": {
+            "title": "Nome",
+            "type": "string"
+          },
+          "regras": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Regras",
+            "type": "array"
+          }
+        },
+        "required": [
+          "doenca",
+          "nome",
+          "gravidade",
+          "cf_atual",
+          "regras"
+        ],
+        "title": "ServeA",
+        "type": "object"
+      },
+      "SessaoDoAnimal": {
+        "properties": {
+          "criada_em": {
+            "title": "Criada Em",
+            "type": "string"
+          },
+          "fase": {
+            "enum": [
+              "triagem",
+              "dinamica",
+              "encerrada"
+            ],
+            "title": "Fase",
+            "type": "string"
+          },
+          "modo": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ],
+            "title": "Modo",
+            "type": "string"
+          },
+          "sessao_id": {
+            "title": "Sessao Id",
+            "type": "string"
+          },
+          "top1": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Top1"
+          },
+          "urgencia": {
+            "enum": [
+              "chamar_agora",
+              "observar",
+              "sem_problema"
+            ],
+            "title": "Urgencia",
+            "type": "string"
+          },
+          "versao_base": {
+            "title": "Versao Base",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sessao_id",
+          "modo",
+          "versao_base",
+          "fase",
+          "urgencia",
+          "top1",
+          "criada_em"
+        ],
+        "title": "SessaoDoAnimal",
+        "type": "object"
+      },
+      "Simbolo": {
+        "additionalProperties": false,
+        "properties": {
+          "campo_ficha": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Campo Ficha"
+          },
+          "combinacao": {
+            "default": "mycin",
+            "enum": [
+              "mycin",
+              "max"
+            ],
+            "title": "Combinacao",
+            "type": "string"
+          },
+          "dominio": {
+            "discriminator": {
+              "mapping": {
+                "booleano": "#/components/schemas/DominioBooleano",
+                "categorico": "#/components/schemas/DominioCategorico",
+                "numerico": "#/components/schemas/DominioNumerico"
+              },
+              "propertyName": "tipo"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DominioBooleano"
+              },
+              {
+                "$ref": "#/components/schemas/DominioCategorico"
+              },
+              {
+                "$ref": "#/components/schemas/DominioNumerico"
+              }
+            ],
+            "title": "Dominio"
+          },
+          "fonte": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fonte"
+          },
+          "gravidade": {
+            "anyOf": [
+              {
+                "enum": [
+                  "alta",
+                  "media",
+                  "baixa"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gravidade"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "nome": {
+            "title": "Nome",
+            "type": "string"
+          },
+          "nota": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nota"
+          },
+          "pergunta": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "enum": [
+                "produtor",
+                "veterinario"
+              ]
+            },
+            "title": "Pergunta",
+            "type": "object"
+          },
+          "por_que": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "enum": [
+                "produtor",
+                "veterinario"
+              ]
+            },
+            "title": "Por Que",
+            "type": "object"
+          },
+          "tipo": {
+            "enum": [
+              "pergunta",
+              "ficha",
+              "derivado",
+              "doenca",
+              "urgencia"
+            ],
+            "title": "Tipo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "tipo",
+          "nome",
+          "dominio"
+        ],
+        "title": "Simbolo",
+        "type": "object"
+      },
+      "Tela": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "opcoes": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "propertyNames": {
+                "enum": [
+                  "produtor",
+                  "veterinario"
+                ]
+              },
+              "type": "object"
+            },
+            "title": "Opcoes",
+            "type": "object"
+          },
+          "selecao": {
+            "enum": [
+              "unica",
+              "multipla"
+            ],
+            "title": "Selecao",
+            "type": "string"
+          },
+          "simbolos": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Simbolos",
+            "type": "array"
+          },
+          "simbolos_por_modo": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "propertyNames": {
+                  "enum": [
+                    "produtor",
+                    "veterinario"
+                  ]
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Simbolos Por Modo"
+          },
+          "texto": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "enum": [
+                "produtor",
+                "veterinario"
+              ]
+            },
+            "title": "Texto",
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "selecao",
+          "simbolos"
+        ],
+        "title": "Tela",
+        "type": "object"
+      },
+      "TelaTriagem": {
+        "properties": {
+          "campos": {
+            "items": {
+              "$ref": "#/components/schemas/Campo"
+            },
+            "title": "Campos",
+            "type": "array"
+          },
+          "permite_nao_sei": {
+            "title": "Permite Nao Sei",
+            "type": "boolean"
+          },
+          "selecao": {
+            "enum": [
+              "unica",
+              "multipla"
+            ],
+            "title": "Selecao",
+            "type": "string"
+          },
+          "tela_id": {
+            "title": "Tela Id",
+            "type": "string"
+          },
+          "tipo": {
+            "const": "tela_triagem",
+            "title": "Tipo",
+            "type": "string"
+          },
+          "titulo": {
+            "title": "Titulo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tipo",
+          "tela_id",
+          "selecao",
+          "permite_nao_sei",
+          "titulo",
+          "campos"
+        ],
+        "title": "TelaTriagem",
+        "type": "object"
+      },
+      "Traco": {
+        "description": "Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado`` e ``pergunta_feita``.",
+        "properties": {
+          "eventos": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Eventos",
+            "type": "array"
+          }
+        },
+        "required": [
+          "eventos"
+        ],
+        "title": "Traco",
+        "type": "object"
+      },
+      "TrocaModo": {
+        "additionalProperties": false,
+        "properties": {
+          "modo": {
+            "enum": [
+              "produtor",
+              "veterinario"
+            ],
+            "title": "Modo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "modo"
+        ],
+        "title": "TrocaModo",
+        "type": "object"
+      },
+      "UltimaExecucao": {
+        "properties": {
+          "execucao_id": {
+            "title": "Execucao Id",
+            "type": "string"
+          },
+          "falhou": {
+            "title": "Falhou",
+            "type": "integer"
+          },
+          "passou": {
+            "title": "Passou",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "execucao_id",
+          "passou",
+          "falhou"
+        ],
+        "title": "UltimaExecucao",
+        "type": "object"
+      },
+      "UrgenciaEstado": {
+        "properties": {
+          "nivel": {
+            "enum": [
+              "chamar_agora",
+              "observar",
+              "sem_problema"
+            ],
+            "title": "Nivel",
+            "type": "string"
+          },
+          "origem": {
+            "enum": [
+              "padrao",
+              "bandeira_vermelha",
+              "regra_urgencia"
+            ],
+            "title": "Origem",
+            "type": "string"
+          },
+          "provisoria": {
+            "title": "Provisoria",
+            "type": "boolean"
+          },
+          "regras": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Regras",
+            "type": "array"
+          }
+        },
+        "required": [
+          "nivel",
+          "provisoria",
+          "origem"
+        ],
+        "title": "UrgenciaEstado",
+        "type": "object"
+      },
+      "UrgenciaParecer": {
+        "properties": {
+          "nivel": {
+            "enum": [
+              "chamar_agora",
+              "observar",
+              "sem_problema"
+            ],
+            "title": "Nivel",
+            "type": "string"
+          },
+          "origem": {
+            "enum": [
+              "padrao",
+              "bandeira_vermelha",
+              "regra_urgencia"
+            ],
+            "title": "Origem",
+            "type": "string"
+          },
+          "regras": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Regras",
+            "type": "array"
+          },
+          "texto": {
+            "title": "Texto",
+            "type": "string"
+          }
+        },
+        "required": [
+          "nivel",
+          "origem",
+          "regras",
+          "texto"
+        ],
+        "title": "UrgenciaParecer",
+        "type": "object"
+      },
+      "VersaoItem": {
+        "properties": {
+          "autor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Autor"
+          },
+          "data": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data"
+          },
+          "nota": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nota"
+          },
+          "pai": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pai"
+          },
+          "regras": {
+            "title": "Regras",
+            "type": "integer"
+          },
+          "simbolos": {
+            "title": "Simbolos",
+            "type": "integer"
+          },
+          "suposicao_a_validar": {
+            "title": "Suposicao A Validar",
+            "type": "integer"
+          },
+          "ultima_execucao": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/UltimaExecucao"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "versao": {
+            "title": "Versao",
+            "type": "string"
+          }
+        },
+        "required": [
+          "versao",
+          "pai",
+          "autor",
+          "data",
+          "nota",
+          "simbolos",
+          "regras",
+          "suposicao_a_validar",
+          "ultima_execucao"
+        ],
+        "title": "VersaoItem",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "API de anamnese de bovinos leiteiros",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/animais": {
+      "get": {
+        "operationId": "listar_animais",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "busca",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Busca"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListaAnimais"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Listar animais"
+      },
+      "post": {
+        "operationId": "criar_animal",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoAnimal"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Animal"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Cadastrar animal"
+      }
+    },
+    "/api/animais/importacao": {
+      "post": {
+        "operationId": "importar_animais",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "gravar",
+            "required": false,
+            "schema": {
+              "default": true,
+              "title": "Gravar",
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_importar_animais"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultadoImportacao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Importar prontuário (CSV ou JSON)"
+      }
+    },
+    "/api/animais/{animal_id}": {
+      "get": {
+        "operationId": "obter_animal",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "animal_id",
+            "required": true,
+            "schema": {
+              "title": "Animal Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Animal"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Ficha do animal"
+      }
+    },
+    "/api/animais/{animal_id}/sessoes": {
+      "get": {
+        "operationId": "listar_sessoes_animal",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "animal_id",
+            "required": true,
+            "schema": {
+              "title": "Animal Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListaSessoesAnimal"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Sessões de anamnese do animal"
+      }
+    },
+    "/api/base/ativa": {
+      "put": {
+        "description": "Aponta a base ativa para a versão e devolve a que estava ativa (`anterior`).\n\nSessões em andamento continuam na versão em que nasceram; só as novas usam a ativa. Se o status mais recente de\nalgum caso da versão é `falhou` ou `erro` e `confirmar_falhas` não é `true`: 409 `casos_falhando`. \"Mais\nrecente\" é o da execução mais nova da versão que contém o caso, só entre os casos do `casos.json` atual: uma\nexecução parcial só de casos verdes não apaga uma falha que ela não rodou. Versão que nunca foi executada ativa\nsem confirmação. Versão inexistente: 404 `nao_encontrado`. Um `ativa.json` ilegível não impede a ativação\n(`anterior` vem nulo).",
+        "operationId": "ativar_versao",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtivarBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AtivarResposta"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Ativar uma versão da base"
+      }
+    },
+    "/api/base/validar": {
+      "post": {
+        "description": "Valida uma edição (grafo, meta e layout) sem gravar nada.\n\nResponde sempre 200 com o relatório, inclusive quando a estrutura está quebrada (erro `E00`, `estrutura`).\nA única exceção é texto com surrogate Unicode solto (como `\\ud800`), que a resposta não conseguiria\ncodificar: vira 422 `entrada_invalida`. Corpo que não é um objeto, ou fora do formato de `EdicaoBase`,\ntambém é 422 `entrada_invalida`.",
+        "operationId": "validar_base",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EdicaoBase"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Relatorio"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Validar uma edição sem salvar"
+      }
+    },
+    "/api/base/versoes": {
+      "get": {
+        "operationId": "listar_versoes",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListaVersoes"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Listar versões da base"
+      },
+      "post": {
+        "description": "Grava a próxima versão (`vNNNN`) a partir do grafo editado, sem ativá-la, e roda os casos nela e no pai.\n\nCom erro de validação (inclusive estrutura quebrada): 422 `base_invalida`, com os erros em `detalhes`, e nada\né gravado. `pai` nulo ou vazio vale a versão ativa; um `pai` que não existe é 404 `nao_encontrado`. O pai só é\nexecutado se ainda não tem execução. `mudancas` lista os casos cujo status mudou em relação ao pai. Se outra\ngravação criou a mesma versão ao mesmo tempo: 409 `conflito`, sem sobrescrever nada. Se a execução dos casos\nfalhar depois de gravar: 500 `erro_interno`, mas a versão fica no disco (sem execução). O autor da versão é\nsempre `equipe` (suposição: não há login).",
+        "operationId": "salvar_versao",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EdicaoBase"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalvarResposta"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Salvar uma nova versão da base"
+      }
+    },
+    "/api/base/versoes/{versao}": {
+      "get": {
+        "operationId": "obter_versao",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "versao",
+            "required": true,
+            "schema": {
+              "title": "Versao",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Base"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Obter a base de uma versão"
+      }
+    },
+    "/api/base/versoes/{versao}/execucoes": {
+      "get": {
+        "operationId": "listar_execucoes",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "versao",
+            "required": true,
+            "schema": {
+              "title": "Versao",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListaExecucoes"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Listar as execuções de uma versão"
+      },
+      "post": {
+        "description": "Roda os casos (`casos: null` = todos) na versão, grava a execução e a compara com a do pai.\n\nUm caso mal formado ou recusado pelo motor vira resultado `erro`; os outros seguem. Versão ou id de caso\ninexistente é 404 `nao_encontrado` (nada é gravado).",
+        "operationId": "executar_casos",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "versao",
+            "required": true,
+            "schema": {
+              "title": "Versao",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExecutarBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Execucao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Executar os casos de teste numa versão"
+      }
+    },
+    "/api/base/versoes/{versao}/execucoes/{execucao_id}": {
+      "get": {
+        "operationId": "obter_execucao",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "versao",
+            "required": true,
+            "schema": {
+              "title": "Versao",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "execucao_id",
+            "required": true,
+            "schema": {
+              "title": "Execucao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Execucao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Obter uma execução dos casos"
+      }
+    },
+    "/api/base/versoes/{versao}/grafo": {
+      "get": {
+        "operationId": "obter_grafo",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "versao",
+            "required": true,
+            "schema": {
+              "title": "Versao",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Grafo"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Obter a base como grafo para o editor"
+      }
+    },
+    "/api/saude": {
+      "get": {
+        "operationId": "saude",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Saude"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Saúde do servidor"
+      }
+    },
+    "/api/sessoes": {
+      "post": {
+        "operationId": "criar_sessao",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovaSessao"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Iniciar anamnese"
+      }
+    },
+    "/api/sessoes/{sessao_id}": {
+      "get": {
+        "operationId": "obter_sessao",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Estado da anamnese"
+      },
+      "patch": {
+        "operationId": "trocar_modo",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrocaModo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Trocar o modo da anamnese"
+      }
+    },
+    "/api/sessoes/{sessao_id}/acoes/bandeira": {
+      "post": {
+        "operationId": "acao_bandeira",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcaoBandeira"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Continuar a anamnese ou ver o parecer após a bandeira vermelha"
+      }
+    },
+    "/api/sessoes/{sessao_id}/como/{simbolo}": {
+      "get": {
+        "operationId": "obter_como",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "simbolo",
+            "required": true,
+            "schema": {
+              "title": "Simbolo",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Como"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "\"Como?\" de uma doença, derivado ou urgência"
+      }
+    },
+    "/api/sessoes/{sessao_id}/parecer": {
+      "get": {
+        "operationId": "obter_parecer",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Parecer"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Parecer (parcial se a anamnese não encerrou)"
+      }
+    },
+    "/api/sessoes/{sessao_id}/porque/{simbolo}": {
+      "get": {
+        "operationId": "obter_porque",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "simbolo",
+            "required": true,
+            "schema": {
+              "title": "Simbolo",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PorQue"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "\"Por quê?\" de uma pergunta já apresentada"
+      }
+    },
+    "/api/sessoes/{sessao_id}/respostas": {
+      "post": {
+        "operationId": "responder_pergunta",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespostaPergunta"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Responder a pergunta dinâmica da vez"
+      }
+    },
+    "/api/sessoes/{sessao_id}/respostas/{simbolo}": {
+      "put": {
+        "operationId": "corrigir_resposta",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "simbolo",
+            "required": true,
+            "schema": {
+              "title": "Simbolo",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CorrecaoPergunta"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Corrigir uma pergunta dinâmica já respondida"
+      }
+    },
+    "/api/sessoes/{sessao_id}/traco": {
+      "get": {
+        "operationId": "obter_traco",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Traco"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Traço de inferência da sessão"
+      }
+    },
+    "/api/sessoes/{sessao_id}/triagem/{tela_id}": {
+      "post": {
+        "operationId": "responder_triagem",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "tela_id",
+            "required": true,
+            "schema": {
+              "title": "Tela Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespostaTriagem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Responder uma tela da triagem"
+      },
+      "put": {
+        "operationId": "corrigir_triagem",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "sessao_id",
+            "required": true,
+            "schema": {
+              "title": "Sessao Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "tela_id",
+            "required": true,
+            "schema": {
+              "title": "Tela Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespostaTriagem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoSessao"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Entrada recusada (`entrada_invalida` e os demais códigos 422 da Seção 4.4)."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Erro interno (`erro_interno`); a mensagem nunca revela detalhe técnico."
+          }
+        },
+        "summary": "Corrigir uma tela já respondida"
+      }
+    }
+  }
+}

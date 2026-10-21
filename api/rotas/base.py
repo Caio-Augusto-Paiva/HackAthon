@@ -4,6 +4,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends
 
 from api.contexto import Contexto, obter_contexto
+from api.rotas.respostas import ERROS_DE_CONFLITO, ERROS_DE_ENTRADA, ERROS_DE_RECURSO, ERROS_SO_INTERNO
 from api.schemas.base import (
     AtivarBody,
     AtivarResposta,
@@ -23,7 +24,11 @@ router = APIRouter()
 
 
 @router.get(
-    "/base/versoes", operation_id="listar_versoes", response_model=ListaVersoes, summary="Listar versões da base"
+    "/base/versoes",
+    operation_id="listar_versoes",
+    responses=ERROS_SO_INTERNO,
+    response_model=ListaVersoes,
+    summary="Listar versões da base",
 )
 def listar_versoes(ctx: Contexto = Depends(obter_contexto)) -> ListaVersoes:
     return base_servico.listar_versoes(ctx)
@@ -33,6 +38,7 @@ def listar_versoes(ctx: Contexto = Depends(obter_contexto)) -> ListaVersoes:
 @router.get(
     "/base/versoes/{versao}",
     operation_id="obter_versao",
+    responses=ERROS_DE_RECURSO,
     response_model=Base,
     response_model_exclude_none=True,
     summary="Obter a base de uma versão",
@@ -46,6 +52,7 @@ def obter_versao(versao: str, ctx: Contexto = Depends(obter_contexto)) -> Base:
 @router.get(
     "/base/versoes/{versao}/grafo",
     operation_id="obter_grafo",
+    responses=ERROS_DE_RECURSO,
     response_model=Grafo,
     response_model_exclude_unset=True,
     summary="Obter a base como grafo para o editor",
@@ -57,6 +64,7 @@ def obter_grafo(versao: str, ctx: Contexto = Depends(obter_contexto)) -> Grafo:
 @router.post(
     "/base/validar",
     operation_id="validar_base",
+    responses=ERROS_DE_ENTRADA,
     status_code=200,
     response_model=Relatorio,
     summary="Validar uma edição sem salvar",
@@ -75,6 +83,7 @@ def validar_base(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) -> 
 @router.post(
     "/base/versoes",
     operation_id="salvar_versao",
+    responses=ERROS_DE_CONFLITO,
     status_code=201,
     response_model=SalvarResposta,
     summary="Salvar uma nova versão da base",
@@ -95,6 +104,7 @@ def salvar_versao(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) ->
 @router.put(
     "/base/ativa",
     operation_id="ativar_versao",
+    responses=ERROS_DE_CONFLITO,
     status_code=200,
     response_model=AtivarResposta,
     summary="Ativar uma versão da base",
@@ -115,6 +125,7 @@ def ativar_versao(corpo: AtivarBody, ctx: Contexto = Depends(obter_contexto)) ->
 @router.post(
     "/base/versoes/{versao}/execucoes",
     operation_id="executar_casos",
+    responses=ERROS_DE_RECURSO,
     status_code=201,
     response_model=Execucao,
     summary="Executar os casos de teste numa versão",
@@ -131,6 +142,7 @@ def executar_casos(versao: str, corpo: ExecutarBody, ctx: Contexto = Depends(obt
 @router.get(
     "/base/versoes/{versao}/execucoes",
     operation_id="listar_execucoes",
+    responses=ERROS_DE_RECURSO,
     response_model=ListaExecucoes,
     summary="Listar as execuções de uma versão",
 )
@@ -141,6 +153,7 @@ def listar_execucoes(versao: str, ctx: Contexto = Depends(obter_contexto)) -> Li
 @router.get(
     "/base/versoes/{versao}/execucoes/{execucao_id}",
     operation_id="obter_execucao",
+    responses=ERROS_DE_RECURSO,
     response_model=Execucao,
     summary="Obter uma execução dos casos",
 )
