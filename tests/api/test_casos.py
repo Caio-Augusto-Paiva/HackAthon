@@ -1,6 +1,7 @@
 """Execução dos casos de teste por versão (4.5.3). Dados fictícios: a base mínima e ``casos_minima.json``."""
 from __future__ import annotations
 
+import codecs
 import json
 from contextlib import closing
 from pathlib import Path
@@ -266,6 +267,32 @@ def test_arquivo_de_casos_corrompido_e_erro_do_servidor(cliente: TestClient, com
     assert "casos" not in erro["mensagem"].lower()
 
 
+def test_casos_com_bom_utf8_sao_lidos_como_no_carregador(cliente: TestClient, com_casos: Path, config: Configuracao):
+    texto = com_casos.read_text(encoding="utf-8")
+    com_casos.write_text(texto, encoding="utf-8-sig")  # o editor do Windows grava o BOM
+    assert com_casos.read_bytes().startswith(codecs.BOM_UTF8)
+
+    corpo = _executar(cliente)
+    assert (corpo["total"], corpo["passou"], corpo["falhou"]) == (3, 2, 1)
+    # o mesmo arquivo e os mesmos ids que o kb.carregador entrega
+    ids_do_kb = [c.id for c in Repositorio(config.base_dir, hoje=config.hoje).carregar_casos()]
+    assert [r["caso_id"] for r in corpo["resultados"]] == ids_do_kb
+
+
+@pytest.mark.parametrize("conteudo", ["{}", '{"id": "C-1"}', "null", '"casos"', "7"])
+def test_casos_json_valido_que_nao_e_lista_e_erro_do_servidor(
+    cliente: TestClient, com_casos: Path, config: Configuracao, caplog: pytest.LogCaptureFixture, conteudo: str
+):
+    # igual ao JSON quebrado: 500 erro_interno de corpo fixo, o motivo só no log, nada gravado
+    com_casos.write_text(conteudo, encoding="utf-8")
+    resposta = cliente.post("/api/base/versoes/v0001/execucoes", json={"casos": None})
+    erro = _erro(resposta, 500, "erro_interno")
+    assert erro["mensagem"] == "Erro interno. Tente novamente."
+    assert "lista" not in resposta.text and "casos.json" not in resposta.text
+    assert "casos.json deve conter uma lista" in caplog.text
+    assert _linhas(config, "SELECT id FROM execucoes_casos") == []
+
+
 # --- comparação com a versão pai ------------------------------------------------------------
 
 
@@ -290,19 +317,47 @@ def test_comparacao_com_pai(cliente: TestClient, com_casos: Path, config: Config
     assert lida == filha
 
 
-def test_comparacao_usa_a_ultima_execucao_do_pai(cliente: TestClient, com_casos: Path, config: Configuracao):
-    _executar(cliente)  # ex_0001: C-D1-OK passou
+def _mudar_esperado(arquivo: Path, caso_id: str, esperado: dict) -> None:
+    casos = json.loads(arquivo.read_text(encoding="utf-8"))
+    next(c for c in casos if c["id"] == caso_id)["esperado"] = esperado
+    arquivo.write_text(json.dumps(casos, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def test_comparacao_e_por_caso_na_execucao_mais_recente_que_o_contem(
+    cliente: TestClient, com_casos: Path, config: Configuracao
+):
+    # ex_0001: execução completa do pai (D1-OK passou, BV-OK passou, FALHA falhou)
+    _executar(cliente)
+    # ex_0002: execução parcial, só o C-FALHA, que agora passa (esperado corrigido para o top1 real)
+    _mudar_esperado(com_casos, "C-FALHA", {"top1": "d1"})
+    parcial = _executar(cliente, casos=["C-FALHA"])
+    assert _resultado(parcial, "C-FALHA")["status"] == "passou"
+    # na filha o C-FALHA volta a falhar (esperado errado outra vez) e o C-D1-OK sai da faixa
+    _mudar_esperado(com_casos, "C-FALHA", {"top1": "outra_doenca"})
     _salvar_filha(config, 0.1)
-    # o pai é executado de novo, agora com um caso a menos que o outro: vale a ex_0002
-    _executar(cliente, casos=["C-FALHA"])
+
     filha = _executar(cliente, versao="v0002")
-    # C-D1-OK e C-BV-OK não estão na última execução do pai: aparecem como "ausente"
+    assert filha["comparada_com"] == "v0001"
+    # nenhum caso é "ausente": o C-D1-OK e o C-BV-OK vêm da ex_0001; o C-FALHA, da ex_0002 (a mais recente com ele)
+    assert filha["mudancas"] == [
+        {"caso_id": "C-D1-OK", "antes": "passou", "depois": "falhou"},
+        {"caso_id": "C-FALHA", "antes": "passou", "depois": "falhou"},
+    ]
+    assert [r["mudou_vs_pai"] for r in filha["resultados"]] == ["passou->falhou", None, "passou->falhou"]
+    assert "ausente" not in json.dumps(filha)
+
+
+def test_caso_que_nenhuma_execucao_do_pai_rodou_e_ausente(cliente: TestClient, com_casos: Path, config: Configuracao):
+    _executar(cliente, casos=["C-FALHA"])  # a única execução do pai rodou só o C-FALHA
+    _salvar_filha(config, 0.1)
+    filha = _executar(cliente, versao="v0002")
+    assert filha["comparada_com"] == "v0001"
     assert filha["mudancas"] == [
         {"caso_id": "C-D1-OK", "antes": "ausente", "depois": "falhou"},
         {"caso_id": "C-BV-OK", "antes": "ausente", "depois": "passou"},
     ]
     assert _resultado(filha, "C-D1-OK")["mudou_vs_pai"] == "ausente->falhou"
-    assert _resultado(filha, "C-FALHA")["mudou_vs_pai"] is None
+    assert _resultado(filha, "C-FALHA")["mudou_vs_pai"] is None  # falhou no pai e falha na filha
 
 
 def test_pai_sem_execucao_nao_compara(cliente: TestClient, com_casos: Path, config: Configuracao):
