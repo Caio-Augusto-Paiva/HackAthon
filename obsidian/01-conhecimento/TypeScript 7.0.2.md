@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # TypeScript 7.0.2
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Node.js LTS 24 (Krypton)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/EXTRACTED #community/Playwright_Test_webServer

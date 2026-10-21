@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Instruções e regras do hackathon"
+community: "Motor de inferencia"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Motor_de_inferencia
 ---
 
 # CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)
@@ -21,4 +21,4 @@ tags:
 - [[Temas T1 a T3 (documento D, pagina 3)]] - `cites` [EXTRACTED]
 - [[Temas T1 a T3 (slide 9)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/document #graphify/EXTRACTED #community/Motor_de_inferencia

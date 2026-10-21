@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "rationale"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # Fonte F6 (cetose) nao menciona cheiro de acetona
@@ -14,4 +14,4 @@ tags:
 - [[Cetose bovina (hiperCetonemia)]] - `rationale_for` [EXTRACTED]
 - [[Pagina F12 trata de dermatite digital e foot rot, nao de laminite]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/rationale #graphify/EXTRACTED #community/MSD_Vet_Manual

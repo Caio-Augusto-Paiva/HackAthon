@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # PowerShell ExecutionPolicy Bypass
@@ -14,4 +14,4 @@ tags:
 - [[Demonstracao em Windows 11]] - `conceptually_related_to` [INFERRED]
 - [[rodar.ps1 (script de execucao)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/rationale #graphify/INFERRED #community/Playwright_Test_webServer

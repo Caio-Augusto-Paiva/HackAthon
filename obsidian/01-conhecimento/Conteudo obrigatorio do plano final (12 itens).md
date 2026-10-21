@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # Conteudo obrigatorio do plano final (12 itens)
@@ -14,4 +14,4 @@ tags:
 - [[Limite da fase de planejamento (sem implementacao)]] - `conceptually_related_to` [EXTRACTED]
 - [[Marcacao de suposicao a validar (conhecimento veterinario)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/concept #graphify/EXTRACTED #community/MSD_Vet_Manual

@@ -1,17 +1,16 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Motor_de_inferencia
 ---
 
 # Encadeamento para frente e para tras
 
 ## Connections
 - [[Motor de inferencia]] - `conceptually_related_to` [EXTRACTED]
-- [[Nucleo inferir(base, fatos), sem estado]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

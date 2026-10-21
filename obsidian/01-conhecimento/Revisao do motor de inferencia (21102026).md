@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Revisão do motor e conformidade"
+community: "Motor de inferência da seção 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Revisão_do_motor_e_conformidade
+  - community/Motor_de_inferência_da_seção_1
 ---
 
 # Revisao do motor de inferencia (21/10/2026)
@@ -15,6 +15,6 @@ tags:
 - [[Especificacao canonica do projeto (anamnese bovinos)]] - `references` [EXTRACTED]
 - [[Evidencia final 56 testes sem falhas]] - `shares_data_with` [INFERRED]
 - [[Focos da revisao (sem valor, contradicoes, loops, bandeiras)]] - `conceptually_related_to` [INFERRED]
-- [[Motor de inferencia da secao 1 (pacote engine)]] - `references` [EXTRACTED]
+- [[Motor de inferência da seção 1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Revisão_do_motor_e_conformidade
+#graphify/document #graphify/EXTRACTED #community/Motor_de_inferência_da_seção_1

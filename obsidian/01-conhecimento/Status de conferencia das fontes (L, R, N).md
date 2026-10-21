@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "rationale"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # Status de conferencia das fontes (L, R, N)
@@ -14,4 +14,4 @@ tags:
 - [[MSD Vet Manual]] - `rationale_for` [EXTRACTED]
 - [[Marcacao de suposicao a validar (conhecimento veterinario)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/rationale #graphify/EXTRACTED #community/MSD_Vet_Manual

@@ -59,13 +59,13 @@ class SessaoTests(unittest.TestCase):
         self.assertEqual(s.resultado.cfs['d'],F(9,10))
         self.assertEqual(s.estado()['fase'],'triagem')
 
-    def test_bandeira_pausa_so_produtor_e_urgencia_irreversivel(self):
+    def test_bandeira_pausa_so_produtor_e_correcao_remove_bandeira(self):
         s=self.criar(ficha={'dias':10}); s.responder_triagem('multipla',['t2'])
         self.assertTrue(s.estado()['pausa']); self.assertEqual(s.estado()['urgencia'],'chamar_agora')
         s.acao_bandeira('continuar')
         s.responder_triagem('multipla',[],corrigir=True)
-        self.assertFalse(s.estado()['pausa']); self.assertEqual(s.estado()['urgencia'],'chamar_agora')
-        self.assertIn('bv',s.como('chamar_agora')['bandeiras_historicas'])
+        self.assertFalse(s.estado()['pausa']); self.assertEqual(s.estado()['urgencia'],'sem_problema')
+        self.assertEqual(s.estado()['bandeiras'],[])
         v=self.criar(modo='veterinario',ficha={'dias':10}); v.responder_triagem('multipla',['t2'])
         self.assertFalse(v.estado()['pausa']); self.assertEqual(v.estado()['urgencia'],'chamar_agora')
 
@@ -140,7 +140,7 @@ class ParecerTests(unittest.TestCase):
         itens=[item for bloco in p['blocos'] for item in bloco['itens']]
         self.assertEqual(len(itens),8)
         self.assertEqual([x['doenca'] for x in itens],['d0','d1','d2','d3','d4','d7','d5','d6'])
-        self.assertEqual([x['percentual'] for x in itens],[80,50,50,21,0,0,0,0])
+        self.assertEqual([x['percentual'] for x in itens],[80,50,50,21,20,0,0,0])
         self.assertEqual([x['situacao'] for x in itens[-3:]],['sem_evidencia','sem_evidencia','descartada'])
         self.assertEqual([len(x['itens']) for x in p['blocos']],[2,2,4])
         self.assertIn('não probabilidade',p['aviso'])

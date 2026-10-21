@@ -52,6 +52,7 @@ def inferir(base, fatos):
         evento(traco,'cf_combinado',simbolo=id,regra_id=r['id'],antes=antes,depois=depois)
         cfs[id]=depois
         memoria[id]=Fato(id,True,depois,'regra')
+        evento(traco,'fato_adicionado',**dados_fato(memoria[id]),regra_id=r['id'])
         disparadas.append(r)
         if r.get('classe')=='bandeira_vermelha': bandeiras.append(r['id'])
         if r.get('classe') in ('urgencia','bandeira_vermelha'): urgencias.append(id)

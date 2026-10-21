@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Planejamento, agentes e alocação"
+community: "Limite da fase de planejamento (sem implementacao)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planejamento_agentes_e_alocação
+  - community/Limite_da_fase_de_planejamento_sem_implementacao
 ---
 
 # Limite da fase de planejamento (sem implementacao)
@@ -16,4 +16,4 @@ tags:
 - [[Skill superpowersbrainstorming]] - `references` [EXTRACTED]
 - [[Skill superpowerswriting-plans]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
+#graphify/concept #graphify/EXTRACTED #community/Limite_da_fase_de_planejamento_sem_implementacao

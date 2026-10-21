@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Componentes do sistema especialista"
+community: "Testes com casos conhecidos por versao da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Componentes_do_sistema_especialista
+  - community/Testes_com_casos_conhecidos_por_versao_da_base
 ---
 
 # Skills nao confirmadas (FastAPI, pytest, React Flow, Vite)
@@ -15,4 +15,4 @@ tags:
 - [[React Flow]] - `references` [EXTRACTED]
 - [[pytest]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Componentes_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Testes_com_casos_conhecidos_por_versao_da_base

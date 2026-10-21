@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Motor_de_inferencia
 ---
 
 # Entrega, demonstracao e localhost (slides 10 e 15)
@@ -14,4 +14,4 @@ tags:
 - [[CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)]] - `cites` [EXTRACTED]
 - [[Restricao execucao completa em localhost]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

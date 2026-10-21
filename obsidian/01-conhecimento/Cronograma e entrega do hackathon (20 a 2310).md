@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Motor_de_inferencia
 ---
 
 # Cronograma e entrega do hackathon (20 a 23/10)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Regulamento, pontuacao e cronograma (slide 3)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

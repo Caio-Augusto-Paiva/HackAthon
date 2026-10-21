@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "rationale"
-community: "Planejamento, agentes e alocação"
+community: "Motor de inferência da seção 1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planejamento_agentes_e_alocação
+  - community/Motor_de_inferência_da_seção_1
 ---
 
 # Revisor de outra familia de modelo
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
+#graphify/rationale #graphify/EXTRACTED #community/Motor_de_inferência_da_seção_1

@@ -1,16 +1,17 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Potencial e parada (implementação)"
+community: "Potencial com intervalos conservadores"
+location: "L96"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Potencial_e_parada_implementação
+  - community/Potencial_com_intervalos_conservadores
 ---
 
 # Potencial conservador: pode superestimar, nunca subestimar
 
 ## Connections
-- [[Potencial com limites inferior e superior]] - `rationale_for` [EXTRACTED]
+- [[Potencial com intervalos conservadores]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Potencial_e_parada_implementação
+#graphify/rationale #graphify/EXTRACTED #community/Potencial_com_intervalos_conservadores

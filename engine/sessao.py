@@ -6,7 +6,7 @@ from .selecao import analisar
 from .parada import motivo_parada
 from .parecer import montar_parecer
 from .explicacao import como
-from .traco import evento, para_json
+from .traco import evento, para_json, dados_fato
 from .avaliacao import avaliar_condicao
 
 
@@ -19,14 +19,82 @@ class Sessao:
         self.modo=modo
         self.limite_dinamico=limite_dinamico
         self.memoria=Memoria(self.base)
-        self.traco=[]
+        self._historico=[]
         self.perguntas={}
         self.dinamicas=[]
         self.bandeiras_historicas={}
         self.reconhecidas=set()
         self.finalizada_por_alerta=False
-        self.memoria.registrar(ficha or {},origem='ficha')
+        preenchidos={id:valor for id,valor in (ficha or {}).items()
+                     if valor is not None and not (isinstance(valor,dict) and valor.get('valor') is None
+                                                  and not valor.get('nao_sei',False))}
+        self.memoria.registrar(preenchidos,origem='ficha')
         self._calcular()
+
+    @classmethod
+    def restaurar(cls, base, *, modo='produtor', fatos, perguntas_dinamicas=(),
+                  perguntas_feitas=None, bandeiras_reconhecidas=(),
+                  finalizada_por_alerta=False, limite_dinamico=None,
+                  correcoes=(), bandeiras_ativas=None):
+        """Reconstrói dados persistidos diretamente, sem repetir o diálogo.
+
+        A API decodifica suas colunas JSON e fornece os fatos por símbolo,
+        ids dinâmicos em ordem e eventos de perguntas com o motivo original.
+        Dados são validados como observações; não se exige que cada resposta
+        antiga ainda seja a próxima pergunta após uma correção.
+        """
+        sessao=cls(base,modo=modo,limite_dinamico=limite_dinamico)
+        sessao.memoria.registrar(fatos)
+        dinamicas=list(perguntas_dinamicas)
+        if len(dinamicas)!=len(set(dinamicas)) or any(id not in sessao.fatos for id in dinamicas):
+            raise ValueError('Perguntas dinâmicas duplicadas ou sem resposta persistida')
+        sessao.dinamicas=dinamicas
+        perguntas=(list(perguntas_feitas.values()) if isinstance(perguntas_feitas,dict)
+                   else list(perguntas_feitas or ()))
+        historico=deepcopy(perguntas+list(correcoes))
+        if historico and all('id' in e for e in historico):
+            historico.sort(key=lambda e:e['id'])
+        sessao.perguntas={}
+        for e in historico:
+            id=e.get('simbolo')
+            if id not in sessao.base.simbolos or sessao.base.simbolos[id]['tipo'] not in ('pergunta','ficha'):
+                raise ValueError('Evento persistido com símbolo inválido')
+            if e.get('tipo')=='pergunta_feita':
+                if id in sessao.perguntas or not e.get('motivo'):
+                    raise ValueError('Pergunta persistida duplicada ou sem motivo')
+            elif e.get('tipo')!='fato_adicionado' or not e.get('correcao'):
+                raise ValueError('Somente perguntas e correções pertencem ao histórico')
+            item=evento(sessao._historico,e['tipo'],**{k:v for k,v in e.items() if k not in ('id','tipo')})
+            if item['tipo']=='pergunta_feita': sessao.perguntas[id]=item
+        sessao.bandeiras_historicas=deepcopy(bandeiras_ativas or {})
+        ids_bandeira={r['id'] for r in sessao.base.regras if r.get('classe')=='bandeira_vermelha'}
+        if not set(sessao.bandeiras_historicas)<=ids_bandeira:
+            raise ValueError('Bandeira persistida inexistente')
+        sessao.reconhecidas=set(bandeiras_reconhecidas)
+        sessao._calcular()
+        if type(finalizada_por_alerta) is not bool or (finalizada_por_alerta and not sessao.bandeiras_historicas):
+            raise ValueError('Encerramento por alerta inválido')
+        sessao.finalizada_por_alerta=finalizada_por_alerta
+        return sessao
+
+    def exportar(self):
+        """Snapshot JSON aceito por restaurar(base, **snapshot), sem banco."""
+        from fractions import Fraction
+        fatos={id:{'valor':str(f.valor) if isinstance(f.valor,Fraction) else f.valor,
+                   'cf':str(f.cf),'origem':f.origem,'tela_id':f.tela_id} for id,f in self.fatos.items()}
+        return deepcopy({'modo':self.modo,'fatos':fatos,'perguntas_dinamicas':self.dinamicas,
+                         'perguntas_feitas':self.perguntas,'bandeiras_reconhecidas':sorted(self.reconhecidas),
+                         'finalizada_por_alerta':self.finalizada_por_alerta,'limite_dinamico':self.limite_dinamico,
+                         'correcoes':[e for e in self._historico if e.get('correcao')],
+                         'bandeiras_ativas':self.bandeiras_historicas})
+
+    @property
+    def traco(self):
+        """Histórico de perguntas/correções e somente o cálculo atual."""
+        traco=deepcopy(self._historico)
+        for e in self.resultado.traco:
+            evento(traco,e['tipo'],**{k:v for k,v in e.items() if k not in ('id','tipo')})
+        return traco
 
     @property
     def fatos(self): return dict(self.memoria.fatos)
@@ -34,13 +102,19 @@ class Sessao:
     @property
     def resultado(self): return self.analise.resultado
 
-    def _calcular(self):
+    def _calcular(self, *, correcao=False):
         self.analise=analisar(self.base,self.memoria.fatos,self.modo)
-        for e in self.resultado.traco:
-            evento(self.traco,e['tipo'],**{k:v for k,v in e.items() if k not in ('id','tipo')})
+        if correcao:
+            self.bandeiras_historicas={}
         for id in self.resultado.bandeiras:
             if id not in self.bandeiras_historicas:
                 self.bandeiras_historicas[id]=deepcopy(como(self.resultado,'chamar_agora'))
+        self.reconhecidas.intersection_update(self.bandeiras_historicas)
+
+    def _registrar_correcao(self, anteriores):
+        for id,anterior in anteriores.items():
+            evento(self._historico,'fato_adicionado',**dados_fato(self.memoria.fatos[id]),
+                   correcao=True,anterior=para_json(dados_fato(anterior)))
 
     def _ids_tela(self,tela):
         if 'simbolos_por_modo' in tela:
@@ -53,7 +127,7 @@ class Sessao:
 
     def _pergunta(self,id,origem,motivo,**extras):
         if id not in self.perguntas:
-            pergunta=evento(self.traco,'pergunta_feita',simbolo=id,origem=origem,motivo=motivo,**extras)
+            pergunta=evento(self._historico,'pergunta_feita',simbolo=id,origem=origem,motivo=motivo,**extras)
             self.perguntas[id]=pergunta
 
     def estado(self):
@@ -102,17 +176,24 @@ class Sessao:
         if resposta is None or resposta in ('nao_sei','não sei'):
             entradas={id:None for id in ids}
         elif t['selecao']=='multipla':
-            if not isinstance(resposta,list) or len(resposta)!=len(set(resposta)) or not set(resposta)<=set(ids):
+            if isinstance(resposta,dict):
+                if set(resposta)!=set(ids) or any(type(v) is not bool for v in resposta.values()):
+                    raise ValueError('Mapa de seleção múltipla inválido')
+                entradas=resposta
+            elif isinstance(resposta,list) and len(resposta)==len(set(resposta)) and set(resposta)<=set(ids):
+                entradas={id:id in resposta for id in ids}
+            else:
                 raise ValueError('Seleção múltipla inválida')
-            entradas={id:id in resposta for id in ids}
         elif isinstance(resposta,dict):
             if set(resposta)!=set(ids): raise ValueError('Resposta não corresponde aos símbolos da tela')
             entradas=resposta
         elif len(ids)==1: entradas={ids[0]:resposta}
         else: raise ValueError('Informe os valores da tela por símbolo')
+        anteriores={id:self.memoria.fatos[id] for id in ids} if corrigir else {}
         self.memoria.registrar(entradas,tela_id=tela_id)
+        if corrigir: self._registrar_correcao(anteriores)
         self.finalizada_por_alerta=False
-        self._calcular()
+        self._calcular(correcao=corrigir)
         return self.estado()
 
     def responder(self,simbolo,valor,*,corrigir=False):
@@ -122,10 +203,12 @@ class Sessao:
             proxima=self.estado()['proxima']
             if not proxima or proxima['tipo']!='pergunta' or proxima['id']!=simbolo:
                 raise ValueError('Pergunta não aplicável neste momento/modo')
+        anteriores={simbolo:self.memoria.fatos[simbolo]} if corrigir else {}
         self.memoria.registrar({simbolo:valor})
+        if corrigir: self._registrar_correcao(anteriores)
         if not corrigir: self.dinamicas.append(simbolo)
         self.finalizada_por_alerta=False
-        self._calcular()
+        self._calcular(correcao=corrigir)
         return self.estado()
 
     def trocar_modo(self,modo):
@@ -145,7 +228,7 @@ class Sessao:
     def parecer(self):
         estado=self.estado()
         nao_verificadas=[]
-        for regra in self.base.regras:
+        for regra in self.analise.viaveis.values() if estado['motivo_parada']=='limite' else ():
             if regra.get('classe')!='bandeira_vermelha' or regra['id'] in self.bandeiras_historicas:
                 continue
             valores=[avaliar_condicao(c,self.resultado.fatos,self.base.simbolos) for c in regra['se']]

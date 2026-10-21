@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação: entrega e arquitetura"
+community: "Motor de inferência (engine/)"
 location: "Seção 6.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_entrega_e_arquitetura
+  - community/Motor_de_inferência_engine/
 ---
 
 # Documentação de entrega (processo, arquitetura, regras)
@@ -16,4 +16,4 @@ tags:
 - [[Diário de uso da IA e revisões cruzadas]] - `references` [EXTRACTED]
 - [[Especificação PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/

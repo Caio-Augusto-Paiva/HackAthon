@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # uv (sync, run, python pin)
@@ -16,4 +16,4 @@ tags:
 - [[rodar.ps1 (script de execucao)]] - `references` [INFERRED]
 - [[uv 0.13.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

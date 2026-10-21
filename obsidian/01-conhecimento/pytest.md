@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Componentes do sistema especialista"
+community: "Testes com casos conhecidos por versao da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Componentes_do_sistema_especialista
+  - community/Testes_com_casos_conhecidos_por_versao_da_base
 ---
 
 # pytest
@@ -14,4 +14,4 @@ tags:
 - [[Skills nao confirmadas (FastAPI, pytest, React Flow, Vite)]] - `references` [EXTRACTED]
 - [[Testes com casos conhecidos por versao da base]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Componentes_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Testes_com_casos_conhecidos_por_versao_da_base

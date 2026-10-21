@@ -6,6 +6,8 @@ from .cf import fracao
 
 LIMIARES = {'descarte': -0.2, 'premissa': 0.2, 'hipotese_relevante': 0.35,
             'exaustao': 0.6, 'potencial': 0.7, 'confirmacao': 0.8}
+CORTES = {'bloco_principal': 0.5, 'bloco_diferencial': 0.2}
+PRIORIDADES = {'bandeira_vermelha': 100, 'urgencia': 50, 'evidencia': 10}
 CAMADAS = {'pergunta': 0, 'ficha': 0, 'derivado': 1, 'doenca': 2, 'urgencia': 3}
 GRAVIDADES = {'baixa': 0, 'media': 1, 'alta': 2}
 MODOS = ('produtor', 'veterinario')
@@ -40,9 +42,11 @@ class Base:
         from .validacao import validar
         validar(dados)
         meta = dados.get('meta', {})
-        meta['limiares'] = {k: fracao(meta.get('limiares', {}).get(k,v)) for k,v in LIMIARES.items()}
+        meta['limiares'] = {k: fracao(meta.get('limiares', {}).get(k,v)) for k,v in {**LIMIARES,**CORTES}.items()}
         meta['limite_dinamico'] = {'produtor': 12, 'veterinario': 25, **meta.get('limite_dinamico', {})}
         meta.setdefault('triagem', [])
+        for regra in dados['regras']:
+            regra.setdefault('prioridade',PRIORIDADES[regra.get('classe','evidencia')])
         return cls({s['id']:s for s in dados['simbolos']}, tuple(dados['regras']), meta)
 
     def regras_para(self, id):

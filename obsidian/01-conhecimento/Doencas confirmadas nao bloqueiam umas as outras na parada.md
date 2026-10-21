@@ -1,16 +1,16 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Potencial e parada (implementação)"
+community: "Sessao: triagem, perguntas e correções"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Potencial_e_parada_implementação
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Doencas confirmadas nao bloqueiam umas as outras na parada
 
 ## Connections
-- [[Criterios de parada (triagem, comorbidade, limite, exaustao)]] - `rationale_for` [EXTRACTED]
+- [[Encerramento, limite e comorbidade]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Potencial_e_parada_implementação
+#graphify/rationale #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

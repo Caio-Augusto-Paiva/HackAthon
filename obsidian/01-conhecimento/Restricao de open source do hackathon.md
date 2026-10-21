@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "concept"
-community: "Skills Anthropic e licença"
+community: "Playwright Test webServer"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Skills_Anthropic_e_licença
+  - community/Playwright_Test_webServer
 ---
 
 # Restricao de open source do hackathon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pptx (skill, source-available)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Skills_Anthropic_e_licença
+#graphify/concept #graphify/EXTRACTED #community/Playwright_Test_webServer

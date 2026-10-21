@@ -1,16 +1,16 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Interface, memória e lacunas da API"
+community: "Sessao: triagem, perguntas e correções"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Interface_memória_e_lacunas_da_API
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Adaptacoes que a API precisa fazer sobre o motor
 
 ## Connections
-- [[Sessao dialogo com triagem, perguntas, correcao e modo]] - `conceptually_related_to` [EXTRACTED]
+- [[Sessao triagem, perguntas e correções]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Interface_memória_e_lacunas_da_API
+#graphify/concept #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

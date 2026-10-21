@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Planejamento, agentes e alocação"
+community: "Motor de inferência da seção 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planejamento_agentes_e_alocação
+  - community/Motor_de_inferência_da_seção_1
 ---
 
 # Claude Code (Claude Pro)
@@ -15,4 +15,4 @@ tags:
 - [[Claude Code fica com o critico e fora da revisao]] - `rationale_for` [EXTRACTED]
 - [[Implementacao por pessoa (A, B, C) com agente principal e reserva]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_da_seção_1

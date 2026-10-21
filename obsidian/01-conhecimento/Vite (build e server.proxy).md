@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # Vite (build e server.proxy)
@@ -15,4 +15,4 @@ tags:
 - [[VITE_USAR_MOCKS (modo dev)]] - `conceptually_related_to` [INFERRED]
 - [[Vite 8.3.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

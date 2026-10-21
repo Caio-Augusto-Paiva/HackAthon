@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Planejamento, agentes e alocação"
+community: "Motor de inferência da seção 1"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Planejamento_agentes_e_alocação
+  - community/Motor_de_inferência_da_seção_1
 ---
 
 # Agentes de codificacao com IA (Codex, Claude Code, Copilot, Gemini Code Assist, Opencode)
@@ -15,4 +15,4 @@ tags:
 - [[Codex (ChatGPT Plus)]] - `conceptually_related_to` [INFERRED]
 - [[Desenvolvimento de Sistemas Especialistas com Vibe Coding]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Planejamento_agentes_e_alocação
+#graphify/concept #graphify/INFERRED #community/Motor_de_inferência_da_seção_1

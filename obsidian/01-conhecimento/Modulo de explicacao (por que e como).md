@@ -1,17 +1,16 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Explicação e traço"
+community: "Traco de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Explicação_e_traço
+  - community/Traco_de_inferencia
 ---
 
 # Modulo de explicacao (por que e como)
 
 ## Connections
-- [[Explicacoes por que e como]] - `implements` [INFERRED]
 - [[Traco de inferencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Explicação_e_traço
+#graphify/concept #graphify/EXTRACTED #community/Traco_de_inferencia

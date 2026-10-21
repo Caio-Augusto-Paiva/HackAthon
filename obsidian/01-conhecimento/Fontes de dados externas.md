@@ -1,17 +1,16 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Revisão do motor e conformidade"
+community: "Sessao: triagem, perguntas e correções"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Revisão_do_motor_e_conformidade
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Fontes de dados externas
 
 ## Connections
 - [[Memoria de trabalho]] - `conceptually_related_to` [EXTRACTED]
-- [[Origens de observacao resposta, ficha, importacao]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Revisão_do_motor_e_conformidade
+#graphify/concept #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

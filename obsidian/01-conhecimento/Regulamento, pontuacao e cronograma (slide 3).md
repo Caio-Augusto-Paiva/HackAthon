@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Motor_de_inferencia
 ---
 
 # Regulamento, pontuacao e cronograma (slide 3)
@@ -16,4 +16,4 @@ tags:
 - [[Cronograma e entrega do hackathon (20 a 2310)]] - `references` [EXTRACTED]
 - [[Restricao open source]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

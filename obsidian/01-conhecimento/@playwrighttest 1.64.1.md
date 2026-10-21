@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # @playwright/test 1.64.1
@@ -15,4 +15,4 @@ tags:
 - [[Playwright Test webServer]] - `references` [INFERRED]
 - [[playwright-skill (lackeyjb)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

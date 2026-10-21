@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação: entrega e arquitetura"
+community: "Motor de inferência (engine/)"
 location: "Seção 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_entrega_e_arquitetura
+  - community/Motor_de_inferência_engine/
 ---
 
 # Três camadas estritas (derivado, doença, urgência)
@@ -19,4 +19,4 @@ tags:
 - [[Urgência por gravidade x confiança]] - `references` [EXTRACTED]
 - [[Validador da base (erros e avisos)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/

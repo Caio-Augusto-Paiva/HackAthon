@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-documentario-rerum.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Motor de inferencia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Motor_de_inferencia
 ---
 
 # Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)
@@ -17,4 +17,4 @@ tags:
 - [[Restricao nao usar a LLM como sistema especialista]] - `references` [EXTRACTED]
 - [[Restricao open source]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferencia

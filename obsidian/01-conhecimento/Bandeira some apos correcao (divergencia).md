@@ -1,17 +1,17 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Bandeira após correção"
+community: "Sessao: triagem, perguntas e correções"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bandeira_após_correção
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Bandeira some apos correcao (divergencia)
 
 ## Connections
 - [[Bandeira disparada permanece apos correcao (urgencia irreversivel)]] - `references` [EXTRACTED]
-- [[Bandeira alerta com pausa e encerramento]] - `references` [EXTRACTED]
+- [[Bandeiras urgência, pausa e reconhecimento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bandeira_após_correção
+#graphify/concept #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

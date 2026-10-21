@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "code"
-community: "Motor: CF, parada e bandeiras"
+community: "Motor de inferência (engine/)"
 location: "Seção 4.3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motor_CF_parada_e_bandeiras
+  - community/Motor_de_inferência_engine/
 ---
 
 # Pacote api (FastAPI)
@@ -18,4 +18,4 @@ tags:
 - [[Pacote engine]] - `references` [EXTRACTED]
 - [[Persistência SQLite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motor_CF_parada_e_bandeiras
+#graphify/code #graphify/EXTRACTED #community/Motor_de_inferência_engine/

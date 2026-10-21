@@ -1,16 +1,16 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Bandeira após correção"
+community: "Sessao: triagem, perguntas e correções"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bandeira_após_correção
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # bandeiras_nao_verificadas restrito a regras viaveis e perguntaveis
 
 ## Connections
-- [[Bandeira alerta com pausa e encerramento]] - `conceptually_related_to` [EXTRACTED]
+- [[Bandeiras urgência, pausa e reconhecimento]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bandeira_após_correção
+#graphify/concept #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

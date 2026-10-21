@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # webapp-testing (skill)
@@ -15,4 +15,4 @@ tags:
 - [[anthropicsskills (repositorio)]] - `references` [EXTRACTED]
 - [[playwright-skill (lackeyjb)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

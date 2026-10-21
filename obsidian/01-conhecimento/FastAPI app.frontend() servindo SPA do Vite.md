@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # FastAPI app.frontend() servindo SPA do Vite
@@ -14,4 +14,4 @@ tags:
 - [[FastAPI 0.156.4]] - `references` [INFERRED]
 - [[Vite (build e server.proxy)]] - `shares_data_with` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/rationale #graphify/INFERRED #community/Playwright_Test_webServer

@@ -1,17 +1,17 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Bandeira após correção"
+community: "Sessao: triagem, perguntas e correções"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bandeira_após_correção
+  - community/Sessao_triagem_perguntas_e_correções
 ---
 
 # Bandeira disparada permanece apos correcao (urgencia irreversivel)
 
 ## Connections
 - [[Bandeira some apos correcao (divergencia)]] - `references` [EXTRACTED]
-- [[Bandeira alerta com pausa e encerramento]] - `rationale_for` [EXTRACTED]
+- [[Bandeiras urgência, pausa e reconhecimento]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bandeira_após_correção
+#graphify/rationale #graphify/EXTRACTED #community/Sessao_triagem_perguntas_e_correções

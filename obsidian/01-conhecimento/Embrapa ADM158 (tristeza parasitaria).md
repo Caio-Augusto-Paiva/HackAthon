@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # Embrapa ADM158 (tristeza parasitaria)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Tristeza parasitaria bovina (TPB)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/document #graphify/EXTRACTED #community/MSD_Vet_Manual

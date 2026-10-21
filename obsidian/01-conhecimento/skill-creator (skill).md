@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Skills Anthropic e licença"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Skills_Anthropic_e_licença
+  - community/Playwright_Test_webServer
 ---
 
 # skill-creator (skill)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[anthropicsskills (repositorio)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Skills_Anthropic_e_licença
+#graphify/document #graphify/EXTRACTED #community/Playwright_Test_webServer

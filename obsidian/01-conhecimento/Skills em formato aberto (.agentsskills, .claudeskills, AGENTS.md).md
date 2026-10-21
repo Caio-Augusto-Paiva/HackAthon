@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Planejamento, agentes e alocação"
+community: "Limite da fase de planejamento (sem implementacao)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planejamento_agentes_e_alocação
+  - community/Limite_da_fase_de_planejamento_sem_implementacao
 ---
 
 # Skills em formato aberto (.agents/skills, .claude/skills, AGENTS.md)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[obrasuperpowers (skills em formato aberto)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
+#graphify/concept #graphify/EXTRACTED #community/Limite_da_fase_de_planejamento_sem_implementacao

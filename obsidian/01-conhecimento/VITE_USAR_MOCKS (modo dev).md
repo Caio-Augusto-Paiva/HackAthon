@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Execução local e ferramentas"
+community: "Playwright Test webServer"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Playwright_Test_webServer
 ---
 
 # VITE_USAR_MOCKS (modo dev)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Vite (build e server.proxy)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/concept #graphify/INFERRED #community/Playwright_Test_webServer

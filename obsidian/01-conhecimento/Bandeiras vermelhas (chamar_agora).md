@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Motor: CF, parada e bandeiras"
+community: "Motor de inferência (engine/)"
 location: "Seção 1 e 3.6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_CF_parada_e_bandeiras
+  - community/Motor_de_inferência_engine/
 ---
 
 # Bandeiras vermelhas (chamar_agora)
@@ -18,4 +18,4 @@ tags:
 - [[Triagem obrigatória de 6 telas]] - `conceptually_related_to` [EXTRACTED]
 - [[Três camadas estritas (derivado, doença, urgência)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_CF_parada_e_bandeiras
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/
