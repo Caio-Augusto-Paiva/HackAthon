@@ -14,7 +14,7 @@ from kb.carregador import Repositorio
 @dataclass
 class Contexto:
     config: Configuracao
-    conn: sqlite3.Connection
+    conn: sqlite3.Connection | None  # provisório: vira sqlite3.Connection na Task 2
     repo: Repositorio
 
 

@@ -10,6 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.14,<2.15",
     "fastapi==0.156.8",
+    "starlette==1.9.0",
     "uvicorn==0.54.0",
     "python-multipart==0.0.32",
 ]
@@ -22,3 +23,7 @@ packages = ["kb", "engine", "api", "api.db", "api.rotas", "api.schemas", "api.se
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+filterwarnings = [
+    # a spec fixa httpx==0.28.1 e o TestClient do Starlette 1.9 já prefere o httpx2; só este aviso é ignorado
+    'ignore:Using `httpx` with `starlette.testclient` is deprecated',
+]

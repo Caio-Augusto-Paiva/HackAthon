@@ -5,6 +5,7 @@ cabeçalho ``X-Requisicao-Id`` com o mesmo id. O 500 nunca revela detalhe técni
 """
 from __future__ import annotations
 
+import logging
 import secrets
 
 from fastapi import FastAPI, Request
@@ -16,6 +17,9 @@ from api.schemas.erro import CorpoErro, Detalhe, ErroResposta
 
 CABECALHO_REQUISICAO_ID = "X-Requisicao-Id"
 MENSAGEM_ERRO_INTERNO = "Erro interno. Tente novamente."
+MENSAGEM_VALOR_INVALIDO = "Valor inválido."
+
+_log = logging.getLogger("api")
 
 
 class ErroApi(Exception):
@@ -61,7 +65,11 @@ def novo_requisicao_id() -> str:
 # --- resposta -------------------------------------------------------------------------------
 
 def _requisicao_id(request: Request) -> str:
-    return getattr(request.state, "requisicao_id", None) or novo_requisicao_id()
+    """O id do middleware; se faltar, gera um e o guarda, para o log e a resposta usarem o mesmo."""
+    requisicao_id = getattr(request.state, "requisicao_id", None)
+    if requisicao_id is None:
+        requisicao_id = request.state.requisicao_id = novo_requisicao_id()
+    return requisicao_id
 
 
 def _responder(
@@ -108,6 +116,16 @@ _TEXTOS_VALIDACAO = {
     "dict_type": "Deve ser um objeto.",
     "model_attributes_type": "Deve ser um objeto.",
     "list_type": "Deve ser uma lista.",
+    "string_too_short": "Texto curto demais.",
+    "string_too_long": "Texto longo demais.",
+    "greater_than": "Valor abaixo do mínimo permitido.",
+    "greater_than_equal": "Valor abaixo do mínimo permitido.",
+    "less_than": "Valor acima do máximo permitido.",
+    "less_than_equal": "Valor acima do máximo permitido.",
+    "date_parsing": "Deve ser uma data válida (AAAA-MM-DD).",
+    "date_from_datetime_parsing": "Deve ser uma data válida (AAAA-MM-DD).",
+    "too_short": "Lista com poucos itens.",
+    "too_long": "Lista com itens demais.",
 }
 
 
@@ -115,8 +133,8 @@ def _detalhe_de_validacao(erro: dict) -> dict:
     tipo = erro["type"]
     if tipo == "value_error":  # validadores próprios levantam ValueError com texto em português
         texto = str(erro["msg"]).removeprefix("Value error, ")
-    else:
-        texto = _TEXTOS_VALIDACAO.get(tipo, str(erro["msg"]))
+    else:  # nunca a "msg" do Pydantic: ela está em inglês e pode citar o valor enviado
+        texto = _TEXTOS_VALIDACAO.get(tipo, MENSAGEM_VALOR_INVALIDO)
     caminho = [_ONDE.get(str(p), str(p)) if i == 0 else str(p) for i, p in enumerate(erro["loc"])]
     local = "corpo" if tipo == "json_invalid" else ".".join(caminho)
     # só o tipo, o local e o texto: o valor enviado não volta na resposta
@@ -147,13 +165,14 @@ async def _tratar_http(request: Request, exc: StarletteHTTPException) -> JSONRes
         return _responder(
             request, 405, "metodo_nao_permitido", "Método não permitido para este recurso.", None, cabecalhos
         )
-    if exc.status_code < 500:  # suposição: outros 4xx do Starlette (ex.: corpo ilegível)
-        return _responder(request, exc.status_code, "entrada_invalida", "Requisição inválida.", None, cabecalhos)
+    if exc.status_code < 500:  # a 4.4 reserva entrada_invalida ao 422: todo outro 4xx do Starlette vira 422
+        return _responder(request, 422, "entrada_invalida", "Requisição inválida.")
     return _responder(request, exc.status_code, "erro_interno", MENSAGEM_ERRO_INTERNO, None, cabecalhos)
 
 
 async def _tratar_inesperado(request: Request, exc: Exception) -> JSONResponse:
-    # a mensagem é fixa de propósito: nada da exceção vai para o cliente (o servidor ainda a registra)
+    # a mensagem é fixa de propósito: nada da exceção vai para o cliente; o servidor a registra com o id
+    _log.error("erro interno %s", _requisicao_id(request), exc_info=exc)
     return _responder(request, 500, "erro_interno", MENSAGEM_ERRO_INTERNO)
 
 

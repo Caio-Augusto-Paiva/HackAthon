@@ -49,6 +49,7 @@ def criar_app(config: Configuracao | None = None) -> FastAPI:
         separate_input_output_schemas=False,
         docs_url="/api/docs",
         redoc_url=None,
+        swagger_ui_oauth2_redirect_url=None,  # senão registraria /docs/oauth2-redirect, fora do /api
         openapi_url="/api/openapi.json",
         lifespan=_ciclo_de_vida,
     )
@@ -56,9 +57,9 @@ def criar_app(config: Configuracao | None = None) -> FastAPI:
     app.add_middleware(MiddlewareRequisicaoId)
     registrar_handlers(app)
 
-    api = APIRouter(prefix="/api")
-    api.include_router(sistema.router)
-    app.include_router(api)
+    roteador = APIRouter(prefix="/api")
+    roteador.include_router(sistema.router)
+    app.include_router(roteador)
     return app
 
 
