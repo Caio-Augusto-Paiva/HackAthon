@@ -1,0 +1,20 @@
+{
+  "operacao": "listar_sessoes_animal",
+  "metodo": "GET",
+  "rota": "/api/animais/{animal_id}/sessoes",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "itens": [
+      {
+        "sessao_id": "ses_0001",
+        "modo": "produtor",
+        "versao_base": "v0002",
+        "fase": "encerrada",
+        "urgencia": "chamar_agora",
+        "top1": "hipocalcemia",
+        "criada_em": "2026-10-20T10:12:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "operacao": "trocar_modo",
+  "metodo": "PATCH",
+  "rota": "/api/sessoes/{sessao_id}",
+  "status": 200,
+  "requisicao": { "modo": "veterinario" },
+  "resposta": {
+    "sessao_id": "ses_0001",
+    "animal_id": "an_001",
+    "modo": "veterinario",
+    "versao_base": "v0002",
+    "revisao": 9,
+    "fase": "dinamica",
+    "progresso": { "triagem_respondidas": 6, "triagem_total": 6, "dinamicas_feitas": 2, "limite_dinamico": 25 },
+    "proxima": {
+      "tipo": "pergunta",
+      "simbolo": "cmt_positivo",
+      "entrada": "booleano",
+      "permite_nao_sei": true,
+      "texto": "O CMT (California Mastitis Test) é positivo?",
+      "motivo_resumo": "Ajuda a confirmar ou afastar mastite.",
+      "porque_disponivel": true,
+      "opcoes": null,
+      "unidade": null,
+      "min": null,
+      "max": null
+    },
+    "urgencia": {
+      "nivel": "observar",
+      "provisoria": true,
+      "origem": "regra_urgencia",
+      "regras": ["R-URG-mastite"]
+    },
+    "alerta": null
+  }
+}

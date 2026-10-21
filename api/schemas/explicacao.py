@@ -1,0 +1,76 @@
+"""Contrato da explicação (4.5.1): "por quê?", "como?" e o traço bruto de eventos."""
+from __future__ import annotations
+
+from typing import Any, Literal
+
+from pydantic import BaseModel
+
+from api.schemas.parecer import Gravidade
+from api.schemas.sessao import Valor
+
+
+class ServeA(BaseModel):
+    """Uma doença que a pergunta ajuda a confirmar ou afastar."""
+
+    doenca: str
+    nome: str
+    gravidade: Gravidade
+    cf_atual: float
+    regras: list[str]
+
+
+class PorQue(BaseModel):
+    simbolo: str
+    origem: Literal["triagem", "fase_dinamica"]
+    pergunta: str
+    motivo: str
+    serve_a: list[ServeA]
+    evento_traco: str  # id do evento ``pergunta_feita`` no traço
+
+
+class Combinacao(BaseModel):
+    """O CF do símbolo depois de combinar a saída de uma regra (``antes`` e ``depois``)."""
+
+    apos_regra: str
+    antes: float
+    depois: float
+
+
+class Evidencia(BaseModel):
+    regra_id: str
+    texto: str
+    fonte: str | None
+    status: Literal["suposicao_a_validar", "validada"]
+    premissa: float
+    cf_regra: float
+    cf_saida: float
+    entradas: list[Entrada]
+
+
+class Entrada(BaseModel):
+    """Um fato que alimentou a regra; com ``origem: "regra"`` traz as ``evidencias`` que o produziram."""
+
+    simbolo: str
+    valor: Valor | None  # None = "não sei"
+    cf: float
+    origem: Literal["resposta", "ficha", "importacao", "regra"]
+    tela_id: str | None
+    evidencias: list[Evidencia] | None = None
+
+
+Evidencia.model_rebuild()
+
+
+class Como(BaseModel):
+    simbolo: str
+    nome: str
+    cf: float
+    percentual: int
+    combinacao: list[Combinacao]
+    evidencias: list[Evidencia]
+
+
+class Traco(BaseModel):
+    """Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado`` e ``pergunta_feita``."""
+
+    eventos: list[dict[str, Any]]

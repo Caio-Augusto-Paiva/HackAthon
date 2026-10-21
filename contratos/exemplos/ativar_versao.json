@@ -1,0 +1,8 @@
+{
+  "operacao": "ativar_versao",
+  "metodo": "PUT",
+  "rota": "/api/base/ativa",
+  "status": 200,
+  "requisicao": { "versao": "v0003", "confirmar_falhas": true },
+  "resposta": { "versao": "v0003", "anterior": "v0002" }
+}

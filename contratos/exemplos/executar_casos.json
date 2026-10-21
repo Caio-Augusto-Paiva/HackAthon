@@ -1,0 +1,37 @@
+{
+  "operacao": "executar_casos",
+  "metodo": "POST",
+  "rota": "/api/base/versoes/{versao}/execucoes",
+  "status": 201,
+  "requisicao": { "casos": null },
+  "resposta": {
+    "execucao_id": "ex_0008",
+    "versao": "v0003",
+    "executada_em": "2026-10-20T15:40:00",
+    "total": 30,
+    "passou": 28,
+    "falhou": 2,
+    "comparada_com": "v0002",
+    "resultados": [
+      {
+        "caso_id": "C-MAS-01",
+        "descricao": "Mastite típica, modo produtor",
+        "status": "falhou",
+        "mudou_vs_pai": "passou->falhou",
+        "falhas": [
+          { "campo": "faixas.mastite", "esperado": [75, 100], "obtido": 55 }
+        ],
+        "obtido": {
+          "urgencia": "observar",
+          "top1": "mastite",
+          "percentuais": { "mastite": 55, "metrite": 0 },
+          "motivo_parada": "limite"
+        },
+        "erro": null
+      }
+    ],
+    "mudancas": [
+      { "caso_id": "C-MAS-01", "antes": "passou", "depois": "falhou" }
+    ]
+  }
+}

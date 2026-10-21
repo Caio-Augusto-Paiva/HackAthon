@@ -1,0 +1,34 @@
+{
+  "operacao": "listar_versoes",
+  "metodo": "GET",
+  "rota": "/api/base/versoes",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "ativa": "v0002",
+    "itens": [
+      {
+        "versao": "v0001",
+        "pai": null,
+        "autor": "equipe",
+        "data": "2026-10-19",
+        "nota": "base inicial",
+        "simbolos": 71,
+        "regras": 103,
+        "suposicao_a_validar": 103,
+        "ultima_execucao": null
+      },
+      {
+        "versao": "v0002",
+        "pai": "v0001",
+        "autor": "equipe",
+        "data": "2026-10-20",
+        "nota": "ajuste de CF da cetose",
+        "simbolos": 71,
+        "regras": 104,
+        "suposicao_a_validar": 104,
+        "ultima_execucao": { "execucao_id": "ex_0007", "passou": 30, "falhou": 0 }
+      }
+    ]
+  }
+}

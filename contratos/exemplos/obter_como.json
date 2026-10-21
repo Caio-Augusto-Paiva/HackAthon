@@ -1,0 +1,55 @@
+{
+  "operacao": "obter_como",
+  "metodo": "GET",
+  "rota": "/api/sessoes/{sessao_id}/como/{simbolo}",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "simbolo": "mastite",
+    "nome": "Mastite clínica",
+    "cf": 0.88,
+    "percentual": 88,
+    "combinacao": [
+      { "apos_regra": "R-MAS-01", "antes": 0.0, "depois": 0.7 },
+      { "apos_regra": "R-MAS-02", "antes": 0.7, "depois": 0.88 }
+    ],
+    "evidencias": [
+      {
+        "regra_id": "R-MAS-01",
+        "texto": "SE leite_alterado ENTÃO mastite +0,70",
+        "fonte": "F1",
+        "status": "suposicao_a_validar",
+        "premissa": 1.0,
+        "cf_regra": 0.7,
+        "cf_saida": 0.7,
+        "entradas": [
+          {
+            "simbolo": "leite_alterado",
+            "valor": true,
+            "cf": 1.0,
+            "origem": "resposta",
+            "tela_id": "producao_leite"
+          }
+        ]
+      },
+      {
+        "regra_id": "R-MAS-02",
+        "texto": "SE ubere_inflamado ENTÃO mastite +0,60",
+        "fonte": "F1",
+        "status": "suposicao_a_validar",
+        "premissa": 1.0,
+        "cf_regra": 0.6,
+        "cf_saida": 0.6,
+        "entradas": [
+          {
+            "simbolo": "ubere_inflamado",
+            "valor": true,
+            "cf": 1.0,
+            "origem": "resposta",
+            "tela_id": "producao_leite"
+          }
+        ]
+      }
+    ]
+  }
+}

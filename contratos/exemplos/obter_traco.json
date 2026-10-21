@@ -1,0 +1,126 @@
+{
+  "operacao": "obter_traco",
+  "metodo": "GET",
+  "rota": "/api/sessoes/{sessao_id}/traco",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "eventos": [
+      {
+        "id": "ev_0001",
+        "tipo": "fato_adicionado",
+        "simbolo": "dias_em_lactacao",
+        "valor": 6,
+        "cf": 1.0,
+        "origem": "ficha",
+        "tela_id": null
+      },
+      {
+        "id": "ev_0002",
+        "tipo": "fato_adicionado",
+        "simbolo": "ubere_inflamado",
+        "valor": true,
+        "cf": 1.0,
+        "origem": "resposta",
+        "tela_id": "producao_leite"
+      },
+      {
+        "id": "ev_0003",
+        "tipo": "regra_disparada",
+        "regra_id": "R-MAS-02",
+        "simbolo": "mastite",
+        "premissa": 1.0,
+        "cf_regra": 0.6,
+        "cf_saida": 0.6,
+        "fonte": "F1",
+        "status": "suposicao_a_validar",
+        "entradas": [
+          {
+            "simbolo": "ubere_inflamado",
+            "valor": true,
+            "cf": 1.0,
+            "origem": "resposta",
+            "tela_id": "producao_leite",
+            "cf_condicao": 1.0,
+            "condicao": { "simbolo": "ubere_inflamado", "op": "=", "valor": true, "negado": false }
+          }
+        ]
+      },
+      {
+        "id": "ev_0004",
+        "tipo": "cf_combinado",
+        "simbolo": "mastite",
+        "regra_id": "R-MAS-02",
+        "antes": 0.0,
+        "depois": 0.6
+      },
+      {
+        "id": "ev_0005",
+        "tipo": "fato_adicionado",
+        "simbolo": "mastite",
+        "valor": true,
+        "cf": 0.6,
+        "origem": "regra",
+        "tela_id": null,
+        "regra_id": "R-MAS-02"
+      },
+      {
+        "id": "ev_0006",
+        "tipo": "regra_disparada",
+        "regra_id": "R-URG-mastite",
+        "simbolo": "observar",
+        "premissa": 0.6,
+        "cf_regra": 0.9,
+        "cf_saida": 0.54,
+        "fonte": "suposição",
+        "status": "suposicao_a_validar",
+        "entradas": [
+          {
+            "simbolo": "mastite",
+            "valor": true,
+            "cf": 0.6,
+            "origem": "regra",
+            "tela_id": null,
+            "cf_condicao": 0.6,
+            "condicao": { "simbolo": "mastite", "op": "=", "valor": true, "negado": false, "cf_minimo": 0.5 }
+          }
+        ]
+      },
+      {
+        "id": "ev_0007",
+        "tipo": "cf_combinado",
+        "simbolo": "observar",
+        "regra_id": "R-URG-mastite",
+        "antes": 0.0,
+        "depois": 0.54
+      },
+      {
+        "id": "ev_0008",
+        "tipo": "fato_adicionado",
+        "simbolo": "observar",
+        "valor": true,
+        "cf": 0.54,
+        "origem": "regra",
+        "tela_id": null,
+        "regra_id": "R-URG-mastite"
+      },
+      {
+        "id": "ev_0009",
+        "tipo": "pergunta_feita",
+        "simbolo": "teste_caneca_positivo",
+        "origem": "fase_dinamica",
+        "motivo": "Mastite está aberta (CF 0,60) e esta resposta pode confirmá-la.",
+        "pergunta": "Há grumos no teste da caneca de fundo escuro?",
+        "serve_a": [
+          {
+            "doenca": "mastite",
+            "nome": "Mastite clínica",
+            "gravidade": "media",
+            "cf_atual": 0.6,
+            "regras": ["R-MAS-03"]
+          }
+        ]
+      }
+    ]
+  }
+}

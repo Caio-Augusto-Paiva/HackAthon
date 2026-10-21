@@ -1,0 +1,35 @@
+{
+  "operacao": "criar_animal",
+  "metodo": "POST",
+  "rota": "/api/animais",
+  "status": 201,
+  "requisicao": {
+    "brinco": "BR-0001",
+    "nome": "Mimosa",
+    "ficha": {
+      "data_ultimo_parto": "2026-10-14",
+      "raca_grupo": "cruzada",
+      "numero_lactacoes": 3,
+      "retencao_placenta": false,
+      "parto_distocico": false,
+      "historico_mastite_12m": true
+    }
+  },
+  "resposta": {
+    "id": "an_001",
+    "brinco": "BR-0001",
+    "nome": "Mimosa",
+    "dias_em_lactacao": 6,
+    "ficha": {
+      "data_ultimo_parto": "2026-10-14",
+      "raca_grupo": "cruzada",
+      "numero_lactacoes": 3,
+      "retencao_placenta": false,
+      "parto_distocico": false,
+      "historico_mastite_12m": true,
+      "mudanca_dieta_recente": null,
+      "casos_podais_no_rebanho": null
+    },
+    "origens": {}
+  }
+}

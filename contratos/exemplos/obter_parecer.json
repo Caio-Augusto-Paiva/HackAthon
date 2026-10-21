@@ -1,0 +1,107 @@
+{
+  "operacao": "obter_parecer",
+  "metodo": "GET",
+  "rota": "/api/sessoes/{sessao_id}/parecer",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "sessao_id": "ses_0001",
+    "versao_base": "v0002",
+    "modo": "produtor",
+    "final": true,
+    "motivo_parada": "confirmacao",
+    "urgencia": {
+      "nivel": "chamar_agora",
+      "origem": "bandeira_vermelha",
+      "regras": ["R-BV-01"],
+      "texto": "Chame um veterinário o mais rápido possível."
+    },
+    "aviso": "A porcentagem é o grau de confiança do sistema, não uma probabilidade.",
+    "blocos": [
+      {
+        "id": "hipoteses_principais",
+        "titulo": "Hipóteses principais",
+        "itens": [
+          {
+            "doenca": "hipocalcemia",
+            "nome": "Hipocalcemia",
+            "gravidade": "alta",
+            "cf": 0.87,
+            "percentual": 87,
+            "situacao": "com_evidencia"
+          }
+        ]
+      },
+      {
+        "id": "diagnostico_diferencial",
+        "titulo": "Diagnóstico diferencial / sinais inespecíficos",
+        "itens": [
+          {
+            "doenca": "cetose",
+            "nome": "Cetose",
+            "gravidade": "media",
+            "cf": 0.32,
+            "percentual": 32,
+            "situacao": "com_evidencia"
+          }
+        ]
+      },
+      {
+        "id": "pouco_provavel",
+        "titulo": "Pouco provável ou descartada",
+        "itens": [
+          {
+            "doenca": "acidose",
+            "nome": "Acidose ruminal",
+            "gravidade": "media",
+            "cf": 0.15,
+            "percentual": 15,
+            "situacao": "sem_evidencia"
+          },
+          {
+            "doenca": "deslocamento_abomaso",
+            "nome": "Deslocamento de abomaso",
+            "gravidade": "alta",
+            "cf": 0.05,
+            "percentual": 5,
+            "situacao": "sem_evidencia"
+          },
+          {
+            "doenca": "dermatite_digital",
+            "nome": "Dermatite digital",
+            "gravidade": "baixa",
+            "cf": 0.0,
+            "percentual": 0,
+            "situacao": "sem_evidencia"
+          },
+          {
+            "doenca": "metrite",
+            "nome": "Metrite puerperal",
+            "gravidade": "alta",
+            "cf": -0.1,
+            "percentual": 0,
+            "situacao": "sem_evidencia"
+          },
+          {
+            "doenca": "tpb",
+            "nome": "Tristeza parasitária bovina",
+            "gravidade": "alta",
+            "cf": -0.35,
+            "percentual": 0,
+            "situacao": "descartada"
+          },
+          {
+            "doenca": "mastite",
+            "nome": "Mastite clínica",
+            "gravidade": "media",
+            "cf": -0.6,
+            "percentual": 0,
+            "situacao": "descartada"
+          }
+        ]
+      }
+    ],
+    "inconclusivas": [],
+    "bandeiras_nao_verificadas": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "operacao": "saude",
+  "metodo": "GET",
+  "rota": "/api/saude",
+  "status": 200,
+  "requisicao": null,
+  "resposta": { "status": "ok", "versao_api": "0.1.0" }
+}

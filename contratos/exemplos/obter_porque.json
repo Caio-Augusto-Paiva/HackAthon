@@ -1,0 +1,23 @@
+{
+  "operacao": "obter_porque",
+  "metodo": "GET",
+  "rota": "/api/sessoes/{sessao_id}/porque/{simbolo}",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "simbolo": "teste_caneca_positivo",
+    "origem": "fase_dinamica",
+    "pergunta": "Há grumos no teste da caneca de fundo escuro?",
+    "motivo": "Mastite está aberta (CF 0,60) e esta resposta pode confirmá-la.",
+    "serve_a": [
+      {
+        "doenca": "mastite",
+        "nome": "Mastite clínica",
+        "gravidade": "media",
+        "cf_atual": 0.6,
+        "regras": ["R-MAS-03"]
+      }
+    ],
+    "evento_traco": "ev_0009"
+  }
+}

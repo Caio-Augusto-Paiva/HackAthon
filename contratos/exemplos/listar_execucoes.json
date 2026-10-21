@@ -1,0 +1,18 @@
+{
+  "operacao": "listar_execucoes",
+  "metodo": "GET",
+  "rota": "/api/base/versoes/{versao}/execucoes",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "itens": [
+      {
+        "execucao_id": "ex_0008",
+        "executada_em": "2026-10-20T15:40:00",
+        "total": 30,
+        "passou": 28,
+        "falhou": 2
+      }
+    ]
+  }
+}

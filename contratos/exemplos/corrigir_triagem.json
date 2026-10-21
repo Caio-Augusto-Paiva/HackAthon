@@ -1,0 +1,42 @@
+{
+  "operacao": "corrigir_triagem",
+  "metodo": "PUT",
+  "rota": "/api/sessoes/{sessao_id}/triagem/{tela_id}",
+  "status": 200,
+  "requisicao": {
+    "valores": { "apatia": true, "claudicacao": false, "decubito": false }
+  },
+  "resposta": {
+    "sessao_id": "ses_0001",
+    "animal_id": "an_001",
+    "modo": "produtor",
+    "versao_base": "v0002",
+    "revisao": 4,
+    "fase": "triagem",
+    "progresso": { "triagem_respondidas": 3, "triagem_total": 6, "dinamicas_feitas": 0, "limite_dinamico": 12 },
+    "proxima": {
+      "tipo": "tela_triagem",
+      "tela_id": "apetite_ruminacao",
+      "selecao": "unica",
+      "permite_nao_sei": true,
+      "titulo": "Como estão o apetite e a ruminação?",
+      "campos": [
+        {
+          "simbolo": "apetite",
+          "entrada": "categorico",
+          "rotulo": "Apetite",
+          "opcoes": [
+            { "valor": "normal", "rotulo": "Normal" },
+            { "valor": "reduzido", "rotulo": "Reduzido" },
+            { "valor": "ausente", "rotulo": "Ausente" }
+          ],
+          "unidade": null,
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    "urgencia": { "nivel": "sem_problema", "provisoria": true, "origem": "padrao", "regras": [] },
+    "alerta": null
+  }
+}

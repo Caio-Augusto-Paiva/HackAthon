@@ -1,0 +1,312 @@
+{
+  "operacao": "obter_grafo",
+  "metodo": "GET",
+  "rota": "/api/base/versoes/{versao}/grafo",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "versao": "v0002",
+    "meta": {
+      "versao": "v0002",
+      "pai": "v0001",
+      "autor": "equipe",
+      "data": "2026-10-20",
+      "nota": "recorte do contrato: só a mastite",
+      "limiares": {
+        "descarte": -0.2,
+        "premissa": 0.2,
+        "hipotese_relevante": 0.35,
+        "exaustao": 0.6,
+        "potencial": 0.7,
+        "confirmacao": 0.8,
+        "bloco_principal": 0.5,
+        "bloco_diferencial": 0.2
+      },
+      "limite_dinamico": { "produtor": 12, "veterinario": 25 },
+      "triagem": [
+        {
+          "id": "producao_leite",
+          "selecao": "multipla",
+          "simbolos": ["leite_alterado", "ubere_inflamado"],
+          "texto": {
+            "produtor": "Como estão o leite e o úbere?",
+            "veterinario": "Alterações do leite e do úbere."
+          },
+          "opcoes": {
+            "leite_alterado": { "produtor": "Leite com grumos, sangue ou aguado", "veterinario": "Leite alterado" },
+            "ubere_inflamado": { "produtor": "Úbere inchado, quente ou dolorido", "veterinario": "Úbere inflamado" }
+          }
+        }
+      ]
+    },
+    "nos": [
+      {
+        "id": "leite_alterado",
+        "tipo_no": "simbolo",
+        "triagem": true,
+        "dados": {
+          "id": "leite_alterado",
+          "tipo": "pergunta",
+          "nome": "Leite alterado",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {
+            "produtor": "O leite está alterado (grumos, sangue ou aguado)?",
+            "veterinario": "Leite com alteração visível?"
+          },
+          "por_que": {},
+          "fonte": "F1",
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "ubere_inflamado",
+        "tipo_no": "simbolo",
+        "triagem": true,
+        "dados": {
+          "id": "ubere_inflamado",
+          "tipo": "pergunta",
+          "nome": "Úbere inflamado",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {
+            "produtor": "O úbere está inchado, quente ou dolorido?",
+            "veterinario": "Úbere com sinais de inflamação?"
+          },
+          "por_que": {},
+          "fonte": "F1",
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "teste_caneca_positivo",
+        "tipo_no": "simbolo",
+        "triagem": false,
+        "dados": {
+          "id": "teste_caneca_positivo",
+          "tipo": "pergunta",
+          "nome": "Teste da caneca positivo",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {
+            "produtor": "Há grumos no teste da caneca de fundo escuro?",
+            "veterinario": "Teste da caneca de fundo escuro positivo?"
+          },
+          "por_que": {
+            "produtor": "Ajuda a confirmar ou afastar mastite.",
+            "veterinario": "Confirma ou afasta mastite clínica."
+          },
+          "fonte": "F1",
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "cmt_positivo",
+        "tipo_no": "simbolo",
+        "triagem": false,
+        "dados": {
+          "id": "cmt_positivo",
+          "tipo": "pergunta",
+          "nome": "CMT positivo",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": { "veterinario": "O CMT (California Mastitis Test) é positivo?" },
+          "por_que": { "veterinario": "Confirma ou afasta mastite." },
+          "fonte": "F1",
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "mastite",
+        "tipo_no": "simbolo",
+        "triagem": false,
+        "dados": {
+          "id": "mastite",
+          "tipo": "doenca",
+          "nome": "Mastite clínica",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {},
+          "por_que": {},
+          "gravidade": "media",
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "chamar_agora",
+        "tipo_no": "simbolo",
+        "triagem": false,
+        "dados": {
+          "id": "chamar_agora",
+          "tipo": "urgencia",
+          "nome": "Chamar o veterinário agora",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {},
+          "por_que": {},
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "observar",
+        "tipo_no": "simbolo",
+        "triagem": false,
+        "dados": {
+          "id": "observar",
+          "tipo": "urgencia",
+          "nome": "Observar",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {},
+          "por_que": {},
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "sem_problema",
+        "tipo_no": "simbolo",
+        "triagem": false,
+        "dados": {
+          "id": "sem_problema",
+          "tipo": "urgencia",
+          "nome": "Sem problema aparente",
+          "dominio": { "tipo": "booleano" },
+          "pergunta": {},
+          "por_que": {},
+          "combinacao": "mycin"
+        }
+      },
+      {
+        "id": "R-MAS-01",
+        "tipo_no": "regra",
+        "triagem": false,
+        "dados": { "id": "R-MAS-01", "classe": "evidencia", "fonte": "F1", "status": "suposicao_a_validar" }
+      },
+      {
+        "id": "R-MAS-02",
+        "tipo_no": "regra",
+        "triagem": false,
+        "dados": { "id": "R-MAS-02", "classe": "evidencia", "fonte": "F1", "status": "suposicao_a_validar" }
+      },
+      {
+        "id": "R-MAS-03",
+        "tipo_no": "regra",
+        "triagem": false,
+        "dados": { "id": "R-MAS-03", "classe": "evidencia", "fonte": "F1", "status": "suposicao_a_validar" }
+      },
+      {
+        "id": "R-MAS-05",
+        "tipo_no": "regra",
+        "triagem": false,
+        "dados": { "id": "R-MAS-05", "classe": "evidencia", "fonte": "F1", "status": "suposicao_a_validar" }
+      },
+      {
+        "id": "R-URG-mastite",
+        "tipo_no": "regra",
+        "triagem": false,
+        "dados": {
+          "id": "R-URG-mastite",
+          "classe": "urgencia",
+          "fonte": "suposição",
+          "status": "suposicao_a_validar"
+        }
+      }
+    ],
+    "arestas": [
+      {
+        "id": "R-MAS-01:se:0",
+        "papel": "condicao",
+        "origem": "leite_alterado",
+        "destino": "R-MAS-01",
+        "ordem": 0,
+        "op": "=",
+        "valor": true,
+        "negado": false
+      },
+      {
+        "id": "R-MAS-01:entao",
+        "papel": "conclusao",
+        "origem": "R-MAS-01",
+        "destino": "mastite",
+        "cf": 0.7
+      },
+      {
+        "id": "R-MAS-02:se:0",
+        "papel": "condicao",
+        "origem": "ubere_inflamado",
+        "destino": "R-MAS-02",
+        "ordem": 0,
+        "op": "=",
+        "valor": true,
+        "negado": false
+      },
+      {
+        "id": "R-MAS-02:entao",
+        "papel": "conclusao",
+        "origem": "R-MAS-02",
+        "destino": "mastite",
+        "cf": 0.6
+      },
+      {
+        "id": "R-MAS-03:se:0",
+        "papel": "condicao",
+        "origem": "teste_caneca_positivo",
+        "destino": "R-MAS-03",
+        "ordem": 0,
+        "op": "=",
+        "valor": true,
+        "negado": false
+      },
+      {
+        "id": "R-MAS-03:entao",
+        "papel": "conclusao",
+        "origem": "R-MAS-03",
+        "destino": "mastite",
+        "cf": 0.65
+      },
+      {
+        "id": "R-MAS-05:se:0",
+        "papel": "condicao",
+        "origem": "cmt_positivo",
+        "destino": "R-MAS-05",
+        "ordem": 0,
+        "op": "=",
+        "valor": true,
+        "negado": false
+      },
+      {
+        "id": "R-MAS-05:entao",
+        "papel": "conclusao",
+        "origem": "R-MAS-05",
+        "destino": "mastite",
+        "cf": 0.75
+      },
+      {
+        "id": "R-URG-mastite:se:0",
+        "papel": "condicao",
+        "origem": "mastite",
+        "destino": "R-URG-mastite",
+        "ordem": 0,
+        "op": "=",
+        "valor": true,
+        "negado": false,
+        "cf_minimo": 0.5
+      },
+      {
+        "id": "R-URG-mastite:entao",
+        "papel": "conclusao",
+        "origem": "R-URG-mastite",
+        "destino": "observar",
+        "cf": 0.9
+      }
+    ],
+    "layout": {
+      "leite_alterado": { "x": 0.0, "y": 0.0 },
+      "ubere_inflamado": { "x": 0.0, "y": 80.0 },
+      "teste_caneca_positivo": { "x": 0.0, "y": 160.0 },
+      "cmt_positivo": { "x": 0.0, "y": 240.0 },
+      "R-MAS-01": { "x": 220.0, "y": 0.0 },
+      "R-MAS-02": { "x": 220.0, "y": 80.0 },
+      "R-MAS-03": { "x": 220.0, "y": 160.0 },
+      "R-MAS-05": { "x": 220.0, "y": 240.0 },
+      "mastite": { "x": 440.0, "y": 120.0 },
+      "R-URG-mastite": { "x": 660.0, "y": 120.0 },
+      "observar": { "x": 880.0, "y": 120.0 },
+      "chamar_agora": { "x": 880.0, "y": 200.0 },
+      "sem_problema": { "x": 880.0, "y": 280.0 }
+    }
+  }
+}

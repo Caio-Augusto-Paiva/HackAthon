@@ -1,0 +1,51 @@
+{
+  "operacao": "acao_bandeira",
+  "metodo": "POST",
+  "rota": "/api/sessoes/{sessao_id}/acoes/bandeira",
+  "status": 200,
+  "requisicao": { "acao": "continuar" },
+  "resposta": {
+    "sessao_id": "ses_0001",
+    "animal_id": "an_001",
+    "modo": "produtor",
+    "versao_base": "v0002",
+    "revisao": 4,
+    "fase": "triagem",
+    "progresso": { "triagem_respondidas": 3, "triagem_total": 6, "dinamicas_feitas": 0, "limite_dinamico": 12 },
+    "proxima": {
+      "tipo": "tela_triagem",
+      "tela_id": "apetite_ruminacao",
+      "selecao": "unica",
+      "permite_nao_sei": true,
+      "titulo": "Como estão o apetite e a ruminação?",
+      "campos": [
+        {
+          "simbolo": "apetite",
+          "entrada": "categorico",
+          "rotulo": "Apetite",
+          "opcoes": [
+            { "valor": "normal", "rotulo": "Normal" },
+            { "valor": "reduzido", "rotulo": "Reduzido" },
+            { "valor": "ausente", "rotulo": "Ausente" }
+          ],
+          "unidade": null,
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    "urgencia": {
+      "nivel": "chamar_agora",
+      "provisoria": true,
+      "origem": "bandeira_vermelha",
+      "regras": ["R-BV-01"]
+    },
+    "alerta": {
+      "nivel": "chamar_agora",
+      "regras": ["R-BV-01"],
+      "pausa": false,
+      "acoes": [],
+      "texto": "Sintoma grave: chame um veterinário o mais rápido possível."
+    }
+  }
+}

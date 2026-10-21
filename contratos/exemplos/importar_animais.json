@@ -1,0 +1,25 @@
+{
+  "operacao": "importar_animais",
+  "metodo": "POST",
+  "rota": "/api/animais/importacao",
+  "status": 200,
+  "requisicao": null,
+  "resposta": {
+    "formato": "csv",
+    "gravado": false,
+    "criados": [
+      { "linha": 2, "brinco": "BR-0007" }
+    ],
+    "atualizados": [
+      { "linha": 3, "brinco": "BR-0001", "campos": ["historico_mastite_12m"] }
+    ],
+    "rejeitados": [
+      {
+        "linha": 4,
+        "erros": [
+          { "campo": "raca_grupo", "mensagem": "Valor 'nelore' fora de europeia/zebuina/cruzada." }
+        ]
+      }
+    ]
+  }
+}

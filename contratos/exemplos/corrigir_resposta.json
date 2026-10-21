@@ -1,0 +1,36 @@
+{
+  "operacao": "corrigir_resposta",
+  "metodo": "PUT",
+  "rota": "/api/sessoes/{sessao_id}/respostas/{simbolo}",
+  "status": 200,
+  "requisicao": { "valor": false },
+  "resposta": {
+    "sessao_id": "ses_0001",
+    "animal_id": "an_001",
+    "modo": "produtor",
+    "versao_base": "v0002",
+    "revisao": 10,
+    "fase": "dinamica",
+    "progresso": { "triagem_respondidas": 6, "triagem_total": 6, "dinamicas_feitas": 3, "limite_dinamico": 12 },
+    "proxima": {
+      "tipo": "pergunta",
+      "simbolo": "um_quarto_afetado",
+      "entrada": "booleano",
+      "permite_nao_sei": true,
+      "texto": "Só um quarto do úbere está afetado?",
+      "motivo_resumo": "Ajuda a separar mastite de outras causas.",
+      "porque_disponivel": true,
+      "opcoes": null,
+      "unidade": null,
+      "min": null,
+      "max": null
+    },
+    "urgencia": {
+      "nivel": "observar",
+      "provisoria": true,
+      "origem": "regra_urgencia",
+      "regras": ["R-URG-mastite"]
+    },
+    "alerta": null
+  }
+}
