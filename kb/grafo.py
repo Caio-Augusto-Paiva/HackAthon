@@ -63,7 +63,9 @@ def base_para_grafo(base: Base) -> Grafo:
         nos.append(No(id=regra.id, tipo_no="regra",
                       dados=regra.model_dump(mode="json", exclude={"se", "entao"})))
         for i, cond in enumerate(regra.se):
-            extras = {c: getattr(cond, c) for c in _CAMPOS_CONDICAO}
+            # campos com valor, mais os definidos explicitamente (inclusive ``valor=None``)
+            extras = {c: getattr(cond, c) for c in _CAMPOS_CONDICAO
+                      if getattr(cond, c) is not None or c in cond.model_fields_set}
             arestas.append(Aresta(id=f"{regra.id}:se:{i}", papel="condicao", origem=cond.simbolo,
                                   destino=regra.id, ordem=i, **extras))
         arestas.append(Aresta(id=f"{regra.id}:entao", papel="conclusao", origem=regra.id,
@@ -77,6 +79,9 @@ def grafo_para_base(grafo: Grafo) -> Base:
     for no in grafo.nos:
         if no.id in tipos:
             raise ValueError(f"nó duplicado no grafo: {no.id!r}")
+        if no.id != no.dados.get("id"):
+            raise ValueError(
+                f"o id do nó ({no.id!r}) difere do id em seus dados ({no.dados.get('id')!r})")
         tipos[no.id] = no.tipo_no
 
     condicoes: dict[str, list[Aresta]] = {}
@@ -113,7 +118,12 @@ def grafo_para_base(grafo: Grafo) -> Base:
         se = []
         for a in conds:
             cond = {"simbolo": a.origem}
-            cond.update({c: getattr(a, c) for c in _CAMPOS_CONDICAO if getattr(a, c) is not None})
+            for c in _CAMPOS_CONDICAO:
+                valor = getattr(a, c)
+                # só o que foi definido na aresta; ``None`` explícito só vale para ``valor``
+                # (``op`` e ``negado`` não aceitam ``None``)
+                if c in a.model_fields_set and (valor is not None or c not in ("op", "negado")):
+                    cond[c] = valor
             se.append(cond)
         entao = {"simbolo": concl[0].destino, "cf": concl[0].cf}
         regras.append(Regra.model_validate({**no.dados, "se": se, "entao": entao}))

@@ -178,3 +178,57 @@ def test_propriedade_cf_e_negado(cf, negado):
     assert nova == base
     refeita = next(r for r in nova.regras if r.id == "R-D1-01")
     assert refeita.entao.cf == cf and refeita.se[0].negado is negado
+
+
+def _minima_com_valor_none():
+    base = _minima()
+    regra = next(r for r in base.regras if r.id == "R-D1-01")
+    regra.se[0] = regra.se[0].model_copy(update={"valor": None})
+    assert regra.se[0].valor is None
+    return base
+
+
+def test_valor_none_explicito_ida_e_volta_em_memoria():
+    base = _minima_com_valor_none()
+    nova = grafo_para_base(base_para_grafo(base))
+    assert nova == base
+    assert next(r for r in nova.regras if r.id == "R-D1-01").se[0].valor is None
+
+
+def test_valor_none_explicito_ida_e_volta_por_json():
+    base = _minima_com_valor_none()
+    texto = base_para_grafo(base).model_dump_json()  # sem exclude_none: escreve "valor": null
+    nova = grafo_para_base(Grafo.model_validate_json(texto))
+    assert nova == base
+    assert next(r for r in nova.regras if r.id == "R-D1-01").se[0].valor is None
+
+
+def test_valor_ausente_continua_default_true():
+    grafo = base_para_grafo(_minima())
+    alvo = next(a for a in grafo.arestas if a.id == "R-D1-01:se:0")
+    sem_valor = Aresta.model_validate({k: v for k, v in alvo.model_dump(exclude_none=True).items()
+                                       if k != "valor"})
+    grafo.arestas = [sem_valor if a.id == alvo.id else a for a in grafo.arestas]
+    regra = next(r for r in grafo_para_base(grafo).regras if r.id == "R-D1-01")
+    assert regra.se[0].valor is True
+
+
+def test_id_do_no_de_simbolo_difere_dos_dados():
+    grafo = base_para_grafo(_minima())
+    _no(grafo, "sinal_a").id = "sinal_renomeado"
+    with pytest.raises(ValueError, match="sinal_renomeado.*sinal_a"):
+        grafo_para_base(grafo)
+
+
+def test_id_do_no_de_regra_difere_dos_dados():
+    grafo = base_para_grafo(_minima())
+    _no(grafo, "R-D1-01").id = "R-NOVA"
+    with pytest.raises(ValueError, match="R-NOVA.*R-D1-01"):
+        grafo_para_base(grafo)
+
+
+def test_no_duplicado_rejeitado():
+    grafo = base_para_grafo(_minima())
+    grafo.nos.append(_no(grafo, "sinal_a").model_copy(deep=True))
+    with pytest.raises(ValueError, match="duplicado.*sinal_a"):
+        grafo_para_base(grafo)
