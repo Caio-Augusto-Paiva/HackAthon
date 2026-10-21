@@ -11,7 +11,7 @@ from .avaliacao import avaliar_condicao
 
 
 class Sessao:
-    def __init__(self, base, modo='produtor', ficha=None, limite_dinamico=None):
+    def __init__(self, base, modo='produtor', ficha=None, limite_dinamico=None, *, _calcular_inicial=True):
         self.base=Base.de_dict(base)
         self._dependencias_bandeiras={r['id']:{folha for c in r['se'] for folha in _fontes(c['simbolo'],self.base)}
                                      for r in self.base.regras if r.get('classe')=='bandeira_vermelha'}
@@ -31,7 +31,7 @@ class Sessao:
                      if valor is not None and not (isinstance(valor,dict) and valor.get('valor') is None
                                                   and not valor.get('nao_sei',False))}
         self.memoria.registrar(preenchidos,origem='ficha')
-        self._calcular()
+        if _calcular_inicial: self._calcular()
 
     @classmethod
     def restaurar(cls, base, *, modo='produtor', fatos, perguntas_dinamicas=(),
@@ -45,7 +45,7 @@ class Sessao:
         Dados são validados como observações; não se exige que cada resposta
         antiga ainda seja a próxima pergunta após uma correção.
         """
-        sessao=cls(base,modo=modo,limite_dinamico=limite_dinamico)
+        sessao=cls(base,modo=modo,limite_dinamico=limite_dinamico,_calcular_inicial=False)
         sessao.memoria.registrar(fatos)
         dinamicas=list(perguntas_dinamicas)
         if len(dinamicas)!=len(set(dinamicas)) or any(id not in sessao.fatos for id in dinamicas):

@@ -1,8 +1,10 @@
 """Regressões dos seis ajustes do motor a partir de aaa7841."""
 import unittest
+import json
 from fractions import Fraction
+from unittest.mock import patch
 
-from engine.sessao import Sessao
+from engine.sessao import Sessao, analisar
 from engine.casos import executar_caso
 from engine.modelos import Base
 from engine.inferencia import inferir
@@ -104,3 +106,15 @@ class ModelDumpTests(unittest.TestCase):
         except ValueError as erro:
             self.fail(f'Base válida com campos opcionais nulos foi recusada: {erro}')
         self.assertEqual(inferir(normalizada,{'x':True}).cfs['d'],Fraction(4,5))
+
+
+class RestauracaoUnicaTests(unittest.TestCase):
+    def test_restauracao_calcula_uma_vez_e_preserva_estado_e_bandeira_travada(self):
+        sessao=sessao_com_bandeira_travada()
+        dados=json.loads(json.dumps(sessao.exportar()))
+        with patch('engine.sessao.analisar',wraps=analisar) as contador:
+            restaurada=Sessao.restaurar(sessao.base,**dados)
+            self.assertEqual(contador.call_count,1)
+        self.assertEqual(restaurada.estado(),sessao.estado())
+        self.assertEqual(restaurada.fatos,sessao.fatos)
+        self.assertEqual(restaurada.traco,sessao.traco)
