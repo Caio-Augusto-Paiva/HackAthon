@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 from collections.abc import Callable, Iterator
 from contextlib import ExitStack
 from datetime import date, datetime
@@ -18,6 +19,7 @@ from kb.modelos import carregar_base
 
 RAIZ = Path(__file__).resolve().parents[2]
 CAMINHO_BASE_MINIMA = RAIZ / "tests" / "fixtures" / "kb" / "base_minima.json"
+CAMINHO_CASOS_MINIMA = RAIZ / "tests" / "fixtures" / "api" / "casos_minima.json"
 
 
 @pytest.fixture
@@ -53,6 +55,18 @@ def fabrica_base_dir(hoje: date) -> Callable[..., Path]:
 @pytest.fixture
 def base_dir(tmp_path: Path, fabrica_base_dir: Callable[..., Path]) -> Path:
     return fabrica_base_dir(tmp_path / "base")
+
+
+@pytest.fixture
+def com_casos(base_dir: Path) -> Path:
+    """Copia ``casos_minima.json`` (3 casos sobre a base mínima) para ``base_dir/casos/casos.json``.
+
+    Devolve o caminho da cópia: o teste pode editá-la antes da requisição, pois os casos são lidos a cada execução.
+    """
+    destino = base_dir / "casos" / "casos.json"
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(CAMINHO_CASOS_MINIMA, destino)
+    return destino
 
 
 @pytest.fixture

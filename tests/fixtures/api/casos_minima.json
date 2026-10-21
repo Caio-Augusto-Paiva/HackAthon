@@ -1,0 +1,36 @@
+[
+  {
+    "id": "C-D1-OK",
+    "descricao": "D1 sobe com o sinal A e o fato X (fixture de software, sem significado clínico)",
+    "modo": "produtor",
+    "ficha": {"dias_em_lactacao": 10},
+    "triagem": {"sinais": ["sinal_a"]},
+    "respostas": {"pergunta_x": true},
+    "esperado": {
+      "top1": "d1",
+      "urgencia": "chamar_agora",
+      "faixas": {"d1": [75, 85]}
+    }
+  },
+  {
+    "id": "C-BV-OK",
+    "descricao": "O sinal B levanta a bandeira vermelha e pausa a sessão (fixture de software)",
+    "modo": "produtor",
+    "ficha": {"dias_em_lactacao": 10},
+    "triagem": {"sinais": ["sinal_b"]},
+    "esperado": {
+      "bandeira": "R-BV-01",
+      "motivo_parada": "sem_potencial",
+      "alerta": {"pausa": true}
+    }
+  },
+  {
+    "id": "C-FALHA",
+    "descricao": "Falha de propósito: o top1 esperado não é o que o motor devolve (fixture de software)",
+    "modo": "produtor",
+    "ficha": {"dias_em_lactacao": 10},
+    "triagem": {"sinais": ["sinal_a"]},
+    "respostas": {"pergunta_x": true},
+    "esperado": {"top1": "outra_doenca"}
+  }
+]

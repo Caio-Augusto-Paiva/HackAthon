@@ -1,11 +1,11 @@
-"""Rotas da base de conhecimento: leitura e validação (4.5.3). Finas: a lógica fica em ``api/servicos``."""
+"""Rotas da base: leitura, validação e execução dos casos (4.5.3). Finas: a lógica fica em ``api/servicos``."""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends
 
 from api.contexto import Contexto, obter_contexto
-from api.schemas.base import EdicaoBase, ListaVersoes
-from api.servicos import base_servico
+from api.schemas.base import EdicaoBase, Execucao, ExecutarBody, ListaExecucoes, ListaVersoes
+from api.servicos import base_servico, casos_servico
 from kb.grafo import Grafo
 from kb.modelos import Base
 from kb.validador import Relatorio
@@ -61,3 +61,39 @@ def validar_base(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) -> 
     também é 422 `entrada_invalida`.
     """
     return base_servico.validar_edicao_base(ctx, corpo)
+
+
+@router.post(
+    "/base/versoes/{versao}/execucoes",
+    operation_id="executar_casos",
+    status_code=201,
+    response_model=Execucao,
+    summary="Executar os casos de teste numa versão",
+)
+def executar_casos(versao: str, corpo: ExecutarBody, ctx: Contexto = Depends(obter_contexto)) -> Execucao:
+    """Roda os casos (`casos: null` = todos) na versão, grava a execução e a compara com a do pai.
+
+    Um caso mal formado ou recusado pelo motor vira resultado `erro`; os outros seguem. Versão ou id de caso
+    inexistente é 404 `nao_encontrado` (nada é gravado).
+    """
+    return casos_servico.executar(ctx, versao, corpo.casos)
+
+
+@router.get(
+    "/base/versoes/{versao}/execucoes",
+    operation_id="listar_execucoes",
+    response_model=ListaExecucoes,
+    summary="Listar as execuções de uma versão",
+)
+def listar_execucoes(versao: str, ctx: Contexto = Depends(obter_contexto)) -> ListaExecucoes:
+    return casos_servico.listar_execucoes(ctx, versao)
+
+
+@router.get(
+    "/base/versoes/{versao}/execucoes/{execucao_id}",
+    operation_id="obter_execucao",
+    response_model=Execucao,
+    summary="Obter uma execução dos casos",
+)
+def obter_execucao(versao: str, execucao_id: str, ctx: Contexto = Depends(obter_contexto)) -> Execucao:
+    return casos_servico.obter_execucao(ctx, versao, execucao_id)
