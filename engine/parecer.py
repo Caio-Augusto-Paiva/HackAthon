@@ -1,14 +1,13 @@
 """Apresentação sem interpretação probabilística ou recomendação clínica."""
 from fractions import Fraction
 
-BLOCOS=(('principais','Hipóteses principais'),
-        ('diferencial','Diagnóstico diferencial / sinais inespecíficos'),
+BLOCOS=(('hipoteses_principais','Hipóteses principais'),
+        ('diagnostico_diferencial','Diagnóstico diferencial / sinais inespecíficos'),
         ('pouco_provavel','Pouco provável ou descartada'))
 
 
 def percentual(cf):
-    """Arredonda meio para cima; intervalo neutro tem apresentação 0%."""
-    if -Fraction(1,5)<=cf<=Fraction(1,5): return 0
+    """max(0, CF) × 100, arredondado meio para cima, inclusive CF neutro."""
     numero=max(Fraction(0),cf)*100+Fraction(1,2)
     return numero.numerator//numero.denominator
 
@@ -23,7 +22,8 @@ def montar_parecer(resultado, motivo=None, urgencia=None, bandeiras=(), pendente
         situacao='descartada' if cf < -Fraction(1,5) else 'sem_evidencia' if cf<=Fraction(1,5) else 'com_evidencia'
         item={'doenca':id,'nome':s['nome'],'gravidade':s['gravidade'],'cf':float(cf),
               'percentual':percentual(cf),'situacao':situacao}
-        indice=0 if cf>=Fraction(1,2) else 1 if cf>Fraction(1,5) else 2
+        lim=base.meta['limiares']
+        indice=0 if cf>=lim['bloco_principal'] else 1 if cf>lim['bloco_diferencial'] else 2
         blocos[indice]['itens'].append(item)
     lim=base.meta['limiares']
     return {'versao_base':base.meta.get('versao'), 'urgencia':urgencia or resultado.urgencia,

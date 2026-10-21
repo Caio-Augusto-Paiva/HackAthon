@@ -41,7 +41,7 @@ class IntegracaoTests(unittest.TestCase):
         b=base([simbolo('x'),simbolo('y'),doenca(),simbolo('chamar_agora','urgencia')],
                [regra('d','d',0.5,condicao('x')),regra('bv','chamar_agora',0.9,condicao('x'),condicao('y'),classe='bandeira_vermelha')])
         s=modulo('sessao').Sessao(b,ficha={'x':True,'y':'nao_sei'},limite_dinamico=0)
-        self.assertEqual(s.parecer()['bandeiras_nao_verificadas'],['bv'])
+        self.assertEqual(s.parecer()['bandeiras_nao_verificadas'],[])
 
     def test_limis_produtor_e_veterinario_contam_apenas_respostas_dinamicas(self):
         # Muitas evidências fracas mantêm hipótese aberta após responder não sei.

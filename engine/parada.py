@@ -11,8 +11,9 @@ def motivo_parada(analise, triagem_completa, perguntas_dinamicas, limite=None):
     limite=r.base.meta['limite_dinamico'][analise.modo] if limite is None else limite
     if type(limite) is not int or limite<0: raise ValueError('Limite inválido')
     if perguntas_dinamicas>=limite: return 'limite'
-    if analise.proxima is None: return 'sem_perguntas'
     if analise.bandeiras_pendentes: return None
+    if not analise.abertas: return 'sem_potencial'
+    if analise.proxima is None: return 'sem_perguntas'
     if not any(analise.potenciais[id]>=lim['exaustao'] for id in analise.abertas):
         return 'sem_potencial'
     return None

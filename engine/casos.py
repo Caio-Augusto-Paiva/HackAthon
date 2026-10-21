@@ -5,6 +5,7 @@ from .sessao import Sessao
 def executar_caso(base, caso):
     try:
         sessao=Sessao(base,caso['modo'],caso.get('ficha'),caso.get('limite_dinamico'))
+        pausa_ocorrida=False
         fases=[caso]+([caso['continuacao']] if caso.get('continuacao') else [])
         for indice,fase in enumerate(fases):
             if indice: sessao.trocar_modo(fase['modo'])
@@ -12,6 +13,7 @@ def executar_caso(base, caso):
             for _ in range(len(sessao.base.simbolos)*3+len(sessao.base.regras)+10):
                 estado=sessao.estado()
                 if estado['pausa']:
+                    pausa_ocorrida=True
                     sessao.acao_bandeira('continuar'); continue
                 if estado['fase']=='encerrada': break
                 proxima=estado['proxima']; id=proxima['id']
@@ -26,7 +28,8 @@ def executar_caso(base, caso):
         obtido={'urgencia':parecer['urgencia'],'top1':itens[0]['doenca'] if itens else None,
                 'top3_contem':[x['doenca'] for x in itens[:3]],
                 'percentuais':{x['doenca']:x['percentual'] for x in itens},
-                'motivo_parada':parecer['motivo_parada'],'bandeiras':parecer['bandeiras']}
+                'motivo_parada':parecer['motivo_parada'],'bandeiras':parecer['bandeiras'],
+                'inconclusivas':parecer['inconclusivas'],'alerta':{'pausa':pausa_ocorrida}}
         falhas=[]
         for campo,esperado in caso.get('esperado',{}).items():
             if campo in ('faixas','faixas_porcentagem'):
@@ -38,6 +41,12 @@ def executar_caso(base, caso):
                 if esperado not in obtido['bandeiras']: falhas.append({'campo':campo,'esperado':esperado,'obtido':obtido['bandeiras']})
             elif campo=='top3_contem':
                 if not set(esperado)<=set(obtido[campo]): falhas.append({'campo':campo,'esperado':esperado,'obtido':obtido[campo]})
+            elif campo=='inconclusivas':
+                if not set(esperado)<=set(obtido[campo]): falhas.append({'campo':campo,'esperado':esperado,'obtido':obtido[campo]})
+            elif campo in ('alerta','alerta.pausa'):
+                valor=esperado.get('pausa') if campo=='alerta' else esperado
+                if type(valor) is not bool: raise ValueError('alerta.pausa deve ser booleano')
+                if valor!=pausa_ocorrida: falhas.append({'campo':'alerta.pausa','esperado':valor,'obtido':pausa_ocorrida})
             elif campo not in obtido:
                 raise ValueError('Critério de caso desconhecido: '+campo)
             elif obtido[campo]!=esperado:

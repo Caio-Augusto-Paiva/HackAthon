@@ -1,6 +1,6 @@
 """Guardas de execução; validação editorial completa pertence ao kb."""
 from .cf import fracao
-from .modelos import CAMADAS, GRAVIDADES, LIMIARES, MODOS
+from .modelos import CAMADAS, GRAVIDADES, LIMIARES, MODOS, CORTES
 
 OPS = {'=', '≠', '<', '≤', '>', '≥', 'em'}
 
@@ -30,6 +30,8 @@ def validar(dados):
         classe = r.get('classe','evidencia')
         if classe not in ('evidencia','urgencia','bandeira_vermelha'):
             raise ValueError('Classe inválida')
+        if classe in ('urgencia','bandeira_vermelha') and cf<=0:
+            raise ValueError('CF de urgência ou bandeira deve ser positivo')
         if (classe == 'evidencia') != (destino['tipo'] in ('doenca','derivado')):
             raise ValueError('Classe incompatível com a camada da conclusão')
         if classe == 'bandeira_vermelha' and alvo != 'chamar_agora':
@@ -54,6 +56,9 @@ def validar(dados):
     ordem = [limiares[k] for k in LIMIARES]
     if not (ordem[0]<0<ordem[1] and all(a<b for a,b in zip(ordem,ordem[1:]))):
         raise ValueError('Limiares fora de ordem')
+    cortes={k:fracao(meta.get('limiares',{}).get(k,v)) for k,v in CORTES.items()}
+    if not 0<=cortes['bloco_diferencial']<cortes['bloco_principal']<=1:
+        raise ValueError('Cortes de exibição fora de ordem')
     for modo,limite in meta.get('limite_dinamico',{}).items():
         if modo not in MODOS or type(limite) is not int or limite<0:
             raise ValueError('Limite dinâmico inválido')
