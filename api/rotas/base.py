@@ -1,10 +1,19 @@
-"""Rotas da base: leitura, validação e execução dos casos (4.5.3). Finas: a lógica fica em ``api/servicos``."""
+"""Rotas da base: leitura, validação, salvar, ativar e execução dos casos (4.5.3). Finas: a lógica fica em ``api/servicos``."""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends
 
 from api.contexto import Contexto, obter_contexto
-from api.schemas.base import EdicaoBase, Execucao, ExecutarBody, ListaExecucoes, ListaVersoes
+from api.schemas.base import (
+    AtivarBody,
+    AtivarResposta,
+    EdicaoBase,
+    Execucao,
+    ExecutarBody,
+    ListaExecucoes,
+    ListaVersoes,
+    SalvarResposta,
+)
 from api.servicos import base_servico, casos_servico
 from kb.grafo import Grafo
 from kb.modelos import Base
@@ -61,6 +70,42 @@ def validar_base(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) -> 
     também é 422 `entrada_invalida`.
     """
     return base_servico.validar_edicao_base(ctx, corpo)
+
+
+@router.post(
+    "/base/versoes",
+    operation_id="salvar_versao",
+    status_code=201,
+    response_model=SalvarResposta,
+    summary="Salvar uma nova versão da base",
+)
+def salvar_versao(corpo: EdicaoBase, ctx: Contexto = Depends(obter_contexto)) -> SalvarResposta:
+    """Grava a próxima versão (`vNNNN`) a partir do grafo editado, sem ativá-la, e roda os casos nela e no pai.
+
+    Com erro de validação (inclusive estrutura quebrada): 422 `base_invalida`, com os erros em `detalhes`, e nada
+    é gravado. `pai` nulo vale a versão ativa; um `pai` que não existe é 404 `nao_encontrado`. O pai só é executado
+    se ainda não tem execução. `mudancas` lista os casos cujo status mudou em relação ao pai. Se outra gravação
+    criou a mesma versão ao mesmo tempo: 409 `conflito`, sem sobrescrever nada. O autor da versão é sempre
+    `equipe` (suposição: não há login).
+    """
+    return base_servico.salvar_versao(ctx, corpo)
+
+
+@router.put(
+    "/base/ativa",
+    operation_id="ativar_versao",
+    status_code=200,
+    response_model=AtivarResposta,
+    summary="Ativar uma versão da base",
+)
+def ativar_versao(corpo: AtivarBody, ctx: Contexto = Depends(obter_contexto)) -> AtivarResposta:
+    """Aponta a base ativa para a versão e devolve a que estava ativa (`anterior`).
+
+    Sessões em andamento continuam na versão em que nasceram; só as novas usam a ativa. Se a última execução da
+    versão tem caso que falhou ou deu erro e `confirmar_falhas` não é `true`: 409 `casos_falhando`. Versão que nunca
+    foi executada ativa sem confirmação. Versão inexistente: 404 `nao_encontrado`.
+    """
+    return base_servico.ativar_versao(ctx, corpo)
 
 
 @router.post(
