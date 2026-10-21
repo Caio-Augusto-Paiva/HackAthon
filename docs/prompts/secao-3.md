@@ -1,6 +1,8 @@
 # Prompt de revisão — Seção 3: Conhecimento do domínio
 
-> Status da seção: **v2, pendente de aprovação** (20/10/2026). v2: laminite trocada por dermatite digital; cheiro de acetona removido (sem fonte); camadas estritas; `cf_minimo`; gravidade; derivado `max` para sinais redundantes. Lista completa de fontes em `docs/fontes/fontes.md`. Cole tudo abaixo da linha numa IA revisora — de preferência peça também revisão a alguém com formação em veterinária ou zootecnia.
+> **Agente:** Gemini Pro (app web) com Deep Research e busca no Google (alternativa: Antigravity da pessoa A com a skill `pdf` de anthropics/skills para ler material da Embrapa). **Por quê:** conferir fontes clínicas em português e inglês. **Melhor ainda:** um técnico da RERUM ou alguém de veterinária ([A] slide 13). Ver `docs/agentes-e-skills.md`.
+
+> Status da seção: **aprovada (v2)** (20/10/2026). Após v2: R-MET-06 e R-CET-08 testam `dias_em_lactacao`; 8 perguntas exclusivas do veterinário. v2: laminite trocada por dermatite digital; cheiro de acetona removido (sem fonte); camadas estritas; `cf_minimo`; gravidade; derivado `max` para sinais redundantes. Lista completa de fontes em `docs/fontes/fontes.md`. Cole tudo abaixo da linha numa IA revisora — de preferência peça também revisão a alguém com formação em veterinária ou zootecnia.
 
 ---
 

@@ -1,6 +1,8 @@
 # Prompt de revisão — Seção 1: Motor de inferência
 
-> Status da seção: **aprovada (v5)** em 20/10/2026. v4 incorporou: avaliação de condição, guarda 0/0, regras viáveis, triagem obrigatória de 6 telas, novo critério de parada e testes do motor. v5: três camadas estritas, `cf_minimo`/`cf_maximo`, combinação `max` para derivados redundantes, gravidade como desempate, bloco de diagnóstico diferencial, dermatite digital no lugar de laminite. Cole tudo abaixo da linha numa IA revisora (Gemini, Codex etc.).
+> **Agente:** Codex (alternativa: Antigravity da pessoa A). **Skills:** `verification-before-completion`, `test-driven-development`, `systematic-debugging` (obra/superpowers). **Por quê:** a revisão pede execução de Python em aritmética exata. Não usar Claude Code (autor da seção e recurso escasso). Ver `docs/agentes-e-skills.md`.
+
+> Status da seção: **aprovada (v6)** em 20/10/2026. v6: condição sobre variável sem valor ou "não sei" vale 0; peso de pergunta propagado por derivados; "hipótese aberta" definida (CF > −0,2 e < 0,80), separada de `hipotese_relevante` (0,35); prova de associatividade da combinação MYCIN. v4 incorporou: avaliação de condição, guarda 0/0, regras viáveis, triagem obrigatória de 6 telas, novo critério de parada e testes do motor. v5: três camadas estritas, `cf_minimo`/`cf_maximo`, combinação `max` para derivados redundantes, gravidade como desempate, bloco de diagnóstico diferencial, dermatite digital no lugar de laminite. Cole tudo abaixo da linha numa IA revisora (Gemini, Codex etc.).
 
 ---
 
@@ -50,6 +52,7 @@ Fato: `(variável, valor, CF)` com CF em [−1, +1]. Só fatos observados chegam
 - **Booleanas:** o mapeamento de resposta é sim = +1, não = −1, "não sei" = 0, e vale **só** para perguntas booleanas. A condição `X` usa o CF do fato; a condição negada (`X == não`) usa −CF. Assim, resposta "não" para febre (CF −1) satisfaz `febre == não` com +1.
 - **Categóricas e numéricas:** o fato guarda valor e CF separados. Se o valor satisfaz o operador, o CF da condição é o CF do fato; se não satisfaz, é −CF.
 - **Intensidade** (leve/moderada/grave) é **valor categórico, nunca CF**. O CF expressa só a certeza da resposta.
+- **Sem valor:** variável ainda sem fato, ou respondida com "não sei", faz **toda** condição sobre ela valer CF 0, com qualquer operador (numérico, categórico ou booleano) e também negada (−0 = 0). O operador nunca é avaliado sem valor.
 
 ### Regras
 
@@ -65,7 +68,7 @@ Fato: `(variável, valor, CF)` com CF em [−1, +1]. Só fatos observados chegam
 
 Duas evidências da mesma conclusão: ambas positivas, `a + b(1−a)`; ambas negativas, `a + b(1+a)`; sinais mistos, `(a+b) / (1 − min(|a|,|b|))`.
 
-- O resultado **independe da ordem dos disparos** (verificado em aritmética exata, em todas as permutações). A forma par a par fica; não trocar por acumuladores separados (dão resultado idêntico).
+- O resultado **independe da ordem dos disparos**, para qualquer número de evidências. Verificado em aritmética exata com 2 a 6 evidências, em todas as permutações. Prova: a função `t(x) = sinal(x)·(−ln(1−|x|))` transforma a combinação em soma (`t(comb(a,b)) = t(a) + t(b)`), e a soma é associativa e comutativa. A forma par a par fica; não trocar por acumuladores separados (dão resultado idêntico).
 - Como `cf_regra` ≤ 0,99 em módulo, conclusões nunca chegam a ±1 e o caso 0/0 não ocorre. Mesmo assim há **guarda defensiva**: denominador 0 retorna 0.
 - Motivo do limite ±0,99: com `cf_regra = +1` e premissa 1, a conclusão chega a +1 e trava (`[+1, −0,5, −0,5]` dá 1 em qualquer ordem).
 - **Derivado com `combinacao: max`:** quando as entradas são redundantes (sinais sinônimos ou correlacionados, como distocia e retenção de placenta), o derivado recebe o **maior** CF das regras que disparam, em vez da soma MYCIN, para não inflar a evidência. Só é permitido se todas as regras desse derivado tiverem `cf_regra` positivo. Sinais independentes continuam como regras separadas somadas por MYCIN.
@@ -104,13 +107,15 @@ Agenda ordenada por `prioridade` (decrescente), depois especificidade (mais cond
 ### Próxima pergunta (fase dinâmica)
 
 - **Regra viável:** regra que ainda pode atingir premissa > 0,2 com os fatos conhecidos e as variáveis perguntáveis no modo atual. Exclui regra morta por condição conhecida e regra com variável exclusiva do veterinário ainda não respondida, no modo produtor.
-- Escolha: variável desconhecida, perguntável no modo atual, que aparece em mais regras **viáveis** de hipóteses abertas, ponderada por |`cf_regra`|; empate pela maior **gravidade** da hipótese servida (alta > média > baixa), depois por `id`.
+- Escolha: variável desconhecida, perguntável no modo atual, que aparece em mais regras **viáveis** de hipóteses abertas, ponderada por |`cf_regra`|. **Através de derivados:** uma variável que alimenta um derivado conta também para cada regra viável de doença que usa esse derivado, com peso |`cf_regra` da regra de doença| × |`cf_regra` da regra do derivado|; empate pela maior **gravidade** da hipótese servida (alta > média > baixa), depois por `id`.
 - Variáveis exclusivas do veterinário não são perguntadas no modo produtor, mas, se já respondidas, seus fatos continuam valendo.
 - **Diretriz de autoria:** não misturar sinal do produtor e exame do veterinário na mesma conjunção. Usar uma regra do produtor (`cf_regra` menor) e uma regra de confirmação do veterinário (`cf_regra` maior), que se somam via MYCIN.
 
 ### Parada
 
-Limiares nomeados em `meta.limiares` da base (calibráveis e versionados): `premissa` 0,2; `hipotese_aberta` 0,35; `exaustao` 0,60; `potencial` 0,70; `confirmacao` 0,80.
+Limiares nomeados em `meta.limiares` da base (calibráveis e versionados): `descarte` −0,2; `premissa` 0,2; `hipotese_relevante` 0,35; `exaustao` 0,60; `potencial` 0,70; `confirmacao` 0,80.
+
+**Hipótese aberta:** doença com CF > `descarte` (−0,2) e < `confirmacao` (0,80). É o conjunto usado na escolha da próxima pergunta e na saída por exaustão. `hipotese_relevante` (0,35) serve **só** ao critério (b) abaixo e à lista de inconclusivas do parecer. Assim, uma triagem que termina com todas as doenças abaixo de 0,35 não encerra a sessão: as hipóteses continuam abertas e recebem perguntas.
 
 **Potencial máximo** de uma hipótese: combinação MYCIN do CF atual com todos os `cf_regra` positivos das suas regras viáveis, supondo premissa 1. É um limite superior válido porque a combinação de positivos é monotônica e evidência negativa só reduz. Quando a regra depende de sinal derivado, o potencial é propagado de baixo para cima pelo grafo acíclico.
 
@@ -150,3 +155,7 @@ Lista ordenada de eventos: `pergunta_feita` (com o motivo), `fato_adicionado` (c
 - `cf_minimo 0,50`: doença em 0,49 não dispara a urgência; em 0,50 dispara.
 - Camadas: regra de doença que lê outra doença é rejeitada pelo validador.
 - Empate na próxima pergunta é resolvido pela gravidade antes do `id`.
+- Condição numérica ou categórica sobre variável sem fato, ou com "não sei", vale 0 sem erro (inclusive negada).
+- Pergunta que só alimenta um derivado (ex.: `temperatura_retal` → `febre`) é escolhida quando o derivado pesa em hipóteses abertas.
+- Triagem que termina com todas as doenças abaixo de 0,35 (e acima de −0,2): o motor continua perguntando e não sai por exaustão.
+- Combinação com 4, 5 e 6 evidências em todas as permutações (aritmética exata): resultado idêntico ao de acumuladores separados.

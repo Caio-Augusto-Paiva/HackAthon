@@ -1,6 +1,8 @@
 # Prompt de revisão — Seção 2: Base de conhecimento e editor gráfico
 
-> Status da seção: **v3** (20/10/2026). v2: triagem e limiares. v3: `cf_minimo`/`cf_maximo`, camadas estritas, `gravidade`, `combinacao` em derivados, dermatite digital no lugar de laminite. Cole tudo abaixo da linha numa IA revisora.
+> **Agente:** Antigravity da pessoa B (alternativa: Codex). **Skills:** `requesting-code-review`, `verification-before-completion` (obra/superpowers). **Por quê:** precisa ler as Seções 1 a 3 juntas no repositório e testar a ida e volta grafo ↔ JSON com um script. Ver `docs/agentes-e-skills.md`.
+
+> Status da seção: **aprovada (v4)** (20/10/2026). v4: limiares `descarte` e `hipotese_relevante`; condição negada sobre derivado sem CF negativo vira erro; `Caso` com `continuacao` e `limite_dinamico`. v2: triagem e limiares. v3: `cf_minimo`/`cf_maximo`, camadas estritas, `gravidade`, `combinacao` em derivados, dermatite digital no lugar de laminite. Cole tudo abaixo da linha numa IA revisora.
 
 ---
 
@@ -51,7 +53,7 @@ Os arquivos são a fonte da verdade (e vão para o git); o SQLite guarda só o �
 
 **Estrutura do arquivo.** `meta`, `simbolos[]`, `regras[]`, `layout`.
 - **`meta`:** `versao`, `pai`, `autor`, `data`, `nota`, mais:
-  - `limiares`: `premissa` 0,2; `hipotese_aberta` 0,35; `exaustao` 0,60; `potencial` 0,70; `confirmacao` 0,80.
+  - `limiares`: `descarte` −0,2; `premissa` 0,2; `hipotese_relevante` 0,35; `exaustao` 0,60; `potencial` 0,70; `confirmacao` 0,80.
   - `limite_dinamico`: `produtor` 12, `veterinario` 25 (a triagem não conta).
   - `triagem`: lista ordenada de 6 telas. Cada tela tem `id`, `selecao` (`unica` | `multipla`), `simbolos` (ids que a tela grava) e textos por modo (`produtor`, `veterinario`), incluindo o rótulo de cada opção.
 - **Símbolo** (namespace único para tudo que a regra lê ou conclui): `id`, `tipo` (`pergunta` | `ficha` | `derivado` | `doenca` | `urgencia`), `dominio` (`booleano`, `categorico` com valores, ou `numerico` com min/max/unidade), `nome` e, quando perguntável na fase dinâmica, `pergunta` e `por_que` **por modo** (`produtor`, `veterinario`; texto ausente = não perguntável naquele modo), `campo_ficha` (tipo `ficha`), `fonte`, `gravidade` (obrigatório em `doenca`: `alta` | `media` | `baixa`), `combinacao` (só em `derivado`: `mycin`, padrão, ou `max`).
@@ -74,7 +76,7 @@ Os arquivos são a fonte da verdade (e vão para o git); o SQLite guarda só o �
   - **camadas:** regra que lê símbolo da própria camada ou de camada acima (camada 1 `derivado` ← perguntas e ficha; camada 2 `doenca` ← perguntas, ficha e derivados; camada 3 `bandeira_vermelha`/`urgencia` ← qualquer camada abaixo);
   - `doenca` sem `gravidade`; derivado `max` com alguma regra de `cf` negativo; `cf_minimo`/`cf_maximo` fora de [0, 1] ou usados em símbolo que não seja `doenca`/`derivado`;
   - tela de triagem sem texto em algum dos dois modos (símbolo de ficha dispensa);
-  - limiares fora da ordem `premissa < hipotese_aberta < exaustao < potencial < confirmacao`;
+  - limiares fora da ordem `descarte < 0 < premissa < hipotese_relevante < exaustao < potencial < confirmacao`;
   - regra sem `fonte`.
 - *Avisos:* símbolo perguntável nunca usado; duas regras com as mesmas condições e conclusão de sinal oposto; contagem de regras ainda `suposicao_a_validar`.
 

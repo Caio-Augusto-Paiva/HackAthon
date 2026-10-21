@@ -1,6 +1,8 @@
 # Prompt de revisão — Seção 5: Testes, execução em localhost, cronograma e plano de corte
 
-> Status da seção: **RASCUNHO, pendente de aprovação** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
+> **Agente:** Gemini Pro (app web) (alternativa: Antigravity da pessoa C). **Skills:** `writing-plans`, `test-driven-development` (obra/superpowers); `webapp-testing` (anthropics/skills) ou `playwright-skill` (lackeyjb, MIT). **Por quê:** o cronograma é revisão de raciocínio; os cenários ponta a ponta pedem conhecimento de Playwright. Ver `docs/agentes-e-skills.md`.
+
+> Status da seção: **aprovada** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
 
 ---
 

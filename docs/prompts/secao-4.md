@@ -1,5 +1,7 @@
 # Prompt de revisão — Seção 4: Tecnologias, monorepo e contratos da API
 
+> **Agente:** Antigravity da pessoa B (alternativa: Codex). **Skills:** `requesting-code-review`, `verification-before-completion` (obra/superpowers). **Por quê:** acesso à web para conferir versões e licenças, e leitura das Seções 1 a 3 para ver se as rotas cobrem tudo. Ver `docs/agentes-e-skills.md`.
+
 > Status da seção: **aprovada** (20/10/2026). Cole tudo abaixo da linha numa IA revisora.
 
 ---
