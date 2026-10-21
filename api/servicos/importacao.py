@@ -18,7 +18,8 @@ from api.contexto import Contexto
 from api.db import repositorios as repo
 from api.erros import conflito, importacao_invalida
 from api.schemas.animal import ErroCampo, LinhaAtualizada, LinhaImportada, LinhaRejeitada, ResultadoImportacao
-from api.servicos.animal_servico import base_ativa, texto_legivel
+from api.servicos.animal_servico import base_ativa
+from api.servicos.comum import texto_legivel
 from api.servicos.ficha import campos_da_ficha, completar_ficha, mostrar_valor, validar_ficha
 from kb.modelos import Dominio
 

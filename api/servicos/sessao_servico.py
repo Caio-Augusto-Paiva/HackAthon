@@ -5,9 +5,9 @@ from api.contexto import Contexto
 from api.db import repositorios as repo
 from api.erros import conflito, entrada_invalida, nao_encontrado
 from api.schemas.sessao import EstadoSessao, NovaSessao
-from api.servicos.animal_servico import texto_legivel
+from api.servicos.comum import texto_legivel
 from api.servicos.estado import montar_estado
-from api.servicos.ficha import CAMPO_DATA_PARTO, CAMPO_DIAS, ficha_para_motor
+from api.servicos.ficha import CAMPO_DATA_PARTO, CAMPO_DIAS, ficha_para_motor, mostrar_valor
 from api.servicos.sessao_motor import SessaoCarregada, aplicar, carregar, persistir, snapshot_do_motor
 from engine.sessao import Sessao
 from kb.modelos import Base, para_motor
@@ -17,7 +17,7 @@ def _versao_da_sessao(ctx: Contexto, pedida: str | None) -> str:
     """A versão pedida (404 se não existe) ou, sem pedido, a ativa (409 se não há ativa)."""
     if pedida is not None:
         if pedida not in ctx.repo.listar_versoes():  # só lista ids bem formados: "abc" também cai aqui
-            raise nao_encontrado(f"Versão {pedida} não encontrada.")
+            raise nao_encontrado(f"Versão {mostrar_valor(pedida)} não encontrada.")
         return pedida
     ativa = ctx.repo.versao_ativa()
     if ativa is None:

@@ -1,7 +1,6 @@
 """Animais: cadastro, consulta e histórico de sessões. A ficha é validada contra a base ativa."""
 from __future__ import annotations
 
-import json
 import sqlite3
 
 from api.contexto import Contexto
@@ -16,6 +15,7 @@ from api.schemas.animal import (
     NovoAnimal,
     SessaoDoAnimal,
 )
+from api.servicos.comum import texto_legivel
 from api.servicos.ficha import CAMPO_DATA_PARTO, completar_ficha, dias_em_lactacao, validar_ficha
 from api.servicos.sessao_motor import restaurar_motor, resumo_do_motor
 from kb.modelos import Base, para_motor
@@ -27,19 +27,6 @@ def base_ativa(ctx: Contexto) -> Base:
     if versao is None:
         raise conflito("Nenhuma versão ativa para validar a ficha")
     return ctx.repo.carregar(versao)
-
-
-def texto_legivel(*valores: object) -> bool:
-    r"""``False`` se algum texto (também dentro de dict e lista) tem um surrogate Unicode solto.
-
-    O JSON aceita ``\ud800``; o banco e a resposta não o codificam em UTF-8, e sem esta checagem a gravação
-    ou a resposta viraria 500.
-    """
-    try:
-        json.dumps(valores, ensure_ascii=False).encode("utf-8")
-    except ValueError:  # UnicodeEncodeError é um ValueError
-        return False
-    return True
 
 
 def erro_de_ficha(erros: list[ErroCampo]) -> ErroApi:

@@ -18,11 +18,11 @@ from api.schemas.sessao import (
     UrgenciaEstado,
 )
 from api.servicos.textos import TEXTO_ALERTA
-from engine.sessao import Sessao
 from kb.modelos import DominioCategorico, DominioNumerico, Simbolo, Tela
 
-if TYPE_CHECKING:  # sessao_motor importa este módulo; o import real seria circular
+if TYPE_CHECKING:  # só anotação (e, para SessaoCarregada, um import real seria circular)
     from api.servicos.sessao_motor import SessaoCarregada
+    from engine.sessao import Sessao
 
 
 def _entrada(simbolo: Simbolo, tela: Tela | None, modo: str) -> dict:
@@ -111,11 +111,13 @@ def montar_estado(carregada: SessaoCarregada, revisao: int) -> EstadoSessao:
     alerta = None
     if estado["bandeiras"]:
         pausa = estado["pausa"]
+        # pausada com a sessão já encerrada (o motor não tem mais o que perguntar): só resta ver o parecer
+        acoes = (["ver_parecer"] if estado["fase"] == "encerrada" else ["ver_parecer", "continuar"]) if pausa else []
         alerta = Alerta(
             nivel="chamar_agora",
             regras=list(estado["bandeiras"]),
             pausa=pausa,
-            acoes=["ver_parecer", "continuar"] if pausa else [],
+            acoes=acoes,
             texto=TEXTO_ALERTA[modo],
         )
     return EstadoSessao(

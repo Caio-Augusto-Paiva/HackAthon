@@ -20,7 +20,7 @@ from api.servicos import sessao_motor
 from api.servicos.sessao_motor import aplicar, carregar
 from engine.sessao import Sessao
 from kb.carregador import Repositorio
-from kb.modelos import para_motor
+from kb.modelos import LimiteDinamico, para_motor
 from tests.api.apoio import criar_animal_teste, validar_contrato
 
 
@@ -153,18 +153,28 @@ def test_sessao_inexistente_404(cliente, config):
     assert _consultar(config, "SELECT COUNT(*) FROM sessoes") == [(0,)]  # nada foi criado
 
 
-def test_texto_ilegivel_no_id_nao_vira_500(cliente):
+def test_texto_ilegivel_no_id_vira_422_e_nao_500(cliente, config):
     animal = criar_animal_teste(cliente)
     resposta = cliente.post(
         "/api/sessoes", content=b'{"animal_id": "\\ud800", "modo": "produtor"}', headers={"content-type": "application/json"}
     )
-    assert resposta.status_code in (404, 422), resposta.text
+    _erro(resposta, 422, "entrada_invalida")
     resposta = cliente.post(
         "/api/sessoes",
         content=b'{"animal_id": "' + animal["id"].encode() + b'", "modo": "produtor", "versao_base": "\\ud800"}',
         headers={"content-type": "application/json"},
     )
-    assert resposta.status_code in (404, 422), resposta.text
+    _erro(resposta, 422, "entrada_invalida")
+    assert _consultar(config, "SELECT COUNT(*) FROM sessoes") == [(0,)]
+
+
+def test_404_de_versao_nao_ecoa_o_valor_inteiro(cliente):
+    animal = criar_animal_teste(cliente)
+    erro = _erro(_criar(cliente, animal["id"], versao_base="v" + "9" * 5000), 404, "nao_encontrado")
+    assert len(erro["mensagem"]) < 100
+    assert "9" * 50 not in erro["mensagem"]
+    erro = _erro(_criar(cliente, animal["id"], versao_base="v0099"), 404, "nao_encontrado")
+    assert "'v0099'" in erro["mensagem"]  # o valor curto continua aparecendo
 
 
 def test_sem_versao_ativa_409_mas_versao_explicita_funciona(cliente, base_dir):
@@ -175,15 +185,34 @@ def test_sem_versao_ativa_409_mas_versao_explicita_funciona(cliente, base_dir):
     assert _criar(cliente, animal["id"], versao_base="v0001").status_code == 201
 
 
-def test_cada_sessao_guarda_a_versao_pedida(cliente, base_dir, hoje):
-    """``versao_base`` explícita vale mesmo com outra ativa; a sessão fica presa a ela."""
+def test_cada_sessao_guarda_a_versao_em_que_nasceu(cliente, base_dir, hoje):
+    """Ativar outra versão não muda o texto da tela nem o limite de uma sessão já criada; a nova pega os da ativa."""
     repo = Repositorio(base_dir, hoje=lambda: hoje)
-    repo.salvar_nova(repo.carregar("v0001"), autor="teste", nota="segunda versão")
-    repo.ativar("v0002")
+    segunda = repo.carregar("v0001").model_copy(deep=True)
+    next(t for t in segunda.meta.triagem if t.id == "sinais").texto["produtor"] = "Marque os sinais (segunda versão)."
+    segunda.meta.limite_dinamico = LimiteDinamico(produtor=7, veterinario=9)
+
     animal = criar_animal_teste(cliente)
-    assert _criar(cliente, animal["id"]).json()["versao_base"] == "v0002"  # a ativa
-    assert _criar(cliente, animal["id"], versao_base="v0001").json()["versao_base"] == "v0001"
-    assert cliente.get("/api/sessoes/ses_0002").json()["versao_base"] == "v0001"
+    antiga = _criar(cliente, animal["id"]).json()  # nasce na v0001, a ativa
+    assert antiga["versao_base"] == "v0001"
+    assert antiga["proxima"]["titulo"] == "Marque o que você observa no animal."
+    assert antiga["progresso"]["limite_dinamico"] == 12
+
+    assert repo.salvar_nova(segunda, autor="teste", nota="segunda versão") == "v0002"
+    repo.ativar("v0002")
+    assert cliente.get("/api/sessoes/ses_0001").json() == antiga  # presa à v0001: mesmo texto, limite e revisão
+
+    nova = _criar(cliente, animal["id"]).json()  # a ativa agora é a v0002
+    assert nova["versao_base"] == "v0002"
+    assert nova["proxima"]["titulo"] == "Marque os sinais (segunda versão)."
+    assert nova["progresso"]["limite_dinamico"] == 7
+    assert _criar(cliente, animal["id"], "veterinario").json()["progresso"]["limite_dinamico"] == 9
+
+    explicita = _criar(cliente, animal["id"], "veterinario", versao_base="v0001").json()  # pede a v0001 com a v0002 ativa
+    assert explicita["versao_base"] == "v0001"
+    assert explicita["proxima"]["titulo"] == "Sinais presentes ao exame."
+    assert explicita["progresso"]["limite_dinamico"] == 25
+    assert cliente.get("/api/sessoes/ses_0001").json() == antiga  # e a primeira continua igual
 
 
 # --- persistência: snapshot (D1/D2), resumo e projeções --------------------------------------
@@ -203,6 +232,42 @@ def test_snapshot_persistido_restaura_igual(cliente, config, base):
     # D2: o snapshot já tinha os eventos de pergunta feita; restaurar e chamar estado() não acrescenta nenhum
     assert json.loads(json.dumps(restaurada.exportar())) == snapshot["motor"]
     assert set(snapshot["motor"]["perguntas_feitas"]) == {"sinal_a", "sinal_b"}
+
+
+def test_get_completa_snapshot_exportado_antes_de_estado(cliente, config, base, monkeypatch):
+    """D2: snapshot sem ``perguntas_feitas``. O 1º GET o completa (snapshot e projeção) sem subir a revisão; o 2º não regrava."""
+    animal = criar_animal_teste(cliente)
+    motor = Sessao(para_motor(base), "produtor", {"dias_em_lactacao": 6})
+    snapshot = {"motor": motor.exportar(), "origens_ficha": {"dias_em_lactacao": "manual"}}  # antes de estado()
+    assert snapshot["motor"]["perguntas_feitas"] == {}  # premissa do teste
+    with closing(abrir(config.db_path)) as conn, conn:
+        sessao_id = inserir_sessao(
+            conn, animal_id=animal["id"], modo="produtor", versao_base="v0001", snapshot=snapshot, fase="triagem",
+            agora=config.agora(),
+        )
+    assert _consultar(config, "SELECT COUNT(*) FROM perguntas_feitas") == [(0,)]
+
+    chamadas: list[dict] = []
+    original = sessao_motor.persistir
+
+    def espiao(*args, **kwargs):
+        chamadas.append(kwargs)
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(sessao_motor, "persistir", espiao)
+    primeiro = cliente.get(f"/api/sessoes/{sessao_id}").json()
+    assert primeiro["revisao"] == 1
+    assert [c["subir_revisao"] for c in chamadas] == [False]  # regravou uma vez, sem contar como mudança
+    linha = _linha(config, sessao_id)
+    assert linha["revisao"] == 1
+    assert set(linha["snapshot"]["motor"]["perguntas_feitas"]) == {"sinal_a", "sinal_b"}
+    assert [p[0] for p in _consultar(config, "SELECT simbolo FROM perguntas_feitas ORDER BY ordem")] == [
+        "sinal_a", "sinal_b",
+    ]
+
+    segundo = cliente.get(f"/api/sessoes/{sessao_id}").json()
+    assert segundo == primeiro
+    assert len(chamadas) == 1  # nada novo: o segundo GET não chamou persistir
 
 
 def test_snapshot_grava_resumo_e_origens(cliente, config):
@@ -260,6 +325,48 @@ def _ajustar_base_completa(dados: dict) -> None:
                 "apetite.ausente": {"produtor": "Ausente"},  # "normal" sem rótulo: cai no próprio valor
             },
         },
+    )
+
+
+def _regra(dados: dict, id: str) -> dict:
+    return next(r for r in dados["regras"] if r["id"] == id)
+
+
+def _ajustar_bandeira_dinamica(dados: dict) -> None:
+    """Uma bandeira na fase dinâmica (``pergunta_x``), com outra pergunta (``pergunta_y``) ainda a fazer."""
+    _regra(dados, "R-D1-01")["entao"]["cf"] = 0.3
+    dados["simbolos"].append(
+        {
+            "id": "pergunta_y", "tipo": "pergunta", "nome": "Pergunta Y", "dominio": {"tipo": "booleano"},
+            "pergunta": {"produtor": "Você notou o fato Y?", "veterinario": "Fato Y presente?"},
+        }
+    )
+    dados["regras"] += [
+        {
+            "id": "R-D1-05", "se": [{"simbolo": "pergunta_y"}], "entao": {"simbolo": "d1", "cf": 0.3},
+            "fonte": "fixture de software", "status": "validada",
+        },
+        {
+            "id": "R-BV-02", "se": [{"simbolo": "sinal_a"}, {"simbolo": "pergunta_x"}],  # a validação exige um símbolo da triagem
+            "entao": {"simbolo": "chamar_agora", "cf": 0.99},
+            "classe": "bandeira_vermelha", "fonte": "fixture de software", "status": "validada",
+        },
+    ]
+
+
+def _ajustar_d1_fraco(dados: dict) -> None:
+    """``R-D1-01`` com cf 0,4: d1 passa de 0,35 (hipótese relevante) e fica abaixo do ``cf_minimo`` 0,5 de ``R-URG-d1``."""
+    _regra(dados, "R-D1-01")["entao"]["cf"] = 0.4
+
+
+def _ajustar_regra_observar(dados: dict) -> None:
+    """Além de ``_ajustar_d1_fraco``, uma regra de urgência que conclui ``observar`` (a base mínima não tem)."""
+    _ajustar_d1_fraco(dados)
+    dados["regras"].append(
+        {
+            "id": "R-URG-obs", "se": [{"simbolo": "d1", "cf_minimo": 0.3}], "entao": {"simbolo": "observar", "cf": 0.7},
+            "classe": "urgencia", "fonte": "fixture de software", "status": "validada",
+        }
     )
 
 
@@ -366,6 +473,29 @@ def test_estado_pergunta_dinamica_e_urgencia_por_regra(cliente, config, base):
     assert corpo["alerta"] is None  # urgência por regra não é bandeira vermelha
 
 
+def test_observar_por_limiar_sem_regra_e_origem_padrao(cliente_com):
+    """d1 acima de 0,35 sem regra de urgência disparada: o motor devolve ``observar`` e a origem é ``padrao``."""
+    config, cliente = cliente_com(_ajustar_d1_fraco)
+    animal = criar_animal_teste(cliente)
+    motor = _motor(config)
+    motor.responder_triagem("sinais", {"sinal_a": True, "sinal_b": False})
+    corpo = cliente.get(f"/api/sessoes/{_gravar_motor(config, animal['id'], motor)}").json()
+    validar_contrato("obter_sessao", corpo)
+    assert corpo["urgencia"] == {"nivel": "observar", "provisoria": True, "origem": "padrao", "regras": []}
+    assert corpo["alerta"] is None
+
+
+def test_observar_com_regra_de_urgencia_e_origem_regra_urgencia(cliente_com):
+    config, cliente = cliente_com(_ajustar_regra_observar)
+    animal = criar_animal_teste(cliente)
+    motor = _motor(config)
+    motor.responder_triagem("sinais", {"sinal_a": True, "sinal_b": False})
+    corpo = cliente.get(f"/api/sessoes/{_gravar_motor(config, animal['id'], motor)}").json()
+    validar_contrato("obter_sessao", corpo)
+    assert corpo["urgencia"] == {"nivel": "observar", "provisoria": True, "origem": "regra_urgencia", "regras": ["R-URG-obs"]}
+    assert corpo["alerta"] is None
+
+
 def test_bandeira_pausa_no_produtor_e_encerra_sem_potencial(cliente, config, base):
     """Na base mínima a triagem acaba em ``sinais``; com a bandeira, o motor encerra (``sem_potencial``) e pausa."""
     animal = criar_animal_teste(cliente)
@@ -376,9 +506,25 @@ def test_bandeira_pausa_no_produtor_e_encerra_sem_potencial(cliente, config, bas
     assert corpo["fase"] == "encerrada" and corpo["proxima"] is None
     assert corpo["urgencia"] == {"nivel": "chamar_agora", "provisoria": False, "origem": "bandeira_vermelha", "regras": ["R-BV-01"]}
     assert corpo["alerta"] == {
-        "nivel": "chamar_agora", "regras": ["R-BV-01"], "pausa": True, "acoes": ["ver_parecer", "continuar"],
+        "nivel": "chamar_agora", "regras": ["R-BV-01"], "pausa": True, "acoes": ["ver_parecer"],  # não há o que continuar
         "texto": "Sintoma grave: chame um veterinário o mais rápido possível.",
     }
+
+
+def test_bandeira_na_fase_dinamica_pausa_com_as_duas_acoes(cliente_com):
+    config, cliente = cliente_com(_ajustar_bandeira_dinamica)
+    animal = criar_animal_teste(cliente)
+    motor = _motor(config)
+    motor.responder_triagem("sinais", {"sinal_a": True, "sinal_b": False})
+    assert motor.estado()["proxima"]["id"] == "pergunta_x"  # premissa do teste
+    motor.responder("pergunta_x", True)  # dispara R-BV-02 com a pergunta_y ainda aberta
+    corpo = cliente.get(f"/api/sessoes/{_gravar_motor(config, animal['id'], motor)}").json()
+    validar_contrato("obter_sessao", corpo)
+    assert corpo["fase"] == "dinamica"
+    assert corpo["proxima"] is None  # pausada pela bandeira
+    assert corpo["alerta"]["pausa"] is True
+    assert corpo["alerta"]["acoes"] == ["ver_parecer", "continuar"]
+    assert corpo["urgencia"] == {"nivel": "chamar_agora", "provisoria": True, "origem": "bandeira_vermelha", "regras": ["R-BV-02"]}
 
 
 def test_bandeira_com_triagem_aberta_pausa_o_produtor(cliente_com):
