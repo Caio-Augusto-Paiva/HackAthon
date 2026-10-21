@@ -4,6 +4,8 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends
 
 from api.contexto import Contexto, obter_contexto
+from api.schemas.explicacao import Como, PorQue, Traco
+from api.schemas.parecer import Parecer
 from api.schemas.sessao import (
     AcaoBandeira,
     CorrecaoPergunta,
@@ -13,7 +15,7 @@ from api.schemas.sessao import (
     RespostaTriagem,
     TrocaModo,
 )
-from api.servicos import sessao_servico
+from api.servicos import explicacao_servico, sessao_servico
 
 router = APIRouter()
 
@@ -95,3 +97,40 @@ def corrigir_resposta(
 )
 def acao_bandeira(sessao_id: str, corpo: AcaoBandeira, ctx: Contexto = Depends(obter_contexto)) -> EstadoSessao:
     return sessao_servico.acao_bandeira(ctx, sessao_id, corpo.acao)
+
+
+@router.get(
+    "/sessoes/{sessao_id}/parecer",
+    operation_id="obter_parecer",
+    response_model=Parecer,
+    summary="Parecer (parcial se a anamnese não encerrou)",
+)
+def obter_parecer(sessao_id: str, ctx: Contexto = Depends(obter_contexto)) -> Parecer:
+    return explicacao_servico.obter_parecer(ctx, sessao_id)
+
+
+@router.get(
+    "/sessoes/{sessao_id}/porque/{simbolo}",
+    operation_id="obter_porque",
+    response_model=PorQue,
+    summary='"Por quê?" de uma pergunta já apresentada',
+)
+def obter_porque(sessao_id: str, simbolo: str, ctx: Contexto = Depends(obter_contexto)) -> PorQue:
+    return explicacao_servico.obter_porque(ctx, sessao_id, simbolo)
+
+
+@router.get(
+    "/sessoes/{sessao_id}/como/{simbolo}",
+    operation_id="obter_como",
+    response_model=Como,
+    summary='"Como?" de uma doença, derivado ou urgência',
+)
+def obter_como(sessao_id: str, simbolo: str, ctx: Contexto = Depends(obter_contexto)) -> Como:
+    return explicacao_servico.obter_como(ctx, sessao_id, simbolo)
+
+
+@router.get(
+    "/sessoes/{sessao_id}/traco", operation_id="obter_traco", response_model=Traco, summary="Traço de inferência da sessão"
+)
+def obter_traco(sessao_id: str, ctx: Contexto = Depends(obter_contexto)) -> Traco:
+    return explicacao_servico.obter_traco(ctx, sessao_id)
