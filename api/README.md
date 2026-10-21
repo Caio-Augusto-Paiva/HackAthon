@@ -25,12 +25,14 @@ powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1
 | Opção | Efeito |
 |---|---|
 | `-SoPreparar` | confere o ambiente, cria o banco e semeia; não sobe o servidor |
-| `-Reset` | apaga o banco e o recria, com os animais fictícios, antes de subir |
+| `-Reset` | apaga o banco e o recria, com os animais fictícios, antes de subir (só apaga arquivo SQLite; veja abaixo) |
+| `-SemNavegador` | não abre o navegador depois de "Pronto" |
 
 O roteiro: (1) confere o Python do `.venv` e aborta em português se faltar; (2) cria o banco e semeia os animais
-fictícios se o arquivo não existir; (3) avisa, sem abortar, se `web\dist` não existe (só a API fica no ar); (4) sobe
-`uvicorn api.main:app --host 127.0.0.1 --port 8000`, espera `GET /api/saude` responder (até 30 s) e imprime a URL.
-**Ctrl+C encerra.** Em Linux e macOS: `scripts/rodar.sh` (`--so-preparar`, `--reset`), mesmo roteiro.
+fictícios se o arquivo não existir; (3) avisa, sem abortar, se `web\dist` não existe (só a API fica no ar); (4) aborta se
+a porta 8000 já estiver em uso; (5) sobe `uvicorn api.main:app --host 127.0.0.1 --port 8000`, espera `GET /api/saude`
+responder (até 30 s), imprime a URL e abre o navegador padrão (`-SemNavegador` desliga).
+**Ctrl+C encerra.** Em Linux e macOS: `scripts/rodar.sh` (`--so-preparar`, `--reset`), mesmo roteiro, mas só imprime a URL.
 
 Sem o script: `.venv\Scripts\python -m uvicorn api.main:app --host 127.0.0.1 --port 8000`.
 
@@ -38,8 +40,10 @@ Sem o script: `.venv\Scripts\python -m uvicorn api.main:app --host 127.0.0.1 --p
 - Documentação interativa (Swagger): `http://localhost:8000/api/docs`; OpenAPI vivo: `/api/openapi.json`.
 - Se `web/dist/index.html` existir, a mesma porta serve o frontend: `/assets` e qualquer `GET` fora de `/api` devolve o
   `index.html` (para o React funcionar ao recarregar a página). Sob `/api` uma rota inexistente continua sendo o 404 em
-  JSON, nunca o HTML. Rota coringa própria (`api/frontend.py`), e não `FastAPI.frontend()`, porque o fallback do FastAPI só
-  vale para `Accept: text/html`.
+  JSON, nunca o HTML (também com barras a mais, como `//api/x`). Rota coringa própria (`api/frontend.py`), e não
+  `FastAPI.frontend()`, porque o fallback do FastAPI só vale para `Accept: text/html`.
+- Com o frontend montado: `POST` numa rota desconhecida e `HEAD /` dão 405 (a coringa só casa `GET`), e `/api/x/` com barra
+  final dá 404 em JSON (sem o frontend, uma rota real como `/api/animais/` seria redirecionada com 307 para `/api/animais`).
 
 ### Variáveis de ambiente
 
@@ -62,10 +66,16 @@ Caminhos relativos valem a partir da pasta de onde o servidor sobe; os scripts s
 .venv\Scripts\python scripts\resetar_db.py [--semear]   # apaga o .db, recria o esquema e, com --semear, semeia
 ```
 
-Quatro animais fictícios (`BR-0001` Mimosa, `an_001`, com parto há 6 dias; `BR-0002` Estrela, com parto há 1 dia, para o
-roteiro da demonstração; `BR-0003` Jurema; `BR-0004` Boneca), cada um com uma ficha diferente. Com a base ativa à mão, cada
+Quatro animais fictícios (`BR-0001` Mimosa, com parto há 6 dias; `BR-0002` Estrela, com parto há 1 dia, para o roteiro da
+demonstração; `BR-0003` Jurema; `BR-0004` Boneca), cada um com uma ficha diferente. Os ids são sequenciais: `BR-0001` é
+`an_001` **no banco recém-criado** (num banco que já tinha animais, ganha o próximo id livre). Com a base ativa à mão, cada
 ficha é validada por ela: o campo que a base não tem ou não aceita é pulado, sem quebrar. Sem a base, a ficha é gravada
-como está. Reset só toca no banco, nunca na pasta da base.
+como está.
+
+O reset só toca no banco, nunca na pasta da base, e confere o alvo antes de apagar: só apaga se `ANAMNESE_DB` não existe, é
+um arquivo vazio ou começa com o cabeçalho `SQLite format 3`. Um JSON, outro arquivo ou uma pasta no lugar do banco é
+recusado ("... não é um banco SQLite; recuso apagar."), com saída diferente de zero e nada apagado; os auxiliares
+`-wal`/`-shm`/`-journal` só caem depois dessa conferência.
 
 ## Estrutura e regras de código
 

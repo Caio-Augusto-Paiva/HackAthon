@@ -63,7 +63,13 @@ if [ "$SO_PREPARAR" -eq 1 ]; then
     exit 0
 fi
 
-# 4. Servidor
+# 4. Porta livre (senão o /api/saude abaixo responderia por outro processo)
+if "$PYTHON" -c "import socket, sys; sys.exit(0 if socket.socket().connect_ex(('$ENDERECO', $PORTA)) == 0 else 1)"; then
+    echo "ERRO: a porta $PORTA já está em uso (talvez outra instância do servidor). Encerre quem a usa e tente de novo." >&2
+    exit 1
+fi
+
+# 5. Servidor
 echo "Subindo o servidor em http://$ENDERECO:$PORTA ..."
 "$PYTHON" -m uvicorn api.main:app --host "$ENDERECO" --port "$PORTA" &
 SERVIDOR=$!
@@ -71,7 +77,8 @@ trap 'kill "$SERVIDOR" 2>/dev/null || true' EXIT
 trap 'exit 130' INT TERM
 
 responde() {
-    "$PYTHON" -c "import sys, urllib.request; sys.exit(0 if urllib.request.urlopen('http://$ENDERECO:$PORTA/api/saude', timeout=2).status == 200 else 1)" 2>/dev/null
+    # sem proxy: http_proxy/HTTP_PROXY do ambiente não valem para o localhost
+    "$PYTHON" -c "import sys, urllib.request as u; o = u.build_opener(u.ProxyHandler({})); sys.exit(0 if o.open('http://$ENDERECO:$PORTA/api/saude', timeout=2).status == 200 else 1)" 2>/dev/null
 }
 
 PRONTO=0

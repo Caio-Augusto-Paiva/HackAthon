@@ -149,7 +149,7 @@ def test_main_da_semente_sem_base_ativa_nao_quebra(monkeypatch, tmp_path, caminh
 
     with closing(abrir(caminho_db)) as conn:
         assert len(_animais(conn)) == 4
-    assert "4" in capsys.readouterr().out
+    assert "Animais fictícios criados: 4" in capsys.readouterr().out
 
 
 # --- reset do banco --------------------------------------------------------------------------------------
@@ -167,6 +167,57 @@ def test_resetar_apaga_e_recria(conn, caminho_db, agora):
         assert novo.execute("SELECT COUNT(*) FROM animais").fetchone()[0] == 0
         tabelas = {r[0] for r in novo.execute("SELECT name FROM sqlite_master WHERE type = 'table'")}
     assert {"animais", "sessoes", "respostas", "versoes_base"} <= tabelas
+
+
+def test_resetar_recusa_arquivo_que_nao_e_sqlite(tmp_path):
+    alvo = tmp_path / "importante.json"
+    alvo.write_text('{"nao": "apague"}', encoding="utf-8")
+    lateral = tmp_path / "importante.json-wal"  # nome parecido com o auxiliar do SQLite: também fica
+    lateral.write_text("lateral", encoding="utf-8")
+
+    with pytest.raises(resetar_db.RecusaDeReset, match="não é um banco SQLite; recuso apagar"):
+        resetar_db.resetar(alvo)
+
+    assert alvo.read_text(encoding="utf-8") == '{"nao": "apague"}'
+    assert lateral.read_text(encoding="utf-8") == "lateral"
+
+
+def test_resetar_recusa_pasta(tmp_path):
+    pasta = tmp_path / "anamnese.db"
+    pasta.mkdir()
+    (pasta / "dentro.txt").write_text("fica", encoding="utf-8")
+
+    with pytest.raises(resetar_db.RecusaDeReset, match="pasta"):
+        resetar_db.resetar(pasta)
+
+    assert (pasta / "dentro.txt").read_text(encoding="utf-8") == "fica"
+
+
+def test_resetar_aceita_arquivo_vazio_e_apaga_os_auxiliares_do_sqlite(conn, caminho_db):
+    conn.close()
+    auxiliar = Path(f"{caminho_db}-journal")
+    auxiliar.write_bytes(b"resto de uma sessao anterior")
+
+    resetar_db.resetar(caminho_db)
+
+    assert not auxiliar.exists()
+    vazio = caminho_db.with_name("vazio.db")
+    vazio.write_bytes(b"")  # arquivo vazio (um .db recém-criado e ainda sem tabelas) pode ser recriado
+    resetar_db.resetar(vazio)
+    with closing(abrir(vazio)) as novo:
+        assert novo.execute("SELECT COUNT(*) FROM animais").fetchone()[0] == 0
+
+
+def test_main_do_reset_recusa_com_mensagem_e_saida_diferente_de_zero(monkeypatch, tmp_path):
+    alvo = tmp_path / "config.json"
+    alvo.write_text("{}", encoding="utf-8")
+    monkeypatch.setenv("ANAMNESE_DB", str(alvo))
+
+    with pytest.raises(SystemExit) as saida:
+        resetar_db.main([])
+
+    assert isinstance(saida.value.code, str) and "não é um banco SQLite; recuso apagar" in saida.value.code
+    assert alvo.read_text(encoding="utf-8") == "{}"
 
 
 def test_resetar_cria_banco_que_nao_existe(tmp_path):
@@ -253,6 +304,57 @@ def test_arquivo_no_dist_nao_sai_da_pasta(tmp_path):
     assert _arquivo_no_dist(dist, "a\x00b") is None  # byte nulo não derruba (nem vira 500)
 
 
+CAMINHOS_QUE_NAO_TOCAM_O_DISCO = (
+    "\\\\host\\share\\x",  # UNC: o Windows tentaria abrir \\host\share
+    "C:/Windows/win.ini",
+    "C:\\Windows\\win.ini",
+    "/etc/passwd",
+    "../segredo.txt",
+    "assets/../../segredo.txt",
+    "a\x00b",
+)
+
+
+def _proibir_disco(monkeypatch):
+    def proibido(*_args, **_kwargs):
+        raise AssertionError("tocou o disco antes de rejeitar o caminho")
+
+    monkeypatch.setattr(Path, "resolve", proibido)
+    monkeypatch.setattr(Path, "is_file", proibido)
+
+
+def test_arquivo_no_dist_rejeita_antes_de_tocar_o_disco(tmp_path, monkeypatch):
+    dist = _dist(tmp_path)
+    with monkeypatch.context() as m:
+        _proibir_disco(m)
+        for caminho in CAMINHOS_QUE_NAO_TOCAM_O_DISCO:
+            assert _arquivo_no_dist(dist, caminho) is None, caminho
+
+
+def test_get_com_caminho_de_rede_ou_unidade_cai_no_index_sem_tocar_o_disco(config, tmp_path, monkeypatch):
+    app = criar_app(dataclasses.replace(config, web_dist=_dist(tmp_path)))
+    with TestClient(app, raise_server_exceptions=False) as cliente:
+        with monkeypatch.context() as m:
+            _proibir_disco(m)
+            unc = cliente.get("/%5C%5Chost%5Cshare%5Cx")
+            unidade = cliente.get("/C:/Windows/win.ini")
+        assert (unc.status_code, unc.text) == (200, HTML)
+        assert (unidade.status_code, unidade.text) == (200, HTML)
+
+
+def test_barras_a_mais_nao_escapam_do_prefixo_api(config, tmp_path):
+    app = criar_app(dataclasses.replace(config, web_dist=_dist(tmp_path)))
+    with TestClient(app, raise_server_exceptions=False) as cliente:
+        for caminho in ("//api/x", "///api/x", "//api"):
+            resposta = cliente.get("http://testserver" + caminho)  # URL inteira: "//api/x" sozinho seria um host
+            assert resposta.status_code == 404, caminho
+            assert resposta.headers["content-type"].startswith("application/json"), caminho
+            assert resposta.json()["erro"]["codigo"] == "nao_encontrado", caminho
+        com_barra = cliente.get("/api/x/")  # barra final sob /api: também o 404 JSON
+        assert com_barra.status_code == 404
+        assert com_barra.json()["erro"]["codigo"] == "nao_encontrado"
+
+
 def test_sem_dist_nao_monta_frontend(config, tmp_path):
     app = criar_app(config)  # `config.web_dist` aponta para uma pasta que não existe
     assert montar_frontend(app, tmp_path / "nao_existe") is False
@@ -314,4 +416,19 @@ def test_rodar_ps1_e_valido_no_powershell_5():
         capture_output=True, text=True, env=ambiente, timeout=60, check=True,
     ).stdout.splitlines()
     assert "ERROS=0" in saida
-    assert "PARAMETROS=SoPreparar,Reset" in saida
+    assert "PARAMETROS=SoPreparar,Reset,SemNavegador" in saida
+
+
+def _bash() -> str | None:
+    caminho = shutil.which("bash")
+    if caminho is None or "system32" in caminho.lower():  # bash.exe de System32 é o lançador do WSL, não um bash
+        return None
+    return caminho
+
+
+@pytest.mark.skipif(_bash() is None, reason="sem bash")
+def test_rodar_sh_tem_sintaxe_valida():
+    resultado = subprocess.run(
+        [_bash(), "-n", (RAIZ / "scripts" / "rodar.sh").as_posix()], capture_output=True, text=True, timeout=60
+    )
+    assert resultado.returncode == 0, resultado.stderr

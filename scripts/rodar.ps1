@@ -6,7 +6,9 @@
     1. Confere o Python do .venv (aborta em português se faltar).
     2. Cria o banco SQLite e semeia animais fictícios se o arquivo não existir (-Reset apaga e recria).
     3. Avisa, sem abortar, se web\dist não existe (só a API fica no ar).
-    4. Sobe o uvicorn em 127.0.0.1:8000 e espera GET /api/saude responder (até 30 s).
+    4. Confere que a porta 8000 está livre (aborta em português se não estiver).
+    5. Sobe o uvicorn em 127.0.0.1:8000, espera GET /api/saude responder (até 30 s) e abre o navegador padrão
+       (-SemNavegador desliga).
     Ctrl+C encerra o servidor.
 
     Variáveis opcionais: ANAMNESE_BASE_DIR (pasta da base; padrão "base") e ANAMNESE_DB (arquivo do banco;
@@ -16,16 +18,22 @@
     Executa os passos 1 a 3 e termina, sem subir o servidor.
 
 .PARAMETER Reset
-    Apaga o banco e o recria (com os animais fictícios) antes de subir.
+    Apaga o banco e o recria (com os animais fictícios) antes de subir. Só apaga arquivo SQLite (ou vazio): um
+    ANAMNESE_DB apontado para outro tipo de arquivo ou para uma pasta é recusado.
+
+.PARAMETER SemNavegador
+    Não abre o navegador padrão depois de "Pronto" (use em testes e em máquinas sem interface).
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1
     powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -SoPreparar
     powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -Reset
+    powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -SemNavegador
 #>
 param(
     [switch]$SoPreparar,
-    [switch]$Reset
+    [switch]$Reset,
+    [switch]$SemNavegador
 )
 
 $ErrorActionPreference = 'Stop'
@@ -40,6 +48,13 @@ Set-Location $raiz
 function Falhar([string]$mensagem) {
     Write-Host "ERRO: $mensagem" -ForegroundColor Red
     exit 1
+}
+
+function PortaLivre([int]$porta) {
+    $ouvinte = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Parse($Endereco), $porta)
+    try { $ouvinte.Start(); return $true }
+    catch { return $false }
+    finally { $ouvinte.Stop() }
 }
 
 # 1. Python do .venv
@@ -71,7 +86,12 @@ if ($SoPreparar) {
     exit 0
 }
 
-# 4. Servidor
+# 4. Porta livre (senão o /api/saude abaixo responderia por outro processo)
+if (-not (PortaLivre $Porta)) {
+    Falhar "a porta $Porta já está em uso (talvez outra instância do servidor). Encerre quem a usa e tente de novo."
+}
+
+# 5. Servidor
 Write-Host "Subindo o servidor em http://${Endereco}:${Porta} ..."
 $servidor = Start-Process -FilePath $python -NoNewWindow -PassThru -ArgumentList @(
     '-m', 'uvicorn', 'api.main:app', '--host', $Endereco, '--port', "$Porta"
@@ -98,6 +118,10 @@ try {
     Write-Host "Pronto: http://localhost:${Porta}" -ForegroundColor Green
     Write-Host "Documentação da API: http://localhost:${Porta}/api/docs"
     Write-Host 'Ctrl+C encerra o servidor.'
+    if (-not $SemNavegador) {
+        try { Start-Process "http://localhost:${Porta}" }
+        catch { Write-Host 'Não consegui abrir o navegador; abra o endereço acima.' -ForegroundColor Yellow }
+    }
     $servidor.WaitForExit()
 } finally {
     if ($servidor -and -not $servidor.HasExited) {
