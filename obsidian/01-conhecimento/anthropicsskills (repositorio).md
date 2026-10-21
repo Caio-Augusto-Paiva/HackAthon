@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Execução local e ferramentas (2)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Execução_local_e_ferramentas
+  - community/Execução_local_e_ferramentas_2
 ---
 
 # anthropics/skills (repositorio)
@@ -16,4 +16,4 @@ tags:
 - [[skill-creator (skill)]] - `references` [EXTRACTED]
 - [[webapp-testing (skill)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas_2

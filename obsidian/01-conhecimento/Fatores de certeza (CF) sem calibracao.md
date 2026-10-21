@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Skills obra/superpowers"
+community: "Execução local e ferramentas"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Skills_obra/superpowers
+  - community/Execução_local_e_ferramentas
 ---
 
 # Fatores de certeza (CF) sem calibracao
@@ -16,4 +16,4 @@ tags:
 - [[Registro de suposicoes e lacunas (68 itens)]] - `references` [EXTRACTED]
 - [[Suposicoes clinicas veterinarias (suposicao a validar)]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Skills_obra/superpowers
+#graphify/concept #graphify/INFERRED #community/Execução_local_e_ferramentas

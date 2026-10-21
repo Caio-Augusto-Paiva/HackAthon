@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Instruções e regras do hackathon (2)"
+community: "Instruções e regras do hackathon"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon_2
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # obra/superpowers (skills em formato aberto)
@@ -16,4 +16,4 @@ tags:
 - [[Skill superpowerswriting-plans]] - `conceptually_related_to` [INFERRED]
 - [[Skills em formato aberto (.agentsskills, .claudeskills, AGENTS.md)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_2
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

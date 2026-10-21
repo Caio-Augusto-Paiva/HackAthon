@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Planejamento, agentes e alocação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Modos produtor e veterinario
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Sessao dialogo com triagem, perguntas, correcao e modo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação

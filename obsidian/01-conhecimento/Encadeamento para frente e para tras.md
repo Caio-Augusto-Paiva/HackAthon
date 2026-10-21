@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon (2)"
+community: "Instruções e regras do hackathon"
 location: "L38"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon_2
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Encadeamento para frente e para tras
@@ -16,4 +16,4 @@ tags:
 - [[Nucleo inferir(base, fatos), sem estado]] - `implements` [INFERRED]
 - [[Processo obrigatorio de planejamento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_2
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

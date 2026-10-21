@@ -94,5 +94,11 @@
     "seen": 1792565985.74888,
     "ast_hash": "858e2cd5b263242d1fe0bc604bebbd93",
     "semantic_hash": "858e2cd5b263242d1fe0bc604bebbd93"
+  },
+  "docs/revisoes/2026-10-21-ledger-kb-secao-2.md": {
+    "mtime": 1792565996.827138,
+    "seen": 1792567875.2353735,
+    "ast_hash": "198fa93dd11674d43e8689fcce9196d6",
+    "semantic_hash": "198fa93dd11674d43e8689fcce9196d6"
   }
 }

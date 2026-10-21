@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Planejamento, agentes e alocação"
 location: "L63"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Memoria de trabalho
@@ -18,4 +18,4 @@ tags:
 - [[Restauracao da sessao a partir do banco (ausente, bloqueia a API)]] - `conceptually_related_to` [INFERRED]
 - [[Sessao dialogo com triagem, perguntas, correcao e modo]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/INFERRED #community/Planejamento_agentes_e_alocação

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon (2)"
+community: "Instruções e regras do hackathon"
 location: "L39"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon_2
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # Skill superpowers:brainstorming
@@ -18,4 +18,4 @@ tags:
 - [[Proposta inicial de arquitetura (hipotese a validar)]] - `references` [EXTRACTED]
 - [[obrasuperpowers (skills em formato aberto)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_2
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

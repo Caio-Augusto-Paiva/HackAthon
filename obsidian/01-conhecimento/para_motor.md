@@ -1,0 +1,17 @@
+---
+source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
+type: "code"
+community: "Decisões da execução do kb (2)"
+location: "L72"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Decisões_da_execução_do_kb_2
+---
+
+# para_motor
+
+## Connections
+- [[Rodada unica de correcao final]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Decisões_da_execução_do_kb_2

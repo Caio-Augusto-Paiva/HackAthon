@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "Planejamento, agentes e alocação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/Planejamento_agentes_e_alocação
 ---
 
 # Sessao: dialogo com triagem, perguntas, correcao e modo
@@ -18,4 +18,4 @@ tags:
 - [[Restauracao da sessao a partir do banco (ausente, bloqueia a API)]] - `conceptually_related_to` [EXTRACTED]
 - [[nao_sei e registrado e nao e repetido automaticamente]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação

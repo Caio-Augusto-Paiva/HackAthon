@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Skills obra/superpowers"
+community: "Execução local e ferramentas"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Skills_obra/superpowers
+  - community/Execução_local_e_ferramentas
 ---
 
 # pytest 9.1.1
@@ -14,4 +14,4 @@ tags:
 - [[Python 3.15.0]] - `references` [EXTRACTED]
 - [[pytest parametrize com pytest.param(id=...)]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Skills_obra/superpowers
+#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas

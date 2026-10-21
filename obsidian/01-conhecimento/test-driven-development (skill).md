@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Skills obra/superpowers"
+community: "Execução local e ferramentas"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Skills_obra/superpowers
+  - community/Execução_local_e_ferramentas
 ---
 
 # test-driven-development (skill)
@@ -14,4 +14,4 @@ tags:
 - [[Casos de teste inventados (enginecasos.py)]] - `conceptually_related_to` [INFERRED]
 - [[obrasuperpowers (repositorio de skills)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Skills_obra/superpowers
+#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas

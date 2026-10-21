@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Execução local e ferramentas (2)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Execução_local_e_ferramentas_2
 ---
 
 # React 19.3.1
@@ -14,4 +14,4 @@ tags:
 - [[@xyflowreact 12.12.0 (React Flow)]] - `references` [INFERRED]
 - [[frontend-design (skill)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas_2

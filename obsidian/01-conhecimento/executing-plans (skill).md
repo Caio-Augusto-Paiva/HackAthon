@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Skills obra/superpowers"
+community: "Execução local e ferramentas"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Skills_obra/superpowers
+  - community/Execução_local_e_ferramentas
 ---
 
 # executing-plans (skill)
@@ -14,4 +14,4 @@ tags:
 - [[obrasuperpowers (repositorio de skills)]] - `references` [EXTRACTED]
 - [[writing-plans (skill)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Skills_obra/superpowers
+#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas
