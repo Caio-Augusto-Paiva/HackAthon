@@ -1,6 +1,7 @@
 """Bandeiras travadas dependem só das respostas finais e da ordem em que entraram."""
 import json
 import unittest
+from unittest.mock import patch
 
 from engine.sessao import Sessao
 from .apoio import base, simbolo, doenca, regra, condicao
@@ -103,6 +104,20 @@ class ReprocessamentoTests(unittest.TestCase):
         self.assertEqual(s.estado()['bandeiras'],[])
         s.responder('x',True,corrigir=True)
         self.assertTrue(s.estado()['pausa'])
+
+
+class AjustesMenoresTests(unittest.TestCase):
+    def test_calcular_inicial_nao_e_mais_parametro(self):
+        with self.assertRaises(TypeError):
+            Sessao(base_sonda(),_calcular_inicial=False)
+
+    def test_estado_na_triagem_calcula_serve_a_uma_vez_por_simbolo(self):
+        b=base([simbolo('a'),simbolo('b'),doenca()],[regra('r','d',0.8,condicao('a'))],
+               triagem=[{'id':'T','selecao':'multipla','simbolos':['a','b']}])
+        s=Sessao(b)
+        with patch.object(Sessao,'_serve_a_triagem',autospec=True,side_effect=Sessao._serve_a_triagem) as contador:
+            for _ in range(3): s.estado()
+            self.assertEqual(contador.call_count,2)
 
 
 if __name__=='__main__':

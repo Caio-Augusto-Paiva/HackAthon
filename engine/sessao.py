@@ -12,7 +12,11 @@ from .avaliacao import avaliar_condicao
 
 
 class Sessao:
-    def __init__(self, base, modo='produtor', ficha=None, limite_dinamico=None, *, _calcular_inicial=True):
+    def __init__(self, base, modo='produtor', ficha=None, limite_dinamico=None):
+        self._iniciar(base,modo,ficha,limite_dinamico)
+        self._calcular()
+
+    def _iniciar(self, base, modo, ficha, limite_dinamico):
         self.base=Base.de_dict(base)
         if modo not in MODOS: raise ValueError('Modo inválido')
         if limite_dinamico is not None and (type(limite_dinamico) is not int or limite_dinamico<0):
@@ -30,7 +34,6 @@ class Sessao:
                      if valor is not None and not (isinstance(valor,dict) and valor.get('valor') is None
                                                   and not valor.get('nao_sei',False))}
         self.memoria.registrar(preenchidos,origem='ficha')
-        if _calcular_inicial: self._calcular()
 
     @classmethod
     def restaurar(cls, base, *, modo='produtor', fatos, perguntas_dinamicas=(),
@@ -45,7 +48,8 @@ class Sessao:
         antiga ainda seja a próxima pergunta após uma correção. As bandeiras
         travadas são derivadas reprocessando as respostas em ordem.
         """
-        sessao=cls(base,modo=modo,limite_dinamico=limite_dinamico,_calcular_inicial=False)
+        sessao=cls.__new__(cls)
+        sessao._iniciar(base,modo,None,limite_dinamico)
         sessao.memoria.registrar(fatos)
         dinamicas=list(perguntas_dinamicas)
         if len(dinamicas)!=len(set(dinamicas)) or any(id not in sessao.fatos for id in dinamicas):
@@ -175,8 +179,9 @@ class Sessao:
                 proxima={'tipo':'tela_triagem','id':t['id'],'selecao':t['selecao'],'simbolos':ids,
                          'texto':t.get('texto',t.get('textos',{})).get(self.modo,t['id'])}
                 for id in ids:
-                    self._pergunta(id,'triagem',f'Triagem obrigatória, tela {indice} de {len(self.base.meta["triagem"])}',
-                                   tela_id=t['id'],serve_a=self._serve_a_triagem(id))
+                    if id not in self.perguntas:
+                        self._pergunta(id,'triagem',f'Triagem obrigatória, tela {indice} de {len(self.base.meta["triagem"])}',
+                                       tela_id=t['id'],serve_a=self._serve_a_triagem(id))
             else:
                 id=self.analise.proxima; s=self.base.simbolos[id]; candidato=self.analise.candidatos[id]
                 serve=self._formatar_serve_a(candidato['serve_a'])
