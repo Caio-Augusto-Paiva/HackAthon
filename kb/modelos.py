@@ -187,19 +187,19 @@ class Caso(_Modelo):
 # --- carga ----------------------------------------------------------------
 
 def carregar_base(dados: dict | str | Path) -> Base:
-    """Carrega uma base de um dict, de um texto JSON ou de um caminho ``.json`` (UTF-8).
+    """Carrega uma base de um dict, de um texto JSON ou de um caminho ``.json`` (UTF-8, com ou sem BOM).
 
     Atenção: um ``str`` que não começa com ``{`` é tratado como **caminho de arquivo**.
     Nunca passe texto vindo de requisição não confiável; use ``validar_dados`` com o
     JSON já decodificado (dict).
     """
     if isinstance(dados, Path):
-        dados = json.loads(dados.read_text(encoding="utf-8"))
+        dados = json.loads(dados.read_text(encoding="utf-8-sig"))
     elif isinstance(dados, str):
         if dados.lstrip().startswith("{"):
             dados = json.loads(dados)
         else:
-            dados = json.loads(Path(dados).read_text(encoding="utf-8"))
+            dados = json.loads(Path(dados).read_text(encoding="utf-8-sig"))
     return Base.model_validate(dados)
 
 

@@ -74,7 +74,7 @@ class Repositorio:
         if not self._ativa.is_file():
             return None
         try:
-            versao = json.loads(self._ativa.read_text(encoding="utf-8"))["versao"]
+            versao = json.loads(self._ativa.read_text(encoding="utf-8-sig"))["versao"]
             return self._checar_id(versao)
         except (ValueError, KeyError, TypeError) as exc:  # JSONDecodeError é ValueError
             raise ValueError(
@@ -102,7 +102,7 @@ class Repositorio:
         arquivo = self.raiz / "casos" / "casos.json"
         if not arquivo.is_file():
             return []
-        return [Caso.model_validate(c) for c in json.loads(arquivo.read_text(encoding="utf-8"))]
+        return [Caso.model_validate(c) for c in json.loads(arquivo.read_text(encoding="utf-8-sig"))]
 
     # --- escrita ----------------------------------------------------------
 
@@ -136,16 +136,19 @@ class Repositorio:
         texto = _json(nova.model_dump(mode="json", exclude_none=True))
         arquivo = self._arquivo(versao)
         arquivo.parent.mkdir(parents=True, exist_ok=True)
+        # grava num temporário (nome que listar_versoes ignora) e publica com link: nunca há meia versão
+        temporario = arquivo.with_name(f".{arquivo.name}.tmp-{os.getpid()}")
         try:
-            f = open(arquivo, "x", encoding="utf-8", newline="\n")
-        except FileExistsError as exc:
-            raise FileExistsError(f"Versão {versao} já existe; nada foi sobrescrito.") from exc
-        try:
-            with f:
+            with open(temporario, "w", encoding="utf-8", newline="\n") as f:
                 f.write(texto)
-        except BaseException:
-            arquivo.unlink(missing_ok=True)  # nunca deixar meia versão
-            raise
+                f.flush()
+                os.fsync(f.fileno())
+            try:
+                os.link(temporario, arquivo)  # FileExistsError se o destino já existe
+            except FileExistsError as exc:
+                raise FileExistsError(f"Versão {versao} já existe; nada foi sobrescrito.") from exc
+        finally:
+            temporario.unlink(missing_ok=True)
         return versao
 
     def ativar(self, versao: str) -> None:

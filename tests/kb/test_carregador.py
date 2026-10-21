@@ -250,3 +250,76 @@ def test_pai_explicito_com_formato_invalido_rejeitado(tmp_path):
 def test_pai_explicito_numa_raiz_vazia_rejeitado(tmp_path):
     with pytest.raises(ValueError, match="v0001"):
         _repo(tmp_path).salvar_nova(_base(), autor="a", nota="n", pai="v0001")
+
+
+# --- BOM -----------------------------------------------------------------
+
+def _gravar_com_bom(caminho, texto):
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    caminho.write_bytes(b"\xef\xbb\xbf" + texto.encode("utf-8"))
+
+
+def test_carregar_base_de_caminho_com_bom(tmp_path):
+    arquivo = tmp_path / "base.json"
+    _gravar_com_bom(arquivo, json.dumps(carregar_minima(), ensure_ascii=False))
+    assert carregar_base(arquivo).meta.versao == "minima-v1"
+    assert carregar_base(str(arquivo)).meta.versao == "minima-v1"
+
+
+def test_repositorio_le_versao_ativa_e_casos_com_bom(tmp_path):
+    repo = _repo(tmp_path)
+    repo.salvar_nova(_base(), autor="a", nota="n")
+    versao = tmp_path / "versoes" / "v0001.json"
+    _gravar_com_bom(versao, versao.read_text(encoding="utf-8"))
+    _gravar_com_bom(tmp_path / "ativa.json", '{"versao": "v0001"}')
+    caso = {"id": "c1", "descricao": "d", "modo": "produtor", "esperado": {"urgencia": "observar"}}
+    _gravar_com_bom(tmp_path / "casos" / "casos.json", json.dumps([caso]))
+    assert repo.versao_ativa() == "v0001"
+    assert repo.carregar_ativa().meta.versao == "v0001"
+    assert [c.id for c in repo.carregar_casos()] == ["c1"]
+
+
+# --- gravação atômica ------------------------------------------------------
+
+def test_temporario_orfao_nao_aparece_nem_afeta_a_proxima(tmp_path):
+    repo = _repo(tmp_path)
+    repo.salvar_nova(_base(), autor="a", nota="n")
+    (tmp_path / "versoes" / ".v0002.json.tmp-123").write_text("meia", encoding="utf-8")
+    (tmp_path / "versoes" / ".v0009.json.tmp-1").write_text("meia", encoding="utf-8")
+    assert repo.listar_versoes() == ["v0001"]
+    assert repo._proxima() == "v0002"
+    assert repo.salvar_nova(_base(), autor="a", nota="n") == "v0002"
+
+
+@pytest.mark.parametrize("onde", ["write", "fsync"])
+def test_falha_durante_a_escrita_nao_deixa_versao_nem_temporario(tmp_path, monkeypatch, onde):
+    if onde == "fsync":
+        def quebrar(_fd):
+            raise OSError("disco cheio")
+        monkeypatch.setattr(carregador.os, "fsync", quebrar)
+    else:
+        class Quebrado:
+            def __init__(self, f):
+                self._f = f
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                self._f.close()
+
+            def write(self, _):
+                raise OSError("disco cheio")
+
+        monkeypatch.setattr(carregador, "open", lambda *a, **k: Quebrado(open(*a, **k)), raising=False)
+    repo = _repo(tmp_path)
+    with pytest.raises(OSError, match="disco cheio"):
+        repo.salvar_nova(_base(), autor="a", nota="n")
+    assert repo.listar_versoes() == []
+    assert not (tmp_path / "versoes" / "v0001.json").exists()
+    assert list((tmp_path / "versoes").iterdir()) == []
+
+
+def test_salvar_nao_deixa_temporario_no_sucesso(tmp_path):
+    _repo(tmp_path).salvar_nova(_base(), autor="a", nota="n")
+    assert [p.name for p in (tmp_path / "versoes").iterdir()] == ["v0001.json"]
