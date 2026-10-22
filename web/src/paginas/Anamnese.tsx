@@ -9,6 +9,7 @@ import { TelaTriagem } from '../anamnese/TelaTriagem';
 import { PerguntaDinamica } from '../anamnese/PerguntaDinamica';
 import { BarraHipoteses } from '../anamnese/BarraHipoteses';
 import { PorQue } from '../anamnese/PorQue';
+import { AlertaBandeira } from '../anamnese/AlertaBandeira';
 import { paraCorpoPergunta, paraCorpoTriagem, passoAtual, type Escolha } from '../anamnese/mapearResposta';
 import estilos from './Anamnese.module.css';
 
@@ -73,5 +74,7 @@ export function Anamnese() {
         {porqueAberto && <PorQue sessaoId={sessaoId} simbolos={tela.tipo === 'tela_triagem' ? tela.campos.map(c => c.simbolo) : [tela.simbolo]} aoFechar={() => definirPorque(false)} />}
       </> : <p role="status">{estado.alerta?.pausa ? estado.alerta.texto : 'Abrindo parecer…'}</p>}
     </div>
-  </main>{passo > 1 && <BarraHipoteses sessaoId={sessaoId} revisao={estado.revisao} />}</div>;
+  </main>{passo > 1 && <BarraHipoteses sessaoId={sessaoId} revisao={estado.revisao} />}
+    {estado.alerta?.pausa && <AlertaBandeira alerta={estado.alerta} sessaoId={sessaoId} aoAtualizar={definirEstado} />}
+  </div>;
 }
