@@ -5,14 +5,14 @@
 .DESCRIPTION
     1. Confere o Python do .venv (aborta em português se faltar).
     2. Cria o banco SQLite e semeia animais fictícios se o arquivo não existir (-Reset apaga e recria).
-    3. Avisa, sem abortar, se web\dist não existe (só a API fica no ar).
+    3. Instala e compila web/ quando o projeto existe e web\dist está ausente.
     4. Confere que a porta 8000 está livre (aborta em português se não estiver).
     5. Sobe o uvicorn em 127.0.0.1:8000, espera GET /api/saude responder (até 30 s) e abre o navegador padrão
        (-SemNavegador desliga).
     Ctrl+C encerra o servidor.
 
     Variáveis opcionais: ANAMNESE_BASE_DIR (pasta da base; padrão "base") e ANAMNESE_DB (arquivo do banco;
-    padrão "dados\anamnese.db"). Nenhuma chamada de rede: tudo roda em localhost.
+    padrão "dados\anamnese.db"). A instalação inicial usa internet; a execução é local.
 
 .PARAMETER SoPreparar
     Executa os passos 1 a 3 e termina, sem subir o servidor.
@@ -81,9 +81,20 @@ if ($Reset -or -not (Test-Path $banco)) {
     Write-Host "Banco existente mantido: $banco (use -Reset para recriar)."
 }
 
-# 3. Frontend: opcional
+# 3. Prepara o frontend apenas quando o build está ausente.
 if (-not (Test-Path (Join-Path $raiz 'web\dist\index.html'))) {
-    Write-Host 'Aviso: web\dist não existe; só a API estará no ar (documentação em /api/docs).' -ForegroundColor Yellow
+    if (Test-Path (Join-Path $raiz 'web\package.json')) {
+        if (-not (Get-Command npm.cmd -ErrorAction SilentlyContinue)) { Falhar 'instale Node.js 24 (com npm) para preparar a interface.' }
+        Push-Location (Join-Path $raiz 'web')
+        try {
+            & npm.cmd ci
+            if ($LASTEXITCODE -ne 0) { Falhar 'não consegui instalar as dependências da interface.' }
+            & npm.cmd run build
+            if ($LASTEXITCODE -ne 0) { Falhar 'não consegui compilar a interface.' }
+        } finally { Pop-Location }
+    } else {
+        Write-Host 'Aviso: web\dist não existe; só a API estará no ar (documentação em /api/docs).' -ForegroundColor Yellow
+    }
 }
 
 if ($SoPreparar) {
