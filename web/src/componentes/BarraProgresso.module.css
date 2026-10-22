@@ -1,0 +1,2 @@
+.trilho { height: 6px; border-radius: 3px; overflow: hidden; background: rgb(255 255 255 / 14%); }
+.trilho span { display: block; width: var(--percentual); height: 100%; background: var(--cor-acento); }
