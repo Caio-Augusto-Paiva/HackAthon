@@ -4,26 +4,30 @@ Projeto: sistema especialista para o Hackathon UFJF 2026 (XXVIII Semana da Compu
 
 Fontes oficiais: **[A]** = `apresentacaoRerun.pdf` (16 slides); **[D]** = `DocumentárioRerun.pdf` (3 páginas).
 
-## Grafo de conhecimento — ler PRIMEIRO, em todo prompt
+## Grafo de conhecimento — só quando precisar procurar
 
-Para economizar tokens, **não leia o projeto inteiro e não recapitule o projeto lendo os arquivos originais**. O conhecimento do projeto (instruções, especificação, fontes, transcrições dos PDFs, pesquisas, revisões, plano e README do motor) está no grafo do Obsidian. **Sempre que precisar ler, consultar ou recapitular arquivos do projeto, leia do grafo do Obsidian em `obsidian/01-conhecimento/`**, nesta ordem:
+O grafo é uma ferramenta de **busca**, não uma leitura obrigatória. **Não abra o grafo (nem `GRAPH_REPORT.md`) no início do prompt** nem "para se contextualizar".
 
-1. **Índice:** `graphify-out/GRAPH_REPORT.md` (nós centrais, comunidades, hiperarestas, lacunas).
-2. **Comunidade:** a nota `obsidian/01-conhecimento/_COMMUNITY_<nome>.md` do assunto.
-3. **Conceitos:** siga os links `[[...]]` até as notas de conceito. Cada nota traz `source_file`, `location` e as conexões com o tipo de relação.
-4. **Pergunta pontual:** `graphify query "<pergunta>"` (ou `/graphify query`), que percorre `graphify-out/graph.json`.
-5. **Arquivo original, só se:** for editá-lo; a nota não tiver o detalhe necessário (abra só o trecho indicado em `location`); ou o arquivo estiver fora do grafo (código e testes, ver `.graphifyignore`).
-6. A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
-7. O escopo do grafo está em `.graphifyignore` (código e testes ficam de fora; serão o grafo 2).
+**Não use o grafo quando:** a tarefa já diz qual arquivo ou trecho mexer; a informação já está nesta conversa ou neste `CLAUDE.md`; ou o assunto é código e testes (fora do grafo, ver `.graphifyignore`) — aí use `Grep`/`Glob` direto.
 
-## Manter o grafo atualizado — sempre que houver documento novo ou alterado
+**Use o grafo quando** precisar **localizar** uma informação ou um arquivo que você não sabe onde está (decisão, regra, fonte, pesquisa, revisão, requisito), ou recapitular um assunto da documentação. Nesse caso, em vez de ler ou varrer os arquivos de `docs/`, pare no primeiro passo que responder:
 
-Sempre que criar ou alterar um documento de conhecimento (qualquer `.md` em `docs/`, este `CLAUDE.md`, `engine/README.md`, ou um JSON de referência em `docs/referencias/`), **no mesmo trabalho**:
+1. **Pergunta pontual (primeira opção):** `graphify query "<pergunta>"`, que percorre `graphify-out/graph.json` e devolve só os nós relevantes com `source_file` e `location`.
+2. **Assunto inteiro:** a nota `obsidian/01-conhecimento/_COMMUNITY_<nome>.md` e, dela, os links `[[...]]` necessários.
+3. **Visão geral do projeto (raro, custa ~7 mil tokens):** `graphify-out/GRAPH_REPORT.md`.
+4. **Arquivo original, só se:** for editá-lo; a nota não tiver o detalhe (abra só o trecho em `location`); ou o arquivo estiver fora do grafo.
 
-1. Se for PDF só de imagem, crie antes uma transcrição `.md` em `docs/fontes/` (PDFs ficam fora do grafo; a transcrição entra).
-2. Atualize o grafo de forma incremental: `/graphify . --update` (reextrai só o que mudou).
-3. Regenere o cofre do Obsidian: `graphify export obsidian --dir obsidian/01-conhecimento`.
-4. Faça o commit junto: o documento, `graphify-out/` e `obsidian/01-conhecimento/`.
+A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
+
+## Manter o grafo atualizado — uma vez por bloco de trabalho
+
+Atualizar o grafo reextrai os documentos com subagentes (a primeira extração custou ~520 mil tokens; ver `graphify-out/cost.json`). Por isso **não atualize a cada documento**. Atualize **uma vez, ao fechar um bloco de trabalho** que tenha criado ou alterado documentos de conhecimento (`.md` em `docs/`, este `CLAUDE.md`, `engine/README.md`, JSON em `docs/referencias/`), antes do push:
+
+1. PDF só de imagem: crie antes a transcrição `.md` em `docs/fontes/`.
+2. `/graphify . --update` (incremental) e `graphify export obsidian --dir obsidian/01-conhecimento`.
+3. Commit separado: `graphify-out/` e `obsidian/01-conhecimento/` (`chore(grafo): atualiza grafo`).
+
+Mudanças só em código, testes, `web/`, `docs/prompts/` ou `docs/rascunhos/` **não** pedem atualização do grafo.
 
 Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Obsidian) e `obsidian/02-a-definir/` (grafo 2, reservado).
 
