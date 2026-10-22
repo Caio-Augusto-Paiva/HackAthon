@@ -1,17 +1,13 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Entregas e demonstração localhost"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Entregas_e_demonstração_localhost
 ---
 
 # Entrega, demonstracao e localhost (slides 10 e 15)
 
-## Connections
-- [[CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)]] - `cites` [EXTRACTED]
-- [[Restricao execucao completa em localhost]] - `references` [EXTRACTED]
-
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Entregas_e_demonstração_localhost

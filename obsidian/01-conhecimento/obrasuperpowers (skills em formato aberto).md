@@ -1,19 +1,17 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Agentes de implementação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Agentes_de_implementação
 ---
 
 # obra/superpowers (skills em formato aberto)
 
 ## Connections
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `references` [EXTRACTED]
-- [[Skill superpowersbrainstorming]] - `conceptually_related_to` [INFERRED]
-- [[Skill superpowerswriting-plans]] - `conceptually_related_to` [INFERRED]
 - [[Skills em formato aberto (.agentsskills, .claudeskills, AGENTS.md)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_implementação

@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.18
 members: 13
 ---
 
 # Cetose e início da lactação
 
-**Cohesion:** 0.18 - loosely connected
 **Members:** 13 nodes
 
 ## Members
@@ -42,5 +40,5 @@ SORT file.name ASC
 - [[R-BV-03 chamar_agora (CF 0,99)]] - degree 5, connects to 3 communities
 - [[Inicio lactacao (inicio_lactacao)]] - degree 7, connects to 2 communities
 - [[Apetite (apetite)]] - degree 6, connects to 2 communities
-- [[R-CET-01 cetose (CF 0,4)]] - degree 5, connects to 2 communities
 - [[R-DAB-01 deslocamento_abomaso (CF 0,3)]] - degree 5, connects to 2 communities
+- [[R-CET-01 cetose (CF 0,4)]] - degree 5, connects to 2 communities

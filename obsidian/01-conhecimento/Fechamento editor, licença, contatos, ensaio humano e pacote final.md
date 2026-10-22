@@ -1,20 +1,20 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Processo documental verificável"
+community: "Ensaio humano e entrega final"
 location: "L52"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Ensaio_humano_e_entrega_final
 ---
 
 # Fechamento: editor, licença, contatos, ensaio humano e pacote final
 
 ## Connections
-- [[Equipe informada Caio, Davi e Luis; telefones ainda pendentes]] - `references` [EXTRACTED]
+- [[Equipe informada com nomes, telefones e responsabilidades]] - `references` [EXTRACTED]
 - [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `references` [EXTRACTED]
-- [[Pendentes ensaio humano sem Wi-Fi, reserva, contatos e arquivos finais]] - `references` [EXTRACTED]
+- [[Pendentes ensaio humano, material visual final e tempo oficial]] - `references` [EXTRACTED]
 - [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/concept #graphify/EXTRACTED #community/Ensaio_humano_e_entrega_final

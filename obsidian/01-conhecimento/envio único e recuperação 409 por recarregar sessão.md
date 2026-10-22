@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "rationale"
-community: "Contratos e integração localhost"
+community: "Snapshot e pressupostos do motor"
 location: "L27"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # envio único e recuperação 409 por recarregar sessão
@@ -16,4 +16,4 @@ tags:
 - [[Notas para o frontend (proxima nulo, reabrir, 409 conflito)]] - `references` [EXTRACTED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor

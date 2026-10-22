@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "rationale"
-community: "Consulta web e correções"
+community: "Parecer, retomada e limites"
 location: "L69"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Consulta_web_e_correções
+  - community/Parecer_retomada_e_limites
 ---
 
 # Retomada manual do Parecer pelo alerta: continuar e navegar pelo estado
@@ -16,4 +16,4 @@ tags:
 - [[R21 continuidade após parada automática permanece limitada pelo backend]] - `references` [EXTRACTED]
 - [[Task 6 Parecer e explicações — implementada com alcance documentado]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Consulta_web_e_correções
+#graphify/rationale #graphify/EXTRACTED #community/Parecer_retomada_e_limites

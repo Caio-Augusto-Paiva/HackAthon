@@ -12,7 +12,7 @@ tags:
 # Envio: alvo interno 22/10 às 18:30 e prazo oficial às 20:00
 
 ## Connections
-- [[Datas oficiais entrega 22102026 20h; apresentação 23102026 09h]] - `references` [EXTRACTED]
+- [[Prazos oficiais envio 22102026 20h e apresentação 23102026 09h]] - `references` [EXTRACTED]
 - [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Entrega_e_manutenção_documental

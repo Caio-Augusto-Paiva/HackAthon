@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.23
 members: 12
 ---
 
 # Metrite e puerpério
 
-**Cohesion:** 0.23 - loosely connected
 **Members:** 12 nodes
 
 ## Members
@@ -42,5 +40,5 @@ SORT file.name ASC
 - [[Metrite Puerperal (metrite)]] - degree 9, connects to 2 communities
 - [[R-MET-02 metrite (CF 0,45)]] - degree 5, connects to 2 communities
 - [[Corrimento vaginal (corrimento_vaginal)]] - degree 4, connects to 2 communities
-- [[R-DER-02 puerperio (CF 0,99)]] - degree 3, connects to 2 communities
 - [[R-URG-04 chamar_agora (CF 0,99)]] - degree 3, connects to 2 communities
+- [[R-DER-02 puerperio (CF 0,99)]] - degree 3, connects to 2 communities

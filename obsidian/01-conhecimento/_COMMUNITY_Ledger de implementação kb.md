@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.23
 members: 12
 ---
 
 # Ledger de implementação kb
 
-**Cohesion:** 0.23 - loosely connected
 **Members:** 12 nodes
 
 ## Members

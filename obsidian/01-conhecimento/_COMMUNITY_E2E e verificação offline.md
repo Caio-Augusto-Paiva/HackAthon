@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.33
 members: 6
 ---
 
 # E2E e verificação offline
 
-**Cohesion:** 0.33 - loosely connected
 **Members:** 6 nodes
 
 ## Members
@@ -27,12 +25,13 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Plano histórico frontend implementado]]
 - 2 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
-- 1 edge to [[_COMMUNITY_Consulta web e correções]]
 - 1 edge to [[_COMMUNITY_Riscos da interface integrada]]
+- 1 edge to [[_COMMUNITY_Consulta web e correções]]
+- 1 edge to [[_COMMUNITY_Ensaio humano e entrega final]]
 
 ## Top bridge nodes
 - [[Camada 4b Playwright com API real e ativa v0002]] - degree 4, connects to 2 communities
+- [[R17 HTML Swagger 200 não comprova interface offline por dependência CDN]] - degree 4, connects to 2 communities
 - [[Task 7 Integração localhost e E2E — implementada com alcance documentado]] - degree 3, connects to 2 communities
 - [[Ensaio HTTP histórico na v0001 saúde, sessão, explicações e 3434 casos]] - degree 3, connects to 1 community
-- [[R17 HTML Swagger 200 não comprova interface offline por dependência CDN]] - degree 3, connects to 1 community
 - [[localhost sem nuvemCDN, fontes locais e SVG inline]] - degree 2, connects to 1 community

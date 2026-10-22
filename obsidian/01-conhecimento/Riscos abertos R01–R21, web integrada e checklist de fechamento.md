@@ -42,10 +42,10 @@ tags:
 - [[R21 continuidade após parada automática permanece limitada pelo backend]] - `references` [EXTRACTED]
 - [[Riscos de integração editor pendente, persistência e cobertura física]] - `references` [EXTRACTED]
 - [[Riscos CF sem validação, correlação, sem_problema e lacunas da base]] - `references` [EXTRACTED]
-- [[Roteiro consulta React em localhost e CLI de reserva]] - `references` [EXTRACTED]
+- [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[SPA compilada sem requisições externas nos E2E]] - `references` [EXTRACTED]
 - [[UI preservou regras, versões imutáveis, contratos e APImotorkb]] - `references` [EXTRACTED]
 - [[Verificação web oito E2E Chromium, seis telas e axe selecionado]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Riscos_da_interface_integrada

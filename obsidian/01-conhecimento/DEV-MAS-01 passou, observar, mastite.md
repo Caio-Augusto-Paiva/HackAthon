@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[Demo CLI de reserva alerta, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
+- [[CLI de reserva alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
 - [[Exemplos sintéticos de alerta e sinais mamários pela CLI]] - `references` [EXTRACTED]
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Mastite (mastite)]] - `references` [EXTRACTED]

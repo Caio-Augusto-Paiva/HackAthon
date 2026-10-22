@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.07
 members: 62
 ---
 
 # Plano de API localhost
 
-**Cohesion:** 0.07 - loosely connected
 **Members:** 62 nodes
 
 ## Members

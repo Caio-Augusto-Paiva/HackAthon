@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "rationale"
-community: "Consulta web e correções"
+community: "Parecer, retomada e limites"
 location: "L113"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Consulta_web_e_correções
+  - community/Parecer_retomada_e_limites
 ---
 
 # modal de bandeira usa ações do backend
@@ -19,4 +19,4 @@ tags:
 - [[Task 5 Alerta de bandeira — implementada com alcance documentado]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Consulta_web_e_correções
+#graphify/rationale #graphify/EXTRACTED #community/Parecer_retomada_e_limites

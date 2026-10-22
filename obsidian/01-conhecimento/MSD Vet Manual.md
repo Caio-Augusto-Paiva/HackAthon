@@ -19,7 +19,6 @@ tags:
 - [[Deslocamento de abomaso]] - `cites` [EXTRACTED]
 - [[Foot rot (podridao de casco)]] - `cites` [EXTRACTED]
 - [[Hipocalcemia puerperal (paresia parturiente)]] - `cites` [EXTRACTED]
-- [[Marcacao de suposicao a validar (conhecimento veterinario)]] - `references` [INFERRED]
 - [[Mastite bovina]] - `cites` [EXTRACTED]
 - [[Metrite puerperal]] - `cites` [EXTRACTED]
 - [[Sobrecarga de grao]] - `cites` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Consulta integrada e pendências"
+community: "Casos sintéticos na v0002"
 location: "L20"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Consulta_integrada_e_pendências
+  - community/Casos_sintéticos_na_v0002
 ---
 
 # Inicializador preserva banco/build e compila SPA se ausente
@@ -15,4 +15,4 @@ tags:
 - [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Vitestbuild e Playwright com API própriaSQLite temporário]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Consulta_integrada_e_pendências
+#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

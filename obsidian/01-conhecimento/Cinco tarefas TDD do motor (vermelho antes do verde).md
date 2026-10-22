@@ -11,6 +11,6 @@ tags:
 # Cinco tarefas TDD do motor (vermelho antes do verde)
 
 ## Connections
-- [[Testes com casos conhecidos por versao da base]] - `semantically_similar_to` [INFERRED]
+- [[Casos de teste com resultado esperado por versão da base]] - `semantically_similar_to` [INFERRED]
 
 #graphify/concept #graphify/INFERRED #community/Requisitos_e_arquitetura_conceitual

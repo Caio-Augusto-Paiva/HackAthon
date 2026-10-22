@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Processo documental verificável"
+community: "Casos sintéticos na v0002"
 location: "L56"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Casos_sintéticos_na_v0002
 ---
 
 # Gerador segue ativa v0002 e verifica sincronismo de regras/casos
@@ -19,4 +19,4 @@ tags:
 - [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Plano gerar regrascasos dos executáveis com teste de sincronismo]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/rationale #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

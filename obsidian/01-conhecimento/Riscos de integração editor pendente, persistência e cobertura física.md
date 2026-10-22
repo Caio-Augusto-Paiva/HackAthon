@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Consulta integrada e pendências"
+community: "Snapshot e pressupostos do motor"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Consulta_integrada_e_pendências
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # Riscos de integração: editor pendente, persistência e cobertura física
@@ -16,4 +16,4 @@ tags:
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
 - [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Consulta_integrada_e_pendências
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor

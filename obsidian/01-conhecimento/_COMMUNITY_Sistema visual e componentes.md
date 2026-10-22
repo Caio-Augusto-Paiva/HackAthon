@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.07
 members: 30
 ---
 
 # Sistema visual e componentes
 
-**Cohesion:** 0.07 - loosely connected
 **Members:** 30 nodes
 
 ## Members
@@ -49,9 +47,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Produto e limites clínicos]]
-- 1 edge to [[_COMMUNITY_Plano histórico frontend implementado]]
+- 2 edges to [[_COMMUNITY_Produto e limites clínicos]]
+- 1 edge to [[_COMMUNITY_Parecer, retomada e limites]]
 - 1 edge to [[_COMMUNITY_Cliente da API e erros]]
+- 1 edge to [[_COMMUNITY_Plano histórico frontend implementado]]
 
 ## Top bridge nodes
-- [[Sistema visual documentado do protótipo HackAtom]] - degree 34, connects to 3 communities
+- [[Sistema visual documentado do protótipo HackAtom]] - degree 34, connects to 4 communities

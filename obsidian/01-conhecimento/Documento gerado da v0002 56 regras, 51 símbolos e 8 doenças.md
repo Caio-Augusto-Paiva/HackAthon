@@ -121,7 +121,7 @@ tags:
 - [[R-URG-07 observar (CF 0,8)]] - `references` [EXTRACTED]
 - [[R-URG-08 observar (CF 0,7)]] - `references` [EXTRACTED]
 - [[Recusa seletiva de concentrado (recusa_concentrado_come_volumoso)]] - `references` [EXTRACTED]
-- [[Roteiro consulta React em localhost e CLI de reserva]] - `references` [EXTRACTED]
+- [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[Sem evidência de urgência pelos critérios da base (sem_problema)]] - `references` [EXTRACTED]
 - [[Temperatura ao toque das extremidades (extremidades)]] - `references` [EXTRACTED]
 - [[Temperatura retal (temperatura_retal)]] - `references` [EXTRACTED]
@@ -134,6 +134,6 @@ tags:
 - [[Tristeza Parasitária Bovina (tpb)]] - `references` [EXTRACTED]
 - [[Urina escura (urina_escura)]] - `references` [EXTRACTED]
 - [[pH ruminal (ph_ruminal)]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

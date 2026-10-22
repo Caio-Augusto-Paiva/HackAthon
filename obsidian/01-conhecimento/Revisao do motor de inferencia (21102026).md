@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Persistência e validação da base"
+community: "Fontes canônicas e revisões"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Fontes_canônicas_e_revisões
 ---
 
 # Revisao do motor de inferencia (21/10/2026)
@@ -16,4 +16,4 @@ tags:
 - [[Evidencia final 56 testes sem falhas]] - `shares_data_with` [INFERRED]
 - [[Focos da revisao (sem valor, contradicoes, loops, bandeiras)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/document #graphify/EXTRACTED #community/Fontes_canônicas_e_revisões

@@ -11,7 +11,6 @@ tags:
 # Diretrizes passo a passo (slide 12)
 
 ## Connections
-- [[CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)]] - `cites` [EXTRACTED]
-- [[Sistema especialista]] - `conceptually_related_to` [EXTRACTED]
+- [[Sistema especialista para anamnese de bovinos leiteiros]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

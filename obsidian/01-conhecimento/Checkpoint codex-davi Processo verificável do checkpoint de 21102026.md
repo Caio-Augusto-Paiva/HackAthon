@@ -22,6 +22,6 @@ tags:
 - [[Papel C diário a preencher, sem interações ou aprendizado inventados]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 - [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Processo_documental_verificável

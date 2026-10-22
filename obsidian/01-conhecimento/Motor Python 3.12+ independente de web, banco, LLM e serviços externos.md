@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "document"
-community: "Snapshot e pressupostos do motor"
+community: "Arquitetura e demonstração web"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_e_pressupostos_do_motor
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Motor Python 3.12+ independente de web, banco, LLM e serviços externos
@@ -15,4 +15,4 @@ tags:
 - [[Base de desenvolvimento 3.1.0-revisao1 51 símbolos, 56 regras, 8 doenças e 6 telas]] - `shares_data_with` [EXTRACTED]
 - [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor
+#graphify/document #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

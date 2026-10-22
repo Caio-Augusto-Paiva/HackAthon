@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.24
 members: 12
 ---
 
 # Sinais térmicos e urgência
 
-**Cohesion:** 0.24 - loosely connected
 **Members:** 12 nodes
 
 ## Members
@@ -43,4 +41,4 @@ SORT file.name ASC
 - [[Hipotermia (hipotermia)]] - degree 6, connects to 3 communities
 - [[Temperatura retal (temperatura_retal)]] - degree 7, connects to 2 communities
 - [[Temperatura ao toque das extremidades (extremidades)]] - degree 5, connects to 1 community
-- [[R-DER-04 febre (CF 0,95)]] - degree 3, connects to 1 community
+- [[R-DER-10 febre (CF -0,4)]] - degree 3, connects to 1 community

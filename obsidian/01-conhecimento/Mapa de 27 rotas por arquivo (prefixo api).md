@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Cliente da API e erros"
+community: "Contratos e integração localhost"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cliente_da_API_e_erros
+  - community/Contratos_e_integração_localhost
 ---
 
 # Mapa de 27 rotas por arquivo (prefixo /api)
@@ -15,4 +15,4 @@ tags:
 - [[Formato unico de erro (codigos e X-Requisicao-Id)]] - `shares_data_with` [INFERRED]
 - [[Regra rotas finas, SQL so em repositorios]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cliente_da_API_e_erros
+#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost

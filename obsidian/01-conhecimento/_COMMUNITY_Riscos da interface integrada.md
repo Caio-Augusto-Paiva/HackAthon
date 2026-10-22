@@ -1,16 +1,13 @@
 ---
 type: community
-cohesion: 0.11
-members: 20
+members: 19
 ---
 
 # Riscos da interface integrada
 
-**Cohesion:** 0.11 - loosely connected
-**Members:** 20 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[Demo web de 4 min erro 422, mastite 80 e alerta por decúbito]] - concept - docs/entrega/05-apresentacao-e-demo.md
 - [[R01 Conhecimento clínico e CF sem validação especializada]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[R02 Confiança excessiva por sinais correlacionados]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[R03 Falso entendimento de `sem_problema`]] - concept - docs/entrega/06-riscos-e-pendencias.md
@@ -39,18 +36,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Processo documental verificável]]
-- 3 edges to [[_COMMUNITY_Entrega e manutenção documental]]
-- 2 edges to [[_COMMUNITY_Consulta web e correções]]
+- 3 edges to [[_COMMUNITY_Arquitetura e demonstração web]]
+- 3 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
+- 2 edges to [[_COMMUNITY_Ensaio humano e entrega final]]
 - 2 edges to [[_COMMUNITY_Plano histórico frontend implementado]]
-- 2 edges to [[_COMMUNITY_Consulta integrada e pendências]]
-- 2 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
+- 2 edges to [[_COMMUNITY_Processo documental verificável]]
+- 2 edges to [[_COMMUNITY_Consulta web e correções]]
+- 2 edges to [[_COMMUNITY_Entrega e manutenção documental]]
+- 1 edge to [[_COMMUNITY_Parecer, retomada e limites]]
+- 1 edge to [[_COMMUNITY_Demonstração e troca de modo]]
 - 1 edge to [[_COMMUNITY_Snapshot e pressupostos do motor]]
-- 1 edge to [[_COMMUNITY_Arquitetura e demonstração web]]
 - 1 edge to [[_COMMUNITY_E2E e verificação offline]]
-- 1 edge to [[_COMMUNITY_Precisão numérica da interface]]
 
 ## Top bridge nodes
-- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - degree 35, connects to 10 communities
-- [[Verificação web oito E2E Chromium, seis telas e axe selecionado]] - degree 5, connects to 2 communities
-- [[Demo web de 4 min erro 422, mastite 80 e alerta por decúbito]] - degree 2, connects to 1 community
+- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - degree 35, connects to 11 communities
+- [[Verificação web oito E2E Chromium, seis telas e axe selecionado]] - degree 5, connects to 3 communities

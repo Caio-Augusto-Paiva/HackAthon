@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "rationale"
-community: "Snapshot e pressupostos do motor"
+community: "Arquitetura e demonstração web"
 location: "L89"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_e_pressupostos_do_motor
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Triagem e bandeiras por prefixos na ordem real das respostas
@@ -18,4 +18,4 @@ tags:
 - [[Sessao triagem, diálogo, modo, bandeiras, parecer e porquecomo]] - `implements` [EXTRACTED]
 - [[modal de bandeira usa ações do backend]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor
+#graphify/rationale #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

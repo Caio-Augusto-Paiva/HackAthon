@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Modelos e validação do kb"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Modelos_e_validação_do_kb
 ---
 
 # Guardas de execucao (CF positivo para urgencia e bandeira)
@@ -14,4 +14,4 @@ tags:
 - [[Codigos do validador E00-E23 e W01-W03]] - `conceptually_related_to` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_do_kb

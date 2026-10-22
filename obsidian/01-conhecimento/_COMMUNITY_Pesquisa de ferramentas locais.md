@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.05
 members: 46
 ---
 
 # Pesquisa de ferramentas locais
 
-**Cohesion:** 0.05 - loosely connected
 **Members:** 46 nodes
 
 ## Members

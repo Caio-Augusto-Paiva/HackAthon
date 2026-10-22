@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Checkpoint codex-davi IA aplicada ao desenvolvimento e à documentação, fora da consulta]] - `rationale_for` [EXTRACTED]
-- [[Exigências consulta web localhost e E2E disponíveis; editor e entrega final pendentes]] - `references` [EXTRACTED]
 - [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[cliente envia valor ou nao_sei, nunca CF]] - `rationale_for` [EXTRACTED]
 

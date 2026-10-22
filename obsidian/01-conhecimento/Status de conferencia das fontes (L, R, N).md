@@ -11,7 +11,7 @@ tags:
 # Status de conferencia das fontes (L, R, N)
 
 ## Connections
+- [[Conhecimento veterinário sempre como suposição a validar]] - `semantically_similar_to` [INFERRED]
 - [[MSD Vet Manual]] - `rationale_for` [EXTRACTED]
-- [[Marcacao de suposicao a validar (conhecimento veterinario)]] - `semantically_similar_to` [INFERRED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

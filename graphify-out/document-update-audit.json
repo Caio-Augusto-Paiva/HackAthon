@@ -1,73 +1,63 @@
 {
-  "verified_at": "2026-10-22T10:05:31.358925+00:00",
-  "baseline_nodes": 718,
-  "baseline_edges": 1333,
-  "nodes": 790,
-  "edges": 1444,
-  "communities": 55,
-  "hyperedges": 25,
-  "prior_ids_preserved": 718,
+  "verified_at": "2026-10-22T11:14:16.356302+00:00",
+  "block": "2026-10-22-troca-modo",
+  "publication_count": 1,
+  "baseline_nodes": 790,
+  "baseline_edges": 1444,
+  "nodes": 818,
+  "edges": 1470,
+  "communities": 64,
+  "hyperedges": 24,
+  "prior_ids_preserved": 790,
   "missing_prior_ids": [],
-  "intermediate_ids_preserved": 788,
   "documents": {
-    "DESIGN.md": {
-      "lines": 87,
-      "sha256": "7cf467089f9ff9de062e1c9452973058ae8033c906057e9944b5d455e64b677d"
+    "AGENTS.md": {
+      "lines": 13,
+      "sha256": "dcbb300b7d4929ac3bf8835e1a5a87eb692ef9304b710f0a72ef2ffaa6f55028"
     },
-    "PRODUCT.md": {
-      "lines": 48,
-      "sha256": "41100c643a3c9b5e079962b9180d2c162c66b5b81f9cd89fb6ade0900842fde1"
-    },
-    "README.md": {
-      "lines": 67,
-      "sha256": "3d9f8eff22452e34f5ee8cfec712d824a1c25fa5a6b8ba072b05add5145d8180"
-    },
-    "docs/entrega/02-arquitetura.md": {
-      "lines": 128,
-      "sha256": "a83bbfd1e7e18360de02b7b671ba1dd24f4fc9ccc6734396592070482ef17437"
+    "CLAUDE.md": {
+      "lines": 96,
+      "sha256": "b8091dd55943f474b3d88f8a3c34bd2bed2f092a0f4233af53bf1e81677904db"
     },
     "docs/entrega/05-apresentacao-e-demo.md": {
-      "lines": 128,
-      "sha256": "8b57b457c005a7539fe69d2ba6df063a1f0fde088fda89a2db3297fc2b99a5d3"
-    },
-    "docs/entrega/06-riscos-e-pendencias.md": {
-      "lines": 89,
-      "sha256": "ad625fc5626570aa6ae2d9200b98f529394470355094c7e33fda3122994c7681"
+      "lines": 137,
+      "sha256": "72f6faaffd2fc73fbeb4e81dfe0984fe7e462dcb9687fa786fc0bb1c9fab1c40"
     },
     "docs/entrega/README.md": {
       "lines": 64,
-      "sha256": "e05ecfbea7c3d97585a4b3f9bddcb81a350e6f41110d84d1d45f076807e5d57c"
-    },
-    "docs/superpowers/plans/2026-10-22-frontend-web.md": {
-      "lines": 155,
-      "sha256": "d69b5ed4603bc7fd8dabbed95b206a55a31bc4c5d4e33a4b8acd9ff4964be319"
+      "sha256": "e07792edc7cbe53690894529182c5e909a7a69ccf63de7ada33ac9db63693bf9"
     }
   },
-  "document_count": 8,
-  "document_lines": 766,
-  "corpus_files": 44,
-  "corpus_words": 108228,
-  "vault_markdown_notes": 845,
-  "canvas_file_nodes": 790,
-  "canvas_groups": 55,
+  "document_count": 4,
+  "document_lines": 310,
+  "corpus_files": 45,
+  "corpus_words": 108263,
+  "vault_markdown_notes": 882,
+  "canvas_file_nodes": 818,
+  "canvas_groups": 64,
   "canvas_edges": 200,
-  "vault_graph_edges_verified": 1444,
+  "vault_graph_edges_verified": 1470,
   "broken_wikilinks": 0,
   "incremental_pending_files": 0,
+  "deleted_files": [],
+  "legacy_document_origin_migrations": {
+    "nodes": 17,
+    "edges": 92
+  },
   "health": {
-    "node_count": 790,
+    "node_count": 818,
     "unverified_node_count": 0,
-    "raw_edge_count": 1444,
+    "raw_edge_count": 1470,
     "non_object_edges": 0,
     "missing_endpoint_edges": 0,
     "dangling_endpoint_edges": 0,
     "external_reference_edges": 0,
     "self_loop_edges": 0,
-    "valid_candidate_edges": 1444,
+    "valid_candidate_edges": 1470,
     "exact_duplicate_edges": 0,
-    "directed_unique_endpoint_pairs": 1444,
+    "directed_unique_endpoint_pairs": 1470,
     "directed_same_endpoint_collapsed_edges": 0,
-    "undirected_unique_endpoint_pairs": 1444,
+    "undirected_unique_endpoint_pairs": 1470,
     "undirected_same_endpoint_collapsed_edges": 0,
     "same_endpoint_group_count": 0,
     "relation_variant_groups": 0,
@@ -75,8 +65,8 @@
     "source_location_variant_groups": 0,
     "context_variant_groups": 0,
     "post_build_graph_type": "Graph",
-    "post_build_node_count": 790,
-    "post_build_edge_count": 1444,
+    "post_build_node_count": 818,
+    "post_build_edge_count": 1470,
     "post_build_error": "",
     "producer_suppression": {
       "path": "C:\\Users\\Usuario\\.codex\\skills\\graphify\\.runtime\\graphify\\extract.py",
@@ -160,17 +150,9 @@
     "examples": []
   },
   "token_usage_status": "unavailable_not_measured",
-  "execution_status": "verified_after_resume",
-  "execution_interruptions": [
-    {
-      "stage": "semantic_refresh",
-      "reason": "usage_limit",
-      "result": "interrupted_not_published",
-      "measured_tokens": null
-    }
-  ],
   "financial_cost": null,
   "clinical_validation": "not_performed",
+  "source_commit": "09f575447ae9fe71ce82e45b4355a8799a1b3be4",
   "excluded_artifacts": [
     "web/",
     "docs/entrega/capturas/"

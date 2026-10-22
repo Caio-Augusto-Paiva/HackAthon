@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.13
 members: 19
 ---
 
 # Plano histórico frontend implementado
 
-**Cohesion:** 0.13 - loosely connected
 **Members:** 19 nodes
 
 ## Members
@@ -38,20 +36,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Consulta web e correções]]
+- 5 edges to [[_COMMUNITY_Consulta web e correções]]
+- 4 edges to [[_COMMUNITY_Parecer, retomada e limites]]
 - 3 edges to [[_COMMUNITY_E2E e verificação offline]]
 - 3 edges to [[_COMMUNITY_Cliente da API e erros]]
 - 2 edges to [[_COMMUNITY_Riscos da interface integrada]]
 - 2 edges to [[_COMMUNITY_Contratos e integração localhost]]
-- 1 edge to [[_COMMUNITY_Sistema visual e componentes]]
-- 1 edge to [[_COMMUNITY_Precisão numérica da interface]]
-- 1 edge to [[_COMMUNITY_Persistência e validação da base]]
-- 1 edge to [[_COMMUNITY_Produto e limites clínicos]]
 - 1 edge to [[_COMMUNITY_Sessões, API e motor]]
+- 1 edge to [[_COMMUNITY_Produto e limites clínicos]]
+- 1 edge to [[_COMMUNITY_Snapshot e pressupostos do motor]]
+- 1 edge to [[_COMMUNITY_Sistema visual e componentes]]
 
 ## Top bridge nodes
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - degree 32, connects to 7 communities
 - [[Task 4 Anamnese, perguntas e hipóteses — implementada com alcance documentado]] - degree 4, connects to 1 community
-- [[hipóteses desde segunda pergunta e explicação Por quê]] - degree 3, connects to 1 community
 - [[auditpolish, responsivo 37576810241440 e estados]] - degree 3, connects to 1 community
+- [[hipóteses desde segunda pergunta e explicação Por quê]] - degree 3, connects to 1 community
 - [[Task 2 Componentes base — implementada com alcance documentado]] - degree 3, connects to 1 community

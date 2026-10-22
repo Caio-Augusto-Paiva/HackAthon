@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Backend e isolamento do motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Backend_e_isolamento_do_motor
 ---
 
 # Demonstracao executavel (python -m engine) com base artificial
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Motor de inferencia README (engine)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor

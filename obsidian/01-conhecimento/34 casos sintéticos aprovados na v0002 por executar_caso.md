@@ -51,6 +51,6 @@ tags:
 - [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
 - [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

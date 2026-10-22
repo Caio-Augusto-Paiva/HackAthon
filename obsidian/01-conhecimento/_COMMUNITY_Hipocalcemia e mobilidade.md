@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.11
 members: 19
 ---
 
 # Hipocalcemia e mobilidade
 
-**Cohesion:** 0.11 - loosely connected
 **Members:** 19 nodes
 
 ## Members
@@ -42,12 +40,12 @@ SORT file.name ASC
 - 6 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
 - 2 edges to [[_COMMUNITY_Sinais térmicos e urgência]]
 - 2 edges to [[_COMMUNITY_Bandeiras de urgência]]
-- 1 edge to [[_COMMUNITY_Cetose e início da lactação]]
 - 1 edge to [[_COMMUNITY_Metrite e puerpério]]
+- 1 edge to [[_COMMUNITY_Cetose e início da lactação]]
 
 ## Top bridge nodes
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - degree 9, connects to 2 communities
-- [[Dias em lactação (dias_em_lactacao)]] - degree 5, connects to 2 communities
 - [[R-HIP-02 hipocalcemia (CF 0,8)]] - degree 5, connects to 2 communities
-- [[Decúbito (decubito)]] - degree 4, connects to 2 communities
+- [[Dias em lactação (dias_em_lactacao)]] - degree 5, connects to 2 communities
 - [[R-DD-02 dermatite_digital (CF 0,5)]] - degree 4, connects to 2 communities
+- [[Decúbito (decubito)]] - degree 4, connects to 2 communities

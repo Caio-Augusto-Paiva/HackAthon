@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.17
 members: 13
 ---
 
 # Acidose e sinais digestivos
 
-**Cohesion:** 0.17 - loosely connected
 **Members:** 13 nodes
 
 ## Members

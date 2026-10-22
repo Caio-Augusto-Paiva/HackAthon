@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "concept"
-community: "Produto e limites clínicos"
+community: "Parecer, retomada e limites"
 location: "L80"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Produto_e_limites_clínicos
+  - community/Parecer_retomada_e_limites
 ---
 
 # Alerta não fecha por Esc/fundo; outros diálogos devolvem foco
@@ -16,4 +16,4 @@ tags:
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
 - [[modal de bandeira usa ações do backend]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Produto_e_limites_clínicos
+#graphify/concept #graphify/EXTRACTED #community/Parecer_retomada_e_limites

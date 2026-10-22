@@ -11,8 +11,8 @@ tags:
 # Skills nao confirmadas (FastAPI, pytest, React Flow, Vite)
 
 ## Connections
-- [[FastAPI + Pydantic]] - `references` [EXTRACTED]
-- [[React Flow]] - `references` [EXTRACTED]
-- [[pytest]] - `references` [EXTRACTED]
+- [[API atual com FastAPI e SQLite]] - `references` [EXTRACTED]
+- [[Código e testes fora do escopo do grafo]] - `references` [EXTRACTED]
+- [[Frontend React e TypeScript; editor gráfico excluído]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

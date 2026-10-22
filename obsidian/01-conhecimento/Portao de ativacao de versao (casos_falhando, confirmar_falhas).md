@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Sessões, API e motor"
+community: "Versões e execução de casos"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Sessões_API_e_motor
+  - community/Versões_e_execução_de_casos
 ---
 
 # Portao de ativacao de versao (casos_falhando, confirmar_falhas)
@@ -15,4 +15,4 @@ tags:
 - [[engine.casos.executar_caso (casos de teste reproduziveis)]] - `references` [INFERRED]
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Sessões_API_e_motor
+#graphify/concept #graphify/INFERRED #community/Versões_e_execução_de_casos

@@ -23,6 +23,6 @@ tags:
 - [[Plano extração semântica, atualização Graphify e exportação Obsidian]] - `references` [EXTRACTED]
 - [[Plano gerar regrascasos dos executáveis com teste de sincronismo]] - `references` [EXTRACTED]
 - [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
-- [[Roteiro consulta React em localhost e CLI de reserva]] - `references` [EXTRACTED]
+- [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Processo_documental_verificável

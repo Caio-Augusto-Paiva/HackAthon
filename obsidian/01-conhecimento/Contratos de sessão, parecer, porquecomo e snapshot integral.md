@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "concept"
-community: "Contratos e integração localhost"
+community: "Snapshot e pressupostos do motor"
 location: "L99"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # Contratos de sessão, parecer, porque/como e snapshot integral
@@ -16,4 +16,4 @@ tags:
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
 - [[envio único e recuperação 409 por recarregar sessão]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/concept #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor

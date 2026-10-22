@@ -11,6 +11,6 @@ tags:
 # Autorizacao explicita supera a fase de planejamento do CLAUDE.md
 
 ## Connections
-- [[Limite da fase de planejamento (sem implementacao)]] - `rationale_for` [EXTRACTED]
+- [[Fase atual implementação e entrega]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

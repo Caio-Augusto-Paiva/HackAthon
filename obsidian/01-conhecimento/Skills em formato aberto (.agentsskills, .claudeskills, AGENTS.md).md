@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Agentes de implementação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Agentes_de_implementação
 ---
 
 # Skills em formato aberto (.agents/skills, .claude/skills, AGENTS.md)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[obrasuperpowers (skills em formato aberto)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_implementação

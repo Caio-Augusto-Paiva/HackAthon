@@ -14,7 +14,6 @@ tags:
 - [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
 - [[Ensaio pendente CF, bandeira, desconhecimento, explicações e duração real]] - `references` [EXTRACTED]
 - [[Papel C planejado interface, testes de navegador, demo e apresentação]] - `references` [EXTRACTED]
-- [[Pendentes ensaio humano sem Wi-Fi, reserva, contatos e arquivos finais]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Processo_documental_verificável

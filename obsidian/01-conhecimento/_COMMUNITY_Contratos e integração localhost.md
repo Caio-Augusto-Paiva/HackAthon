@@ -1,24 +1,28 @@
 ---
 type: community
-cohesion: 0.22
-members: 9
+members: 15
 ---
 
 # Contratos e integração localhost
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 9 nodes
+**Members:** 15 nodes
 
 ## Members
+- [[Banco SQLite fora do OneDrive]] - rationale - api/README.md
 - [[Checkpoint codex-davi IA aplicada ao desenvolvimento e à documentação, fora da consulta]] - concept - docs/entrega/01-processo.md
 - [[Contrato OpenAPI versionado e exemplos por operationId]] - concept - api/README.md
-- [[Contratos de sessão, parecer, porquecomo e snapshot integral]] - concept - docs/entrega/02-arquitetura.md
 - [[D6 respostas validadas por TypeAdapter e registro CONTRATOS]] - rationale - api/README.md
+- [[Mapa de 27 rotas por arquivo (prefixo api)]] - concept - api/README.md
 - [[Notas para o frontend (proxima nulo, reabrir, 409 conflito)]] - concept - api/README.md
 - [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - rationale - README.md
+- [[Regra rotas finas, SQL so em repositorios]] - rationale - api/README.md
+- [[SPA Vite servida por FastAPI, EstadoSessao.proxima autoritativo]] - rationale - docs/superpowers/plans/2026-10-22-frontend-web.md
+- [[Script rodar.ps1  rodar.sh (execucao em localhost)]] - concept - api/README.md
+- [[Sementes de animais ficticios e reset seguro do banco]] - concept - api/README.md
+- [[Servir webdist com rota coringa propria (apifrontend.py)]] - concept - api/README.md
 - [[Testes da API (pytest, marca lento, base minima de fixtures)]] - concept - api/README.md
+- [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - concept - api/README.md
 - [[cliente envia valor ou nao_sei, nunca CF]] - rationale - docs/superpowers/plans/2026-10-22-frontend-web.md
-- [[envio único e recuperação 409 por recarregar sessão]] - rationale - docs/superpowers/plans/2026-10-22-frontend-web.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,16 +33,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Plano histórico frontend implementado]]
-- 2 edges to [[_COMMUNITY_Consulta integrada e pendências]]
-- 1 edge to [[_COMMUNITY_Processo documental verificável]]
+- 1 edge to [[_COMMUNITY_Casos sintéticos na v0002]]
 - 1 edge to [[_COMMUNITY_Snapshot e pressupostos do motor]]
-- 1 edge to [[_COMMUNITY_Persistência e validação da base]]
-- 1 edge to [[_COMMUNITY_Arquitetura e demonstração web]]
 - 1 edge to [[_COMMUNITY_Cliente da API e erros]]
+- 1 edge to [[_COMMUNITY_Modelos e validação do kb]]
+- 1 edge to [[_COMMUNITY_Processo documental verificável]]
 
 ## Top bridge nodes
-- [[Contratos de sessão, parecer, porquecomo e snapshot integral]] - degree 3, connects to 2 communities
-- [[Contrato OpenAPI versionado e exemplos por operationId]] - degree 5, connects to 1 community
-- [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - degree 4, connects to 1 community
+- [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - degree 3, connects to 1 community
+- [[SPA Vite servida por FastAPI, EstadoSessao.proxima autoritativo]] - degree 3, connects to 1 community
+- [[cliente envia valor ou nao_sei, nunca CF]] - degree 3, connects to 1 community
 - [[Notas para o frontend (proxima nulo, reabrir, 409 conflito)]] - degree 3, connects to 1 community
-- [[envio único e recuperação 409 por recarregar sessão]] - degree 3, connects to 1 community
+- [[Mapa de 27 rotas por arquivo (prefixo api)]] - degree 3, connects to 1 community

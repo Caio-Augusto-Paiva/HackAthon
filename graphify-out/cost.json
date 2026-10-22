@@ -39,9 +39,20 @@
       "usage_status": "unavailable_not_measured",
       "financial_cost": null,
       "nota": "Uso do agente hospedeiro indisponível; totais históricos não foram incrementados."
+    },
+    {
+      "date": "2026-10-22T11:13:58.204958+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "files": 4,
+      "semantic_files": 4,
+      "usage_status": "unavailable_not_measured",
+      "financial_cost": null,
+      "block": "2026-10-22-troca-modo",
+      "nota": "Única atualização do bloco; totais históricos não incrementados por uso indisponível."
     }
   ],
   "total_input_tokens": 520209,
   "total_output_tokens": 0,
-  "unmeasured_runs": 3
+  "unmeasured_runs": 4
 }

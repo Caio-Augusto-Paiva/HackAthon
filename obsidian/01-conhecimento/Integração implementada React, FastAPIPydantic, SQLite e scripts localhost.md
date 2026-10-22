@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "concept"
-community: "Consulta integrada e pendências"
+community: "Snapshot e pressupostos do motor"
 location: "L26"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Consulta_integrada_e_pendências
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # Integração implementada: React, FastAPI/Pydantic, SQLite e scripts localhost
@@ -20,4 +20,4 @@ tags:
 - [[Riscos de integração editor pendente, persistência e cobertura física]] - `references` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Consulta_integrada_e_pendências
+#graphify/concept #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor

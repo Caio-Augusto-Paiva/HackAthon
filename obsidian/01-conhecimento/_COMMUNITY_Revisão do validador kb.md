@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.13
 members: 17
 ---
 
 # Revisão do validador kb
 
-**Cohesion:** 0.13 - loosely connected
 **Members:** 17 nodes
 
 ## Members

@@ -11,6 +11,6 @@ tags:
 # Restauracao da sessao a partir do banco (ausente, bloqueia a API)
 
 ## Connections
-- [[Memoria de trabalho]] - `conceptually_related_to` [INFERRED]
+- [[Memória de trabalho da sessão]] - `conceptually_related_to` [INFERRED]
 
 #graphify/concept #graphify/INFERRED #community/Requisitos_e_arquitetura_conceitual

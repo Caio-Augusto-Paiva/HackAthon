@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Contratos e integração localhost"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Contratos_e_integração_localhost
 ---
 
 # Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB
@@ -14,4 +14,4 @@ tags:
 - [[Banco SQLite fora do OneDrive]] - `rationale_for` [EXTRACTED]
 - [[Script rodar.ps1  rodar.sh (execucao em localhost)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost

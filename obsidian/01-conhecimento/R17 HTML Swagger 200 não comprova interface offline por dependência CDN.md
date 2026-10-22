@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Backend ensaiado com TCPDNS externos bloqueados nos processos Python]] - `rationale_for` [EXTRACTED]
+- [[Ensaio humano com Wi-Fi desligado e máquina reserva ainda pendente]] - `references` [EXTRACTED]
 - [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 - [[localhost sem nuvemCDN, fontes locais e SVG inline]] - `semantically_similar_to` [INFERRED]
 

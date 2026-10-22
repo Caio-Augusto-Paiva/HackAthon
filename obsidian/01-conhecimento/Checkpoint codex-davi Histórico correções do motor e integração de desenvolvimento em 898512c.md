@@ -1,11 +1,11 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Processo documental verificável"
+community: "Arquitetura e demonstração web"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Checkpoint codex-davi: Histórico: correções do motor e integração de desenvolvimento em 898512c
@@ -15,4 +15,4 @@ tags:
 - [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
 - [[Decisões verificáveis de motor, base e documentação]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

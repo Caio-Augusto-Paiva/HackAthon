@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.42
 members: 9
 ---
 
 # Assistentes e instruções
 
-**Cohesion:** 0.42 - moderately connected
 **Members:** 9 nodes
 
 ## Members

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Backend e isolamento do motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Backend_e_isolamento_do_motor
 ---
 
 # Host confiavel (TrustedHostMiddleware contra DNS rebinding)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor

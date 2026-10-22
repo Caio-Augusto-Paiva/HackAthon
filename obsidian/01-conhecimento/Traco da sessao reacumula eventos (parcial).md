@@ -11,6 +11,6 @@ tags:
 # Traco da sessao reacumula eventos (parcial)
 
 ## Connections
-- [[Traco de inferencia]] - `conceptually_related_to` [INFERRED]
+- [[Traço de inferência para explicar as conclusões]] - `conceptually_related_to` [INFERRED]
 
 #graphify/concept #graphify/INFERRED #community/Requisitos_e_arquitetura_conceitual

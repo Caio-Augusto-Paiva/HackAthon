@@ -29,6 +29,5 @@ tags:
 - [[Top 4 desde segunda pergunta; porquêcomo e regras do backend]] - `references` [EXTRACTED]
 - [[Valores brutos, 422 preservado e 409 relê sem repetir mutação]] - `references` [EXTRACTED]
 - [[VoltarPUT limitado à navegação atual]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Consulta_web_e_correções

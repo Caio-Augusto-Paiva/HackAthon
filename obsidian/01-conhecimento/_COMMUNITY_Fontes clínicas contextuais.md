@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.15
 members: 17
 ---
 
 # Fontes clínicas contextuais
 
-**Cohesion:** 0.15 - loosely connected
 **Members:** 17 nodes
 
 ## Members
@@ -36,7 +34,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Requisitos e arquitetura conceitual]]
+- 1 edge to [[_COMMUNITY_Requisitos e arquitetura conceitual]]
 
 ## Top bridge nodes
-- [[MSD Vet Manual]] - degree 13, connects to 1 community
+- [[MSD Vet Manual]] - degree 12, connects to 1 community

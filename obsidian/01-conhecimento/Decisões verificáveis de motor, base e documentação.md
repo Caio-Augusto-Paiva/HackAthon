@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/A.md"
 type: "concept"
-community: "Processo documental verificável"
+community: "Arquitetura e demonstração web"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Decisões verificáveis de motor, base e documentação
@@ -16,4 +16,4 @@ tags:
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Papel A registro técnico curado, sem depoimento pessoal atribuído]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

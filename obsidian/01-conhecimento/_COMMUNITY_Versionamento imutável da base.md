@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.53
 members: 6
 ---
 
 # Versionamento imutável da base
 
-**Cohesion:** 0.53 - moderately connected
 **Members:** 6 nodes
 
 ## Members

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "rationale"
-community: "Snapshot e pressupostos do motor"
+community: "Arquitetura e demonstração web"
 location: "L219"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_e_pressupostos_do_motor
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Grupo mamário por max: R-MAS-01/03/05
@@ -21,4 +21,4 @@ tags:
 - [[Riscos CF sem validação, correlação, sem_problema e lacunas da base]] - `references` [EXTRACTED]
 - [[Três camadas estritas e combinação MYCIN racional]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor
+#graphify/rationale #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

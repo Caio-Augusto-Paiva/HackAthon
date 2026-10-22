@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "rationale"
-community: "Snapshot e pressupostos do motor"
+community: "Arquitetura e demonstração web"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_e_pressupostos_do_motor
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # CF e critérios clínicos como suposições a validar
@@ -18,4 +18,4 @@ tags:
 - [[Pendências editor gráfico, licença, telefones e validação clínica]] - `conceptually_related_to` [EXTRACTED]
 - [[Riscos CF sem validação, correlação, sem_problema e lacunas da base]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor
+#graphify/rationale #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

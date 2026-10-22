@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Consulta integrada e pendências"
+community: "Consulta web e correções"
 location: "L5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Consulta_integrada_e_pendências
+  - community/Consulta_web_e_correções
 ---
 
 # Integração implementada: React, motor, v0002, kb, FastAPI e SQLite
@@ -15,4 +15,4 @@ tags:
 - [[Camada web implementada Início, Anamnese e Parecer]] - `references` [EXTRACTED]
 - [[HackAtom anamnese explicável com interface React integrada]] - `documents` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Consulta_integrada_e_pendências
+#graphify/concept #graphify/EXTRACTED #community/Consulta_web_e_correções

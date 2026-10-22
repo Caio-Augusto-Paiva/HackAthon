@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.14
 members: 24
 ---
 
 # Regras e símbolos da v0002
 
-**Cohesion:** 0.14 - loosely connected
 **Members:** 24 nodes
 
 ## Members
@@ -44,22 +42,21 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_Hipocalcemia e mobilidade]]
+- 16 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
 - 14 edges to [[_COMMUNITY_Cetose e início da lactação]]
 - 14 edges to [[_COMMUNITY_Acidose e sinais digestivos]]
-- 14 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
 - 12 edges to [[_COMMUNITY_Sinais térmicos e urgência]]
 - 12 edges to [[_COMMUNITY_Metrite e puerpério]]
 - 9 edges to [[_COMMUNITY_Bandeiras de urgência]]
 - 8 edges to [[_COMMUNITY_Tristeza parasitária bovina]]
-- 3 edges to [[_COMMUNITY_Processo documental verificável]]
-- 3 edges to [[_COMMUNITY_Entrega e manutenção documental]]
-- 2 edges to [[_COMMUNITY_Snapshot e pressupostos do motor]]
-- 1 edge to [[_COMMUNITY_Arquitetura e demonstração web]]
-- 1 edge to [[_COMMUNITY_Consulta integrada e pendências]]
+- 3 edges to [[_COMMUNITY_Arquitetura e demonstração web]]
+- 2 edges to [[_COMMUNITY_Processo documental verificável]]
+- 2 edges to [[_COMMUNITY_Entrega e manutenção documental]]
+- 1 edge to [[_COMMUNITY_Demonstração e troca de modo]]
 
 ## Top bridge nodes
-- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - degree 123, connects to 13 communities
+- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - degree 123, connects to 12 communities
 - [[Triagem 5 producao_leite]] - degree 4, connects to 2 communities
-- [[R-CET-04 cetose (CF 0,85)]] - degree 3, connects to 1 community
+- [[R-MAS-04 mastite (CF 0,4)]] - degree 3, connects to 1 community
 - [[R-CET-05 cetose (CF 0,7)]] - degree 3, connects to 1 community
-- [[R-DAB-03 deslocamento_abomaso (CF 0,9)]] - degree 3, connects to 1 community
+- [[R-URG-08 observar (CF 0,7)]] - degree 3, connects to 1 community
