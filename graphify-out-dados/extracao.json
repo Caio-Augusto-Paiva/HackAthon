@@ -1,0 +1,1773 @@
+{
+  "nodes": [
+    {
+      "id": "sim:apatia",
+      "label": "Apatia",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:apetite",
+      "label": "Apetite",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:bhb_sanguineo",
+      "label": "BHB sanguíneo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:calcio_serico",
+      "label": "Cálcio sérico total",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:carrapatos_historico_recente",
+      "label": "Exposição recente a carrapatos",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:claudicacao",
+      "label": "Claudicação",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:cmt_reagente",
+      "label": "CMT reagente",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:corrimento_fetido",
+      "label": "Corrimento vaginal fétido",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:corrimento_vaginal",
+      "label": "Corrimento vaginal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:decubito",
+      "label": "Decúbito",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:diarreia",
+      "label": "Diarreia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:dias_em_lactacao",
+      "label": "Dias em lactação",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "ficha"
+    },
+    {
+      "id": "sim:dor_flexao_talao",
+      "label": "Dor na região do talão",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:esfregaco_hemoparasitas",
+      "label": "Hemoparasitas no esfregaço",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:extremidades",
+      "label": "Temperatura ao toque das extremidades",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:fezes_aquosas_espuma_graos",
+      "label": "Fezes com espuma e grãos",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:fita_urina_corpos_cetonicos",
+      "label": "Corpos cetônicos na urina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:flanco_esquerdo_afundado",
+      "label": "Flanco esquerdo afundado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:halito_adocicado_acetona",
+      "label": "Hálito adocicado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:leite_alterado",
+      "label": "Alteração visível do leite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:lesao_erosiva_talao_morango",
+      "label": "Lesão característica no talão",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:mucosas_palidas_ou_ictericas",
+      "label": "Mucosas pálidas ou amareladas",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:mudanca_abrupta_concentrado",
+      "label": "Mudança abrupta de concentrado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pescoco_em_s",
+      "label": "Desvio cervical em S",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ph_ruminal",
+      "label": "pH ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ping_metalico_flanco_esquerdo",
+      "label": "Ping no flanco esquerdo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:queda_producao",
+      "label": "Queda de produção de leite",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:recusa_concentrado_come_volumoso",
+      "label": "Recusa seletiva de concentrado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:retencao_placenta",
+      "label": "Histórico de retenção de placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "tipo": "ficha"
+    },
+    {
+      "id": "sim:temperatura_retal",
+      "label": "Temperatura retal",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:teste_caneca_grumos",
+      "label": "Grumos na caneca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ubere_inflamado",
+      "label": "Inflamação do úbere",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:urina_escura",
+      "label": "Urina escura",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:utero_aumentado_palpacao",
+      "label": "Aumento uterino à palpação",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:evidencia_alteracao_leite",
+      "label": "Evidência agrupada de alteração do leite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:febre",
+      "label": "Febre",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:hipotermia",
+      "label": "Hipotermia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:inicio_lactacao",
+      "label": "Inicio lactacao",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:periparto_imediato",
+      "label": "Periparto imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:puerperio",
+      "label": "Puerperio",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:acidose",
+      "label": "Acidose Ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:cetose",
+      "label": "Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:dermatite_digital",
+      "label": "Dermatite Digital Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:deslocamento_abomaso",
+      "label": "Deslocamento de Abomaso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:hipocalcemia",
+      "label": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:mastite",
+      "label": "Mastite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:metrite",
+      "label": "Metrite Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:tpb",
+      "label": "Tristeza Parasitária Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:chamar_agora",
+      "label": "Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "urgencia"
+    },
+    {
+      "id": "sim:observar",
+      "label": "Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "urgencia"
+    },
+    {
+      "id": "sim:sem_problema",
+      "label": "Sem evidência de urgência pelos critérios da base",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "urgencia"
+    },
+    {
+      "id": "regra:R-DER-01",
+      "label": "R-DER-01: SE Dias em lactação ENTÃO Periparto imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-02",
+      "label": "R-DER-02: SE Dias em lactação ENTÃO Puerperio",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-03",
+      "label": "R-DER-03: SE Dias em lactação ENTÃO Inicio lactacao",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-04",
+      "label": "R-DER-04: SE Temperatura retal ENTÃO Febre",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-05",
+      "label": "R-DER-05: SE Temperatura retal ENTÃO Hipotermia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-06",
+      "label": "R-DER-06: SE Temperatura ao toque das extremidades ENTÃO Hipotermia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-07",
+      "label": "R-DER-07: SE Temperatura ao toque das extremidades ENTÃO Febre",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-08",
+      "label": "R-DER-08: SE Temperatura retal ENTÃO Febre",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-09",
+      "label": "R-DER-09: SE Temperatura retal ENTÃO Hipotermia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DER-10",
+      "label": "R-DER-10: SE Temperatura ao toque das extremidades ENTÃO Febre",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MAS-01",
+      "label": "R-MAS-01: SE Alteração visível do leite ENTÃO Evidência agrupada de alteração do leite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MAS-03",
+      "label": "R-MAS-03: SE Grumos na caneca ENTÃO Evidência agrupada de alteração do leite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CET-01",
+      "label": "R-CET-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAB-01",
+      "label": "R-DAB-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HIP-02",
+      "label": "R-HIP-02: SE Periparto imediato E Desvio cervical em S E Hipotermia ENTÃO Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MET-02",
+      "label": "R-MET-02: SE Corrimento vaginal E Puerperio E Febre ENTÃO Metrite Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MET-03",
+      "label": "R-MET-03: SE Puerperio E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ACI-01",
+      "label": "R-ACI-01: SE Diarreia E Apetite ENTÃO Acidose Ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ACI-02",
+      "label": "R-ACI-02: SE Mudança abrupta de concentrado E Diarreia ENTÃO Acidose Ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CET-02",
+      "label": "R-CET-02: SE Inicio lactacao E Hálito adocicado ENTÃO Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CET-03",
+      "label": "R-CET-03: SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAB-02",
+      "label": "R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DD-02",
+      "label": "R-DD-02: SE Claudicação E Dor na região do talão ENTÃO Dermatite Digital Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HIP-01",
+      "label": "R-HIP-01: SE Decúbito E Periparto imediato ENTÃO Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MET-01",
+      "label": "R-MET-01: SE Puerperio E Corrimento vaginal fétido ENTÃO Metrite Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MET-04",
+      "label": "R-MET-04: SE Histórico de retenção de placenta E Puerperio ENTÃO Metrite Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TPB-01",
+      "label": "R-TPB-01: SE Febre E Urina escura ENTÃO Tristeza Parasitária Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TPB-03",
+      "label": "R-TPB-03: SE Exposição recente a carrapatos E Febre ENTÃO Tristeza Parasitária Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ACI-03",
+      "label": "R-ACI-03: SE Fezes com espuma e grãos ENTÃO Acidose Ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ACI-04",
+      "label": "R-ACI-04: SE pH ruminal ENTÃO Acidose Ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CET-04",
+      "label": "R-CET-04: SE BHB sanguíneo ENTÃO Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CET-05",
+      "label": "R-CET-05: SE Corpos cetônicos na urina ENTÃO Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAB-03",
+      "label": "R-DAB-03: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DD-01",
+      "label": "R-DD-01: SE Claudicação ENTÃO Dermatite Digital Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DD-03",
+      "label": "R-DD-03: SE Lesão característica no talão ENTÃO Dermatite Digital Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HIP-03",
+      "label": "R-HIP-03: SE Cálcio sérico total ENTÃO Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HIP-04",
+      "label": "R-HIP-04: SE Febre ENTÃO Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MAS-02",
+      "label": "R-MAS-02: SE Inflamação do úbere ENTÃO Mastite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MAS-04",
+      "label": "R-MAS-04: SE CMT reagente ENTÃO Mastite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-MAS-05",
+      "label": "R-MAS-05: SE Evidência agrupada de alteração do leite ENTÃO Mastite",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TPB-02",
+      "label": "R-TPB-02: SE Mucosas pálidas ou amareladas ENTÃO Tristeza Parasitária Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TPB-04",
+      "label": "R-TPB-04: SE Hemoparasitas no esfregaço ENTÃO Tristeza Parasitária Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BV-05",
+      "label": "R-BV-05: SE Inflamação do úbere E Febre E Apatia ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "bandeira_vermelha"
+    },
+    {
+      "id": "regra:R-BV-03",
+      "label": "R-BV-03: SE Apetite E Apatia ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "bandeira_vermelha"
+    },
+    {
+      "id": "regra:R-BV-04",
+      "label": "R-BV-04: SE Hipotermia E Apatia ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "bandeira_vermelha"
+    },
+    {
+      "id": "regra:R-BV-01",
+      "label": "R-BV-01: SE Decúbito ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "bandeira_vermelha"
+    },
+    {
+      "id": "regra:R-BV-02",
+      "label": "R-BV-02: SE Urina escura ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "bandeira_vermelha"
+    },
+    {
+      "id": "regra:R-BV-06",
+      "label": "R-BV-06: SE Temperatura retal ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "classe": "bandeira_vermelha"
+    },
+    {
+      "id": "regra:R-URG-01",
+      "label": "R-URG-01: SE Hipocalcemia Puerperal ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-02",
+      "label": "R-URG-02: SE Tristeza Parasitária Bovina ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-03",
+      "label": "R-URG-03: SE Deslocamento de Abomaso ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-04",
+      "label": "R-URG-04: SE Metrite Puerperal ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-05",
+      "label": "R-URG-05: SE Mastite ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-06",
+      "label": "R-URG-06: SE Cetose / Hipercetonemia ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-07",
+      "label": "R-URG-07: SE Acidose Ruminal ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-URG-08",
+      "label": "R-URG-08: SE Dermatite Digital Bovina ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "classe": "urgencia"
+    }
+  ],
+  "edges": [
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-DER-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-DER-01",
+      "target": "sim:periparto_imediato",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-DER-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "regra:R-DER-02",
+      "target": "sim:puerperio",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-DER-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-DER-03",
+      "target": "sim:inicio_lactacao",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:temperatura_retal",
+      "target": "regra:R-DER-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-DER-04",
+      "target": "sim:febre",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.95
+    },
+    {
+      "source": "sim:temperatura_retal",
+      "target": "regra:R-DER-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-DER-05",
+      "target": "sim:hipotermia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:extremidades",
+      "target": "regra:R-DER-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-DER-06",
+      "target": "sim:hipotermia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:extremidades",
+      "target": "regra:R-DER-07",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-DER-07",
+      "target": "sim:febre",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.45
+    },
+    {
+      "source": "sim:temperatura_retal",
+      "target": "regra:R-DER-08",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-DER-08",
+      "target": "sim:febre",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": -0.9
+    },
+    {
+      "source": "sim:temperatura_retal",
+      "target": "regra:R-DER-09",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-DER-09",
+      "target": "sim:hipotermia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": -0.9
+    },
+    {
+      "source": "sim:extremidades",
+      "target": "regra:R-DER-10",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-DER-10",
+      "target": "sim:febre",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:leite_alterado",
+      "target": "regra:R-MAS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "regra:R-MAS-01",
+      "target": "sim:evidencia_alteracao_leite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:teste_caneca_grumos",
+      "target": "regra:R-MAS-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "regra:R-MAS-03",
+      "target": "sim:evidencia_alteracao_leite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "cf": 0.65
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-CET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-CET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-CET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CET-01",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-DAB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-DAB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "regra:R-DAB-01",
+      "target": "sim:deslocamento_abomaso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:periparto_imediato",
+      "target": "regra:R-HIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:pescoco_em_s",
+      "target": "regra:R-HIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:hipotermia",
+      "target": "regra:R-HIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-02",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-MET-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-MET-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-MET-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "regra:R-MET-02",
+      "target": "sim:metrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "cf": 0.45
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-MET-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:utero_aumentado_palpacao",
+      "target": "regra:R-MET-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-MET-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "regra:R-MET-03",
+      "target": "sim:metrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "cf": 0.35
+    },
+    {
+      "source": "sim:diarreia",
+      "target": "regra:R-ACI-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-ACI-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-ACI-01",
+      "target": "sim:acidose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "cf": 0.35
+    },
+    {
+      "source": "sim:mudanca_abrupta_concentrado",
+      "target": "regra:R-ACI-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "sim:diarreia",
+      "target": "regra:R-ACI-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-ACI-02",
+      "target": "sim:acidose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "cf": 0.55
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-CET-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "sim:halito_adocicado_acetona",
+      "target": "regra:R-CET-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CET-02",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.5
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-CET-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "sim:recusa_concentrado_come_volumoso",
+      "target": "regra:R-CET-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CET-03",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.45
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-DAB-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "sim:flanco_esquerdo_afundado",
+      "target": "regra:R-DAB-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "regra:R-DAB-02",
+      "target": "sim:deslocamento_abomaso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-DD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "sim:dor_flexao_talao",
+      "target": "regra:R-DD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "regra:R-DD-02",
+      "target": "sim:dermatite_digital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "cf": 0.5
+    },
+    {
+      "source": "sim:decubito",
+      "target": "regra:R-HIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:periparto_imediato",
+      "target": "regra:R-HIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-01",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.65
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-MET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:corrimento_fetido",
+      "target": "regra:R-MET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "regra:R-MET-01",
+      "target": "sim:metrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "cf": 0.75
+    },
+    {
+      "source": "sim:retencao_placenta",
+      "target": "regra:R-MET-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-MET-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "regra:R-MET-04",
+      "target": "sim:metrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "cf": 0.25
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-TPB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "sim:urina_escura",
+      "target": "regra:R-TPB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "regra:R-TPB-01",
+      "target": "sim:tpb",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:carrapatos_historico_recente",
+      "target": "regra:R-TPB-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-TPB-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "regra:R-TPB-03",
+      "target": "sim:tpb",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "cf": 0.35
+    },
+    {
+      "source": "sim:fezes_aquosas_espuma_graos",
+      "target": "regra:R-ACI-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-ACI-03",
+      "target": "sim:acidose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "cf": 0.5
+    },
+    {
+      "source": "sim:ph_ruminal",
+      "target": "regra:R-ACI-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-ACI-04",
+      "target": "sim:acidose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "cf": 0.88
+    },
+    {
+      "source": "sim:bhb_sanguineo",
+      "target": "regra:R-CET-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CET-04",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:fita_urina_corpos_cetonicos",
+      "target": "regra:R-CET-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CET-05",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:ping_metalico_flanco_esquerdo",
+      "target": "regra:R-DAB-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "regra:R-DAB-03",
+      "target": "sim:deslocamento_abomaso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-DD-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "regra:R-DD-01",
+      "target": "sim:dermatite_digital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:lesao_erosiva_talao_morango",
+      "target": "regra:R-DD-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "regra:R-DD-03",
+      "target": "sim:dermatite_digital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:calcio_serico",
+      "target": "regra:R-HIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-03",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-HIP-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-04",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:ubere_inflamado",
+      "target": "regra:R-MAS-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "regra:R-MAS-02",
+      "target": "sim:mastite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "cf": 0.5
+    },
+    {
+      "source": "sim:cmt_reagente",
+      "target": "regra:R-MAS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "regra:R-MAS-04",
+      "target": "sim:mastite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:evidencia_alteracao_leite",
+      "target": "regra:R-MAS-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "regra:R-MAS-05",
+      "target": "sim:mastite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:mucosas_palidas_ou_ictericas",
+      "target": "regra:R-TPB-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "regra:R-TPB-02",
+      "target": "sim:tpb",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:esfregaco_hemoparasitas",
+      "target": "regra:R-TPB-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "regra:R-TPB-04",
+      "target": "sim:tpb",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:ubere_inflamado",
+      "target": "regra:R-BV-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-BV-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:apatia",
+      "target": "regra:R-BV-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-BV-05",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-BV-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:apatia",
+      "target": "regra:R-BV-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-BV-03",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:hipotermia",
+      "target": "regra:R-BV-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:apatia",
+      "target": "regra:R-BV-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-BV-04",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:decubito",
+      "target": "regra:R-BV-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-BV-01",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:urina_escura",
+      "target": "regra:R-BV-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-BV-02",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:temperatura_retal",
+      "target": "regra:R-BV-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "regra:R-BV-06",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:hipocalcemia",
+      "target": "regra:R-URG-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-URG-01",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:tpb",
+      "target": "regra:R-URG-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "source": "regra:R-URG-02",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:deslocamento_abomaso",
+      "target": "regra:R-URG-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "regra:R-URG-03",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:metrite",
+      "target": "regra:R-URG-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "regra:R-URG-04",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:mastite",
+      "target": "regra:R-URG-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "regra:R-URG-05",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/mastite.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:cetose",
+      "target": "regra:R-URG-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-URG-06",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:acidose",
+      "target": "regra:R-URG-07",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-URG-07",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:dermatite_digital",
+      "target": "regra:R-URG-08",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "regra:R-URG-08",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "cf": 0.7
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

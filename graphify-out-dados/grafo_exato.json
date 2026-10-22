@@ -1,0 +1,3299 @@
+{
+  "versao": "v0002",
+  "meta": {
+    "versao": "v0002",
+    "pai": "v0001",
+    "autor": "equipe",
+    "data": "2026-10-22",
+    "nota": "Domínios numéricos limitados: máximo, mínimo e casas decimais para respostas digitadas.",
+    "limiares": {
+      "descarte": -0.2,
+      "premissa": 0.2,
+      "hipotese_relevante": 0.35,
+      "exaustao": 0.6,
+      "potencial": 0.7,
+      "confirmacao": 0.8,
+      "bloco_principal": 0.5,
+      "bloco_diferencial": 0.2
+    },
+    "limite_dinamico": {
+      "produtor": 12,
+      "veterinario": 25
+    },
+    "triagem": [
+      {
+        "id": "dias_em_lactacao",
+        "selecao": "unica",
+        "simbolos": [
+          "dias_em_lactacao"
+        ],
+        "texto": {
+          "produtor": "Há quantos dias ocorreu o último parto?",
+          "veterinario": "Há quantos dias ocorreu o último parto?"
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "estado_termico",
+        "selecao": "unica",
+        "simbolos": [
+          "extremidades",
+          "temperatura_retal"
+        ],
+        "texto": {
+          "produtor": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
+          "veterinario": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C."
+        },
+        "opcoes": {},
+        "simbolos_por_modo": {
+          "produtor": [
+            "extremidades"
+          ],
+          "veterinario": [
+            "temperatura_retal"
+          ]
+        }
+      },
+      {
+        "id": "atitude_locomocao",
+        "selecao": "multipla",
+        "simbolos": [
+          "apatia",
+          "claudicacao",
+          "decubito"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "apetite_ruminacao",
+        "selecao": "unica",
+        "simbolos": [
+          "apetite"
+        ],
+        "texto": {
+          "produtor": "Informe o apetite: normal, reduzido ou ausente.",
+          "veterinario": "Informe o apetite: normal, reduzido ou ausente."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "producao_leite",
+        "selecao": "multipla",
+        "simbolos": [
+          "queda_producao",
+          "leite_alterado",
+          "ubere_inflamado"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "excrecoes",
+        "selecao": "multipla",
+        "simbolos": [
+          "diarreia",
+          "corrimento_vaginal",
+          "urina_escura"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      }
+    ]
+  },
+  "nos": [
+    {
+      "id": "apatia",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "apatia",
+        "tipo": "pergunta",
+        "nome": "Apatia",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está abatida ou pouco responsiva?",
+          "veterinario": "Animal apático ou com resposta reduzida ao ambiente?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a apatia.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a apatia."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "apetite",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "apetite",
+        "tipo": "pergunta",
+        "nome": "Apetite",
+        "dominio": {
+          "tipo": "categorico",
+          "valores": [
+            "normal",
+            "reduzido",
+            "ausente"
+          ]
+        },
+        "pergunta": {
+          "produtor": "Como está o apetite: normal, reduzido ou ausente?",
+          "veterinario": "Apetite normal, reduzido ou ausente?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a apetite.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a apetite."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "bhb_sanguineo",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "bhb_sanguineo",
+        "tipo": "pergunta",
+        "nome": "BHB sanguíneo",
+        "dominio": {
+          "tipo": "numerico",
+          "min": 0.0,
+          "max": 20.0,
+          "unidade": "mmol/L",
+          "casas_decimais": 2
+        },
+        "pergunta": {
+          "veterinario": "Qual é a concentração sanguínea de BHB, em mmol/L?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a bhb sanguíneo."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "calcio_serico",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "calcio_serico",
+        "tipo": "pergunta",
+        "nome": "Cálcio sérico total",
+        "dominio": {
+          "tipo": "numerico",
+          "min": 0.0,
+          "max": 20.0,
+          "unidade": "mmol/L",
+          "casas_decimais": 2
+        },
+        "pergunta": {
+          "veterinario": "Qual é o cálcio sérico total, em mmol/L?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a cálcio sérico total."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "carrapatos_historico_recente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "carrapatos_historico_recente",
+        "tipo": "pergunta",
+        "nome": "Exposição recente a carrapatos",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Foram vistos carrapatos na vaca recentemente?",
+          "veterinario": "Histórico recente de exposição a carrapatos?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a exposição recente a carrapatos.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a exposição recente a carrapatos."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "claudicacao",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "claudicacao",
+        "tipo": "pergunta",
+        "nome": "Claudicação",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está mancando ou poupando uma pata?",
+          "veterinario": "Presença de claudicação?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a claudicação.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a claudicação."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "cmt_reagente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "cmt_reagente",
+        "tipo": "pergunta",
+        "nome": "CMT reagente",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "O CMT foi reagente conforme a leitura do teste?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a cmt reagente."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "corrimento_fetido",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "corrimento_fetido",
+        "tipo": "pergunta",
+        "nome": "Corrimento vaginal fétido",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A secreção da vulva tem cheiro forte e desagradável?",
+          "veterinario": "Corrimento vaginal fétido observado?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "corrimento_vaginal",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "corrimento_vaginal",
+        "tipo": "pergunta",
+        "nome": "Corrimento vaginal",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Há saída de secreção anormal pela vulva?",
+          "veterinario": "Presença de corrimento vaginal anormal?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "decubito",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "decubito",
+        "tipo": "pergunta",
+        "nome": "Decúbito",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está caída e não consegue se levantar?",
+          "veterinario": "Animal em decúbito, incapaz de se levantar?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a decúbito.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a decúbito."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "diarreia",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "diarreia",
+        "tipo": "pergunta",
+        "nome": "Diarreia",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está com diarreia?",
+          "veterinario": "Presença de diarreia?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a diarreia.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a diarreia."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "dias_em_lactacao",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "dias_em_lactacao",
+        "tipo": "ficha",
+        "nome": "Dias em lactação",
+        "dominio": {
+          "tipo": "numerico",
+          "min": 0.0,
+          "max": 1000.0,
+          "unidade": "dias",
+          "casas_decimais": 0
+        },
+        "pergunta": {
+          "produtor": "Há quantos dias a vaca pariu?",
+          "veterinario": "Dias transcorridos desde o último parto?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a dias em lactação.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a dias em lactação."
+        },
+        "campo_ficha": "dias_em_lactacao",
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "dor_flexao_talao",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "dor_flexao_talao",
+        "tipo": "pergunta",
+        "nome": "Dor na região do talão",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca demonstra dor na região do talão ao se movimentar?",
+          "veterinario": "Dor localizada na região dos bulbos do talão?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a dor na região do talão.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a dor na região do talão."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "esfregaco_hemoparasitas",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "esfregaco_hemoparasitas",
+        "tipo": "pergunta",
+        "nome": "Hemoparasitas no esfregaço",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a hemoparasitas no esfregaço."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "extremidades",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "extremidades",
+        "tipo": "pergunta",
+        "nome": "Temperatura ao toque das extremidades",
+        "dominio": {
+          "tipo": "categorico",
+          "valores": [
+            "normal",
+            "quente",
+            "fria"
+          ]
+        },
+        "pergunta": {
+          "produtor": "As orelhas e as patas parecem normais, quentes ou frias ao toque?",
+          "veterinario": "Extremidades normais, quentes ou frias à palpação?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "fezes_aquosas_espuma_graos",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "fezes_aquosas_espuma_graos",
+        "tipo": "pergunta",
+        "nome": "Fezes com espuma e grãos",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+          "veterinario": "Fezes aquosas, com espuma ou grãos não digeridos?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "fita_urina_corpos_cetonicos",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "fita_urina_corpos_cetonicos",
+        "tipo": "pergunta",
+        "nome": "Corpos cetônicos na urina",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Teste urinário para corpos cetônicos positivo, lido no tempo indicado pelo fabricante?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a corpos cetônicos na urina."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "flanco_esquerdo_afundado",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "flanco_esquerdo_afundado",
+        "tipo": "pergunta",
+        "nome": "Flanco esquerdo afundado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A região do flanco esquerdo parece mais afundada que o habitual?",
+          "veterinario": "Fossa paralombar esquerda retraída?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "halito_adocicado_acetona",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "halito_adocicado_acetona",
+        "tipo": "pergunta",
+        "nome": "Hálito adocicado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+          "veterinario": "Odor adocicado ou de acetona no hálito?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a hálito adocicado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "leite_alterado",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "leite_alterado",
+        "tipo": "pergunta",
+        "nome": "Alteração visível do leite",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O leite apresenta grumos, sangue ou aspecto aguado?",
+          "veterinario": "Alteração macroscópica do leite?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a alteração visível do leite.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a alteração visível do leite."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "lesao_erosiva_talao_morango",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "lesao_erosiva_talao_morango",
+        "tipo": "pergunta",
+        "nome": "Lesão característica no talão",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a lesão característica no talão."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "mucosas_palidas_ou_ictericas",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "mucosas_palidas_ou_ictericas",
+        "tipo": "pergunta",
+        "nome": "Mucosas pálidas ou amareladas",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+          "veterinario": "Mucosas pálidas ou ictéricas à inspeção?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "mudanca_abrupta_concentrado",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "mudanca_abrupta_concentrado",
+        "tipo": "pergunta",
+        "nome": "Mudança abrupta de concentrado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Houve aumento brusco de ração ou acesso excessivo a grãos?",
+          "veterinario": "Mudança abrupta de concentrado ou acesso excessivo a grãos?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a mudança abrupta de concentrado.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a mudança abrupta de concentrado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "pescoco_em_s",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "pescoco_em_s",
+        "tipo": "pergunta",
+        "nome": "Desvio cervical em S",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca mantém o pescoço curvado em forma de S?",
+          "veterinario": "Desvio cervical em S observado?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a desvio cervical em s.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a desvio cervical em s."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "ph_ruminal",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "ph_ruminal",
+        "tipo": "pergunta",
+        "nome": "pH ruminal",
+        "dominio": {
+          "tipo": "numerico",
+          "min": 0.0,
+          "max": 14.0,
+          "unidade": "pH",
+          "casas_decimais": 1
+        },
+        "pergunta": {
+          "veterinario": "Qual é o pH ruminal medido, considerando método e momento da coleta?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a ph ruminal."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "ping_metalico_flanco_esquerdo",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "ping_metalico_flanco_esquerdo",
+        "tipo": "pergunta",
+        "nome": "Ping no flanco esquerdo",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Ping metálico no flanco esquerdo à percussão e auscultação simultâneas?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco esquerdo."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "queda_producao",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "queda_producao",
+        "tipo": "pergunta",
+        "nome": "Queda de produção de leite",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A produção de leite caiu em relação ao habitual?",
+          "veterinario": "Queda da produção em relação ao padrão individual?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a queda de produção de leite.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a queda de produção de leite."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "recusa_concentrado_come_volumoso",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "recusa_concentrado_come_volumoso",
+        "tipo": "pergunta",
+        "nome": "Recusa seletiva de concentrado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca recusa a ração, mas ainda come capim ou feno?",
+          "veterinario": "Recusa de concentrado com manutenção da ingestão de volumoso?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "retencao_placenta",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "retencao_placenta",
+        "tipo": "ficha",
+        "nome": "Histórico de retenção de placenta",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Houve retenção de placenta neste parto?",
+          "veterinario": "Retenção de membranas fetais após o último parto?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
+        },
+        "campo_ficha": "retencao_placenta",
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "temperatura_retal",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "temperatura_retal",
+        "tipo": "pergunta",
+        "nome": "Temperatura retal",
+        "dominio": {
+          "tipo": "numerico",
+          "min": 30.0,
+          "max": 45.0,
+          "unidade": "°C",
+          "casas_decimais": 1
+        },
+        "pergunta": {
+          "veterinario": "Qual é a temperatura retal medida em °C?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a temperatura retal."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "teste_caneca_grumos",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "teste_caneca_grumos",
+        "tipo": "pergunta",
+        "nome": "Grumos na caneca",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O teste da caneca mostrou grumos no leite?",
+          "veterinario": "Grumos detectados no teste da caneca?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a grumos na caneca."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "ubere_inflamado",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "ubere_inflamado",
+        "tipo": "pergunta",
+        "nome": "Inflamação do úbere",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O úbere está inchado, quente ou dolorido?",
+          "veterinario": "Há edema, calor ou dor no úbere?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a inflamação do úbere.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a inflamação do úbere."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "urina_escura",
+      "tipo_no": "simbolo",
+      "triagem": true,
+      "dados": {
+        "id": "urina_escura",
+        "tipo": "pergunta",
+        "nome": "Urina escura",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A urina está avermelhada ou escura como café?",
+          "veterinario": "Urina avermelhada ou castanha observada?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a urina escura.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a urina escura."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "utero_aumentado_palpacao",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "utero_aumentado_palpacao",
+        "tipo": "pergunta",
+        "nome": "Aumento uterino à palpação",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Útero aumentado à palpação retal, considerado o período após o parto?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a aumento uterino à palpação."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "evidencia_alteracao_leite",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "evidencia_alteracao_leite",
+        "tipo": "derivado",
+        "nome": "Evidência agrupada de alteração do leite",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "max",
+        "nota": null
+      }
+    },
+    {
+      "id": "febre",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "febre",
+        "tipo": "derivado",
+        "nome": "Febre",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "hipotermia",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "hipotermia",
+        "tipo": "derivado",
+        "nome": "Hipotermia",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "inicio_lactacao",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "inicio_lactacao",
+        "tipo": "derivado",
+        "nome": "Inicio lactacao",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "periparto_imediato",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "periparto_imediato",
+        "tipo": "derivado",
+        "nome": "Periparto imediato",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "puerperio",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "puerperio",
+        "tipo": "derivado",
+        "nome": "Puerperio",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "acidose",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "acidose",
+        "tipo": "doenca",
+        "nome": "Acidose Ruminal",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "cetose",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "cetose",
+        "tipo": "doenca",
+        "nome": "Cetose / Hipercetonemia",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "dermatite_digital",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "dermatite_digital",
+        "tipo": "doenca",
+        "nome": "Dermatite Digital Bovina",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "baixa",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "deslocamento_abomaso",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "deslocamento_abomaso",
+        "tipo": "doenca",
+        "nome": "Deslocamento de Abomaso",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "hipocalcemia",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "hipocalcemia",
+        "tipo": "doenca",
+        "nome": "Hipocalcemia Puerperal",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "mastite",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "mastite",
+        "tipo": "doenca",
+        "nome": "Mastite",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "metrite",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "metrite",
+        "tipo": "doenca",
+        "nome": "Metrite Puerperal",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "tpb",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "tpb",
+        "tipo": "doenca",
+        "nome": "Tristeza Parasitária Bovina",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "chamar_agora",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "chamar_agora",
+        "tipo": "urgencia",
+        "nome": "Atendimento Veterinário Imediato",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "observar",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "observar",
+        "tipo": "urgencia",
+        "nome": "Monitoramento Clínico Contínuo",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "sem_problema",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "sem_problema",
+        "tipo": "urgencia",
+        "nome": "Sem evidência de urgência pelos critérios da base",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null
+      }
+    },
+    {
+      "id": "R-DER-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Janela padrão de risco para distúrbios puerperais agudos imediatos."
+      }
+    },
+    {
+      "id": "R-DER-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Janela clínica padronizada de puerpério e involução uterina primária."
+      }
+    },
+    {
+      "id": "R-DER-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Janela de seis semanas adotada pela especificação do projeto; não exclui doença fora desse período."
+      }
+    },
+    {
+      "id": "R-DER-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Temperatura no corte operacional de febre; o contexto clínico e ambiental permanece necessário."
+      }
+    },
+    {
+      "id": "R-DER-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Temperatura abaixo do corte operacional de hipotermia; não identifica sua causa."
+      }
+    },
+    {
+      "id": "R-DER-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Extremidades frias são um indício indireto, de menor confiança, de hipotermia ou comprometimento circulatório."
+      }
+    },
+    {
+      "id": "R-DER-07",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-07",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Calor periférico percebido ao toque é um indício indireto de febre; não substitui termometria."
+      }
+    },
+    {
+      "id": "R-DER-08",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-08",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Medição abaixo do corte operacional de febre fornece evidência contrária; não exclui infecção."
+      }
+    },
+    {
+      "id": "R-DER-09",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-09",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Medição acima do corte operacional fornece evidência contrária à hipotermia central; extremidades frias podem ter outras causas."
+      }
+    },
+    {
+      "id": "R-DER-10",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DER-10",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Extremidades percebidas como normais são evidência contrária fraca à febre; não substituem termometria."
+      }
+    },
+    {
+      "id": "R-MAS-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MAS-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Alteração macroscópica do leite alimenta o grupo de evidência mamária compartilhado com a caneca."
+      }
+    },
+    {
+      "id": "R-MAS-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MAS-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Grumos na caneca alimentam o mesmo grupo da alteração visual do leite, evitando contagem duplicada."
+      }
+    },
+    {
+      "id": "R-CET-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CET-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Hiporexia e queda de produção no início da lactação são sinais inespecíficos; outras doenças podem coexistir."
+      }
+    },
+    {
+      "id": "R-DAB-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAB-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
+      }
+    },
+    {
+      "id": "R-HIP-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HIP-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Perda do tônus cervical e hipotermia periférica sustentam fase parética clínica."
+      }
+    },
+    {
+      "id": "R-MET-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MET-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Corrimento inespecífico somado a febre no puerpério sugere complicação infecciosa uterina."
+      }
+    },
+    {
+      "id": "R-MET-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MET-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aumento uterino no puerpério recebe apoio apenas quando há corrimento vaginal anormal; tamanho isolado não confirma infecção."
+      }
+    },
+    {
+      "id": "R-ACI-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ACI-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Hiporexia com fezes diarreicas sugere distúrbio fermentativo gastrointestinal."
+      }
+    },
+    {
+      "id": "R-ACI-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ACI-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Sobrecarga alimentar de grãos associada à diarreia aponta fermentação ruminal acelerada."
+      }
+    },
+    {
+      "id": "R-CET-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CET-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Relato de odor de acetona pode apoiar a hipótese, mas é subjetivo e requer confirmação."
+      }
+    },
+    {
+      "id": "R-CET-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CET-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Recusa seletiva de concentrado é um achado inespecífico e não confirma cetose isoladamente."
+      }
+    },
+    {
+      "id": "R-DAB-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAB-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
+      }
+    },
+    {
+      "id": "R-DD-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DD-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Dor no talão com claudicação localiza o problema, mas não substitui inspeção de lesão característica."
+      }
+    },
+    {
+      "id": "R-HIP-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HIP-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Vaca caída nas primeiras 72 horas pós-parto sugere paresia por hipocalcemia puerperal."
+      }
+    },
+    {
+      "id": "R-MET-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MET-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia."
+      }
+    },
+    {
+      "id": "R-MET-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MET-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Retenção de membranas fetais é fator de risco epidemiológico para infecção ascendente."
+      }
+    },
+    {
+      "id": "R-TPB-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TPB-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+        "status": "suposicao_a_validar",
+        "nota": "Combinação de febre aguda e hemoglobinúria por hemólise intravascular típica de babesiose."
+      }
+    },
+    {
+      "id": "R-TPB-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TPB-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+        "status": "suposicao_a_validar",
+        "nota": "Exposição ao vetor carrapato combinada com febre é indicativo epidemiológico inicial."
+      }
+    },
+    {
+      "id": "R-ACI-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ACI-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Fezes aquosas, espuma e grãos não digeridos apoiam distúrbio digestivo, sem confirmar a etiologia."
+      }
+    },
+    {
+      "id": "R-ACI-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ACI-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "pH ruminal abaixo de 5,5 apoia acidificação ruminal conforme método, horário da coleta e quadro clínico; não confirma sozinho acidose sistêmica nem distingue apresentação aguda de subaguda."
+      }
+    },
+    {
+      "id": "R-CET-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CET-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "BHB sanguíneo de pelo menos 1,2 mmol/L é compatível com hipercetonemia; sinais adicionais são necessários para caracterizar cetose clínica."
+      }
+    },
+    {
+      "id": "R-CET-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CET-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica."
+      }
+    },
+    {
+      "id": "R-DAB-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAB-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo."
+      }
+    },
+    {
+      "id": "R-DD-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DD-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Claudicação é inespecífica e pode decorrer de várias doenças locomotoras."
+      }
+    },
+    {
+      "id": "R-DD-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DD-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Lesão ulcerativa circunscrita e granulomatosa no espaço interdigital/talão com aspecto de framboesa/morango."
+      }
+    },
+    {
+      "id": "R-HIP-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HIP-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Cálcio sérico total < 1,5 mmol/L (ou < 6,0 mg/dL) confirma hipocalcemia bioquímica acentuada."
+      }
+    },
+    {
+      "id": "R-HIP-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HIP-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Paresia puerperal clássica é afebril; presença de pirexia enfraquece a hipótese primária."
+      }
+    },
+    {
+      "id": "R-MAS-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MAS-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Edema, calor ou dor no úbere sustentam inflamação mamária; não identificam isoladamente o agente causal."
+      }
+    },
+    {
+      "id": "R-MAS-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MAS-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "CMT reagente indica aumento de células somáticas e sustenta inflamação; não diferencia sozinho mastite clínica de subclínica."
+      }
+    },
+    {
+      "id": "R-MAS-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-MAS-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Propaga a maior evidência de alteração do leite sem somar novamente o resultado da caneca. A multiplicação por 0,99 evita peso unitário fora do contrato."
+      }
+    },
+    {
+      "id": "R-TPB-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TPB-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Palidez ou icterícia mantêm TPB entre as hipóteses mesmo sem febre na medição atual; não identificam a causa da anemia ou icterícia."
+      }
+    },
+    {
+      "id": "R-TPB-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TPB-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+        "status": "suposicao_a_validar",
+        "nota": "Esfregaço compatível sustenta infecção por hemoparasitas, mesmo sem febre atual; não distingue sozinho doença ativa de estado de portador."
+      }
+    },
+    {
+      "id": "R-BV-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BV-05",
+        "classe": "bandeira_vermelha",
+        "prioridade": 100,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Alteração inflamatória do úbere com febre e apatia sugere comprometimento sistêmico e atende ao critério de alerta."
+      }
+    },
+    {
+      "id": "R-BV-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BV-03",
+        "classe": "bandeira_vermelha",
+        "prioridade": 100,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Ausência de apetite associada à apatia atende ao critério de alerta do projeto."
+      }
+    },
+    {
+      "id": "R-BV-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BV-04",
+        "classe": "bandeira_vermelha",
+        "prioridade": 100,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Evidência de hipotermia com apatia atende ao critério de alerta do projeto; não confirma choque."
+      }
+    },
+    {
+      "id": "R-BV-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BV-01",
+        "classe": "bandeira_vermelha",
+        "prioridade": 100,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Incapacidade de se levantar exige avaliação veterinária imediata, independentemente da hipótese causal."
+      }
+    },
+    {
+      "id": "R-BV-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BV-02",
+        "classe": "bandeira_vermelha",
+        "prioridade": 100,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Urina escura é sinal de alerta adotado pelo projeto; a cor isolada não identifica hemoglobinúria nem sua causa."
+      }
+    },
+    {
+      "id": "R-BV-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BV-06",
+        "classe": "bandeira_vermelha",
+        "prioridade": 100,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Temperatura medida de pelo menos 41 °C atende ao corte de alerta do projeto; não identifica a causa."
+      }
+    },
+    {
+      "id": "R-URG-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-01",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de hipocalcemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-02",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de tpb é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-03",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-04",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de metrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-05",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de mastite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-06",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de cetose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-07",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-07",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de acidose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-URG-08",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-08",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de dermatite_digital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    }
+  ],
+  "arestas": [
+    {
+      "id": "R-DER-01:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-DER-01",
+      "ordem": 0,
+      "op": "≤",
+      "valor": 3.0,
+      "negado": false
+    },
+    {
+      "id": "R-DER-01:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-01",
+      "destino": "periparto_imediato",
+      "cf": 0.99
+    },
+    {
+      "id": "R-DER-02:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-DER-02",
+      "ordem": 0,
+      "op": "≤",
+      "valor": 21.0,
+      "negado": false
+    },
+    {
+      "id": "R-DER-02:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-02",
+      "destino": "puerperio",
+      "cf": 0.99
+    },
+    {
+      "id": "R-DER-03:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-DER-03",
+      "ordem": 0,
+      "op": "≤",
+      "valor": 42.0,
+      "negado": false
+    },
+    {
+      "id": "R-DER-03:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-03",
+      "destino": "inicio_lactacao",
+      "cf": 0.99
+    },
+    {
+      "id": "R-DER-04:se:0",
+      "papel": "condicao",
+      "origem": "temperatura_retal",
+      "destino": "R-DER-04",
+      "ordem": 0,
+      "op": "≥",
+      "valor": 39.5,
+      "negado": false
+    },
+    {
+      "id": "R-DER-04:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-04",
+      "destino": "febre",
+      "cf": 0.95
+    },
+    {
+      "id": "R-DER-05:se:0",
+      "papel": "condicao",
+      "origem": "temperatura_retal",
+      "destino": "R-DER-05",
+      "ordem": 0,
+      "op": "<",
+      "valor": 38.0,
+      "negado": false
+    },
+    {
+      "id": "R-DER-05:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-05",
+      "destino": "hipotermia",
+      "cf": 0.85
+    },
+    {
+      "id": "R-DER-06:se:0",
+      "papel": "condicao",
+      "origem": "extremidades",
+      "destino": "R-DER-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": "fria",
+      "negado": false
+    },
+    {
+      "id": "R-DER-06:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-06",
+      "destino": "hipotermia",
+      "cf": 0.6
+    },
+    {
+      "id": "R-DER-07:se:0",
+      "papel": "condicao",
+      "origem": "extremidades",
+      "destino": "R-DER-07",
+      "ordem": 0,
+      "op": "=",
+      "valor": "quente",
+      "negado": false
+    },
+    {
+      "id": "R-DER-07:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-07",
+      "destino": "febre",
+      "cf": 0.45
+    },
+    {
+      "id": "R-DER-08:se:0",
+      "papel": "condicao",
+      "origem": "temperatura_retal",
+      "destino": "R-DER-08",
+      "ordem": 0,
+      "op": "<",
+      "valor": 39.5,
+      "negado": false
+    },
+    {
+      "id": "R-DER-08:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-08",
+      "destino": "febre",
+      "cf": -0.9
+    },
+    {
+      "id": "R-DER-09:se:0",
+      "papel": "condicao",
+      "origem": "temperatura_retal",
+      "destino": "R-DER-09",
+      "ordem": 0,
+      "op": "≥",
+      "valor": 38.0,
+      "negado": false
+    },
+    {
+      "id": "R-DER-09:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-09",
+      "destino": "hipotermia",
+      "cf": -0.9
+    },
+    {
+      "id": "R-DER-10:se:0",
+      "papel": "condicao",
+      "origem": "extremidades",
+      "destino": "R-DER-10",
+      "ordem": 0,
+      "op": "=",
+      "valor": "normal",
+      "negado": false
+    },
+    {
+      "id": "R-DER-10:entao",
+      "papel": "conclusao",
+      "origem": "R-DER-10",
+      "destino": "febre",
+      "cf": -0.4
+    },
+    {
+      "id": "R-MAS-01:se:0",
+      "papel": "condicao",
+      "origem": "leite_alterado",
+      "destino": "R-MAS-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MAS-01:entao",
+      "papel": "conclusao",
+      "origem": "R-MAS-01",
+      "destino": "evidencia_alteracao_leite",
+      "cf": 0.6
+    },
+    {
+      "id": "R-MAS-03:se:0",
+      "papel": "condicao",
+      "origem": "teste_caneca_grumos",
+      "destino": "R-MAS-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MAS-03:entao",
+      "papel": "conclusao",
+      "origem": "R-MAS-03",
+      "destino": "evidencia_alteracao_leite",
+      "cf": 0.65
+    },
+    {
+      "id": "R-CET-01:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-CET-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-CET-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-CET-01:se:2",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-CET-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-01:entao",
+      "papel": "conclusao",
+      "origem": "R-CET-01",
+      "destino": "cetose",
+      "cf": 0.4
+    },
+    {
+      "id": "R-DAB-01:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-DAB-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAB-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAB-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAB-01:se:2",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-DAB-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAB-01:entao",
+      "papel": "conclusao",
+      "origem": "R-DAB-01",
+      "destino": "deslocamento_abomaso",
+      "cf": 0.3
+    },
+    {
+      "id": "R-HIP-02:se:0",
+      "papel": "condicao",
+      "origem": "periparto_imediato",
+      "destino": "R-HIP-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-02:se:1",
+      "papel": "condicao",
+      "origem": "pescoco_em_s",
+      "destino": "R-HIP-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-02:se:2",
+      "papel": "condicao",
+      "origem": "hipotermia",
+      "destino": "R-HIP-02",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-02:entao",
+      "papel": "conclusao",
+      "origem": "R-HIP-02",
+      "destino": "hipocalcemia",
+      "cf": 0.8
+    },
+    {
+      "id": "R-MET-02:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-MET-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-02:se:1",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-MET-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-02:se:2",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-MET-02",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-02:entao",
+      "papel": "conclusao",
+      "origem": "R-MET-02",
+      "destino": "metrite",
+      "cf": 0.45
+    },
+    {
+      "id": "R-MET-03:se:0",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-MET-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-03:se:1",
+      "papel": "condicao",
+      "origem": "utero_aumentado_palpacao",
+      "destino": "R-MET-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-03:se:2",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-MET-03",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-03:entao",
+      "papel": "conclusao",
+      "origem": "R-MET-03",
+      "destino": "metrite",
+      "cf": 0.35
+    },
+    {
+      "id": "R-ACI-01:se:0",
+      "papel": "condicao",
+      "origem": "diarreia",
+      "destino": "R-ACI-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ACI-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-ACI-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-ACI-01:entao",
+      "papel": "conclusao",
+      "origem": "R-ACI-01",
+      "destino": "acidose",
+      "cf": 0.35
+    },
+    {
+      "id": "R-ACI-02:se:0",
+      "papel": "condicao",
+      "origem": "mudanca_abrupta_concentrado",
+      "destino": "R-ACI-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ACI-02:se:1",
+      "papel": "condicao",
+      "origem": "diarreia",
+      "destino": "R-ACI-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ACI-02:entao",
+      "papel": "conclusao",
+      "origem": "R-ACI-02",
+      "destino": "acidose",
+      "cf": 0.55
+    },
+    {
+      "id": "R-CET-02:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-CET-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-02:se:1",
+      "papel": "condicao",
+      "origem": "halito_adocicado_acetona",
+      "destino": "R-CET-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-02:entao",
+      "papel": "conclusao",
+      "origem": "R-CET-02",
+      "destino": "cetose",
+      "cf": 0.5
+    },
+    {
+      "id": "R-CET-03:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-CET-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-03:se:1",
+      "papel": "condicao",
+      "origem": "recusa_concentrado_come_volumoso",
+      "destino": "R-CET-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-03:entao",
+      "papel": "conclusao",
+      "origem": "R-CET-03",
+      "destino": "cetose",
+      "cf": 0.45
+    },
+    {
+      "id": "R-DAB-02:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-DAB-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAB-02:se:1",
+      "papel": "condicao",
+      "origem": "flanco_esquerdo_afundado",
+      "destino": "R-DAB-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAB-02:entao",
+      "papel": "conclusao",
+      "origem": "R-DAB-02",
+      "destino": "deslocamento_abomaso",
+      "cf": 0.4
+    },
+    {
+      "id": "R-DD-02:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-DD-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DD-02:se:1",
+      "papel": "condicao",
+      "origem": "dor_flexao_talao",
+      "destino": "R-DD-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DD-02:entao",
+      "papel": "conclusao",
+      "origem": "R-DD-02",
+      "destino": "dermatite_digital",
+      "cf": 0.5
+    },
+    {
+      "id": "R-HIP-01:se:0",
+      "papel": "condicao",
+      "origem": "decubito",
+      "destino": "R-HIP-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-01:se:1",
+      "papel": "condicao",
+      "origem": "periparto_imediato",
+      "destino": "R-HIP-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-01:entao",
+      "papel": "conclusao",
+      "origem": "R-HIP-01",
+      "destino": "hipocalcemia",
+      "cf": 0.65
+    },
+    {
+      "id": "R-MET-01:se:0",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-MET-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-01:se:1",
+      "papel": "condicao",
+      "origem": "corrimento_fetido",
+      "destino": "R-MET-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-01:entao",
+      "papel": "conclusao",
+      "origem": "R-MET-01",
+      "destino": "metrite",
+      "cf": 0.75
+    },
+    {
+      "id": "R-MET-04:se:0",
+      "papel": "condicao",
+      "origem": "retencao_placenta",
+      "destino": "R-MET-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-04:se:1",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-MET-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MET-04:entao",
+      "papel": "conclusao",
+      "origem": "R-MET-04",
+      "destino": "metrite",
+      "cf": 0.25
+    },
+    {
+      "id": "R-TPB-01:se:0",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-TPB-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TPB-01:se:1",
+      "papel": "condicao",
+      "origem": "urina_escura",
+      "destino": "R-TPB-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TPB-01:entao",
+      "papel": "conclusao",
+      "origem": "R-TPB-01",
+      "destino": "tpb",
+      "cf": 0.7
+    },
+    {
+      "id": "R-TPB-03:se:0",
+      "papel": "condicao",
+      "origem": "carrapatos_historico_recente",
+      "destino": "R-TPB-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TPB-03:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-TPB-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TPB-03:entao",
+      "papel": "conclusao",
+      "origem": "R-TPB-03",
+      "destino": "tpb",
+      "cf": 0.35
+    },
+    {
+      "id": "R-ACI-03:se:0",
+      "papel": "condicao",
+      "origem": "fezes_aquosas_espuma_graos",
+      "destino": "R-ACI-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ACI-03:entao",
+      "papel": "conclusao",
+      "origem": "R-ACI-03",
+      "destino": "acidose",
+      "cf": 0.5
+    },
+    {
+      "id": "R-ACI-04:se:0",
+      "papel": "condicao",
+      "origem": "ph_ruminal",
+      "destino": "R-ACI-04",
+      "ordem": 0,
+      "op": "<",
+      "valor": 5.5,
+      "negado": false
+    },
+    {
+      "id": "R-ACI-04:entao",
+      "papel": "conclusao",
+      "origem": "R-ACI-04",
+      "destino": "acidose",
+      "cf": 0.88
+    },
+    {
+      "id": "R-CET-04:se:0",
+      "papel": "condicao",
+      "origem": "bhb_sanguineo",
+      "destino": "R-CET-04",
+      "ordem": 0,
+      "op": "≥",
+      "valor": 1.2,
+      "negado": false
+    },
+    {
+      "id": "R-CET-04:entao",
+      "papel": "conclusao",
+      "origem": "R-CET-04",
+      "destino": "cetose",
+      "cf": 0.85
+    },
+    {
+      "id": "R-CET-05:se:0",
+      "papel": "condicao",
+      "origem": "fita_urina_corpos_cetonicos",
+      "destino": "R-CET-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CET-05:entao",
+      "papel": "conclusao",
+      "origem": "R-CET-05",
+      "destino": "cetose",
+      "cf": 0.7
+    },
+    {
+      "id": "R-DAB-03:se:0",
+      "papel": "condicao",
+      "origem": "ping_metalico_flanco_esquerdo",
+      "destino": "R-DAB-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAB-03:entao",
+      "papel": "conclusao",
+      "origem": "R-DAB-03",
+      "destino": "deslocamento_abomaso",
+      "cf": 0.9
+    },
+    {
+      "id": "R-DD-01:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-DD-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DD-01:entao",
+      "papel": "conclusao",
+      "origem": "R-DD-01",
+      "destino": "dermatite_digital",
+      "cf": 0.3
+    },
+    {
+      "id": "R-DD-03:se:0",
+      "papel": "condicao",
+      "origem": "lesao_erosiva_talao_morango",
+      "destino": "R-DD-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DD-03:entao",
+      "papel": "conclusao",
+      "origem": "R-DD-03",
+      "destino": "dermatite_digital",
+      "cf": 0.85
+    },
+    {
+      "id": "R-HIP-03:se:0",
+      "papel": "condicao",
+      "origem": "calcio_serico",
+      "destino": "R-HIP-03",
+      "ordem": 0,
+      "op": "<",
+      "valor": 1.5,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-03:entao",
+      "papel": "conclusao",
+      "origem": "R-HIP-03",
+      "destino": "hipocalcemia",
+      "cf": 0.9
+    },
+    {
+      "id": "R-HIP-04:se:0",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-HIP-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-04:entao",
+      "papel": "conclusao",
+      "origem": "R-HIP-04",
+      "destino": "hipocalcemia",
+      "cf": -0.4
+    },
+    {
+      "id": "R-MAS-02:se:0",
+      "papel": "condicao",
+      "origem": "ubere_inflamado",
+      "destino": "R-MAS-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MAS-02:entao",
+      "papel": "conclusao",
+      "origem": "R-MAS-02",
+      "destino": "mastite",
+      "cf": 0.5
+    },
+    {
+      "id": "R-MAS-04:se:0",
+      "papel": "condicao",
+      "origem": "cmt_reagente",
+      "destino": "R-MAS-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MAS-04:entao",
+      "papel": "conclusao",
+      "origem": "R-MAS-04",
+      "destino": "mastite",
+      "cf": 0.4
+    },
+    {
+      "id": "R-MAS-05:se:0",
+      "papel": "condicao",
+      "origem": "evidencia_alteracao_leite",
+      "destino": "R-MAS-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-MAS-05:entao",
+      "papel": "conclusao",
+      "origem": "R-MAS-05",
+      "destino": "mastite",
+      "cf": 0.99
+    },
+    {
+      "id": "R-TPB-02:se:0",
+      "papel": "condicao",
+      "origem": "mucosas_palidas_ou_ictericas",
+      "destino": "R-TPB-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TPB-02:entao",
+      "papel": "conclusao",
+      "origem": "R-TPB-02",
+      "destino": "tpb",
+      "cf": 0.6
+    },
+    {
+      "id": "R-TPB-04:se:0",
+      "papel": "condicao",
+      "origem": "esfregaco_hemoparasitas",
+      "destino": "R-TPB-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TPB-04:entao",
+      "papel": "conclusao",
+      "origem": "R-TPB-04",
+      "destino": "tpb",
+      "cf": 0.9
+    },
+    {
+      "id": "R-BV-05:se:0",
+      "papel": "condicao",
+      "origem": "ubere_inflamado",
+      "destino": "R-BV-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-05:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-BV-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-05:se:2",
+      "papel": "condicao",
+      "origem": "apatia",
+      "destino": "R-BV-05",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-05:entao",
+      "papel": "conclusao",
+      "origem": "R-BV-05",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-BV-03:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-BV-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": "ausente",
+      "negado": false
+    },
+    {
+      "id": "R-BV-03:se:1",
+      "papel": "condicao",
+      "origem": "apatia",
+      "destino": "R-BV-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-03:entao",
+      "papel": "conclusao",
+      "origem": "R-BV-03",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-BV-04:se:0",
+      "papel": "condicao",
+      "origem": "hipotermia",
+      "destino": "R-BV-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-04:se:1",
+      "papel": "condicao",
+      "origem": "apatia",
+      "destino": "R-BV-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-04:entao",
+      "papel": "conclusao",
+      "origem": "R-BV-04",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-BV-01:se:0",
+      "papel": "condicao",
+      "origem": "decubito",
+      "destino": "R-BV-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-01:entao",
+      "papel": "conclusao",
+      "origem": "R-BV-01",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-BV-02:se:0",
+      "papel": "condicao",
+      "origem": "urina_escura",
+      "destino": "R-BV-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BV-02:entao",
+      "papel": "conclusao",
+      "origem": "R-BV-02",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-BV-06:se:0",
+      "papel": "condicao",
+      "origem": "temperatura_retal",
+      "destino": "R-BV-06",
+      "ordem": 0,
+      "op": "≥",
+      "valor": 41.0,
+      "negado": false
+    },
+    {
+      "id": "R-BV-06:entao",
+      "papel": "conclusao",
+      "origem": "R-BV-06",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-URG-01:se:0",
+      "papel": "condicao",
+      "origem": "hipocalcemia",
+      "destino": "R-URG-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-01:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-01",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-URG-02:se:0",
+      "papel": "condicao",
+      "origem": "tpb",
+      "destino": "R-URG-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-02:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-02",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-URG-03:se:0",
+      "papel": "condicao",
+      "origem": "deslocamento_abomaso",
+      "destino": "R-URG-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-03:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-03",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-URG-04:se:0",
+      "papel": "condicao",
+      "origem": "metrite",
+      "destino": "R-URG-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-04:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-04",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-URG-05:se:0",
+      "papel": "condicao",
+      "origem": "mastite",
+      "destino": "R-URG-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-05:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-05",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-URG-06:se:0",
+      "papel": "condicao",
+      "origem": "cetose",
+      "destino": "R-URG-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-06:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-06",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-URG-07:se:0",
+      "papel": "condicao",
+      "origem": "acidose",
+      "destino": "R-URG-07",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-07:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-07",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-URG-08:se:0",
+      "papel": "condicao",
+      "origem": "dermatite_digital",
+      "destino": "R-URG-08",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-08:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-08",
+      "destino": "observar",
+      "cf": 0.7
+    }
+  ],
+  "layout": {}
+}

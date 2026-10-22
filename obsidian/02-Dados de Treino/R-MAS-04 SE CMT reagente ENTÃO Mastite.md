@@ -1,0 +1,17 @@
+---
+source_file: "base/fonte/doencas/mastite.json"
+type: "concept"
+community: "Mastite"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Mastite
+---
+
+# R-MAS-04: SE CMT reagente ENTÃO Mastite
+
+## Connections
+- [[CMT reagente]] - `condicao_de` [EXTRACTED]
+- [[Mastite]] - `conclui` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Mastite
