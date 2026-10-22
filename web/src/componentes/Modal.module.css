@@ -22,9 +22,3 @@
 .folhaCorpo:focus-visible { outline-offset: -6px; }
 .folhaRodape { flex: none; display: flex; justify-content: flex-end; padding: 14px 44px 18px; border-top: 2px solid var(--cor-trilho); }
 @keyframes subirFolha { from { transform: translateY(100%); } to { transform: none; } }
-@media (max-width: 600px) {
-  .folhaCabecalho, .folhaCorpo, .folhaRodape { padding-inline: 20px; }
-  .folhaCabecalho h2 { font-size: 26px; }
-  .folha { height: 86dvh; }
-  .folhaRodape > * { width: 100%; }
-}

@@ -22,4 +22,3 @@
 .fonte { font-size: 14px; color: var(--cor-texto-suave); line-height: 1.45; }
 .fonte a { color: var(--cor-primaria-escura); font-weight: 700; }
 .nota { color: var(--cor-texto-suave); }
-@media (max-width: 600px) { .subida { margin-left: 0; width: 100%; } .trilho { flex: 1; } .regra { padding: 16px; } }
