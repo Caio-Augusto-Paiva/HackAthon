@@ -28,7 +28,7 @@ describe('parecer do sistema', () => {
   it.each(['chamar_agora', 'observar', 'sem_problema'] as const)('avisa que não substitui o laudo, mesmo com urgência %s', async nivel => {
     montar({ ...exemploParecer, urgencia: { ...exemploParecer.urgencia, nivel } });
     const aviso = await screen.findByRole('note', { name: 'Este parecer não é um laudo' });
-    expect(aviso).toHaveTextContent('Independentemente do resultado, procure um médico-veterinário');
+    expect(aviso).toHaveTextContent('Esta análise não substitui um laudo médico e é importante procurar um médico-veterinário');
   });
   it.each(['chamar_agora', 'observar', 'sem_problema'] as const)('identifica a urgência %s com texto da API', async nivel => {
     montar({ ...exemploParecer, urgencia: { ...exemploParecer.urgencia, nivel, texto: `Orientação ${nivel}` } });

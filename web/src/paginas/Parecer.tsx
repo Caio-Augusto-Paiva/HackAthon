@@ -63,7 +63,7 @@ export function Parecer() {
       </section>
       <aside role="note" aria-labelledby="titulo-laudo" className={estilos.laudo}>
         <h2 id="titulo-laudo">Este parecer não é um laudo</h2>
-        <p>É uma triagem de apoio à decisão. Independentemente do resultado, procure um médico-veterinário para examinar o animal.</p>
+        <p>Esta análise não substitui um laudo médico e é importante procurar um médico-veterinário para melhor entendimento e segurança.</p>
       </aside>
       <div className={estilos.quadro}><table className={estilos.tabela}>
         <caption className="somenteLeitor">Hipóteses e confiança do sistema</caption>
