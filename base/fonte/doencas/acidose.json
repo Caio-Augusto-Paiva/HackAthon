@@ -200,6 +200,29 @@
       "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
       "status": "suposicao_a_validar",
       "nota": "Aplica a política de gravidade do projeto quando o CF de acidose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-ACI-05",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de acidose ruminal."
     }
   ]
 }

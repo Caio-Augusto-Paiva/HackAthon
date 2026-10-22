@@ -2072,6 +2072,71 @@
         "status": "suposicao_a_validar",
         "nota": "Aplica a política de gravidade do projeto quando o CF de dermatite_digital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
       }
+    },
+    {
+      "id": "R-ACI-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ACI-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de acidose ruminal."
+      }
+    },
+    {
+      "id": "R-CET-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CET-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de cetose."
+      }
+    },
+    {
+      "id": "R-DAB-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAB-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso."
+      }
+    },
+    {
+      "id": "R-HIP-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HIP-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Vaca caída fora do periparto imediato ainda sugere, com peso baixo, hipocalcemia."
+      }
+    },
+    {
+      "id": "R-HIP-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HIP-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia."
+      }
     }
   ],
   "arestas": [
@@ -3293,6 +3358,120 @@
       "origem": "R-URG-08",
       "destino": "observar",
       "cf": 0.7
+    },
+    {
+      "id": "R-ACI-05:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-ACI-05",
+      "ordem": 0,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-ACI-05:entao",
+      "papel": "conclusao",
+      "origem": "R-ACI-05",
+      "destino": "acidose",
+      "cf": 0.05
+    },
+    {
+      "id": "R-CET-06:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-CET-06",
+      "ordem": 0,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-CET-06:entao",
+      "papel": "conclusao",
+      "origem": "R-CET-06",
+      "destino": "cetose",
+      "cf": 0.05
+    },
+    {
+      "id": "R-DAB-04:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAB-04",
+      "ordem": 0,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAB-04:entao",
+      "papel": "conclusao",
+      "origem": "R-DAB-04",
+      "destino": "deslocamento_abomaso",
+      "cf": 0.05
+    },
+    {
+      "id": "R-HIP-05:se:0",
+      "papel": "condicao",
+      "origem": "decubito",
+      "destino": "R-HIP-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-05:se:1",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-HIP-05",
+      "ordem": 1,
+      "op": ">",
+      "valor": 3.0,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-05:entao",
+      "papel": "conclusao",
+      "origem": "R-HIP-05",
+      "destino": "hipocalcemia",
+      "cf": 0.2
+    },
+    {
+      "id": "R-HIP-06:se:0",
+      "papel": "condicao",
+      "origem": "hipotermia",
+      "destino": "R-HIP-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-06:se:1",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-HIP-06",
+      "ordem": 1,
+      "op": ">",
+      "valor": 3.0,
+      "negado": false
+    },
+    {
+      "id": "R-HIP-06:entao",
+      "papel": "conclusao",
+      "origem": "R-HIP-06",
+      "destino": "hipocalcemia",
+      "cf": 0.15
     }
   ],
   "layout": {}

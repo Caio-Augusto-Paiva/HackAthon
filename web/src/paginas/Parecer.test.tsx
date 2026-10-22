@@ -35,13 +35,13 @@ describe('parecer do sistema', () => {
     expect(linhas[0]).not.toHaveTextContent('pode chegar a');
     expect(linhas[1]).toHaveTextContent(`pode chegar a ${exemploParecer.blocos[1].itens[0].potencial}%`);
   });
-  it('avisa e oferece continuar quando nenhuma doença foi confirmada', async () => {
-    const zerado = { ...exemploParecer, final: true, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => ({ ...i, percentual: 0, potencial: 60 })) })) };
+  it('avisa quando nenhuma doença foi confirmada, com um único controle de continuar', async () => {
+    const zerado = { ...exemploParecer, final: true, motivo_parada: null, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => ({ ...i, percentual: 0, potencial: 60 })) })) };
     montar(zerado);
     const aviso = await screen.findByText('Nenhuma doença foi confirmada com as respostas dadas. Responda mais perguntas para o sistema calcular as chances.');
     expect(aviso.closest('[role="status"]')).not.toBeNull();
-    await userEvent.click(within(aviso.closest('[role="status"]') as HTMLElement).getByRole('link', { name: 'Continuar respondendo' }));
-    expect(await screen.findByRole('heading', { name: 'Pergunta retomada' })).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: 'Continuar respondendo' })).toHaveLength(1);
+    expect(screen.queryAllByRole('link', { name: 'Continuar respondendo' })).toHaveLength(0);
   });
   it('não mostra o aviso de nada confirmado quando alguma doença tem percentual', async () => {
     montar();

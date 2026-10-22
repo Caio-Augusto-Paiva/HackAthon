@@ -4,15 +4,15 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0002`. Pai declarado: `v0001`. Data declarada na base: `2026-10-22`.
+Versão: `v0003`. Pai declarado: `v0002`. Data declarada na base: `2026-10-22`.
 
-Arquivo: `base/versoes/v0002.json`. SHA-256 do JSON canônico: `3b01b9df6db6ebd5902ed31aee0256afd03a2cdadd575f1271b38e5a1e2b8c92`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0003.json`. SHA-256 do JSON canônico: `b7b35758e26b301269da4ecd8c4b9f6d1c674428e97ebcd7dea17c18b489a4b8`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
-Regras: **56**. Símbolos: **51**. Doenças: **8**.
+Regras: **61**. Símbolos: **51**. Doenças: **8**.
 
 | Estado | Quantidade |
 | --- | --- |
-| suposicao_a_validar | 56 |
+| suposicao_a_validar | 61 |
 
 As fontes descrevem o contexto clínico. Os números de CF são escolhas de modelagem do projeto; não são probabilidades nem valores publicados nessas referências.
 
@@ -61,6 +61,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-ACI-02` | mudanca_abrupta_concentrado = sim E diarreia = sim | acidose | 0,55 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Sobrecarga alimentar de grãos associada à diarreia aponta fermentação ruminal acelerada. |
 | `R-ACI-03` | fezes_aquosas_espuma_graos = sim | acidose | 0,5 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Fezes aquosas, espuma e grãos não digeridos apoiam distúrbio digestivo, sem confirmar a etiologia. |
 | `R-ACI-04` | ph_ruminal < 5,5 | acidose | 0,88 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | pH ruminal abaixo de 5,5 apoia acidificação ruminal conforme método, horário da coleta e quadro clínico; não confirma sozinho acidose sistêmica nem distingue apresentação aguda de subaguda. |
+| `R-ACI-05` | apetite em {reduzido, ausente} | acidose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de acidose ruminal. |
 
 ## Cetose / Hipercetonemia — cetose (gravidade media)
 
@@ -71,6 +72,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-CET-03` | inicio_lactacao = sim E recusa_concentrado_come_volumoso = sim | cetose | 0,45 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Recusa seletiva de concentrado é um achado inespecífico e não confirma cetose isoladamente. |
 | `R-CET-04` | bhb_sanguineo ≥ 1,2 | cetose | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | BHB sanguíneo de pelo menos 1,2 mmol/L é compatível com hipercetonemia; sinais adicionais são necessários para caracterizar cetose clínica. |
 | `R-CET-05` | fita_urina_corpos_cetonicos = sim | cetose | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica. |
+| `R-CET-06` | apetite em {reduzido, ausente} | cetose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de cetose. |
 
 ## Dermatite Digital Bovina — dermatite_digital (gravidade baixa)
 
@@ -87,6 +89,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-DAB-01` | inicio_lactacao = sim E apetite em {reduzido, ausente} E queda_producao = sim | deslocamento_abomaso | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção. |
 | `R-DAB-02` | inicio_lactacao = sim E flanco_esquerdo_afundado = sim | deslocamento_abomaso | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso. |
 | `R-DAB-03` | ping_metalico_flanco_esquerdo = sim | deslocamento_abomaso | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo. |
+| `R-DAB-04` | apetite em {reduzido, ausente} | deslocamento_abomaso | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso. |
 
 ## Hipocalcemia Puerperal — hipocalcemia (gravidade alta)
 
@@ -96,6 +99,8 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-HIP-02` | periparto_imediato = sim E pescoco_em_s = sim E hipotermia = sim | hipocalcemia | 0,8 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Perda do tônus cervical e hipotermia periférica sustentam fase parética clínica. |
 | `R-HIP-03` | calcio_serico < 1,5 | hipocalcemia | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Cálcio sérico total < 1,5 mmol/L (ou < 6,0 mg/dL) confirma hipocalcemia bioquímica acentuada. |
 | `R-HIP-04` | febre = sim | hipocalcemia | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Paresia puerperal clássica é afebril; presença de pirexia enfraquece a hipótese primária. |
+| `R-HIP-05` | decubito = sim E dias_em_lactacao > 3 | hipocalcemia | 0,2 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Vaca caída fora do periparto imediato ainda sugere, com peso baixo, hipocalcemia. |
+| `R-HIP-06` | hipotermia = sim E dias_em_lactacao > 3 | hipocalcemia | 0,15 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia. |
 
 ## Mastite — mastite (gravidade media)
 

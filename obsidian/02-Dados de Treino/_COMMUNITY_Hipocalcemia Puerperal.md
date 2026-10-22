@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.14
-members: 15
+members: 17
 ---
 
 # Hipocalcemia Puerperal
 
 **Cohesion:** 0.14 - loosely connected
-**Members:** 15 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[Cálcio sérico total]] - concept - base/fonte/doencas/hipocalcemia.json
@@ -24,6 +24,8 @@ members: 15
 - [[R-HIP-02 SE Periparto imediato E Desvio cervical em S E Hipotermia ENTÃO Hipocalcemia Puerperal]] - concept - base/fonte/doencas/hipocalcemia.json
 - [[R-HIP-03 SE Cálcio sérico total ENTÃO Hipocalcemia Puerperal]] - concept - base/fonte/doencas/hipocalcemia.json
 - [[R-HIP-04 SE Febre ENTÃO Hipocalcemia Puerperal]] - concept - base/fonte/doencas/hipocalcemia.json
+- [[R-HIP-05 SE Decúbito E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - concept - base/fonte/doencas/hipocalcemia.json
+- [[R-HIP-06 SE Hipotermia E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - concept - base/fonte/doencas/hipocalcemia.json
 - [[R-URG-01 SE Hipocalcemia Puerperal ENTÃO Atendimento Veterinário Imediato]] - concept - base/fonte/doencas/hipocalcemia.json
 
 ## Live Query (requires Dataview plugin)
@@ -34,11 +36,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
+- 10 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
 
 ## Top bridge nodes
-- [[Hipotermia]] - degree 5, connects to 1 community
-- [[Decúbito]] - degree 2, connects to 1 community
+- [[Hipotermia]] - degree 6, connects to 1 community
+- [[Decúbito]] - degree 3, connects to 1 community
+- [[R-HIP-05 SE Decúbito E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - degree 3, connects to 1 community
+- [[R-HIP-06 SE Hipotermia E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - degree 3, connects to 1 community
 - [[R-DER-01 SE Dias em lactação ENTÃO Periparto imediato]] - degree 2, connects to 1 community
-- [[R-DER-05 SE Temperatura retal ENTÃO Hipotermia]] - degree 2, connects to 1 community
-- [[R-DER-06 SE Temperatura ao toque das extremidades ENTÃO Hipotermia]] - degree 2, connects to 1 community

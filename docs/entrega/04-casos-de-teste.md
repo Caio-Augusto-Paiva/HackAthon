@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0002`. Casos sintéticos executados: **34**. Aprovados: **34**.
+Base `v0003`. Casos sintéticos executados: **34**. Aprovados: **34**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -32,7 +32,7 @@ Os casos demonstram integração e comportamento determinístico. Não medem acu
 | C-DD-01 | passou | observar | dermatite_digital | não |
 | C-DD-02 | passou | observar | dermatite_digital | não |
 | C-DD-03 | passou | sem_problema | dermatite_digital | não |
-| C-BV-01 | passou | chamar_agora | acidose | sim |
+| C-BV-01 | passou | chamar_agora | hipocalcemia | sim |
 | C-BV-02 | passou | chamar_agora | acidose | sim |
 | C-BV-03 | passou | chamar_agora | acidose | não |
 | C-COM-01 | passou | chamar_agora | mastite | não |
@@ -198,10 +198,10 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
     ],
     "percentuais": {
       "mastite": 88,
-      "acidose": 0,
-      "cetose": 0,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "metrite": 0,
       "tpb": 0,
       "hipocalcemia": 0
@@ -390,10 +390,10 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
     ],
     "percentuais": {
       "metrite": 85,
-      "acidose": 0,
-      "cetose": 0,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "mastite": 0,
       "tpb": 0,
       "hipocalcemia": 0
@@ -482,10 +482,10 @@ Metrite: febre e achados uterinos Caso fictício de regressão; suposição a va
     ],
     "percentuais": {
       "metrite": 85,
-      "acidose": 0,
-      "cetose": 0,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "mastite": 0,
       "tpb": 0,
       "hipocalcemia": 0
@@ -958,9 +958,9 @@ Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de 
       "acidose"
     ],
     "percentuais": {
-      "cetose": 83,
-      "deslocamento_abomaso": 30,
-      "acidose": 0,
+      "cetose": 84,
+      "deslocamento_abomaso": 33,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,
@@ -1056,8 +1056,8 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
     ],
     "percentuais": {
       "cetose": 91,
-      "deslocamento_abomaso": 30,
-      "acidose": 0,
+      "deslocamento_abomaso": 33,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,
@@ -1151,9 +1151,9 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
       "acidose"
     ],
     "percentuais": {
-      "cetose": 40,
-      "deslocamento_abomaso": 30,
-      "acidose": 0,
+      "cetose": 43,
+      "deslocamento_abomaso": 33,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,
@@ -1348,10 +1348,10 @@ Hipocalcemia: hipotermia, apatia e cálcio baixo Caso fictício de regressão; s
     ],
     "percentuais": {
       "hipocalcemia": 90,
-      "acidose": 0,
-      "cetose": 0,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "mastite": 0,
       "metrite": 0,
       "tpb": 0
@@ -1530,9 +1530,9 @@ Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício
       "acidose"
     ],
     "percentuais": {
-      "deslocamento_abomaso": 58,
-      "cetose": 40,
-      "acidose": 0,
+      "deslocamento_abomaso": 60,
+      "cetose": 43,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,
@@ -1627,8 +1627,8 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
     ],
     "percentuais": {
       "deslocamento_abomaso": 93,
-      "cetose": 40,
-      "acidose": 0,
+      "cetose": 43,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,
@@ -1722,13 +1722,13 @@ Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão;
     "top3_contem": [
       "acidose",
       "cetose",
-      "dermatite_digital"
+      "deslocamento_abomaso"
     ],
     "percentuais": {
-      "acidose": 0,
-      "cetose": 0,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "hipocalcemia": 0,
       "mastite": 0,
       "metrite": 0,
@@ -1817,13 +1817,13 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
     "top3_contem": [
       "acidose",
       "cetose",
-      "dermatite_digital"
+      "deslocamento_abomaso"
     ],
     "percentuais": {
-      "acidose": 85,
-      "cetose": 0,
+      "acidose": 86,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "hipocalcemia": 0,
       "mastite": 0,
       "metrite": 0,
@@ -1913,13 +1913,13 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
     "top3_contem": [
       "acidose",
       "cetose",
-      "dermatite_digital"
+      "deslocamento_abomaso"
     ],
     "percentuais": {
-      "acidose": 92,
-      "cetose": 0,
+      "acidose": 93,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "hipocalcemia": 0,
       "mastite": 0,
       "metrite": 0,
@@ -2372,18 +2372,18 @@ Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; s
   "falhas": [],
   "obtido": {
     "urgencia": "chamar_agora",
-    "top1": "acidose",
+    "top1": "hipocalcemia",
     "top3_contem": [
+      "hipocalcemia",
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "cetose"
     ],
     "percentuais": {
+      "hipocalcemia": 20,
       "acidose": 0,
       "cetose": 0,
       "dermatite_digital": 0,
       "deslocamento_abomaso": 0,
-      "hipocalcemia": 0,
       "mastite": 0,
       "metrite": 0,
       "tpb": 0
@@ -2465,13 +2465,13 @@ Bandeira de apetite ausente com apatia Caso fictício de regressão; suposição
     "top3_contem": [
       "acidose",
       "cetose",
-      "dermatite_digital"
+      "deslocamento_abomaso"
     ],
     "percentuais": {
-      "acidose": 0,
-      "cetose": 0,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso": 5,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
       "hipocalcemia": 0,
       "mastite": 0,
       "metrite": 0,
@@ -2772,8 +2772,8 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
     ],
     "percentuais": {
       "deslocamento_abomaso": 93,
-      "cetose": 40,
-      "acidose": 0,
+      "cetose": 43,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,
@@ -2877,13 +2877,13 @@ Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de r
     "top3_contem": [
       "cetose",
       "acidose",
-      "dermatite_digital"
+      "deslocamento_abomaso"
     ],
     "percentuais": {
-      "cetose": 40,
-      "acidose": 35,
+      "cetose": 43,
+      "acidose": 38,
+      "deslocamento_abomaso": 33,
       "dermatite_digital": 30,
-      "deslocamento_abomaso": 30,
       "hipocalcemia": 0,
       "mastite": 0,
       "metrite": 0,
@@ -2892,7 +2892,8 @@ Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de r
     "motivo_parada": "limite",
     "bandeiras": [],
     "inconclusivas": [
-      "cetose"
+      "cetose",
+      "acidose"
     ],
     "alerta": {
       "pausa": false
@@ -3282,9 +3283,9 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
       "acidose"
     ],
     "percentuais": {
-      "cetose": 40,
-      "deslocamento_abomaso": 30,
-      "acidose": 0,
+      "cetose": 43,
+      "deslocamento_abomaso": 33,
+      "acidose": 5,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
       "mastite": 0,

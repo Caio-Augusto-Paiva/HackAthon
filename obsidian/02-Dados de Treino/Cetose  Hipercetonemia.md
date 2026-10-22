@@ -16,6 +16,7 @@ tags:
 - [[R-CET-03 SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
 - [[R-CET-04 SE BHB sanguíneo ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
 - [[R-CET-05 SE Corpos cetônicos na urina ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
+- [[R-CET-06 SE Apetite ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
 - [[R-URG-06 SE Cetose  Hipercetonemia ENTÃO Monitoramento Clínico Contínuo]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Cetose_/_Hipercetonemia

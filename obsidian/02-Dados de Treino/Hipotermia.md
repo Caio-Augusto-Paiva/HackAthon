@@ -16,5 +16,6 @@ tags:
 - [[R-DER-06 SE Temperatura ao toque das extremidades ENTÃO Hipotermia]] - `conclui` [EXTRACTED]
 - [[R-DER-09 SE Temperatura retal ENTÃO Hipotermia]] - `conclui` [EXTRACTED]
 - [[R-HIP-02 SE Periparto imediato E Desvio cervical em S E Hipotermia ENTÃO Hipocalcemia Puerperal]] - `condicao_de` [EXTRACTED]
+- [[R-HIP-06 SE Hipotermia E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_Puerperal

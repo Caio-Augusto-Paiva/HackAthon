@@ -15,6 +15,7 @@ tags:
 - [[R-ACI-02 SE Mudança abrupta de concentrado E Diarreia ENTÃO Acidose Ruminal]] - `conclui` [EXTRACTED]
 - [[R-ACI-03 SE Fezes com espuma e grãos ENTÃO Acidose Ruminal]] - `conclui` [EXTRACTED]
 - [[R-ACI-04 SE pH ruminal ENTÃO Acidose Ruminal]] - `conclui` [EXTRACTED]
+- [[R-ACI-05 SE Apetite ENTÃO Acidose Ruminal]] - `conclui` [EXTRACTED]
 - [[R-URG-07 SE Acidose Ruminal ENTÃO Monitoramento Clínico Contínuo]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Acidose_Ruminal

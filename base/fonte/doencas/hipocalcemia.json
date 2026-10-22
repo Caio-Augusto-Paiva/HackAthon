@@ -288,6 +288,58 @@
       "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
       "status": "suposicao_a_validar",
       "nota": "Aplica a política de gravidade do projeto quando o CF de hipocalcemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-HIP-05",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 3,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vaca caída fora do periparto imediato ainda sugere, com peso baixo, hipocalcemia."
+    },
+    {
+      "id": "R-HIP-06",
+      "se": [
+        {
+          "simbolo": "hipotermia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 3,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.15
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia."
     }
   ]
 }

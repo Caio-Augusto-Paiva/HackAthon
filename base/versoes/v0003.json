@@ -1,0 +1,2310 @@
+{
+  "meta": {
+    "versao": "v0003",
+    "pai": "v0002",
+    "autor": "equipe",
+    "data": "2026-10-22",
+    "nota": "Regras de sinal isolado com peso baixo (R-HIP-05, R-HIP-06, R-CET-06, R-DAB-04, R-ACI-05): o parecer passa a refletir evidência parcial.",
+    "limiares": {
+      "descarte": -0.2,
+      "premissa": 0.2,
+      "hipotese_relevante": 0.35,
+      "exaustao": 0.6,
+      "potencial": 0.7,
+      "confirmacao": 0.8,
+      "bloco_principal": 0.5,
+      "bloco_diferencial": 0.2
+    },
+    "limite_dinamico": {
+      "produtor": 12,
+      "veterinario": 25
+    },
+    "triagem": [
+      {
+        "id": "dias_em_lactacao",
+        "selecao": "unica",
+        "simbolos": [
+          "dias_em_lactacao"
+        ],
+        "texto": {
+          "produtor": "Há quantos dias ocorreu o último parto?",
+          "veterinario": "Há quantos dias ocorreu o último parto?"
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "estado_termico",
+        "selecao": "unica",
+        "simbolos": [
+          "extremidades",
+          "temperatura_retal"
+        ],
+        "texto": {
+          "produtor": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
+          "veterinario": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C."
+        },
+        "opcoes": {},
+        "simbolos_por_modo": {
+          "produtor": [
+            "extremidades"
+          ],
+          "veterinario": [
+            "temperatura_retal"
+          ]
+        }
+      },
+      {
+        "id": "atitude_locomocao",
+        "selecao": "multipla",
+        "simbolos": [
+          "apatia",
+          "claudicacao",
+          "decubito"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "apetite_ruminacao",
+        "selecao": "unica",
+        "simbolos": [
+          "apetite"
+        ],
+        "texto": {
+          "produtor": "Informe o apetite: normal, reduzido ou ausente.",
+          "veterinario": "Informe o apetite: normal, reduzido ou ausente."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "producao_leite",
+        "selecao": "multipla",
+        "simbolos": [
+          "queda_producao",
+          "leite_alterado",
+          "ubere_inflamado"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "excrecoes",
+        "selecao": "multipla",
+        "simbolos": [
+          "diarreia",
+          "corrimento_vaginal",
+          "urina_escura"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      }
+    ]
+  },
+  "simbolos": [
+    {
+      "id": "apatia",
+      "tipo": "pergunta",
+      "nome": "Apatia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está abatida ou pouco responsiva?",
+        "veterinario": "Animal apático ou com resposta reduzida ao ambiente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a apatia.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a apatia."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "apetite",
+      "tipo": "pergunta",
+      "nome": "Apetite",
+      "dominio": {
+        "tipo": "categorico",
+        "valores": [
+          "normal",
+          "reduzido",
+          "ausente"
+        ]
+      },
+      "pergunta": {
+        "produtor": "Como está o apetite: normal, reduzido ou ausente?",
+        "veterinario": "Apetite normal, reduzido ou ausente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a apetite.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a apetite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "bhb_sanguineo",
+      "tipo": "pergunta",
+      "nome": "BHB sanguíneo",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 20.0,
+        "unidade": "mmol/L",
+        "casas_decimais": 2
+      },
+      "pergunta": {
+        "veterinario": "Qual é a concentração sanguínea de BHB, em mmol/L?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a bhb sanguíneo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "calcio_serico",
+      "tipo": "pergunta",
+      "nome": "Cálcio sérico total",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 20.0,
+        "unidade": "mmol/L",
+        "casas_decimais": 2
+      },
+      "pergunta": {
+        "veterinario": "Qual é o cálcio sérico total, em mmol/L?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a cálcio sérico total."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "carrapatos_historico_recente",
+      "tipo": "pergunta",
+      "nome": "Exposição recente a carrapatos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Foram vistos carrapatos na vaca recentemente?",
+        "veterinario": "Histórico recente de exposição a carrapatos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a exposição recente a carrapatos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a exposição recente a carrapatos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "claudicacao",
+      "tipo": "pergunta",
+      "nome": "Claudicação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está mancando ou poupando uma pata?",
+        "veterinario": "Presença de claudicação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a claudicação.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a claudicação."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "cmt_reagente",
+      "tipo": "pergunta",
+      "nome": "CMT reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "O CMT foi reagente conforme a leitura do teste?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a cmt reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "corrimento_fetido",
+      "tipo": "pergunta",
+      "nome": "Corrimento vaginal fétido",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A secreção da vulva tem cheiro forte e desagradável?",
+        "veterinario": "Corrimento vaginal fétido observado?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "corrimento_vaginal",
+      "tipo": "pergunta",
+      "nome": "Corrimento vaginal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há saída de secreção anormal pela vulva?",
+        "veterinario": "Presença de corrimento vaginal anormal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "decubito",
+      "tipo": "pergunta",
+      "nome": "Decúbito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está caída e não consegue se levantar?",
+        "veterinario": "Animal em decúbito, incapaz de se levantar?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a decúbito.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a decúbito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "diarreia",
+      "tipo": "pergunta",
+      "nome": "Diarreia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com diarreia?",
+        "veterinario": "Presença de diarreia?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a diarreia.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a diarreia."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "dias_em_lactacao",
+      "tipo": "ficha",
+      "nome": "Dias em lactação",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 1000.0,
+        "unidade": "dias",
+        "casas_decimais": 0
+      },
+      "pergunta": {
+        "produtor": "Há quantos dias a vaca pariu?",
+        "veterinario": "Dias transcorridos desde o último parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a dias em lactação.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a dias em lactação."
+      },
+      "campo_ficha": "dias_em_lactacao",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "dor_flexao_talao",
+      "tipo": "pergunta",
+      "nome": "Dor na região do talão",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca demonstra dor na região do talão ao se movimentar?",
+        "veterinario": "Dor localizada na região dos bulbos do talão?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a dor na região do talão.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a dor na região do talão."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "esfregaco_hemoparasitas",
+      "tipo": "pergunta",
+      "nome": "Hemoparasitas no esfregaço",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a hemoparasitas no esfregaço."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "extremidades",
+      "tipo": "pergunta",
+      "nome": "Temperatura ao toque das extremidades",
+      "dominio": {
+        "tipo": "categorico",
+        "valores": [
+          "normal",
+          "quente",
+          "fria"
+        ]
+      },
+      "pergunta": {
+        "produtor": "As orelhas e as patas parecem normais, quentes ou frias ao toque?",
+        "veterinario": "Extremidades normais, quentes ou frias à palpação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fezes_aquosas_espuma_graos",
+      "tipo": "pergunta",
+      "nome": "Fezes com espuma e grãos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+        "veterinario": "Fezes aquosas, com espuma ou grãos não digeridos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fita_urina_corpos_cetonicos",
+      "tipo": "pergunta",
+      "nome": "Corpos cetônicos na urina",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Teste urinário para corpos cetônicos positivo, lido no tempo indicado pelo fabricante?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a corpos cetônicos na urina."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "flanco_esquerdo_afundado",
+      "tipo": "pergunta",
+      "nome": "Flanco esquerdo afundado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A região do flanco esquerdo parece mais afundada que o habitual?",
+        "veterinario": "Fossa paralombar esquerda retraída?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "halito_adocicado_acetona",
+      "tipo": "pergunta",
+      "nome": "Hálito adocicado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+        "veterinario": "Odor adocicado ou de acetona no hálito?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a hálito adocicado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "leite_alterado",
+      "tipo": "pergunta",
+      "nome": "Alteração visível do leite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O leite apresenta grumos, sangue ou aspecto aguado?",
+        "veterinario": "Alteração macroscópica do leite?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a alteração visível do leite.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a alteração visível do leite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "lesao_erosiva_talao_morango",
+      "tipo": "pergunta",
+      "nome": "Lesão característica no talão",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a lesão característica no talão."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "mucosas_palidas_ou_ictericas",
+      "tipo": "pergunta",
+      "nome": "Mucosas pálidas ou amareladas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+        "veterinario": "Mucosas pálidas ou ictéricas à inspeção?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "mudanca_abrupta_concentrado",
+      "tipo": "pergunta",
+      "nome": "Mudança abrupta de concentrado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Houve aumento brusco de ração ou acesso excessivo a grãos?",
+        "veterinario": "Mudança abrupta de concentrado ou acesso excessivo a grãos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a mudança abrupta de concentrado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a mudança abrupta de concentrado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pescoco_em_s",
+      "tipo": "pergunta",
+      "nome": "Desvio cervical em S",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca mantém o pescoço curvado em forma de S?",
+        "veterinario": "Desvio cervical em S observado?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a desvio cervical em s.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a desvio cervical em s."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ph_ruminal",
+      "tipo": "pergunta",
+      "nome": "pH ruminal",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 14.0,
+        "unidade": "pH",
+        "casas_decimais": 1
+      },
+      "pergunta": {
+        "veterinario": "Qual é o pH ruminal medido, considerando método e momento da coleta?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ph ruminal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ping_metalico_flanco_esquerdo",
+      "tipo": "pergunta",
+      "nome": "Ping no flanco esquerdo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Ping metálico no flanco esquerdo à percussão e auscultação simultâneas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco esquerdo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "queda_producao",
+      "tipo": "pergunta",
+      "nome": "Queda de produção de leite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A produção de leite caiu em relação ao habitual?",
+        "veterinario": "Queda da produção em relação ao padrão individual?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a queda de produção de leite.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a queda de produção de leite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "recusa_concentrado_come_volumoso",
+      "tipo": "pergunta",
+      "nome": "Recusa seletiva de concentrado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca recusa a ração, mas ainda come capim ou feno?",
+        "veterinario": "Recusa de concentrado com manutenção da ingestão de volumoso?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "retencao_placenta",
+      "tipo": "ficha",
+      "nome": "Histórico de retenção de placenta",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Houve retenção de placenta neste parto?",
+        "veterinario": "Retenção de membranas fetais após o último parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
+      },
+      "campo_ficha": "retencao_placenta",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "temperatura_retal",
+      "tipo": "pergunta",
+      "nome": "Temperatura retal",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 30.0,
+        "max": 45.0,
+        "unidade": "°C",
+        "casas_decimais": 1
+      },
+      "pergunta": {
+        "veterinario": "Qual é a temperatura retal medida em °C?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a temperatura retal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "teste_caneca_grumos",
+      "tipo": "pergunta",
+      "nome": "Grumos na caneca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O teste da caneca mostrou grumos no leite?",
+        "veterinario": "Grumos detectados no teste da caneca?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a grumos na caneca."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ubere_inflamado",
+      "tipo": "pergunta",
+      "nome": "Inflamação do úbere",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O úbere está inchado, quente ou dolorido?",
+        "veterinario": "Há edema, calor ou dor no úbere?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a inflamação do úbere.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a inflamação do úbere."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "urina_escura",
+      "tipo": "pergunta",
+      "nome": "Urina escura",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A urina está avermelhada ou escura como café?",
+        "veterinario": "Urina avermelhada ou castanha observada?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a urina escura.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a urina escura."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "utero_aumentado_palpacao",
+      "tipo": "pergunta",
+      "nome": "Aumento uterino à palpação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Útero aumentado à palpação retal, considerado o período após o parto?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a aumento uterino à palpação."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "evidencia_alteracao_leite",
+      "tipo": "derivado",
+      "nome": "Evidência agrupada de alteração do leite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "max"
+    },
+    {
+      "id": "febre",
+      "tipo": "derivado",
+      "nome": "Febre",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "hipotermia",
+      "tipo": "derivado",
+      "nome": "Hipotermia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "inicio_lactacao",
+      "tipo": "derivado",
+      "nome": "Inicio lactacao",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "periparto_imediato",
+      "tipo": "derivado",
+      "nome": "Periparto imediato",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "puerperio",
+      "tipo": "derivado",
+      "nome": "Puerperio",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "acidose",
+      "tipo": "doenca",
+      "nome": "Acidose Ruminal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "cetose",
+      "tipo": "doenca",
+      "nome": "Cetose / Hipercetonemia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "dermatite_digital",
+      "tipo": "doenca",
+      "nome": "Dermatite Digital Bovina",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "baixa",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "deslocamento_abomaso",
+      "tipo": "doenca",
+      "nome": "Deslocamento de Abomaso",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "hipocalcemia",
+      "tipo": "doenca",
+      "nome": "Hipocalcemia Puerperal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "mastite",
+      "tipo": "doenca",
+      "nome": "Mastite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "metrite",
+      "tipo": "doenca",
+      "nome": "Metrite Puerperal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tpb",
+      "tipo": "doenca",
+      "nome": "Tristeza Parasitária Bovina",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "chamar_agora",
+      "tipo": "urgencia",
+      "nome": "Atendimento Veterinário Imediato",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "observar",
+      "tipo": "urgencia",
+      "nome": "Monitoramento Clínico Contínuo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "sem_problema",
+      "tipo": "urgencia",
+      "nome": "Sem evidência de urgência pelos critérios da base",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-DER-01",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 3.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "periparto_imediato",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela padrão de risco para distúrbios puerperais agudos imediatos."
+    },
+    {
+      "id": "R-DER-02",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 21.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "puerperio",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela clínica padronizada de puerpério e involução uterina primária."
+    },
+    {
+      "id": "R-DER-03",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 42.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "inicio_lactacao",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela de seis semanas adotada pela especificação do projeto; não exclui doença fora desse período."
+    },
+    {
+      "id": "R-DER-04",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "≥",
+          "valor": 39.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": 0.95
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura no corte operacional de febre; o contexto clínico e ambiental permanece necessário."
+    },
+    {
+      "id": "R-DER-05",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "<",
+          "valor": 38.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotermia",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura abaixo do corte operacional de hipotermia; não identifica sua causa."
+    },
+    {
+      "id": "R-DER-06",
+      "se": [
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "fria",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotermia",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Extremidades frias são um indício indireto, de menor confiança, de hipotermia ou comprometimento circulatório."
+    },
+    {
+      "id": "R-DER-07",
+      "se": [
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "quente",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Calor periférico percebido ao toque é um indício indireto de febre; não substitui termometria."
+    },
+    {
+      "id": "R-DER-08",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "<",
+          "valor": 39.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": -0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Medição abaixo do corte operacional de febre fornece evidência contrária; não exclui infecção."
+    },
+    {
+      "id": "R-DER-09",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "≥",
+          "valor": 38.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotermia",
+        "cf": -0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Medição acima do corte operacional fornece evidência contrária à hipotermia central; extremidades frias podem ter outras causas."
+    },
+    {
+      "id": "R-DER-10",
+      "se": [
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Extremidades percebidas como normais são evidência contrária fraca à febre; não substituem termometria."
+    },
+    {
+      "id": "R-MAS-01",
+      "se": [
+        {
+          "simbolo": "leite_alterado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "evidencia_alteracao_leite",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Alteração macroscópica do leite alimenta o grupo de evidência mamária compartilhado com a caneca."
+    },
+    {
+      "id": "R-MAS-03",
+      "se": [
+        {
+          "simbolo": "teste_caneca_grumos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "evidencia_alteracao_leite",
+        "cf": 0.65
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Grumos na caneca alimentam o mesmo grupo da alteração visual do leite, evitando contagem duplicada."
+    },
+    {
+      "id": "R-CET-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Hiporexia e queda de produção no início da lactação são sinais inespecíficos; outras doenças podem coexistir."
+    },
+    {
+      "id": "R-DAB-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
+    },
+    {
+      "id": "R-HIP-02",
+      "se": [
+        {
+          "simbolo": "periparto_imediato",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "pescoco_em_s",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "hipotermia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Perda do tônus cervical e hipotermia periférica sustentam fase parética clínica."
+    },
+    {
+      "id": "R-MET-02",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento inespecífico somado a febre no puerpério sugere complicação infecciosa uterina."
+    },
+    {
+      "id": "R-MET-03",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "utero_aumentado_palpacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aumento uterino no puerpério recebe apoio apenas quando há corrimento vaginal anormal; tamanho isolado não confirma infecção."
+    },
+    {
+      "id": "R-ACI-01",
+      "se": [
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Hiporexia com fezes diarreicas sugere distúrbio fermentativo gastrointestinal."
+    },
+    {
+      "id": "R-ACI-02",
+      "se": [
+        {
+          "simbolo": "mudanca_abrupta_concentrado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.55
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sobrecarga alimentar de grãos associada à diarreia aponta fermentação ruminal acelerada."
+    },
+    {
+      "id": "R-CET-02",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "halito_adocicado_acetona",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Relato de odor de acetona pode apoiar a hipótese, mas é subjetivo e requer confirmação."
+    },
+    {
+      "id": "R-CET-03",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "recusa_concentrado_come_volumoso",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Recusa seletiva de concentrado é um achado inespecífico e não confirma cetose isoladamente."
+    },
+    {
+      "id": "R-DAB-02",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "flanco_esquerdo_afundado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
+    },
+    {
+      "id": "R-DD-02",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dor_flexao_talao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Dor no talão com claudicação localiza o problema, mas não substitui inspeção de lesão característica."
+    },
+    {
+      "id": "R-HIP-01",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "periparto_imediato",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.65
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vaca caída nas primeiras 72 horas pós-parto sugere paresia por hipocalcemia puerperal."
+    },
+    {
+      "id": "R-MET-01",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_fetido",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.75
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia."
+    },
+    {
+      "id": "R-MET-04",
+      "se": [
+        {
+          "simbolo": "retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.25
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retenção de membranas fetais é fator de risco epidemiológico para infecção ascendente."
+    },
+    {
+      "id": "R-TPB-01",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "urina_escura",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+      "status": "suposicao_a_validar",
+      "nota": "Combinação de febre aguda e hemoglobinúria por hemólise intravascular típica de babesiose."
+    },
+    {
+      "id": "R-TPB-03",
+      "se": [
+        {
+          "simbolo": "carrapatos_historico_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+      "status": "suposicao_a_validar",
+      "nota": "Exposição ao vetor carrapato combinada com febre é indicativo epidemiológico inicial."
+    },
+    {
+      "id": "R-ACI-03",
+      "se": [
+        {
+          "simbolo": "fezes_aquosas_espuma_graos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Fezes aquosas, espuma e grãos não digeridos apoiam distúrbio digestivo, sem confirmar a etiologia."
+    },
+    {
+      "id": "R-ACI-04",
+      "se": [
+        {
+          "simbolo": "ph_ruminal",
+          "op": "<",
+          "valor": 5.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.88
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "pH ruminal abaixo de 5,5 apoia acidificação ruminal conforme método, horário da coleta e quadro clínico; não confirma sozinho acidose sistêmica nem distingue apresentação aguda de subaguda."
+    },
+    {
+      "id": "R-CET-04",
+      "se": [
+        {
+          "simbolo": "bhb_sanguineo",
+          "op": "≥",
+          "valor": 1.2,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "BHB sanguíneo de pelo menos 1,2 mmol/L é compatível com hipercetonemia; sinais adicionais são necessários para caracterizar cetose clínica."
+    },
+    {
+      "id": "R-CET-05",
+      "se": [
+        {
+          "simbolo": "fita_urina_corpos_cetonicos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica."
+    },
+    {
+      "id": "R-DAB-03",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo."
+    },
+    {
+      "id": "R-DD-01",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Claudicação é inespecífica e pode decorrer de várias doenças locomotoras."
+    },
+    {
+      "id": "R-DD-03",
+      "se": [
+        {
+          "simbolo": "lesao_erosiva_talao_morango",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Lesão ulcerativa circunscrita e granulomatosa no espaço interdigital/talão com aspecto de framboesa/morango."
+    },
+    {
+      "id": "R-HIP-03",
+      "se": [
+        {
+          "simbolo": "calcio_serico",
+          "op": "<",
+          "valor": 1.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Cálcio sérico total < 1,5 mmol/L (ou < 6,0 mg/dL) confirma hipocalcemia bioquímica acentuada."
+    },
+    {
+      "id": "R-HIP-04",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Paresia puerperal clássica é afebril; presença de pirexia enfraquece a hipótese primária."
+    },
+    {
+      "id": "R-MAS-02",
+      "se": [
+        {
+          "simbolo": "ubere_inflamado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "mastite",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Edema, calor ou dor no úbere sustentam inflamação mamária; não identificam isoladamente o agente causal."
+    },
+    {
+      "id": "R-MAS-04",
+      "se": [
+        {
+          "simbolo": "cmt_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "mastite",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "CMT reagente indica aumento de células somáticas e sustenta inflamação; não diferencia sozinho mastite clínica de subclínica."
+    },
+    {
+      "id": "R-MAS-05",
+      "se": [
+        {
+          "simbolo": "evidencia_alteracao_leite",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "mastite",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Propaga a maior evidência de alteração do leite sem somar novamente o resultado da caneca. A multiplicação por 0,99 evita peso unitário fora do contrato."
+    },
+    {
+      "id": "R-TPB-02",
+      "se": [
+        {
+          "simbolo": "mucosas_palidas_ou_ictericas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Palidez ou icterícia mantêm TPB entre as hipóteses mesmo sem febre na medição atual; não identificam a causa da anemia ou icterícia."
+    },
+    {
+      "id": "R-TPB-04",
+      "se": [
+        {
+          "simbolo": "esfregaco_hemoparasitas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+      "status": "suposicao_a_validar",
+      "nota": "Esfregaço compatível sustenta infecção por hemoparasitas, mesmo sem febre atual; não distingue sozinho doença ativa de estado de portador."
+    },
+    {
+      "id": "R-BV-05",
+      "se": [
+        {
+          "simbolo": "ubere_inflamado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Alteração inflamatória do úbere com febre e apatia sugere comprometimento sistêmico e atende ao critério de alerta."
+    },
+    {
+      "id": "R-BV-03",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "ausente",
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ausência de apetite associada à apatia atende ao critério de alerta do projeto."
+    },
+    {
+      "id": "R-BV-04",
+      "se": [
+        {
+          "simbolo": "hipotermia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Evidência de hipotermia com apatia atende ao critério de alerta do projeto; não confirma choque."
+    },
+    {
+      "id": "R-BV-01",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Incapacidade de se levantar exige avaliação veterinária imediata, independentemente da hipótese causal."
+    },
+    {
+      "id": "R-BV-02",
+      "se": [
+        {
+          "simbolo": "urina_escura",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Urina escura é sinal de alerta adotado pelo projeto; a cor isolada não identifica hemoglobinúria nem sua causa."
+    },
+    {
+      "id": "R-BV-06",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "≥",
+          "valor": 41.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura medida de pelo menos 41 °C atende ao corte de alerta do projeto; não identifica a causa."
+    },
+    {
+      "id": "R-URG-01",
+      "se": [
+        {
+          "simbolo": "hipocalcemia",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de hipocalcemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-02",
+      "se": [
+        {
+          "simbolo": "tpb",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de tpb é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-03",
+      "se": [
+        {
+          "simbolo": "deslocamento_abomaso",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-04",
+      "se": [
+        {
+          "simbolo": "metrite",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de metrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-05",
+      "se": [
+        {
+          "simbolo": "mastite",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de mastite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-06",
+      "se": [
+        {
+          "simbolo": "cetose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de cetose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-07",
+      "se": [
+        {
+          "simbolo": "acidose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de acidose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-URG-08",
+      "se": [
+        {
+          "simbolo": "dermatite_digital",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.7
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de dermatite_digital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-ACI-05",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de acidose ruminal."
+    },
+    {
+      "id": "R-CET-06",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de cetose."
+    },
+    {
+      "id": "R-DAB-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso."
+    },
+    {
+      "id": "R-HIP-05",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 3.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vaca caída fora do periparto imediato ainda sugere, com peso baixo, hipocalcemia."
+    },
+    {
+      "id": "R-HIP-06",
+      "se": [
+        {
+          "simbolo": "hipotermia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 3.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.15
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia."
+    }
+  ],
+  "layout": {}
+}

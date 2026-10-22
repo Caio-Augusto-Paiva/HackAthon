@@ -64,7 +64,6 @@ export function Parecer() {
       </section>
       {nenhumaConfirmada && <section role="status" className={estilos.nadaFechou}>
         <p>Nenhuma doença foi confirmada com as respostas dadas. Responda mais perguntas para o sistema calcular as chances.</p>
-        <Link className={estilos.continuarAviso} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Continuar respondendo</Link>
       </section>}
       <aside role="note" aria-labelledby="titulo-laudo" className={estilos.laudo}>
         <h2 id="titulo-laudo">Este parecer não é um laudo</h2>

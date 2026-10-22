@@ -748,6 +748,41 @@
       "file_type": "concept",
       "source_file": "base/fonte/doencas/dermatite_digital.json",
       "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-ACI-05",
+      "label": "R-ACI-05: SE Apetite ENTÃO Acidose Ruminal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CET-06",
+      "label": "R-CET-06: SE Apetite ENTÃO Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAB-04",
+      "label": "R-DAB-04: SE Apetite ENTÃO Deslocamento de Abomaso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HIP-05",
+      "label": "R-HIP-05: SE Decúbito E Dias em lactação ENTÃO Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HIP-06",
+      "label": "R-HIP-06: SE Hipotermia E Dias em lactação ENTÃO Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "classe": "evidencia"
     }
   ],
   "edges": [
@@ -1765,6 +1800,95 @@
       "confidence": "EXTRACTED",
       "source_file": "base/fonte/doencas/dermatite_digital.json",
       "cf": 0.7
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-ACI-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-ACI-05",
+      "target": "sim:acidose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/acidose.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-CET-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CET-06",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cetose.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAB-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "regra:R-DAB-04",
+      "target": "sim:deslocamento_abomaso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:decubito",
+      "target": "regra:R-HIP-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-HIP-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-05",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.2
+    },
+    {
+      "source": "sim:hipotermia",
+      "target": "regra:R-HIP-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-HIP-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-06",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "cf": 0.15
     }
   ],
   "hyperedges": [],

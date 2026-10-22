@@ -5,7 +5,7 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 107 nodes · 137 edges · 9 communities
+- 112 nodes · 149 edges · 9 communities
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -23,26 +23,26 @@
 ## God Nodes (most connected - your core abstractions)
 1. `Atendimento Veterinário Imediato` - 10 edges
 2. `Febre` - 9 edges
-3. `Inicio lactacao` - 6 edges
-4. `Cetose / Hipercetonemia` - 6 edges
-5. `Temperatura retal` - 5 edges
-6. `Hipotermia` - 5 edges
-7. `Puerperio` - 5 edges
-8. `Acidose Ruminal` - 5 edges
-9. `Hipocalcemia Puerperal` - 5 edges
-10. `Metrite Puerperal` - 5 edges
+3. `Apetite` - 7 edges
+4. `Cetose / Hipercetonemia` - 7 edges
+5. `Hipocalcemia Puerperal` - 7 edges
+6. `Hipotermia` - 6 edges
+7. `Inicio lactacao` - 6 edges
+8. `Acidose Ruminal` - 6 edges
+9. `Dias em lactação` - 5 edges
+10. `Temperatura retal` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Temperatura retal` --condicao_de--> `R-DER-05: SE Temperatura retal ENTÃO Hipotermia`  [EXTRACTED]
+- `Apetite` --condicao_de--> `R-ACI-05: SE Apetite ENTÃO Acidose Ruminal`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/acidose.json
+- `Apetite` --condicao_de--> `R-CET-06: SE Apetite ENTÃO Cetose / Hipercetonemia`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/cetose.json
+- `Apetite` --condicao_de--> `R-DAB-04: SE Apetite ENTÃO Deslocamento de Abomaso`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/deslocamento_abomaso.json
+- `Dias em lactação` --condicao_de--> `R-DER-01: SE Dias em lactação ENTÃO Periparto imediato`  [EXTRACTED]
   base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
-- `Temperatura retal` --condicao_de--> `R-DER-09: SE Temperatura retal ENTÃO Hipotermia`  [EXTRACTED]
-  base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
-- `Febre` --condicao_de--> `R-HIP-04: SE Febre ENTÃO Hipocalcemia Puerperal`  [EXTRACTED]
-  base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
-- `R-URG-01: SE Hipocalcemia Puerperal ENTÃO Atendimento Veterinário Imediato` --conclui--> `Atendimento Veterinário Imediato`  [EXTRACTED]
-  base/fonte/doencas/hipocalcemia.json → base/fonte/comum.json
-- `R-URG-02: SE Tristeza Parasitária Bovina ENTÃO Atendimento Veterinário Imediato` --conclui--> `Atendimento Veterinário Imediato`  [EXTRACTED]
-  base/fonte/doencas/tpb.json → base/fonte/comum.json
+- `Dias em lactação` --condicao_de--> `R-DER-02: SE Dias em lactação ENTÃO Puerperio`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/metrite.json
 
 ## Communities (9 total, 0 thin omitted)
 
@@ -51,24 +51,24 @@ Cohesion: 0.10
 Nodes (22): Apatia, Apetite, Dias em lactação, Temperatura ao toque das extremidades, Queda de produção de leite, Temperatura retal, Febre, Inicio lactacao (+14 more)
 
 ### Community 1 - "Acidose Ruminal"
-Cohesion: 0.22
-Nodes (10): Diarreia, Fezes com espuma e grãos, Mudança abrupta de concentrado, pH ruminal, Acidose Ruminal, R-ACI-01: SE Diarreia E Apetite ENTÃO Acidose Ruminal, R-ACI-02: SE Mudança abrupta de concentrado E Diarreia ENTÃO Acidose Ruminal, R-ACI-03: SE Fezes com espuma e grãos ENTÃO Acidose Ruminal (+2 more)
+Cohesion: 0.20
+Nodes (11): Diarreia, Fezes com espuma e grãos, Mudança abrupta de concentrado, pH ruminal, Acidose Ruminal, R-ACI-01: SE Diarreia E Apetite ENTÃO Acidose Ruminal, R-ACI-02: SE Mudança abrupta de concentrado E Diarreia ENTÃO Acidose Ruminal, R-ACI-03: SE Fezes com espuma e grãos ENTÃO Acidose Ruminal (+3 more)
 
 ### Community 2 - "Cetose / Hipercetonemia"
-Cohesion: 0.18
-Nodes (11): BHB sanguíneo, Corpos cetônicos na urina, Hálito adocicado, Recusa seletiva de concentrado, Cetose / Hipercetonemia, R-CET-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia, R-CET-02: SE Inicio lactacao E Hálito adocicado ENTÃO Cetose / Hipercetonemia, R-CET-03: SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia (+3 more)
+Cohesion: 0.17
+Nodes (12): BHB sanguíneo, Corpos cetônicos na urina, Hálito adocicado, Recusa seletiva de concentrado, Cetose / Hipercetonemia, R-CET-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia, R-CET-02: SE Inicio lactacao E Hálito adocicado ENTÃO Cetose / Hipercetonemia, R-CET-03: SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia (+4 more)
 
 ### Community 3 - "Dermatite Digital Bovina"
 Cohesion: 0.29
 Nodes (8): Claudicação, Dor na região do talão, Lesão característica no talão, Dermatite Digital Bovina, R-DD-02: SE Claudicação E Dor na região do talão ENTÃO Dermatite Digital Bovina, R-DD-01: SE Claudicação ENTÃO Dermatite Digital Bovina, R-DD-03: SE Lesão característica no talão ENTÃO Dermatite Digital Bovina, R-URG-08: SE Dermatite Digital Bovina ENTÃO Monitoramento Clínico Contínuo
 
 ### Community 4 - "Deslocamento de Abomaso"
-Cohesion: 0.29
-Nodes (7): Flanco esquerdo afundado, Ping no flanco esquerdo, Deslocamento de Abomaso, R-DAB-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso, R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso, R-DAB-03: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso, R-URG-03: SE Deslocamento de Abomaso ENTÃO Atendimento Veterinário Imediato
+Cohesion: 0.25
+Nodes (8): Flanco esquerdo afundado, Ping no flanco esquerdo, Deslocamento de Abomaso, R-DAB-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso, R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso, R-DAB-03: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso, R-URG-03: SE Deslocamento de Abomaso ENTÃO Atendimento Veterinário Imediato, R-DAB-04: SE Apetite ENTÃO Deslocamento de Abomaso
 
 ### Community 5 - "Hipocalcemia Puerperal"
 Cohesion: 0.14
-Nodes (15): Cálcio sérico total, Decúbito, Desvio cervical em S, Hipotermia, Periparto imediato, Hipocalcemia Puerperal, R-DER-01: SE Dias em lactação ENTÃO Periparto imediato, R-DER-05: SE Temperatura retal ENTÃO Hipotermia (+7 more)
+Nodes (17): Cálcio sérico total, Decúbito, Desvio cervical em S, Hipotermia, Periparto imediato, Hipocalcemia Puerperal, R-DER-01: SE Dias em lactação ENTÃO Periparto imediato, R-DER-05: SE Temperatura retal ENTÃO Hipotermia (+9 more)
 
 ### Community 6 - "Mastite"
 Cohesion: 0.17

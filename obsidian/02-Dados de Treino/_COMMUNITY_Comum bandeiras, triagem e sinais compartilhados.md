@@ -41,12 +41,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Hipocalcemia Puerperal]]
-- 6 edges to [[_COMMUNITY_Cetose  Hipercetonemia]]
-- 5 edges to [[_COMMUNITY_Deslocamento de Abomaso]]
+- 10 edges to [[_COMMUNITY_Hipocalcemia Puerperal]]
+- 7 edges to [[_COMMUNITY_Cetose  Hipercetonemia]]
+- 6 edges to [[_COMMUNITY_Deslocamento de Abomaso]]
 - 4 edges to [[_COMMUNITY_Tristeza Parasitária Bovina]]
+- 3 edges to [[_COMMUNITY_Acidose Ruminal]]
 - 3 edges to [[_COMMUNITY_Metrite Puerperal]]
-- 2 edges to [[_COMMUNITY_Acidose Ruminal]]
 - 2 edges to [[_COMMUNITY_Mastite]]
 - 1 edge to [[_COMMUNITY_Dermatite Digital Bovina]]
 
@@ -54,5 +54,5 @@ SORT file.name ASC
 - [[Atendimento Veterinário Imediato]] - degree 10, connects to 4 communities
 - [[Monitoramento Clínico Contínuo]] - degree 4, connects to 4 communities
 - [[Febre]] - degree 9, connects to 3 communities
-- [[Apetite]] - degree 4, connects to 3 communities
+- [[Apetite]] - degree 7, connects to 3 communities
 - [[Inicio lactacao]] - degree 6, connects to 2 communities

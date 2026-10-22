@@ -157,6 +157,16 @@
       "source_file": "base/fonte/doencas/acidose.json"
     },
     {
+      "id": "regra:R-ACI-05",
+      "label": "R-ACI-05: SE Apetite ENT\u00c3O Acidose Ruminal",
+      "classe": "evidencia",
+      "community": 1,
+      "community_name": "Acidose Ruminal",
+      "file_type": "concept",
+      "norm_label": "r-aci-05: se apetite entao acidose ruminal",
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
       "id": "regra:R-CET-01",
       "label": "R-CET-01: SE Inicio lactacao E Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Cetose / Hipercetonemia",
       "classe": "evidencia",
@@ -204,6 +214,16 @@
       "community_name": "Cetose / Hipercetonemia",
       "file_type": "concept",
       "norm_label": "r-cet-05: se corpos cetonicos na urina entao cetose / hipercetonemia",
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "id": "regra:R-CET-06",
+      "label": "R-CET-06: SE Apetite ENT\u00c3O Cetose / Hipercetonemia",
+      "classe": "evidencia",
+      "community": 2,
+      "community_name": "Cetose / Hipercetonemia",
+      "file_type": "concept",
+      "norm_label": "r-cet-06: se apetite entao cetose / hipercetonemia",
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
@@ -264,6 +284,16 @@
       "community_name": "Deslocamento de Abomaso",
       "file_type": "concept",
       "norm_label": "r-dab-03: se ping no flanco esquerdo entao deslocamento de abomaso",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "id": "regra:R-DAB-04",
+      "label": "R-DAB-04: SE Apetite ENT\u00c3O Deslocamento de Abomaso",
+      "classe": "evidencia",
+      "community": 4,
+      "community_name": "Deslocamento de Abomaso",
+      "file_type": "concept",
+      "norm_label": "r-dab-04: se apetite entao deslocamento de abomaso",
       "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
     },
     {
@@ -344,6 +374,26 @@
       "community_name": "Hipocalcemia Puerperal",
       "file_type": "concept",
       "norm_label": "r-hip-04: se febre entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-05",
+      "label": "R-HIP-05: SE Dec\u00fabito E Dias em lacta\u00e7\u00e3o ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 5,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-05: se decubito e dias em lactacao entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-06",
+      "label": "R-HIP-06: SE Hipotermia E Dias em lacta\u00e7\u00e3o ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 5,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-06: se hipotermia e dias em lactacao entao hipocalcemia puerperal",
       "source_file": "base/fonte/doencas/hipocalcemia.json"
     },
     {
@@ -1115,6 +1165,51 @@
       "source_file": "base/fonte/doencas/hipocalcemia.json"
     },
     {
+      "source": "regra:R-ACI-05",
+      "target": "sim:acidose",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "regra:R-CET-06",
+      "target": "sim:cetose",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-DAB-04",
+      "target": "sim:deslocamento_abomaso",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "regra:R-HIP-06",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "cf": 0.15,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-HIP-05",
+      "target": "sim:hipocalcemia",
+      "relation": "conclui",
+      "cf": 0.2,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
       "source": "regra:R-MET-04",
       "target": "sim:metrite",
       "relation": "conclui",
@@ -1632,6 +1727,14 @@
     },
     {
       "source": "sim:apetite",
+      "target": "regra:R-ACI-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/acidose.json"
+    },
+    {
+      "source": "sim:apetite",
       "target": "regra:R-CET-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -1640,7 +1743,23 @@
     },
     {
       "source": "sim:apetite",
+      "target": "regra:R-CET-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "sim:apetite",
       "target": "regra:R-DAB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAB-04",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -1743,6 +1862,14 @@
       "source_file": "base/fonte/doencas/hipocalcemia.json"
     },
     {
+      "source": "sim:decubito",
+      "target": "regra:R-HIP-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
       "source": "sim:dermatite_digital",
       "target": "regra:R-URG-08",
       "relation": "condicao_de",
@@ -1785,6 +1912,22 @@
     {
       "source": "sim:dias_em_lactacao",
       "target": "regra:R-DER-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-HIP-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-HIP-06",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -1937,6 +2080,14 @@
     {
       "source": "sim:hipotermia",
       "target": "regra:R-HIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "sim:hipotermia",
+      "target": "regra:R-HIP-06",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -2232,5 +2383,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bccf0c1119ede54522d88649154e861b9dbcb25d"
+  "built_at_commit": "c2dd78d0d2afb0e288e162613a18c3ad53880d52"
 }

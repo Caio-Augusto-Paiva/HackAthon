@@ -1,4 +1,5 @@
 """Resposta numérica digitada: a API repassa número JSON ou texto e o motor decide; nada é gravado se recusar."""
+import json
 import shutil
 from contextlib import closing
 from datetime import date, datetime
@@ -44,7 +45,7 @@ def _cliente(tmp_path, base_dir):
 
 @pytest.fixture
 def real(tmp_path):
-    """A base real copiada (v0002 ativa) e uma sessão cuja primeira tela é ``dias_em_lactacao``."""
+    """A base real copiada (versão ativa) e uma sessão cuja primeira tela é ``dias_em_lactacao``."""
     destino = tmp_path / "base_real"
     shutil.copytree(RAIZ / "base" / "versoes", destino / "versoes")
     shutil.copyfile(RAIZ / "base" / "ativa.json", destino / "ativa.json")
@@ -53,7 +54,7 @@ def real(tmp_path):
         resposta = cliente.post("/api/animais", json={"brinco": "BR-0009", "nome": "Teste", "ficha": {}})
         assert resposta.status_code == 201, resposta.text
         sessao = criar_sessao_teste(cliente, resposta.json()["id"])
-        assert sessao["versao_base"] == "v0002"
+        assert sessao["versao_base"] == json.loads((RAIZ / "base" / "ativa.json").read_text(encoding="utf-8"))["versao"]
         assert sessao["proxima"]["tela_id"] == "dias_em_lactacao"
         yield config, cliente
 
