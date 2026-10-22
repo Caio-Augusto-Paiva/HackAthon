@@ -13,7 +13,7 @@ A duração oficial não consta dos materiais fornecidos. A equipe confirmou nes
 | 3. Arquitetura disponível | Diagrama do documento 02: React, API FastAPI, SQLite, `kb`, versão ativa, motor e explicação; editor pendente | B | 1:15 |
 | 4. Raciocínio e segurança | Três camadas, premissa mínima, combinação MYCIN, seis telas e bandeiras; um único exemplo numérico | A | 1:45 |
 | 5. Base e limites clínicos | 8 doenças, 56 regras, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
-| 6. Evidência de funcionamento | Checkpoint integrado: 1066 testes Python aprovados, 1 ignorado, 170 subtestes e 34 casos sintéticos; troca de modo: 60 Vitest e 11 E2E no relatório web; não confundir com validação clínica | B | 1:00 |
+| 6. Evidência de funcionamento | Fechamento de 22/10: 1077 testes Python aprovados, 170 subtestes, 0 ignorados, 68 Vitest e 34 casos sintéticos (E2E: 6 specs, não rodados neste checkpoint; histórico `09f5754`: 1066 Python, 60 Vitest, 11 E2E); não confundir com validação clínica | B | 1:00 |
 | 7. IA e julgamento da equipe | Três exemplos comprovados: restauração direta, regra de TPB sem febre e rejeição de aprovação clínica automática; 40 s por papel | A/B/C | 2:00 |
 | 8. Riscos e próximos passos | Revisão especializada, licença, editor, limitações de coleta R15/R16, Swagger offline e ensaio físico sem rede | A | 0:45 |
 | 9. Encerramento | A decisão é reproduzível a partir da base, fatos e ordem; mostrar repositório e limitações | C | 0:30 |
@@ -39,9 +39,11 @@ powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -SemNavegador
 | 0:30–1:00 | Digitar `12,5` em dias, enviar e corrigir para `90` | Mensagem 422 junto ao campo, sem avanço; após corrigir, aparece a lateral de hipóteses |
 | 1:00–2:00 | Começar C-MAS-01 no produtor: estado térmico normal, nenhuma alteração de postura, apetite normal, leite alterado + úbere inflamado + queda de produção; abrir o por quê antes de responder | Opções fechadas e sinais mamários registrados antes da troca, na mesma sessão |
 | 2:00–2:40 | Clicar Mudar para modo especialista, ler o aviso e confirmar. Responder à temperatura retal (38,5 °C no caso fictício, digitando `38.5`) e às excreções; responder Não sei aos exames sem observação | PATCH usa `veterinario`; próxima pergunta e limite vêm da API. Os sinais anteriores permanecem; Voltar permite corrigi-los. Mudar para modo produtor faz o caminho inverso sem confirmação |
-| 2:40–3:10 | Examinar o parecer e abrir Como cheguei aqui? | Um único parecer combina as respostas de antes e depois da troca; mastite continua sustentada pelos sinais mamários. Exibir o percentual retornado pela API, sem fixar valor após exames adicionais |
+| 2:40–3:10 | Examinar o parecer e abrir Como cheguei aqui? (painel arrastável) | O painel mostra a subida de confiança por regra, com a frase Se/então e os fatos com origem. Um único parecer combina as respostas de antes e depois da troca; mastite continua sustentada pelos sinais mamários. Exibir o percentual retornado pela API, sem fixar valor após exames adicionais |
 | 3:10–3:40 | Nova verificação: caso C-HIP-01, 1 dia, extremidades frias, decúbito; mostrar a troca dentro do alerta ou abrir o parecer | Pausa e urgência chamar_agora preservadas; trocar para especialista não apaga a bandeira. Esc e clique no fundo não dispensam o alerta |
 | 3:40–4:00 | Mostrar o relatório web e declarar limitações | Casos sintéticos, editor pendente e revisão clínica não realizada; não apresentar teste automatizado como ensaio humano |
+
+Passo opcional, sem alterar os tempos totais: ao examinar o parecer, apontar o aviso fixo "Este parecer não é um laudo", presente em todos os níveis de urgência, e a página `/privacidade`. A interface foi verificada só para desktop.
 
 As ações são um roteiro estimado, não uma execução garantida em quatro minutos. A próxima pergunta depende do estado real: seguir o que a API retornar, sem forçar perguntas nem copiar um percentual antigo. O caso completo e as correções estão exercitados no E2E de troca de modo; o operador deve ensaiar o mesmo caminho antes da apresentação. No corte para uma única consulta, usar os 30 segundos do segundo caso para mostrar o traço e as limitações, mantendo o teto de 4:00.
 

@@ -53,6 +53,8 @@ O navegador renderiza `EstadoSessao.proxima`, envia números como a string digit
 - [Riscos, pendências e checklist de envio](docs/entrega/06-riscos-e-pendencias.md).
 - [Revisão técnica da Seção 6](docs/revisoes/2026-10-22-revisao-secao-6.md).
 - [Contrato detalhado do motor](engine/README.md).
+- [Grafo 2: dados de treino por doença](obsidian/02-Dados%20de%20Treino/README.md) e a [spec do grafo 2](docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md).
+- Estado no fechamento de 22/10 (após `7587de4`): 1077 testes Python aprovados, 170 subtestes aprovados, 0 ignorados; 68 Vitest em 11 arquivos; E2E (6 specs) não rodados neste checkpoint. Histórico (`09f5754`): 1066 Python, 60 Vitest, 11 E2E.
 
 ## Manter as tabelas sincronizadas
 

@@ -22,6 +22,8 @@ A IA foi usada para planejamento, revisão de contratos, exploração de falhas,
 | 22/10 | `7494e3e`, `cff6704`, `web/QUALIDADE.md` | Consulta React integrada ao backend, base ativa `v0002`, fontes e SVGs locais, verificação de acessibilidade e quatro larguras |
 | 22/10 | `1593149`, `85210ca`, `09f5754` | Troca produtor ↔ especialista na mesma sessão, histórico corrigível e parecer único; 60 testes de interface e 11 E2E no checkpoint |
 | 22/10 | `d9eda27` | Grafo e Obsidian atualizados após a integração; navegação documental separada do runtime |
+| 22/10 | `61f0994`..`f4341cd` | Fechamento de 22/10, interface: painel arrastável "Como cheguei aqui?" com a subida de confiança por regra, acento rosa, animações discretas (respeitam `prefers-reduced-motion`), aviso fixo de que o parecer não é um laudo e página `/privacidade`; feita e verificada só para desktop |
+| 22/10 | `b08bb63`, `dde47cf`, `bccf0c1`, `9a13eaa` | Fechamento de 22/10, base: fonte separada por doença (`base/fonte/`, `kb/fonte.py`), exportação do grafo exato e grafo 2 do Obsidian gerado sem IA (`kb/exportar_grafo.py`, `scripts/grafo_dados.py`); a `v0002` continua ativa. Desenho em `docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md` |
 
 O cronograma original é uma previsão, não um registro de horários cumpridos. A consulta web já pode ser demonstrada em localhost; a CLI é uma reserva. Editor gráfico, material visual final, licença e ensaio humano continuam pendentes. Os testes de software não comprovam validação clínica nem preparo da máquina reserva.
 
@@ -35,7 +37,7 @@ O cronograma original é uma previsão, não um registro de horários cumpridos.
 | 4. Pesquisar contexto do negócio | [Fontes](../fontes/fontes.md) e notas de fonte em cada regra | Pesquisa registrada; calibração pendente |
 | 5. Definir escopo e arquitetura | Especificação canônica e diagrama do documento 02 | Documentado |
 | 6. Definir regras | Base ativa `v0002` e documento 03 gerado | 56 regras disponíveis, todas como suposição |
-| 7. Implementar e testar | `engine/`, `kb/`, `api/`, `web/`, testes e casos executáveis | Checkpoint integrado: 1066 testes Python aprovados, 1 ignorado, 170 subtestes; 60 Vitest e 11 E2E, sem somar novamente os 132 unittest coletados por pytest |
+| 7. Implementar e testar | `engine/`, `kb/`, `api/`, `web/`, testes e casos executáveis | Fechamento de 22/10: 1077 testes Python aprovados, 170 subtestes aprovados, 0 ignorados; 68 Vitest em 11 arquivos; os 6 arquivos de spec E2E em `web/e2e/` não foram rodados neste checkpoint. Histórico (`09f5754`): 1066 Python aprovados, 1 ignorado, 170 subtestes; 60 Vitest e 11 E2E. Os 132 unittest já estão contidos no pytest |
 | 8. Estudar e entender a produção | Perguntas de treino do documento 05 | Ensaio individual e cruzado a registrar pelo grupo |
 
 ## Julgamento sobre sugestões da IA
