@@ -1,0 +1,67 @@
+{
+  "colorGroups": [
+    {
+      "query": "tag:#community/Comum_bandeiras_triagem_e_sinais_compartilhados",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Acidose_Ruminal",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Cetose_/_Hipercetonemia",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Dermatite_Digital_Bovina",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Deslocamento_de_Abomaso",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Hipocalcemia_Puerperal",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Mastite",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Metrite_Puerperal",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Tristeza_Parasit\u00e1ria_Bovina",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    }
+  ]
+}

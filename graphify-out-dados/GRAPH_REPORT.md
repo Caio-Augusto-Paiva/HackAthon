@@ -1,0 +1,87 @@
+# Graph Report - fonte  (2026-10-22)
+
+## Corpus Check
+- 9 files · ~0 words
+- Verdict: corpus is large enough that graph structure adds value.
+
+## Summary
+- 107 nodes · 137 edges · 9 communities
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- Token cost: 0 input · 0 output
+
+## Community Hubs (Navigation)
+- Comum: bandeiras, triagem e sinais compartilhados
+- Acidose Ruminal
+- Cetose / Hipercetonemia
+- Dermatite Digital Bovina
+- Deslocamento de Abomaso
+- Hipocalcemia Puerperal
+- Mastite
+- Metrite Puerperal
+- Tristeza Parasitária Bovina
+
+## God Nodes (most connected - your core abstractions)
+1. `Atendimento Veterinário Imediato` - 10 edges
+2. `Febre` - 9 edges
+3. `Inicio lactacao` - 6 edges
+4. `Cetose / Hipercetonemia` - 6 edges
+5. `Temperatura retal` - 5 edges
+6. `Hipotermia` - 5 edges
+7. `Puerperio` - 5 edges
+8. `Acidose Ruminal` - 5 edges
+9. `Hipocalcemia Puerperal` - 5 edges
+10. `Metrite Puerperal` - 5 edges
+
+## Surprising Connections (you probably didn't know these)
+- `Temperatura retal` --condicao_de--> `R-DER-05: SE Temperatura retal ENTÃO Hipotermia`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
+- `Temperatura retal` --condicao_de--> `R-DER-09: SE Temperatura retal ENTÃO Hipotermia`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
+- `Febre` --condicao_de--> `R-HIP-04: SE Febre ENTÃO Hipocalcemia Puerperal`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
+- `R-URG-01: SE Hipocalcemia Puerperal ENTÃO Atendimento Veterinário Imediato` --conclui--> `Atendimento Veterinário Imediato`  [EXTRACTED]
+  base/fonte/doencas/hipocalcemia.json → base/fonte/comum.json
+- `R-URG-02: SE Tristeza Parasitária Bovina ENTÃO Atendimento Veterinário Imediato` --conclui--> `Atendimento Veterinário Imediato`  [EXTRACTED]
+  base/fonte/doencas/tpb.json → base/fonte/comum.json
+
+## Communities (9 total, 0 thin omitted)
+
+### Community 0 - "Comum: bandeiras, triagem e sinais compartilhados"
+Cohesion: 0.10
+Nodes (22): Apatia, Apetite, Dias em lactação, Temperatura ao toque das extremidades, Queda de produção de leite, Temperatura retal, Febre, Inicio lactacao (+14 more)
+
+### Community 1 - "Acidose Ruminal"
+Cohesion: 0.22
+Nodes (10): Diarreia, Fezes com espuma e grãos, Mudança abrupta de concentrado, pH ruminal, Acidose Ruminal, R-ACI-01: SE Diarreia E Apetite ENTÃO Acidose Ruminal, R-ACI-02: SE Mudança abrupta de concentrado E Diarreia ENTÃO Acidose Ruminal, R-ACI-03: SE Fezes com espuma e grãos ENTÃO Acidose Ruminal (+2 more)
+
+### Community 2 - "Cetose / Hipercetonemia"
+Cohesion: 0.18
+Nodes (11): BHB sanguíneo, Corpos cetônicos na urina, Hálito adocicado, Recusa seletiva de concentrado, Cetose / Hipercetonemia, R-CET-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia, R-CET-02: SE Inicio lactacao E Hálito adocicado ENTÃO Cetose / Hipercetonemia, R-CET-03: SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia (+3 more)
+
+### Community 3 - "Dermatite Digital Bovina"
+Cohesion: 0.29
+Nodes (8): Claudicação, Dor na região do talão, Lesão característica no talão, Dermatite Digital Bovina, R-DD-02: SE Claudicação E Dor na região do talão ENTÃO Dermatite Digital Bovina, R-DD-01: SE Claudicação ENTÃO Dermatite Digital Bovina, R-DD-03: SE Lesão característica no talão ENTÃO Dermatite Digital Bovina, R-URG-08: SE Dermatite Digital Bovina ENTÃO Monitoramento Clínico Contínuo
+
+### Community 4 - "Deslocamento de Abomaso"
+Cohesion: 0.29
+Nodes (7): Flanco esquerdo afundado, Ping no flanco esquerdo, Deslocamento de Abomaso, R-DAB-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso, R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso, R-DAB-03: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso, R-URG-03: SE Deslocamento de Abomaso ENTÃO Atendimento Veterinário Imediato
+
+### Community 5 - "Hipocalcemia Puerperal"
+Cohesion: 0.14
+Nodes (15): Cálcio sérico total, Decúbito, Desvio cervical em S, Hipotermia, Periparto imediato, Hipocalcemia Puerperal, R-DER-01: SE Dias em lactação ENTÃO Periparto imediato, R-DER-05: SE Temperatura retal ENTÃO Hipotermia (+7 more)
+
+### Community 6 - "Mastite"
+Cohesion: 0.17
+Nodes (12): CMT reagente, Alteração visível do leite, Grumos na caneca, Inflamação do úbere, Evidência agrupada de alteração do leite, Mastite, R-MAS-01: SE Alteração visível do leite ENTÃO Evidência agrupada de alteração do leite, R-MAS-03: SE Grumos na caneca ENTÃO Evidência agrupada de alteração do leite (+4 more)
+
+### Community 7 - "Metrite Puerperal"
+Cohesion: 0.23
+Nodes (12): Corrimento vaginal fétido, Corrimento vaginal, Histórico de retenção de placenta, Aumento uterino à palpação, Puerperio, Metrite Puerperal, R-DER-02: SE Dias em lactação ENTÃO Puerperio, R-MET-02: SE Corrimento vaginal E Puerperio E Febre ENTÃO Metrite Puerperal (+4 more)
+
+### Community 8 - "Tristeza Parasitária Bovina"
+Cohesion: 0.20
+Nodes (10): Exposição recente a carrapatos, Hemoparasitas no esfregaço, Mucosas pálidas ou amareladas, Urina escura, Tristeza Parasitária Bovina, R-TPB-01: SE Febre E Urina escura ENTÃO Tristeza Parasitária Bovina, R-TPB-03: SE Exposição recente a carrapatos E Febre ENTÃO Tristeza Parasitária Bovina, R-TPB-02: SE Mucosas pálidas ou amareladas ENTÃO Tristeza Parasitária Bovina (+2 more)
+
+## Knowledge Gaps
+- **23 isolated node(s):** `BHB sanguíneo`, `Cálcio sérico total`, `Exposição recente a carrapatos`, `CMT reagente`, `Corrimento vaginal fétido` (+18 more)
+  These have ≤1 connection - possible missing edges. (Counts symbols only; 23 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)

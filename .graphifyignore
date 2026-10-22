@@ -1,5 +1,5 @@
 # Grafo 1 (obsidian/01-conhecimento): só conhecimento do projeto.
-# Código fica para o grafo 2 (obsidian/02-a-definir).
+# O grafo 2 (obsidian/02-Dados de Treino) é gerado sem IA por kb/exportar_grafo.py + scripts/grafo_dados.py.
 engine/*.py
 kb/*.py
 kb/schema/
@@ -24,3 +24,6 @@ docs/prompts/
 # Saídas
 obsidian/
 graphify-out/
+# Grafo 2: fonte da base por doença e saídas do gerador
+base/fonte/
+graphify-out-dados/

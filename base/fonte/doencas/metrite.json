@@ -1,0 +1,254 @@
+{
+  "doenca": "metrite",
+  "simbolos": [
+    {
+      "id": "corrimento_fetido",
+      "tipo": "pergunta",
+      "nome": "Corrimento vaginal fétido",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A secreção da vulva tem cheiro forte e desagradável?",
+        "veterinario": "Corrimento vaginal fétido observado?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "corrimento_vaginal",
+      "tipo": "pergunta",
+      "nome": "Corrimento vaginal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há saída de secreção anormal pela vulva?",
+        "veterinario": "Presença de corrimento vaginal anormal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "retencao_placenta",
+      "tipo": "ficha",
+      "nome": "Histórico de retenção de placenta",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Houve retenção de placenta neste parto?",
+        "veterinario": "Retenção de membranas fetais após o último parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
+      },
+      "campo_ficha": "retencao_placenta",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "utero_aumentado_palpacao",
+      "tipo": "pergunta",
+      "nome": "Aumento uterino à palpação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Útero aumentado à palpação retal, considerado o período após o parto?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a aumento uterino à palpação."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "puerperio",
+      "tipo": "derivado",
+      "nome": "Puerperio",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "metrite",
+      "tipo": "doenca",
+      "nome": "Metrite Puerperal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-DER-02",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 21.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "puerperio",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela clínica padronizada de puerpério e involução uterina primária."
+    },
+    {
+      "id": "R-MET-02",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento inespecífico somado a febre no puerpério sugere complicação infecciosa uterina."
+    },
+    {
+      "id": "R-MET-03",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "utero_aumentado_palpacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aumento uterino no puerpério recebe apoio apenas quando há corrimento vaginal anormal; tamanho isolado não confirma infecção."
+    },
+    {
+      "id": "R-MET-01",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_fetido",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.75
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia."
+    },
+    {
+      "id": "R-MET-04",
+      "se": [
+        {
+          "simbolo": "retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "metrite",
+        "cf": 0.25
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retenção de membranas fetais é fator de risco epidemiológico para infecção ascendente."
+    },
+    {
+      "id": "R-URG-04",
+      "se": [
+        {
+          "simbolo": "metrite",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de metrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

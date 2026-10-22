@@ -1,0 +1,535 @@
+{
+  "meta": {
+    "versao": "v0002",
+    "pai": "v0001",
+    "autor": "equipe",
+    "data": "2026-10-22",
+    "nota": "Domínios numéricos limitados: máximo, mínimo e casas decimais para respostas digitadas.",
+    "limiares": {
+      "descarte": -0.2,
+      "premissa": 0.2,
+      "hipotese_relevante": 0.35,
+      "exaustao": 0.6,
+      "potencial": 0.7,
+      "confirmacao": 0.8,
+      "bloco_principal": 0.5,
+      "bloco_diferencial": 0.2
+    },
+    "limite_dinamico": {
+      "produtor": 12,
+      "veterinario": 25
+    },
+    "triagem": [
+      {
+        "id": "dias_em_lactacao",
+        "selecao": "unica",
+        "simbolos": [
+          "dias_em_lactacao"
+        ],
+        "texto": {
+          "produtor": "Há quantos dias ocorreu o último parto?",
+          "veterinario": "Há quantos dias ocorreu o último parto?"
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "estado_termico",
+        "selecao": "unica",
+        "simbolos": [
+          "extremidades",
+          "temperatura_retal"
+        ],
+        "texto": {
+          "produtor": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
+          "veterinario": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C."
+        },
+        "opcoes": {},
+        "simbolos_por_modo": {
+          "produtor": [
+            "extremidades"
+          ],
+          "veterinario": [
+            "temperatura_retal"
+          ]
+        }
+      },
+      {
+        "id": "atitude_locomocao",
+        "selecao": "multipla",
+        "simbolos": [
+          "apatia",
+          "claudicacao",
+          "decubito"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "apetite_ruminacao",
+        "selecao": "unica",
+        "simbolos": [
+          "apetite"
+        ],
+        "texto": {
+          "produtor": "Informe o apetite: normal, reduzido ou ausente.",
+          "veterinario": "Informe o apetite: normal, reduzido ou ausente."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "producao_leite",
+        "selecao": "multipla",
+        "simbolos": [
+          "queda_producao",
+          "leite_alterado",
+          "ubere_inflamado"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      },
+      {
+        "id": "excrecoes",
+        "selecao": "multipla",
+        "simbolos": [
+          "diarreia",
+          "corrimento_vaginal",
+          "urina_escura"
+        ],
+        "texto": {
+          "produtor": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção.",
+          "veterinario": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção."
+        },
+        "opcoes": {}
+      }
+    ]
+  },
+  "simbolos": [
+    {
+      "id": "apatia",
+      "tipo": "pergunta",
+      "nome": "Apatia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está abatida ou pouco responsiva?",
+        "veterinario": "Animal apático ou com resposta reduzida ao ambiente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a apatia.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a apatia."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "apetite",
+      "tipo": "pergunta",
+      "nome": "Apetite",
+      "dominio": {
+        "tipo": "categorico",
+        "valores": [
+          "normal",
+          "reduzido",
+          "ausente"
+        ]
+      },
+      "pergunta": {
+        "produtor": "Como está o apetite: normal, reduzido ou ausente?",
+        "veterinario": "Apetite normal, reduzido ou ausente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a apetite.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a apetite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "dias_em_lactacao",
+      "tipo": "ficha",
+      "nome": "Dias em lactação",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 1000.0,
+        "unidade": "dias",
+        "casas_decimais": 0
+      },
+      "pergunta": {
+        "produtor": "Há quantos dias a vaca pariu?",
+        "veterinario": "Dias transcorridos desde o último parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a dias em lactação.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a dias em lactação."
+      },
+      "campo_ficha": "dias_em_lactacao",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "extremidades",
+      "tipo": "pergunta",
+      "nome": "Temperatura ao toque das extremidades",
+      "dominio": {
+        "tipo": "categorico",
+        "valores": [
+          "normal",
+          "quente",
+          "fria"
+        ]
+      },
+      "pergunta": {
+        "produtor": "As orelhas e as patas parecem normais, quentes ou frias ao toque?",
+        "veterinario": "Extremidades normais, quentes ou frias à palpação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "queda_producao",
+      "tipo": "pergunta",
+      "nome": "Queda de produção de leite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A produção de leite caiu em relação ao habitual?",
+        "veterinario": "Queda da produção em relação ao padrão individual?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a queda de produção de leite.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a queda de produção de leite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "temperatura_retal",
+      "tipo": "pergunta",
+      "nome": "Temperatura retal",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 30.0,
+        "max": 45.0,
+        "unidade": "°C",
+        "casas_decimais": 1
+      },
+      "pergunta": {
+        "veterinario": "Qual é a temperatura retal medida em °C?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a temperatura retal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "febre",
+      "tipo": "derivado",
+      "nome": "Febre",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "inicio_lactacao",
+      "tipo": "derivado",
+      "nome": "Inicio lactacao",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "chamar_agora",
+      "tipo": "urgencia",
+      "nome": "Atendimento Veterinário Imediato",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "observar",
+      "tipo": "urgencia",
+      "nome": "Monitoramento Clínico Contínuo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "sem_problema",
+      "tipo": "urgencia",
+      "nome": "Sem evidência de urgência pelos critérios da base",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-DER-03",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 42.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "inicio_lactacao",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela de seis semanas adotada pela especificação do projeto; não exclui doença fora desse período."
+    },
+    {
+      "id": "R-DER-04",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "≥",
+          "valor": 39.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": 0.95
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura no corte operacional de febre; o contexto clínico e ambiental permanece necessário."
+    },
+    {
+      "id": "R-DER-07",
+      "se": [
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "quente",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Calor periférico percebido ao toque é um indício indireto de febre; não substitui termometria."
+    },
+    {
+      "id": "R-DER-08",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "<",
+          "valor": 39.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": -0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Medição abaixo do corte operacional de febre fornece evidência contrária; não exclui infecção."
+    },
+    {
+      "id": "R-DER-10",
+      "se": [
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "febre",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Extremidades percebidas como normais são evidência contrária fraca à febre; não substituem termometria."
+    },
+    {
+      "id": "R-BV-05",
+      "se": [
+        {
+          "simbolo": "ubere_inflamado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Alteração inflamatória do úbere com febre e apatia sugere comprometimento sistêmico e atende ao critério de alerta."
+    },
+    {
+      "id": "R-BV-03",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "ausente",
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ausência de apetite associada à apatia atende ao critério de alerta do projeto."
+    },
+    {
+      "id": "R-BV-04",
+      "se": [
+        {
+          "simbolo": "hipotermia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Evidência de hipotermia com apatia atende ao critério de alerta do projeto; não confirma choque."
+    },
+    {
+      "id": "R-BV-01",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Incapacidade de se levantar exige avaliação veterinária imediata, independentemente da hipótese causal."
+    },
+    {
+      "id": "R-BV-02",
+      "se": [
+        {
+          "simbolo": "urina_escura",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Urina escura é sinal de alerta adotado pelo projeto; a cor isolada não identifica hemoglobinúria nem sua causa."
+    },
+    {
+      "id": "R-BV-06",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "≥",
+          "valor": 41.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "bandeira_vermelha",
+      "prioridade": 100,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura medida de pelo menos 41 °C atende ao corte de alerta do projeto; não identifica a causa."
+    }
+  ],
+  "layout": {}
+}

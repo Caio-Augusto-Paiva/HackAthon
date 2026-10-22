@@ -1,0 +1,153 @@
+{
+  "doenca": "deslocamento_abomaso",
+  "simbolos": [
+    {
+      "id": "flanco_esquerdo_afundado",
+      "tipo": "pergunta",
+      "nome": "Flanco esquerdo afundado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A região do flanco esquerdo parece mais afundada que o habitual?",
+        "veterinario": "Fossa paralombar esquerda retraída?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ping_metalico_flanco_esquerdo",
+      "tipo": "pergunta",
+      "nome": "Ping no flanco esquerdo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Ping metálico no flanco esquerdo à percussão e auscultação simultâneas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco esquerdo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "deslocamento_abomaso",
+      "tipo": "doenca",
+      "nome": "Deslocamento de Abomaso",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-DAB-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
+    },
+    {
+      "id": "R-DAB-02",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "flanco_esquerdo_afundado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAB-03",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo."
+    },
+    {
+      "id": "R-URG-03",
+      "se": [
+        {
+          "simbolo": "deslocamento_abomaso",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}
