@@ -6,6 +6,7 @@
 .olho{transform-box:fill-box;transform-origin:50% 50%;animation:piscar 5s 1.5s infinite}
 .olho+.olho{animation-delay:1.55s}
 .sino{transform-box:fill-box;transform-origin:50% 0;animation:sino 4s 1s cubic-bezier(.45,0,.55,1) infinite}
+.corpo{transform-box:view-box;transform-origin:50% 90%;animation:balanco 4s cubic-bezier(.45,0,.55,1) infinite}
 @media (prefers-reduced-motion:reduce){.olho,.sino,.corpo{animation:none}}
 </style>
 <g id="Ilustra&#195;&#167;&#195;&#163;o/Boi">
