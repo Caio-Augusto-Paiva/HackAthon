@@ -1,12 +1,12 @@
 ---
 source_file: "AGENTS.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Busca documental sob demanda"
 location: "L5"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Busca_documental_sob_demanda
 ---
 
 # Busca direta quando o arquivo é conhecido; grafo para localizar desconhecidos
@@ -16,4 +16,4 @@ tags:
 - [[Grafo de conhecimento ferramenta de busca sob demanda]] - `semantically_similar_to` [INFERRED]
 - [[graphify query primeira opção para localizar informação desconhecida]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Busca_documental_sob_demanda

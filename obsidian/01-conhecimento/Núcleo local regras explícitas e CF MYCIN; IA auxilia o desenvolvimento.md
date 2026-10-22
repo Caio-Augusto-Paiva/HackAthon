@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Contratos e integração localhost"
+community: "Escopo e pendências reais"
 location: "L3-L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Escopo_e_pendências_reais
 ---
 
 # Núcleo local: regras explícitas e CF MYCIN; IA auxilia o desenvolvimento
@@ -16,4 +16,4 @@ tags:
 - [[IA no desenvolvimento e na documentação, fora da decisão em execução]] - `rationale_for` [EXTRACTED]
 - [[cliente envia valor ou nao_sei, nunca CF]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/rationale #graphify/EXTRACTED #community/Escopo_e_pendências_reais

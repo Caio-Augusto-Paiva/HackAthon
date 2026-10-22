@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Estado e instruções do projeto"
 location: "L84"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Estado_e_instruções_do_projeto
 ---
 
 # Processo atual: executar implementação e entrega já aprovadas
@@ -17,4 +17,4 @@ tags:
 - [[Fase atual implementação e entrega]] - `references` [EXTRACTED]
 - [[Planejamento não refazer sem pedido]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto

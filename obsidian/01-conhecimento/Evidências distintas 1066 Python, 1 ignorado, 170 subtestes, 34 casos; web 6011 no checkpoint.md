@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "concept"
-community: "Entrega, revisão e contatos"
+community: "Evidências de software e clínica"
 location: "L31"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Evidências_de_software_e_clínica
 ---
 
 # Evidências distintas: 1066 Python, 1 ignorado, 170 subtestes, 34 casos; web 60/11 no checkpoint
@@ -20,4 +20,4 @@ tags:
 - [[Verificação web 60 Vitest e 11 E2E no checkpoint 09f5754; axe nas telas exercitadas]] - `references` [EXTRACTED]
 - [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/concept #graphify/EXTRACTED #community/Evidências_de_software_e_clínica

@@ -61,9 +61,20 @@
       "financial_cost": null,
       "block": "secao-6",
       "nota": "Atualização única; totais históricos não incrementados por uso indisponível."
+    },
+    {
+      "date": "2026-10-22T16:55:50.183578+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "files": 5,
+      "semantic_files": 5,
+      "manifest_only_stamp_files": 9,
+      "usage_status": "unavailable_not_measured",
+      "financial_cost": null,
+      "block": "merge-codex-davi-grafo-final"
     }
   ],
   "total_input_tokens": 520209,
   "total_output_tokens": 0,
-  "unmeasured_runs": 5
+  "unmeasured_runs": 6
 }

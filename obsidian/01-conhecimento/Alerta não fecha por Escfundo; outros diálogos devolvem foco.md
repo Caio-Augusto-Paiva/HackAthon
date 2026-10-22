@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "concept"
-community: "Produto e limites clínicos"
+community: "Parecer, alerta e retomada"
 location: "L80"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Produto_e_limites_clínicos
+  - graphify/INFERRED
+  - community/Parecer_alerta_e_retomada
 ---
 
 # Alerta não fecha por Esc/fundo; outros diálogos devolvem foco
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Pausa exige alerta mesmo com proxima nulo]] - `semantically_similar_to` [INFERRED]
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
-- [[modal de bandeira usa ações do backend]] - `implements` [EXTRACTED]
+- [[modal de bandeira usa ações do backend]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Produto_e_limites_clínicos
+#graphify/concept #graphify/INFERRED #community/Parecer_alerta_e_retomada

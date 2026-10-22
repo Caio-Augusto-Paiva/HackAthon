@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Requisitos oficiais e evidências"
 location: "L45"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Requisitos_oficiais_e_evidências
 ---
 
 # Execução completa em localhost
@@ -16,4 +16,4 @@ tags:
 - [[Fontes oficiais A apresentação RERUM e D documentário]] - `cites` [EXTRACTED]
 - [[Temas T1 a T3 (documento D, pagina 3)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências

@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Hipocalcemia e mobilidade"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Hipocalcemia_e_mobilidade
 ---
 
 # Exemplos sintéticos de alerta e sinais mamários pela CLI
@@ -15,4 +15,4 @@ tags:
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade

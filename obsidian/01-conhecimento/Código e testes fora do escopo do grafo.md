@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Estado e instruções do projeto"
 location: "L11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Estado_e_instruções_do_projeto
 ---
 
 # Código e testes fora do escopo do grafo
@@ -15,4 +15,4 @@ tags:
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 - [[Skills nao confirmadas (FastAPI, pytest, React Flow, Vite)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto

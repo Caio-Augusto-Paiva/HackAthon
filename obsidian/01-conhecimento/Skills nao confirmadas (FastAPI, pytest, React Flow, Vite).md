@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Estado e instruções do projeto"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Estado_e_instruções_do_projeto
 ---
 
 # Skills nao confirmadas (FastAPI, pytest, React Flow, Vite)
@@ -15,4 +15,4 @@ tags:
 - [[Código e testes fora do escopo do grafo]] - `references` [EXTRACTED]
 - [[Frontend React e TypeScript; editor gráfico excluído]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Parecer, retomada e limites"
+community: "Parecer, alerta e retomada"
 location: "L122"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_retomada_e_limites
+  - community/Parecer_alerta_e_retomada
 ---
 
 # parecer de oito doenças, blocos e Como cheguei aqui
@@ -17,4 +17,4 @@ tags:
 - [[Task 6 Parecer e explicações — implementada com alcance documentado]] - `references` [EXTRACTED]
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_retomada_e_limites
+#graphify/concept #graphify/EXTRACTED #community/Parecer_alerta_e_retomada

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Requisitos oficiais e evidências"
 location: "L44"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Requisitos_oficiais_e_evidências
 ---
 
 # Restrição oficial de código aberto
@@ -18,4 +18,4 @@ tags:
 - [[Fontes oficiais A apresentação RERUM e D documentário]] - `cites` [EXTRACTED]
 - [[Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Hipocalcemia e mobilidade"
 location: "L3043"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Hipocalcemia_e_mobilidade
 ---
 
 # DEV-BV-01: passou, chamar_agora, hipocalcemia
@@ -20,4 +20,4 @@ tags:
 - [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade

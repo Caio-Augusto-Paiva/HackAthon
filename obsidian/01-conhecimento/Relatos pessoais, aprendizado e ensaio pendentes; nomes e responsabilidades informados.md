@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "rationale"
-community: "Processo documental verificável"
+community: "Entrega, revisão e contatos"
 location: "L61-L69"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Entrega_revisão_e_contatos
 ---
 
 # Relatos pessoais, aprendizado e ensaio pendentes; nomes e responsabilidades informados
@@ -18,4 +18,4 @@ tags:
 - [[Revisões independentes exigem identidade e evidência; planejamento não comprova outra família]] - `rationale_for` [EXTRACTED]
 - [[S6-07 achado histórico — Diários e prova de entendimento sem autores confirmados]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/rationale #graphify/EXTRACTED #community/Entrega_revisão_e_contatos

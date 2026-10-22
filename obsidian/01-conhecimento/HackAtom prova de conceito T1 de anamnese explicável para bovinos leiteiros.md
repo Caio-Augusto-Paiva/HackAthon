@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Integração e proveniência da base"
+community: "Escopo e pendências reais"
 location: "L1-L5"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Escopo_e_pendências_reais
 ---
 
 # HackAtom: prova de conceito T1 de anamnese explicável para bovinos leiteiros
@@ -28,4 +28,4 @@ tags:
 - [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/document #graphify/EXTRACTED #community/Escopo_e_pendências_reais

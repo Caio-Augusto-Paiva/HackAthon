@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Busca documental sob demanda"
 location: "L15"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Busca_documental_sob_demanda
 ---
 
 # graphify query: primeira opção para localizar informação desconhecida
@@ -16,4 +16,4 @@ tags:
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 - [[Grafo de conhecimento ferramenta de busca sob demanda]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Busca_documental_sob_demanda

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Base de conhecimento e anamnese"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Base_de_conhecimento_e_anamnese
 ---
 
 # Sistema especialista para anamnese de bovinos leiteiros
@@ -18,4 +18,4 @@ tags:
 - [[Motor de inferência com base e fatos explícitos]] - `references` [EXTRACTED]
 - [[T1 Anamnese sinais, histórico e triagem explicável]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Base_de_conhecimento_e_anamnese

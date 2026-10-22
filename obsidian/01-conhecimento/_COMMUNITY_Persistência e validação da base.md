@@ -1,17 +1,17 @@
 ---
 type: community
-members: 59
+members: 55
 ---
 
 # Persistência e validação da base
 
-**Members:** 59 nodes
+**Members:** 55 nodes
 
 ## Members
 - [[API README (api)]] - document - api/README.md
 - [[Arvore da secao 4.3 da especificacao (sessao, validacao, modelos)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
 - [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - concept - api/README.md
-- [[Banco SQLite fora do OneDrive]] - rationale - api/README.md
+- [[CF MYCIN com Fraction (sem arredondar para +-1)]] - rationale - engine/README.md
 - [[Camadas de símbolos (perguntaficha 0, derivado 1, doença 2, urgência 3)]] - rationale - docs/superpowers/plans/2026-10-21-kb-secao-2.md
 - [[Caso de teste da base (entrada e resultado esperado)]] - concept - docs/superpowers/plans/2026-10-21-kb-secao-2.md
 - [[Codigos do validador E00-E23 e W01-W03]] - concept - kb/README.md
@@ -45,10 +45,7 @@ members: 59
 - [[Restrições globais do kb]] - rationale - docs/superpowers/plans/2026-10-21-kb-secao-2.md
 - [[Revisao do motor de inferencia (21102026)]] - document - docs/revisoes/2026-10-21-revisao-motor.md
 - [[Revisão do motor (docsrevisoes2026-10-21-revisao-motor.md)]] - document - docs/superpowers/plans/2026-10-21-kb-secao-2.md
-- [[Script rodar.ps1  rodar.sh (execucao em localhost)]] - concept - api/README.md
 - [[Seguranca de entrada carregar_base trata texto como caminho]] - rationale - kb/README.md
-- [[Sementes de animais ficticios e reset seguro do banco]] - concept - api/README.md
-- [[Servir webdist com rota coringa propria (apifrontend.py)]] - concept - api/README.md
 - [[Sessao presa a versao da base com que nasceu]] - concept - api/README.md
 - [[Símbolo (variável da base)]] - concept - docs/superpowers/plans/2026-10-21-kb-secao-2.md
 - [[Tabela de conformidade com a especificacao (16 itens)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
@@ -60,7 +57,6 @@ members: 59
 - [[Task 5 Repositório de versões]] - document - docs/superpowers/plans/2026-10-21-kb-secao-2.md
 - [[Task 6 Integração com o motor, schema e documentação]] - document - docs/superpowers/plans/2026-10-21-kb-secao-2.md
 - [[Tela de triagem]] - concept - docs/superpowers/plans/2026-10-21-kb-secao-2.md
-- [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - concept - api/README.md
 - [[kb como pacote folha (nao importa engine)]] - rationale - kb/README.md
 - [[kbanalise.py (dependencias, ciclo, ordem topologica)]] - concept - kb/README.md
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - concept - kb/README.md
@@ -78,14 +74,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Sessões, API e motor]]
 - 2 edges to [[_COMMUNITY_Processo documental verificável]]
-- 2 edges to [[_COMMUNITY_Entrega, revisão e contatos]]
-- 1 edge to [[_COMMUNITY_Demonstração e troca de modo]]
-- 1 edge to [[_COMMUNITY_Contratos de sessão e conflitos]]
+- 2 edges to [[_COMMUNITY_Entrega e contatos da equipe]]
 - 1 edge to [[_COMMUNITY_Casos sintéticos na v0002]]
+- 1 edge to [[_COMMUNITY_Contratos e integração localhost]]
+- 1 edge to [[_COMMUNITY_Demonstração e troca de modo]]
 
 ## Top bridge nodes
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - degree 6, connects to 2 communities
 - [[API README (api)]] - degree 3, connects to 2 communities
+- [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - degree 10, connects to 1 community
 - [[Pacote kb README (base de conhecimento)]] - degree 9, connects to 1 community
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - degree 7, connects to 1 community
-- [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - degree 6, connects to 1 community

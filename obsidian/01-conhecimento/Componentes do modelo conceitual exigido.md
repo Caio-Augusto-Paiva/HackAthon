@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Componentes do sistema especialista"
 location: "L48"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Componentes_do_sistema_especialista
 ---
 
 # Componentes do modelo conceitual exigido
@@ -22,4 +22,4 @@ tags:
 - [[Memória de trabalho da sessão]] - `references` [EXTRACTED]
 - [[Motor de inferência com base e fatos explícitos]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Componentes_do_sistema_especialista

@@ -1,118 +1,416 @@
 {
-  "verified_at": "2026-10-22T15:22:03.733638+00:00",
-  "block": "secao-6",
+  "verified_at": "2026-10-22T16:56:17.261793+00:00",
+  "block": "merge-codex-davi-grafo-final",
+  "root": "C:\\Projetos\\Hackathom\\HackAtom",
+  "source_commit": "1303618e0ec20e0622331d08c411dd4a60c1682b",
   "publication_count": 1,
-  "source_commit": "9208d1dea7e9edcf694874062d38606faa6c9fe7",
-  "baseline_nodes": 818,
-  "baseline_edges": 1470,
-  "nodes": 860,
-  "edges": 1561,
-  "communities": 59,
+  "baseline_nodes": 860,
+  "baseline_edges": 1561,
+  "nodes": 887,
+  "edges": 1620,
+  "communities": 66,
   "hyperedges": 24,
-  "prior_ids_preserved": 818,
+  "prior_ids_preserved": 860,
   "missing_prior_ids": [],
-  "retired_nodes": [],
+  "document_count": 5,
+  "document_lines": 368,
   "documents": {
-    "README.md": {
-      "lines": 68,
-      "sha256": "56ff59e83cc00c975b7579741b77be752ac0a60868193edb6ccaed658caf156e"
+    "AGENTS.md": {
+      "lines": 17,
+      "sha256": "4aba335f752181ad78d3d5173ef5ce97ec3214d583631bce27b59b4b48faa44d"
     },
-    "docs/entrega/01-processo.md": {
-      "lines": 71,
-      "sha256": "283dcb26b56b1ba1e6f5b8bc91340f787e853a2cfe2a69c509df52f949544a86"
+    "CLAUDE.md": {
+      "lines": 96,
+      "sha256": "037c07fa5997a51c0c9d674de56ce7fe790cf25f8ce78428e2dede58e00e081d"
     },
-    "docs/entrega/02-arquitetura.md": {
-      "lines": 130,
-      "sha256": "455bbbb3bd460b527a5feb37250102cd13c1fd9aba607cd0bea4dcd5543743df"
+    "DESIGN.md": {
+      "lines": 87,
+      "sha256": "b65973f245bb716575496f30b660a02c66813817e5f13310ae9f96a8123f4aaa"
     },
-    "docs/entrega/05-apresentacao-e-demo.md": {
-      "lines": 146,
-      "sha256": "acaa40fc2b9729fb2dfbc84cdbde2bb2f853298e07d93bf72f746d9aab8e8cef"
+    "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md": {
+      "lines": 79,
+      "sha256": "59eb84477c39c6939788f8cb14457e820bfc08f48f1e02e1161b062bfe7ebc72"
     },
-    "docs/entrega/06-riscos-e-pendencias.md": {
-      "lines": 101,
-      "sha256": "8d842c2962fe675d7aa3357cf9719e52a6597fcb18a6f7a753e9f931f46eeddf"
-    },
-    "docs/entrega/07-ensaio-e-envio.md": {
+    "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md": {
       "lines": 89,
-      "sha256": "17900c99ddce1e48e3703cf6fb081cc641fcf2c7485626c765b87cc780224862"
-    },
-    "docs/entrega/README.md": {
-      "lines": 68,
-      "sha256": "e2e9a3805dbd5da7627c5fba2f132e0c0d18a2b057ca16112d2f5f50d2d3a7b6"
-    },
-    "docs/processo/A.md": {
-      "lines": 22,
-      "sha256": "b382c6c419a134b74b8f2787505a47ce85f62462a892b24baa33caa0f6a0c385"
-    },
-    "docs/processo/B.md": {
-      "lines": 17,
-      "sha256": "f798e0e6d517d9ba449fc2710b31e2324299d68943cfefc7ca0eb347f4f9be9c"
-    },
-    "docs/processo/C.md": {
-      "lines": 17,
-      "sha256": "9a07643385a9afa5e66765b3a5c04e78cec0cdcb920038d1cb52fce25a7f040e"
-    },
-    "docs/processo/revisoes-cruzadas.md": {
-      "lines": 28,
-      "sha256": "91c3de164321a36440bf1bcbf6d7ab21ec5a26fba1703250406713b3854042ab"
-    },
-    "docs/revisoes/2026-10-22-revisao-secao-6.md": {
-      "lines": 195,
-      "sha256": "b5042ca1ddb62e5d98c491f3fe97b9d575c7eb557e5b50e5816bb9e2c83fb4d1"
+      "sha256": "7e1ce66ed35247c892fa7ea7704c7ed7a5e3683796ef9f46460e67fbd000699a"
     }
   },
-  "document_count": 12,
-  "document_lines": 952,
-  "corpus_files": 47,
-  "corpus_words": 114054,
-  "vault_markdown_notes": 919,
-  "canvas_file_nodes": 860,
-  "canvas_groups": 59,
-  "canvas_edges": 200,
-  "vault_graph_edges_verified": 1561,
-  "broken_wikilinks": 0,
+  "checkout_normalization": {
+    "baseline_commit": "8901389",
+    "source_commit": "1303618e0ec20e0622331d08c411dd4a60c1682b",
+    "raw_changed_count": 14,
+    "unchanged_git_blob_files": [
+      "base/casos/casos.json",
+      "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json",
+      "base/desenvolvimento/casos/alerta-decubito.json",
+      "base/desenvolvimento/casos/sinais-mamarios.json",
+      "PRODUCT.md",
+      "base/desenvolvimento/LEIA-ME.txt",
+      "docs/entrega/07-ensaio-e-envio.md",
+      "docs/revisoes/2026-10-22-revisao-secao-6.md",
+      "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
+    ],
+    "actual_changed_files": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "DESIGN.md",
+      "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md",
+      "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
+    ],
+    "blob_ids_before": {
+      "AGENTS.md": "1ef6b29b012fba92e971ba85ff2185403c5963f2",
+      "CLAUDE.md": "9d3037ef6d3061cb5a83d7333af7ea4752f49236",
+      "DESIGN.md": "1bc8ec8a2aa662794ede2798f41e21863a315338",
+      "PRODUCT.md": "840804e5648cb6cfe26b086d83f18ea9741b1dd4",
+      "base/casos/casos.json": "3ed2b8116250b8ae8df21a16f3d958bfab3b1bdd",
+      "base/desenvolvimento/LEIA-ME.txt": "581f6a306d7a1c2e810cdd37f080e0b172fb6546",
+      "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": "9473090ca77ce7989ed815a461545412f3e5b9aa",
+      "base/desenvolvimento/casos/alerta-decubito.json": "59a83175d9cb1493ac83293eddd2bc349b76631a",
+      "base/desenvolvimento/casos/sinais-mamarios.json": "1926f42f48f47df95aa6d0c8e1a448b605bde964",
+      "docs/entrega/07-ensaio-e-envio.md": "4ed630f51343661fd3942466aeb7401898719499",
+      "docs/revisoes/2026-10-22-revisao-secao-6.md": "c2428c4e4e27460649cbf0da45b069ec85ade6b5",
+      "docs/superpowers/plans/2026-10-20-motor-secao-1.md": "f35315a1ab4a1c9bd0b299b31aa93de4d13faff0"
+    },
+    "blob_ids_after": {
+      "AGENTS.md": "4ffd74f1f10667e182865297dd90d6b2e6a48d90",
+      "CLAUDE.md": "290a43bb722d27be5e37a76f166392b094dca937",
+      "DESIGN.md": "71da6b7416a8c3d4e3a068e31760f5ee5d7ee389",
+      "PRODUCT.md": "840804e5648cb6cfe26b086d83f18ea9741b1dd4",
+      "base/casos/casos.json": "3ed2b8116250b8ae8df21a16f3d958bfab3b1bdd",
+      "base/desenvolvimento/LEIA-ME.txt": "581f6a306d7a1c2e810cdd37f080e0b172fb6546",
+      "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": "9473090ca77ce7989ed815a461545412f3e5b9aa",
+      "base/desenvolvimento/casos/alerta-decubito.json": "59a83175d9cb1493ac83293eddd2bc349b76631a",
+      "base/desenvolvimento/casos/sinais-mamarios.json": "1926f42f48f47df95aa6d0c8e1a448b605bde964",
+      "docs/entrega/07-ensaio-e-envio.md": "4ed630f51343661fd3942466aeb7401898719499",
+      "docs/revisoes/2026-10-22-revisao-secao-6.md": "c2428c4e4e27460649cbf0da45b069ec85ade6b5",
+      "docs/superpowers/plans/2026-10-20-motor-secao-1.md": "f35315a1ab4a1c9bd0b299b31aa93de4d13faff0",
+      "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md": "21222b8b4abdd0d120abb253e2f6b518b0ebcc35",
+      "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md": "edc9da07910ac34882fac294081fc9c4a88910e3"
+    }
+  },
+  "manifest_only_stamp_changes": {
+    "base/casos/casos.json": {
+      "before": {
+        "mtime": 1792633779.1255937,
+        "seen": 1792647333.1759186,
+        "ast_hash": "a83cdf698905035d49e5b91fde9b1e94",
+        "semantic_hash": "a83cdf698905035d49e5b91fde9b1e94"
+      },
+      "after": {
+        "mtime": 1792664978.2306435,
+        "seen": 1792688150.1715782,
+        "ast_hash": "eb199cbe15b538e02e34a2f6fcf0b19f",
+        "semantic_hash": "eb199cbe15b538e02e34a2f6fcf0b19f"
+      }
+    },
+    "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": {
+      "before": {
+        "mtime": 1792646868.8626096,
+        "seen": 1792647333.1759186,
+        "ast_hash": "98242e038aa7dc4d8d9857e37638dc36",
+        "semantic_hash": "98242e038aa7dc4d8d9857e37638dc36"
+      },
+      "after": {
+        "mtime": 1792664978.232654,
+        "seen": 1792688150.1715782,
+        "ast_hash": "811465bdaf9372a1e417276f740c931e",
+        "semantic_hash": "811465bdaf9372a1e417276f740c931e"
+      }
+    },
+    "base/desenvolvimento/casos/alerta-decubito.json": {
+      "before": {
+        "mtime": 1792633361.2017326,
+        "seen": 1792647333.1759186,
+        "ast_hash": "b8c4f35860bf2f21a7482d6f101b80a2",
+        "semantic_hash": "b8c4f35860bf2f21a7482d6f101b80a2"
+      },
+      "after": {
+        "mtime": 1792631695.5871005,
+        "seen": 1792688150.1715782,
+        "ast_hash": "6608c8fce77a73f8bcd013daf37e067e",
+        "semantic_hash": "6608c8fce77a73f8bcd013daf37e067e"
+      }
+    },
+    "base/desenvolvimento/casos/sinais-mamarios.json": {
+      "before": {
+        "mtime": 1792633361.2017326,
+        "seen": 1792647333.1759186,
+        "ast_hash": "cc749ecb9d7e7f29efda0b7e0cecdda0",
+        "semantic_hash": "cc749ecb9d7e7f29efda0b7e0cecdda0"
+      },
+      "after": {
+        "mtime": 1792631695.5880976,
+        "seen": 1792688150.1715782,
+        "ast_hash": "69988894abcf8a27e1a7fd1c6da196b1",
+        "semantic_hash": "69988894abcf8a27e1a7fd1c6da196b1"
+      }
+    },
+    "PRODUCT.md": {
+      "before": {
+        "mtime": 1792647659.7912152,
+        "seen": 1792663292.834468,
+        "ast_hash": "7f70e652352aa37f5901faec9d66b883",
+        "semantic_hash": "7f70e652352aa37f5901faec9d66b883"
+      },
+      "after": {
+        "mtime": 1792664978.2263157,
+        "seen": 1792688150.1715782,
+        "ast_hash": "9dd33b27c5979b17cd4c7352f4c816c6",
+        "semantic_hash": "9dd33b27c5979b17cd4c7352f4c816c6"
+      }
+    },
+    "base/desenvolvimento/LEIA-ME.txt": {
+      "before": {
+        "mtime": 1792634263.3158534,
+        "seen": 1792634684.460751,
+        "ast_hash": "",
+        "semantic_hash": "2b2eba804d19504c7ce6fcd344944bd8"
+      },
+      "after": {
+        "mtime": 1792664978.232654,
+        "seen": 1792688150.1715782,
+        "ast_hash": "c4c7a0665980684f3228ca7c02be7de4",
+        "semantic_hash": "c4c7a0665980684f3228ca7c02be7de4"
+      }
+    },
+    "docs/entrega/07-ensaio-e-envio.md": {
+      "before": {
+        "mtime": 1792681690.4430723,
+        "seen": 1792682491.6472223,
+        "ast_hash": "3770eb5fb6a327bb463d59f4060507a7",
+        "semantic_hash": "3770eb5fb6a327bb463d59f4060507a7"
+      },
+      "after": {
+        "mtime": 1792687103.5066273,
+        "seen": 1792688150.1715782,
+        "ast_hash": "2a65dbfe037ab0649ec12c0567ce7a0f",
+        "semantic_hash": "2a65dbfe037ab0649ec12c0567ce7a0f"
+      }
+    },
+    "docs/revisoes/2026-10-22-revisao-secao-6.md": {
+      "before": {
+        "mtime": 1792681859.3999863,
+        "seen": 1792682491.6472223,
+        "ast_hash": "b3af48e1dff34a9033dde152f7bbf494",
+        "semantic_hash": "b3af48e1dff34a9033dde152f7bbf494"
+      },
+      "after": {
+        "mtime": 1792687103.5115333,
+        "seen": 1792688150.1715782,
+        "ast_hash": "6a970dc7dde7d1c32f78858fb9acc49d",
+        "semantic_hash": "6a970dc7dde7d1c32f78858fb9acc49d"
+      }
+    },
+    "docs/superpowers/plans/2026-10-20-motor-secao-1.md": {
+      "before": {
+        "mtime": 1792633361.2411966,
+        "seen": 1792634684.460751,
+        "ast_hash": "6f013bf6d062940c80d25fc0fd8066cc",
+        "semantic_hash": "6f013bf6d062940c80d25fc0fd8066cc"
+      },
+      "after": {
+        "mtime": 1792550589.9867504,
+        "seen": 1792688150.1715782,
+        "ast_hash": "514df7c628d7ab9a5e3547b64435be8a",
+        "semantic_hash": "514df7c628d7ab9a5e3547b64435be8a"
+      }
+    }
+  },
+  "corpus_files": 49,
   "incremental_pending_files": 0,
   "deleted_files": [],
-  "hyperedge_ids_removed": [],
+  "vault_markdown_notes": 953,
+  "vault_graph_edges_verified": 1620,
+  "canvas_file_nodes": 887,
+  "canvas_groups": 66,
+  "canvas_edges": 200,
+  "broken_wikilinks": 0,
   "hyperedge_ids_added": [],
+  "hyperedge_ids_removed": [],
   "hyperedge_changes": [
     {
-      "id": "docs_entrega_05_apresentacao_e_demo_correcao_termica_segura",
-      "disposition": "update",
-      "reason": "Grupo anterior continua válido e mantém os mesmos membros e ID; texto e localização atualizados às fontes relidas, com limites de evidência explícitos.",
-      "source_file": "C:\\Projetos\\Hackathom\\worktrees\\secao5-davi\\docs\\entrega\\05-apresentacao-e-demo.md",
-      "source_location": "L52-L56"
+      "id": "claude_busca_documental_sob_demanda",
+      "disposition": "preserved_updated",
+      "reason": "Conceito e membros continuam documentados na fonte integralmente relida; ID e lista de membros preservados, texto e proveniência atualizados.",
+      "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\CLAUDE.md",
+      "source_location": "L13-L18",
+      "previous_nodes": [
+        "claude_grafo_conhecimento",
+        "claude_graphify_query",
+        "claude_obsidian_vault_conhecimento",
+        "claude_graph_report"
+      ],
+      "current_nodes": [
+        "claude_grafo_conhecimento",
+        "claude_graphify_query",
+        "claude_obsidian_vault_conhecimento",
+        "claude_graph_report"
+      ]
     },
     {
-      "id": "docs_entrega_02_arquitetura_fluxo_web_backend_integrado",
-      "disposition": "update",
-      "reason": "Grupo anterior continua válido e mantém os mesmos membros e ID; texto e localização atualizados às fontes relidas, com limites de evidência explícitos.",
-      "source_file": "C:\\Projetos\\Hackathom\\worktrees\\secao5-davi\\docs\\entrega\\02-arquitetura.md",
-      "source_location": "L59-L71"
+      "id": "claude_manutencao_unica_fim_bloco_documental",
+      "disposition": "preserved_updated",
+      "reason": "Conceito e membros continuam documentados na fonte integralmente relida; ID e lista de membros preservados, texto e proveniência atualizados.",
+      "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\CLAUDE.md",
+      "source_location": "L24-L30",
+      "previous_nodes": [
+        "claude_manter_grafo_atualizado",
+        "claude_graphify_update",
+        "claude_obsidian_vault_conhecimento",
+        "claude_exclusoes_atualizacao"
+      ],
+      "current_nodes": [
+        "claude_manter_grafo_atualizado",
+        "claude_graphify_update",
+        "claude_obsidian_vault_conhecimento",
+        "claude_exclusoes_atualizacao"
+      ]
     },
     {
-      "id": "docs_entrega_06_riscos_e_pendencias_limites_evidencia_web",
-      "disposition": "update",
-      "reason": "Grupo anterior continua válido e mantém os mesmos membros e ID; texto e localização atualizados às fontes relidas, com limites de evidência explícitos.",
-      "source_file": "C:\\Projetos\\Hackathom\\worktrees\\secao5-davi\\docs\\entrega\\06-riscos-e-pendencias.md",
-      "source_location": "L84-L91"
+      "id": "design_identidade_visual_prototipo",
+      "disposition": "preserved_updated",
+      "reason": "Conceito e membros continuam documentados na fonte integralmente relida; ID e lista de membros preservados, texto e proveniência atualizados.",
+      "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\DESIGN.md",
+      "source_location": "L50-L83",
+      "previous_nodes": [
+        "design_sistema_visual",
+        "design_tipografia",
+        "design_composicao_desktop",
+        "design_profundidade",
+        "design_formas"
+      ],
+      "current_nodes": [
+        "design_sistema_visual",
+        "design_tipografia",
+        "design_composicao_desktop",
+        "design_profundidade",
+        "design_formas"
+      ]
     }
   ],
+  "retired_edges": [],
+  "semantic_relation_reassessments": [
+    {
+      "before": {
+        "source": "docs_superpowers_plans_2026_10_22_frontend_web_modal_alerta",
+        "target": "design_dialogos",
+        "relation": "implements",
+        "_origin": "semantic",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L80",
+        "weight": 1.0
+      },
+      "after": {
+        "source": "docs_superpowers_plans_2026_10_22_frontend_web_modal_alerta",
+        "target": "design_dialogos",
+        "relation": "conceptually_related_to",
+        "_origin": "semantic",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\DESIGN.md",
+        "source_location": "L80",
+        "weight": 1.0
+      },
+      "decision": "preserve_valid_conceptual_connection_as_inference",
+      "reason": "Modal, tipografia e autoridade da API não mudaram; a ausência de citação de um ID externo não invalida uma relação explicitamente inferida."
+    },
+    {
+      "before": {
+        "source": "docs_superpowers_plans_2026_10_22_frontend_web_figma_tokens_tipografia",
+        "target": "design_tipografia",
+        "relation": "references",
+        "_origin": "semantic",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L58",
+        "weight": 1.0
+      },
+      "after": {
+        "source": "docs_superpowers_plans_2026_10_22_frontend_web_figma_tokens_tipografia",
+        "target": "design_tipografia",
+        "relation": "conceptually_related_to",
+        "_origin": "semantic",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\DESIGN.md",
+        "source_location": "L58",
+        "weight": 1.0
+      },
+      "decision": "preserve_valid_conceptual_connection_as_inference",
+      "reason": "Modal, tipografia e autoridade da API não mudaram; a ausência de citação de um ID externo não invalida uma relação explicitamente inferida."
+    },
+    {
+      "before": {
+        "source": "design_autoridade_api",
+        "target": "product_dialogo_adaptativo",
+        "relation": "semantically_similar_to",
+        "_origin": "semantic",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "DESIGN.md",
+        "source_location": "L87",
+        "weight": 1.0
+      },
+      "after": {
+        "source": "design_autoridade_api",
+        "target": "product_dialogo_adaptativo",
+        "relation": "semantically_similar_to",
+        "_origin": "semantic",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\DESIGN.md",
+        "source_location": "L87",
+        "weight": 1.0
+      },
+      "decision": "preserve_valid_conceptual_connection_as_inference",
+      "reason": "Modal, tipografia e autoridade da API não mudaram; a ausência de citação de um ID externo não invalida uma relação explicitamente inferida."
+    },
+    {
+      "before": {
+        "source": "design_dialogos",
+        "target": "product_alerta_acoes",
+        "relation": "semantically_similar_to",
+        "_origin": "semantic",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "DESIGN.md",
+        "source_location": "L80",
+        "weight": 1.0
+      },
+      "after": {
+        "source": "design_dialogos",
+        "target": "product_alerta_acoes",
+        "relation": "semantically_similar_to",
+        "_origin": "semantic",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "C:\\Projetos\\Hackathom\\HackAtom\\DESIGN.md",
+        "source_location": "L80",
+        "weight": 1.0
+      },
+      "decision": "preserve_valid_conceptual_connection_as_inference",
+      "reason": "Modal, tipografia e autoridade da API não mudaram; a ausência de citação de um ID externo não invalida uma relação explicitamente inferida."
+    }
+  ],
+  "external_source_edges_preserved": 18,
   "health": {
-    "node_count": 860,
+    "node_count": 887,
     "unverified_node_count": 0,
-    "raw_edge_count": 1561,
+    "raw_edge_count": 1620,
     "non_object_edges": 0,
     "missing_endpoint_edges": 0,
     "dangling_endpoint_edges": 0,
     "external_reference_edges": 0,
     "self_loop_edges": 0,
-    "valid_candidate_edges": 1561,
+    "valid_candidate_edges": 1620,
     "exact_duplicate_edges": 0,
-    "directed_unique_endpoint_pairs": 1561,
+    "directed_unique_endpoint_pairs": 1620,
     "directed_same_endpoint_collapsed_edges": 0,
-    "undirected_unique_endpoint_pairs": 1561,
+    "undirected_unique_endpoint_pairs": 1620,
     "undirected_same_endpoint_collapsed_edges": 0,
     "same_endpoint_group_count": 0,
     "relation_variant_groups": 0,
@@ -120,8 +418,8 @@
     "source_location_variant_groups": 0,
     "context_variant_groups": 0,
     "post_build_graph_type": "Graph",
-    "post_build_node_count": 860,
-    "post_build_edge_count": 1561,
+    "post_build_node_count": 887,
+    "post_build_edge_count": 1620,
     "post_build_error": "",
     "producer_suppression": {
       "path": "C:\\Users\\Usuario\\.codex\\skills\\graphify\\.runtime\\graphify\\extract.py",
@@ -204,21 +502,19 @@
     },
     "examples": []
   },
+  "protected_excluded_roots": [
+    "base/fonte/",
+    "graphify-out-dados/",
+    "obsidian/02-Dados de Treino/"
+  ],
   "token_usage_status": "unavailable_not_measured",
   "financial_cost": null,
   "clinical_validation": "not_performed",
-  "new_web_test_run": false,
-  "external_source_edges_preserved": 56,
-  "hyperedges_updated_with_ids_and_members_preserved": [
-    "docs_entrega_02_arquitetura_fluxo_web_backend_integrado",
-    "docs_entrega_05_apresentacao_e_demo_correcao_termica_segura",
-    "docs_entrega_06_riscos_e_pendencias_limites_evidencia_web"
-  ],
-  "unaffected_hyperedges_preserved": 21,
+  "new_test_execution": false,
   "unexpected_changed_paths": [],
   "changed_output_roots": {
-    "graphify-out": 20,
-    "obsidian/01-conhecimento": 392
+    "graphify-out": 13,
+    "obsidian/01-conhecimento": 322
   },
   "transient_files_removed": [
     ".graphify_detect.json",
@@ -226,5 +522,11 @@
     ".graphify_uncached.txt",
     ".graphify_ast.json"
   ],
-  "remaining_transient_files": []
+  "remaining_transient_files": [],
+  "hyperedges_updated_with_ids_and_members_preserved": [
+    "claude_busca_documental_sob_demanda",
+    "claude_manutencao_unica_fim_bloco_documental",
+    "design_identidade_visual_prototipo"
+  ],
+  "unaffected_hyperedges_preserved": 21
 }

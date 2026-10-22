@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Contratos e integração localhost"
+community: "Plano histórico frontend implementado"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Plano_histórico_frontend_implementado
 ---
 
 # Formato unico de erro (codigos e X-Requisicao-Id)
@@ -15,4 +15,4 @@ tags:
 - [[Mapa de 27 rotas por arquivo (prefixo api)]] - `shares_data_with` [INFERRED]
 - [[cliente tipado e ErroApi padronizado]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/concept #graphify/EXTRACTED #community/Plano_histórico_frontend_implementado

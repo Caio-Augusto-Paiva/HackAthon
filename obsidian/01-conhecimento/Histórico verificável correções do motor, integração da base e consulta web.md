@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Integração e proveniência da base"
+community: "Processo documental verificável"
 location: "L15-L24"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Processo_documental_verificável
 ---
 
 # Histórico verificável: correções do motor, integração da base e consulta web
@@ -16,4 +16,4 @@ tags:
 - [[Decisões verificáveis de motor, base e documentação]] - `references` [EXTRACTED]
 - [[Processo consolidado em 2210 integração atual e checkpoints históricos com proveniência]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável

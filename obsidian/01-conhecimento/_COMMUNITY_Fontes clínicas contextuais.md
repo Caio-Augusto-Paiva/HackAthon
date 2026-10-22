@@ -34,7 +34,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Requisitos e arquitetura conceitual]]
+- 1 edge to [[_COMMUNITY_Conduta e fontes clínicas]]
 
 ## Top bridge nodes
 - [[MSD Vet Manual]] - degree 12, connects to 1 community

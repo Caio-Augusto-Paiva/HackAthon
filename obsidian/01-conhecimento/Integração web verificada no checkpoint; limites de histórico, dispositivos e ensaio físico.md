@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Processo documental verificável"
+community: "Integração e proveniência da base"
 location: "L84-L91"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Integração_e_proveniência_da_base
 ---
 
 # Integração web verificada no checkpoint; limites de histórico, dispositivos e ensaio físico
@@ -16,4 +16,4 @@ tags:
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/rationale #graphify/EXTRACTED #community/Integração_e_proveniência_da_base

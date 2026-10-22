@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Estado e instruções do projeto"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Estado_e_instruções_do_projeto
 ---
 
 # CLAUDE.md: instruções atuais do PoC de anamnese bovina
@@ -23,7 +23,6 @@ tags:
 - [[Base explícita de conhecimento e versões imutáveis]] - `references` [EXTRACTED]
 - [[Brainstorming não refazer sem pedido]] - `references` [EXTRACTED]
 - [[Casos de teste com resultado esperado por versão da base]] - `references` [EXTRACTED]
-- [[Cofre Obsidian 01-conhecimento e reserva 02-a-definir]] - `references` [EXTRACTED]
 - [[Componentes do modelo conceitual exigido]] - `references` [EXTRACTED]
 - [[Conduta requisitos comprovados e suposições explícitas]] - `references` [EXTRACTED]
 - [[Conhecimento veterinário sempre como suposição a validar]] - `references` [EXTRACTED]
@@ -33,6 +32,7 @@ tags:
 - [[Decisão determinística e auditável]] - `references` [EXTRACTED]
 - [[Desenho canônico da anamnese bovina]] - `references` [EXTRACTED]
 - [[Desenvolvimento apoiado por agente de IA]] - `references` [EXTRACTED]
+- [[Dois cofres distintos documentação e dados determinísticos das doenças]] - `references` [EXTRACTED]
 - [[Editor gráfico da base fora do escopo do PoC]] - `references` [EXTRACTED]
 - [[Encadeamento como responsabilidade do motor]] - `references` [EXTRACTED]
 - [[Especificação e planos aprovados; implementação e entrega em curso]] - `references` [EXTRACTED]
@@ -43,6 +43,7 @@ tags:
 - [[Fontes oficiais A apresentação RERUM e D documentário]] - `references` [EXTRACTED]
 - [[Frontend React e TypeScript; editor gráfico excluído]] - `references` [EXTRACTED]
 - [[GRAPH_REPORT visão geral excepcional do projeto]] - `references` [EXTRACTED]
+- [[Grafo 2 dos dados das 8 doenças, separado do grafo documental]] - `references` [EXTRACTED]
 - [[Grafo de conhecimento ferramenta de busca sob demanda]] - `references` [EXTRACTED]
 - [[Interface que pergunta, coleta respostas e apresenta parecer]] - `references` [EXTRACTED]
 - [[LLM fora da decisão em tempo de execução]] - `references` [EXTRACTED]
@@ -68,4 +69,4 @@ tags:
 - [[graphify --update extração incremental única ao fechar o bloco]] - `references` [EXTRACTED]
 - [[graphify query primeira opção para localizar informação desconhecida]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto

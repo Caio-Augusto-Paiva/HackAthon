@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Base de conhecimento e anamnese"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Base_de_conhecimento_e_anamnese
 ---
 
 # Diretrizes passo a passo (slide 12)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Sistema especialista para anamnese de bovinos leiteiros]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Base_de_conhecimento_e_anamnese

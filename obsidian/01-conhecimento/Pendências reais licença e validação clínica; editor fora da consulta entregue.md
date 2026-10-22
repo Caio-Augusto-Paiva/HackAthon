@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Integração e proveniência da base"
+community: "Escopo e pendências reais"
 location: "L5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Escopo_e_pendências_reais
 ---
 
 # Pendências reais: licença e validação clínica; editor fora da consulta entregue
@@ -17,4 +17,4 @@ tags:
 - [[Integração implementada React, FastAPIPydantic, SQLite e scripts localhost]] - `conceptually_related_to` [EXTRACTED]
 - [[S6-01 achado histórico — Promessa de editor na apresentação]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/concept #graphify/EXTRACTED #community/Escopo_e_pendências_reais

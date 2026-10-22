@@ -2,7 +2,7 @@
 source_file: "DESIGN.md"
 type: "concept"
 community: "Sistema visual e componentes"
-location: "L42"
+location: "L42-L45"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

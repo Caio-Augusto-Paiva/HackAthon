@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Mastite e monitoramento"
+community: "Bandeiras de urgência"
 location: "L104"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Mastite_e_monitoramento
+  - community/Bandeiras_de_urgência
 ---
 
 # R-MAS-02: mastite (CF 0,5)
@@ -16,4 +16,4 @@ tags:
 - [[Inflamação do úbere (ubere_inflamado)]] - `references` [EXTRACTED]
 - [[Mastite (mastite)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Mastite_e_monitoramento
+#graphify/concept #graphify/EXTRACTED #community/Bandeiras_de_urgência

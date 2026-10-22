@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Estado e instruções do projeto"
 location: "L87"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Estado_e_instruções_do_projeto
 ---
 
 # Motor Python com biblioteca padrão
@@ -15,4 +15,4 @@ tags:
 - [[Arquitetura atual engine, kb, API, web e base versionada]] - `references` [EXTRACTED]
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto

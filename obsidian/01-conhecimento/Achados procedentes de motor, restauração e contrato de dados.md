@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "concept"
-community: "Revisões e decisões técnicas"
+community: "Integração e proveniência da base"
 location: "L7-L11"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Revisões_e_decisões_técnicas
+  - community/Integração_e_proveniência_da_base
 ---
 
 # Achados procedentes de motor, restauração e contrato de dados
@@ -17,4 +17,4 @@ tags:
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Revisões_e_decisões_técnicas
+#graphify/concept #graphify/EXTRACTED #community/Integração_e_proveniência_da_base

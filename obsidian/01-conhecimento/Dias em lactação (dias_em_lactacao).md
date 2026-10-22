@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Metrite e puerpério"
 location: "L170"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Metrite_e_puerpério
 ---
 
 # Dias em lactação (dias_em_lactacao)
@@ -18,4 +18,4 @@ tags:
 - [[R-DER-03 inicio_lactacao (CF 0,99)]] - `references` [EXTRACTED]
 - [[Triagem 1 dias_em_lactacao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Metrite_e_puerpério
