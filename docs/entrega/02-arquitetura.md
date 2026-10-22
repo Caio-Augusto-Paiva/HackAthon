@@ -1,11 +1,12 @@
 # Arquitetura tecnológica — implementação disponível
 
-O núcleo é um pacote Python independente de interface, banco e base clínica. A entrada é uma base JSON e um conjunto ordenado de observações da sessão; a saída inclui estado, parecer e explicações. O estado integrado em `codex-davi` também inclui API FastAPI, módulo `kb/` e persistência SQLite. A interface React e o editor gráfico estão em andamento em outra sessão e não foram alterados nesta execução da Seção 5.
+O núcleo é um pacote Python independente de interface, banco e base clínica. A entrada é uma base JSON e um conjunto ordenado de observações da sessão; a saída inclui estado, parecer e explicações. O estado integrado em `codex-davi` inclui interface React, API FastAPI, módulo `kb/` e persistência SQLite. O editor gráfico continua fora desta entrega do frontend.
 
 ## Fluxo implementado
 
 ```mermaid
 flowchart LR
+    W[Navegador: React e TypeScript] <-->|HTTP JSON local| C
     J[base/ativa.json: v0002 imutável] --> K[kb: validação, versões e adaptação]
     K --> V[Base.de_dict e guardas]
     C[API FastAPI ou CLI/Python] --> S[Sessao e memória]
@@ -22,17 +23,17 @@ flowchart LR
     C <--> D[SQLite: animais, sessões e execuções de casos]
 ```
 
-`scripts/rodar.ps1` inicia a API em `127.0.0.1:8000`; `rodar.sh` atende Linux/macOS. O contrato versionado em `contratos/openapi.json` contém **27 operações HTTP**. A documentação de rotas, configuração e execução está em [api/README.md](../../api/README.md); o contrato da base está em [kb/README.md](../../kb/README.md).
+`scripts/rodar.ps1` inicia a API e serve a SPA em `127.0.0.1:8000`; `rodar.sh` oferece o fluxo equivalente para Linux/macOS. Na ausência de `web/dist/index.html`, os scripts instalam e compilam a interface. O contrato versionado em `contratos/openapi.json` contém **27 operações HTTP**. A documentação de rotas, configuração e execução está em [api/README.md](../../api/README.md); o contrato da base está em [kb/README.md](../../kb/README.md).
 
 ## Sete componentes do modelo conceitual dos organizadores
 
 | Componente de [A], slide 14 | Implementação atual | Parte planejada |
 |---|---|---|
-| Interface com o usuário | CLI `engine/__main__.py` e interface Python de `Sessao` | Formulários e parecer no navegador |
+| Interface com o usuário | React em `web/`, CLI `engine/__main__.py` e interface Python de `Sessao` | Editor gráfico |
 | Motor de inferência | `inferencia`, `avaliacao`, `cf`, `selecao` e `parada`, consumidos pela API | Revisão/calibração clínica |
 | Base de conhecimento | `kb/`, versões imutáveis, `base/ativa.json` e `base/versoes/v0002.json` | Edição no frontend e novas versões revisadas |
-| Memória de trabalho | `memoria.py`, `Fato`, `sessao.py` e snapshot persistido pela API em SQLite | Validação da interface em navegador |
-| Módulo de explicação | `traco.py` e `explicacao.py`, chamados por `porque`/`como` | Visualização dessas respostas na interface |
+| Memória de trabalho | `memoria.py`, `Fato`, `sessao.py` e snapshot persistido pela API em SQLite | Ensaios em dispositivos físicos |
+| Módulo de explicação | `traco.py` e `explicacao.py`, chamados por `porque`/`como` e exibidos em diálogos na web | Revisão de compreensão com usuários |
 | Aquisição de conhecimento | Edição e revisão do JSON, com regras documentadas pelo gerador | Editor em grafo e revisão por especialista |
 | Fontes externas de fatos | Argumento `ficha` e observações com origem `importacao` | Prontuário, sensores e conectores reais |
 
@@ -49,10 +50,23 @@ flowchart LR
 | Dependências de runtime externas do núcleo | Nenhuma |
 | API e base editorial | FastAPI/Pydantic, `kb/`, JSON Schema e OpenAPI versionados; versões em `pyproject.toml` |
 | Banco | SQLite para animais, sessões, versões e resultados dos casos |
-| Web e editor | Em andamento em outra sessão; fora do escopo de alteração desta branch |
+| Web | React 19, TypeScript 5 e Vite 8; Vitest, Testing Library, Playwright/Chromium e axe para verificação |
+| Editor gráfico | Pendente, fora deste recorte |
 | Licença do projeto | Arquivo de licença ausente; decisão da equipe pendente |
 
-O motor e os exemplos CLI continuam usando só a biblioteca padrão. A API e os testes completos exigem as dependências de `pyproject.toml`: criar `.venv` e instalar `.[dev]` uma vez, com internet. A execução da decisão não chama serviços externos. Dependências de frontend e seu empacotamento pertencem à sessão paralela.
+O motor e os exemplos CLI continuam usando só a biblioteca padrão. A API e os testes completos exigem as dependências de `pyproject.toml`: criar `.venv` e instalar `.[dev]` uma vez, com internet. O build web requer Node.js 24 e usa o lockfile do npm. A execução da decisão não chama serviços externos.
+
+## Camada web implementada
+
+`web/src/api/tipos.gerado.ts` deriva do OpenAPI por `npm run gerar-tipos`. O cliente HTTP centraliza erros públicos; as páginas Início, Anamnese e Parecer usam rotas React. A API serve o build e resolve URLs da SPA, preservando as rotas `/api/`.
+
+O navegador não infere doença, CF, urgência nem próxima pergunta. Renderiza os campos e opções de `EstadoSessao.proxima`; múltiplas respostas enviam todos os booleanos e desconhecimento envia `nao_sei`. Números seguem como texto bruto, sem conversão ou normalização de vírgula. Um 422 conserva o valor e mostra a mensagem no campo; um conflito 409 provoca leitura do estado, sem repetição automática da mutação. O botão fica bloqueado durante o envio.
+
+A partir da segunda pergunta, a lateral apresenta os quatro maiores percentuais retornados por `/parecer`. A tabela final conserva os blocos da API e ordena seus itens por percentual. As barras usam `role="meter"`. Os diálogos por quê/como mostram regras e evidências do backend; a pausa de bandeira tem precedência sobre `proxima: null` e mantém o foco até uma ação autorizada.
+
+O histórico desta navegação permite voltar e corrigir por PUT; o estado clínico persistente pertence à API. Recarregar a página retoma a sessão pelo identificador, mas não reconstrói o histórico local de botões Voltar. O contrato atual não expõe `casas_decimais` na próxima pergunta; a precisão é validada pelo backend (R18). Fontes `@fontsource`, SVGs e estilos são empacotados localmente. Os cenários E2E usam API real, SQLite temporário e casos sintéticos da `v0002`.
+
+Após encerrar voluntariamente pelo alerta, Continuar respondendo envia a ação de bandeira `continuar` e navega conforme o estado recebido. Conflito 409 relê a sessão. Uma parada automática do motor não pode ser anulada pela interface; a limitação e o pedido à API estão em R21.
 
 ## Motor e modelo de incerteza
 
@@ -109,6 +123,6 @@ Os eventos documentam observações, regras e combinações de CF. O motivo de u
 
 ## Testes, execução e limites
 
-Após esta etapa documental, a suíte registra **1006 testes aprovados, 1 ignorado e 110 subtestes aprovados**; a suíte `unittest` do motor/base registra **125 testes**, já incluídos na execução pytest, e não deve ser somada a ela. Os **34 casos sintéticos** também são uma categoria separada. Saídas e comandos constam de [evidencias-verificacao.json](evidencias-verificacao.json). Entre as evidências estão permutações MYCIN, desconhecimento, comorbidade, correção, restauração e isolamento do motor em relação à API, ao banco e a `kb`.
+Após a integração da interface, a suíte registra **1066 testes Python aprovados, 1 ignorado e 170 subtestes aprovados**; a suíte `unittest` do motor/base registra **132 testes**, já incluídos na execução pytest, e não deve ser somada a ela. Os **34 casos sintéticos** são uma categoria separada. A interface acrescenta **39 testes Vitest** e **8 cenários Playwright**, descritos em [QUALIDADE.md](../../web/QUALIDADE.md). As evidências históricas anteriores constam de [evidencias-verificacao.json](evidencias-verificacao.json). Entre as verificações estão permutações MYCIN, desconhecimento, comorbidade, correção, restauração e isolamento do motor em relação à API, ao banco e a `kb`.
 
-O ensaio HTTP da API e a verificação de dependências externas são registrados separadamente dos testes automatizados. Ensaio físico com Wi-Fi desligado, frontend em navegador, máquina reserva e apresentação exigem confirmação da equipe. Não há validação clínica nem autenticação implementada neste recorte. Nenhuma alteração foi feita em `api/`, `web/`, `contratos/` ou `tests/api/` desde o baseline `f46cd6e`.
+O ensaio HTTP histórico da API é registrado separadamente dos testes atuais no navegador. Ensaio físico com Wi-Fi desligado, máquina reserva e apresentação ainda exigem confirmação da equipe. Não há validação clínica nem autenticação implementada neste recorte. A integração acrescentou `web/` e preparo do build nos scripts; API, motor, kb, contratos e versões imutáveis foram preservados.

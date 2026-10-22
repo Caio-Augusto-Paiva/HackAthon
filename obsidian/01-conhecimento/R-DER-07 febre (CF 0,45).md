@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos derivados"
+community: "Sinais térmicos e urgência"
 location: "L49"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_derivados
+  - community/Sinais_térmicos_e_urgência
 ---
 
 # R-DER-07: febre (CF 0,45)
@@ -16,4 +16,4 @@ tags:
 - [[Febre (febre)]] - `implements` [EXTRACTED]
 - [[Temperatura ao toque das extremidades (extremidades)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_derivados
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência

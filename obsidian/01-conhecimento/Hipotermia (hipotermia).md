@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos derivados"
+community: "Sinais térmicos e urgência"
 location: "L181"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_derivados
+  - community/Sinais_térmicos_e_urgência
 ---
 
 # Hipotermia (hipotermia)
@@ -19,4 +19,4 @@ tags:
 - [[R-DER-09 hipotermia (CF -0,9)]] - `implements` [EXTRACTED]
 - [[R-HIP-02 hipocalcemia (CF 0,8)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_derivados
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência

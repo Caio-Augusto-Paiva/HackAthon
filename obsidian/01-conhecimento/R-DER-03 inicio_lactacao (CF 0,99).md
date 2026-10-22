@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Cetose e início da lactação"
+community: "Hipocalcemia e mobilidade"
 location: "L45"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cetose_e_início_da_lactação
+  - community/Hipocalcemia_e_mobilidade
 ---
 
 # R-DER-03: inicio_lactacao (CF 0,99)
@@ -16,4 +16,4 @@ tags:
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 - [[Inicio lactacao (inicio_lactacao)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cetose_e_início_da_lactação
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade

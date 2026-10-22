@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Modelos e validação da base"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_da_base
+  - community/Persistência_e_validação_da_base
 ---
 
 # Tela de triagem
@@ -14,4 +14,4 @@ tags:
 - [[Símbolo (variável da base)]] - `references` [EXTRACTED]
 - [[Task 1 Ambiente e modelos Pydantic]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

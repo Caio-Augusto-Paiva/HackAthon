@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos derivados"
+community: "Sinais térmicos e urgência"
 location: "L46"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_derivados
+  - community/Sinais_térmicos_e_urgência
 ---
 
 # R-DER-04: febre (CF 0,95)
@@ -16,4 +16,4 @@ tags:
 - [[Febre (febre)]] - `implements` [EXTRACTED]
 - [[Temperatura retal (temperatura_retal)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_derivados
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência

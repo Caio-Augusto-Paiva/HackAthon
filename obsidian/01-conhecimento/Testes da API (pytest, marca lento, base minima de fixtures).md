@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Frontend planejado e contrato API"
+community: "Contratos e integração localhost"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Frontend_planejado_e_contrato_API
+  - community/Contratos_e_integração_localhost
 ---
 
 # Testes da API (pytest, marca lento, base minima de fixtures)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Contrato OpenAPI versionado e exemplos por operationId]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API
+#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost

@@ -15,13 +15,13 @@ tags:
 - [[Checkpoint codex-davi IA aplicada ao desenvolvimento e à documentação, fora da consulta]] - `references` [EXTRACTED]
 - [[Checkpoint codex-davi Julgamento técnico snapshot direto, ordem real, grupo max e TPB sem febre]] - `references` [EXTRACTED]
 - [[Checkpoint codex-davi Relatos pessoais, ensaio e entendimento ainda a registrar]] - `references` [EXTRACTED]
-- [[HackAtom T1 Anamnese explicável de bovinos leiteiros]] - `references` [EXTRACTED]
+- [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 - [[Papel A registro técnico curado, sem depoimento pessoal atribuído]] - `references` [EXTRACTED]
 - [[Papel B diário a preencher, sem interações ou resultados inventados]] - `references` [EXTRACTED]
 - [[Papel C diário a preencher, sem interações ou aprendizado inventados]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Registro aberto R01–R17 e checklist de fechamento]] - `references` [EXTRACTED]
-- [[Índice Seção 5 na codex-davi, após baseline f46cd6e]] - `references` [EXTRACTED]
+- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Processo_documental_verificável

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "rationale"
-community: "Proveniência e pressupostos clínicos"
+community: "Snapshot e pressupostos do motor"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Proveniência_e_pressupostos_clínicos
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # Revisão independente requer pessoa/modelo, data, localização, evidência e veredito
@@ -14,4 +14,4 @@ tags:
 - [[Checkpoint codex-davi Relatos pessoais, ensaio e entendimento ainda a registrar]] - `rationale_for` [EXTRACTED]
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor

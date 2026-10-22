@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Frontend planejado e contrato API"
+community: "Persistência e validação da base"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Frontend_planejado_e_contrato_API
+  - community/Persistência_e_validação_da_base
 ---
 
 # Banco SQLite fora do OneDrive
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API
+#graphify/rationale #graphify/EXTRACTED #community/Persistência_e_validação_da_base

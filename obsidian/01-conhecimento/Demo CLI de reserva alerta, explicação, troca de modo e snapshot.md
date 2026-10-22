@@ -12,10 +12,10 @@ tags:
 # Demo CLI de reserva: alerta, explicação, troca de modo e snapshot
 
 ## Connections
-- [[Apresentação API localhost como demo principal e CLI de reserva]] - `references` [EXTRACTED]
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
+- [[Roteiro consulta React em localhost e CLI de reserva]] - `references` [EXTRACTED]
 - [[Sessao triagem, diálogo, modo, bandeiras, parecer e porquecomo]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # Concorrencia: BEGIN IMMEDIATE e conferencia de revisao
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[D1 snapshot_json como fonte da verdade da sessao]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

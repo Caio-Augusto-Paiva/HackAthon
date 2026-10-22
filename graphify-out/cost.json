@@ -16,9 +16,32 @@
       "usage_status": "unavailable_not_measured",
       "financial_cost": null,
       "nota": "Uso do agente hospedeiro indisponível; totais históricos não foram incrementados."
+    },
+    {
+      "date": "2026-10-22T10:01:32.855476+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "files": 8,
+      "semantic_files": 8,
+      "previous_attempt_status": "interrupted_not_published",
+      "usage_status": "unavailable_not_measured",
+      "financial_cost": null,
+      "nota": "Uso do agente hospedeiro indisponível; totais históricos não foram incrementados."
+    },
+    {
+      "date": "2026-10-22T10:05:13.200790+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "files": 8,
+      "semantic_files": 8,
+      "final_patch_files": 3,
+      "previous_attempt_status": "interrupted_not_published",
+      "usage_status": "unavailable_not_measured",
+      "financial_cost": null,
+      "nota": "Uso do agente hospedeiro indisponível; totais históricos não foram incrementados."
     }
   ],
   "total_input_tokens": 520209,
   "total_output_tokens": 0,
-  "unmeasured_runs": 1
+  "unmeasured_runs": 3
 }

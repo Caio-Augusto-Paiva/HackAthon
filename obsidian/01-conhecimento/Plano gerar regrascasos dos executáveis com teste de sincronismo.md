@@ -11,7 +11,7 @@ tags:
 # Plano: gerar regras/casos dos executáveis com teste de sincronismo
 
 ## Connections
-- [[Gerador segue baseativa.json v0002 e verifica sincronismo]] - `rationale_for` [EXTRACTED]
+- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `rationale_for` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável

@@ -1,0 +1,5 @@
+.icone { order: -1; }
+.texto { font-size: 24px; line-height: 1.45; margin: 0; font-weight: 700; }
+.regras { font-size: 15px; color: var(--cor-texto-suave); margin: 0; }
+.acoes { display: grid; gap: 14px; }
+.erro { color: var(--cor-perigo); }

@@ -2,7 +2,7 @@
 source_file: "docs/entrega/02-arquitetura.md"
 type: "concept"
 community: "Casos sintéticos na v0002"
-location: "L104"
+location: "L118"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
@@ -45,10 +45,10 @@ tags:
 - [[C-TPB-01 passou, chamar_agora, tpb]] - `references` [EXTRACTED]
 - [[C-TPB-02 passou, chamar_agora, tpb]] - `references` [EXTRACTED]
 - [[C-TPB-03 passou, sem_problema, acidose]] - `references` [EXTRACTED]
+- [[Camada 4b Playwright com API real e ativa v0002]] - `references` [EXTRACTED]
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
-- [[HackAtom T1 Anamnese explicável de bovinos leiteiros]] - `references` [EXTRACTED]
-- [[Planejado Camada4b Playwright com API real e ativa v0002]] - `references` [EXTRACTED]
+- [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Proveniência v0002 ativa, pai v0001, 56 regras sem validação clínica]] - `references` [EXTRACTED]
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `references` [EXTRACTED]
 

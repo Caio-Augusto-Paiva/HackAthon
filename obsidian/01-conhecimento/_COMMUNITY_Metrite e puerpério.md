@@ -31,9 +31,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Regras mamárias e de produção]]
+- 12 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
 - 3 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
-- 1 edge to [[_COMMUNITY_Sinais térmicos derivados]]
+- 1 edge to [[_COMMUNITY_Sinais térmicos e urgência]]
 - 1 edge to [[_COMMUNITY_Bandeiras de urgência]]
 - 1 edge to [[_COMMUNITY_Hipocalcemia e mobilidade]]
 - 1 edge to [[_COMMUNITY_Acidose e sinais digestivos]]

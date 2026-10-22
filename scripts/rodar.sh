@@ -6,7 +6,7 @@
 #   --reset        apaga o banco e o recria (com os animais fictícios) antes de subir
 #
 # Variáveis opcionais: ANAMNESE_BASE_DIR (pasta da base; padrão "base") e ANAMNESE_DB (arquivo do banco; padrão
-# "dados/anamnese.db"). Nenhuma chamada de rede. Ctrl+C encerra o servidor.
+# "dados/anamnese.db"). A instalação inicial usa internet; a execução é local. Ctrl+C encerra o servidor.
 set -eu
 
 PORTA=8000
@@ -59,9 +59,14 @@ else
     echo "Banco existente mantido: $BANCO (use --reset para recriar)."
 fi
 
-# 3. Frontend: opcional
+# 3. Prepara o frontend apenas quando o build está ausente.
 if [ ! -f "$RAIZ/web/dist/index.html" ]; then
-    echo "Aviso: web/dist não existe; só a API estará no ar (documentação em /api/docs)."
+    if [ -f "$RAIZ/web/package.json" ]; then
+        command -v npm >/dev/null 2>&1 || { echo "ERRO: instale Node.js 24 (com npm) para preparar a interface." >&2; exit 1; }
+        (cd "$RAIZ/web" && npm ci && npm run build) || { echo "ERRO: não consegui preparar a interface." >&2; exit 1; }
+    else
+        echo "Aviso: web/dist não existe; só a API estará no ar (documentação em /api/docs)."
+    fi
 fi
 
 if [ "$SO_PREPARAR" -eq 1 ]; then

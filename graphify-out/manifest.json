@@ -114,10 +114,10 @@
     "semantic_hash": "f26024e109b1c5459f23139fe17582e3"
   },
   "README.md": {
-    "mtime": 1792646868.8636107,
-    "seen": 1792647333.1759186,
-    "ast_hash": "34cffad457a4c6ee2edd6bc4ad249346",
-    "semantic_hash": "34cffad457a4c6ee2edd6bc4ad249346"
+    "mtime": 1792649975.7648237,
+    "seen": 1792663292.834468,
+    "ast_hash": "b52c847e007f405ec028c427b2e37981",
+    "semantic_hash": "b52c847e007f405ec028c427b2e37981"
   },
   "base/desenvolvimento/LEIA-ME.txt": {
     "mtime": 1792634263.3158534,
@@ -132,10 +132,10 @@
     "semantic_hash": "6efbfd4faa32f69071874cc982031d0e"
   },
   "docs/entrega/02-arquitetura.md": {
-    "mtime": 1792646868.8656113,
-    "seen": 1792647333.1759186,
-    "ast_hash": "9e2cd331d401efcbfe61ae50be892db1",
-    "semantic_hash": "9e2cd331d401efcbfe61ae50be892db1"
+    "mtime": 1792663372.5195096,
+    "seen": 1792663513.180046,
+    "ast_hash": "4b082e1a005a457bcb57a1b7b8c4cd35",
+    "semantic_hash": "4b082e1a005a457bcb57a1b7b8c4cd35"
   },
   "docs/entrega/03-regras-de-producao.md": {
     "mtime": 1792646875.281276,
@@ -150,22 +150,22 @@
     "semantic_hash": "0001974714e44c5d0ff4e73d5135772a"
   },
   "docs/entrega/05-apresentacao-e-demo.md": {
-    "mtime": 1792646868.8646114,
-    "seen": 1792647333.1759186,
-    "ast_hash": "9160623bfa5f1a6dc415d4fa7d729c1a",
-    "semantic_hash": "9160623bfa5f1a6dc415d4fa7d729c1a"
+    "mtime": 1792649975.7908297,
+    "seen": 1792663292.834468,
+    "ast_hash": "f660d20c424b1a13c3b181fb9e6e59cb",
+    "semantic_hash": "f660d20c424b1a13c3b181fb9e6e59cb"
   },
   "docs/entrega/06-riscos-e-pendencias.md": {
-    "mtime": 1792646868.866612,
-    "seen": 1792647333.1759186,
-    "ast_hash": "d104f743259cc2c2494d99b9cec908f0",
-    "semantic_hash": "d104f743259cc2c2494d99b9cec908f0"
+    "mtime": 1792663371.5629978,
+    "seen": 1792663513.180046,
+    "ast_hash": "4cc49a6e4b23306f7fd4868619164181",
+    "semantic_hash": "4cc49a6e4b23306f7fd4868619164181"
   },
   "docs/entrega/README.md": {
-    "mtime": 1792646868.8636107,
-    "seen": 1792647333.1759186,
-    "ast_hash": "f9c843b479e3638869f06001680e750c",
-    "semantic_hash": "f9c843b479e3638869f06001680e750c"
+    "mtime": 1792663372.5215077,
+    "seen": 1792663513.180046,
+    "ast_hash": "d0ebf80355a20c56ff9b0fa674297596",
+    "semantic_hash": "d0ebf80355a20c56ff9b0fa674297596"
   },
   "docs/processo/A.md": {
     "mtime": 1792633361.229259,
@@ -250,5 +250,17 @@
     "seen": 1792647333.1759186,
     "ast_hash": "43c804971d6dd9f797a69ebecd955f66",
     "semantic_hash": "43c804971d6dd9f797a69ebecd955f66"
+  },
+  "DESIGN.md": {
+    "mtime": 1792647659.7922125,
+    "seen": 1792663292.834468,
+    "ast_hash": "faf80c97ceb7c875a30097ce8dc29ae7",
+    "semantic_hash": "faf80c97ceb7c875a30097ce8dc29ae7"
+  },
+  "PRODUCT.md": {
+    "mtime": 1792647659.7912152,
+    "seen": 1792663292.834468,
+    "ast_hash": "7f70e652352aa37f5901faec9d66b883",
+    "semantic_hash": "7f70e652352aa37f5901faec9d66b883"
   }
 }

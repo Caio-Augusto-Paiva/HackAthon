@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Modelos e validação da base"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_da_base
+  - community/Persistência_e_validação_da_base
 ---
 
 # kb/carregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)
@@ -18,4 +18,4 @@ tags:
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `calls` [EXTRACTED]
 - [[v0002 ativa e imutável, pai v0001; ativação não valida clínica]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

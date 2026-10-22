@@ -9,17 +9,17 @@ Estado integrado da Seção 5, branch `codex-davi`, baseline `f46cd6e`. Respons�
 | R01 | Conhecimento clínico e CF sem validação especializada | Alta | 56 regras como `suposicao_a_validar`; zero `validada` | Revisar com veterinário/RERUM; documentar quem revisou, escopo e critérios. Até lá, limitar a desenvolvimento/demonstração | A |
 | R02 | Confiança excessiva por sinais correlacionados | Alta | Cetose pode chegar a CF 0,83086641 sem exame; claudicação/dor podem somar 0,65 para dermatite | Calibrar com casos representativos; não converter CF em probabilidade. Agrupamento leite/caneca já reduz um caso de duplicação | A |
 | R03 | Falso entendimento de `sem_problema` | Alta | Fallback por ausência de gatilhos, inclusive dados incompletos | Explicar o alcance no parecer/apresentação; revisar mensagem e política com especialista antes de uso clínico | A/C |
-| R04 | Interface final e editor gráfico em andamento | Alta | API FastAPI, `kb/`, SQLite e `scripts/rodar.ps1` já existem; frontend é trabalho paralelo | Equipe integrar e validar o navegador; até lá, demonstrar API/CLI e declarar a ausência de evidência E2E neste recorte | B/C |
+| R04 | Editor gráfico ainda pendente | Alta | Interface React integrada e oito cenários E2E com API real; editor não faz parte desta implementação | Demonstrar a consulta web; manter editor fora da promessa de entrega até implementação e validação próprias | B/C |
 | R05 | Regressão na restauração da sessão | Alta | API persiste snapshots e tem testes de troca de modo/correção; ordem e origens continuam essenciais | Manter a cobertura e repetir os fluxos após integrações do frontend | B |
 | R06 | Divergência entre v0001 e especificação clínica | Alta | 56 regras ainda não validadas; sinais e estimativas da Seção 5 divergem (R15/R16) | Conciliar com especialista; alterações via nova versão e casos, nunca sobrescrever `v0001`. Ativação operacional não é aprovação clínica | A/B |
 | R07 | Código entregue sem licença declarada | Alta | Arquivo `LICENSE` ausente | Equipe escolher e registrar licença; revisar materiais e dependências do pacote final antes de declarar requisito integralmente cumprido | Todos |
 | R08 | Documentação manual divergir da implementação | Média | Processo/arquitetura precisam de revisão após novas integrações | Regras/casos já têm geração e teste de sincronismo; repetir testes e curadoria no fechamento | A/B |
-| R09 | Contagem de testes ser confundida com validação clínica | Alta | 1006 testes aprovados, 1 ignorado, 110 subtestes; 34 casos sintéticos; zero validação clínica | Não somar as 125 execuções unittest (também coletadas por pytest); manter categorias separadas | Todos |
+| R09 | Contagem de testes ser confundida com validação clínica | Alta | Baseline integrado: 1066 testes Python aprovados, 1 ignorado, 170 subtestes; 34 casos sintéticos; frontend verificado separadamente | Não somar as 132 execuções unittest (também coletadas por pytest); nenhum teste de software constitui validação clínica | Todos |
 | R10 | Falha da máquina ou dependência externa na demo | Alta | Dependências Python instaladas; ensaios HTTP registrados separadamente; Swagger depende de CDN | Ensaio físico sem Wi-Fi e máquina reserva ainda obrigatórios; usar HTTP/CLI como roteiro offline | B/C |
 | R11 | Tempo da fala e infraestrutura desconhecidos | Média | Materiais oficiais não informam duração nem infraestrutura | Confirmar com organização; ensaiar roteiros de 14 e 5 minutos, sem assumir projetor/rede | C |
 | R12 | Equipe não dominar o que foi gerado com IA | Alta | Diários B/C e prova de entendimento ainda incompletos | Cada integrante explicar parte própria e alheia; registrar ensaio e corrigir dúvidas | Todos |
 | R13 | Envio incompleto ou fora do prazo | Alta | PDFs, slides editáveis, contatos e pacote final pendentes | Checklist abaixo; alvo interno 22/10 às 18:30, prazo oficial às 20:00; confirmar recebimento pelo canal escolhido | C |
-| R14 | Conflitos com trabalho paralelo de API/frontend | Média | Esta execução usa checkout isolado e baseline `f46cd6e`; pushes só em `codex-davi` | Não alterar `api/`, `web/`, `contratos/` ou `tests/api/`; equipe faz a integração na branch compartilhada | Todos |
+| R14 | Conflitos com trabalho paralelo | Média | Frontend implementado no checkout isolado, com pushes em `codex-davi`; merge preservou a Seção 5 e trouxe a v0002 | Motor, API, kb, versões imutáveis e contratos preservados; alinhar futuras integrações sem reescrever versões | Todos |
 
 As probabilidades de ocorrência não foram medidas; não atribuímos percentuais artificiais aos riscos. A prioridade deve ser revista pela equipe conforme avanço de API/web e disponibilidade de especialista.
 
@@ -42,12 +42,12 @@ As probabilidades de ocorrência não foram medidas; não atribuímos percentuai
 | Trecho do roteiro original | Veredito | Evidência integrada | Ajuste aplicado nesta documentação |
 |---|---|---|---|
 | “30/31 casos conhecidos” | Especificação histórica | 34 casos JSON executados na ativa, com desvios explícitos R15/R16 | Documentar o conjunto real e preservar as estimativas antigas como referência, não como validação clínica |
-| “editor salvando versão e rodando casos” na demo | Editor em andamento | Rotas de versões e casos disponíveis; frontend fora desta sessão | Demonstrar a API; não alegar teste de navegador |
+| “editor salvando versão e rodando casos” na demo | Editor pendente | Rotas de versões e casos disponíveis; consulta web implementada sem editor | Demonstrar a consulta no navegador; não alegar conclusão do editor |
 | `03-regras` gerado da base ativa | Implementado | Ponteiro `v0002` presente e válido | Gerador sem `--base` segue o ponteiro; documentos 03/04 e teste de sincronismo usam a ativa |
 | “sem código nesta fase” no rascunho histórico | Desatualizado para a solicitação atual | Motor, testes e integração já implementados | Descrever o código existente e criar somente o utilitário necessário à documentação |
 | Equipe e telefones no pacote | Dados parcialmente fornecidos | Nomes/responsabilidades informados em `fcdcea9`; telefones ausentes | Preservar os nomes fornecidos e solicitar os contatos no fechamento humano |
 | Fontes e CF apresentados como conhecimento validado | Risco de extrapolação | Todas as regras continuam como suposição | Separar fonte contextual, comportamento de software e validação clínica |
-| OpenAPI, SQLite e `rodar.ps1` tratados como futuros | Texto desatualizado | 27 operações no contrato, SQLite e scripts presentes | Documentos 02/05/06 descrevem o backend real; web/editor em andamento |
+| OpenAPI, SQLite e `rodar.ps1` tratados como futuros | Texto desatualizado | 27 operações no contrato, SQLite, scripts e SPA presentes | Documentos 02/05/06 descrevem consulta web integrada; editor pendente |
 
 ## Checklist de fechamento
 
@@ -59,7 +59,8 @@ As probabilidades de ocorrência não foram medidas; não atribuímos percentuai
 - [ ] Completar diários pessoais, revisões realmente realizadas e prova de entendimento.
 - [ ] Registrar licença do projeto e revisar as licenças do material empacotado.
 - [x] Integrar base ativa, `kb/`, API, persistência e casos conhecidos deste recorte.
-- [ ] Concluir web/editor e executar E2E na sessão responsável; confirmar o escopo da apresentação.
+- [x] Integrar a consulta web e executar E2E com API real e base v0002.
+- [ ] Concluir o editor gráfico e confirmar o escopo da apresentação.
 - [ ] Conciliar a base com a especificação e obter revisão especializada, se viável; registrar as limitações remanescentes.
 - [ ] Confirmar duração da fala, infraestrutura e limite/formato de anexos com a organização.
 - [ ] Produzir e conferir PDFs dos documentos, slides em PDF e formato editável.
@@ -73,5 +74,16 @@ Os três últimos marcos são da entrega final. Este checkpoint não envia mensa
 ## Resumo do que falta resolver
 
 A documentação técnica acompanha o motor, a base ativa, a API e o SQLite existentes.
-Web/editor, política de coleta dos casos R15/R16, licença e validação clínica exigem trabalho ou decisão.
+Editor, política de coleta dos casos R15/R16, licença e validação clínica exigem trabalho ou decisão.
 A equipe precisa completar seus dados, ensaiar e produzir os arquivos finais antes do envio de 22/10.
+
+## Integração da interface — 22/10/2026
+
+React 19, TypeScript e Vite 8 estão conectados à API e ao motor. A SPA usa o protótipo do Figma, fontes empacotadas e SVGs originais. O ensaio `rodar.ps1 -SemNavegador` serviu a SPA, uma rota interna e `/api/docs` com HTTP 200. Os oito cenários Chromium usam SQLite temporário e `v0002`: produtor completo, bandeira, especialista, número inválido e as seis telas em quatro larguras. A análise axe nessas telas não encontrou violações das regras WCAG A/AA selecionadas; isso não certifica acessibilidade nem substitui leitor de tela e dispositivo físico. Detalhes e capturas estão em [QUALIDADE.md](../../web/QUALIDADE.md) e [capturas/](capturas/).
+
+- **R18 — Precisão não exposta na pergunta (baixa; B):** `Campo`/`PerguntaDinamica` no OpenAPI expõem mínimo, máximo e unidade, mas não `casas_decimais`. A interface não deduz regras por nomes clínicos: envia o texto bruto e exibe o 422 do backend. Pedido futuro à API: expor precisão na próxima pergunta para orientar melhor o teclado e a ajuda. Não bloqueia a validação atual.
+- **R19 — Histórico de correção desta navegação (baixa; B/C):** Voltar permite editar respostas enviadas durante a navegação atual por PUT. Recarregar retoma o estado persistido, mas não repovoa esse histórico de edição. Uma lista completa de respostas anteriores requer contrato próprio ou produto definido; nenhum endpoint foi inventado.
+- **R20 — Cobertura de dispositivos (média; C):** houve Chromium e viewports emulados de 375/768/1024/1440 px, com análise automática, foco e revisão de capturas. Faltam Safari, Firefox, leitor de tela e dispositivos físicos, além do ensaio humano na máquina reserva com Wi-Fi desligado.
+- **R21 — Continuidade após parada automática (média; B):** o Review Focus 5 do plano prevê voltar às perguntas após encerrar. Depois de escolher Ver parecer no alerta, a interface oferece Continuar respondendo e chama a ação `continuar`, suportada pela API para esse encerramento manual (`final: true`, `motivo_parada: null`). Quando o motor já encerrou por confirmação, limite, falta de perguntas ou potencial, a mesma ação não remove a regra de parada; sem bandeira histórica, ela é recusada com 422. Pedido à API: definir capacidade explícita e semântica de retomada após parada automática, caso esse comportamento seja desejado. Até lá, a interface não promete reabrir esse caso; oferece Nova verificação e registra o desvio do plano, sem alterar o motor/contrato.
+- **Rede:** os E2E das seis telas verificam ausência de requisições externas. Isso se refere à SPA já compilada; instalação npm/Playwright exige internet. R17 continua válido para Swagger, cuja implementação foi preservada.
+- **Escopo:** nenhuma regra clínica, versão imutável, contrato ou arquivo de API/motor/kb foi alterado para adaptar o frontend. A exceção autorizada de alinhamento em desenvolvimento e regeneração de documentos foi feita antes da UI. Os riscos clínicos R01–R03/R15/R16 permanecem.

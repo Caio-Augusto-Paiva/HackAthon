@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Modelos e validação da base"
+community: "Persistência e validação da base"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Modelos_e_validação_da_base
+  - community/Persistência_e_validação_da_base
 ---
 
 # kb como pacote folha (nao importa engine)
@@ -15,4 +15,4 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `semantically_similar_to` [INFERRED]
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Modelos_e_validação_da_base
+#graphify/rationale #graphify/INFERRED #community/Persistência_e_validação_da_base

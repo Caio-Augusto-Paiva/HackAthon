@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "document"
-community: "Modelos e validação da base"
+community: "Persistência e validação da base"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_da_base
+  - community/Persistência_e_validação_da_base
 ---
 
 # Pacote kb README (base de conhecimento)
@@ -20,4 +20,4 @@ tags:
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `references` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Modelos_e_validação_da_base
+#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base

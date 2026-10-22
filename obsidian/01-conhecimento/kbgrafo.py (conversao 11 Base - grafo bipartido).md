@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Modelos e validação da base"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_da_base
+  - community/Persistência_e_validação_da_base
 ---
 
 # kb/grafo.py (conversao 1:1 Base <-> grafo bipartido)
@@ -16,4 +16,4 @@ tags:
 - [[Task 3 Conversão base-grafo]] - `implements` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

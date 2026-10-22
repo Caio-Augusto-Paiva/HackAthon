@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # Observacoes com valor, cf e origem (resposta, ficha, importacao)
@@ -14,4 +14,4 @@ tags:
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - `shares_data_with` [EXTRACTED]
 - [[D5 origem importacao reescrita pela API no como e no traco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

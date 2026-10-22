@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "document"
-community: "Proveniência e pressupostos clínicos"
+community: "Snapshot e pressupostos do motor"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Proveniência_e_pressupostos_clínicos
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # Log de revisões: evidência e proveniência do checkpoint
@@ -17,4 +17,4 @@ tags:
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 - [[Revisão independente requer pessoamodelo, data, localização, evidência e veredito]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos
+#graphify/document #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor
