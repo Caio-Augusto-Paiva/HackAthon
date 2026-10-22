@@ -53,8 +53,8 @@ Os dados abaixo foram informados pela equipe; a grafia de Davi Monção Fernande
 
 | Referência | Nome completo | Número de telefone | Responsabilidade informada |
 |---|---|---|
-| A | Caio Augusto de Paiva Teixeira | (32)99996-0047 | Arquitetura dos sistemas, Arquitetura dos prompts |
-| B | Davi Monção Fernandes | (32)99967-0773 | Motor de inferência, documentação |
+| A | Caio Augusto de Paiva Teixeira | (32)99996-0047 | Arquitetura dos agentes, arquitetura do sistema, grafos do projeto e dos dados, validação e front-end |
+| B | Davi Monção Fernandes | (32)99967-0773 | Sistema especialista e motor de inferência, validação, casos de teste e documentação |
 | C | Luis Henrique Poubel Buettel | (32)98803-1744 | Base de conhecimento (JSON), banco de dados |
 
 ## Mapa do pacote e trabalho restante
