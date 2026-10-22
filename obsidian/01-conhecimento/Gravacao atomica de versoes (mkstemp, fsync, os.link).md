@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Versões da base, casos e execução local"
+community: "Task 1: Ambiente e modelos Pydantic"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Versões_da_base_casos_e_execução_local
+  - community/Task_1_Ambiente_e_modelos_Pydantic
 ---
 
 # Gravacao atomica de versoes (mkstemp, fsync, os.link)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local
+#graphify/rationale #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic

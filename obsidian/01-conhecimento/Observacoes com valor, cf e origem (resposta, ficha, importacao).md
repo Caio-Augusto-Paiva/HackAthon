@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # Observacoes com valor, cf e origem (resposta, ficha, importacao)
@@ -14,4 +14,4 @@ tags:
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - `shares_data_with` [EXTRACTED]
 - [[D5 origem importacao reescrita pela API no como e no traco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

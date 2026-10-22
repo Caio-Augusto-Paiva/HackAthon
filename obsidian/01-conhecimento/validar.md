@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Validador: achados e casos inválidos"
+community: "validar"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validador_achados_e_casos_inválidos
+  - community/validar
 ---
 
 # validar
@@ -22,4 +22,4 @@ tags:
 - [[Formato de id gera E20]] - `rationale_for` [EXTRACTED]
 - [[Task 4]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos
+#graphify/code #graphify/EXTRACTED #community/validar

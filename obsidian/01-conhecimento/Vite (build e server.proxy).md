@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # Vite (build e server.proxy)
@@ -15,4 +15,4 @@ tags:
 - [[VITE_USAR_MOCKS (modo dev)]] - `conceptually_related_to` [INFERRED]
 - [[Vite 8.3.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

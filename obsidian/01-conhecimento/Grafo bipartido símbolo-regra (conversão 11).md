@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação: entrega e arquitetura"
+community: "Motor de inferência (engine/)"
 location: "Seção 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_entrega_e_arquitetura
+  - community/Motor_de_inferência_engine/
 ---
 
 # Grafo bipartido símbolo-regra (conversão 1:1)
@@ -18,4 +18,4 @@ tags:
 - [[Pacote kb]] - `implements` [EXTRACTED]
 - [[Três camadas estritas (derivado, doença, urgência)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/

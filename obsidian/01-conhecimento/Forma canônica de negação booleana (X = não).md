@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "rationale"
-community: "Versões da base, casos e execução local"
+community: "Task 1: Ambiente e modelos Pydantic"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Versões_da_base_casos_e_execução_local
+  - community/Task_1_Ambiente_e_modelos_Pydantic
 ---
 
 # Forma canônica de negação booleana (X = não)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Regra de produção (condições, conclusão, CF)]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Versões_da_base_casos_e_execução_local
+#graphify/rationale #graphify/INFERRED #community/Task_1_Ambiente_e_modelos_Pydantic

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Instruções e regras do hackathon"
+community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
 location: "L99"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
 ---
 
 # Proposta inicial de arquitetura (hipotese a validar)
@@ -23,4 +23,4 @@ tags:
 - [[Skill superpowersbrainstorming]] - `references` [EXTRACTED]
 - [[pytest]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/document #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros

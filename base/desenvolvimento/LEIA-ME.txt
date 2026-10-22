@@ -1,0 +1,57 @@
+BASE DE DESENVOLVIMENTO — ANAMNESE DE BOVINOS
+
+Arquivo: anamnese-bovinos-v3.1.0-revisao1.json
+Versão: 3.1.0-revisao1
+Situação: compatível com o motor; validação clínica pendente.
+
+Esta base é destinada a desenvolvimento, testes e demonstração. Seus pesos
+MYCIN e critérios clínicos continuam como suposições a validar. O CF expressa
+confiança do sistema, não probabilidade. A integração não cria base/ativa.json
+nem promove esta versão a base clínica aprovada.
+
+O arquivo contém 51 símbolos, 56 regras, oito doenças e seis telas de triagem.
+O motor recebe seu caminho explicitamente e continua independente dos dados
+clínicos, de kb/, da API e de bibliotecas externas. As assinaturas públicas
+do motor permanecem iguais.
+
+EXECUTAR NA RAIZ DO PROJETO
+
+python -m engine base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json base/desenvolvimento/casos/alerta-decubito.json
+
+python -m engine base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json base/desenvolvimento/casos/sinais-mamarios.json
+
+Os casos são sintéticos e verificam a integração. O campo limite_dinamico=0
+encerra a demonstração após as seis telas, sem perguntas adicionais. Não é
+uma configuração global da base. No exemplo de alerta, o executor registra
+a pausa do produtor e escolhe continuar automaticamente.
+
+USAR COM A INTERFACE PYTHON DO MOTOR
+
+import json
+from pathlib import Path
+from engine.sessao import Sessao
+
+dados = json.loads(Path('base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json').read_text(encoding='utf-8'))
+sessao = Sessao(dados, modo='produtor')
+print(sessao.estado())
+
+TESTES
+
+python -m unittest tests.engine.test_base_clinica
+python -m unittest discover -s tests/engine -t .
+
+Os testes da base exercitam carregamento, cobertura da triagem, ambos os modos,
+conflitos térmicos, TPB sem febre, agrupamento de evidência mamária, restauração
+da sessão, alertas e os dois exemplos executados pela CLI.
+
+PONTOS QUE AINDA EXIGEM VALIDAÇÃO CLÍNICA
+
+- Calibração dos CF e dos limiares operacionais.
+- Acúmulo de sinais correlacionados para cetose e acidose.
+- Suspeita de dermatite digital a partir de claudicação/dor sem lesão observada.
+- Especificidade de mucosas alteradas e de esfregaço compatível para TPB ativa.
+- Cobertura específica de deslocamento de abomaso à direita e vólvulo.
+- Reconciliação com sinais da especificação ausentes no anexo revisado.
+
+As fontes contextuais e o estado suposicao_a_validar estão em cada regra.
+Sessões persistidas devem permanecer vinculadas à mesma versão da base.

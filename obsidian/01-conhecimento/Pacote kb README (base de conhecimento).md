@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "document"
-community: "Versões da base, casos e execução local"
+community: "Task 1: Ambiente e modelos Pydantic"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Versões_da_base_casos_e_execução_local
+  - community/Task_1_Ambiente_e_modelos_Pydantic
 ---
 
 # Pacote kb README (base de conhecimento)
@@ -20,4 +20,4 @@ tags:
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `references` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local
+#graphify/document #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic

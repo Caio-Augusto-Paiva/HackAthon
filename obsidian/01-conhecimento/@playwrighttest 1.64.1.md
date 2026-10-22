@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # @playwright/test 1.64.1
@@ -15,4 +15,4 @@ tags:
 - [[Playwright Test webServer]] - `references` [INFERRED]
 - [[playwright-skill (lackeyjb)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

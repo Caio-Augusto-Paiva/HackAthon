@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # D1: snapshot_json como fonte da verdade da sessao
@@ -16,4 +16,4 @@ tags:
 - [[Sessao.restaurar  exportar sem replay]] - `references` [EXTRACTED]
 - [[ordem_respostas no snapshot (reprocessar lotes na correcao)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/rationale #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

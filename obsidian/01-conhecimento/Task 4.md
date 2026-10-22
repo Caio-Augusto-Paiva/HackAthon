@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Validador: achados e casos inválidos"
+community: "validar"
 location: "L47-L55"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Validador_achados_e_casos_inválidos
+  - community/validar
 ---
 
 # Task 4
@@ -19,4 +19,4 @@ tags:
 - [[Task 5]] - `shares_data_with` [EXTRACTED]
 - [[validar]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos
+#graphify/concept #graphify/EXTRACTED #community/validar

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Skills superpowers"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Skills_superpowers
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # obra/superpowers (repositorio de skills)
@@ -19,4 +19,4 @@ tags:
 - [[verification-before-completion (skill)]] - `references` [EXTRACTED]
 - [[writing-plans (skill)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Skills_superpowers
+#graphify/document #graphify/EXTRACTED #community/obra/superpowers_repositorio_de_skills

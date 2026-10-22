@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Branch de trabalho"
+community: "Branch sessao-pair-programming"
 location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Branch_de_trabalho
+  - community/Branch_sessao-pair-programming
 ---
 
 # Sem worktree no branch
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Branch sessao-pair-programming]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Branch_de_trabalho
+#graphify/rationale #graphify/EXTRACTED #community/Branch_sessao-pair-programming

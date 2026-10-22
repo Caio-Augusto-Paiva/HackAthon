@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # Arvore da secao 4.3 da especificacao (sessao, validacao, modelos)
@@ -14,4 +14,4 @@ tags:
 - [[Especificacao canonica do projeto (anamnese bovinos)]] - `references` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

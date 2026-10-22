@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Ambiente e motor (testes)"
+community: "SDD ledger"
 location: "L63-L66"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ambiente_e_motor_testes
+  - community/SDD_ledger
 ---
 
 # Task 6
@@ -20,4 +20,4 @@ tags:
 - [[Task 1]] - `shares_data_with` [EXTRACTED]
 - [[engine.modelos.Base.de_dict]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ambiente_e_motor_testes
+#graphify/concept #graphify/EXTRACTED #community/SDD_ledger

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Validador: achados e casos inválidos"
+community: "validar"
 location: "L49"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Validador_achados_e_casos_inválidos
+  - community/validar
 ---
 
 # E17 estrito com pivo zero
@@ -15,4 +15,4 @@ tags:
 - [[E17 ordem de limiares]] - `references` [EXTRACTED]
 - [[validar]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos
+#graphify/rationale #graphify/EXTRACTED #community/validar

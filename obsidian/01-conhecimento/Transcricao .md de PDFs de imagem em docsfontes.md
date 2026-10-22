@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
 ---
 
 # Transcricao .md de PDFs de imagem em docs/fontes
@@ -15,4 +15,4 @@ tags:
 - [[Fontes oficiais A apresentacaoRerun.pdf e D DocumentarioRerun.pdf]] - `references` [INFERRED]
 - [[Manter o grafo atualizado]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros

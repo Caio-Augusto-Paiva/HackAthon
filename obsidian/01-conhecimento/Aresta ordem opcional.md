@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "para_motor e revisão final do kb"
+community: "Rodada unica de correcao final"
 location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/para_motor_e_revisão_final_do_kb
+  - community/Rodada_unica_de_correcao_final
 ---
 
 # Aresta ordem opcional
@@ -16,4 +16,4 @@ tags:
 - [[Aresta.ordem]] - `implements` [EXTRACTED]
 - [[kbgrafo.py]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/para_motor_e_revisão_final_do_kb
+#graphify/rationale #graphify/EXTRACTED #community/Rodada_unica_de_correcao_final

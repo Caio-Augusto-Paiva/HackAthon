@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "document"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # Motor de inferencia README (engine/)
@@ -18,4 +18,4 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `references` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/document #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

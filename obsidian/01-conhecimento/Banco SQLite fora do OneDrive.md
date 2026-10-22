@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Versões da base, casos e execução local"
+community: "Task 1: Ambiente e modelos Pydantic"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Versões_da_base_casos_e_execução_local
+  - community/Task_1_Ambiente_e_modelos_Pydantic
 ---
 
 # Banco SQLite fora do OneDrive
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local
+#graphify/rationale #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic

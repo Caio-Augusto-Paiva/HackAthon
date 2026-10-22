@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Ambiente e motor (testes)"
+community: "SDD ledger"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ambiente_e_motor_testes
+  - community/SDD_ledger
 ---
 
 # Pacote engine
@@ -17,4 +17,4 @@ tags:
 - [[Verificacao final]] - `references` [EXTRACTED]
 - [[enginevalidacao.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ambiente_e_motor_testes
+#graphify/code #graphify/EXTRACTED #community/SDD_ledger

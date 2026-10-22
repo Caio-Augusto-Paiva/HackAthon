@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # Compatibilidade com o motor via para_motor (exclude_none)
@@ -16,4 +16,4 @@ tags:
 - [[kb como pacote folha (nao importa engine)]] - `rationale_for` [INFERRED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

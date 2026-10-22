@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Agentes e alocação por pessoa"
+community: "Alocacao de agente principal e alternativa por prompt de revisao"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_e_alocação_por_pessoa
+  - community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
 ---
 
 # Gemini Pro (Google AI Pro, app web)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_e_alocação_por_pessoa
+#graphify/concept #graphify/EXTRACTED #community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao

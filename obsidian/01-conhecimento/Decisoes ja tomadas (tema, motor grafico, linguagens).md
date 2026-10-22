@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Instruções e regras do hackathon"
+community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
 location: "L93"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
 ---
 
 # Decisoes ja tomadas (tema, motor grafico, linguagens)
@@ -17,4 +17,4 @@ tags:
 - [[Linguagens escolhidas Python no backend, React no frontend]] - `references` [EXTRACTED]
 - [[Tema T1 Anamnese]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/document #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros

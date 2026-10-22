@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Versões da base, casos e execução local"
+community: "Task 1: Ambiente e modelos Pydantic"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Versões_da_base_casos_e_execução_local
+  - community/Task_1_Ambiente_e_modelos_Pydantic
 ---
 
 # kb/validador.py (validar, validar_dados, validar_edicao, Relatorio)
@@ -22,4 +22,4 @@ tags:
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `calls` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `calls` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local
+#graphify/concept #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic

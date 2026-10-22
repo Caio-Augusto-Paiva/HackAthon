@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Notas da API para o frontend"
+community: "Contrato OpenAPI versionado e exemplos por operationId"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Notas_da_API_para_o_frontend
+  - community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
 ---
 
 # Contrato OpenAPI versionado e exemplos por operationId
@@ -16,4 +16,4 @@ tags:
 - [[Notas para o frontend (proxima nulo, reabrir, 409 conflito)]] - `references` [EXTRACTED]
 - [[Testes da API (pytest, marca lento, base minima de fixtures)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Notas_da_API_para_o_frontend
+#graphify/concept #graphify/EXTRACTED #community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId

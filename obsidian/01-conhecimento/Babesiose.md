@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "concept"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # Babesiose
@@ -14,4 +14,4 @@ tags:
 - [[MSD Vet Manual]] - `cites` [EXTRACTED]
 - [[Tristeza parasitaria bovina (TPB)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/concept #graphify/EXTRACTED #community/MSD_Vet_Manual

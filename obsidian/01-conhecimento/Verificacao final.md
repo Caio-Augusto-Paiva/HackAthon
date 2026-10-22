@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Ambiente e motor (testes)"
+community: "SDD ledger"
 location: "L73"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ambiente_e_motor_testes
+  - community/SDD_ledger
 ---
 
 # Verificacao final
@@ -16,4 +16,4 @@ tags:
 - [[Revisao final]] - `conceptually_related_to` [INFERRED]
 - [[SDD ledger]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ambiente_e_motor_testes
+#graphify/concept #graphify/EXTRACTED #community/SDD_ledger

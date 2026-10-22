@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # Pydantic v2 2.14.1
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[FastAPI 0.156.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

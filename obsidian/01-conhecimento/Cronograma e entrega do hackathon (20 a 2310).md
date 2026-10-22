@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções e regras do hackathon"
+community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
 location: "L73"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon
+  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
 ---
 
 # Cronograma e entrega do hackathon (20 a 23/10)
@@ -17,4 +17,4 @@ tags:
 - [[Fontes oficiais A apresentacaoRerun.pdf e D DocumentarioRerun.pdf]] - `cites` [EXTRACTED]
 - [[Regulamento, pontuacao e cronograma (slide 3)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros

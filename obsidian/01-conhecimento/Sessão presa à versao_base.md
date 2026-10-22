@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "rationale"
-community: "Serviços e infraestrutura da API"
+community: "Plano de implementação API (Seção 4)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Serviços_e_infraestrutura_da_API
+  - community/Plano_de_implementação_API_Seção_4
 ---
 
 # Sessão presa à versao_base
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Task 11 Salvar nova versão e ativar]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Serviços_e_infraestrutura_da_API
+#graphify/rationale #graphify/EXTRACTED #community/Plano_de_implementação_API_Seção_4

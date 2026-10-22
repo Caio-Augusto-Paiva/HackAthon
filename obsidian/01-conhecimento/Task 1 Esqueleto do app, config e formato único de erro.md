@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "concept"
-community: "Serviços e infraestrutura da API"
+community: "Plano de implementação API (Seção 4)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Serviços_e_infraestrutura_da_API
+  - community/Plano_de_implementação_API_Seção_4
 ---
 
 # Task 1: Esqueleto do app, config e formato único de erro
@@ -20,4 +20,4 @@ tags:
 - [[Task 3 Schemas Pydantic e exemplos de contrato]] - `references` [EXTRACTED]
 - [[criar_app  main.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Serviços_e_infraestrutura_da_API
+#graphify/concept #graphify/EXTRACTED #community/Plano_de_implementação_API_Seção_4

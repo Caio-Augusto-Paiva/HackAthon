@@ -1,0 +1,27 @@
+{
+  "id": "DEV-MAS-01",
+  "descricao": "Demonstração sintética de leite alterado e úbere inflamado durante a triagem. Suposição a validar; não constitui caso clínico validado.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 10
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": ["leite_alterado", "ubere_inflamado"],
+    "excrecoes": []
+  },
+  "respostas": {},
+  "limite_dinamico": 0,
+  "esperado": {
+    "urgencia": "observar",
+    "top1": "mastite",
+    "faixas": {
+      "mastite": [79, 81]
+    },
+    "alerta": {
+      "pausa": false
+    }
+  }
+}

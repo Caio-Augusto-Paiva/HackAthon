@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação: entrega e arquitetura"
+community: "Motor de inferência (engine/)"
 location: "Seção 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_entrega_e_arquitetura
+  - community/Motor_de_inferência_engine/
 ---
 
 # Base de conhecimento JSON versionada (kb/)
@@ -22,4 +22,4 @@ tags:
 - [[Validador da base (erros e avisos)]] - `references` [EXTRACTED]
 - [[Versões imutáveis vNNNN.json com pai]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura
+#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # Classe Sessao (dialogo, estado, correcao, modo)
@@ -22,4 +22,4 @@ tags:
 - [[engine.casos.executar_caso (casos de teste reproduziveis)]] - `calls` [INFERRED]
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # MSD Vet Manual
@@ -25,4 +25,4 @@ tags:
 - [[Sobrecarga de grao]] - `cites` [EXTRACTED]
 - [[Status de conferencia das fontes (L, R, N)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/document #graphify/EXTRACTED #community/MSD_Vet_Manual

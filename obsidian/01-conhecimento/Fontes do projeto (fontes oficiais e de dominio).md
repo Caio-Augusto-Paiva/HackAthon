@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Agentes e alocação por pessoa"
+community: "Alocacao de agente principal e alternativa por prompt de revisao"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Agentes_e_alocação_por_pessoa
+  - community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
 ---
 
 # Fontes do projeto (fontes oficiais e de dominio)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Agentes_e_alocação_por_pessoa
+#graphify/document #graphify/INFERRED #community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Agentes e alocação por pessoa"
+community: "Alocacao de agente principal e alternativa por prompt de revisao"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_e_alocação_por_pessoa
+  - community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
 ---
 
 # Claude Code (Claude Pro)
@@ -15,4 +15,4 @@ tags:
 - [[Claude Code fica com o critico e fora da revisao]] - `rationale_for` [EXTRACTED]
 - [[Implementacao por pessoa (A, B, C) com agente principal e reserva]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_e_alocação_por_pessoa
+#graphify/concept #graphify/EXTRACTED #community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Agentes e arquivos de instrução"
+community: "Google Antigravity (app, IDE e CLI)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Agentes_e_arquivos_de_instrução
+  - community/Google_Antigravity_app_IDE_e_CLI
 ---
 
 # Gemini CLI
@@ -15,4 +15,4 @@ tags:
 - [[Google Antigravity (app, IDE e CLI)]] - `references` [EXTRACTED]
 - [[Limites de uso dos planos]] - `references` [AMBIGUOUS]
 
-#graphify/document #graphify/EXTRACTED #community/Agentes_e_arquivos_de_instrução
+#graphify/document #graphify/EXTRACTED #community/Google_Antigravity_app_IDE_e_CLI

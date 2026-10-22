@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Notas da API para o frontend"
+community: "Contrato OpenAPI versionado e exemplos por operationId"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Notas_da_API_para_o_frontend
+  - community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
 ---
 
 # D6: respostas validadas por TypeAdapter e registro CONTRATOS
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Contrato OpenAPI versionado e exemplos por operationId]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Notas_da_API_para_o_frontend
+#graphify/rationale #graphify/EXTRACTED #community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId

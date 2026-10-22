@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # kb como pacote folha (nao importa engine)
@@ -15,4 +15,4 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `semantically_similar_to` [INFERRED]
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/README_da_API_e_decisões
+#graphify/rationale #graphify/INFERRED #community/Classe_Sessao_dialogo_estado_correcao_modo

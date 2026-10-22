@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "concept"
-community: "Domínio veterinário e suposições"
+community: "MSD Vet Manual"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Domínio_veterinário_e_suposições
+  - community/MSD_Vet_Manual
 ---
 
 # Cetose bovina (hiperCetonemia)
@@ -14,4 +14,4 @@ tags:
 - [[Fonte F6 (cetose) nao menciona cheiro de acetona]] - `rationale_for` [EXTRACTED]
 - [[MSD Vet Manual]] - `cites` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Domínio_veterinário_e_suposições
+#graphify/concept #graphify/EXTRACTED #community/MSD_Vet_Manual

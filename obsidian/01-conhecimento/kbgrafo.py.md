@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Grafo do kb e ciclos"
+community: "Task 2"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Grafo_do_kb_e_ciclos
+  - community/Task_2
 ---
 
 # kb/grafo.py
@@ -16,4 +16,4 @@ tags:
 - [[Aresta ordem opcional]] - `references` [INFERRED]
 - [[Task 3]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Grafo_do_kb_e_ciclos
+#graphify/code #graphify/EXTRACTED #community/Task_2

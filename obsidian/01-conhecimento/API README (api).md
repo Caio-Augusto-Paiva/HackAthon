@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "document"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # API README (api/)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/document #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

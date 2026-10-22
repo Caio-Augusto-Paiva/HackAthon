@@ -1,1 +1,1 @@
-"""Scripts de apoio (execução em localhost, sementes, exportação de schemas)."""
+"""Scripts de execução local, sementes, schemas, manutenção e documentação."""

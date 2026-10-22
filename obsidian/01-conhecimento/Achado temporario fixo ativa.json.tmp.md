@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Gravação e ativação de versões"
+community: "Task 5"
 location: "L61"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Gravação_e_ativação_de_versões
+  - community/Task_5
 ---
 
 # Achado temporario fixo ativa.json.tmp
@@ -16,4 +16,4 @@ tags:
 - [[Task 5]] - `references` [EXTRACTED]
 - [[ativa.json]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Gravação_e_ativação_de_versões
+#graphify/concept #graphify/EXTRACTED #community/Task_5

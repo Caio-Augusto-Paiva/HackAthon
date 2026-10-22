@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Validador: achados e casos inválidos"
+community: "validar"
 location: "L32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Validador_achados_e_casos_inválidos
+  - community/validar
 ---
 
 # E20 id_invalido
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Formato de id gera E20]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos
+#graphify/concept #graphify/EXTRACTED #community/validar

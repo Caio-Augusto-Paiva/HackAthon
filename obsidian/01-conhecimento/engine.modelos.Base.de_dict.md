@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Ambiente e motor (testes)"
+community: "SDD ledger"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ambiente_e_motor_testes
+  - community/SDD_ledger
 ---
 
 # engine.modelos.Base.de_dict
@@ -16,4 +16,4 @@ tags:
 - [[Task 6]] - `references` [EXTRACTED]
 - [[Varredura previa]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ambiente_e_motor_testes
+#graphify/code #graphify/EXTRACTED #community/SDD_ledger

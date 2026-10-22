@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Grafo do kb e ciclos"
+community: "Task 2"
 location: "L33-L38"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Grafo_do_kb_e_ciclos
+  - community/Task_2
 ---
 
 # Task 2
@@ -19,4 +19,4 @@ tags:
 - [[Task 4]] - `shares_data_with` [EXTRACTED]
 - [[encontrar_ciclo]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Grafo_do_kb_e_ciclos
+#graphify/concept #graphify/EXTRACTED #community/Task_2

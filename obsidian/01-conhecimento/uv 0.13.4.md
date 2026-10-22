@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # uv 0.13.4
@@ -14,4 +14,4 @@ tags:
 - [[uv (sync, run, python pin)]] - `references` [INFERRED]
 - [[winget install astral-sh.uv (id suposto)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

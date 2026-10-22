@@ -72,8 +72,8 @@
     "semantic_hash": "1355d27bf0db4d5b684ac9208fce1a12"
   },
   "engine/README.md": {
-    "mtime": 1792589950.5578115,
-    "seen": 1792631208.7729166,
+    "mtime": 1792631694.5765984,
+    "seen": 1792631934.8507824,
     "ast_hash": "59e8ce2bb1188e155b06226f368066cc",
     "semantic_hash": "59e8ce2bb1188e155b06226f368066cc"
   },
@@ -112,5 +112,89 @@
     "seen": 1792631208.7729166,
     "ast_hash": "b1dd155151f4877010543d0b56422160",
     "semantic_hash": "b1dd155151f4877010543d0b56422160"
+  },
+  "README.md": {
+    "mtime": 1792631791.4637845,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "b407a9319a3195bfc5fc5472a29fd8e7"
+  },
+  "base/desenvolvimento/LEIA-ME.txt": {
+    "mtime": 1792631695.5850968,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "434bc0e4614fb9943e62d59f57f00f8d"
+  },
+  "docs/entrega/01-processo.md": {
+    "mtime": 1792631695.589098,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "6efbfd4faa32f69071874cc982031d0e"
+  },
+  "docs/entrega/02-arquitetura.md": {
+    "mtime": 1792631695.590112,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "853490b716caafd2e6ef989bc0270eef"
+  },
+  "docs/entrega/03-regras-de-producao.md": {
+    "mtime": 1792631695.5910964,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "eab09fd073dcea1f0204cc4e85f9c80c"
+  },
+  "docs/entrega/04-casos-de-teste.md": {
+    "mtime": 1792631695.5920959,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "f8bc9afaa445c69a98f9f7d2c234bd73"
+  },
+  "docs/entrega/05-apresentacao-e-demo.md": {
+    "mtime": 1792631695.5920959,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "32db5a919bbe30d3bc7a9892f822ce71"
+  },
+  "docs/entrega/06-riscos-e-pendencias.md": {
+    "mtime": 1792631695.5920959,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "7b066fe8bed4090e7acd1fc837bd4948"
+  },
+  "docs/entrega/README.md": {
+    "mtime": 1792631791.464777,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "aeaed05103a8f6d2a5791ad463716ddb"
+  },
+  "docs/processo/A.md": {
+    "mtime": 1792631695.5920959,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "da1f424f65b2fabb35af047120ff6f8b"
+  },
+  "docs/processo/B.md": {
+    "mtime": 1792631695.5967698,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "508687774f648a85b57d92e41317d543"
+  },
+  "docs/processo/C.md": {
+    "mtime": 1792631695.5967698,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "e9fceaa9d5182ac67ec4b589db4ca24e"
+  },
+  "docs/processo/revisoes-cruzadas.md": {
+    "mtime": 1792631695.5967698,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "85d09586198af6d0ee7881c500523979"
+  },
+  "docs/superpowers/plans/2026-10-21-documentacao-entrega-parcial.md": {
+    "mtime": 1792631695.5967698,
+    "seen": 1792631934.8507824,
+    "ast_hash": "",
+    "semantic_hash": "bed0f13d16e78bb0f2e5b5a4e7b9d12c"
   }
 }

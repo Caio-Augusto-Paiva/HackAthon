@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "para_motor e revisão final do kb"
+community: "Rodada unica de correcao final"
 location: "L67"
 tags:
   - graphify/concept
   - graphify/AMBIGUOUS
-  - community/para_motor_e_revisão_final_do_kb
+  - community/Rodada_unica_de_correcao_final
 ---
 
 # Achado kb aceita base invalida
@@ -16,4 +16,4 @@ tags:
 - [[Revisao final]] - `references` [EXTRACTED]
 - [[Rodada unica de correcao final]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/AMBIGUOUS #community/para_motor_e_revisão_final_do_kb
+#graphify/concept #graphify/AMBIGUOUS #community/Rodada_unica_de_correcao_final

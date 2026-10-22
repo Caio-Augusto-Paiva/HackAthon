@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # winget install astral-sh.uv (id suposto)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[uv 0.13.4]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/concept #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

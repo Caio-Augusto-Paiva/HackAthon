@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Skills superpowers"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Skills_superpowers
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # Fatores de certeza (CF) sem calibracao
@@ -16,4 +16,4 @@ tags:
 - [[Registro de suposicoes e lacunas (68 itens)]] - `references` [EXTRACTED]
 - [[Suposicoes clinicas veterinarias (suposicao a validar)]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Skills_superpowers
+#graphify/concept #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Versões da base, casos e execução local"
+community: "Task 1: Ambiente e modelos Pydantic"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Versões_da_base_casos_e_execução_local
+  - community/Task_1_Ambiente_e_modelos_Pydantic
 ---
 
 # Seguranca de entrada: carregar_base trata texto como caminho
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local
+#graphify/rationale #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic

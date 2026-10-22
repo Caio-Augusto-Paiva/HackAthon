@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "concept"
-community: "Agentes e arquivos de instrução"
+community: "Google Antigravity (app, IDE e CLI)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_e_arquivos_de_instrução
+  - community/Google_Antigravity_app_IDE_e_CLI
 ---
 
 # Limites de uso dos planos
@@ -16,4 +16,4 @@ tags:
 - [[Google Antigravity (app, IDE e CLI)]] - `references` [EXTRACTED]
 - [[OpenAI Codex (CLI, IDE, app desktop)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_e_arquivos_de_instrução
+#graphify/concept #graphify/EXTRACTED #community/Google_Antigravity_app_IDE_e_CLI

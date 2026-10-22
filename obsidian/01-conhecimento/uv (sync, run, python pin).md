@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # uv (sync, run, python pin)
@@ -16,4 +16,4 @@ tags:
 - [[rodar.ps1 (script de execucao)]] - `references` [INFERRED]
 - [[uv 0.13.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

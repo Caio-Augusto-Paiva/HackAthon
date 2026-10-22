@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "document"
-community: "README da API e decisões"
+community: "Classe Sessao (dialogo, estado, correcao, modo)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/README_da_API_e_decisões
+  - community/Classe_Sessao_dialogo_estado_correcao_modo
 ---
 
 # Plano de implementacao do motor (secao 1)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Especificacao autorizada da secao 1 (docspromptssecao-1.md)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/README_da_API_e_decisões
+#graphify/document #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo

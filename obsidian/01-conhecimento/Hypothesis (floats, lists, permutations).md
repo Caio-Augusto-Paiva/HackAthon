@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Skills superpowers"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Skills_superpowers
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # Hypothesis (floats, lists, permutations)
@@ -14,4 +14,4 @@ tags:
 - [[Fatores de certeza (CF) sem calibracao]] - `conceptually_related_to` [INFERRED]
 - [[hypothesis 6.170.5]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Skills_superpowers
+#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Skills anthropics e open source"
+community: "obra/superpowers (repositorio de skills)"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Skills_anthropics_e_open_source
+  - community/obra/superpowers_repositorio_de_skills
 ---
 
 # PowerShell ExecutionPolicy Bypass
@@ -14,4 +14,4 @@ tags:
 - [[Demonstracao em Windows 11]] - `conceptually_related_to` [INFERRED]
 - [[rodar.ps1 (script de execucao)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Skills_anthropics_e_open_source
+#graphify/rationale #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills

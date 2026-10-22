@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Validador: achados e casos inválidos"
+community: "validar"
 location: "L22"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Validador_achados_e_casos_inválidos
+  - community/validar
 ---
 
 # Arquivos kb_invalidas Secao 5.1
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Casos invalidos como mutacoes pytest]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos
+#graphify/concept #graphify/EXTRACTED #community/validar
