@@ -860,6 +860,19 @@
       "DominioNumerico": {
         "additionalProperties": false,
         "properties": {
+          "casas_decimais": {
+            "anyOf": [
+              {
+                "maximum": 3.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Casas Decimais"
+          },
           "max": {
             "anyOf": [
               {

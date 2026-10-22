@@ -829,3 +829,23 @@ def test_limite_dinamico_booleano_e_recusado():
     dados["meta"]["limite_dinamico"] = {"produtor": True, "veterinario": 25}
     rel = validar_dados(dados)
     assert not rel.valida and {p.numero for p in rel.erros} == {"E00"}
+
+
+# --- casas_decimais no domínio numérico -----------------------------------
+
+@pytest.mark.parametrize("casas", [-1, 4, 1.5, "1", True])
+def test_casas_decimais_invalidas_sao_erro(casas):
+    d = carregar_minima()
+    _novo_simbolo(d, "medida_x", "pergunta")
+    _simbolo(d, "medida_x")["dominio"] = {"tipo": "numerico", "min": 0, "casas_decimais": casas}
+    relatorio = validar_dados(d)
+    assert not relatorio.valida
+    assert any(p.numero == "E00" for p in relatorio.erros)
+
+
+@pytest.mark.parametrize("dominio", [{"tipo": "numerico", "min": 0}, {"tipo": "numerico", "casas_decimais": 0}, {"tipo": "numerico", "casas_decimais": 3}])
+def test_casas_decimais_ausente_ou_valida_continua_valida(dominio):
+    d = carregar_minima()
+    _novo_simbolo(d, "medida_x", "pergunta")
+    _simbolo(d, "medida_x")["dominio"] = dominio
+    assert not [p for p in validar_dados(d).erros if p.alvo and getattr(p.alvo, "id", None) == "medida_x"]

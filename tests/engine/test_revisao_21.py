@@ -34,7 +34,7 @@ class RestauracaoTests(unittest.TestCase):
         self.assertEqual(restaurada.estado()['progresso']['dinamicas_respondidas'],2)
 
     def test_roundtrip_json_preserva_nao_sei_fatos_fracionarios_traco_e_pausa(self):
-        s=Sessao(base_triagem(),ficha={'dias':F(1,3)})
+        s=Sessao(base_triagem(),ficha={'dias':F(1,2)})
         s.responder_triagem('multipla',['t2'])
         s.acao_bandeira('continuar')
         s.responder_triagem('multipla',['t1'],corrigir=True)

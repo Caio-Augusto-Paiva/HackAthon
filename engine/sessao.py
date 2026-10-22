@@ -1,4 +1,6 @@
 """Diálogo em memória; a API pode persistir entradas e reconstruir a sessão."""
+import re
+from fractions import Fraction
 from copy import deepcopy
 from .modelos import Base, MODOS
 from .memoria import Memoria
@@ -9,6 +11,19 @@ from .parecer import montar_parecer
 from .explicacao import como
 from .traco import evento, para_json, dados_fato
 from .avaliacao import avaliar_condicao
+
+
+def _racionais_do_snapshot(fatos, simbolos):
+    """`exportar` grava números racionais como "a/b". Só no snapshot esse texto volta a Fraction; a
+    entrada digitada nunca passa por aqui (`observar` recusa frações em texto). O domínio continua conferido."""
+    saida = {}
+    for id, entrada in fatos.items():
+        bruto = entrada.get('valor') if isinstance(entrada, dict) else None
+        if (isinstance(bruto, str) and id in simbolos and simbolos[id]['dominio']['tipo'] == 'numerico'
+                and re.fullmatch(r'[0-9]+/[0-9]+', bruto, re.ASCII) and int(bruto.split('/')[1]) > 0):
+            entrada = {**entrada, 'valor': Fraction(bruto)}
+        saida[id] = entrada
+    return saida
 
 
 class Sessao:
@@ -52,7 +67,7 @@ class Sessao:
         """
         sessao=cls.__new__(cls)
         sessao._iniciar(base,modo,None,limite_dinamico)
-        sessao.memoria.registrar(fatos)
+        sessao.memoria.registrar(_racionais_do_snapshot(fatos, sessao.base.simbolos))
         dinamicas=list(perguntas_dinamicas)
         if len(dinamicas)!=len(set(dinamicas)) or any(id not in sessao.fatos for id in dinamicas):
             raise ValueError('Perguntas dinâmicas duplicadas ou sem resposta persistida')
