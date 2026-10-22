@@ -47,7 +47,7 @@ def obter_sessao(sessao_id: str, ctx: Contexto = Depends(obter_contexto)) -> Est
 @router.patch(
     "/sessoes/{sessao_id}",
     operation_id="trocar_modo",
-    responses=ERROS_DE_RECURSO,
+    responses=ERROS_DE_CONFLITO,
     response_model=EstadoSessao,
     summary="Trocar o modo da anamnese",
 )
@@ -110,7 +110,7 @@ def corrigir_resposta(
 @router.post(
     "/sessoes/{sessao_id}/acoes/bandeira",
     operation_id="acao_bandeira",
-    responses=ERROS_DE_RECURSO,
+    responses=ERROS_DE_CONFLITO,
     response_model=EstadoSessao,
     summary="Continuar a anamnese ou ver o parecer após a bandeira vermelha",
 )

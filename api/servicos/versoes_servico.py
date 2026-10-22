@@ -62,7 +62,7 @@ def salvar_versao(ctx: Contexto, corpo: EdicaoBase) -> SalvarResposta:
     não existe é 404. Sem ``pai`` e sem versão ativa, a versão nasce sem pai e ``execucao_pai`` é ``None``.
 
     **Transações:** este serviço não abre transação própria. ``sincronizar_indice`` e cada ``casos_servico.executar``
-    abrem e confirmam a sua; por isso nada aqui roda dentro de um ``with ctx.conn:``.
+    abrem e confirmam a sua; por isso nada aqui roda dentro de uma ``transacao``.
 
     **Falha depois de gravar:** se a execução dos casos levantar (arquivo de casos corrompido, por exemplo), a
     exceção segue (500 ``erro_interno``) e a versão já gravada continua no disco e no índice. Essa versão fica sem

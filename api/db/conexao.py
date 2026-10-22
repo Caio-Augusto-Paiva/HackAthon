@@ -2,7 +2,8 @@
 from __future__ import annotations
 
 import sqlite3
-from contextlib import closing
+from collections.abc import Iterator
+from contextlib import closing, contextmanager
 from pathlib import Path
 
 CAMINHO_ESQUEMA = Path(__file__).with_name("esquema.sql")
@@ -26,3 +27,22 @@ def inicializar(caminho: Path) -> None:
     ddl = CAMINHO_ESQUEMA.read_text(encoding="utf-8")
     with closing(abrir(caminho)) as conn:
         conn.executescript(ddl)
+
+
+@contextmanager
+def transacao(conn: sqlite3.Connection) -> Iterator[sqlite3.Connection]:
+    """Uma transação de escrita: ``BEGIN IMMEDIATE`` (pega a trava de escrita já na entrada), commit no sucesso.
+
+    Com a trava tomada antes de qualquer leitura, o ``MAX(id)`` de ``proximo_id`` e o estado de uma sessão lidos
+    dentro do bloco não mudam até o commit: duas requisições simultâneas se enfileiram em vez de colidir. Qualquer
+    exceção desfaz tudo (rollback) e segue. **Não aninha**: um segundo ``transacao`` na mesma conexão levanta
+    ``sqlite3.OperationalError`` (é bug de quem chama, e o erro alto mostra onde).
+    """
+    conn.execute("BEGIN IMMEDIATE")
+    try:
+        yield conn
+    except BaseException:
+        conn.rollback()
+        raise
+    else:
+        conn.commit()

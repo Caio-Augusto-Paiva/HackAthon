@@ -16,6 +16,7 @@ from dataclasses import dataclass, field
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
+from api.db.conexao import transacao
 from api.erros import conflito, importacao_invalida
 from api.schemas.animal import ErroCampo, LinhaAtualizada, LinhaImportada, LinhaRejeitada, ResultadoImportacao
 from api.servicos.animal_servico import base_ativa
@@ -253,7 +254,7 @@ def importar(ctx: Contexto, nome_arquivo: str, conteudo: bytes, gravar: bool) ->
     if gravar:
         agora = ctx.config.agora()
         try:
-            with ctx.conn:  # tudo ou nada
+            with transacao(ctx.conn):  # tudo ou nada
                 for brinco, nome, ficha, origens in a_criar:
                     repo.inserir_animal(ctx.conn, brinco=brinco, nome=nome, ficha=ficha, origens=origens, agora=agora)
                 for atual, mudaram, informados in a_atualizar:

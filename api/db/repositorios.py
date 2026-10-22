@@ -1,7 +1,7 @@
 """Repositórios SQLite: o único lugar da API com SQL. Nenhuma lógica de domínio.
 
 Funções de módulo que recebem ``conn`` (de ``api.db.conexao.abrir``). Nenhuma faz ``commit``: quem chama
-agrupa as escritas de uma ação em ``with conn:`` (uma transação só). Linhas voltam como ``dict``; as colunas
+agrupa as escritas de uma ação em ``with transacao(conn):`` (uma transação só, imediata). Linhas voltam como ``dict``; as colunas
 ``*_json`` são decodificadas e perdem o sufixo (``snapshot_json`` -> ``snapshot``). Datas e horas são ISO-8601.
 """
 from __future__ import annotations
@@ -12,6 +12,10 @@ from datetime import datetime
 from fractions import Fraction
 
 _TABELAS_COM_ID = frozenset({"animais", "sessoes", "execucoes_casos"})
+
+
+class RevisaoDesatualizada(Exception):
+    """A sessão foi alterada por outra requisição desde que foi lida (``revisao`` diferente da esperada)."""
 
 
 # --- utilidades -----------------------------------------------------------------------------
@@ -138,15 +142,24 @@ def salvar_sessao(
     reconhecidas: list[str],
     agora: datetime,
     subir_revisao: bool,
+    revisao_esperada: int | None = None,
 ) -> int:
-    """Regrava o estado da sessão e devolve a ``revisao`` (sobe 1 só se ``subir_revisao``)."""
+    """Regrava o estado da sessão e devolve a ``revisao`` (sobe 1 só se ``subir_revisao``).
+
+    Com ``revisao_esperada``, só grava se a sessão ainda está nessa revisão (revisão otimista); senão levanta
+    ``RevisaoDesatualizada`` sem escrever. ``LookupError`` se a sessão não existe.
+    """
+    condicao, extra = (" AND revisao = ?", (revisao_esperada,)) if revisao_esperada is not None else ("", ())
     cursor = conn.execute(
         "UPDATE sessoes SET snapshot_json = ?, fase = ?, motivo_parada = ?, modo = ?,"
-        " bandeiras_reconhecidas_json = ?, atualizada_em = ?, revisao = revisao + ? WHERE id = ?",
-        (_json(snapshot), fase, motivo_parada, modo, _json(reconhecidas), _instante(agora), int(subir_revisao), sessao_id),
+        " bandeiras_reconhecidas_json = ?, atualizada_em = ?, revisao = revisao + ? WHERE id = ?" + condicao,
+        (_json(snapshot), fase, motivo_parada, modo, _json(reconhecidas), _instante(agora), int(subir_revisao), sessao_id)
+        + extra,
     )
     if cursor.rowcount == 0:
-        raise LookupError(f"Sessão inexistente: {sessao_id}")
+        if conn.execute("SELECT 1 FROM sessoes WHERE id = ?", (sessao_id,)).fetchone() is None:
+            raise LookupError(f"Sessão inexistente: {sessao_id}")
+        raise RevisaoDesatualizada(sessao_id)
     return conn.execute("SELECT revisao FROM sessoes WHERE id = ?", (sessao_id,)).fetchone()[0]
 
 

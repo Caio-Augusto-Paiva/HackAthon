@@ -6,6 +6,7 @@ from __future__ import annotations
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
+from api.db.conexao import transacao
 from api.erros import conflito, entrada_invalida, nao_encontrado, resposta_invalida
 from api.schemas.sessao import (
     CorrecaoPergunta,
@@ -61,7 +62,7 @@ def criar_sessao(ctx: Contexto, corpo: NovaSessao) -> EstadoSessao:
     motor = Sessao(para_motor(base), corpo.modo, ficha)
     estado = motor.estado()  # registra as perguntas da primeira tela antes de exportar (decisão D2)
     snapshot = snapshot_do_motor(motor, origens_ficha)
-    with ctx.conn:
+    with transacao(ctx.conn):
         sessao_id = repo.inserir_sessao(
             ctx.conn,
             animal_id=animal["id"],
@@ -71,7 +72,7 @@ def criar_sessao(ctx: Contexto, corpo: NovaSessao) -> EstadoSessao:
             fase=estado["fase"],
             agora=ctx.config.agora(),
         )
-        persistir(ctx, sessao_id, motor, estado, snapshot, subir_revisao=False)  # motivo_parada e projeções
+        persistir(ctx, sessao_id, motor, estado, snapshot, subir_revisao=False, revisao_esperada=1)  # motivo_parada e projeções
     linha = repo.obter_sessao(ctx.conn, sessao_id)
     return montar_estado(
         SessaoCarregada(linha=linha, base=base, motor=motor, origens_ficha=origens_ficha), linha["revisao"]
@@ -143,7 +144,15 @@ def responder_triagem(
 
     Uma tela só com símbolos da ficha já vem respondida: o POST é 409 e o PUT a corrige. Que a tela seja a próxima
     (ou que as chaves de ``valores`` sejam as dela) é com o motor: ``ValueError`` vira 422 ``resposta_invalida``.
+
+    Tudo numa ``transacao`` aberta antes de carregar: de duas requisições simultâneas, a segunda relê o estado já
+    alterado e recebe o 409 específico. Se mesmo assim a sessão mudou no meio, é 409 ``conflito`` (revisão otimista).
     """
+    with transacao(ctx.conn):
+        return _responder_triagem(ctx, sessao_id, tela_id, corpo, corrigir)
+
+
+def _responder_triagem(ctx: Contexto, sessao_id: str, tela_id: str, corpo: RespostaTriagem, corrigir: bool) -> EstadoSessao:
     carregada = carregar(ctx, sessao_id)
     tela = next((t for t in carregada.base.meta.triagem if t.id == tela_id), None)
     if tela is None:
@@ -169,8 +178,15 @@ def responder_pergunta(
 
     404 se o símbolo não está na base; 409 ``ja_respondida`` (POST com fato) ou ``nao_respondida`` (PUT fora das
     dinâmicas respondidas, o que inclui os símbolos da triagem, que se corrigem pela tela). Que a pergunta seja a
-    próxima e valha no modo é com o motor.
+    próxima e valha no modo é com o motor. Mesma transação e mesmo 409 ``conflito`` de ``responder_triagem``.
     """
+    with transacao(ctx.conn):
+        return _responder_pergunta(ctx, sessao_id, simbolo, corpo, corrigir)
+
+
+def _responder_pergunta(
+    ctx: Contexto, sessao_id: str, simbolo: str, corpo: RespostaPergunta | CorrecaoPergunta, corrigir: bool
+) -> EstadoSessao:
     carregada = carregar(ctx, sessao_id)
     simbolos = _simbolos(carregada)
     if simbolo not in simbolos:
@@ -192,7 +208,8 @@ def responder_pergunta(
 
 def trocar_modo(ctx: Contexto, sessao_id: str, modo: str) -> EstadoSessao:
     """Troca o modo (``produtor``/``veterinario``) sem perder resposta. O modo inválido já caiu no schema (422)."""
-    return aplicar(ctx, carregar(ctx, sessao_id), lambda motor: motor.trocar_modo(modo), muda=True)
+    with transacao(ctx.conn):
+        return aplicar(ctx, carregar(ctx, sessao_id), lambda motor: motor.trocar_modo(modo), muda=True)
 
 
 def acao_bandeira(ctx: Contexto, sessao_id: str, acao: str) -> EstadoSessao:
@@ -200,4 +217,5 @@ def acao_bandeira(ctx: Contexto, sessao_id: str, acao: str) -> EstadoSessao:
 
     Com a sessão já encerrada, ``continuar`` é aceito (o motor o aceita e ele só tira a pausa): não vira 422.
     """
-    return aplicar(ctx, carregar(ctx, sessao_id), lambda motor: motor.acao_bandeira(acao), muda=True)
+    with transacao(ctx.conn):
+        return aplicar(ctx, carregar(ctx, sessao_id), lambda motor: motor.acao_bandeira(acao), muda=True)

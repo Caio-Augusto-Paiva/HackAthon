@@ -9,7 +9,14 @@ O motor não guarda estado entre requisições. ``sessoes.snapshot_json`` (decis
 e as colunas ``fase``, ``motivo_parada``, ``modo`` e ``bandeiras_reconhecidas_json`` são projeção do snapshot,
 gravadas na mesma transação, para consulta e auditoria.
 
-Uma requisição que muda a sessão faz: ``carregar`` -> ``aplicar(ctx, carregada, acao, muda=...)``. A ``acao`` é uma
+Uma requisição que muda a sessão abre ``transacao(ctx.conn)`` **antes** de ``carregar`` e a mantém até gravar:
+``with transacao(ctx.conn): carregada = carregar(...); aplicar(ctx, carregada, acao, muda=True)``. Com a trava de
+escrita tomada antes da leitura, a segunda de duas requisições simultâneas relê o estado já alterado pela primeira e
+recebe o 409 específico (``ja_respondida``, por exemplo). Além disso a gravação confere a ``revisao`` lida
+(``UPDATE ... WHERE revisao = ?``): se outra requisição alterou a sessão no meio, é 409 ``conflito``. A leitura
+(``muda=False``) não precisa de trava: se a revisão mudou, não regrava e devolve o estado que calculou.
+
+Fluxo: ``carregar`` -> ``aplicar(ctx, carregada, acao, muda=...)``. A ``acao`` é uma
 função do motor (``lambda m: m.responder(...)``); se o motor recusa (``ValueError``), vira 422 ``resposta_invalida``
 antes de qualquer escrita. Os 404 e 409 são pré-verificados pelo serviço, nunca deduzidos do texto da exceção.
 
@@ -25,7 +32,8 @@ from fractions import Fraction
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
-from api.erros import nao_encontrado, resposta_invalida
+from api.db.conexao import transacao
+from api.erros import conflito, nao_encontrado, resposta_invalida
 from api.schemas.sessao import EstadoSessao
 from api.servicos.estado import montar_estado
 from engine.sessao import Sessao
@@ -73,8 +81,21 @@ def _fatos_para_projecao(motor: Sessao) -> dict[str, dict]:
     return fatos
 
 
-def persistir(ctx: Contexto, sessao_id: str, motor: Sessao, estado: dict, snapshot: dict, *, subir_revisao: bool) -> int:
-    """Regrava a sessão e as projeções e devolve a ``revisao``. O chamador já está num ``with ctx.conn:``."""
+def persistir(
+    ctx: Contexto,
+    sessao_id: str,
+    motor: Sessao,
+    estado: dict,
+    snapshot: dict,
+    *,
+    subir_revisao: bool,
+    revisao_esperada: int,
+) -> int:
+    """Regrava a sessão e as projeções e devolve a ``revisao``.
+
+    O chamador já está num ``with transacao(ctx.conn):``. ``revisao_esperada`` é a que ele leu; se a sessão já
+    mudou, levanta ``repo.RevisaoDesatualizada`` antes de escrever qualquer coisa.
+    """
     agora = ctx.config.agora()
     revisao = repo.salvar_sessao(
         ctx.conn,
@@ -86,6 +107,7 @@ def persistir(ctx: Contexto, sessao_id: str, motor: Sessao, estado: dict, snapsh
         reconhecidas=snapshot["motor"]["bandeiras_reconhecidas"],
         agora=agora,
         subir_revisao=subir_revisao,
+        revisao_esperada=revisao_esperada,
     )
     repo.projetar_respostas(
         ctx.conn, sessao_id, _fatos_para_projecao(motor), snapshot["motor"]["ordem_respostas"], estado["modo"], agora
@@ -117,6 +139,10 @@ def aplicar(
     ``muda`` é se a ação altera a sessão para o usuário (resposta, correção, troca de modo, ação da bandeira):
     só então a ``revisao`` sobe. Com ``muda=False`` (leitura) o snapshot só é regravado se mudou, porque
     ``Sessao.estado()`` registra as perguntas apresentadas (decisão D2); a ``revisao`` não sobe.
+
+    A gravação confere a ``revisao`` lida em ``carregada``. Se a sessão mudou no meio: mutação é 409 ``conflito``;
+    leitura não regrava e devolve o estado calculado, sem erro. Quem muda abre ``transacao`` antes de ``carregar``
+    (ver o topo do módulo); sem transação aberta, a gravação abre a sua, e a conferência da revisão protege do mesmo jeito.
     """
     motor, linha = carregada.motor, carregada.linha
     try:
@@ -127,9 +153,23 @@ def aplicar(
     snapshot = snapshot_do_motor(motor, carregada.origens_ficha)
     if not muda and _sem_novidade(linha, estado, snapshot):
         return montar_estado(carregada, linha["revisao"])
-    with ctx.conn:
-        revisao = persistir(ctx, linha["id"], motor, estado, snapshot, subir_revisao=muda)
+    try:
+        if ctx.conn.in_transaction:
+            revisao = _persistir(ctx, linha, motor, estado, snapshot, muda)
+        else:
+            with transacao(ctx.conn):
+                revisao = _persistir(ctx, linha, motor, estado, snapshot, muda)
+    except repo.RevisaoDesatualizada:
+        if muda:
+            raise conflito("A sessão foi alterada por outra requisição; recarregue.") from None
+        return montar_estado(carregada, linha["revisao"])
     return montar_estado(carregada, revisao)
+
+
+def _persistir(ctx: Contexto, linha: dict, motor: Sessao, estado: dict, snapshot: dict, muda: bool) -> int:
+    return persistir(
+        ctx, linha["id"], motor, estado, snapshot, subir_revisao=muda, revisao_esperada=linha["revisao"]
+    )
 
 
 def _sem_novidade(linha: dict, estado: dict, snapshot: dict) -> bool:

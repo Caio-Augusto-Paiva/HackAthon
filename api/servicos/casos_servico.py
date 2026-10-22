@@ -18,6 +18,7 @@ from pydantic import ValidationError
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
+from api.db.conexao import transacao
 from api.erros import nao_encontrado
 from api.schemas.base import Execucao, ExecucaoCabecalho, FalhaCaso, ListaExecucoes, Mudanca, ResultadoCaso
 from api.servicos import base_servico
@@ -220,8 +221,8 @@ def executar(ctx: Contexto, versao: str, ids: list[str] | None = None) -> Execuc
     por caso (ruling 14): o "antes" de cada caso é o status na execução mais recente do pai que o contém, e
     ``ausente`` só vale para o caso que nenhuma execução do pai rodou. A gravação do cabeçalho e dos resultados é
     uma transação só; antes dela, o índice ``versoes_base`` é sincronizado (``sincronizar_indice`` abre a própria
-    transação, por isso fica fora do ``with``). Quem chamar isto de dentro de um ``with ctx.conn:`` (Task 11) comete
-    a transação aberta antes da hora.
+    transação, por isso fica fora do ``with``). Quem chamar isto de dentro de uma ``transacao`` falha alto: o
+    ``BEGIN IMMEDIATE`` aninhado levanta ``sqlite3.OperationalError``.
     """
     base = base_servico.obter_versao(ctx, versao)  # 404 se a versão não existe
     lidos = _ler_casos(ctx)
@@ -242,7 +243,7 @@ def executar(ctx: Contexto, versao: str, ids: list[str] | None = None) -> Execuc
         _comparar_com_o_pai(resultados, antes_por_caso)
 
     base_servico.sincronizar_indice(ctx)  # antes do with: a execução tem chave estrangeira para versoes_base
-    with ctx.conn:
+    with transacao(ctx.conn):
         execucao_id = repo.inserir_execucao(
             ctx.conn,
             versao=versao,

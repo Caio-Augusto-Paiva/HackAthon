@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
+from api.db.conexao import transacao
 from api.erros import entrada_invalida, nao_encontrado
 from api.schemas.base import EdicaoBase, ListaVersoes, UltimaExecucao, VersaoItem
 from api.servicos.comum import texto_legivel
@@ -25,17 +26,16 @@ def sincronizar_indice(ctx: Contexto) -> None:
     ``versoes_base``. Uma versão já registrada não é lida nem alterada; duas requisições simultâneas não
     colidem (``ON CONFLICT DO NOTHING``).
 
-    **Transação:** a função abre e confirma a própria transação (``with ctx.conn:``). Por isso deve ser chamada
-    **antes** do ``with ctx.conn:`` de quem grava a execução, nunca dentro dele: o ``with`` interno faria
-    ``commit`` de tudo o que o bloco externo já escreveu, antes da hora, e um erro depois disso não desfaria
-    mais essas escritas. Sem versão faltando, não escreve nem abre transação.
+    **Transação:** a função abre e confirma a própria ``transacao``. Por isso deve ser chamada **antes** da
+    ``transacao`` de quem grava a execução, nunca dentro dela: o ``BEGIN IMMEDIATE`` aninhado levanta
+    ``sqlite3.OperationalError``. Sem versão faltando, não escreve nem abre transação.
     """
     registradas = {linha["versao"] for linha in repo.listar_versoes_base(ctx.conn)}
     faltam = [v for v in ctx.repo.listar_versoes() if v not in registradas]
     if not faltam:
         return
     agora = ctx.config.agora()
-    with ctx.conn:
+    with transacao(ctx.conn):
         for versao in faltam:
             meta = ctx.repo.carregar(versao).meta
             repo.sincronizar_versao(

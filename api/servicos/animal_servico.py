@@ -5,6 +5,7 @@ import sqlite3
 
 from api.contexto import Contexto
 from api.db import repositorios as repo
+from api.db.conexao import transacao
 from api.erros import ErroApi, conflito, entrada_invalida, nao_encontrado
 from api.schemas.animal import (
     Animal,
@@ -68,7 +69,7 @@ def criar_animal(ctx: Contexto, corpo: NovoAnimal) -> Animal:
     if repo.obter_animal_por_brinco(ctx.conn, brinco) is not None:
         raise conflito(f"Já existe um animal com o brinco '{brinco}'.")
     try:
-        with ctx.conn:
+        with transacao(ctx.conn):
             animal_id = repo.inserir_animal(
                 ctx.conn,
                 brinco=brinco,

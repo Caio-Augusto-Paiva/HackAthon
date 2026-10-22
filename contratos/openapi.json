@@ -4270,6 +4270,16 @@
             },
             "description": "Recurso não encontrado (`nao_encontrado`)."
           },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
+          },
           "422": {
             "content": {
               "application/json": {
@@ -4338,6 +4348,16 @@
               }
             },
             "description": "Recurso não encontrado (`nao_encontrado`)."
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErroResposta"
+                }
+              }
+            },
+            "description": "Conflito com o estado atual (`conflito`, `ja_respondida`, `nao_respondida` ou `casos_falhando`)."
           },
           "422": {
             "content": {

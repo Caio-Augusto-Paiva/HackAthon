@@ -96,7 +96,7 @@ api/
 
 **Regra: rotas finas, SQL só em repositórios.** Uma rota só declara caminho, schema e `operation_id` e chama um serviço;
 serviços decidem e orquestram (e levantam `ErroApi`); `api/db/repositorios.py` é o único arquivo com SQL e não tem lógica de
-domínio. Toda escrita de um serviço acontece dentro de `with ctx.conn:` (os repositórios não fazem `commit`). Dependências:
+domínio. Toda escrita de um serviço acontece dentro de `with transacao(ctx.conn):` (`api/db/conexao.py`: `BEGIN IMMEDIATE`, commit no sucesso, rollback na exceção; os repositórios não fazem `commit` e `transacao` não aninha). Dependências:
 `api -> engine -> kb`; `engine/` e `kb/` não são alterados pela API.
 
 ### Mapa de rotas por arquivo (27, prefixo `/api`)
@@ -184,4 +184,11 @@ Os testes da API usam a base mínima de `tests/fixtures/kb/base_minima.json` (nu
 - **Sessão presa à versão.** Ativar ou salvar outra versão não muda sessões em andamento: cada uma fica na `versao_base` com que nasceu.
 - **Ficha.** A ficha grava `data_ultimo_parto`; `dias_em_lactacao` é calculado dela (data ausente, inválida ou no futuro: a tela é
   perguntada, nunca erro). O cliente nunca envia CF: envia o valor ou `"nao_sei": true`.
+- **Concorrência.** Uma requisição que escreve toma a trava de escrita do SQLite no começo (`BEGIN IMMEDIATE`), então o `MAX(id)` dos
+  ids sequenciais é lido já dentro da trava (dois `POST /sessoes` simultâneos nunca repetem id). As mutações de sessão abrem a transação
+  **antes** de carregar o estado: de duas requisições iguais ao mesmo tempo, a segunda relê o estado já alterado e recebe o 409 específico
+  (`ja_respondida`). Além disso a gravação confere a `revisao` lida (`UPDATE ... WHERE revisao = ?`): se outra requisição alterou a sessão
+  no meio, é 409 `conflito` ("recarregue"). Um `GET` que precisaria regravar o snapshot e encontra a revisão mudada não regrava e responde
+  com o estado que calculou. `casos_servico.executar` e `base_servico.sincronizar_indice` abrem a própria transação: nunca chame
+  dentro de outra (o `BEGIN` aninhado levanta `sqlite3.OperationalError`).
 - **Autor das versões.** Toda versão salva pela API tem autor `equipe` (suposição: não há login).
