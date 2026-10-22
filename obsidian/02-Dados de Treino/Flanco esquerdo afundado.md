@@ -11,6 +11,6 @@ tags:
 # Flanco esquerdo afundado
 
 ## Connections
-- [[R-DAB-02 SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso]] - `condicao_de` [EXTRACTED]
+- [[R-DAB-02 SE Início da lactação E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Deslocamento_de_Abomaso

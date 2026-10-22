@@ -11,6 +11,6 @@ tags:
 # Recusa seletiva de concentrado
 
 ## Connections
-- [[R-CET-03 SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose  Hipercetonemia]] - `condicao_de` [EXTRACTED]
+- [[R-CET-03 SE Início da lactação E Recusa seletiva de concentrado ENTÃO Cetose  Hipercetonemia]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Cetose_/_Hipercetonemia

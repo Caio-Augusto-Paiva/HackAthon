@@ -272,6 +272,9 @@ def test_como_doenca(cliente, apos_pergunta_x):
     assert r01["entradas"][0]["origem"] == "resposta"
     assert r01["entradas"][0]["tela_id"] == "sinais"
     assert r01["entradas"][0]["valor"] is True
+    # linguagem comum para a tela: condições da regra como frase e o nome legível de cada fato
+    assert r01["frase"] == "sinal A"
+    assert r01["entradas"][0]["nome"] == "Sinal A"
 
 
 def test_como_traz_o_texto_legivel_de_cada_regra(cliente, apos_pergunta_x):

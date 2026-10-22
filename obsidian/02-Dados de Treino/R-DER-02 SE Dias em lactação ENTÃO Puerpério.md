@@ -8,11 +8,10 @@ tags:
   - community/Metrite_Puerperal
 ---
 
-# R-MET-01: SE Puerperio E Corrimento vaginal fétido ENTÃO Metrite Puerperal
+# R-DER-02: SE Dias em lactação ENTÃO Puerpério
 
 ## Connections
-- [[Corrimento vaginal fétido]] - `condicao_de` [EXTRACTED]
-- [[Metrite Puerperal]] - `conclui` [EXTRACTED]
-- [[Puerperio]] - `condicao_de` [EXTRACTED]
+- [[Dias em lactação]] - `condicao_de` [EXTRACTED]
+- [[Puerpério]] - `conclui` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Metrite_Puerperal

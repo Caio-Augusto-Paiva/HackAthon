@@ -11,6 +11,6 @@ tags:
 # Hálito adocicado
 
 ## Connections
-- [[R-CET-02 SE Inicio lactacao E Hálito adocicado ENTÃO Cetose  Hipercetonemia]] - `condicao_de` [EXTRACTED]
+- [[R-CET-02 SE Início da lactação E Hálito adocicado ENTÃO Cetose  Hipercetonemia]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Cetose_/_Hipercetonemia

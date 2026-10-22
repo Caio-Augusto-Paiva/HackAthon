@@ -8,10 +8,10 @@ tags:
   - community/Comum_bandeiras_triagem_e_sinais_compartilhados
 ---
 
-# R-DER-03: SE Dias em lactação ENTÃO Inicio lactacao
+# R-DER-03: SE Dias em lactação ENTÃO Início da lactação
 
 ## Connections
 - [[Dias em lactação]] - `condicao_de` [EXTRACTED]
-- [[Inicio lactacao]] - `conclui` [EXTRACTED]
+- [[Início da lactação]] - `conclui` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

@@ -10,8 +10,16 @@
     "cf": 0.88,
     "percentual": 88,
     "combinacao": [
-      { "apos_regra": "R-MAS-01", "antes": 0.0, "depois": 0.7 },
-      { "apos_regra": "R-MAS-02", "antes": 0.7, "depois": 0.88 }
+      {
+        "apos_regra": "R-MAS-01",
+        "antes": 0.0,
+        "depois": 0.7
+      },
+      {
+        "apos_regra": "R-MAS-02",
+        "antes": 0.7,
+        "depois": 0.88
+      }
     ],
     "evidencias": [
       {
@@ -29,9 +37,11 @@
             "cf": 1.0,
             "origem": "resposta",
             "tela_id": "producao_leite",
-            "evidencias": null
+            "evidencias": null,
+            "nome": "Alteração visível do leite"
           }
-        ]
+        ],
+        "frase": "alteração visível do leite"
       },
       {
         "regra_id": "R-MAS-02",
@@ -48,9 +58,11 @@
             "cf": 1.0,
             "origem": "resposta",
             "tela_id": "producao_leite",
-            "evidencias": null
+            "evidencias": null,
+            "nome": "Inflamação do úbere"
           }
-        ]
+        ],
+        "frase": "inflamação do úbere"
       }
     ]
   }

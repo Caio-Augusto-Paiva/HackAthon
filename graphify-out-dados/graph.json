@@ -68,12 +68,12 @@
     },
     {
       "id": "regra:R-DER-03",
-      "label": "R-DER-03: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O Inicio lactacao",
+      "label": "R-DER-03: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O In\u00edcio da lacta\u00e7\u00e3o",
       "classe": "evidencia",
       "community": 0,
       "community_name": "Comum: bandeiras, triagem e sinais compartilhados",
       "file_type": "concept",
-      "norm_label": "r-der-03: se dias em lactacao entao inicio lactacao",
+      "norm_label": "r-der-03: se dias em lactacao entao inicio da lactacao",
       "source_file": "base/fonte/comum.json"
     },
     {
@@ -168,32 +168,32 @@
     },
     {
       "id": "regra:R-CET-01",
-      "label": "R-CET-01: SE Inicio lactacao E Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Cetose / Hipercetonemia",
+      "label": "R-CET-01: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Cetose / Hipercetonemia",
       "classe": "evidencia",
       "community": 2,
       "community_name": "Cetose / Hipercetonemia",
       "file_type": "concept",
-      "norm_label": "r-cet-01: se inicio lactacao e apetite e queda de producao de leite entao cetose / hipercetonemia",
+      "norm_label": "r-cet-01: se inicio da lactacao e apetite e queda de producao de leite entao cetose / hipercetonemia",
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
       "id": "regra:R-CET-02",
-      "label": "R-CET-02: SE Inicio lactacao E H\u00e1lito adocicado ENT\u00c3O Cetose / Hipercetonemia",
+      "label": "R-CET-02: SE In\u00edcio da lacta\u00e7\u00e3o E H\u00e1lito adocicado ENT\u00c3O Cetose / Hipercetonemia",
       "classe": "evidencia",
       "community": 2,
       "community_name": "Cetose / Hipercetonemia",
       "file_type": "concept",
-      "norm_label": "r-cet-02: se inicio lactacao e halito adocicado entao cetose / hipercetonemia",
+      "norm_label": "r-cet-02: se inicio da lactacao e halito adocicado entao cetose / hipercetonemia",
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
       "id": "regra:R-CET-03",
-      "label": "R-CET-03: SE Inicio lactacao E Recusa seletiva de concentrado ENT\u00c3O Cetose / Hipercetonemia",
+      "label": "R-CET-03: SE In\u00edcio da lacta\u00e7\u00e3o E Recusa seletiva de concentrado ENT\u00c3O Cetose / Hipercetonemia",
       "classe": "evidencia",
       "community": 2,
       "community_name": "Cetose / Hipercetonemia",
       "file_type": "concept",
-      "norm_label": "r-cet-03: se inicio lactacao e recusa seletiva de concentrado entao cetose / hipercetonemia",
+      "norm_label": "r-cet-03: se inicio da lactacao e recusa seletiva de concentrado entao cetose / hipercetonemia",
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
@@ -258,22 +258,22 @@
     },
     {
       "id": "regra:R-DAB-01",
-      "label": "R-DAB-01: SE Inicio lactacao E Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Deslocamento de Abomaso",
+      "label": "R-DAB-01: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Deslocamento de Abomaso",
       "classe": "evidencia",
       "community": 4,
       "community_name": "Deslocamento de Abomaso",
       "file_type": "concept",
-      "norm_label": "r-dab-01: se inicio lactacao e apetite e queda de producao de leite entao deslocamento de abomaso",
+      "norm_label": "r-dab-01: se inicio da lactacao e apetite e queda de producao de leite entao deslocamento de abomaso",
       "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
     },
     {
       "id": "regra:R-DAB-02",
-      "label": "R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENT\u00c3O Deslocamento de Abomaso",
+      "label": "R-DAB-02: SE In\u00edcio da lacta\u00e7\u00e3o E Flanco esquerdo afundado ENT\u00c3O Deslocamento de Abomaso",
       "classe": "evidencia",
       "community": 4,
       "community_name": "Deslocamento de Abomaso",
       "file_type": "concept",
-      "norm_label": "r-dab-02: se inicio lactacao e flanco esquerdo afundado entao deslocamento de abomaso",
+      "norm_label": "r-dab-02: se inicio da lactacao e flanco esquerdo afundado entao deslocamento de abomaso",
       "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
     },
     {
@@ -448,7 +448,7 @@
     },
     {
       "id": "regra:R-DER-02",
-      "label": "R-DER-02: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O Puerperio",
+      "label": "R-DER-02: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O Puerp\u00e9rio",
       "classe": "evidencia",
       "community": 7,
       "community_name": "Metrite Puerperal",
@@ -458,7 +458,7 @@
     },
     {
       "id": "regra:R-MET-01",
-      "label": "R-MET-01: SE Puerperio E Corrimento vaginal f\u00e9tido ENT\u00c3O Metrite Puerperal",
+      "label": "R-MET-01: SE Puerp\u00e9rio E Corrimento vaginal f\u00e9tido ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
       "community": 7,
       "community_name": "Metrite Puerperal",
@@ -468,7 +468,7 @@
     },
     {
       "id": "regra:R-MET-02",
-      "label": "R-MET-02: SE Corrimento vaginal E Puerperio E Febre ENT\u00c3O Metrite Puerperal",
+      "label": "R-MET-02: SE Corrimento vaginal E Puerp\u00e9rio E Febre ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
       "community": 7,
       "community_name": "Metrite Puerperal",
@@ -478,7 +478,7 @@
     },
     {
       "id": "regra:R-MET-03",
-      "label": "R-MET-03: SE Puerperio E Aumento uterino \u00e0 palpa\u00e7\u00e3o E Corrimento vaginal ENT\u00c3O Metrite Puerperal",
+      "label": "R-MET-03: SE Puerp\u00e9rio E Aumento uterino \u00e0 palpa\u00e7\u00e3o E Corrimento vaginal ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
       "community": 7,
       "community_name": "Metrite Puerperal",
@@ -488,7 +488,7 @@
     },
     {
       "id": "regra:R-MET-04",
-      "label": "R-MET-04: SE Hist\u00f3rico de reten\u00e7\u00e3o de placenta E Puerperio ENT\u00c3O Metrite Puerperal",
+      "label": "R-MET-04: SE Hist\u00f3rico de reten\u00e7\u00e3o de placenta E Puerp\u00e9rio ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
       "community": 7,
       "community_name": "Metrite Puerperal",
@@ -678,11 +678,11 @@
     },
     {
       "id": "sim:inicio_lactacao",
-      "label": "Inicio lactacao",
+      "label": "In\u00edcio da lacta\u00e7\u00e3o",
       "community": 0,
       "community_name": "Comum: bandeiras, triagem e sinais compartilhados",
       "file_type": "concept",
-      "norm_label": "inicio lactacao",
+      "norm_label": "inicio da lactacao",
       "source_file": "base/fonte/comum.json",
       "tipo": "derivado"
     },
@@ -1048,7 +1048,7 @@
     },
     {
       "id": "sim:puerperio",
-      "label": "Puerperio",
+      "label": "Puerp\u00e9rio",
       "community": 7,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
@@ -2383,5 +2383,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c2dd78d0d2afb0e288e162613a18c3ad53880d52"
+  "built_at_commit": "1ecf2b2eca2e1a3bfac321e066f5c3e9041401d7"
 }

@@ -4,9 +4,9 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0003`. Pai declarado: `v0002`. Data declarada na base: `2026-10-22`.
+Versão: `v0004`. Pai declarado: `v0003`. Data declarada na base: `2026-10-22`.
 
-Arquivo: `base/versoes/v0003.json`. SHA-256 do JSON canônico: `b7b35758e26b301269da4ecd8c4b9f6d1c674428e97ebcd7dea17c18b489a4b8`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0004.json`. SHA-256 do JSON canônico: `80d59492ba7c70ee15011e737572ab9dfc2212ac5be2c1ce76d0b4e781fdb19d`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
 Regras: **61**. Símbolos: **51**. Doenças: **8**.
 
@@ -184,7 +184,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | halito_adocicado_acetona | Hálito adocicado | pergunta | tipo: booleano | O hálito da vaca tem cheiro adocicado, semelhante à acetona? | Odor adocicado ou de acetona no hálito? | — | mycin |
 | hipocalcemia | Hipocalcemia Puerperal | doenca | tipo: booleano | — | — | alta | mycin |
 | hipotermia | Hipotermia | derivado | tipo: booleano | — | — | — | mycin |
-| inicio_lactacao | Inicio lactacao | derivado | tipo: booleano | — | — | — | mycin |
+| inicio_lactacao | Início da lactação | derivado | tipo: booleano | — | — | — | mycin |
 | leite_alterado | Alteração visível do leite | pergunta | tipo: booleano | O leite apresenta grumos, sangue ou aspecto aguado? | Alteração macroscópica do leite? | — | mycin |
 | lesao_erosiva_talao_morango | Lesão característica no talão | pergunta | tipo: booleano | — | Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital? | — | mycin |
 | mastite | Mastite | doenca | tipo: booleano | — | — | media | mycin |
@@ -196,7 +196,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | pescoco_em_s | Desvio cervical em S | pergunta | tipo: booleano | A vaca mantém o pescoço curvado em forma de S? | Desvio cervical em S observado? | — | mycin |
 | ph_ruminal | pH ruminal | pergunta | casas_decimais: 1, max: 14, min: 0, tipo: numerico, unidade: pH | — | Qual é o pH ruminal medido, considerando método e momento da coleta? | — | mycin |
 | ping_metalico_flanco_esquerdo | Ping no flanco esquerdo | pergunta | tipo: booleano | — | Ping metálico no flanco esquerdo à percussão e auscultação simultâneas? | — | mycin |
-| puerperio | Puerperio | derivado | tipo: booleano | — | — | — | mycin |
+| puerperio | Puerpério | derivado | tipo: booleano | — | — | — | mycin |
 | queda_producao | Queda de produção de leite | pergunta | tipo: booleano | A produção de leite caiu em relação ao habitual? | Queda da produção em relação ao padrão individual? | — | mycin |
 | recusa_concentrado_come_volumoso | Recusa seletiva de concentrado | pergunta | tipo: booleano | A vaca recusa a ração, mas ainda come capim ou feno? | Recusa de concentrado com manutenção da ingestão de volumoso? | — | mycin |
 | retencao_placenta | Histórico de retenção de placenta | ficha | tipo: booleano | Houve retenção de placenta neste parto? | Retenção de membranas fetais após o último parto? | — | mycin |

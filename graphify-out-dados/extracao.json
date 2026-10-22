@@ -261,7 +261,7 @@
     },
     {
       "id": "sim:inicio_lactacao",
-      "label": "Inicio lactacao",
+      "label": "Início da lactação",
       "file_type": "concept",
       "source_file": "base/fonte/comum.json",
       "tipo": "derivado"
@@ -275,7 +275,7 @@
     },
     {
       "id": "sim:puerperio",
-      "label": "Puerperio",
+      "label": "Puerpério",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "tipo": "derivado"
@@ -366,14 +366,14 @@
     },
     {
       "id": "regra:R-DER-02",
-      "label": "R-DER-02: SE Dias em lactação ENTÃO Puerperio",
+      "label": "R-DER-02: SE Dias em lactação ENTÃO Puerpério",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "classe": "evidencia"
     },
     {
       "id": "regra:R-DER-03",
-      "label": "R-DER-03: SE Dias em lactação ENTÃO Inicio lactacao",
+      "label": "R-DER-03: SE Dias em lactação ENTÃO Início da lactação",
       "file_type": "concept",
       "source_file": "base/fonte/comum.json",
       "classe": "evidencia"
@@ -443,14 +443,14 @@
     },
     {
       "id": "regra:R-CET-01",
-      "label": "R-CET-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia",
+      "label": "R-CET-01: SE Início da lactação E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/cetose.json",
       "classe": "evidencia"
     },
     {
       "id": "regra:R-DAB-01",
-      "label": "R-DAB-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso",
+      "label": "R-DAB-01: SE Início da lactação E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
       "classe": "evidencia"
@@ -464,14 +464,14 @@
     },
     {
       "id": "regra:R-MET-02",
-      "label": "R-MET-02: SE Corrimento vaginal E Puerperio E Febre ENTÃO Metrite Puerperal",
+      "label": "R-MET-02: SE Corrimento vaginal E Puerpério E Febre ENTÃO Metrite Puerperal",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "classe": "evidencia"
     },
     {
       "id": "regra:R-MET-03",
-      "label": "R-MET-03: SE Puerperio E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal",
+      "label": "R-MET-03: SE Puerpério E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "classe": "evidencia"
@@ -492,21 +492,21 @@
     },
     {
       "id": "regra:R-CET-02",
-      "label": "R-CET-02: SE Inicio lactacao E Hálito adocicado ENTÃO Cetose / Hipercetonemia",
+      "label": "R-CET-02: SE Início da lactação E Hálito adocicado ENTÃO Cetose / Hipercetonemia",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/cetose.json",
       "classe": "evidencia"
     },
     {
       "id": "regra:R-CET-03",
-      "label": "R-CET-03: SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia",
+      "label": "R-CET-03: SE Início da lactação E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/cetose.json",
       "classe": "evidencia"
     },
     {
       "id": "regra:R-DAB-02",
-      "label": "R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso",
+      "label": "R-DAB-02: SE Início da lactação E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
       "classe": "evidencia"
@@ -527,14 +527,14 @@
     },
     {
       "id": "regra:R-MET-01",
-      "label": "R-MET-01: SE Puerperio E Corrimento vaginal fétido ENTÃO Metrite Puerperal",
+      "label": "R-MET-01: SE Puerpério E Corrimento vaginal fétido ENTÃO Metrite Puerperal",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "classe": "evidencia"
     },
     {
       "id": "regra:R-MET-04",
-      "label": "R-MET-04: SE Histórico de retenção de placenta E Puerperio ENTÃO Metrite Puerperal",
+      "label": "R-MET-04: SE Histórico de retenção de placenta E Puerpério ENTÃO Metrite Puerperal",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "classe": "evidencia"

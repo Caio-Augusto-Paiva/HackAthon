@@ -763,6 +763,11 @@ export interface components {
             /** Evidencias */
             evidencias: components["schemas"]["Evidencia"][] | null;
             /**
+             * Nome
+             * @description Nome legível do símbolo.
+             */
+            nome: string | null;
+            /**
              * Origem
              * @enum {string}
              */
@@ -825,6 +830,12 @@ export interface components {
             entradas: components["schemas"]["Entrada"][];
             /** Fonte */
             fonte: string | null;
+            /**
+             * Frase
+             * @description As condições da regra em linguagem comum, ligadas por 'e'.
+             * @default
+             */
+            frase: string;
             /** Premissa */
             premissa: number;
             /** Regra Id */

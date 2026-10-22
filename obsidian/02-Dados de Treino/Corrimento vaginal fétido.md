@@ -11,6 +11,6 @@ tags:
 # Corrimento vaginal fétido
 
 ## Connections
-- [[R-MET-01 SE Puerperio E Corrimento vaginal fétido ENTÃO Metrite Puerperal]] - `condicao_de` [EXTRACTED]
+- [[R-MET-01 SE Puerpério E Corrimento vaginal fétido ENTÃO Metrite Puerperal]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Metrite_Puerperal

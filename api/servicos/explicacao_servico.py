@@ -151,7 +151,9 @@ def _completar(
     for evidencia in evidencias:
         regra = regras.get(evidencia["regra_id"])
         evidencia["texto"] = texto_da_regra(regra, simbolos) if regra is not None else evidencia["regra_id"]
+        evidencia["frase"] = " e ".join(sinal_legivel(c, simbolos) for c in regra.se) if regra is not None else ""
         for entrada in evidencia["entradas"]:
+            entrada["nome"] = simbolos[entrada["simbolo"]].nome if entrada["simbolo"] in simbolos else entrada["simbolo"]
             entrada["origem"] = _origem(entrada["origem"], entrada["simbolo"], origens_ficha)
             if entrada.get("evidencias"):
                 _completar(entrada["evidencias"], regras, simbolos, origens_ficha)

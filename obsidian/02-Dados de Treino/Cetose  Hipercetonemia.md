@@ -11,9 +11,9 @@ tags:
 # Cetose / Hipercetonemia
 
 ## Connections
-- [[R-CET-01 SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
-- [[R-CET-02 SE Inicio lactacao E Hálito adocicado ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
-- [[R-CET-03 SE Inicio lactacao E Recusa seletiva de concentrado ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
+- [[R-CET-01 SE Início da lactação E Apetite E Queda de produção de leite ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
+- [[R-CET-02 SE Início da lactação E Hálito adocicado ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
+- [[R-CET-03 SE Início da lactação E Recusa seletiva de concentrado ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
 - [[R-CET-04 SE BHB sanguíneo ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
 - [[R-CET-05 SE Corpos cetônicos na urina ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
 - [[R-CET-06 SE Apetite ENTÃO Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]

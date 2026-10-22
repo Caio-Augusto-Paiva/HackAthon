@@ -8,12 +8,11 @@ tags:
   - community/Metrite_Puerperal
 ---
 
-# R-MET-03: SE Puerperio E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal
+# R-MET-01: SE Puerpério E Corrimento vaginal fétido ENTÃO Metrite Puerperal
 
 ## Connections
-- [[Aumento uterino à palpação]] - `condicao_de` [EXTRACTED]
-- [[Corrimento vaginal]] - `condicao_de` [EXTRACTED]
+- [[Corrimento vaginal fétido]] - `condicao_de` [EXTRACTED]
 - [[Metrite Puerperal]] - `conclui` [EXTRACTED]
-- [[Puerperio]] - `condicao_de` [EXTRACTED]
+- [[Puerpério]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Metrite_Puerperal

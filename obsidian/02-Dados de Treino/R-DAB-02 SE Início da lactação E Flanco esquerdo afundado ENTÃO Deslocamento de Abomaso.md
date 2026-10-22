@@ -8,11 +8,11 @@ tags:
   - community/Deslocamento_de_Abomaso
 ---
 
-# R-DAB-02: SE Inicio lactacao E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso
+# R-DAB-02: SE Início da lactação E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso
 
 ## Connections
 - [[Deslocamento de Abomaso]] - `conclui` [EXTRACTED]
 - [[Flanco esquerdo afundado]] - `condicao_de` [EXTRACTED]
-- [[Inicio lactacao]] - `condicao_de` [EXTRACTED]
+- [[Início da lactação]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Deslocamento_de_Abomaso

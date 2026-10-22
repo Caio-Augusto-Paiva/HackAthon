@@ -8,12 +8,11 @@ tags:
   - community/Cetose_/_Hipercetonemia
 ---
 
-# R-CET-01: SE Inicio lactacao E Apetite E Queda de produção de leite ENTÃO Cetose / Hipercetonemia
+# R-CET-03: SE Início da lactação E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia
 
 ## Connections
-- [[Apetite]] - `condicao_de` [EXTRACTED]
 - [[Cetose  Hipercetonemia]] - `conclui` [EXTRACTED]
-- [[Inicio lactacao]] - `condicao_de` [EXTRACTED]
-- [[Queda de produção de leite]] - `condicao_de` [EXTRACTED]
+- [[Início da lactação]] - `condicao_de` [EXTRACTED]
+- [[Recusa seletiva de concentrado]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Cetose_/_Hipercetonemia

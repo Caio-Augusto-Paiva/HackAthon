@@ -1072,7 +1072,7 @@
       "dados": {
         "id": "inicio_lactacao",
         "tipo": "derivado",
-        "nome": "Inicio lactacao",
+        "nome": "Início da lactação",
         "dominio": {
           "tipo": "booleano"
         },
@@ -1112,7 +1112,7 @@
       "dados": {
         "id": "puerperio",
         "tipo": "derivado",
-        "nome": "Puerperio",
+        "nome": "Puerpério",
         "dominio": {
           "tipo": "booleano"
         },

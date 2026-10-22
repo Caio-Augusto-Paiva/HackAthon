@@ -63,10 +63,12 @@ describe('parecer do sistema', () => {
     const fetch = montar();
     await userEvent.click(await screen.findByRole('button', { name: 'Como cheguei aqui?' }));
     const dialogo = await screen.findByRole('dialog');
-    expect(await within(dialogo).findByText('R-MAS-01')).toBeInTheDocument();
+    expect((await within(dialogo).findAllByText(/Porque foi observado/)).length).toBe(2);
+    expect(dialogo).toHaveTextContent('Porque foi observado: alteração visível do leite.');
+    expect(dialogo).toHaveTextContent('Alteração visível do leite: sim (você respondeu)');
+    expect(dialogo).toHaveTextContent('ainda são suposições');
     expect(dialogo).toHaveTextContent('F1');
-    expect(dialogo).toHaveTextContent('Suposição a validar');
-    expect(dialogo).toHaveTextContent('Leite alterado');
+    expect(dialogo).not.toHaveTextContent('R-MAS-01');
     expect(within(dialogo).getByText('0% → 70%')).toBeInTheDocument();
     expect(within(dialogo).getByText('70% → 88%')).toBeInTheDocument();
     expect(within(dialogo).getByRole('button', { name: 'Expandir painel' })).toBeInTheDocument();

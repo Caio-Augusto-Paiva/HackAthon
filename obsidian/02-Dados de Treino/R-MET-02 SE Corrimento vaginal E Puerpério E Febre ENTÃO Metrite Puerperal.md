@@ -8,10 +8,12 @@ tags:
   - community/Metrite_Puerperal
 ---
 
-# R-DER-02: SE Dias em lactação ENTÃO Puerperio
+# R-MET-02: SE Corrimento vaginal E Puerpério E Febre ENTÃO Metrite Puerperal
 
 ## Connections
-- [[Dias em lactação]] - `condicao_de` [EXTRACTED]
-- [[Puerperio]] - `conclui` [EXTRACTED]
+- [[Corrimento vaginal]] - `condicao_de` [EXTRACTED]
+- [[Febre]] - `condicao_de` [EXTRACTED]
+- [[Metrite Puerperal]] - `conclui` [EXTRACTED]
+- [[Puerpério]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Metrite_Puerperal

@@ -11,6 +11,6 @@ tags:
 # Histórico de retenção de placenta
 
 ## Connections
-- [[R-MET-04 SE Histórico de retenção de placenta E Puerperio ENTÃO Metrite Puerperal]] - `condicao_de` [EXTRACTED]
+- [[R-MET-04 SE Histórico de retenção de placenta E Puerpério ENTÃO Metrite Puerperal]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Metrite_Puerperal

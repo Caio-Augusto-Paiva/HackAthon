@@ -15,7 +15,7 @@ members: 22
 - [[Atendimento Veterinário Imediato]] - concept - base/fonte/comum.json
 - [[Dias em lactação]] - concept - base/fonte/comum.json
 - [[Febre]] - concept - base/fonte/comum.json
-- [[Inicio lactacao]] - concept - base/fonte/comum.json
+- [[Início da lactação]] - concept - base/fonte/comum.json
 - [[Monitoramento Clínico Contínuo]] - concept - base/fonte/comum.json
 - [[Queda de produção de leite]] - concept - base/fonte/comum.json
 - [[R-BV-01 SE Decúbito ENTÃO Atendimento Veterinário Imediato]] - concept - base/fonte/comum.json
@@ -24,7 +24,7 @@ members: 22
 - [[R-BV-04 SE Hipotermia E Apatia ENTÃO Atendimento Veterinário Imediato]] - concept - base/fonte/comum.json
 - [[R-BV-05 SE Inflamação do úbere E Febre E Apatia ENTÃO Atendimento Veterinário Imediato]] - concept - base/fonte/comum.json
 - [[R-BV-06 SE Temperatura retal ENTÃO Atendimento Veterinário Imediato]] - concept - base/fonte/comum.json
-- [[R-DER-03 SE Dias em lactação ENTÃO Inicio lactacao]] - concept - base/fonte/comum.json
+- [[R-DER-03 SE Dias em lactação ENTÃO Início da lactação]] - concept - base/fonte/comum.json
 - [[R-DER-04 SE Temperatura retal ENTÃO Febre]] - concept - base/fonte/comum.json
 - [[R-DER-07 SE Temperatura ao toque das extremidades ENTÃO Febre]] - concept - base/fonte/comum.json
 - [[R-DER-08 SE Temperatura retal ENTÃO Febre]] - concept - base/fonte/comum.json
@@ -55,4 +55,4 @@ SORT file.name ASC
 - [[Monitoramento Clínico Contínuo]] - degree 4, connects to 4 communities
 - [[Febre]] - degree 9, connects to 3 communities
 - [[Apetite]] - degree 7, connects to 3 communities
-- [[Inicio lactacao]] - degree 6, connects to 2 communities
+- [[Início da lactação]] - degree 6, connects to 2 communities

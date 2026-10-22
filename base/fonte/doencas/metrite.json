@@ -71,7 +71,7 @@
     {
       "id": "puerperio",
       "tipo": "derivado",
-      "nome": "Puerperio",
+      "nome": "Puerpério",
       "dominio": {
         "tipo": "booleano"
       },

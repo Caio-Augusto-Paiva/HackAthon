@@ -50,6 +50,7 @@ class Evidencia(BaseModel):
     cf_regra: float
     cf_saida: float
     entradas: list[Entrada]
+    frase: str = Field(default="", description="As condições da regra em linguagem comum, ligadas por 'e'.")
 
 
 class Entrada(BaseModel):
@@ -63,6 +64,7 @@ class Entrada(BaseModel):
     origem: Literal["resposta", "ficha", "importacao", "regra"]
     tela_id: str | None
     evidencias: list[Evidencia] | None = None
+    nome: str | None = Field(default=None, description="Nome legível do símbolo.")
 
 
 Evidencia.model_rebuild()

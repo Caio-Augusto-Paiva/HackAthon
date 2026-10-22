@@ -7,7 +7,7 @@
 .id { font: 400 18px/1.2 var(--fonte-titulo); color: var(--cor-primaria-escura); }
 .status { padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; background: var(--cor-alerta-fundo); color: var(--cor-alerta-texto); }
 .status[data-status='validada'] { background: var(--cor-ok-fundo); color: var(--cor-primaria-escura); }
-.subida { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--cor-primaria-escura); }
+.subida { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--cor-primaria-escura); }
 .trilho { position: relative; width: 120px; height: 10px; border-radius: 5px; background: var(--cor-trilho); overflow: hidden; }
 .trilho > span { position: absolute; inset-block: 0; left: 0; border-radius: 5px; background: color-mix(in srgb, var(--cor-primaria) 45%, var(--cor-trilho)); }
 .trilho > .ganho { background: var(--cor-primaria); }
@@ -22,3 +22,7 @@
 .fonte { font-size: 14px; color: var(--cor-texto-suave); line-height: 1.45; }
 .fonte a { color: var(--cor-primaria-escura); font-weight: 700; }
 .nota { color: var(--cor-texto-suave); }
+.numeros { font-size: 16px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--cor-primaria-escura); }
+.fato strong { font-weight: 700; }
+.deducao { display: block; margin-top: 2px; font-size: 14px; color: var(--cor-texto-suave); }
+.nota { margin-top: 18px; font-size: 14px; color: var(--cor-texto-suave); }

@@ -979,6 +979,18 @@
             ],
             "title": "Evidencias"
           },
+          "nome": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Nome legível do símbolo.",
+            "title": "Nome"
+          },
           "origem": {
             "enum": [
               "resposta",
@@ -1029,7 +1041,8 @@
           "cf",
           "origem",
           "tela_id",
-          "evidencias"
+          "evidencias",
+          "nome"
         ],
         "title": "Entrada",
         "type": "object"
@@ -1185,6 +1198,12 @@
               }
             ],
             "title": "Fonte"
+          },
+          "frase": {
+            "default": "",
+            "description": "As condições da regra em linguagem comum, ligadas por 'e'.",
+            "title": "Frase",
+            "type": "string"
           },
           "premissa": {
             "title": "Premissa",
