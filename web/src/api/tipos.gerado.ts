@@ -1427,6 +1427,16 @@ export interface components {
             nome: string;
             /** Regras */
             regras: string[];
+            /**
+             * Sinais
+             * @description Sinais perguntados, em linguagem comum, que aumentam a confiança na doença.
+             */
+            sinais?: string[];
+            /**
+             * Sinais Contra
+             * @description Sinais perguntados que diminuem a confiança na doença (regras com CF negativo).
+             */
+            sinais_contra?: string[];
         };
         /** SessaoDoAnimal */
         SessaoDoAnimal: {

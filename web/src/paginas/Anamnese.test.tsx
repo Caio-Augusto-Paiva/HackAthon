@@ -93,8 +93,25 @@ describe('diálogo da anamnese', () => {
     await userEvent.click(await screen.findByRole('button', { name: 'Por que estou perguntando isso?' }));
     const dialogo = await screen.findByRole('dialog');
     expect(await within(dialogo).findByText(exemploPorque.motivo)).toBeInTheDocument();
-    expect(dialogo).toHaveTextContent('Mastite clínica');
-    expect(dialogo).toHaveTextContent('R-MAS-03');
+    expect(dialogo).toHaveTextContent('Em casos de Mastite clínica, o animal pode apresentar grumos na caneca.');
+    expect(dialogo).not.toHaveTextContent('R-MAS-03');
+  });
+
+  it('no porquê, separa o sinal que afasta a doença e cai num texto simples sem sinais', async () => {
+    const porque = { ...exemploPorque, serve_a: [
+      { ...exemploPorque.serve_a[0], nome: 'Hipocalcemia', sinais: ['hipotermia'], sinais_contra: ['febre'] },
+      { ...exemploPorque.serve_a[0], doenca: 'tpb', nome: 'Tristeza parasitária', sinais: [], sinais_contra: [] },
+    ] };
+    simular(primeira);
+    vi.mocked(globalThis.fetch).mockImplementation(async (caminho: RequestInfo | URL) =>
+      resposta(String(caminho).includes('/porque/') ? porque : String(caminho).endsWith('/parecer') ? exemploParecer : primeira));
+    montar();
+    await userEvent.click(await screen.findByRole('button', { name: 'Por que estou perguntando isso?' }));
+    const dialogo = await screen.findByRole('dialog');
+    expect(await within(dialogo).findByText(/Em casos de/)).toBeInTheDocument();
+    expect(dialogo).toHaveTextContent('Em casos de Hipocalcemia, o animal pode apresentar hipotermia.');
+    expect(dialogo).toHaveTextContent('Febre torna essa hipótese menos provável.');
+    expect(dialogo).toHaveTextContent('A resposta ajuda a confirmar ou afastar Tristeza parasitária.');
   });
 
   it('impede dois POSTs durante um duplo clique', async () => {

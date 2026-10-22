@@ -20,6 +20,8 @@ class ServeA(BaseModel):
         description="CF da doença no momento em que a pergunta foi feita (congelado no evento); não acompanha as respostas seguintes."
     )
     regras: list[str]
+    sinais: list[str] = Field(default_factory=list, description="Sinais perguntados, em linguagem comum, que aumentam a confiança na doença.")
+    sinais_contra: list[str] = Field(default_factory=list, description="Sinais perguntados que diminuem a confiança na doença (regras com CF negativo).")
 
 
 class PorQue(BaseModel):

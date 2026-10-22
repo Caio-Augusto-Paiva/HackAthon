@@ -2716,6 +2716,22 @@
             },
             "title": "Regras",
             "type": "array"
+          },
+          "sinais": {
+            "description": "Sinais perguntados, em linguagem comum, que aumentam a confiança na doença.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Sinais",
+            "type": "array"
+          },
+          "sinais_contra": {
+            "description": "Sinais perguntados que diminuem a confiança na doença (regras com CF negativo).",
+            "items": {
+              "type": "string"
+            },
+            "title": "Sinais Contra",
+            "type": "array"
           }
         },
         "required": [

@@ -201,6 +201,22 @@ def test_porque_triagem(cliente, apos_sinais):
     assert corpo["pergunta"] == "O animal apresenta o sinal A?"
     assert [(s["doenca"], s["regras"]) for s in corpo["serve_a"]] == [("d1", ["R-D1-01"])]
     assert corpo["evento_traco"].startswith("ev_")
+    assert corpo["serve_a"][0]["sinais"] == ["sinal A"]
+
+
+def test_sinal_legivel_em_linguagem_comum():
+    from api.servicos.textos import sinal_legivel
+    simbolos = {
+        "apetite": Simbolo(id="apetite", tipo="pergunta", nome="Apetite", dominio={"tipo": "categorico", "valores": ["normal", "reduzido", "ausente"]}),
+        "decubito": Simbolo(id="decubito", tipo="pergunta", nome="Decúbito", dominio={"tipo": "booleano"}),
+        "temp": Simbolo(id="temp", tipo="pergunta", nome="Temperatura retal", dominio={"tipo": "numerico", "unidade": "°C"}),
+        "bhb": Simbolo(id="bhb", tipo="pergunta", nome="BHB sanguíneo", dominio={"tipo": "numerico", "unidade": "mmol/L"}),
+    }
+    assert sinal_legivel(Condicao(simbolo="apetite", op="em", valor=["reduzido", "ausente"]), simbolos) == "apetite reduzido ou ausente"
+    assert sinal_legivel(Condicao(simbolo="decubito", op="=", valor=True), simbolos) == "decúbito"
+    assert sinal_legivel(Condicao(simbolo="decubito", op="=", valor=True, negado=True), simbolos) == "ausência de decúbito"
+    assert sinal_legivel(Condicao(simbolo="temp", op="≥", valor=39.5), simbolos) == "temperatura retal a partir de 39,5 °C"
+    assert sinal_legivel(Condicao(simbolo="bhb", op=">", valor=1.2), simbolos) == "BHB sanguíneo acima de 1,2 mmol/L"
 
 
 def test_porque_triagem_no_modo_veterinario_usa_a_pergunta_do_modo(cliente):

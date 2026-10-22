@@ -24,7 +24,7 @@ from api.schemas.parecer import Parecer, UrgenciaParecer
 from api.schemas.sessao import EstadoSessao
 from api.servicos.ficha import mostrar_valor
 from api.servicos.sessao_motor import SessaoCarregada, aplicar, carregar
-from api.servicos.textos import AVISO_PARECER, TEXTO_URGENCIA, texto_da_regra
+from api.servicos.textos import AVISO_PARECER, TEXTO_URGENCIA, sinal_legivel, texto_da_regra
 from kb.modelos import Regra, Simbolo
 
 TIPOS_COM_COMO = ("doenca", "derivado", "urgencia")  # o que uma regra conclui: o resto é entrada, não conclusão
@@ -98,9 +98,36 @@ def obter_porque(ctx: Contexto, sessao_id: str, simbolo: str) -> PorQue:
         origem=evento["origem"],
         pergunta=pergunta,
         motivo=evento["motivo"],
-        serve_a=evento["serve_a"],
+        serve_a=[{**item, "sinais": _sinais(carregada, simbolo, item["regras"]),
+                  "sinais_contra": _sinais(carregada, simbolo, item["regras"], contra=True)} for item in evento["serve_a"]],
         evento_traco=evento["id"],
     )
+
+
+def _sinais(carregada: SessaoCarregada, simbolo: str, regras: list[str], *, contra: bool = False) -> list[str]:
+    """Condições dessas regras que dependem do símbolo perguntado (direto ou por um derivado), em linguagem comum."""
+    base = carregada.base
+    simbolos = {s.id: s for s in base.simbolos}
+    por_conclusao: dict[str, list[Regra]] = {}
+    for regra in base.regras:
+        por_conclusao.setdefault(regra.entao.simbolo, []).append(regra)
+
+    def depende(id_: str, vistos: frozenset[str] = frozenset()) -> bool:
+        if id_ == simbolo:
+            return True
+        if id_ in vistos or simbolos.get(id_) is None or simbolos[id_].tipo != "derivado":
+            return False
+        return any(depende(c.simbolo, vistos | {id_}) for r in por_conclusao.get(id_, []) for c in r.se)
+
+    escolhidas = [r for r in base.regras if r.id in set(regras) and (r.entao.cf < 0) == contra]
+    frases: list[str] = []
+    for regra in escolhidas:
+        for condicao in regra.se:
+            if condicao.cf_minimo is None and condicao.cf_maximo is None and depende(condicao.simbolo):
+                frase = sinal_legivel(condicao, simbolos)
+                if frase not in frases:
+                    frases.append(frase)
+    return frases
 
 
 # --- como? -----------------------------------------------------------------------------------
