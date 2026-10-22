@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Sessão, parecer e explicação"
+community: "Concorrência e snapshot de sessão"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sessão_parecer_e_explicação
+  - community/Concorrência_e_snapshot_de_sessão
 ---
 
 # D2: estado() registra perguntas, GET nao sobe revisao
@@ -14,4 +14,4 @@ tags:
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - `references` [EXTRACTED]
 - [[D1 snapshot_json como fonte da verdade da sessao]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sessão_parecer_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/Concorrência_e_snapshot_de_sessão

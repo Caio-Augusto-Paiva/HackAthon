@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "concept"
-community: "Grafo 2 por doença"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Grafo_2_por_doença
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Global Constraints do grafo 2
@@ -18,4 +18,4 @@ tags:
 - [[Todas as arestas EXTRACTED; custo de tokens zero]] - `references` [EXTRACTED]
 - [[kb não importa graphify]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Grafo_2_por_doença
+#graphify/concept #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

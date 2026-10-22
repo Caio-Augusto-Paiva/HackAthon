@@ -1,18 +1,17 @@
 ---
 source_file: "PRODUCT.md"
 type: "concept"
-community: "Integração web e contrato"
+community: "Identidade visual e campos"
 location: "L33"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Integração_web_e_contrato
+  - community/Identidade_visual_e_campos
 ---
 
 # Números como string sem coerção, arredondamento ou CF
 
 ## Connections
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
-- [[Tratamento de 422 e 409 sem repetição automática]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Integração_web_e_contrato
+#graphify/concept #graphify/EXTRACTED #community/Identidade_visual_e_campos

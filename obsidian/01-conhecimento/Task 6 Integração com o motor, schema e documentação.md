@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Plano do kb Seção 2"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Plano_do_kb_Seção_2
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Task 6: Integração com o motor, schema e documentação
@@ -16,4 +16,4 @@ tags:
 - [[Plano de implementação do kb (Seção 2)]] - `references` [EXTRACTED]
 - [[Task 5 Repositório de versões]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Plano_do_kb_Seção_2
+#graphify/document #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "concept"
-community: "Grafo exato e testes"
+community: "Casos clínicos e fonte"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Grafo_exato_e_testes
+  - community/Casos_clínicos_e_fonte
 ---
 
 # Invariante: juntar(separar(v0002)) == v0002
@@ -14,4 +14,4 @@ tags:
 - [[Objetivos separar, editar em basefonte, grafo 2 sem IA, motor lê do grafo exato]] - `references` [EXTRACTED]
 - [[testskbtest_fonte.py_1]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Grafo_exato_e_testes
+#graphify/concept #graphify/EXTRACTED #community/Casos_clínicos_e_fonte

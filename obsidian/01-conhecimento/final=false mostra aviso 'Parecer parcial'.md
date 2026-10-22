@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # final=false mostra aviso 'Parecer parcial'
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Task 6 Página Parecer]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "concept"
-community: "Sistema visual e Figma"
+community: "Identidade visual e campos"
 location: "L14"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_Figma
+  - community/Identidade_visual_e_campos
 ---
 
 # Token cor/texto-suave: #55604f
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma
+#graphify/concept #graphify/EXTRACTED #community/Identidade_visual_e_campos

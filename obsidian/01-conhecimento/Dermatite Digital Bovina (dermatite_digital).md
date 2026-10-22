@@ -1,25 +1,20 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Dermatite digital e claudicação"
-location: "L167"
+community: "Dermatite digital"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dermatite_digital_e_claudicação
+  - community/Dermatite_digital
 ---
 
 # Dermatite Digital Bovina (dermatite_digital)
 
 ## Connections
-- [[C-DD-01 passou, observar, dermatite_digital]] - `references` [EXTRACTED]
-- [[C-DD-02 passou, observar, dermatite_digital]] - `references` [EXTRACTED]
-- [[C-DD-03 passou, sem_problema, dermatite_digital]] - `references` [EXTRACTED]
-- [[C-LIM-01 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
-- [[R-DD-01 dermatite_digital (CF 0,3)]] - `implements` [EXTRACTED]
-- [[R-DD-02 dermatite_digital (CF 0,5)]] - `implements` [EXTRACTED]
-- [[R-DD-03 dermatite_digital (CF 0,85)]] - `implements` [EXTRACTED]
-- [[R-URG-08 observar (CF 0,7)]] - `references` [EXTRACTED]
+- [[R-DD-01 claudicação → dermatite digital]] - `references` [EXTRACTED]
+- [[R-DD-02 claudicação + dor no talão → dermatite digital]] - `references` [EXTRACTED]
+- [[R-DD-03 lesão em morango → dermatite digital]] - `references` [EXTRACTED]
+- [[R-URG-08 dermatite digital CF≥0,5 → observar]] - `references` [EXTRACTED]
+- [[Seção Dermatite Digital Bovina (gravidade baixa)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_claudicação
+#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital

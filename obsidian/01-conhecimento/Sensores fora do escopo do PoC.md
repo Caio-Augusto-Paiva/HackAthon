@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Aquisição de conhecimento"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Aquisição_de_conhecimento
 ---
 
 # Sensores fora do escopo do PoC
@@ -14,4 +14,4 @@ tags:
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
 - [[Fontes de dados externas prontuario, sensores, APIs]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento

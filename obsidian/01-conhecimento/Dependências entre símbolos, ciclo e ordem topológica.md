@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Camadas de símbolos"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Camadas_de_símbolos
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Dependências entre símbolos, ciclo e ordem topológica
@@ -15,4 +15,4 @@ tags:
 - [[Tabela de códigos do validador (E01-E19, W01-W03)]] - `conceptually_related_to` [INFERRED]
 - [[Task 2 Análise de dependências]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Camadas_de_símbolos
+#graphify/concept #graphify/INFERRED #community/Documentação_e_backend_FastAPI

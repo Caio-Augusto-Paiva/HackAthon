@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Execução local da API"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Execução_local_da_API
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Banco SQLite fora do OneDrive
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Execução_local_da_API
+#graphify/rationale #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

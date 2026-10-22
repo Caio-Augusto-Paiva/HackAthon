@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 1 e 3.6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Bandeiras vermelhas (chamar_agora)
@@ -19,4 +19,4 @@ tags:
 - [[Triagem obrigatória de 6 telas]] - `conceptually_related_to` [EXTRACTED]
 - [[Três camadas estritas (derivado, doença, urgência)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

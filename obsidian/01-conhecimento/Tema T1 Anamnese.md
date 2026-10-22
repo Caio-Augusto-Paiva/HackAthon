@@ -1,17 +1,17 @@
 ---
-source_file: "docs/entrega/README.md"
+source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Índice da entrega"
+community: "Ausência de validação clínica"
+location: "Problema e método"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Índice_da_entrega
+  - community/Ausência_de_validação_clínica
 ---
 
 # Tema T1 Anamnese
 
 ## Connections
-- [[README.md - índice da entrega]] - `references` [EXTRACTED]
-- [[Transcrições oficiais da apresentação e do documentário]] - `references` [EXTRACTED]
+- [[Seção Problema e método]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Índice_da_entrega
+#graphify/concept #graphify/EXTRACTED #community/Ausência_de_validação_clínica

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "document"
-community: "Ledger SDD do motor"
+community: "Ambiente venv e testes"
 location: "L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ledger_SDD_do_motor
+  - community/Ambiente_venv_e_testes
 ---
 
 # Spec anamnese bovinos
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SDD ledger]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ledger_SDD_do_motor
+#graphify/document #graphify/EXTRACTED #community/Ambiente_venv_e_testes

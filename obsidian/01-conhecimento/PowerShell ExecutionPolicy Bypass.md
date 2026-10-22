@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # PowerShell ExecutionPolicy Bypass
@@ -14,4 +14,4 @@ tags:
 - [[Demonstracao em Windows 11]] - `conceptually_related_to` [INFERRED]
 - [[rodar.ps1 (script de execucao)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/rationale #graphify/INFERRED #community/Skills_e_agentes_de_IA

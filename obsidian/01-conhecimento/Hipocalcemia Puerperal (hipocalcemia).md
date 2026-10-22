@@ -1,25 +1,24 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Urgência e hipocalcemia"
-location: "L180"
+community: "Hipocalcemia e periparto"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Urgência_e_hipocalcemia
+  - community/Hipocalcemia_e_periparto
 ---
 
 # Hipocalcemia Puerperal (hipocalcemia)
 
 ## Connections
-- [[C-HIP-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
-- [[C-HIP-02 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
-- [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
-- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
-- [[R-HIP-01 hipocalcemia (CF 0,65)]] - `implements` [EXTRACTED]
-- [[R-HIP-02 hipocalcemia (CF 0,8)]] - `implements` [EXTRACTED]
-- [[R-HIP-03 hipocalcemia (CF 0,9)]] - `implements` [EXTRACTED]
-- [[R-HIP-04 hipocalcemia (CF -0,4)]] - `implements` [EXTRACTED]
-- [[R-URG-01 chamar_agora (CF 0,99)]] - `references` [EXTRACTED]
+- [[Metrite Puerperal (metrite)]] - `semantically_similar_to` [INFERRED]
+- [[R-HIP-01 decúbito + periparto → hipocalcemia]] - `references` [EXTRACTED]
+- [[R-HIP-02 periparto + pescoço em S + hipotermia → hipocalcemia]] - `references` [EXTRACTED]
+- [[R-HIP-03 cálcio1,5 → hipocalcemia]] - `references` [EXTRACTED]
+- [[R-HIP-04 febre → contra hipocalcemia]] - `references` [EXTRACTED]
+- [[R-HIP-05 decúbito fora do periparto → hipocalcemia]] - `references` [EXTRACTED]
+- [[R-HIP-06 hipotermia fora do periparto → hipocalcemia]] - `references` [EXTRACTED]
+- [[R-URG-01 hipocalcemia CF≥0,5 → chamar_agora]] - `references` [EXTRACTED]
+- [[Seção Hipocalcemia Puerperal (gravidade alta)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Urgência_e_hipocalcemia
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_periparto

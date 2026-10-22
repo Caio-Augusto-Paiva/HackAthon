@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "document"
-community: "Grafo 2 por doença"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Grafo_2_por_doença
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Spec: Grafo 2 — base separada por doença e grafo exato no Obsidian
@@ -24,4 +24,4 @@ tags:
 - [[kbfonte.py — separar e juntar]] - `references` [EXTRACTED]
 - [[scriptsgrafo_dados.py — cofre e visualização (Python do graphify)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Grafo_2_por_doença
+#graphify/document #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

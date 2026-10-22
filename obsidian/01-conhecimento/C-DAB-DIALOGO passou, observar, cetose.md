@@ -1,20 +1,28 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos de teste sintéticos"
-location: "L3231"
+community: "Modos e exemplos de alerta"
+location: "## C-DAB-DIALOGO"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_de_teste_sintéticos
+  - community/Modos_e_exemplos_de_alerta
 ---
 
 # C-DAB-DIALOGO: passou, observar, cetose
 
 ## Connections
-- [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[Cetose  Hipercetonemia (cetose)]] - `references` [EXTRACTED]
-- [[Deslocamento de Abomaso (deslocamento_abomaso)]] - `references` [EXTRACTED]
-- [[R15 coleta adicional pode faltar com evidência inicial fraca]] - `references` [EXTRACTED]
+- [[Base de conhecimento v0004]] - `references` [EXTRACTED]
+- [[C-DAB-01 passou, chamar agora, deslocamento abomaso]] - `conceptually_related_to` [INFERRED]
+- [[Caso fictício de regressão; suposição a validar]] - `references` [EXTRACTED]
+- [[Cetose]] - `references` [EXTRACTED]
+- [[Deslocamento de abomaso]] - `references` [EXTRACTED]
+- [[Limitação R15 sinal adicional não solicitado no diálogo da v0001]] - `references` [EXTRACTED]
+- [[Modo produtor]] - `references` [EXTRACTED]
+- [[Motivo de parada sem_potencial]] - `references` [EXTRACTED]
+- [[Seção do caso C-DAB-DIALOGO]] - `references` [EXTRACTED]
+- [[Seção tabela-resumo dos casos]] - `references` [EXTRACTED]
+- [[Urgência observar]] - `references` [EXTRACTED]
+- [[engine.casos.executar_caso]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_sintéticos
+#graphify/concept #graphify/EXTRACTED #community/Modos_e_exemplos_de_alerta

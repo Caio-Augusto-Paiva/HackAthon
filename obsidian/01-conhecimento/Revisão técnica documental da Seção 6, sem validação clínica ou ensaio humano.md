@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "document"
-community: "Revisão técnica da Seção 6"
+community: "Riscos e pendências de entrega"
 location: "L1-L12"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Revisão_técnica_da_Seção_6
+  - community/Riscos_e_pendências_de_entrega
 ---
 
 # Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano
@@ -21,7 +21,6 @@ tags:
 - [[Correções apenas documentais; runtime, contratos, base e testes preservados]] - `references` [EXTRACTED]
 - [[Fontes AD e checkout auditado; leitura clínica e provas históricas mantêm seus limites]] - `references` [EXTRACTED]
 - [[Matriz de exigências oficiais e evidências técnicas, humanas e materiais distintas]] - `references` [EXTRACTED]
-- [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[Revisão da Seção 6 promessas e textos históricos corrigidos]] - `references` [EXTRACTED]
 - [[Revisão em contexto separado e correção de elegibilidade; outra família não comprovada]] - `references` [EXTRACTED]
 - [[Revisão executou novamente Python 1066 aprovados, 1 ignorado, 170 subtestes]] - `references` [EXTRACTED]
@@ -39,4 +38,4 @@ tags:
 - [[S6-12 achado histórico — Fontes clínicas e CF continuam provisórios]] - `references` [EXTRACTED]
 - [[S6-13 achado histórico — Elegibilidade dos participantes não estava na conferência]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Revisão_técnica_da_Seção_6
+#graphify/document #graphify/EXTRACTED #community/Riscos_e_pendências_de_entrega

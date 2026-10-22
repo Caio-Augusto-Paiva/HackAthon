@@ -1,12 +1,12 @@
 ---
 source_file: "PRODUCT.md"
 type: "concept"
-community: "Sistema visual e Figma"
+community: "Identidade visual e campos"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_Figma
+  - community/Identidade_visual_e_campos
 ---
 
 # Diálogo Akinator com regras explícitas e CF MYCIN
@@ -15,4 +15,4 @@ tags:
 - [[Identidade Figma e autoridade API preservadas]] - `semantically_similar_to` [INFERRED]
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma
+#graphify/concept #graphify/EXTRACTED #community/Identidade_visual_e_campos

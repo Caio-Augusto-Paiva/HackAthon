@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Aquisição de conhecimento"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Aquisição_de_conhecimento
 ---
 
 # Motor de inferencia: casa regras, resolve conflito, dispara
@@ -21,4 +21,4 @@ tags:
 - [[Resolucao de conflito]] - `references` [EXTRACTED]
 - [[engine motor Python so com biblioteca padrao]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento

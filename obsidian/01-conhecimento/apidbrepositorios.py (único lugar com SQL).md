@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "code"
-community: "Tarefas de repositórios SQLite"
+community: "Serviços da casca fina"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Tarefas_de_repositórios_SQLite
+  - community/Serviços_da_casca_fina
 ---
 
 # api/db/repositorios.py (único lugar com SQL)
@@ -20,4 +20,4 @@ tags:
 - [[importacao.py (CSVJSON de prontuário)]] - `calls` [EXTRACTED]
 - [[sessao_motor.py (carregaraplicar)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Tarefas_de_repositórios_SQLite
+#graphify/code #graphify/EXTRACTED #community/Serviços_da_casca_fina

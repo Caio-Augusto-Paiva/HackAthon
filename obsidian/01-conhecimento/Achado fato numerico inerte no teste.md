@@ -1,18 +1,18 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Ledger SDD do motor"
+community: "Ambiente venv e testes"
 location: "L65"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ledger_SDD_do_motor
+  - community/Ambiente_venv_e_testes
 ---
 
 # Achado fato numerico inerte no teste
 
 ## Connections
-- [[Pacote engine_1]] - `references` [INFERRED]
+- [[Pacote engine]] - `references` [INFERRED]
 - [[Task 6]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ledger_SDD_do_motor
+#graphify/concept #graphify/EXTRACTED #community/Ambiente_venv_e_testes

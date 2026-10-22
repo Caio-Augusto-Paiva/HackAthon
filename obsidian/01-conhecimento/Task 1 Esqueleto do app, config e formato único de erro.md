@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "concept"
-community: "Esqueleto e erros da API"
+community: "Configuração da API"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Esqueleto_e_erros_da_API
+  - community/Configuração_da_API
 ---
 
 # Task 1: Esqueleto do app, config e formato único de erro
@@ -20,4 +20,4 @@ tags:
 - [[Task 3 Schemas Pydantic e exemplos de contrato]] - `references` [EXTRACTED]
 - [[criar_app  main.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Esqueleto_e_erros_da_API
+#graphify/concept #graphify/EXTRACTED #community/Configuração_da_API

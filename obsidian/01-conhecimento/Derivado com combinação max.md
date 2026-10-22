@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "rationale"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Derivado com combinação max
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Combinação de CF estilo MYCIN]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/rationale #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

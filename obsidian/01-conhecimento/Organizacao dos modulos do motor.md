@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Organizacao dos modulos do motor
@@ -16,4 +16,4 @@ tags:
 - [[Motor de inferencia README (engine)]] - `references` [EXTRACTED]
 - [[Motor independente de web, banco, LLM e servicos externos]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_e_API_README
+#graphify/concept #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Uso do grafo de conhecimento"
+community: "Atualização do grafo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Uso_do_grafo_de_conhecimento
+  - community/Atualização_do_grafo
 ---
 
 # obsidian/01-conhecimento: grafo 1 da documentacao
@@ -14,4 +14,4 @@ tags:
 - [[Atualizar o grafo uma vez por bloco de trabalho]] - `references` [EXTRACTED]
 - [[Nota _COMMUNITY_ do Obsidian para assunto inteiro]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Uso_do_grafo_de_conhecimento
+#graphify/concept #graphify/EXTRACTED #community/Atualização_do_grafo

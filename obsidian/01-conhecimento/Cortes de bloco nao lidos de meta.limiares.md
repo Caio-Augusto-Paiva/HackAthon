@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Sessão, parecer e explicação"
+community: "Concorrência e snapshot de sessão"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_parecer_e_explicação
+  - community/Concorrência_e_snapshot_de_sessão
 ---
 
 # Cortes de bloco nao lidos de meta.limiares
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_parecer_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/Concorrência_e_snapshot_de_sessão

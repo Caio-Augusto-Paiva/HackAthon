@@ -1,11 +1,11 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Uso do grafo de conhecimento"
+community: "Busca direta versus grafo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Uso_do_grafo_de_conhecimento
+  - community/Busca_direta_versus_grafo
 ---
 
 # Grafo de conhecimento so quando precisar procurar
@@ -16,4 +16,4 @@ tags:
 - [[Nao ler grafo nem GRAPH_REPORT no inicio da tarefa]] - `references` [EXTRACTED]
 - [[graphify query para localizar decisao, regra, fonte ou requisito]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Uso_do_grafo_de_conhecimento
+#graphify/concept #graphify/EXTRACTED #community/Busca_direta_versus_grafo

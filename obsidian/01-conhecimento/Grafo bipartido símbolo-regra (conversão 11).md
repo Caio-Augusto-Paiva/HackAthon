@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 2"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Grafo bipartido símbolo-regra (conversão 1:1)
@@ -18,6 +18,6 @@ tags:
 - [[Grafo exato (kb.grafo.Grafo) conversão base-grafo 11]] - `semantically_similar_to` [INFERRED]
 - [[Pacote kb]] - `implements` [EXTRACTED]
 - [[Três camadas estritas (derivado, doença, urgência)]] - `semantically_similar_to` [INFERRED]
-- [[carregar_do_grafo(caminho) - Base_1]] - `references` [INFERRED]
+- [[carregar_do_grafo(caminho) - Base]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Especificação_e_arquitetura_do_sistema
+#graphify/concept #graphify/INFERRED #community/Parecer_e_urgência_na_interface

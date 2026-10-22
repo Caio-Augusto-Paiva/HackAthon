@@ -1,19 +1,18 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "rationale"
-community: "Revisão técnica da Seção 6"
+community: "Duração e fechamento da seção"
 location: "L102-L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Revisão_técnica_da_Seção_6
+  - community/Duração_e_fechamento_da_seção
 ---
 
 # S6-11: achado histórico — Limites de tempo e envio dependem da organização
 
 ## Connections
-- [[R11 Tempo da fala e infraestrutura desconhecidos]] - `conceptually_related_to` [EXTRACTED]
+- [[R11 Tempo da fala e infraestrutura desconhecidos (média)]] - `conceptually_related_to` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
-- [[Roteiros de tempo estimados (10+4 min, reserva 5 min)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Revisão_técnica_da_Seção_6
+#graphify/rationale #graphify/EXTRACTED #community/Duração_e_fechamento_da_seção

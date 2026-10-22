@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Páginas e componentes frontend"
+community: "Barra de confiança e Boi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Páginas_e_componentes_frontend
+  - community/Barra_de_confiança_e_Boi
 ---
 
 # Botao, OpcaoResposta, CampoNumerico, BarraConfianca, Boi, Balao, BarraProgresso, Modal
@@ -19,4 +19,4 @@ tags:
 - [[OpcaoResposta (radiocheckbox nativo estilizado)]] - `references` [EXTRACTED]
 - [[Task 2 Componentes base]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Páginas_e_componentes_frontend
+#graphify/concept #graphify/EXTRACTED #community/Barra_de_confiança_e_Boi

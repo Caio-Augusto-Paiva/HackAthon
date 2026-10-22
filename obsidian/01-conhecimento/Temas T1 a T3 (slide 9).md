@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Restrições obrigatórias"
+community: "Decisão determinística auditável"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Restrições_obrigatórias
+  - community/Decisão_determinística_auditável
 ---
 
 # Temas T1 a T3 (slide 9)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Temas T1 a T3 (documento D, pagina 3)]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Restrições_obrigatórias
+#graphify/concept #graphify/INFERRED #community/Decisão_determinística_auditável

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Plano do frontend web"
+community: "Alerta de bandeira e SPA"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plano_do_frontend_web
+  - community/Alerta_de_bandeira_e_SPA
 ---
 
 # proxima null com alerta.pausa abre modal de alerta
@@ -16,4 +16,4 @@ tags:
 - [[Task 5 Alerta de bandeira vermelha]] - `implements` [EXTRACTED]
 - [[websrcanamnese]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plano_do_frontend_web
+#graphify/concept #graphify/EXTRACTED #community/Alerta_de_bandeira_e_SPA

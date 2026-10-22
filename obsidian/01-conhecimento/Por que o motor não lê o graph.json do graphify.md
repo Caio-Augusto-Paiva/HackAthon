@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "rationale"
-community: "Grafo 2 por doença"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Grafo_2_por_doença
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Por que o motor não lê o graph.json do graphify
@@ -16,4 +16,4 @@ tags:
 - [[Spec Grafo 2 — base separada por doença e grafo exato no Obsidian]] - `references` [EXTRACTED]
 - [[Todas as arestas EXTRACTED; custo de tokens zero]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Grafo_2_por_doença
+#graphify/rationale #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

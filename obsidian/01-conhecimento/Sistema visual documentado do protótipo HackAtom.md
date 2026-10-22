@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "document"
-community: "Sistema visual e Figma"
+community: "Identidade visual e campos"
 location: "L48-L54"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_Figma
+  - community/Identidade_visual_e_campos
 ---
 
 # Sistema visual documentado do protótipo HackAtom
@@ -46,4 +46,4 @@ tags:
 - [[Uma transição de balão subida leve e fade]] - `references` [EXTRACTED]
 - [[Varela Round em títulos e Nunito Sans no conteúdo]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Sistema_visual_e_Figma
+#graphify/document #graphify/EXTRACTED #community/Identidade_visual_e_campos

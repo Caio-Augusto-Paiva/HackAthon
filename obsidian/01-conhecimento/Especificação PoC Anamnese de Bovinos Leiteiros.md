@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "document"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Especificação PoC Anamnese de Bovinos Leiteiros
@@ -25,4 +25,4 @@ tags:
 - [[Plano de corte]] - `references` [EXTRACTED]
 - [[Riscos e pontos em aberto]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/document #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

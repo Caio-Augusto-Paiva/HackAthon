@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Aquisição de conhecimento"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Aquisição_de_conhecimento
 ---
 
 # Aquisicao de conhecimento por especialista e engenheiro
@@ -15,4 +15,4 @@ tags:
 - [[Componentes da arquitetura (Modelo Conceitual)]] - `references` [EXTRACTED]
 - [[Editor grafico da base fora do escopo do PoC]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento

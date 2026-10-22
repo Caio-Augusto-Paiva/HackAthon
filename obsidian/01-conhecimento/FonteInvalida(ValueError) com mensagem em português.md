@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "code"
-community: "Testes de leitura da fonte"
+community: "Fonte inválida e Review Focus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Testes_de_leitura_da_fonte
+  - community/Fonte_inválida_e_Review_Focus
 ---
 
 # FonteInvalida(ValueError) com mensagem em português
@@ -17,4 +17,4 @@ tags:
 - [[test_id_duplicado_entre_arquivos]] - `references` [EXTRACTED]
 - [[test_json_invalido]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Testes_de_leitura_da_fonte
+#graphify/code #graphify/EXTRACTED #community/Fonte_inválida_e_Review_Focus

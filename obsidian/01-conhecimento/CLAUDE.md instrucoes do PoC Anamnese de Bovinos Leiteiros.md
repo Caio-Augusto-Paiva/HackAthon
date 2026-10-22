@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Instruções CLAUDE e AGENTS"
+community: "AGENTS.md e Codex"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Instruções_CLAUDE_e_AGENTS
+  - community/AGENTSmd_e_Codex
 ---
 
 # CLAUDE.md: instrucoes do PoC Anamnese de Bovinos Leiteiros
@@ -26,4 +26,4 @@ tags:
 - [[Regras de conduta]] - `references` [EXTRACTED]
 - [[Restricoes obrigatorias]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Instruções_CLAUDE_e_AGENTS
+#graphify/document #graphify/EXTRACTED #community/AGENTSmd_e_Codex

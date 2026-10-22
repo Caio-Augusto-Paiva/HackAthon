@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Processo exigido pelos organizadores"
+community: "Avaliação da organização"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Processo_exigido_pelos_organizadores
+  - community/Avaliação_da_organização
 ---
 
 # Documentacao obrigatoria: processo, arquitetura tecnologica, regras de producao
@@ -14,4 +14,4 @@ tags:
 - [[Entregaveis e prazos]] - `references` [EXTRACTED]
 - [[docsentrega documentacao de entrega]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Processo_exigido_pelos_organizadores
+#graphify/concept #graphify/EXTRACTED #community/Avaliação_da_organização

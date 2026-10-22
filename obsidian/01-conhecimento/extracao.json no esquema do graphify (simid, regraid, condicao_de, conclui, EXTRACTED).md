@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "code"
-community: "Módulos de fonte e grafo"
+community: "Arrumação e rótulos do grafo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Módulos_de_fonte_e_grafo
+  - community/Arrumação_e_rótulos_do_grafo
 ---
 
 # extracao.json no esquema do graphify (sim:<id>, regra:<id>, condicao_de, conclui, EXTRACTED)
@@ -16,4 +16,4 @@ tags:
 - [[kbexportar_grafo.py — grafo exato e entrada do graphify]] - `references` [EXTRACTED]
 - [[scriptsgrafo_dados.py — cofre e visualização (Python do graphify)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Módulos_de_fonte_e_grafo
+#graphify/code #graphify/EXTRACTED #community/Arrumação_e_rótulos_do_grafo

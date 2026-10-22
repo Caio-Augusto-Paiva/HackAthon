@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "concept"
-community: "Formato em disco da fonte"
+community: "API pública da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Formato_em_disco_da_fonte
+  - community/API_pública_da_base
 ---
 
 # Junção: une comum e doencas/*.json, ordena pelo índice
@@ -17,4 +17,4 @@ tags:
 - [[indice.json (ordem_simbolos, ordem_regras)]] - `references` [EXTRACTED]
 - [[kbfonte.py — separar e juntar]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Formato_em_disco_da_fonte
+#graphify/concept #graphify/EXTRACTED #community/API_pública_da_base

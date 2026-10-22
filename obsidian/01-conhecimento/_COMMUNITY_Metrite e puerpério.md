@@ -1,29 +1,24 @@
 ---
 type: community
-cohesion: 0.19
-members: 14
+cohesion: 0.22
+members: 9
 ---
 
 # Metrite e puerpério
 
-**Cohesion:** 0.19 - loosely connected
-**Members:** 14 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 9 nodes
 
 ## Members
-- [[Aumento uterino à palpação (utero_aumentado_palpacao)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[C-MET-01 passou, chamar_agora, metrite]] - concept - docs/entrega/04-casos-de-teste.md
-- [[C-MET-02 passou, chamar_agora, metrite]] - concept - docs/entrega/04-casos-de-teste.md
-- [[Corrimento vaginal (corrimento_vaginal)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[Corrimento vaginal fétido (corrimento_fetido)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[Histórico de retenção de placenta (retencao_placenta)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[Derivado puerperio]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Metrite Puerperal (metrite)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[Puerperio (puerperio)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-DER-02 puerperio (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-MET-01 metrite (CF 0,75)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-MET-02 metrite (CF 0,45)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-MET-03 metrite (CF 0,35)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-MET-04 metrite (CF 0,25)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-URG-04 chamar_agora (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-DER-02 dias≤21 → puerperio]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-MET-01 puerpério + corrimento fétido → metrite]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-MET-02 corrimento + puerpério + febre → metrite]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-MET-03 puerpério + útero aumentado + corrimento → metrite]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-MET-04 retenção de placenta + puerpério → metrite]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-URG-04 metrite CF≥0,5 → chamar_agora]] - concept - docs/entrega/03-regras-de-producao.md
+- [[Seção Metrite Puerperal (gravidade alta)]] - document - docs/entrega/03-regras-de-producao.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,15 +28,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
-- 3 edges to [[_COMMUNITY_Casos de teste sintéticos]]
-- 1 edge to [[_COMMUNITY_Sinais térmicos e febre]]
-- 1 edge to [[_COMMUNITY_Urgência e hipocalcemia]]
-- 1 edge to [[_COMMUNITY_Acidose e diarreia]]
+- 1 edge to [[_COMMUNITY_Hipocalcemia e periparto]]
+- 1 edge to [[_COMMUNITY_TPB e derivado febre]]
+- 1 edge to [[_COMMUNITY_Regras do modo bovino urgente]]
+- 1 edge to [[_COMMUNITY_Mastite]]
 
 ## Top bridge nodes
-- [[Metrite Puerperal (metrite)]] - degree 9, connects to 2 communities
-- [[R-MET-02 metrite (CF 0,45)]] - degree 5, connects to 2 communities
-- [[Corrimento vaginal (corrimento_vaginal)]] - degree 4, connects to 2 communities
-- [[R-URG-04 chamar_agora (CF 0,99)]] - degree 3, connects to 2 communities
-- [[Puerperio (puerperio)]] - degree 6, connects to 1 community
+- [[Metrite Puerperal (metrite)]] - degree 7, connects to 1 community
+- [[R-MET-02 corrimento + puerpério + febre → metrite]] - degree 2, connects to 1 community
+- [[R-URG-04 metrite CF≥0,5 → chamar_agora]] - degree 2, connects to 1 community
+- [[Seção Metrite Puerperal (gravidade alta)]] - degree 2, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/B.md"
 type: "document"
-community: "Escopo e integração entregue"
+community: "Base de desenvolvimento e sessões"
 location: "L1-L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Escopo_e_integração_entregue
+  - community/Base_de_desenvolvimento_e_sessões
 ---
 
 # Papel B: diário a preencher, sem interações ou resultados inventados
@@ -17,4 +17,4 @@ tags:
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 - [[S6-07 achado histórico — Diários e prova de entendimento sem autores confirmados]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Escopo_e_integração_entregue
+#graphify/document #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

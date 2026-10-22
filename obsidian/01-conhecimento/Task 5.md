@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Persistência de versões kb"
+community: "Achados de ativa.json"
 location: "L56-L62"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_de_versões_kb
+  - community/Achados_de_ativajson
 ---
 
 # Task 5
@@ -22,4 +22,4 @@ tags:
 - [[kbcarregador.py]] - `implements` [INFERRED]
 - [[salvar_nova]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_de_versões_kb
+#graphify/concept #graphify/EXTRACTED #community/Achados_de_ativajson

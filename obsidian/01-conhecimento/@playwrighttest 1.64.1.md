@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # @playwright/test 1.64.1
@@ -15,4 +15,4 @@ tags:
 - [[Playwright Test webServer]] - `references` [INFERRED]
 - [[playwright-skill (lackeyjb)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/INFERRED #community/Skills_e_agentes_de_IA

@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Manutenção do grafo"
+community: "Atualização do grafo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Manutenção_do_grafo
+  - community/Atualização_do_grafo
 ---
 
 # Atualizar o grafo uma vez por bloco de trabalho
@@ -14,7 +14,6 @@ tags:
 - [[dot-md em docs, CLAUDE.md, engineREADME]] - `references` [EXTRACTED]
 - [[graphify . --update]] - `references` [EXTRACTED]
 - [[graphify . --update incremental]] - `references` [EXTRACTED]
-- [[2210 grafo e Obsidian atualizados (d9eda27)]] - `conceptually_related_to` [INFERRED]
 - [[AGENTS.md instrucoes de busca e manutencao documental]] - `references` [EXTRACTED]
 - [[Atualizacao unica ao encerrar bloco documental]] - `semantically_similar_to` [INFERRED]
 - [[CLAUDE.md instrucoes do PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
@@ -28,4 +27,4 @@ tags:
 - [[obsidian01-conhecimento grafo 1 da documentacao]] - `references` [EXTRACTED]
 - [[obsidian02-Dados de Treino grafo 2 dos dados das 8 doencas sem IA]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Manutenção_do_grafo
+#graphify/concept #graphify/EXTRACTED #community/Atualização_do_grafo

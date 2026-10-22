@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Ciclo no grafo kb"
+community: "Caminho do ciclo"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ciclo_no_grafo_kb
+  - community/Caminho_do_ciclo
 ---
 
 # Achado direcao do caminho do ciclo
@@ -16,4 +16,4 @@ tags:
 - [[Task 2]] - `references` [EXTRACTED]
 - [[encontrar_ciclo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ciclo_no_grafo_kb
+#graphify/concept #graphify/EXTRACTED #community/Caminho_do_ciclo

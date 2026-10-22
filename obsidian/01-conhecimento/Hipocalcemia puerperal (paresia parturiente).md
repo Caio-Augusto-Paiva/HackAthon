@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "concept"
-community: "Fontes clínicas MSD"
+community: "Doenças e acidose ruminal"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fontes_clínicas_MSD
+  - community/Doenças_e_acidose_ruminal
 ---
 
 # Hipocalcemia puerperal (paresia parturiente)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[MSD Vet Manual]] - `cites` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fontes_clínicas_MSD
+#graphify/concept #graphify/EXTRACTED #community/Doenças_e_acidose_ruminal

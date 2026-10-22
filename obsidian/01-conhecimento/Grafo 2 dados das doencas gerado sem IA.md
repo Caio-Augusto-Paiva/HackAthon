@@ -1,11 +1,11 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Grafo 2 sem IA"
+community: "Fonte do grafo 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Grafo_2_sem_IA
+  - community/Fonte_do_grafo_2
 ---
 
 # Grafo 2: dados das doencas gerado sem IA
@@ -17,4 +17,4 @@ tags:
 - [[basefonte origem dos dados do grafo 2]] - `references` [EXTRACTED]
 - [[obsidian02-Dados de Treino grafo 2 dos dados das 8 doencas sem IA]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Grafo_2_sem_IA
+#graphify/concept #graphify/EXTRACTED #community/Fonte_do_grafo_2

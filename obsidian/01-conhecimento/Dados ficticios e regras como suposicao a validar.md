@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Pacote kb README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pacote_kb_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Dados ficticios e regras como suposicao a validar
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_README
+#graphify/concept #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

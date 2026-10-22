@@ -1,12 +1,12 @@
 ---
 source_file: "PRODUCT.md"
 type: "concept"
-community: "Sistema visual e Figma"
+community: "Identidade visual e campos"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_Figma
+  - community/Identidade_visual_e_campos
 ---
 
 # Percentual é confiança do sistema; regras não validadas
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma
+#graphify/concept #graphify/EXTRACTED #community/Identidade_visual_e_campos

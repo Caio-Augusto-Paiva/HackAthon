@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Acessibilidade e passe de qualidade"
+community: "Acessibilidade e Figma"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Acessibilidade_e_passe_de_qualidade
+  - community/Acessibilidade_e_Figma
 ---
 
 # Figma HackAtom, página Protótipo (modo Dev)
@@ -14,4 +14,4 @@ tags:
 - [[Plano de implementação Frontend web (React)]] - `references` [EXTRACTED]
 - [[Task 2 Componentes base]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Acessibilidade_e_passe_de_qualidade
+#graphify/concept #graphify/EXTRACTED #community/Acessibilidade_e_Figma

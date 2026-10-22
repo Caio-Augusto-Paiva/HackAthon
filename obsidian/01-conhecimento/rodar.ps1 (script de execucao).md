@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # rodar.ps1 (script de execucao)
@@ -15,4 +15,4 @@ tags:
 - [[PowerShell ExecutionPolicy Bypass]] - `conceptually_related_to` [INFERRED]
 - [[uv (sync, run, python pin)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/INFERRED #community/Skills_e_agentes_de_IA

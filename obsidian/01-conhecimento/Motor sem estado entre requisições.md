@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "rationale"
-community: "Plano da API Seção 4"
+community: "Bandeira vermelha e desvios"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Plano_da_API_Seção_4
+  - community/Bandeira_vermelha_e_desvios
 ---
 
 # Motor sem estado entre requisições
@@ -15,4 +15,4 @@ tags:
 - [[sessao_motor.py (carregaraplicar)]] - `rationale_for` [EXTRACTED]
 - [[sessoes.snapshot_json]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Plano_da_API_Seção_4
+#graphify/rationale #graphify/EXTRACTED #community/Bandeira_vermelha_e_desvios

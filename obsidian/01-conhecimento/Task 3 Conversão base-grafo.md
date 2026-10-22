@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Plano do kb Seção 2"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Plano_do_kb_Seção_2
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Task 3: Conversão base-grafo
@@ -19,4 +19,4 @@ tags:
 - [[Task 2 Análise de dependências]] - `references` [EXTRACTED]
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Plano_do_kb_Seção_2
+#graphify/document #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

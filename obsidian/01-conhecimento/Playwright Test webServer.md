@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Playwright Test webServer
@@ -17,4 +17,4 @@ tags:
 - [[uvicorn 0.54.0]] - `references` [EXTRACTED]
 - [[webapp-testing (skill)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/rationale #graphify/INFERRED #community/Skills_e_agentes_de_IA

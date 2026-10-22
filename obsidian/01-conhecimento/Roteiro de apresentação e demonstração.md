@@ -1,21 +1,24 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
-type: "concept"
-community: "Roteiro de apresentação e demo"
+type: "document"
+community: "Roteiro de apresentação"
 tags:
-  - graphify/concept
+  - graphify/document
   - graphify/EXTRACTED
-  - community/Roteiro_de_apresentação_e_demo
+  - community/Roteiro_de_apresentação
 ---
 
 # Roteiro de apresentação e demonstração
 
 ## Connections
-- [[05-apresentacao-e-demo]] - `references` [EXTRACTED]
-- [[Escopo original do diário C e integração React já presente; relato humano pendente]] - `references` [EXTRACTED]
-- [[Modelo de ensaio e envio não preenchido; não comprova execução]] - `references` [EXTRACTED]
-- [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Roteiros de tempo estimados (10+4 min, reserva 5 min)]] - `references` [EXTRACTED]
-- [[Tabela de documentos 01 a 07]] - `references` [EXTRACTED]
+- [[Demonstração principal em localhost (4 min)]] - `references` [EXTRACTED]
+- [[Duração estimada 10+4 min (não oficial)]] - `references` [EXTRACTED]
+- [[Ensaio e reserva]] - `references` [EXTRACTED]
+- [[Fala principal de 10 minutos]] - `references` [EXTRACTED]
+- [[Notas do apresentador — Anamnese Bovina]] - `semantically_similar_to` [INFERRED]
+- [[Perguntas prováveis da banca]] - `references` [EXTRACTED]
+- [[Reserva núcleo por terminal (4 min)]] - `references` [EXTRACTED]
+- [[Troca de modo sem reiniciar a análise]] - `references` [EXTRACTED]
+- [[Versão curta de 5 minutos incluindo demo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_apresentação_e_demo
+#graphify/document #graphify/EXTRACTED #community/Roteiro_de_apresentação

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Plano do kb Seção 2"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Plano_do_kb_Seção_2
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Task 1: Ambiente e modelos Pydantic
@@ -24,4 +24,4 @@ tags:
 - [[Tela de triagem]] - `implements` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Plano_do_kb_Seção_2
+#graphify/document #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

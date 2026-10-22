@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "concept"
-community: "Sistema visual e Figma"
+community: "Identidade visual e campos"
 location: "L11"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_Figma
+  - community/Identidade_visual_e_campos
 ---
 
 # Token cor/acento: #f4a6a6
@@ -16,4 +16,4 @@ tags:
 - [[Opções radiocheckbox com fieldset e legend]] - `references` [EXTRACTED]
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma
+#graphify/concept #graphify/EXTRACTED #community/Identidade_visual_e_campos

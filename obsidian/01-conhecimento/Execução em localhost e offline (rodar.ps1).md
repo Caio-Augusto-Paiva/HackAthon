@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 5.2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Execução em localhost e offline (rodar.ps1)
@@ -18,4 +18,4 @@ tags:
 - [[Riscos e pontos em aberto]] - `references` [EXTRACTED]
 - [[Tudo em localhost, sem nuvem e sem CDN; nenhuma LLM na decisão]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

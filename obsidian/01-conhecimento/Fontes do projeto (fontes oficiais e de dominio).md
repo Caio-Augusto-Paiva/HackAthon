@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Agentes de codificação por pessoa"
+community: "Alocação de agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Agentes_de_codificação_por_pessoa
+  - community/Alocação_de_agentes_de_IA
 ---
 
 # Fontes do projeto (fontes oficiais e de dominio)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Agentes_de_codificação_por_pessoa
+#graphify/document #graphify/INFERRED #community/Alocação_de_agentes_de_IA

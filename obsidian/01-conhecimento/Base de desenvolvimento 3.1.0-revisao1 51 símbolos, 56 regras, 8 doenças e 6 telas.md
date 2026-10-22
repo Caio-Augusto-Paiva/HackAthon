@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "concept"
-community: "Escopo e integração entregue"
+community: "Base de desenvolvimento e sessões"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Escopo_e_integração_entregue
+  - community/Base_de_desenvolvimento_e_sessões
 ---
 
 # Base de desenvolvimento 3.1.0-revisao1: 51 símbolos, 56 regras, 8 doenças e 6 telas
@@ -17,4 +17,4 @@ tags:
 - [[Motor Python 3.12+ independente de web, banco, LLM e serviços externos]] - `shares_data_with` [EXTRACTED]
 - [[Sessões persistidas vinculadas à mesma versão da base]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Escopo_e_integração_entregue
+#graphify/concept #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

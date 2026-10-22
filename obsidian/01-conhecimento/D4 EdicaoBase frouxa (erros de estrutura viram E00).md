@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Pacote kb README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pacote_kb_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # D4: EdicaoBase frouxa (erros de estrutura viram E00)
@@ -14,4 +14,4 @@ tags:
 - [[Codigos do validador E00-E23 e W01-W03]] - `references` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pacote_kb_README
+#graphify/rationale #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

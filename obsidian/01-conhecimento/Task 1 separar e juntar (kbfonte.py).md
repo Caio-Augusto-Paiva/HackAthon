@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "concept"
-community: "Separar e juntar fonte"
+community: "CLI de fonte por doença"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Separar_e_juntar_fonte
+  - community/CLI_de_fonte_por_doença
 ---
 
 # Task 1: separar e juntar (kb/fonte.py)
@@ -22,4 +22,4 @@ tags:
 - [[separar(base) - dictstr, dict]] - `implements` [EXTRACTED]
 - [[testskbtest_fonte.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Separar_e_juntar_fonte
+#graphify/concept #graphify/EXTRACTED #community/CLI_de_fonte_por_doença

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Sessão, parecer e explicação"
+community: "Concorrência e snapshot de sessão"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Sessão_parecer_e_explicação
+  - community/Concorrência_e_snapshot_de_sessão
 ---
 
 # Portao de ativacao de versao (casos_falhando, confirmar_falhas)
@@ -15,4 +15,4 @@ tags:
 - [[engine.casos.executar_caso (casos de teste reproduziveis)]] - `references` [INFERRED]
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Sessão_parecer_e_explicação
+#graphify/concept #graphify/INFERRED #community/Concorrência_e_snapshot_de_sessão

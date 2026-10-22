@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Uso do grafo de conhecimento"
+community: "Estrutura de pastas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Uso_do_grafo_de_conhecimento
+  - community/Estrutura_de_pastas
 ---
 
 # web/: React + TypeScript feito pelo Codex
@@ -15,4 +15,4 @@ tags:
 - [[Quando nao usar o grafo arquivo indicado, informacao ja conhecida, codigo e testes]] - `references` [EXTRACTED]
 - [[api FastAPI + SQLite]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Uso_do_grafo_de_conhecimento
+#graphify/concept #graphify/EXTRACTED #community/Estrutura_de_pastas

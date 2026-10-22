@@ -1,16 +1,18 @@
 ---
 source_file: "docs/entrega/README.md"
-type: "concept"
-community: "Índice da entrega"
+type: "document"
+community: "Exigências oficiais da entrega"
+location: "intro"
 tags:
-  - graphify/concept
+  - graphify/document
   - graphify/EXTRACTED
-  - community/Índice_da_entrega
+  - community/Exigências_oficiais_da_entrega
 ---
 
 # Transcrições oficiais da apresentação e do documentário
 
 ## Connections
-- [[Tema T1 Anamnese]] - `references` [EXTRACTED]
+- [[Entrega índice para a equipe e a banca]] - `references` [EXTRACTED]
+- [[Seção Atendimento às exigências oficiais]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Índice_da_entrega
+#graphify/document #graphify/EXTRACTED #community/Exigências_oficiais_da_entrega

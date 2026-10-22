@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Pydantic v2 2.14.1
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[FastAPI 0.156.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/INFERRED #community/Skills_e_agentes_de_IA

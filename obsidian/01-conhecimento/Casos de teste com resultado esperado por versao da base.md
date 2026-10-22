@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Casos de teste e hackathon"
+community: "Casos esperados e hackathon"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_de_teste_e_hackathon
+  - community/Casos_esperados_e_hackathon
 ---
 
 # Casos de teste com resultado esperado por versao da base
@@ -16,4 +16,4 @@ tags:
 - [[Cinco tarefas TDD do motor (vermelho antes do verde)]] - `semantically_similar_to` [INFERRED]
 - [[Dicas do hackathon (slide 13)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_e_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Casos_esperados_e_hackathon

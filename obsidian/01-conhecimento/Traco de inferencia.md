@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Restrições obrigatórias"
+community: "Decisão determinística auditável"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Restrições_obrigatórias
+  - community/Decisão_determinística_auditável
 ---
 
 # Traco de inferencia
@@ -15,4 +15,4 @@ tags:
 - [[Modulo de explicacao por que e como]] - `references` [EXTRACTED]
 - [[Traco da sessao reacumula eventos (parcial)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Restrições_obrigatórias
+#graphify/concept #graphify/EXTRACTED #community/Decisão_determinística_auditável

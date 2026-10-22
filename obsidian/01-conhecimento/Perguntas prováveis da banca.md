@@ -1,27 +1,29 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
-type: "concept"
-community: "Perguntas da banca"
+type: "document"
+community: "Perguntas da banca sobre IA"
+location: "Perguntas prováveis"
 tags:
-  - graphify/concept
+  - graphify/document
   - graphify/EXTRACTED
-  - community/Perguntas_da_banca
+  - community/Perguntas_da_banca_sobre_IA
 ---
 
 # Perguntas prováveis da banca
 
 ## Connections
-- [[05-apresentacao-e-demo]] - `references` [EXTRACTED]
-- [[Correção reprocessa prefixos dos lotes na ordem real de entrada]] - `references` [INFERRED]
-- [[Determinismo da sessão mesma base, valores, ordem e ações]] - `references` [INFERRED]
-- [[Editor fora do escopo desta consulta]] - `references` [EXTRACTED]
-- [[Entrega 2210 às 2000; ZIP + PDFs, alvo 1830]] - `references` [EXTRACTED]
-- [[IA só na ferramenta de desenvolvimento, fora do runtime]] - `references` [EXTRACTED]
-- [[Licença open source ainda a registrar]] - `references` [EXTRACTED]
-- [[Limites percentual é CF, não probabilidade]] - `references` [EXTRACTED]
-- [[Não sei = CF zero, contabilizado]] - `references` [EXTRACTED]
-- [[Recorte de oito doenças definido pela equipe]] - `references` [EXTRACTED]
-- [[Versão imutável, validar e rodar 34 casos antes de ativar]] - `references` [EXTRACTED]
-- [[sem_problema não comprova saúde]] - `references` [EXTRACTED]
+- [[Pergunta atende integralmente a open source]] - `references` [EXTRACTED]
+- [[Pergunta como mudar a base sem perder rastreabilidade]] - `references` [EXTRACTED]
+- [[Pergunta o que acontece com 'não sei']] - `references` [EXTRACTED]
+- [[Pergunta o que cada integrante aprendeu]] - `references` [EXTRACTED]
+- [[Pergunta o que significa sem_problema]] - `references` [EXTRACTED]
+- [[Pergunta onde está a IA na consulta]] - `references` [EXTRACTED]
+- [[Pergunta onde está o editor]] - `references` [EXTRACTED]
+- [[Pergunta porcentagem é chance de doença]] - `references` [EXTRACTED]
+- [[Pergunta quando e como será entregue]] - `references` [EXTRACTED]
+- [[Pergunta quem validou pesos e casos clínicos]] - `references` [EXTRACTED]
+- [[Pergunta roda sem internet]] - `references` [EXTRACTED]
+- [[Perguntas correção de resposta e ordem importam]] - `references` [EXTRACTED]
+- [[Roteiro de apresentação e demonstração]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Perguntas_da_banca
+#graphify/document #graphify/EXTRACTED #community/Perguntas_da_banca_sobre_IA

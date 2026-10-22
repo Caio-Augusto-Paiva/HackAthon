@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "code"
-community: "Formato em disco da fonte"
+community: "API pública da base"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Formato_em_disco_da_fonte
+  - community/API_pública_da_base
 ---
 
 # kb/fonte.py — separar e juntar
@@ -22,4 +22,4 @@ tags:
 - [[kbexportar_grafo.py — grafo exato e entrada do graphify]] - `references` [EXTRACTED]
 - [[kbfonte.py]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Formato_em_disco_da_fonte
+#graphify/code #graphify/EXTRACTED #community/API_pública_da_base

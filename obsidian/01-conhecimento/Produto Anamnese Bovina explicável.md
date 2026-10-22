@@ -1,12 +1,12 @@
 ---
 source_file: "PRODUCT.md"
 type: "document"
-community: "Sistema visual e Figma"
+community: "Identidade visual e campos"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_Figma
+  - community/Identidade_visual_e_campos
 ---
 
 # Produto: Anamnese Bovina explicável
@@ -27,4 +27,4 @@ tags:
 - [[Tom próximolúdico no diálogo e sério na gravidade]] - `references` [EXTRACTED]
 - [[Triagem estruturada de vaca em lactação, com hipóteses e explicações]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Sistema_visual_e_Figma
+#graphify/document #graphify/EXTRACTED #community/Identidade_visual_e_campos

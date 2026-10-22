@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Restrições obrigatórias"
+community: "Decisão determinística auditável"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Restrições_obrigatórias
+  - community/Decisão_determinística_auditável
 ---
 
 # Restricoes obrigatorias
@@ -20,4 +20,4 @@ tags:
 - [[Respeitar restricoes obrigatorias e declarar conflitos]] - `references` [EXTRACTED]
 - [[Rodar por completo em localhost, sem nuvem obrigatoria]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Restrições_obrigatórias
+#graphify/concept #graphify/EXTRACTED #community/Decisão_determinística_auditável

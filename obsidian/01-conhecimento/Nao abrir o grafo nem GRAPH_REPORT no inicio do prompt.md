@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Uso do grafo de conhecimento"
+community: "Busca direta versus grafo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Uso_do_grafo_de_conhecimento
+  - community/Busca_direta_versus_grafo
 ---
 
 # Nao abrir o grafo nem GRAPH_REPORT no inicio do prompt
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Grafo de conhecimento ferramenta de busca sob demanda]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Uso_do_grafo_de_conhecimento
+#graphify/concept #graphify/EXTRACTED #community/Busca_direta_versus_grafo

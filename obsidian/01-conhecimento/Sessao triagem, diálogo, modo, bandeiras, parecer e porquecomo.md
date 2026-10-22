@@ -1,16 +1,13 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Processo de desenvolvimento e IA"
+community: "Sessão e triagem"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Processo_de_desenvolvimento_e_IA
+  - graphify/EXTRACTED
+  - community/Sessão_e_triagem
 ---
 
 # Sessao: triagem, diálogo, modo, bandeiras, parecer e porque/como
 
-## Connections
-- [[2210 troca produtorespecialista, historico corrigivel, parecer unico]] - `conceptually_related_to` [INFERRED]
-
-#graphify/concept #graphify/INFERRED #community/Processo_de_desenvolvimento_e_IA
+#graphify/concept #graphify/EXTRACTED #community/Sessão_e_triagem

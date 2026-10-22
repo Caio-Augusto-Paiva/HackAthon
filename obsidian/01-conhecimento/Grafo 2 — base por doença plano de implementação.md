@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "document"
-community: "Grafo 2 por doença"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Grafo_2_por_doença
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Grafo 2 — base por doença: plano de implementação
@@ -19,4 +19,4 @@ tags:
 - [[Spec Grafo 2 — base separada por doença e grafo exato no Obsidian]] - `implements` [INFERRED]
 - [[Stack Python 3.12, Pydantic, pytest; graphify só no script]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Grafo_2_por_doença
+#graphify/document #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

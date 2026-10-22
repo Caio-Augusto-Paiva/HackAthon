@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Revisão final do kb"
+community: "Achados do contrato de aresta"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Revisão_final_do_kb
+  - community/Achados_do_contrato_de_aresta
 ---
 
 # Rodada unica de correcao final
@@ -20,4 +20,4 @@ tags:
 - [[para_motor]] - `references` [EXTRACTED]
 - [[validar_edicao]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Revisão_final_do_kb
+#graphify/rationale #graphify/EXTRACTED #community/Achados_do_contrato_de_aresta

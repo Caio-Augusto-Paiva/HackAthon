@@ -1,16 +1,13 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Documentação e visão geral"
+community: "Fraction e potencial"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Documentação_e_visão_geral
+  - graphify/EXTRACTED
+  - community/Fraction_e_potencial
 ---
 
 # Fraction, potencial conservador e seleção prioritária de bandeiras
 
-## Connections
-- [[Modelo MYCIN de fatores de certeza]] - `conceptually_related_to` [INFERRED]
-
-#graphify/rationale #graphify/INFERRED #community/Documentação_e_visão_geral
+#graphify/rationale #graphify/EXTRACTED #community/Fraction_e_potencial

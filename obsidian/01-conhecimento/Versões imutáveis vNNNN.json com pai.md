@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "rationale"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 2"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Versões imutáveis vNNNN.json com pai
@@ -15,4 +15,4 @@ tags:
 - [[Base de conhecimento JSON versionada (kb)]] - `references` [EXTRACTED]
 - [[Casos de teste conhecidos (31 casos)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/rationale #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Agentes de codificação por pessoa"
+community: "Alocação de agentes de IA"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Agentes_de_codificação_por_pessoa
+  - community/Alocação_de_agentes_de_IA
 ---
 
 # Agentes de codificacao com IA (Codex, Claude Code, Copilot, Gemini Code Assist, Opencode)
@@ -15,4 +15,4 @@ tags:
 - [[Codex (ChatGPT Plus)]] - `conceptually_related_to` [INFERRED]
 - [[Desenvolvimento de Sistemas Especialistas com Vibe Coding]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Agentes_de_codificação_por_pessoa
+#graphify/concept #graphify/INFERRED #community/Alocação_de_agentes_de_IA

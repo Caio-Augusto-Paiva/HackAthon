@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "rationale"
-community: "Log de revisões"
+community: "Base de desenvolvimento e sessões"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Log_de_revisões
+  - community/Base_de_desenvolvimento_e_sessões
 ---
 
 # Revisão da Seção 6: promessas e textos históricos corrigidos
@@ -15,4 +15,4 @@ tags:
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Log_de_revisões
+#graphify/rationale #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

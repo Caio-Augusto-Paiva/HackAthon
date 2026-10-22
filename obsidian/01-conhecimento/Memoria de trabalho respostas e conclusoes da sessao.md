@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Aquisição de conhecimento"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Aquisição_de_conhecimento
 ---
 
 # Memoria de trabalho: respostas e conclusoes da sessao
@@ -16,4 +16,4 @@ tags:
 - [[Motor de inferencia casa regras, resolve conflito, dispara]] - `references` [EXTRACTED]
 - [[Restauracao da sessao a partir do banco (ausente, bloqueia a API)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento

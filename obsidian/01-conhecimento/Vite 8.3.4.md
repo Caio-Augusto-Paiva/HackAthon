@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Vite 8.3.4
@@ -14,4 +14,4 @@ tags:
 - [[Node.js LTS 24 (Krypton)]] - `references` [INFERRED]
 - [[Vite (build e server.proxy)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/INFERRED #community/Skills_e_agentes_de_IA

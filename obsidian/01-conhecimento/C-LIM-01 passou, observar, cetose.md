@@ -1,22 +1,25 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos de teste sintéticos"
-location: "L2827"
+community: "Modos e exemplos de alerta"
+location: "## C-LIM-01"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_de_teste_sintéticos
+  - community/Modos_e_exemplos_de_alerta
 ---
 
 # C-LIM-01: passou, observar, cetose
 
 ## Connections
-- [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[Acidose Ruminal (acidose)]] - `references` [EXTRACTED]
-- [[Cetose  Hipercetonemia (cetose)]] - `references` [EXTRACTED]
-- [[Dermatite Digital Bovina (dermatite_digital)]] - `references` [EXTRACTED]
-- [[Deslocamento de Abomaso (deslocamento_abomaso)]] - `references` [EXTRACTED]
-- [[R16 esperados históricos diferem; v0002 acrescenta domínio e precisão numéricos]] - `references` [EXTRACTED]
+- [[Base de conhecimento v0004]] - `references` [EXTRACTED]
+- [[Caso fictício de regressão; suposição a validar]] - `references` [EXTRACTED]
+- [[Cetose]] - `references` [EXTRACTED]
+- [[Modo produtor]] - `references` [EXTRACTED]
+- [[Motivo de parada limite]] - `references` [EXTRACTED]
+- [[Seção do caso C-LIM-01]] - `references` [EXTRACTED]
+- [[Seção tabela-resumo dos casos]] - `references` [EXTRACTED]
+- [[Urgência observar]] - `references` [EXTRACTED]
+- [[engine.casos.executar_caso]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_sintéticos
+#graphify/concept #graphify/EXTRACTED #community/Modos_e_exemplos_de_alerta

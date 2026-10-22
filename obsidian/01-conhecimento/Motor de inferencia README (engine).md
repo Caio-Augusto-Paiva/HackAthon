@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "document"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Motor de inferencia README (engine/)
@@ -19,6 +19,5 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `references` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `references` [EXTRACTED]
 - [[engine motor Python so com biblioteca padrao]] - `conceptually_related_to` [INFERRED]
-- [[python -m unittest discover -s testsengine -t .]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Motor_e_API_README
+#graphify/document #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

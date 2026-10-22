@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "rationale"
-community: "Grupo mamário por max"
+community: "Base de desenvolvimento e sessões"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Grupo_mamário_por_max
+  - community/Base_de_desenvolvimento_e_sessões
 ---
 
 # CF e critérios clínicos como suposições a validar
@@ -13,8 +13,5 @@ tags:
 ## Connections
 - [[Ajustes propostos max mamário e caminhos de TPB sem febre]] - `references` [EXTRACTED]
 - [[Base de desenvolvimento 3.1.0-revisao1 51 símbolos, 56 regras, 8 doenças e 6 telas]] - `references` [EXTRACTED]
-- [[Casos sintéticos verificam software, sem métricas clínicas]] - `conceptually_related_to` [EXTRACTED]
-- [[Fontes contextuais; todos os 56 CF como suposição a validar]] - `conceptually_related_to` [EXTRACTED]
-- [[Riscos CF sem validação, correlação, sem_problema e lacunas da base]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Grupo_mamário_por_max
+#graphify/rationale #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

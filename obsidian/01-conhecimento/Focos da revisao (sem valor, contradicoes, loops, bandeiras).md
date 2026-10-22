@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "concept"
-community: "Revisão do motor"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Revisão_do_motor
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Focos da revisao (sem valor, contradicoes, loops, bandeiras)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Revisao do motor de inferencia (21102026)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Revisão_do_motor
+#graphify/concept #graphify/INFERRED #community/Documentação_e_backend_FastAPI

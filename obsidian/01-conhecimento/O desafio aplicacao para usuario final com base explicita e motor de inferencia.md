@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Instruções CLAUDE e AGENTS"
+community: "AGENTS.md e Codex"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_CLAUDE_e_AGENTS
+  - community/AGENTSmd_e_Codex
 ---
 
 # O desafio: aplicacao para usuario final com base explicita e motor de inferencia
@@ -17,4 +17,4 @@ tags:
 - [[Restricoes obrigatorias]] - `references` [EXTRACTED]
 - [[Tema T1 Anamnese triagem explicavel]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_CLAUDE_e_AGENTS
+#graphify/concept #graphify/EXTRACTED #community/AGENTSmd_e_Codex

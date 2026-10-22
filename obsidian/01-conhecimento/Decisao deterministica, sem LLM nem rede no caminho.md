@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Decisao deterministica, sem LLM nem rede no caminho
@@ -14,4 +14,4 @@ tags:
 - [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - `rationale_for` [EXTRACTED]
 - [[Motor independente de web, banco, LLM e servicos externos]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motor_e_API_README
+#graphify/rationale #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

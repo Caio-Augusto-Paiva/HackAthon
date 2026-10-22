@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Pacote kb README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pacote_kb_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # kb/grafo.py (conversao 1:1 Base <-> grafo bipartido)
@@ -16,4 +16,4 @@ tags:
 - [[Task 3 Conversão base-grafo]] - `implements` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_README
+#graphify/concept #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

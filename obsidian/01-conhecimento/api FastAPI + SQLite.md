@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Estrutura de pastas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Estrutura_de_pastas
 ---
 
 # api/: FastAPI + SQLite
@@ -16,4 +16,4 @@ tags:
 - [[engine motor Python so com biblioteca padrao]] - `references` [EXTRACTED]
 - [[web React + TypeScript feito pelo Codex]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Estrutura_de_pastas

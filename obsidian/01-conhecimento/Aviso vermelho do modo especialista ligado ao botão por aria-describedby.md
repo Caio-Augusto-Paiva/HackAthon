@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Página Início"
+community: "Falhas de API na interface"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_Início
+  - community/Falhas_de_API_na_interface
 ---
 
 # Aviso vermelho do modo especialista ligado ao botão por aria-describedby
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Task 3 Página Início () criar sessão]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Página_Início
+#graphify/concept #graphify/EXTRACTED #community/Falhas_de_API_na_interface

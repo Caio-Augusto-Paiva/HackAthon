@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 4.3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Memória de trabalho (engine/memoria.py)
@@ -15,6 +15,6 @@ tags:
 - [[Correções e recálculo dos fatos]] - `references` [INFERRED]
 - [[Importação de prontuário CSVJSON]] - `shares_data_with` [EXTRACTED]
 - [[Motor de inferência (engine)]] - `references` [EXTRACTED]
-- [[Pacote engine]] - `implements` [EXTRACTED]
+- [[Pacote engine_1]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema
+#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

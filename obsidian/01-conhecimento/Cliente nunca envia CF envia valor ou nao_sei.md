@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Restrições do frontend"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Restrições_do_frontend
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Cliente nunca envia CF: envia valor ou nao_sei
@@ -15,4 +15,4 @@ tags:
 - [[Fora do escopo motor ler basefonte, ativar versão, editor gráfico, IA nos dados]] - `conceptually_related_to` [INFERRED]
 - [[Global Constraints do frontend]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Restrições_do_frontend
+#graphify/concept #graphify/INFERRED #community/Cliente_nunca_envia_CF

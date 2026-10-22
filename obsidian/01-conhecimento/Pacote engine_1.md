@@ -1,20 +1,22 @@
 ---
-source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
+source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "code"
-community: "Ledger SDD do motor"
-location: "L19"
+community: "Parecer e urgência na interface"
+location: "Seção 4.3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ledger_SDD_do_motor
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Pacote engine
 
 ## Connections
-- [[Achado fato numerico inerte no teste]] - `references` [INFERRED]
-- [[Comando de teste do motor com Python do sistema]] - `references` [EXTRACTED]
-- [[Verificacao final]] - `references` [EXTRACTED]
-- [[enginevalidacao.py]] - `references` [EXTRACTED]
+- [[Explicação por quê e como]] - `implements` [EXTRACTED]
+- [[Memória de trabalho (enginememoria.py)]] - `implements` [EXTRACTED]
+- [[Modelo conceitual - módulos (diagrama)]] - `references` [EXTRACTED]
+- [[Motor de inferência (engine)]] - `implements` [EXTRACTED]
+- [[Pacote api (FastAPI)]] - `references` [EXTRACTED]
+- [[Pacote kb]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ledger_SDD_do_motor
+#graphify/code #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface

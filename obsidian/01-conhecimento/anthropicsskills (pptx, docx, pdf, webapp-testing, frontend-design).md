@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Agentes de codificação por pessoa"
+community: "Alocação de agentes de IA"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_de_codificação_por_pessoa
+  - community/Alocação_de_agentes_de_IA
 ---
 
 # anthropics/skills (pptx, docx, pdf, webapp-testing, frontend-design)
@@ -14,4 +14,4 @@ tags:
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `references` [EXTRACTED]
 - [[Licenca source-available das skills pptx e docx]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_de_codificação_por_pessoa
+#graphify/concept #graphify/EXTRACTED #community/Alocação_de_agentes_de_IA

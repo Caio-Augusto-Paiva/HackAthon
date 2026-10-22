@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "concept"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Restricao de open source do hackathon
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pptx (skill, source-available)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ferramentas_e_ambiente_local
+#graphify/concept #graphify/EXTRACTED #community/Skills_e_agentes_de_IA

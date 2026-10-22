@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/B.md"
 type: "rationale"
-community: "Escopo e integração entregue"
+community: "Base de desenvolvimento e sessões"
 location: "L17"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Escopo_e_integração_entregue
+  - community/Base_de_desenvolvimento_e_sessões
 ---
 
 # Estudo humano pendente: snapshot persistido, ordem das respostas e versão da sessão
@@ -16,4 +16,4 @@ tags:
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `semantically_similar_to` [INFERRED]
 - [[Sessões persistidas vinculadas à mesma versão da base]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Escopo_e_integração_entregue
+#graphify/rationale #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

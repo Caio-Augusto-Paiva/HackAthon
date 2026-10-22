@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "document"
-community: "Plano do frontend web"
+community: "Alerta de bandeira e SPA"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Plano_do_frontend_web
+  - community/Alerta_de_bandeira_e_SPA
 ---
 
 # Plano de implementação Frontend web/ (React)
@@ -23,4 +23,4 @@ tags:
 - [[Spec de referência anamnese-bovinos-design (4.4, 4.5, 4.7, 5.1, 5.2) + apiREADME]] - `references` [EXTRACTED]
 - [[Stack Node 24, Vite 8, React 19, TS 5, Router 7, Vitest, Playwright]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Plano_do_frontend_web
+#graphify/document #graphify/EXTRACTED #community/Alerta_de_bandeira_e_SPA

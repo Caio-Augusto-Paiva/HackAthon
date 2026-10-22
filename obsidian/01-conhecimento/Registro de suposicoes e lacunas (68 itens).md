@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Registro de suposicoes e lacunas (68 itens)
@@ -15,4 +15,4 @@ tags:
 - [[Fatores de certeza (CF) sem calibracao]] - `references` [EXTRACTED]
 - [[Suposicoes clinicas veterinarias (suposicao a validar)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ferramentas_e_ambiente_local
+#graphify/concept #graphify/EXTRACTED #community/Skills_e_agentes_de_IA

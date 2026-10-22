@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "code"
-community: "Grafo exato e testes"
+community: "Casos clínicos e fonte"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Grafo_exato_e_testes
+  - community/Casos_clínicos_e_fonte
 ---
 
 # Repositorio.salvar_nova valida antes de gravar
@@ -15,4 +15,4 @@ tags:
 - [[Task 5 Repositório de versões]] - `references` [INFERRED]
 - [[basefonte passa a ser o que a equipe edita; juntar gera próxima versão via salvar_nova]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Grafo_exato_e_testes
+#graphify/code #graphify/EXTRACTED #community/Casos_clínicos_e_fonte

@@ -1,25 +1,23 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Acidose e diarreia"
-location: "L154"
+community: "Acidose ruminal regras"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Acidose_e_diarreia
+  - community/Acidose_ruminal_regras
 ---
 
 # Acidose Ruminal (acidose)
 
 ## Connections
-- [[C-ACI-01 passou, observar, acidose]] - `references` [EXTRACTED]
-- [[C-ACI-02 passou, observar, acidose]] - `references` [EXTRACTED]
-- [[C-LIM-01 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
-- [[R-ACI-01 acidose (CF 0,35)]] - `implements` [EXTRACTED]
-- [[R-ACI-02 acidose (CF 0,55)]] - `implements` [EXTRACTED]
-- [[R-ACI-03 acidose (CF 0,5)]] - `implements` [EXTRACTED]
-- [[R-ACI-04 acidose (CF 0,88)]] - `implements` [EXTRACTED]
-- [[R-URG-07 observar (CF 0,8)]] - `references` [EXTRACTED]
+- [[Cetose  Hipercetonemia (cetose)]] - `semantically_similar_to` [INFERRED]
+- [[R-ACI-01 diarreia + apetite baixo → acidose]] - `references` [EXTRACTED]
+- [[R-ACI-02 mudança de concentrado + diarreia → acidose]] - `references` [EXTRACTED]
+- [[R-ACI-03 fezes com espuma e grãos → acidose]] - `references` [EXTRACTED]
+- [[R-ACI-04 pH ruminal5,5 → acidose]] - `references` [EXTRACTED]
+- [[R-ACI-05 apetite baixo isolado → acidose]] - `references` [EXTRACTED]
+- [[R-URG-07 acidose CF≥0,5 → observar]] - `references` [EXTRACTED]
+- [[Seção Acidose Ruminal (gravidade média)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Acidose_e_diarreia
+#graphify/concept #graphify/EXTRACTED #community/Acidose_ruminal_regras

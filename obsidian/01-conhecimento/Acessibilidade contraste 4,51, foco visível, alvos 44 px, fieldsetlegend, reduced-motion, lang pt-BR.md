@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Acessibilidade e passe de qualidade"
+community: "Acessibilidade e Figma"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Acessibilidade_e_passe_de_qualidade
+  - community/Acessibilidade_e_Figma
 ---
 
 # Acessibilidade: contraste 4,5:1, foco visível, alvos 44 px, fieldset/legend, reduced-motion, lang pt-BR
@@ -16,4 +16,4 @@ tags:
 - [[Task 2 Componentes base]] - `references` [INFERRED]
 - [[Uma transição autoral balão fala (fade + leve subida), reduced-motion desliga]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Acessibilidade_e_passe_de_qualidade
+#graphify/concept #graphify/EXTRACTED #community/Acessibilidade_e_Figma

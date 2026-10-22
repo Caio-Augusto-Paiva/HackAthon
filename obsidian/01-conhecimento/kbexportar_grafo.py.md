@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "code"
-community: "Módulos de fonte e grafo"
+community: "Arquitetura de kb"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Módulos_de_fonte_e_grafo
+  - community/Arquitetura_de_kb
 ---
 
 # kb/exportar_grafo.py
@@ -15,4 +15,4 @@ tags:
 - [[Task 2 grafo exato e extração (kbexportar_grafo.py)]] - `implements` [EXTRACTED]
 - [[kbexportar_grafo.py — grafo exato e entrada do graphify]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Módulos_de_fonte_e_grafo
+#graphify/code #graphify/EXTRACTED #community/Arquitetura_de_kb

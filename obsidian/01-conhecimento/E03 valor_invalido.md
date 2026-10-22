@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Condição valor nulo"
+community: "Validação de Condicao"
 location: "L45"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Condição_valor_nulo
+  - community/Validação_de_Condicao
 ---
 
 # E03 valor_invalido
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[valor None gera E03]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Condição_valor_nulo
+#graphify/concept #graphify/EXTRACTED #community/Validação_de_Condicao

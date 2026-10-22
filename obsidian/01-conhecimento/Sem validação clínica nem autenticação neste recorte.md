@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "concept"
-community: "Limites clínicos"
+community: "Ausência de validação clínica"
+location: "Testes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Limites_clínicos
+  - community/Ausência_de_validação_clínica
 ---
 
 # Sem validação clínica nem autenticação neste recorte
 
 ## Connections
-- [[02-arquitetura]] - `references` [EXTRACTED]
-- [[Limites clínicos 56 regras como suposição a validar]] - `semantically_similar_to` [INFERRED]
-- [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
+- [[Ausência de validação clínica]] - `semantically_similar_to` [INFERRED]
+- [[Seção Testes, execução e limites]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Limites_clínicos
+#graphify/concept #graphify/EXTRACTED #community/Ausência_de_validação_clínica

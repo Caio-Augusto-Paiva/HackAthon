@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Sessão, parecer e explicação"
+community: "Concorrência e snapshot de sessão"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_parecer_e_explicação
+  - community/Concorrência_e_snapshot_de_sessão
 ---
 
 # Comparacao de casos com a versao pai
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Portao de ativacao de versao (casos_falhando, confirmar_falhas)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_parecer_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/Concorrência_e_snapshot_de_sessão

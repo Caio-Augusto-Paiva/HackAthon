@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # webapp-testing (skill)
@@ -15,4 +15,4 @@ tags:
 - [[anthropicsskills (repositorio)]] - `references` [EXTRACTED]
 - [[playwright-skill (lackeyjb)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/INFERRED #community/Skills_e_agentes_de_IA

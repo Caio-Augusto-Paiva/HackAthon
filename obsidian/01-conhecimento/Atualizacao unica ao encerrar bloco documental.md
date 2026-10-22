@@ -1,11 +1,11 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Manutenção do grafo"
+community: "Atualização do grafo"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Manutenção_do_grafo
+  - community/Atualização_do_grafo
 ---
 
 # Atualizacao unica ao encerrar bloco documental
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Atualizar o grafo uma vez por bloco de trabalho]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Manutenção_do_grafo
+#graphify/concept #graphify/INFERRED #community/Atualização_do_grafo

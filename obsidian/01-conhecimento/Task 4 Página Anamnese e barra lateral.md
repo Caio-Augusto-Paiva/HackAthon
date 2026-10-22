@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Páginas e componentes frontend"
+community: "Barra de confiança e Boi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Páginas_e_componentes_frontend
+  - community/Barra_de_confiança_e_Boi
 ---
 
 # Task 4: Página Anamnese e barra lateral
@@ -21,4 +21,4 @@ tags:
 - [[paraCorpoTriagem(tela, escolha) múltipla, única, Nenhuma alteração, Não sei]] - `implements` [EXTRACTED]
 - [[passoAtual = triagem_respondidas + dinamicas_feitas + 1; de até triagem_total + limite_dinamico]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Páginas_e_componentes_frontend
+#graphify/concept #graphify/EXTRACTED #community/Barra_de_confiança_e_Boi

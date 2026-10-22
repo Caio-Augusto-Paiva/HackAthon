@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Agentes de IA e limites"
+community: "Ferramentas de IA e AGENTS"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Agentes_de_IA_e_limites
+  - community/Ferramentas_de_IA_e_AGENTS
 ---
 
 # Google Antigravity (app, IDE e CLI)
@@ -17,4 +17,4 @@ tags:
 - [[Gemini CLI]] - `references` [EXTRACTED]
 - [[Limites de uso dos planos]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Agentes_de_IA_e_limites
+#graphify/document #graphify/EXTRACTED #community/Ferramentas_de_IA_e_AGENTS

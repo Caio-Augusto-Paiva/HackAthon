@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Estrutura de pastas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Estrutura_de_pastas
 ---
 
 # Especificacao e planos aprovados; sem refazer brainstorming
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Estrutura_de_pastas

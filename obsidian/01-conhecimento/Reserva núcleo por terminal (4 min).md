@@ -1,18 +1,20 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
-type: "concept"
-community: "Demonstração e troca de modo"
+type: "document"
+community: "Demo cronometrada e avisos"
+location: "Reserva"
 tags:
-  - graphify/concept
+  - graphify/document
   - graphify/EXTRACTED
-  - community/Demonstração_e_troca_de_modo
+  - community/Demo_cronometrada_e_avisos
 ---
 
 # Reserva: núcleo por terminal (4 min)
 
 ## Connections
-- [[05-apresentacao-e-demo]] - `references` [EXTRACTED]
-- [[Comandos CLI alerta-decubito.json e sinais-mamarios.json]] - `references` [EXTRACTED]
-- [[Trecho Python Sessao, trocar_modo, exportar e restaurar]] - `references` [EXTRACTED]
+- [[Comandos da CLI python -m engine]] - `references` [EXTRACTED]
+- [[R10 Falha de máquina ou dependência externa na demo (alta)]] - `rationale_for` [EXTRACTED]
+- [[Roteiro de apresentação e demonstração]] - `references` [EXTRACTED]
+- [[Snapshot e restauração de Sessao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Demonstração_e_troca_de_modo
+#graphify/document #graphify/EXTRACTED #community/Demo_cronometrada_e_avisos

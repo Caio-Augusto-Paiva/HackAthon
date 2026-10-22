@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "concept"
-community: "Grafo 2 por doença"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Grafo_2_por_doença
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Stack: Python 3.12, Pydantic, pytest; graphify só no script
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Grafo 2 — base por doença plano de implementação]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Grafo_2_por_doença
+#graphify/concept #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

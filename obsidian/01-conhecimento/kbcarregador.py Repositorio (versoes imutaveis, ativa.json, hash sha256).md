@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Pacote kb README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pacote_kb_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # kb/carregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)
@@ -17,4 +17,4 @@ tags:
 - [[Sessao presa a versao da base com que nasceu]] - `conceptually_related_to` [INFERRED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_README
+#graphify/concept #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

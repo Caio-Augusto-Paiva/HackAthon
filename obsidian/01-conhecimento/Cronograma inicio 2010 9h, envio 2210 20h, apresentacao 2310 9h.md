@@ -1,17 +1,16 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Processo exigido pelos organizadores"
+community: "Avaliação da organização"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Processo_exigido_pelos_organizadores
+  - community/Avaliação_da_organização
 ---
 
 # Cronograma: inicio 20/10 9h, envio 22/10 20h, apresentacao 23/10 9h
 
 ## Connections
-- [[Cronograma prazo 2210 2000, apresentação 2310 0900]] - `conceptually_related_to` [INFERRED]
 - [[Entregaveis e prazos]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Processo_exigido_pelos_organizadores
+#graphify/concept #graphify/EXTRACTED #community/Avaliação_da_organização

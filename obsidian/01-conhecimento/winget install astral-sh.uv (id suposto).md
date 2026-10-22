@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # winget install astral-sh.uv (id suposto)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[uv 0.13.4]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/concept #graphify/INFERRED #community/Skills_e_agentes_de_IA

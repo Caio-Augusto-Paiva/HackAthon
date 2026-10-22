@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "concept"
-community: "Separar e juntar fonte"
+community: "CLI de fonte por doença"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Separar_e_juntar_fonte
+  - community/CLI_de_fonte_por_doença
 ---
 
 # Regras de separação determinísticas
@@ -17,4 +17,4 @@ tags:
 - [[Vai para o arquivo de D símbolo D, símbolos exclusivos, regras de D, derivados exclusivos, urgência citando D]] - `references` [EXTRACTED]
 - [[kbfonte.py — separar e juntar]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Separar_e_juntar_fonte
+#graphify/concept #graphify/EXTRACTED #community/CLI_de_fonte_por_doença

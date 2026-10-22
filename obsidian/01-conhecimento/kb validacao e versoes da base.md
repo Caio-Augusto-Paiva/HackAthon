@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Arquitetura e instruções do projeto"
+community: "Aquisição de conhecimento"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_instruções_do_projeto
+  - community/Aquisição_de_conhecimento
 ---
 
 # kb/: validacao e versoes da base
@@ -15,4 +15,4 @@ tags:
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
 - [[Pacote kb README (base de conhecimento)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Hypothesis (floats, lists, permutations)
@@ -14,4 +14,4 @@ tags:
 - [[Fatores de certeza (CF) sem calibracao]] - `conceptually_related_to` [INFERRED]
 - [[hypothesis 6.170.5]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/INFERRED #community/Skills_e_agentes_de_IA

@@ -1,19 +1,20 @@
 ---
-source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
+source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "code"
-community: "Grafo exato e testes"
+community: "Exportação do grafo de dados"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Grafo_exato_e_testes
+  - community/Exportação_do_grafo_de_dados
 ---
 
 # tests/kb/test_exportar_grafo.py
 
 ## Connections
-- [[34 casos clínicos com mesmo resultado lendo v0002 e grafo exato]] - `references` [EXTRACTED]
-- [[Testes da spec]] - `references` [EXTRACTED]
-- [[carregar_do_grafo(caminho) - Base]] - `references` [EXTRACTED]
+- [[Task 2 grafo exato e extração (kbexportar_grafo.py)]] - `references` [EXTRACTED]
+- [[test_carregar_do_grafo_igual_v0002]] - `references` [EXTRACTED]
+- [[test_casos_iguais_lendo_do_grafo (34 casos)]] - `references` [EXTRACTED]
+- [[test_extracao_no_esquema_do_graphify (51 sim, 56 regra)]] - `references` [EXTRACTED]
 - [[testskbtest_exportar_grafo.py_1]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Grafo_exato_e_testes
+#graphify/code #graphify/EXTRACTED #community/Exportação_do_grafo_de_dados

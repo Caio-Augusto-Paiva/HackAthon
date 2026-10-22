@@ -1,0 +1,28 @@
+---
+type: community
+cohesion: 0.42
+members: 9
+---
+
+# Ferramentas de IA e AGENTS
+
+**Cohesion:** 0.42 - moderately connected
+**Members:** 9 nodes
+
+## Members
+- [[AGENTS.md (instrucoes do projeto)]] - concept - docs/pesquisa/agentes-e-skills.md
+- [[CLAUDE.md (instrucoes do projeto)]] - concept - docs/pesquisa/agentes-e-skills.md
+- [[Claude Code]] - document - docs/pesquisa/agentes-e-skills.md
+- [[Formato SKILL.md (Agent Skills)]] - concept - docs/pesquisa/agentes-e-skills.md
+- [[GEMINI.md (instrucoes do projeto)]] - concept - docs/pesquisa/agentes-e-skills.md
+- [[Gemini CLI]] - document - docs/pesquisa/agentes-e-skills.md
+- [[Google Antigravity (app, IDE e CLI)]] - document - docs/pesquisa/agentes-e-skills.md
+- [[Limites de uso dos planos]] - concept - docs/pesquisa/agentes-e-skills.md
+- [[OpenAI Codex (CLI, IDE, app desktop)]] - document - docs/pesquisa/agentes-e-skills.md
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Ferramentas_de_IA_e_AGENTS
+SORT file.name ASC
+```

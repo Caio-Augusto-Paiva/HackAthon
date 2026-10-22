@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "code"
-community: "Schemas e contratos Pydantic"
+community: "Contrato OpenAPI e exemplos"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Schemas_e_contratos_Pydantic
+  - community/Contrato_OpenAPI_e_exemplos
 ---
 
 # registro.py CONTRATOS por operationId
@@ -16,4 +16,4 @@ tags:
 - [[contratosopenapi.json versionado]] - `references` [EXTRACTED]
 - [[operationId estável por rota]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Schemas_e_contratos_Pydantic
+#graphify/code #graphify/EXTRACTED #community/Contrato_OpenAPI_e_exemplos

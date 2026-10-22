@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "code"
-community: "Páginas e componentes frontend"
+community: "Alerta de bandeira e SPA"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Páginas_e_componentes_frontend
+  - community/Alerta_de_bandeira_e_SPA
 ---
 
 # Modal (foco preso, sem Esc em alerta)
@@ -14,4 +14,4 @@ tags:
 - [[Botao, OpcaoResposta, CampoNumerico, BarraConfianca, Boi, Balao, BarraProgresso, Modal]] - `references` [EXTRACTED]
 - [[Task 5 Alerta de bandeira vermelha]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Páginas_e_componentes_frontend
+#graphify/code #graphify/EXTRACTED #community/Alerta_de_bandeira_e_SPA

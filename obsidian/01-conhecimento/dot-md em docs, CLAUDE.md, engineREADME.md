@@ -1,11 +1,11 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # .md em docs/, CLAUDE.md, engine/README.md
@@ -14,4 +14,4 @@ tags:
 - [[Atualizar o grafo uma vez por bloco de trabalho]] - `references` [EXTRACTED]
 - [[Motor de inferencia README (engine)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_e_API_README
+#graphify/concept #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

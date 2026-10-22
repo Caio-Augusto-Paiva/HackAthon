@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Restrições obrigatórias"
+community: "Decisão determinística auditável"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Restrições_obrigatórias
+  - community/Decisão_determinística_auditável
 ---
 
 # Modulo de explicacao: por que e como
@@ -14,4 +14,4 @@ tags:
 - [[Componentes da arquitetura (Modelo Conceitual)]] - `references` [EXTRACTED]
 - [[Traco de inferencia]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Restrições_obrigatórias
+#graphify/concept #graphify/EXTRACTED #community/Decisão_determinística_auditável

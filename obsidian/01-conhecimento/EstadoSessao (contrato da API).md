@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Plano do frontend web"
+community: "Alerta de bandeira e SPA"
 location: "Seção 4.4 e 4.5.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plano_do_frontend_web
+  - community/Alerta_de_bandeira_e_SPA
 ---
 
 # EstadoSessao (contrato da API)
@@ -16,4 +16,4 @@ tags:
 - [[Contratos da API e formato único de erro]] - `references` [EXTRACTED]
 - [[Pacote api (FastAPI)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plano_do_frontend_web
+#graphify/concept #graphify/EXTRACTED #community/Alerta_de_bandeira_e_SPA

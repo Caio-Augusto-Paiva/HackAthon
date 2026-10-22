@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Agentes de codificação por pessoa"
+community: "Alocação de agentes de IA"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_de_codificação_por_pessoa
+  - community/Alocação_de_agentes_de_IA
 ---
 
 # Skills em formato aberto (.agents/skills, .claude/skills, AGENTS.md)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[obrasuperpowers (skills em formato aberto)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_de_codificação_por_pessoa
+#graphify/concept #graphify/EXTRACTED #community/Alocação_de_agentes_de_IA

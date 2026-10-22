@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
-type: "concept"
-community: "Roteiro de apresentação e demo"
+type: "document"
+community: "Roteiro de apresentação"
+location: "Versão curta"
 tags:
-  - graphify/concept
+  - graphify/document
   - graphify/EXTRACTED
-  - community/Roteiro_de_apresentação_e_demo
+  - community/Roteiro_de_apresentação
 ---
 
 # Versão curta de 5 minutos incluindo demo
 
 ## Connections
-- [[05-apresentacao-e-demo]] - `references` [EXTRACTED]
-- [[Demonstração principal em localhost (4 min)]] - `conceptually_related_to` [INFERRED]
-- [[Roteiros de tempo estimados (10+4 min, reserva 5 min)]] - `references` [EXTRACTED]
+- [[Fala principal de 10 minutos]] - `semantically_similar_to` [INFERRED]
+- [[Roteiro de apresentação e demonstração]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_apresentação_e_demo
+#graphify/document #graphify/EXTRACTED #community/Roteiro_de_apresentação

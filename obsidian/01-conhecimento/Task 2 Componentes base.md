@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Acessibilidade e passe de qualidade"
+community: "Acessibilidade e Figma"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Acessibilidade_e_passe_de_qualidade
+  - community/Acessibilidade_e_Figma
 ---
 
 # Task 2: Componentes base
@@ -15,4 +15,4 @@ tags:
 - [[Botao, OpcaoResposta, CampoNumerico, BarraConfianca, Boi, Balao, BarraProgresso, Modal]] - `implements` [EXTRACTED]
 - [[Figma HackAtom, página Protótipo (modo Dev)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Acessibilidade_e_passe_de_qualidade
+#graphify/concept #graphify/INFERRED #community/Acessibilidade_e_Figma

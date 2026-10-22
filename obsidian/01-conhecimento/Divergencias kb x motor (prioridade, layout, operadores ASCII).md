@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Divergencias kb x motor (prioridade, layout, operadores ASCII)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Compatibilidade com o motor via para_motor (exclude_none)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_e_API_README
+#graphify/concept #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

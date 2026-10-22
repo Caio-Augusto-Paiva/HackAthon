@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # hypothesis 6.170.5
@@ -14,4 +14,4 @@ tags:
 - [[Hypothesis (floats, lists, permutations)]] - `references` [INFERRED]
 - [[Python 3.15.0]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ferramentas_e_ambiente_local
+#graphify/document #graphify/EXTRACTED #community/Skills_e_agentes_de_IA

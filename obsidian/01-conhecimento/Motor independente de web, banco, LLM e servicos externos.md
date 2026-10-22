@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Motor independente de web, banco, LLM e servicos externos
@@ -16,4 +16,4 @@ tags:
 - [[Organizacao dos modulos do motor]] - `rationale_for` [INFERRED]
 - [[kb como pacote folha (nao importa engine)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Motor_e_API_README
+#graphify/rationale #graphify/INFERRED #community/Documentação_e_backend_FastAPI

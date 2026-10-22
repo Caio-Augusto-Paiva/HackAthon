@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Ferramentas e ambiente local"
+community: "Skills e agentes de IA"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Ferramentas_e_ambiente_local
+  - community/Skills_e_agentes_de_IA
 ---
 
 # Casos de teste inventados (engine/casos.py)
@@ -17,4 +17,4 @@ tags:
 - [[pytest parametrize com pytest.param(id=...)]] - `shares_data_with` [INFERRED]
 - [[test-driven-development (skill)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Ferramentas_e_ambiente_local
+#graphify/concept #graphify/INFERRED #community/Skills_e_agentes_de_IA

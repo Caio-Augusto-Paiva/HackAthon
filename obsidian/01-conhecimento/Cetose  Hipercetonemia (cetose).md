@@ -1,31 +1,25 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos de teste sintéticos"
-location: "L160"
+community: "Cetose e deslocamento de abomaso"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_de_teste_sintéticos
+  - community/Cetose_e_deslocamento_de_abomaso
 ---
 
 # Cetose / Hipercetonemia (cetose)
 
 ## Connections
-- [[C-CET-01 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[C-CET-02 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[C-CET-03 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[C-DAB-01 passou, chamar_agora, deslocamento_abomaso]] - `references` [EXTRACTED]
-- [[C-DAB-02 passou, chamar_agora, deslocamento_abomaso]] - `references` [EXTRACTED]
-- [[C-DAB-DIALOGO passou, observar, cetose]] - `references` [EXTRACTED]
-- [[C-LIM-01 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[C-MODO-01 passou, chamar_agora, deslocamento_abomaso]] - `references` [EXTRACTED]
-- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
-- [[R-CET-01 cetose (CF 0,4)]] - `implements` [EXTRACTED]
-- [[R-CET-02 cetose (CF 0,5)]] - `implements` [EXTRACTED]
-- [[R-CET-03 cetose (CF 0,45)]] - `implements` [EXTRACTED]
-- [[R-CET-04 cetose (CF 0,85)]] - `implements` [EXTRACTED]
-- [[R-CET-05 cetose (CF 0,7)]] - `implements` [EXTRACTED]
-- [[R-URG-06 observar (CF 0,8)]] - `references` [EXTRACTED]
+- [[Acidose Ruminal (acidose)]] - `semantically_similar_to` [INFERRED]
+- [[Deslocamento de Abomaso (deslocamento_abomaso)]] - `semantically_similar_to` [INFERRED]
+- [[R-CET-01 início lactação + apetite baixo + queda → cetose]] - `references` [EXTRACTED]
+- [[R-CET-02 hálito de acetona → cetose]] - `references` [EXTRACTED]
+- [[R-CET-03 recusa de concentrado → cetose]] - `references` [EXTRACTED]
+- [[R-CET-04 BHB≥1,2 → cetose]] - `references` [EXTRACTED]
+- [[R-CET-05 fita de urina positiva → cetose]] - `references` [EXTRACTED]
+- [[R-CET-06 apetite baixo isolado → cetose]] - `references` [EXTRACTED]
+- [[R-URG-06 cetose CF≥0,5 → observar]] - `references` [EXTRACTED]
+- [[Seção Cetose  Hipercetonemia (gravidade média)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_sintéticos
+#graphify/concept #graphify/EXTRACTED #community/Cetose_e_deslocamento_de_abomaso

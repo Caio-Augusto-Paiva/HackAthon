@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Ciclo no grafo kb"
+community: "Caminho do ciclo"
 location: "L43"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ciclo_no_grafo_kb
+  - community/Caminho_do_ciclo
 ---
 
 # Achado op e negado None viram default
@@ -15,4 +15,4 @@ tags:
 - [[Task 3]] - `references` [EXTRACTED]
 - [[kbgrafo.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ciclo_no_grafo_kb
+#graphify/concept #graphify/EXTRACTED #community/Caminho_do_ciclo

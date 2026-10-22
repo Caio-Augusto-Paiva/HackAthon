@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "concept"
-community: "Páginas e componentes frontend"
+community: "Barra de confiança e Boi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Páginas_e_componentes_frontend
+  - community/Barra_de_confiança_e_Boi
 ---
 
 # Review Focus (5 pontos de risco)
@@ -23,4 +23,4 @@ tags:
 - [[Task 6 Responder triagem e perguntas dinâmicas]] - `references` [EXTRACTED]
 - [[proxima null com alerta.pausa abre modal de alerta]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Páginas_e_componentes_frontend
+#graphify/concept #graphify/EXTRACTED #community/Barra_de_confiança_e_Boi

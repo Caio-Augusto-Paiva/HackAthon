@@ -1,19 +1,25 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos de teste sintéticos"
-location: "L910"
+community: "Modos e exemplos de alerta"
+location: "## C-CET-01"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_de_teste_sintéticos
+  - community/Modos_e_exemplos_de_alerta
 ---
 
 # C-CET-01: passou, observar, cetose
 
 ## Connections
-- [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[Cetose  Hipercetonemia (cetose)]] - `references` [EXTRACTED]
-- [[Deslocamento de Abomaso (deslocamento_abomaso)]] - `references` [EXTRACTED]
+- [[Base de conhecimento v0004]] - `references` [EXTRACTED]
+- [[Caso fictício de regressão; suposição a validar]] - `references` [EXTRACTED]
+- [[Cetose]] - `references` [EXTRACTED]
+- [[Modo produtor]] - `references` [EXTRACTED]
+- [[Motivo de parada confirmacao]] - `references` [EXTRACTED]
+- [[Seção do caso C-MET-01]] - `references` [EXTRACTED]
+- [[Seção tabela-resumo dos casos]] - `references` [EXTRACTED]
+- [[Urgência observar]] - `references` [EXTRACTED]
+- [[engine.casos.executar_caso]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_sintéticos
+#graphify/concept #graphify/EXTRACTED #community/Modos_e_exemplos_de_alerta

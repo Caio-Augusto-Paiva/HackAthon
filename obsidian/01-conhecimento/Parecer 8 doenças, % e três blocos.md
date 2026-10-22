@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação e arquitetura do sistema"
+community: "Parecer e urgência na interface"
 location: "Seção 1"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Especificação_e_arquitetura_do_sistema
+  - community/Parecer_e_urgência_na_interface
 ---
 
 # Parecer: 8 doenças, % e três blocos
@@ -18,4 +18,4 @@ tags:
 - [[Parecer tabela table com 8 doenças em ordem decrescente nos 3 blocos]] - `implements` [INFERRED]
 - [[Urgência por gravidade x confiança]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Especificação_e_arquitetura_do_sistema
+#graphify/concept #graphify/INFERRED #community/Parecer_e_urgência_na_interface

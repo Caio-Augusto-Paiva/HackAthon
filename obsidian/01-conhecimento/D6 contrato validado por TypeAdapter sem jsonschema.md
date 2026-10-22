@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "rationale"
-community: "Schemas e contratos Pydantic"
+community: "Contrato OpenAPI e exemplos"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Schemas_e_contratos_Pydantic
+  - community/Contrato_OpenAPI_e_exemplos
 ---
 
 # D6 contrato validado por TypeAdapter sem jsonschema
@@ -14,4 +14,4 @@ tags:
 - [[Task 12 OpenAPI versionado e teste de contrato]] - `rationale_for` [EXTRACTED]
 - [[Task 3 Schemas Pydantic e exemplos de contrato]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Schemas_e_contratos_Pydantic
+#graphify/rationale #graphify/EXTRACTED #community/Contrato_OpenAPI_e_exemplos

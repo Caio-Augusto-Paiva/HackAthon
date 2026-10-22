@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Motor e API README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Motor_e_API_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # kb como pacote folha (nao importa engine)
@@ -15,4 +15,4 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `semantically_similar_to` [INFERRED]
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Motor_e_API_README
+#graphify/rationale #graphify/INFERRED #community/Documentação_e_backend_FastAPI

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "rationale"
-community: "Agentes de codificação por pessoa"
+community: "Alocação de agentes de IA"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Agentes_de_codificação_por_pessoa
+  - community/Alocação_de_agentes_de_IA
 ---
 
 # Licenca source-available das skills pptx e docx
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[anthropicsskills (pptx, docx, pdf, webapp-testing, frontend-design)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Agentes_de_codificação_por_pessoa
+#graphify/rationale #graphify/EXTRACTED #community/Alocação_de_agentes_de_IA

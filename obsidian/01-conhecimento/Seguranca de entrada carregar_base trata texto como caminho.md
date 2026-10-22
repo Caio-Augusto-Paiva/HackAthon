@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Pacote kb README"
+community: "Documentação e backend FastAPI"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pacote_kb_README
+  - community/Documentação_e_backend_FastAPI
 ---
 
 # Seguranca de entrada: carregar_base trata texto como caminho
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pacote_kb_README
+#graphify/rationale #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

@@ -1,11 +1,11 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Instruções CLAUDE e AGENTS"
+community: "AGENTS.md e Codex"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_CLAUDE_e_AGENTS
+  - community/AGENTSmd_e_Codex
 ---
 
 # AGENTS.md: instrucoes de busca e manutencao documental
@@ -20,4 +20,4 @@ tags:
 - [[Grafo de conhecimento so quando precisar procurar]] - `references` [EXTRACTED]
 - [[Instrucoes do projeto em CLAUDE.md mesmas regras para todos os agentes]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Instruções_CLAUDE_e_AGENTS
+#graphify/concept #graphify/EXTRACTED #community/AGENTSmd_e_Codex

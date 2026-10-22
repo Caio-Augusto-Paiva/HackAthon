@@ -1,26 +1,20 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
-location: "L185"
+community: "Mastite"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Mastite
 ---
 
 # Mastite (mastite)
 
 ## Connections
-- [[C-COM-01 passou, chamar_agora, mastite]] - `references` [EXTRACTED]
-- [[C-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
-- [[C-MAS-02 passou, chamar_agora, mastite]] - `references` [EXTRACTED]
-- [[C-MAS-03 passou, observar, mastite]] - `references` [EXTRACTED]
-- [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
-- [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
-- [[R-MAS-02 mastite (CF 0,5)]] - `implements` [EXTRACTED]
-- [[R-MAS-04 mastite (CF 0,4)]] - `implements` [EXTRACTED]
-- [[R-MAS-05 mastite (CF 0,99)]] - `implements` [EXTRACTED]
-- [[R-URG-05 observar (CF 0,8)]] - `references` [EXTRACTED]
+- [[R-MAS-02 úbere inflamado → mastite]] - `references` [EXTRACTED]
+- [[R-MAS-04 CMT reagente → mastite]] - `references` [EXTRACTED]
+- [[R-MAS-05 evidência de leite → mastite]] - `references` [EXTRACTED]
+- [[R-URG-05 mastite CF≥0,5 → observar]] - `references` [EXTRACTED]
+- [[Seção Mastite (gravidade média)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Mastite

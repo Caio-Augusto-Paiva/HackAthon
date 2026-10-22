@@ -1,16 +1,17 @@
 ---
 source_file: "docs/entrega/README.md"
-type: "rationale"
-community: "Plano de documentação parcial"
+type: "concept"
+community: "Exigências oficiais da entrega"
+location: "Mapa do pacote"
 tags:
-  - graphify/rationale
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Plano_de_documentação_parcial
+  - community/Exigências_oficiais_da_entrega
 ---
 
 # uv.lock citado no plano mas inexistente
 
 ## Connections
-- [[Pacote final pendente (PDFs, slides, vídeo, ZIP)]] - `references` [EXTRACTED]
+- [[Seção Mapa do pacote e trabalho restante]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Plano_de_documentação_parcial
+#graphify/concept #graphify/EXTRACTED #community/Exigências_oficiais_da_entrega

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Fontes clínicas MSD"
+community: "Doenças e acidose ruminal"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Fontes_clínicas_MSD
+  - community/Doenças_e_acidose_ruminal
 ---
 
 # MSD Vet Manual
@@ -24,4 +24,4 @@ tags:
 - [[Sobrecarga de grao]] - `cites` [EXTRACTED]
 - [[Status de conferencia das fontes (L, R, N)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Fontes_clínicas_MSD
+#graphify/document #graphify/EXTRACTED #community/Doenças_e_acidose_ruminal

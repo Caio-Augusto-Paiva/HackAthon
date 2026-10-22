@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "code"
-community: "Grafo exato e testes"
+community: "Casos clínicos e fonte"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Grafo_exato_e_testes
+  - community/Casos_clínicos_e_fonte
 ---
 
 # tests/kb/test_fonte.py
@@ -15,4 +15,4 @@ tags:
 - [[Testes da spec]] - `references` [EXTRACTED]
 - [[testskbtest_fonte.py]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Grafo_exato_e_testes
+#graphify/code #graphify/EXTRACTED #community/Casos_clínicos_e_fonte

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Tokens e cliente web"
+community: "Cliente tipado e tipografia"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Tokens_e_cliente_web
+  - community/Cliente_tipado_e_tipografia
 ---
 
 # Mapa de arquivos web/
@@ -20,4 +20,4 @@ tags:
 - [[websrcestilotokens.css e global.css]] - `references` [EXTRACTED]
 - [[websrcpaginas (Inicio, Anamnese, Parecer)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Tokens_e_cliente_web
+#graphify/concept #graphify/EXTRACTED #community/Cliente_tipado_e_tipografia
