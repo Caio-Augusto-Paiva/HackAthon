@@ -1,6 +1,6 @@
 ---
 name: Anamnese Bovina
-description: Interface de triagem explicável conforme o protótipo HackAtom
+description: Interface de triagem explicável conforme o protótipo HackAthon
 colors:
   fundo-escuro: "#1f4d2c"
   fundo-medio: "#2e6b3f"
@@ -47,7 +47,7 @@ spacing:
 
 ## Overview
 
-Referência fixa: [HackAtom, página Protótipo](https://www.figma.com/design/MUiGJ81WjX97iyjX0yE6jz/HackAtom?node-id=9-2), conferida por `get_design_context`, `get_variable_defs` e leitura da coleção “Tokens” em 22/10/2026. O desenho usa fundo verde, superfícies creme, boi ilustrado e ação principal rosa (o rosa do focinho do boi). A adaptação implementa o fluxo real da API em layouts responsivos, sem substituir conteúdo clínico por exemplos estáticos do Figma.
+Referência fixa: [HackAthon, página Protótipo](https://www.figma.com/design/MUiGJ81WjX97iyjX0yE6jz/HackAtom?node-id=9-2), conferida por `get_design_context`, `get_variable_defs` e leitura da coleção “Tokens” em 22/10/2026. O desenho usa fundo verde, superfícies creme, boi ilustrado e ação principal rosa (o rosa do focinho do boi). A adaptação implementa o fluxo real da API em layouts responsivos, sem substituir conteúdo clínico por exemplos estáticos do Figma.
 
 ## Colors
 

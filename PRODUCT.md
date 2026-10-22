@@ -45,4 +45,4 @@ Próximo e lúdico no diálogo, claro e sério ao comunicar gravidade. Perguntas
 
 ## Evidence
 
-Plano: `docs/superpowers/plans/2026-10-22-frontend-web.md`. Contrato: `contratos/openapi.json` e seção “Para o frontend” em `api/README.md`. Referência visual: arquivo Figma HackAtom, página “Protótipo”, informado pela equipe. Contexto registrado a partir dessas fontes por instrução expressa da equipe, sem introduzir decisões de produto adicionais.
+Plano: `docs/superpowers/plans/2026-10-22-frontend-web.md`. Contrato: `contratos/openapi.json` e seção “Para o frontend” em `api/README.md`. Referência visual: arquivo Figma HackAthon, página “Protótipo”, informado pela equipe. Contexto registrado a partir dessas fontes por instrução expressa da equipe, sem introduzir decisões de produto adicionais.

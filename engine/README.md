@@ -1,6 +1,6 @@
 # Motor de inferência — seção 1
 
-Implementação independente de web, banco, LLM e serviços externos. Requer Python 3.12 ou superior; não requer instalação de dependências. Execute os comandos abaixo na raiz de `HackAtom`.
+Implementação independente de web, banco, LLM e serviços externos. Requer Python 3.12 ou superior; não requer instalação de dependências. Execute os comandos abaixo na raiz de `HackAthon`.
 
 ## Testes
 

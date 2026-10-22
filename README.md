@@ -1,4 +1,4 @@
-# HackAtom — anamnese explicável de bovinos leiteiros
+# HackAthon — anamnese explicável de bovinos leiteiros
 
 Prova de conceito do tema T1 do Hackathon UFJF 2026. O núcleo executa regras explícitas, combina fatores de certeza pelo modelo MYCIN e explica as conclusões. A IA auxilia o desenvolvimento; a decisão em execução sai da base e do motor.
 
