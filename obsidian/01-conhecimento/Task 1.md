@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Task 1"
+community: "Ambiente e carregamento kb"
 location: "L26-L31"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Task_1
+  - community/Ambiente_e_carregamento_kb
 ---
 
 # Task 1
@@ -30,4 +30,4 @@ tags:
 - [[kbmodelos.py]] - `implements` [EXTRACTED]
 - [[testskbtest_modelos.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Task_1
+#graphify/concept #graphify/EXTRACTED #community/Ambiente_e_carregamento_kb

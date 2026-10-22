@@ -1,0 +1,2 @@
+.trilho { height: 12px; width: 100%; overflow: hidden; background: var(--cor-trilho); border-radius: 7px; }
+.preenchimento { display: block; height: 100%; width: var(--percentual); background: var(--cor-acento); }

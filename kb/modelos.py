@@ -40,6 +40,7 @@ class DominioNumerico(_Modelo):
     min: float | None = None
     max: float | None = None
     unidade: str | None = None
+    casas_decimais: Annotated[int, Field(strict=True, ge=0, le=3)] | None = None  # ausente = até 2 casas
 
 
 Dominio = Annotated[

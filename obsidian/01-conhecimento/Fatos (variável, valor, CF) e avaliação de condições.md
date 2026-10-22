@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Motor de inferência (engine/)"
+community: "Especificação do sistema especialista"
 location: "Seção 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_de_inferência_engine/
+  - community/Especificação_do_sistema_especialista
 ---
 
 # Fatos (variável, valor, CF) e avaliação de condições
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Motor de inferência (engine)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/
+#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista

@@ -2,7 +2,7 @@
 
 Prova de conceito do tema T1 do Hackathon UFJF 2026. O núcleo executa regras explícitas, combina fatores de certeza pelo modelo MYCIN e explica as conclusões. A IA auxilia o desenvolvimento; a decisão em execução sai da base e do motor.
 
-**Estado em 21/10/2026, após a integração em `sessao-pair-programming`:** motor local, base de desenvolvimento, módulo `kb/` e API FastAPI com persistência SQLite disponíveis. A interface web e o editor gráfico continuam pendentes. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
+**Estado da execução da Seção 5, branch `codex-davi`:** motor local, base ativa `v0002`, módulo `kb/` e API FastAPI com persistência SQLite disponíveis. São 27 operações HTTP e 34 casos sintéticos versionados. A interface web e o editor gráfico estão em andamento em outra sessão. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
 
 ## Executar a demonstração do motor
 
@@ -10,7 +10,7 @@ Requer Python 3.12 ou superior. Abra um terminal na raiz deste repositório. O m
 
 ```powershell
 python -m unittest discover -s tests/engine -t .
-python -m engine base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json base/desenvolvimento/casos/alerta-decubito.json
+python -m engine base/versoes/v0002.json base/desenvolvimento/casos/alerta-decubito.json
 ```
 
 O primeiro comando executa os testes do motor e da base de desenvolvimento. O segundo executa um caso sintético, imprime JSON com `status: "passou"` e código de saída 0. Veja o [exemplo mamário e o uso Python](base/desenvolvimento/LEIA-ME.txt).
@@ -31,11 +31,11 @@ Para instalar as dependências, executar a API em `localhost:8000` e preparar o 
 ## Manter as tabelas sincronizadas
 
 ```powershell
-python scripts/gerar_doc_regras.py --base base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json --casos base/desenvolvimento/casos
-python scripts/gerar_doc_regras.py --base base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json --casos base/desenvolvimento/casos --verificar
+python scripts/gerar_doc_regras.py --casos base/casos/casos.json
+python scripts/gerar_doc_regras.py --casos base/casos/casos.json --verificar
 ```
 
-O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado. A suíte também verifica esse sincronismo. A base atual está em desenvolvimento; não há `base/ativa.json` nem ativação clínica aprovada.
+O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado. A suíte também verifica esse sincronismo. Sem `--base`, o gerador segue `base/ativa.json`, atualmente `v0002`. As versões são imutáveis: alteração de regra exige nova versão e execução dos casos antes de ativar. A ativação é operacional e não representa aprovação clínica. As contagens e os resultados reais ficam em [evidências de verificação](docs/entrega/evidencias-verificacao.json).
 
 ## Equipe e licença
 

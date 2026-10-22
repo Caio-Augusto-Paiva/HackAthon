@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "document"
-community: "Plano de implementação API (Seção 4)"
+community: "Plano de API localhost"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Plano_de_implementação_API_Seção_4
+  - community/Plano_de_API_localhost
 ---
 
 # Plano de implementação API (Seção 4)
@@ -32,4 +32,4 @@ tags:
 - [[Task 9 Base de conhecimento leitura e validação]] - `conceptually_related_to` [EXTRACTED]
 - [[Testes antes do código por tarefa (testsapi)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Plano_de_implementação_API_Seção_4
+#graphify/document #graphify/EXTRACTED #community/Plano_de_API_localhost

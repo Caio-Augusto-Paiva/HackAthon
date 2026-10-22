@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Motor de inferência (engine/)"
+community: "Especificação do sistema especialista"
 location: "Seção 5.2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_de_inferência_engine/
+  - community/Especificação_do_sistema_especialista
 ---
 
 # Execução em localhost e offline (rodar.ps1)
@@ -17,4 +17,4 @@ tags:
 - [[Estratégia de testes em quatro camadas]] - `references` [INFERRED]
 - [[Riscos e pontos em aberto]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/
+#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista

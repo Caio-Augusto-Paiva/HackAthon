@@ -1,18 +1,18 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "concept"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "Proveniência e pressupostos clínicos"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/Proveniência_e_pressupostos_clínicos
 ---
 
 # Ajustes propostos: max mamário e caminhos de TPB sem febre
 
 ## Connections
 - [[CF e critérios clínicos como suposições a validar]] - `references` [EXTRACTED]
-- [[Evidência mamária agrupada por max R-MAS-010305]] - `references` [EXTRACTED]
+- [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos

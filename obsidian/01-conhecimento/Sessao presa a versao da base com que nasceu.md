@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Task 1: Ambiente e modelos Pydantic"
+community: "Modelos e validação da base"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Task_1_Ambiente_e_modelos_Pydantic
+  - community/Modelos_e_validação_da_base
 ---
 
 # Sessao presa a versao da base com que nasceu
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Task_1_Ambiente_e_modelos_Pydantic
+#graphify/concept #graphify/INFERRED #community/Modelos_e_validação_da_base

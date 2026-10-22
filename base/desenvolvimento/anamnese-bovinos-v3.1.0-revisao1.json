@@ -1,17 +1,10 @@
 {
   "meta": {
-    "dominio": "Anamnese de Bovinos Leiteiros em Lactação",
     "versao": "3.1.0-revisao1",
-    "padrao_decisao": "Deterministico auditavel (sem LLM em tempo de execucao)",
-    "modelo_incerteza": "MYCIN (pesos de regra em [-0.99, +0.99], limiar de disparo > 0.20)",
-    "publico": [
-      "produtor",
-      "veterinario"
-    ],
     "pai": "3.0.0",
     "autor": "Revisão técnica assistida",
     "data": "2026-10-21",
-    "nota": "Cópia revisada do JSON anexado; todos os CF e critérios clínicos são suposições a validar. Não ativada no repositório.",
+    "nota": "Cópia revisada do JSON anexado; todos os CF e critérios clínicos são suposições a validar. Não ativada no repositório. Descricoes originais: dominio: Anamnese de Bovinos Leiteiros em Lactação; padrao_decisao: Deterministico auditavel (sem LLM em tempo de execucao); modelo_incerteza: MYCIN (pesos de regra em [-0.99, +0.99], limiar de disparo > 0.20); publico: [\"produtor\", \"veterinario\"].",
     "limiares": {
       "descarte": -0.2,
       "premissa": 0.2,
@@ -154,7 +147,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "mmol/L",
-        "min": 0
+        "min": 0.0,
+        "max": 20.0,
+        "casas_decimais": 2
       },
       "nome": "BHB sanguíneo",
       "pergunta": {
@@ -170,7 +165,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "mmol/L",
-        "min": 0
+        "min": 0.0,
+        "max": 20.0,
+        "casas_decimais": 2
       },
       "nome": "Cálcio sérico total",
       "pergunta": {
@@ -296,7 +293,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "dias",
-        "min": 0
+        "min": 0.0,
+        "max": 1000.0,
+        "casas_decimais": 0
       },
       "nome": "Dias em lactação",
       "pergunta": {
@@ -453,7 +452,7 @@
       }
     },
     {
-      "id": "mucosas_palidas_ou_ictéricas",
+      "id": "mucosas_palidas_ou_ictericas",
       "tipo": "pergunta",
       "dominio": {
         "tipo": "booleano"
@@ -506,8 +505,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "pH",
-        "min": 0,
-        "max": 14
+        "min": 0.0,
+        "max": 14.0,
+        "casas_decimais": 1
       },
       "nome": "pH ruminal",
       "pergunta": {
@@ -585,7 +585,10 @@
       "tipo": "pergunta",
       "dominio": {
         "tipo": "numerico",
-        "unidade": "°C"
+        "unidade": "°C",
+        "min": 30.0,
+        "max": 45.0,
+        "casas_decimais": 1
       },
       "nome": "Temperatura retal",
       "pergunta": {
@@ -1744,7 +1747,7 @@
       "classe": "evidencia",
       "se": [
         {
-          "simbolo": "mucosas_palidas_ou_ictéricas",
+          "simbolo": "mucosas_palidas_ou_ictericas",
           "valor": true,
           "op": "=",
           "negado": false

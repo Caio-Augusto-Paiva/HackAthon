@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "obra/superpowers (repositorio de skills)"
+community: "Pesquisa de ferramentas locais"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Pesquisa_de_ferramentas_locais
 ---
 
 # @xyflow/react 12.12.0 (React Flow)
@@ -14,4 +14,4 @@ tags:
 - [[React 19.3.1]] - `references` [INFERRED]
 - [[reactflow 11.11.4 (legado, nao usar)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/obra/superpowers_repositorio_de_skills
+#graphify/document #graphify/EXTRACTED #community/Pesquisa_de_ferramentas_locais

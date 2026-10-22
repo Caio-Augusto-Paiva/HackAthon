@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Motor de inferência (engine/)"
+community: "Especificação do sistema especialista"
 location: "Seção 5.4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_de_inferência_engine/
+  - community/Especificação_do_sistema_especialista
 ---
 
 # Plano de corte
@@ -16,4 +16,4 @@ tags:
 - [[Especificação PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
 - [[Riscos e pontos em aberto]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motor_de_inferência_engine/
+#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista

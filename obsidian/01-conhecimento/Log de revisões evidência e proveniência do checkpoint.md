@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "document"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "Proveniência e pressupostos clínicos"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/Proveniência_e_pressupostos_clínicos
 ---
 
 # Log de revisões: evidência e proveniência do checkpoint
@@ -17,4 +17,4 @@ tags:
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 - [[Revisão independente requer pessoamodelo, data, localização, evidência e veredito]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/document #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Bandeira some apos correcao (divergencia)"
+community: "Histórico das bandeiras"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bandeira_some_apos_correcao_divergencia
+  - community/Histórico_das_bandeiras
 ---
 
 # Bandeira disparada permanece apos correcao (urgencia irreversivel)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Bandeira some apos correcao (divergencia)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bandeira_some_apos_correcao_divergencia
+#graphify/rationale #graphify/EXTRACTED #community/Histórico_das_bandeiras

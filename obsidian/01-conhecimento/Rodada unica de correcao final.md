@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Rodada unica de correcao final"
+community: "Correções finais da base"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Rodada_unica_de_correcao_final
+  - community/Correções_finais_da_base
 ---
 
 # Rodada unica de correcao final
@@ -20,4 +20,4 @@ tags:
 - [[para_motor]] - `references` [EXTRACTED]
 - [[validar_edicao]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Rodada_unica_de_correcao_final
+#graphify/rationale #graphify/EXTRACTED #community/Correções_finais_da_base

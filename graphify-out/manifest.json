@@ -1,200 +1,254 @@
 {
   "docs/referencias/exemplo-base-usuario.json": {
-    "mtime": 1792544440.928389,
-    "seen": 1792553138.974145,
-    "ast_hash": "7d51f023627b2c6b8ed0431654993edf",
-    "semantic_hash": "7d51f023627b2c6b8ed0431654993edf"
+    "mtime": 1792633361.239197,
+    "seen": 1792647333.1759186,
+    "ast_hash": "47b875e212a806422e4de9a6ae31f8d0",
+    "semantic_hash": "47b875e212a806422e4de9a6ae31f8d0"
   },
   "docs/agentes-e-skills.md": {
-    "mtime": 1792548138.369521,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2017326,
+    "seen": 1792634684.460751,
     "ast_hash": "b99735ef908ac9b4822477c7c5258f6d",
-    "semantic_hash": "b99735ef908ac9b4822477c7c5258f6d"
+    "semantic_hash": "a5fbddd0a81ff7ecf25673b9fed6d9e4"
   },
   "docs/fontes/fontes.md": {
-    "mtime": 1792544440.923281,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2242527,
+    "seen": 1792634684.460751,
     "ast_hash": "86f2656c75ad627f08b0485c9b943464",
-    "semantic_hash": "86f2656c75ad627f08b0485c9b943464"
+    "semantic_hash": "6f742bbb4ed6603c2f278e566b02bc39"
   },
   "docs/fontes/transcricao-apresentacao-rerum.md": {
-    "mtime": 1792552672.3230083,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2252617,
+    "seen": 1792634684.460751,
     "ast_hash": "b65b3ffc927090580716b12d2db41636",
-    "semantic_hash": "b65b3ffc927090580716b12d2db41636"
+    "semantic_hash": "f577eca33cf54074eb7b83d261167f2e"
   },
   "docs/fontes/transcricao-documentario-rerum.md": {
-    "mtime": 1792552672.3790262,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2252617,
+    "seen": 1792634684.460751,
     "ast_hash": "8166b36cb2d89546cc4c28ab98086763",
-    "semantic_hash": "8166b36cb2d89546cc4c28ab98086763"
+    "semantic_hash": "6d086878daf8bc14091d762b5a7abe75"
   },
   "docs/pesquisa/agentes-e-skills.md": {
-    "mtime": 1792548070.4463396,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2262573,
+    "seen": 1792634684.460751,
     "ast_hash": "529bdb4960b45165d96f5af8670dfdce",
-    "semantic_hash": "529bdb4960b45165d96f5af8670dfdce"
+    "semantic_hash": "b773ec33ba59d89795e5072ff489554b"
   },
   "docs/pesquisa/execucao-local.md": {
-    "mtime": 1792546651.7471035,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2272575,
+    "seen": 1792634684.460751,
     "ast_hash": "aa83599a04582c4846071e86936fca46",
-    "semantic_hash": "aa83599a04582c4846071e86936fca46"
+    "semantic_hash": "11efeba230c926c8f0904e566749a986"
   },
   "docs/pesquisa/suposicoes.md": {
-    "mtime": 1792548329.7562387,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2272575,
+    "seen": 1792634684.460751,
     "ast_hash": "e3cad130f9e0006780e3d07aaa5c0e92",
-    "semantic_hash": "e3cad130f9e0006780e3d07aaa5c0e92"
+    "semantic_hash": "1736e4738e07e26388c3400ea7f3fd01"
   },
   "docs/pesquisa/versoes-bibliotecas.md": {
-    "mtime": 1792544600.2472858,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.228259,
+    "seen": 1792634684.460751,
     "ast_hash": "193b7fd511a71f037f8e9d4532f63530",
-    "semantic_hash": "193b7fd511a71f037f8e9d4532f63530"
+    "semantic_hash": "50b2082a2e9ae83ac299d46f1b216934"
   },
   "docs/revisoes/2026-10-21-revisao-motor.md": {
-    "mtime": 1792551966.8172452,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2401965,
+    "seen": 1792634684.460751,
     "ast_hash": "0edb9698a3f0e133384af56c4ef2113f",
-    "semantic_hash": "0edb9698a3f0e133384af56c4ef2113f"
+    "semantic_hash": "e0912a71517c8299e3652c8cabf9378d"
   },
   "docs/superpowers/plans/2026-10-20-motor-secao-1.md": {
-    "mtime": 1792551354.6287284,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.2411966,
+    "seen": 1792634684.460751,
     "ast_hash": "6f013bf6d062940c80d25fc0fd8066cc",
     "semantic_hash": "6f013bf6d062940c80d25fc0fd8066cc"
   },
   "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md": {
-    "mtime": 1792550752.8223877,
-    "seen": 1792553138.974145,
+    "mtime": 1792633361.243701,
+    "seen": 1792634684.460751,
     "ast_hash": "1355d27bf0db4d5b684ac9208fce1a12",
-    "semantic_hash": "1355d27bf0db4d5b684ac9208fce1a12"
+    "semantic_hash": "b1603f13995d2ec42416e5ff94223686"
   },
   "engine/README.md": {
-    "mtime": 1792631694.5765984,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.244704,
+    "seen": 1792634684.460751,
     "ast_hash": "59e8ce2bb1188e155b06226f368066cc",
     "semantic_hash": "59e8ce2bb1188e155b06226f368066cc"
   },
   "CLAUDE.md": {
-    "mtime": 1792553789.0914888,
-    "seen": 1792554022.426117,
+    "mtime": 1792633363.2980564,
+    "seen": 1792634684.460751,
     "ast_hash": "5fec02f4e7d1b52535536e6c4a4c6312",
-    "semantic_hash": "5fec02f4e7d1b52535536e6c4a4c6312"
+    "semantic_hash": "4550f07455c76686fd9f41937fc98378"
   },
   "docs/superpowers/plans/2026-10-21-kb-secao-2.md": {
-    "mtime": 1792555078.5647488,
-    "seen": 1792565985.74888,
+    "mtime": 1792633363.3449154,
+    "seen": 1792634684.460751,
     "ast_hash": "0954431767c1eb897562543b81d3badd",
-    "semantic_hash": "0954431767c1eb897562543b81d3badd"
+    "semantic_hash": "947e77229e07f8a011153f89c53122b2"
   },
   "kb/README.md": {
-    "mtime": 1792590904.140442,
-    "seen": 1792631208.7729166,
+    "mtime": 1792633363.363918,
+    "seen": 1792634684.460751,
     "ast_hash": "c85791992ce8deeb72305f4a9725661e",
     "semantic_hash": "c85791992ce8deeb72305f4a9725661e"
   },
   "docs/revisoes/2026-10-21-ledger-kb-secao-2.md": {
-    "mtime": 1792565996.827138,
-    "seen": 1792567875.2353735,
+    "mtime": 1792633363.3429184,
+    "seen": 1792634684.460751,
     "ast_hash": "198fa93dd11674d43e8689fcce9196d6",
-    "semantic_hash": "198fa93dd11674d43e8689fcce9196d6"
+    "semantic_hash": "81d362a81480af7fb0005c19966ae0fb"
   },
   "api/README.md": {
-    "mtime": 1792630623.0349376,
-    "seen": 1792631208.7729166,
+    "mtime": 1792633363.3006098,
+    "seen": 1792634684.460751,
     "ast_hash": "302633e336a483f73bdb2e7f3a3112da",
     "semantic_hash": "302633e336a483f73bdb2e7f3a3112da"
   },
   "docs/superpowers/plans/2026-10-21-api-secao-4.md": {
-    "mtime": 1792590592.278376,
-    "seen": 1792631208.7729166,
+    "mtime": 1792633363.3449154,
+    "seen": 1792634684.460751,
     "ast_hash": "b1dd155151f4877010543d0b56422160",
-    "semantic_hash": "b1dd155151f4877010543d0b56422160"
+    "semantic_hash": "f26024e109b1c5459f23139fe17582e3"
   },
   "README.md": {
-    "mtime": 1792631791.4637845,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "b407a9319a3195bfc5fc5472a29fd8e7"
+    "mtime": 1792646868.8636107,
+    "seen": 1792647333.1759186,
+    "ast_hash": "34cffad457a4c6ee2edd6bc4ad249346",
+    "semantic_hash": "34cffad457a4c6ee2edd6bc4ad249346"
   },
   "base/desenvolvimento/LEIA-ME.txt": {
-    "mtime": 1792631695.5850968,
-    "seen": 1792631934.8507824,
+    "mtime": 1792634263.3158534,
+    "seen": 1792634684.460751,
     "ast_hash": "",
-    "semantic_hash": "434bc0e4614fb9943e62d59f57f00f8d"
+    "semantic_hash": "2b2eba804d19504c7ce6fcd344944bd8"
   },
   "docs/entrega/01-processo.md": {
-    "mtime": 1792631695.589098,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.2032378,
+    "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "6efbfd4faa32f69071874cc982031d0e"
   },
   "docs/entrega/02-arquitetura.md": {
-    "mtime": 1792631695.590112,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "853490b716caafd2e6ef989bc0270eef"
+    "mtime": 1792646868.8656113,
+    "seen": 1792647333.1759186,
+    "ast_hash": "9e2cd331d401efcbfe61ae50be892db1",
+    "semantic_hash": "9e2cd331d401efcbfe61ae50be892db1"
   },
   "docs/entrega/03-regras-de-producao.md": {
-    "mtime": 1792631695.5910964,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "eab09fd073dcea1f0204cc4e85f9c80c"
+    "mtime": 1792646875.281276,
+    "seen": 1792647333.1759186,
+    "ast_hash": "da2777c324def2d4d4baa667d857433b",
+    "semantic_hash": "da2777c324def2d4d4baa667d857433b"
   },
   "docs/entrega/04-casos-de-teste.md": {
-    "mtime": 1792631695.5920959,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "f8bc9afaa445c69a98f9f7d2c234bd73"
+    "mtime": 1792646875.281276,
+    "seen": 1792647333.1759186,
+    "ast_hash": "0001974714e44c5d0ff4e73d5135772a",
+    "semantic_hash": "0001974714e44c5d0ff4e73d5135772a"
   },
   "docs/entrega/05-apresentacao-e-demo.md": {
-    "mtime": 1792631695.5920959,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "32db5a919bbe30d3bc7a9892f822ce71"
+    "mtime": 1792646868.8646114,
+    "seen": 1792647333.1759186,
+    "ast_hash": "9160623bfa5f1a6dc415d4fa7d729c1a",
+    "semantic_hash": "9160623bfa5f1a6dc415d4fa7d729c1a"
   },
   "docs/entrega/06-riscos-e-pendencias.md": {
-    "mtime": 1792631695.5920959,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "7b066fe8bed4090e7acd1fc837bd4948"
+    "mtime": 1792646868.866612,
+    "seen": 1792647333.1759186,
+    "ast_hash": "d104f743259cc2c2494d99b9cec908f0",
+    "semantic_hash": "d104f743259cc2c2494d99b9cec908f0"
   },
   "docs/entrega/README.md": {
-    "mtime": 1792631791.464777,
-    "seen": 1792631934.8507824,
-    "ast_hash": "",
-    "semantic_hash": "aeaed05103a8f6d2a5791ad463716ddb"
+    "mtime": 1792646868.8636107,
+    "seen": 1792647333.1759186,
+    "ast_hash": "f9c843b479e3638869f06001680e750c",
+    "semantic_hash": "f9c843b479e3638869f06001680e750c"
   },
   "docs/processo/A.md": {
-    "mtime": 1792631695.5920959,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.229259,
+    "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "da1f424f65b2fabb35af047120ff6f8b"
   },
   "docs/processo/B.md": {
-    "mtime": 1792631695.5967698,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.229259,
+    "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "508687774f648a85b57d92e41317d543"
   },
   "docs/processo/C.md": {
-    "mtime": 1792631695.5967698,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.23026,
+    "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "e9fceaa9d5182ac67ec4b589db4ca24e"
   },
   "docs/processo/revisoes-cruzadas.md": {
-    "mtime": 1792631695.5967698,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.23126,
+    "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "85d09586198af6d0ee7881c500523979"
   },
   "docs/superpowers/plans/2026-10-21-documentacao-entrega-parcial.md": {
-    "mtime": 1792631695.5967698,
-    "seen": 1792631934.8507824,
+    "mtime": 1792633361.2421968,
+    "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "bed0f13d16e78bb0f2e5b5a4e7b9d12c"
+  },
+  "base/ativa.json": {
+    "mtime": 1792645007.1696944,
+    "seen": 1792647333.1759186,
+    "ast_hash": "d06ad578dfa8c2dc9ae8cb8fad04d679",
+    "semantic_hash": "d06ad578dfa8c2dc9ae8cb8fad04d679"
+  },
+  "base/casos/casos.json": {
+    "mtime": 1792633779.1255937,
+    "seen": 1792647333.1759186,
+    "ast_hash": "a83cdf698905035d49e5b91fde9b1e94",
+    "semantic_hash": "a83cdf698905035d49e5b91fde9b1e94"
+  },
+  "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": {
+    "mtime": 1792646868.8626096,
+    "seen": 1792647333.1759186,
+    "ast_hash": "98242e038aa7dc4d8d9857e37638dc36",
+    "semantic_hash": "98242e038aa7dc4d8d9857e37638dc36"
+  },
+  "base/desenvolvimento/casos/alerta-decubito.json": {
+    "mtime": 1792633361.2017326,
+    "seen": 1792647333.1759186,
+    "ast_hash": "b8c4f35860bf2f21a7482d6f101b80a2",
+    "semantic_hash": "b8c4f35860bf2f21a7482d6f101b80a2"
+  },
+  "base/desenvolvimento/casos/sinais-mamarios.json": {
+    "mtime": 1792633361.2017326,
+    "seen": 1792647333.1759186,
+    "ast_hash": "cc749ecb9d7e7f29efda0b7e0cecdda0",
+    "semantic_hash": "cc749ecb9d7e7f29efda0b7e0cecdda0"
+  },
+  "base/versoes/v0001.json": {
+    "mtime": 1792633363.3225684,
+    "seen": 1792647333.1759186,
+    "ast_hash": "62ab1b724e3d9d3e1c2a75fd0f076245",
+    "semantic_hash": "62ab1b724e3d9d3e1c2a75fd0f076245"
+  },
+  "base/versoes/v0002.json": {
+    "mtime": 1792645007.1757271,
+    "seen": 1792647333.1759186,
+    "ast_hash": "9c5968aa66b640c148969dba545a8bdc",
+    "semantic_hash": "9c5968aa66b640c148969dba545a8bdc"
+  },
+  "docs/entrega/evidencias-verificacao.json": {
+    "mtime": 1792634935.5429938,
+    "seen": 1792647333.1759186,
+    "ast_hash": "97358acb92b1d2d4d895efd3e7e0b4bc",
+    "semantic_hash": "97358acb92b1d2d4d895efd3e7e0b4bc"
+  },
+  "docs/superpowers/plans/2026-10-22-frontend-web.md": {
+    "mtime": 1792645007.208868,
+    "seen": 1792647333.1759186,
+    "ast_hash": "43c804971d6dd9f797a69ebecd955f66",
+    "semantic_hash": "43c804971d6dd9f797a69ebecd955f66"
   }
 }

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "code"
-community: "Motor de inferência (engine/)"
+community: "Especificação do sistema especialista"
 location: "Seção 4.3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motor_de_inferência_engine/
+  - community/Especificação_do_sistema_especialista
 ---
 
 # Pacote kb
@@ -18,4 +18,4 @@ tags:
 - [[Pacote engine_1]] - `references` [EXTRACTED]
 - [[Validador da base (erros e avisos)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motor_de_inferência_engine/
+#graphify/code #graphify/EXTRACTED #community/Especificação_do_sistema_especialista

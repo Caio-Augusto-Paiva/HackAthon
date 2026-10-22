@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "obra/superpowers (repositorio de skills)"
+community: "Pesquisa de ferramentas locais"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Pesquisa_de_ferramentas_locais
 ---
 
 # webapp-testing (skill)
@@ -15,4 +15,4 @@ tags:
 - [[anthropicsskills (repositorio)]] - `references` [EXTRACTED]
 - [[playwright-skill (lackeyjb)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/document #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais

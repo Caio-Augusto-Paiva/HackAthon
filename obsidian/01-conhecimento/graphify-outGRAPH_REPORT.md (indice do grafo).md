@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L11"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # graphify-out/GRAPH_REPORT.md (indice do grafo)
@@ -16,4 +16,4 @@ tags:
 - [[Grafo de conhecimento — ler PRIMEIRO, em todo prompt]] - `references` [EXTRACTED]
 - [[graphify query]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/document #graphify/INFERRED #community/Requisitos_e_arquitetura_conceitual

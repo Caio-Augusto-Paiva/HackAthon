@@ -1,0 +1,32 @@
+:root {
+  --cor-fundo-escuro: #1f4d2c;
+  --cor-fundo-medio: #2e6b3f;
+  --cor-creme: #f6f1e4;
+  --cor-superficie: #ffffff;
+  --cor-primaria: #2e6b3f;
+  --cor-primaria-escura: #173d22;
+  --cor-acento: #f0913a;
+  --cor-acento-escuro: #b9601a;
+  --cor-texto: #1e2a20;
+  --cor-texto-suave: #55604f;
+  --cor-texto-claro: #f6f1e4;
+  --cor-perigo: #c62828;
+  --cor-perigo-fundo: #fde8e6;
+  --cor-alerta: #e8a317;
+  --cor-ok: #3e8e4e;
+  --cor-trilho: #e3dcc8;
+
+  --cor-erro-no-escuro: #ffb4ab;
+  --cor-alerta-fundo: #fff1d6;
+  --cor-alerta-texto: #8a5a00;
+  --cor-ok-fundo: #e3f1e6;
+  --cor-ajuda: color-mix(in srgb, var(--cor-acento-escuro) 75%, var(--cor-texto));
+  --cor-sombra: rgb(14 38 20 / 45%);
+  --fonte-titulo: 'Varela Round', sans-serif;
+  --fonte-corpo: 'Nunito Sans', sans-serif;
+  --raio-opcao: 18px;
+  --raio-botao: 22px;
+  --raio-balao: 28px;
+  --raio-cartao: 32px;
+  --sombra-clay: 0 10px 20px var(--cor-sombra), inset 0 -4px 6px rgb(14 38 20 / 22%), inset 0 3px 4px rgb(255 255 255 / 55%);
+}

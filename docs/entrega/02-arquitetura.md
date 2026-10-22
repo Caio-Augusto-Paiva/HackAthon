@@ -1,13 +1,14 @@
 # Arquitetura tecnológica — implementação disponível
 
-O núcleo é um pacote Python independente de interface, banco e base clínica. A entrada é uma base JSON e um conjunto ordenado de observações da sessão; a saída inclui estado, parecer e explicações. A execução atual é local por terminal ou chamada Python. API, SQLite, interface React e editor em grafo são partes do desenho futuro, ausentes neste checkout.
+O núcleo é um pacote Python independente de interface, banco e base clínica. A entrada é uma base JSON e um conjunto ordenado de observações da sessão; a saída inclui estado, parecer e explicações. O estado integrado em `codex-davi` também inclui API FastAPI, módulo `kb/` e persistência SQLite. A interface React e o editor gráfico estão em andamento em outra sessão e não foram alterados nesta execução da Seção 5.
 
 ## Fluxo implementado
 
 ```mermaid
 flowchart LR
-    J[Base JSON de desenvolvimento] --> V[Base.de_dict e guardas]
-    C[CLI ou chamador Python] --> S[Sessao e memória]
+    J[base/ativa.json: v0002 imutável] --> K[kb: validação, versões e adaptação]
+    K --> V[Base.de_dict e guardas]
+    C[API FastAPI ou CLI/Python] --> S[Sessao e memória]
     V --> S
     S --> I[Inferência em três camadas]
     I --> Q[Seleção e parada]
@@ -18,18 +19,19 @@ flowchart LR
     E --> C
     P --> C
     S <--> R[Snapshot JSON: exportar e restaurar]
+    C <--> D[SQLite: animais, sessões e execuções de casos]
 ```
 
-O chamador futuro pode ser uma API. O diagrama não representa um servidor web já instalado.
+`scripts/rodar.ps1` inicia a API em `127.0.0.1:8000`; `rodar.sh` atende Linux/macOS. O contrato versionado em `contratos/openapi.json` contém **27 operações HTTP**. A documentação de rotas, configuração e execução está em [api/README.md](../../api/README.md); o contrato da base está em [kb/README.md](../../kb/README.md).
 
 ## Sete componentes do modelo conceitual dos organizadores
 
 | Componente de [A], slide 14 | Implementação atual | Parte planejada |
 |---|---|---|
 | Interface com o usuário | CLI `engine/__main__.py` e interface Python de `Sessao` | Formulários e parecer no navegador |
-| Motor de inferência | `inferencia`, `avaliacao`, `cf`, `selecao` e `parada` | Consumo pelo backend web |
-| Base de conhecimento | JSON em `base/desenvolvimento/` | Versões imutáveis, ponteiro ativo e validador editorial em `kb/` |
-| Memória de trabalho | `memoria.py`, `Fato` e `sessao.py` | Gravação em banco pela API |
+| Motor de inferência | `inferencia`, `avaliacao`, `cf`, `selecao` e `parada`, consumidos pela API | Revisão/calibração clínica |
+| Base de conhecimento | `kb/`, versões imutáveis, `base/ativa.json` e `base/versoes/v0002.json` | Edição no frontend e novas versões revisadas |
+| Memória de trabalho | `memoria.py`, `Fato`, `sessao.py` e snapshot persistido pela API em SQLite | Validação da interface em navegador |
 | Módulo de explicação | `traco.py` e `explicacao.py`, chamados por `porque`/`como` | Visualização dessas respostas na interface |
 | Aquisição de conhecimento | Edição e revisão do JSON, com regras documentadas pelo gerador | Editor em grafo e revisão por especialista |
 | Fontes externas de fatos | Argumento `ficha` e observações com origem `importacao` | Prontuário, sensores e conectores reais |
@@ -41,14 +43,16 @@ O chamador futuro pode ser uma API. O diagrama não representa um servidor web j
 | Linguagem do núcleo | Python 3.12+, verificado nesta máquina com Python 3.12.14 |
 | Incerteza | `fractions.Fraction`, biblioteca padrão |
 | Intercâmbio de dados | JSON, biblioteca padrão |
-| Testes | `unittest`, inclusive execução da CLI por subprocesso |
+| Testes | `pytest`, `hypothesis`, `httpx`/`TestClient` e `unittest`; Camada 3 em `tests/casos/` |
 | Documentação | Markdown e gerador Python com modo `--verificar` |
 | Navegação do conhecimento | Graphify e exportação Obsidian, ferramentas auxiliares fora da consulta |
 | Dependências de runtime externas do núcleo | Nenhuma |
-| API/web/banco | FastAPI/Pydantic, React e SQLite constam do planejamento; não estão implementados neste checkout |
+| API e base editorial | FastAPI/Pydantic, `kb/`, JSON Schema e OpenAPI versionados; versões em `pyproject.toml` |
+| Banco | SQLite para animais, sessões, versões e resultados dos casos |
+| Web e editor | Em andamento em outra sessão; fora do escopo de alteração desta branch |
 | Licença do projeto | Arquivo de licença ausente; decisão da equipe pendente |
 
-Não há instalação via `pip`, Node, Docker ou serviço externo para executar os exemplos atuais. A aplicação completa poderá introduzir outras dependências e exigirá nova verificação de versões, licenças e execução offline.
+O motor e os exemplos CLI continuam usando só a biblioteca padrão. A API e os testes completos exigem as dependências de `pyproject.toml`: criar `.venv` e instalar `.[dev]` uma vez, com internet. A execução da decisão não chama serviços externos. Dependências de frontend e seu empacotamento pertencem à sessão paralela.
 
 ## Motor e modelo de incerteza
 
@@ -97,12 +101,14 @@ Para restauração exata, persistir o snapshot completo, inclusive `ordem_respos
 
 ## Base, validação e rastreabilidade
 
-A base atual tem `meta`, `simbolos`, `regras` e `layout`, com 51 símbolos e 56 regras. Não há ponteiro ativo; os comandos indicam o arquivo de desenvolvimento explicitamente. `Base.de_dict` aplica guardas de execução; não substitui o validador editorial completo previsto para `kb/`. Os testes da base acrescentam cobertura por triagem, caminhos do produtor, bandeiras e cenários conhecidos.
+A base ativa tem `meta`, `simbolos`, `regras` e `layout`, com 51 símbolos e 56 regras. `base/ativa.json` aponta para `v0002`; esse arquivo imutável foi recebido da branch compartilhada e preservado. `kb.validar` não registra erros (W03 informa as 56 suposições pendentes). `Base.de_dict(kb.para_motor(base))` carrega no motor. O arquivo de desenvolvimento foi alinhado aos domínios numéricos da `v0002`, sem mudar IDs, regras ou triagem. Dias em lactação aceita 0–1000 inteiros; temperatura retal, 30–45 °C com uma casa; pH ruminal, 0–14 com uma casa; BHB e cálcio sérico, 0–20 com duas casas. As versões imutáveis foram preservadas.
+
+Uma alteração de regra deve ser gravada com `Repositorio.salvar_nova(..., pai="v0002")`, tornando-se uma versão nova; executar os casos antes de ativar. `v0001` não foi regravada nem promovida a base clinicamente validada. Os 34 casos em `base/casos/casos.json` cobrem os dois modos, oito doenças, seis bandeiras, comorbidade, limite, troca de modo e os dois exemplos preservados. A correção é testada diretamente em `Sessao`, pois `kb.Caso` não codifica essa operação. Os desvios e a observação prévia do caso de abomaso estão em R15/R16 do [registro de riscos](06-riscos-e-pendencias.md).
 
 Os eventos documentam observações, regras e combinações de CF. O motivo de uma pergunta é registrado quando ela é apresentada. A sessão conserva perguntas/correções e somente o cálculo de inferência atual, evitando acumulação de traços antigos. O documento 03 é gerado do JSON; o documento 04, da execução dos casos. O teste de sincronismo impede afirmar uma regra diferente da executável.
 
 ## Testes, execução e limites
 
-Há 100 testes do núcleo/regressões, 25 da base/CLI e 10 da documentação, totalizando 135 no checkpoint. Entre as evidências estão permutações MYCIN de 2 a 6 entradas, extremos, desconhecimento, comorbidade, correção, restauração e isolamento de `api`, `web`, banco e `kb`.
+Após esta etapa documental, a suíte registra **1006 testes aprovados, 1 ignorado e 110 subtestes aprovados**; a suíte `unittest` do motor/base registra **125 testes**, já incluídos na execução pytest, e não deve ser somada a ela. Os **34 casos sintéticos** também são uma categoria separada. Saídas e comandos constam de [evidencias-verificacao.json](evidencias-verificacao.json). Entre as evidências estão permutações MYCIN, desconhecimento, comorbidade, correção, restauração e isolamento do motor em relação à API, ao banco e a `kb`.
 
-A execução atual não exige rede; um ensaio presencial com a rede desligada ainda precisa ser registrado pela equipe. A arquitetura web planejada não tem contrato OpenAPI, persistência SQLite ou testes de navegador disponíveis aqui. Também não há validação clínica, autenticação implementada, editor visual ou explicação “por que não é a doença X?”. Essas limitações estão no [registro de riscos](06-riscos-e-pendencias.md).
+O ensaio HTTP da API e a verificação de dependências externas são registrados separadamente dos testes automatizados. Ensaio físico com Wi-Fi desligado, frontend em navegador, máquina reserva e apresentação exigem confirmação da equipe. Não há validação clínica nem autenticação implementada neste recorte. Nenhuma alteração foi feita em `api/`, `web/`, `contratos/` ou `tests/api/` desde o baseline `f46cd6e`.

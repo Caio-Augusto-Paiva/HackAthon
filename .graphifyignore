@@ -12,6 +12,8 @@ pyproject.toml
 .superpowers/
 .venv/
 tests/
+# O grafo 1 contém documentação, não o frontend nem suas dependências.
+web/
 # Histórico já consolidado na especificação canônica
 docs/rascunhos/
 docs/prompts/

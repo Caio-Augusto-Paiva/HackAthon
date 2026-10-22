@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Alocacao de agente principal e alternativa por prompt de revisao"
+community: "Agentes de implementação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
+  - community/Agentes_de_implementação
 ---
 
 # Implementacao por pessoa (A, B, C) com agente principal e reserva
@@ -15,4 +15,4 @@ tags:
 - [[Claude Code (Claude Pro)]] - `references` [EXTRACTED]
 - [[Codex (ChatGPT Plus)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_implementação

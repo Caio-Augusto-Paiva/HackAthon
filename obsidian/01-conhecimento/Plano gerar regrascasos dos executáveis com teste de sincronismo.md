@@ -1,17 +1,17 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-documentacao-entrega-parcial.md"
 type: "rationale"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "Processo documental verificável"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/Processo_documental_verificável
 ---
 
 # Plano: gerar regras/casos dos executáveis com teste de sincronismo
 
 ## Connections
+- [[Gerador segue baseativa.json v0002 e verifica sincronismo]] - `rationale_for` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Regras e casos documentados por geração e verificação]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável

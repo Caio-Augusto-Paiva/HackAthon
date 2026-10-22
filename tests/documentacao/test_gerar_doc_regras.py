@@ -95,8 +95,22 @@ class GeracaoDaDocumentacao(unittest.TestCase):
             self.assertEqual(self.executar(['--base', str(caminho), '--saida', temporario]), 2)
 
     def test_documentos_commitados_estao_sincronizados_com_base_e_casos(self):
-        self.assertEqual(self.executar(['--base', str(BASE), '--casos', str(CASOS),
+        self.assertEqual(self.executar(['--casos', str(PROJETO / 'base/casos/casos.json'),
                                        '--saida', str(PROJETO / 'docs/entrega'), '--verificar']), 0)
+
+    def test_documentacao_da_ativa_nao_confunde_ativacao_com_validacao_clinica(self):
+        ativa = json.loads((PROJETO / 'base/ativa.json').read_text(encoding='utf-8'))['versao']
+        dados = json.loads((PROJETO / 'base/versoes' / f'{ativa}.json').read_text(encoding='utf-8'))
+        texto = self.gerador.gerar_regras(dados, caminho_base=f'base/versoes/{ativa}.json', sha256='abc', ativa=True)
+        self.assertIn('ativação operacional não é validação clínica', texto)
+
+    def test_casos_documentados_informam_quantidade_real_e_limite_por_caso(self):
+        dados = json.loads(BASE.read_text(encoding='utf-8'))
+        caso = json.loads((CASOS / 'sinais-mamarios.json').read_text(encoding='utf-8'))
+        texto, passou = self.gerador.gerar_casos(dados, [caso])
+        self.assertTrue(passou)
+        self.assertIn('1 cenário(s)', texto)
+        self.assertNotIn('Os dois exemplos atuais', texto)
 
 
 if __name__ == '__main__':

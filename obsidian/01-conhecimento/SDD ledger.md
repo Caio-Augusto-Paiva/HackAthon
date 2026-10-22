@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "document"
-community: "SDD ledger"
+community: "Ledger de implementação kb"
 location: "L1-L73"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/SDD_ledger
+  - community/Ledger_de_implementação_kb
 ---
 
 # SDD ledger
@@ -24,4 +24,4 @@ tags:
 - [[Varredura previa]] - `references` [EXTRACTED]
 - [[Verificacao final]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/SDD_ledger
+#graphify/document #graphify/EXTRACTED #community/Ledger_de_implementação_kb

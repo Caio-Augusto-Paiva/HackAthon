@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Sessão, snapshot e parecer"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Sessão_snapshot_e_parecer
 ---
 
 # Correcao reprocessa respostas em lotes na ordem real
@@ -15,4 +15,4 @@ tags:
 - [[Sessao.restaurar  exportar sem replay]] - `shares_data_with` [EXTRACTED]
 - [[ordem_respostas no snapshot (reprocessar lotes na correcao)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer

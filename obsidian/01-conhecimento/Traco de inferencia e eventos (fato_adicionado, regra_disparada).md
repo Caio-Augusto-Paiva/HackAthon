@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Sessão, snapshot e parecer"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Sessão_snapshot_e_parecer
 ---
 
 # Traco de inferencia e eventos (fato_adicionado, regra_disparada)
@@ -15,4 +15,4 @@ tags:
 - [[Explicacao por que e como (porquecomo)]] - `shares_data_with` [EXTRACTED]
 - [[Nucleo sem estado inferir() e analisar()]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer

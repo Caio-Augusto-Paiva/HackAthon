@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "document"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # Motor de inferencia README (engine/)
@@ -18,4 +18,4 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `references` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/document #graphify/EXTRACTED #community/Modelos_e_validação_da_base

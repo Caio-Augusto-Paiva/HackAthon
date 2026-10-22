@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Sessão, snapshot e parecer"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Sessão_snapshot_e_parecer
 ---
 
 # Potencial conservador com intervalos inferior/superior
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Nucleo sem estado inferir() e analisar()]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/rationale #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer

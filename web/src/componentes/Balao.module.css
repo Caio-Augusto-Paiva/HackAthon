@@ -1,0 +1,7 @@
+.conjunto { display: flex; align-items: flex-end; justify-content: center; gap: 20px; max-width: 100%; }
+.boi { flex: 0 0 132px; }
+.balao { min-width: 0; max-width: 590px; padding: 24px 32px; border: 3px solid var(--cor-primaria-escura); border-radius: 28px 28px 28px 6px; background: var(--cor-creme); color: var(--cor-texto); box-shadow: var(--sombra-clay); }
+.balao h1 { font: 800 30px/1.3 var(--fonte-corpo); }
+.porque { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 0; margin-top: 6px; border: 0; background: transparent; color: var(--cor-ajuda); font-size: 16px; font-weight: 700; text-align: left; }
+.porque img { flex-shrink: 0; }
+@media (max-width: 600px) { .conjunto { gap: 10px; align-items: flex-start; } .boi { flex-basis: 64px; padding-top: 12px; } .balao { padding: 20px; } .balao h1 { font-size: 23px; } .porque { font-size: 14px; } }

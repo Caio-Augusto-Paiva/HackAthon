@@ -1,241 +1,346 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros",
+      "query": "tag:#community/Requisitos_e_arquitetura_conceitual",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Checkpoint_codex-davi_Arquitetura_dispon\u00edvel_CLI/Python_JSON_sess\u00e3o_infer\u00eancia_e_explica\u00e7\u00e3o",
+      "query": "tag:#community/Plano_de_API_localhost",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Plano_de_implementa\u00e7\u00e3o_API_Se\u00e7\u00e3o_4",
+      "query": "tag:#community/Modelos_e_valida\u00e7\u00e3o_da_base",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Motor_de_infer\u00eancia_engine/",
+      "query": "tag:#community/Casos_sint\u00e9ticos_na_v0002",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/obra/superpowers_repositorio_de_skills",
+      "query": "tag:#community/Especifica\u00e7\u00e3o_do_sistema_especialista",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Classe_Sessao_dialogo_estado_correcao_modo",
+      "query": "tag:#community/Pesquisa_de_ferramentas_locais",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Task_1_Ambiente_e_modelos_Pydantic",
+      "query": "tag:#community/Frontend_planejado_e_contrato_API",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/MSD_Vet_Manual",
+      "query": "tag:#community/Sess\u00e3o_snapshot_e_parecer",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/validar",
+      "query": "tag:#community/Regras_mam\u00e1rias_e_de_produ\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao",
+      "query": "tag:#community/Hipocalcemia_e_mobilidade",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/SDD_ledger",
+      "query": "tag:#community/Fontes_cl\u00ednicas_contextuais",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Google_Antigravity_app_IDE_e_CLI",
+      "query": "tag:#community/Revis\u00e3o_do_validador_kb",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Task_1",
+      "query": "tag:#community/Arquitetura_e_demonstra\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Rodada_unica_de_correcao_final",
+      "query": "tag:#community/Processo_documental_verific\u00e1vel",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId",
+      "query": "tag:#community/Riscos_e_pend\u00eancias_cl\u00ednicas",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Task_2",
+      "query": "tag:#community/Agentes_de_implementa\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Task_5",
+      "query": "tag:#community/Cetose_e_in\u00edcio_da_lacta\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Condicaovalor",
+      "query": "tag:#community/Metrite_e_puerp\u00e9rio",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/kb/modelospy",
+      "query": "tag:#community/Sinais_t\u00e9rmicos_derivados",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/E14_cobre_max_fora_de_derivado",
+      "query": "tag:#community/Ledger_de_implementa\u00e7\u00e3o_kb",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/E02_id_duplicado",
+      "query": "tag:#community/Snapshot_e_revis\u00e3o_do_motor",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Branch_sessao-pair-programming",
+      "query": "tag:#community/Proveni\u00eancia_e_pressupostos_cl\u00ednicos",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Bandeira_some_apos_correcao_divergencia",
+      "query": "tag:#community/Bandeiras_de_urg\u00eancia",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Limiares_de_decis\u00e3o_descarte_premissa_confirma\u00e7\u00e3o_etc",
+      "query": "tag:#community/Assistentes_e_instru\u00e7\u00f5es",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Agentes_e_skills_por_prompt_decisao_de_20/10/2026",
+      "query": "tag:#community/Ambiente_e_carregamento_kb",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Transcricao_da_apresentacao_RERUM_A",
+      "query": "tag:#community/Corre\u00e7\u00f5es_finais_da_base",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Transcricao_do_documentario_RERUM_D",
+      "query": "tag:#community/Requisitos_e_entregas_pendentes",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Adaptacoes_que_a_API_precisa_fazer_sobre_o_motor",
+      "query": "tag:#community/Tristeza_parasit\u00e1ria_bovina",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/bandeiras_nao_verificadas_restrito_a_regras_viaveis_e_perguntaveis",
+      "query": "tag:#community/Acidose_e_sinais_digestivos",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Prioridade_padrao_por_classe_100/50/10_e_demais_correcoes_menores",
+      "query": "tag:#community/Ciclos_de_depend\u00eancias",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Executor_de_casos_incompleto_inconclusivas_e_pausa",
+      "query": "tag:#community/Entrega_e_manuten\u00e7\u00e3o_documental",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Doencas_confirmadas_nao_bloqueiam_umas_as_outras_na_parada",
+      "query": "tag:#community/Versionamento_imut\u00e1vel_da_base",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/nao_sei_e_registrado_e_nao_e_repetido_automaticamente",
+      "query": "tag:#community/Valores_e_serializa\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Potencial_usa_cada_regra_uma_unica_vez",
+      "query": "tag:#community/M\u00f3dulos_da_base_de_conhecimento",
       "color": {
         "a": 1,
         "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Valida\u00e7\u00e3o_de_grupos_max",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Identificadores_e_telas",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Decis\u00f5es_sobre_branches",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Hist\u00f3rico_das_bandeiras",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Limiares_e_fatores_MYCIN",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Decis\u00e3o_sobre_agentes",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Apresenta\u00e7\u00e3o_RERUM",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Document\u00e1rio_RERUM",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Adapta\u00e7\u00f5es_entre_API_e_motor",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Viabilidade_das_bandeiras",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Prioridades_das_regras",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Hist\u00f3rico_do_executor_de_casos",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Parada_com_m\u00faltiplas_doen\u00e7as",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Tratamento_de_nao_sei",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/C\u00e1lculo_de_potencial",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
       }
     }
   ]

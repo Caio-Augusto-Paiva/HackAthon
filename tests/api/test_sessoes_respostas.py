@@ -204,7 +204,7 @@ def test_multipla_com_surrogate_solto_na_chave_422(cliente, sessao):
     _erro(resposta, 422, "resposta_invalida")
 
 
-@pytest.mark.parametrize("valor", ["abc", "10", True, 401, -1])
+@pytest.mark.parametrize("valor", ["abc", "1e1", True, 401, -1])
 def test_triagem_numerica_fora_do_dominio_422(cliente, config, valor):
     animal = criar_animal_teste(cliente, parto=None)
     criar_sessao_teste(cliente, animal["id"])
@@ -425,8 +425,8 @@ def test_dinamica_numerica_expoe_limites_e_aceita_numero(cliente_com):
     assert "R-D1-02" in [e["regra_id"] for e in como["evidencias"]]  # 39 >= 39: a regra com o limiar disparou
 
 
-@pytest.mark.parametrize("valor", ["39.5", "39", True, "alto"], ids=["texto_com_ponto", "texto", "booleano", "palavra"])
-def test_dinamica_numerica_so_aceita_json_numerico(cliente_com, valor):
+@pytest.mark.parametrize("valor", ["39.5.1", "39e0", True, "alto"], ids=["dois_pontos", "expoente", "booleano", "palavra"])
+def test_dinamica_numerica_recusa_texto_que_nao_e_numero_estrito(cliente_com, valor):
     cliente, estado = _sessao_dinamica(cliente_com, _pergunta_x_numerica)
     _erro(_responder_x(cliente, valor), 422, "resposta_invalida")
     assert cliente.get("/api/sessoes/ses_0001").json() == estado  # nada foi gravado

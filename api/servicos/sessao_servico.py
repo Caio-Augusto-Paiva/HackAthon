@@ -88,7 +88,7 @@ def obter_estado(ctx: Contexto, sessao_id: str) -> EstadoSessao:
 
 _TIPO_DO_VALOR = {  # o tipo exato que o JSON do cliente tem de ter para cada domínio (o outro caso é texto)
     DominioBooleano: (bool, "verdadeiro ou falso (true ou false)"),
-    DominioNumerico: (float, "um número"),
+    DominioNumerico: ((float, str), "um número"),  # número JSON ou texto digitado: a regra é do motor
 }
 
 
@@ -112,10 +112,11 @@ def _valor_do_dominio(simbolo: Simbolo, valor: Valor) -> Valor:
 
     O corpo traz ``bool | float | str``. O JSON ``1`` chega como ``1.0``, que o Python compara igual a ``True``, e o
     motor aceita o texto "sim" como booleano: por isso o tipo é conferido aqui, exatamente. Os limites e as opções
-    do domínio ficam para o motor.
+    do domínio ficam para o motor. Num domínio numérico vale número JSON ou texto; a API não converte texto em
+    número (o motor aplica a regra estrita: só dígitos, casas decimais e limites).
     """
     tipo, descricao = _TIPO_DO_VALOR.get(type(simbolo.dominio), (str, "um texto"))
-    if type(valor) is not tipo:
+    if type(valor) not in (tipo if isinstance(tipo, tuple) else (tipo,)):
         raise resposta_invalida(f"A resposta de {simbolo.id} deve ser {descricao}.")
     return valor
 

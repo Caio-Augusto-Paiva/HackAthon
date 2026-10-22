@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # Motor independente de web, banco, LLM e servicos externos
@@ -16,4 +16,4 @@ tags:
 - [[Organizacao dos modulos do motor]] - `rationale_for` [INFERRED]
 - [[kb como pacote folha (nao importa engine)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/rationale #graphify/INFERRED #community/Modelos_e_validação_da_base

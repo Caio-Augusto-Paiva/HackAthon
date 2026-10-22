@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Decisao deterministica e auditavel
@@ -17,4 +17,4 @@ tags:
 - [[Restricao nao usar a LLM como sistema especialista]] - `conceptually_related_to` [INFERRED]
 - [[Traco de inferencia]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "obra/superpowers (repositorio de skills)"
+community: "Pesquisa de ferramentas locais"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Pesquisa_de_ferramentas_locais
 ---
 
 # anthropics/skills (repositorio)
@@ -16,4 +16,4 @@ tags:
 - [[skill-creator (skill)]] - `references` [EXTRACTED]
 - [[webapp-testing (skill)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/obra/superpowers_repositorio_de_skills
+#graphify/document #graphify/EXTRACTED #community/Pesquisa_de_ferramentas_locais

@@ -770,6 +770,7 @@
                 "type": "number"
               },
               {
+                "maxLength": 16,
                 "type": "string"
               },
               {
@@ -860,6 +861,19 @@
       "DominioNumerico": {
         "additionalProperties": false,
         "properties": {
+          "casas_decimais": {
+            "anyOf": [
+              {
+                "maximum": 3.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Casas Decimais"
+          },
           "max": {
             "anyOf": [
               {
@@ -999,6 +1013,7 @@
                 "type": "number"
               },
               {
+                "maxLength": 16,
                 "type": "string"
               },
               {
@@ -2387,6 +2402,7 @@
                 "type": "number"
               },
               {
+                "maxLength": 16,
                 "type": "string"
               },
               {
@@ -2423,10 +2439,12 @@
                       "type": "number"
                     },
                     {
+                      "maxLength": 16,
                       "type": "string"
                     }
                   ]
                 },
+                "maxProperties": 20,
                 "type": "object"
               },
               {

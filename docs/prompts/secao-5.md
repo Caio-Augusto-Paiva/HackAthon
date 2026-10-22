@@ -266,3 +266,56 @@ Ordem do que protege a nota: a avaliação premia assertividade e potencial de r
 - Seção 2: `Caso` ganha `continuacao` e `limite_dinamico` opcionais e as convenções do executor; o validador trata como erro a condição negada sobre derivado sem regra de CF negativo.
 - Seção 3: R-MET-06 e R-CET-08 testam `dias_em_lactacao > 21` e `> 42`; são 8 (não 7) perguntas exclusivas do veterinário.
 - Seção 4.8: B assume `kb/validador.py`, `kb/grafo.py` e `tests/kb`.
+
+---
+
+# Prompt de execução — Seção 5 (para o Codex, 22/10/2026)
+
+> **Agente:** Codex (pessoa A, branch `codex-davi`). **Skills:** `test-driven-development`, `verification-before-completion` (obra/superpowers). Cole tudo abaixo desta linha no Codex. A revisão acima é histórica; esta parte é a ordem de execução.
+
+Você vai executar a Seção 5 (testes, execução em localhost, ensaio e documentação de entrega) sobre o estado atual da branch `sessao-pair-programming` (merge `1da6e06`: motor, `kb/`, API FastAPI + SQLite e base de desenvolvimento, 998 testes verdes). Trabalhe na `codex-davi` depois de trazer esse merge (`git merge origin/sessao-pair-programming`).
+
+## Regras
+
+- **Não altere `api/`, `contratos/` nem `tests/api/`.** O frontend (`web/`) agora é seu também: siga `docs/prompts/frontend-codex.md` e o plano `docs/superpowers/plans/2026-10-22-frontend-web.md`. Se a API precisar de ajuste, registre o pedido em `docs/entrega/06-riscos-e-pendencias.md` e não edite.
+- Não altere `engine/` nem `kb/` sem antes escrever o teste que mostra o defeito; mudança no motor ou no validador exige registro em `docs/processo/revisoes-cruzadas.md`.
+- TDD; rode a suíte inteira antes de cada commit: `.venv/Scripts/python -m pytest -q` e `python -m unittest discover -s tests/engine -t .`. Um commit por etapa; push ao final de cada etapa.
+- Conhecimento veterinário continua **suposição a validar**; dados fictícios apenas.
+
+## Etapa 1 — Base de desenvolvimento como versão oficial `v0001`
+
+A base `base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json` carrega no motor, mas o validador do `kb` a recusa por dois motivos:
+
+1. `meta` tem quatro campos fora do formato: `dominio`, `padrao_decisao`, `modelo_incerteza`, `publico`. Mova o texto deles para `meta.nota` (ou para o `LEIA-ME.txt`) e remova as chaves.
+2. O símbolo `mucosas_palidas_ou_ictéricas` tem acento no id (erro E20). Renomeie para `mucosas_palidas_ou_ictericas` em todos os lugares (símbolos, regra `R-TPB-02`, casos, `tests/engine/test_base_clinica.py`, `03-regras-de-producao.md`).
+
+Já verificado: sem esses dois pontos, `kb.validador.validar` dá **zero erros** (só o aviso W03) e `engine.modelos.Base.de_dict(kb.para_motor(base))` carrega.
+
+**Já feito em 22/10 (commit da sessão de frontend):** a `v0001` foi gravada pelo `Repositorio` com essas duas correções aplicadas em memória (o texto dos quatro campos foi para `meta.nota`) e está **ativa** (`base/ativa.json`). Não recrie nem altere `v0001` (versões são imutáveis). Sua parte nesta etapa: aplicar as mesmas duas correções no arquivo de `base/desenvolvimento/` e em `tests/engine/test_base_clinica.py` (id `mucosas_palidas_ou_ictericas`), para os testes da base e a `v0001` ficarem coerentes; **a `v0002` (pai `v0001`) também já existe e está ativa**: limita os domínios numéricos (`dias_em_lactacao` 0–1000 inteiro, `temperatura_retal` 30–45 com 1 casa, etc.) para a resposta digitada pelo usuário, validada no motor só com dígitos ASCII. Qualquer mudança de regra sua vira `v0003` via `Repositorio.salvar_nova(..., pai="v0002")` + execução dos casos antes de ativar. Teste novo: `tests/casos/test_base_ativa.py` confere que `base/ativa.json` aponta para uma versão que passa em `kb.validar` sem erros e carrega no motor.
+
+## Etapa 2 — Casos conhecidos (Camada 3)
+
+1. Converta `base/desenvolvimento/casos/*.json` para `base/casos/casos.json` no formato `kb.modelos.Caso`.
+2. Amplie até cobrir a Camada 3 da especificação (Seção 5.1, ~30 casos: um positivo por doença em cada modo, bandeiras, comorbidade, limite, sem problema, correção, troca de modo). Monte cada esperado rodando o motor real e conferindo que o resultado é clinicamente plausível pela Seção 3; caso que revelar regra ruim vira item em `06-riscos-e-pendencias.md`, não ajuste silencioso.
+3. `tests/casos/test_casos_conhecidos.py`: roda `casos.json` contra a versão ativa e contra cada versão em `base/versoes/` (Camada 3).
+4. Confirme pela API, sem editar a API: `POST /api/base/versoes/v0001/execucoes` (com `TestClient` num teste em `tests/casos/`) devolve `falhou == 0`.
+
+## Etapa 3 — Documentação de entrega corrigida
+
+A documentação foi escrita antes do merge e se contradiz:
+- `README.md:5` e `docs/entrega/README.md:5` dizem que a API e o SQLite existem;
+- `02-arquitetura.md:3,48,108`, `05-apresentacao-e-demo.md:3` e `06-riscos-e-pendencias.md:12` (R04) dizem que não existem `api/`, `kb/`, banco nem `rodar.ps1`.
+
+Reescreva `02`, `05` e `06` para o estado real: API FastAPI com 27 rotas e contrato em `contratos/openapi.json` (ver `api/README.md`), `kb/` com validador e versões, SQLite, `scripts/rodar.ps1`, contagem real de testes. Web e editor gráfico continuam "em andamento" (outra sessão). Regenere `03` e `04` com `scripts/gerar_doc_regras.py` a partir da `v0001` ativa e dos casos novos; atualize `evidencias-verificacao.json`.
+
+## Etapa 4 — Execução em localhost e ensaio (Seção 5.2)
+
+1. Banco fora do OneDrive: `ANAMNESE_DB=%LOCALAPPDATA%\anamnese\anamnese.db`.
+2. `powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -Reset -SemNavegador` com a `v0001` ativa: `GET /api/saude` 200, `/api/docs` abre, cria animal fictício, cria sessão, responde a triagem até o parecer, `/porque` e `/como` respondem. Registre os comandos e as saídas em `docs/entrega/evidencias-verificacao.json`.
+3. Repita com a rede desligada (Seção 5.2, "sem internet") e anote o resultado.
+4. Encerre o servidor ao final.
+
+## Etapa 5 — Grafo e fechamento
+
+1. `/graphify . --update` e `graphify export obsidian --dir obsidian/01-conhecimento` (regra do `CLAUDE.md`), commit junto com os documentos.
+2. Relatório final: commits, total de testes, casos (passou/falhou), pendências que dependem da equipe ou da RERUM.

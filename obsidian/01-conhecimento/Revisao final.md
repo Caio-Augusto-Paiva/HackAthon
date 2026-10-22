@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Rodada unica de correcao final"
+community: "Correções finais da base"
 location: "L67"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Rodada_unica_de_correcao_final
+  - community/Correções_finais_da_base
 ---
 
 # Revisao final
@@ -18,4 +18,4 @@ tags:
 - [[SDD ledger]] - `references` [EXTRACTED]
 - [[Verificacao final]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Rodada_unica_de_correcao_final
+#graphify/concept #graphify/EXTRACTED #community/Correções_finais_da_base

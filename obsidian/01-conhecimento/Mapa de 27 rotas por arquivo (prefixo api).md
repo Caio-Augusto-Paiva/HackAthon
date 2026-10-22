@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Contrato OpenAPI versionado e exemplos por operationId"
+community: "Frontend planejado e contrato API"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
+  - community/Frontend_planejado_e_contrato_API
 ---
 
 # Mapa de 27 rotas por arquivo (prefixo /api)
@@ -15,4 +15,4 @@ tags:
 - [[Formato unico de erro (codigos e X-Requisicao-Id)]] - `shares_data_with` [INFERRED]
 - [[Regra rotas finas, SQL so em repositorios]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
+#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API

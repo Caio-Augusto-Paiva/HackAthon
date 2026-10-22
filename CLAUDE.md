@@ -4,41 +4,32 @@ Projeto: sistema especialista para o Hackathon UFJF 2026 (XXVIII Semana da Compu
 
 Fontes oficiais: **[A]** = `apresentacaoRerun.pdf` (16 slides); **[D]** = `DocumentárioRerun.pdf` (3 páginas).
 
-## Grafo de conhecimento — ler PRIMEIRO, em todo prompt
+## Grafo de conhecimento — só quando precisar procurar
 
-Para economizar tokens, **não leia o projeto inteiro e não recapitule o projeto lendo os arquivos originais**. O conhecimento do projeto (instruções, especificação, fontes, transcrições dos PDFs, pesquisas, revisões, plano e README do motor) está no grafo do Obsidian. **Sempre que precisar ler, consultar ou recapitular arquivos do projeto, leia do grafo do Obsidian em `obsidian/01-conhecimento/`**, nesta ordem:
+O grafo é uma ferramenta de **busca**, não uma leitura obrigatória. **Não abra o grafo (nem `GRAPH_REPORT.md`) no início do prompt** nem "para se contextualizar".
 
-1. **Índice:** `graphify-out/GRAPH_REPORT.md` (nós centrais, comunidades, hiperarestas, lacunas).
-2. **Comunidade:** a nota `obsidian/01-conhecimento/_COMMUNITY_<nome>.md` do assunto.
-3. **Conceitos:** siga os links `[[...]]` até as notas de conceito. Cada nota traz `source_file`, `location` e as conexões com o tipo de relação.
-4. **Pergunta pontual:** `graphify query "<pergunta>"` (ou `/graphify query`), que percorre `graphify-out/graph.json`.
-5. **Arquivo original, só se:** for editá-lo; a nota não tiver o detalhe necessário (abra só o trecho indicado em `location`); ou o arquivo estiver fora do grafo (código e testes, ver `.graphifyignore`).
-6. A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
-7. O escopo do grafo está em `.graphifyignore` (código e testes ficam de fora; serão o grafo 2).
+**Não use o grafo quando:** a tarefa já diz qual arquivo ou trecho mexer; a informação já está nesta conversa ou neste `CLAUDE.md`; ou o assunto é código e testes (fora do grafo, ver `.graphifyignore`) — aí use `Grep`/`Glob` direto.
 
-## Manter o grafo atualizado — sempre que houver documento novo ou alterado
+**Use o grafo quando** precisar **localizar** uma informação ou um arquivo que você não sabe onde está (decisão, regra, fonte, pesquisa, revisão, requisito), ou recapitular um assunto da documentação. Nesse caso, em vez de ler ou varrer os arquivos de `docs/`, pare no primeiro passo que responder:
 
-Sempre que criar ou alterar um documento de conhecimento (qualquer `.md` em `docs/`, este `CLAUDE.md`, `engine/README.md`, ou um JSON de referência em `docs/referencias/`), **no mesmo trabalho**:
+1. **Pergunta pontual (primeira opção):** `graphify query "<pergunta>"`, que percorre `graphify-out/graph.json` e devolve só os nós relevantes com `source_file` e `location`.
+2. **Assunto inteiro:** a nota `obsidian/01-conhecimento/_COMMUNITY_<nome>.md` e, dela, os links `[[...]]` necessários.
+3. **Visão geral do projeto (raro, custa ~7 mil tokens):** `graphify-out/GRAPH_REPORT.md`.
+4. **Arquivo original, só se:** for editá-lo; a nota não tiver o detalhe (abra só o trecho em `location`); ou o arquivo estiver fora do grafo.
 
-1. Se for PDF só de imagem, crie antes uma transcrição `.md` em `docs/fontes/` (PDFs ficam fora do grafo; a transcrição entra).
-2. Atualize o grafo de forma incremental: `/graphify . --update` (reextrai só o que mudou).
-3. Regenere o cofre do Obsidian: `graphify export obsidian --dir obsidian/01-conhecimento`.
-4. Faça o commit junto: o documento, `graphify-out/` e `obsidian/01-conhecimento/`.
+A fonte canônica do desenho é `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; `docs/prompts/` e `docs/rascunhos/` são histórico e ficam fora do grafo.
+
+## Manter o grafo atualizado — uma vez por bloco de trabalho
+
+Atualizar o grafo reextrai os documentos com subagentes (a primeira extração custou ~520 mil tokens; ver `graphify-out/cost.json`). Por isso **não atualize a cada documento**. Atualize **uma vez, ao fechar um bloco de trabalho** que tenha criado ou alterado documentos de conhecimento (`.md` em `docs/`, este `CLAUDE.md`, `engine/README.md`, JSON em `docs/referencias/`), antes do push:
+
+1. PDF só de imagem: crie antes a transcrição `.md` em `docs/fontes/`.
+2. `/graphify . --update` (incremental) e `graphify export obsidian --dir obsidian/01-conhecimento`.
+3. Commit separado: `graphify-out/` e `obsidian/01-conhecimento/` (`chore(grafo): atualiza grafo`).
+
+Mudanças só em código, testes, `web/`, `docs/prompts/` ou `docs/rascunhos/` **não** pedem atualização do grafo.
 
 Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Obsidian) e `obsidian/02-a-definir/` (grafo 2, reservado).
-
-## Papel e limite da sessão de planejamento
-
-- Esta fase é só de **planejamento**: arquitetura, motor de inferência, base de conhecimento, linguagens e bibliotecas, estrutura de pastas, contratos de API, estratégia de testes e execução em localhost.
-- **NÃO escreva código de implementação.** Arquivos de especificação e de plano em Markdown são permitidos; código-fonte não.
-- Pare depois do plano. Não comece a implementar sem ordem explícita.
-
-## Processo obrigatório
-
-1. **Antes de qualquer coisa**, explicar em poucos parágrafos o que é um sistema especialista e como funciona um motor de inferência: encadeamento para frente e para trás, resolução de conflito, fatores de certeza, explicação "por quê?" e "como?" (diretriz do hackathon, [A] slide 12, passo 2).
-2. Usar a skill `superpowers:brainstorming` para refinar escopo e desenho. Uma pergunta por vez, alternativas com recomendação. Ao final, gravar a especificação aprovada em `docs/superpowers/specs/`.
-3. Após aprovação da especificação, usar `superpowers:writing-plans` para gerar o plano em `docs/superpowers/plans/`: tarefas pequenas e verificáveis, com testes definidos antes do código de cada tarefa.
-4. Parar depois do plano.
 
 ## O desafio
 
@@ -75,7 +66,7 @@ Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Ob
 - **Demonstração** em localhost.
 - **Documentação obrigatória:** processo de desenvolvimento, arquitetura tecnológica e regras de produção.
 - **Apresentação obrigatória:** todo o processo, do uso da IA ao resultado.
-- Início terça 20/10 às 9:00; envio de documentação, apresentação e código-fonte até **quinta 22/10 às 20:00**; apresentação sexta 23/10 às 9:00. O plano tem que caber em cerca de dois dias e meio.
+- Início terça 20/10 às 9:00; envio de documentação, apresentação e código-fonte até **quinta 22/10 às 20:00**; apresentação sexta 23/10 às 9:00.
 
 ### Avaliação ([A] slides 3, 5 e 11; [D] p. 2)
 
@@ -88,38 +79,15 @@ Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Ob
 
 1. Escolher o agente de IA. 2. Pedir à IA que explique sistema especialista e motor de inferência. 3. Escolher a tecnologia. 4. Pesquisar o contexto de negócio. 5. Definir escopo e diretrizes da arquitetura. 6. Definir as regras de produção. 7. Implementar e testar. 8. Estudar em detalhes o que foi produzido.
 
-A fase de planejamento cobre os passos 2 a 6.
+## Estado atual e onde está cada coisa
 
-## Decisões já tomadas (não vêm dos documentos)
+Fase de **implementação e entrega**. A especificação e os planos já foram aprovados; não refaça brainstorming nem plano sem pedido.
 
-- **Tema:** T1 Anamnese.
-- **Motor gráfico:** editor visual onde se desenha o fluxo da anamnese (perguntas, condições, regras, conclusões) como grafo. Corresponde ao componente "Aquisição de conhecimento".
-- **Linguagens:** Python no backend, React no frontend (inicialmente).
-
-## Proposta inicial de arquitetura (hipótese a validar no brainstorming)
-
-- Motor de regras em Python, puro e independente de interface (pacote próprio, testável sem web): encadeamento, resolução de conflito, fatores de certeza, traço de inferência.
-- Base de conhecimento/fluxo como dado versionável (JSON ou YAML com schema), lido pelo editor gráfico e pelo motor; cada versão testável.
-- API: FastAPI + Pydantic.
-- Frontend: React + TypeScript; React Flow no editor gráfico; tela de anamnese em diálogo, com parecer e explicação.
-- Persistência: SQLite.
-- Testes: pytest (motor e casos conhecidos) e Playwright (ponta a ponta).
+- Desenho canônico: `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; planos em `docs/superpowers/plans/`.
+- Código: `engine/` (motor, Python só com biblioteca padrão), `kb/` (validação e versões da base), `api/` (FastAPI + SQLite), `web/` (React + TypeScript, feito pelo Codex), `base/` (versões imutáveis; ativa em `base/ativa.json`).
+- Documentação de entrega: `docs/entrega/`.
+- Editor gráfico da base e sensores ficaram **fora do escopo** do PoC.
 - **Dados fictícios apenas.** Nenhum dado real de propriedade ou animal.
-
-## O plano final deve conter
-
-1. Escopo do PoC (o que entra e o que fica de fora, justificado pelo prazo).
-2. Diagrama Mermaid mapeando cada componente do modelo conceitual ([A] slide 14) a um módulo do código.
-3. Desenho do motor: tipo de encadeamento e por quê, resolução de conflito, modelo de incerteza (representação e combinação dos CF), formato do traço e geração de "por quê?" e "como?".
-4. Formato da base: schema, versionamento, conversão grafo ↔ regras, validação (ciclos, variáveis não definidas, regras inalcançáveis).
-5. Conhecimento do domínio: sinais, histórico, categorias de triagem e regras em pseudocódigo, **cada uma marcada como suposição a validar** com especialista ou RERUM.
-6. Linguagens, bibliotecas e versões (todas open source) com justificativa.
-7. Estrutura de pastas do monorepo e contratos da API (endpoints, payloads).
-8. Estratégia de testes: casos conhecidos por versão da base, unitários do motor, ponta a ponta.
-9. Execução em localhost com o mínimo de comandos (script ou `docker compose`), sem nuvem.
-10. Plano por dia até 22/10 às 20:00, com marcos verificáveis e o que cortar se o prazo apertar.
-11. O que vai para a documentação e a apresentação (processo, arquitetura, regras de produção, uso da IA).
-12. Riscos e pontos em aberto.
 
 ## Regras de conduta
 

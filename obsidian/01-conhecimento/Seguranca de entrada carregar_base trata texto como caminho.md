@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Task 1: Ambiente e modelos Pydantic"
+community: "Modelos e validação da base"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Task_1_Ambiente_e_modelos_Pydantic
+  - community/Modelos_e_validação_da_base
 ---
 
 # Seguranca de entrada: carregar_base trata texto como caminho
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic
+#graphify/rationale #graphify/EXTRACTED #community/Modelos_e_validação_da_base

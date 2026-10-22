@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "validar"
+community: "Revisão do validador kb"
 location: "L47-L55"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/validar
+  - community/Revisão_do_validador_kb
 ---
 
 # Task 4
@@ -19,4 +19,4 @@ tags:
 - [[Task 5]] - `shares_data_with` [EXTRACTED]
 - [[validar]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/validar
+#graphify/concept #graphify/EXTRACTED #community/Revisão_do_validador_kb

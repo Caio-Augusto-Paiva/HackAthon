@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from typing import Annotated, Literal, Self
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, StringConstraints, model_validator
 
 from api.schemas import CONFIG_REQUISICAO, CONFIG_RESPOSTA_COMPLETA
 from kb.modelos import Modo
@@ -18,7 +18,10 @@ Fase = Literal["triagem", "dinamica", "encerrada"]
 NivelUrgencia = Literal["chamar_agora", "observar", "sem_problema"]
 OrigemUrgencia = Literal["padrao", "bandeira_vermelha", "regra_urgencia"]
 AcaoDaBandeira = Literal["ver_parecer", "continuar"]
-Valor = bool | float | str
+# texto digitado: curto (um número ocupa no máximo 11 caracteres); o motor decide se vale
+# float estrito: texto nunca vira número aqui (senão "1"*17 passaria por float); JSON 12 continua valendo
+Valor = bool | Annotated[float, Field(strict=True)] | Annotated[str, StringConstraints(max_length=16)]
+MAX_SIMBOLOS_POR_TELA = 20
 
 
 # --- resposta: EstadoSessao ------------------------------------------------------------------
@@ -153,7 +156,7 @@ class RespostaTriagem(BaseModel):
 
     model_config = CONFIG_REQUISICAO
 
-    valores: dict[str, Valor] | None = None
+    valores: Annotated[dict[str, Valor], Field(max_length=MAX_SIMBOLOS_POR_TELA)] | None = None
     nao_sei: bool = False
 
     @model_validator(mode="after")

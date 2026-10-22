@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L73"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Cronograma e entrega do hackathon (20 a 23/10)
@@ -17,4 +17,4 @@ tags:
 - [[Fontes oficiais A apresentacaoRerun.pdf e D DocumentarioRerun.pdf]] - `cites` [EXTRACTED]
 - [[Regulamento, pontuacao e cronograma (slide 3)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

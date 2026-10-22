@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L105"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # SQLite
@@ -15,4 +15,4 @@ tags:
 - [[Proposta inicial de arquitetura (hipotese a validar)]] - `references` [EXTRACTED]
 - [[Restricao execucao completa em localhost]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

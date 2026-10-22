@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "Requisitos e entregas pendentes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/Requisitos_e_entregas_pendentes
 ---
 
 # Checkpoint codex-davi: IA aplicada ao desenvolvimento e à documentação, fora da consulta
 
 ## Connections
 - [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
-- [[Núcleo local regras explícitas e CF MYCIN]] - `rationale_for` [EXTRACTED]
+- [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_entregas_pendentes

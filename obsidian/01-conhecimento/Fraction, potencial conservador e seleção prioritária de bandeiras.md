@@ -1,16 +1,16 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "Proveniência e pressupostos clínicos"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/Proveniência_e_pressupostos_clínicos
 ---
 
 # Fraction, potencial conservador e seleção prioritária de bandeiras
 
 ## Connections
-- [[Checkpoint codex-davi Inferência estrita em três camadas com combinação MYCIN racional]] - `references` [EXTRACTED]
+- [[Três camadas estritas e combinação MYCIN racional]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos

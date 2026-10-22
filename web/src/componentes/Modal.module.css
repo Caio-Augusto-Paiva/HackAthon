@@ -1,0 +1,6 @@
+.fundo { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; overflow: auto; padding: 24px; background: rgb(11 31 16 / 72%); }
+.dialogo { display: grid; gap: 20px; width: min(720px, 100%); max-height: calc(100dvh - 48px); overflow-y: auto; padding: 40px 44px; border: 3px solid var(--cor-primaria-escura); border-radius: var(--raio-cartao); background: var(--cor-creme); color: var(--cor-texto); box-shadow: var(--sombra-clay); }
+.dialogo h2 { font: 400 32px/1.3 var(--fonte-titulo); }
+.perigo { border: 4px solid var(--cor-perigo); box-shadow: 0 12px 24px rgb(122 20 20 / 45%), inset 0 -4px 6px rgb(122 20 20 / 22%), inset 0 3px 4px rgb(255 255 255 / 55%); }
+.perigo h2 { color: var(--cor-perigo); }
+@media (max-width: 600px) { .fundo { padding: 16px; } .dialogo { padding: 26px 22px; max-height: calc(100dvh - 32px); } .dialogo h2 { font-size: 26px; } }
