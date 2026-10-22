@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[CLI de reserva alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
+- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - `references` [EXTRACTED]
 - [[Exemplos sintéticos de alerta e sinais mamários pela CLI]] - `references` [EXTRACTED]
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - `references` [EXTRACTED]
 - [[R-BV-01 chamar_agora (CF 0,99)]] - `references` [EXTRACTED]
+- [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
-- [[v0002 ativa e imutável, pai v0001; ativação não valida clínica]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

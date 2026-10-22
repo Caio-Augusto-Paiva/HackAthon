@@ -1,19 +1,19 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "rationale"
-community: "Consulta web e correções"
+community: "Precisão numérica da interface"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Consulta_web_e_correções
+  - community/Precisão_numérica_da_interface
 ---
 
 # entrada numérica preserva string e validação backend
 
 ## Connections
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
-- [[Precisão não exposta por proxima; backend valida casas decimais]] - `conceptually_related_to` [EXTRACTED]
-- [[v0002 explicita limites e casas decimais]] - `references` [EXTRACTED]
+- [[Precisão não exposta por proxima; backend valida casas decimais]] - `conceptually_related_to` [INFERRED]
+- [[v0002 limites numéricos e precisão; cópia de desenvolvimento alinhada]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Consulta_web_e_correções
+#graphify/rationale #graphify/EXTRACTED #community/Precisão_numérica_da_interface

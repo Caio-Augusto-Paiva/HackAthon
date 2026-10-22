@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Dermatite digital e mobilidade"
 location: "L80"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Dermatite_digital_e_mobilidade
 ---
 
 # R-DD-02: dermatite_digital (CF 0,5)
@@ -17,4 +17,4 @@ tags:
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 - [[Dor na região do talão (dor_flexao_talao)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_mobilidade

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Dermatite digital e mobilidade"
 location: "L162"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Dermatite_digital_e_mobilidade
 ---
 
 # Claudicação (claudicacao)
@@ -17,4 +17,4 @@ tags:
 - [[R-DD-02 dermatite_digital (CF 0,5)]] - `references` [EXTRACTED]
 - [[Triagem 3 atitude_locomocao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_mobilidade

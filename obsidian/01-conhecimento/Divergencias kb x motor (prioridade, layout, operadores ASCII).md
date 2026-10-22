@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Backend e isolamento do motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Backend_e_isolamento_do_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # Divergencias kb x motor (prioridade, layout, operadores ASCII)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Compatibilidade com o motor via para_motor (exclude_none)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

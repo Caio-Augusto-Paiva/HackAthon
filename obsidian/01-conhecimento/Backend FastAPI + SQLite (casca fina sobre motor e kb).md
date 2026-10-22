@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Backend e isolamento do motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Backend_e_isolamento_do_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # Backend FastAPI + SQLite (casca fina sobre motor e kb)
@@ -18,4 +18,4 @@ tags:
 - [[Motor de inferencia README (engine)]] - `references` [EXTRACTED]
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

@@ -1,20 +1,24 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "document"
-community: "Processo documental verificável"
+community: "Revisões e decisões técnicas"
+location: "L1-L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Revisões_e_decisões_técnicas
 ---
 
 # Log de revisões: evidência e proveniência do checkpoint
 
 ## Connections
+- [[10 + 4 são estimativas; contexto separado não prova outra família de modelo]] - `references` [EXTRACTED]
+- [[Achado frontend corrigido símbolos térmicos e reconciliação do histórico]] - `references` [EXTRACTED]
 - [[Achados procedentes de motor, restauração e contrato de dados]] - `references` [EXTRACTED]
 - [[Ajustes propostos max mamário e caminhos de TPB sem febre]] - `references` [EXTRACTED]
-- [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Revisão independente requer pessoamodelo, data, localização, evidência e veredito]] - `references` [EXTRACTED]
+- [[Processo consolidado em 2210 integração atual e checkpoints históricos com proveniência]] - `references` [EXTRACTED]
+- [[Revisão da Seção 6 promessas e textos históricos corrigidos]] - `references` [EXTRACTED]
+- [[Revisões independentes exigem identidade e evidência; planejamento não comprova outra família]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/document #graphify/EXTRACTED #community/Revisões_e_decisões_técnicas

@@ -49,8 +49,8 @@ tags:
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
 - [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
-- [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
+- [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
+- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

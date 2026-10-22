@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "E2E e verificação offline"
+community: "Riscos e limites da entrega"
 location: "L37"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/E2E_e_verificação_offline
+  - community/Riscos_e_limites_da_entrega
 ---
 
 # R17: HTML Swagger 200 não comprova interface offline por dependência CDN
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Backend ensaiado com TCPDNS externos bloqueados nos processos Python]] - `rationale_for` [EXTRACTED]
 - [[Ensaio humano com Wi-Fi desligado e máquina reserva ainda pendente]] - `references` [EXTRACTED]
-- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[localhost sem nuvemCDN, fontes locais e SVG inline]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/E2E_e_verificação_offline
+#graphify/concept #graphify/EXTRACTED #community/Riscos_e_limites_da_entrega

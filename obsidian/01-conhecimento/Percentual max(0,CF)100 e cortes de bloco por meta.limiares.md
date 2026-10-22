@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Parecer e fatores de certeza"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_e_fatores_de_certeza
+  - community/Sessões_API_e_motor
 ---
 
 # Percentual max(0,CF)*100 e cortes de bloco por meta.limiares
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_e_fatores_de_certeza
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

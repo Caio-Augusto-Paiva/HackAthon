@@ -12,7 +12,7 @@ tags:
 # Task 3: Início e criação de sessão — implementada com alcance documentado
 
 ## Connections
-- [[Camada web implementada Início, Anamnese e Parecer]] - `implements` [EXTRACTED]
+- [[Camada web implementada Início, Anamnese e Parecer]] - `conceptually_related_to` [INFERRED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
 - [[início cria animal anônimo e sessão no modo escolhido]] - `references` [EXTRACTED]
 

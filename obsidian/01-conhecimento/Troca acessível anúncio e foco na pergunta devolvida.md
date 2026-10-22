@@ -2,7 +2,7 @@
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
 type: "rationale"
 community: "Demonstração e troca de modo"
-location: "L48"
+location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

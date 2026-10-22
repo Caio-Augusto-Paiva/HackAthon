@@ -1,6 +1,6 @@
-# Processo de desenvolvimento — checkpoint de 21/10/2026
+# Processo de desenvolvimento — consolidado em 22/10/2026
 
-Este relato foi curado a partir dos artefatos versionados e das execuções desta sessão. Ele distingue evidência de implementação, registro histórico do planejamento e informação ainda não fornecida pelas pessoas. A divisão A/B/C é uma divisão de responsabilidades; nomes e experiências individuais não foram inferidos.
+Este relato foi curado a partir dos artefatos versionados e do histórico Git até `d9eda27`. Distingue implementação, planejamento e informação ainda não fornecida pelas pessoas. Os registros de 21/10 são checkpoints históricos, atualizados abaixo com a integração de 22/10. As letras dos diários correspondem ao planejamento original; não comprovam autoria pessoal. Nomes, contatos e responsabilidades informados estão no [índice](README.md).
 
 ## Problema e método
 
@@ -18,9 +18,12 @@ A IA foi usada para planejamento, revisão de contratos, exploração de falhas,
 | 21/10 | `f0d8c6f`, `a3e73eb` e `a677283` | Reprocessamento de bandeiras consolidado pela ordem real das respostas; restauração e regressões ampliadas |
 | 21/10 | `898512c` | Base revisada integrada como desenvolvimento, com 51 símbolos, 56 regras, dois exemplos e 25 testes específicos |
 | 21/10 | Este pacote e `scripts/gerar_doc_regras.py` | Documentação derivada da implementação, geração de tabelas e guarda contra divergência |
-| 22/10 | Cronograma planejado | Integração da aplicação, revisão clínica, apresentação e fechamento ainda não comprovados neste checkout |
+| 22/10 | `f46cd6e` e documentos 03/04 | Integração dos 34 casos sintéticos, API e persistência; riscos de coleta R15/R16 registrados |
+| 22/10 | `7494e3e`, `cff6704`, `web/QUALIDADE.md` | Consulta React integrada ao backend, base ativa `v0002`, fontes e SVGs locais, verificação de acessibilidade e quatro larguras |
+| 22/10 | `1593149`, `85210ca`, `09f5754` | Troca produtor ↔ especialista na mesma sessão, histórico corrigível e parecer único; 60 testes de interface e 11 E2E no checkpoint |
+| 22/10 | `d9eda27` | Grafo e Obsidian atualizados após a integração; navegação documental separada do runtime |
 
-O cronograma original é uma previsão. A ausência de API e web neste checkpoint exige replanejar a demonstração integrada; a CLI permite mostrar o raciocínio já implementado sem afirmar que a aplicação final está pronta.
+O cronograma original é uma previsão, não um registro de horários cumpridos. A consulta web já pode ser demonstrada em localhost; a CLI é uma reserva. Editor gráfico, material visual final, licença e ensaio humano continuam pendentes. Os testes de software não comprovam validação clínica nem preparo da máquina reserva.
 
 ## Passo a passo pedido pelos organizadores
 
@@ -28,11 +31,11 @@ O cronograma original é uma previsão. A ausência de API e web neste checkpoin
 |---|---|---|
 | 1. Escolher agente de IA | [Alocação de agentes](../agentes-e-skills.md) e registro desta sessão com Codex | Planejado e parcialmente registrado em execução |
 | 2. Entender sistema especialista e motor | Seção 1 da especificação e [arquitetura](02-arquitetura.md) | Documentado |
-| 3. Escolher tecnologia | Python no núcleo; tecnologias de API/web separadas como planejadas | Núcleo implementado |
+| 3. Escolher tecnologia | Python no núcleo; FastAPI/Pydantic e SQLite na API; React 19, TypeScript e Vite 8 em `web/` | Componentes integrados; detalhes no documento 02 |
 | 4. Pesquisar contexto do negócio | [Fontes](../fontes/fontes.md) e notas de fonte em cada regra | Pesquisa registrada; calibração pendente |
 | 5. Definir escopo e arquitetura | Especificação canônica e diagrama do documento 02 | Documentado |
-| 6. Definir regras | JSON de desenvolvimento e documento 03 gerado | 56 regras disponíveis, todas como suposição |
-| 7. Implementar e testar | `engine/`, `tests/` e casos executáveis | 135 testes automatizados aprovados neste checkpoint |
+| 6. Definir regras | Base ativa `v0002` e documento 03 gerado | 56 regras disponíveis, todas como suposição |
+| 7. Implementar e testar | `engine/`, `kb/`, `api/`, `web/`, testes e casos executáveis | Checkpoint integrado: 1066 testes Python aprovados, 1 ignorado, 170 subtestes; 60 Vitest e 11 E2E, sem somar novamente os 132 unittest coletados por pytest |
 | 8. Estudar e entender a produção | Perguntas de treino do documento 05 | Ensaio individual e cruzado a registrar pelo grupo |
 
 ## Julgamento sobre sugestões da IA
@@ -53,7 +56,11 @@ Os exemplos abaixo têm evidência no código e nos testes; não são depoimento
 
 Na sessão documentada foram aplicadas as skills `using-superpowers`, `receiving-code-review`, `test-driven-development`, `systematic-debugging`, `verification-before-completion` e, para organizar esta entrega, `writing-plans`. Graphify mantém os documentos navegáveis e exporta o cofre do Obsidian. São ferramentas de desenvolvimento e documentação; não compõem o caminho de inferência.
 
+Na implementação da interface, os registros incluem Codex, Figma, `impeccable`, TDD e verificação antes da conclusão. O checkpoint de troca de modo usou execução inline e uma revisão técnica em contexto separado; isso não comprova revisão por outra família de modelo. O [relatório web](../../web/QUALIDADE.md) registra o alcance dos testes e os achados corrigidos. A revisão da Seção 6 usa `executing-plans` para auditar e corrigir documentação, sem modificar o sistema de decisão.
+
 O documento de alocação descreve intenção de usar outras famílias de modelos. Este checkpoint não comprova que todas as revisões previstas foram realizadas, nem que cada integrante usou determinada ferramenta. O [log de revisões](../processo/revisoes-cruzadas.md) separa correções verificadas de relatos históricos. Os [diários A](../processo/A.md), [B](../processo/B.md) e [C](../processo/C.md) precisam de complementação pelos responsáveis.
+
+Não foram criadas entradas pessoais para atingir a meta sugerida de 8–10 interações por pessoa. Essa meta é uma convenção interna, não uma exigência dos organizadores. Horários, decisões humanas, ferramentas usadas por cada pessoa e prova de entendimento devem ser preenchidos pelos próprios integrantes.
 
 ## Organização e aprendizado a registrar
 

@@ -2,6 +2,8 @@
 
 Data de referência: 21/10/2026. Papel A do planejamento; pessoa responsável a confirmar. Este arquivo é um registro técnico curado desta sessão e do histórico indicado, não um depoimento pessoal escrito por um integrante. Horários não foram registrados e não foram reconstruídos artificialmente.
 
+Atualização de 22/10: o registro abaixo é histórico. O [processo consolidado](../entrega/01-processo.md) inclui a aplicação integrada e a troca de modo; os dados da equipe estão no [índice](../entrega/README.md). A letra deste diário não comprova que a pessoa da linha A escreveu estes registros ou usou as ferramentas citadas.
+
 | Interação/tarefa | Agente e método observados | Decisão | Motivo e evidência |
 |---|---|---|---|
 | Correção de bandeiras sem relação com a resposta alterada | Codex; revisão e TDD | Ajustado | Regressões e `75bcc45`; implementação posterior consolidada por ordem real em `a677283` |

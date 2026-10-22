@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Modelos e validação do kb"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_do_kb
+  - community/Persistência_e_validação_da_base
 ---
 
 # Codigos do validador E00-E23 e W01-W03
@@ -16,4 +16,4 @@ tags:
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `conceptually_related_to` [INFERRED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

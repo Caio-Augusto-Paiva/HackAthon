@@ -12,7 +12,7 @@ tags:
 # Task 8: Qualidade, acessibilidade e responsivo — implementada com alcance documentado
 
 ## Connections
-- [[Camada web implementada Início, Anamnese e Parecer]] - `implements` [EXTRACTED]
+- [[Camada web implementada Início, Anamnese e Parecer]] - `conceptually_related_to` [INFERRED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
 - [[auditpolish, responsivo 37576810241440 e estados]] - `references` [EXTRACTED]
 

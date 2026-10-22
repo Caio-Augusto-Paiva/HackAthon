@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Backend e isolamento do motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Backend_e_isolamento_do_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # Arvore da secao 4.3 da especificacao (sessao, validacao, modelos)
@@ -14,4 +14,4 @@ tags:
 - [[Especificacao canonica do projeto (anamnese bovinos)]] - `references` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

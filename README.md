@@ -44,13 +44,14 @@ O navegador renderiza `EstadoSessao.proxima`, envia números como a string digit
 
 ## Documentação
 
-- [Índice da entrega parcial e atendimento às exigências](docs/entrega/README.md).
+- [Índice da entrega e atendimento às exigências](docs/entrega/README.md).
 - [Processo de desenvolvimento](docs/entrega/01-processo.md).
-- [Arquitetura implementada e integração planejada](docs/entrega/02-arquitetura.md).
+- [Arquitetura implementada](docs/entrega/02-arquitetura.md).
 - [56 regras de produção geradas da base](docs/entrega/03-regras-de-producao.md).
-- [Resultados dos dois casos sintéticos](docs/entrega/04-casos-de-teste.md).
+- [Resultados dos 34 casos sintéticos](docs/entrega/04-casos-de-teste.md).
 - [Roteiro de apresentação, demonstração e perguntas](docs/entrega/05-apresentacao-e-demo.md).
 - [Riscos, pendências e checklist de envio](docs/entrega/06-riscos-e-pendencias.md).
+- [Revisão técnica da Seção 6](docs/revisoes/2026-10-22-revisao-secao-6.md).
 - [Contrato detalhado do motor](engine/README.md).
 
 ## Manter as tabelas sincronizadas
@@ -64,4 +65,4 @@ O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado
 
 ## Equipe e licença
 
-Os nomes e as responsabilidades informados pela equipe estão no [índice da entrega](docs/entrega/README.md); os telefones para o envio continuam pendentes. A licença do código do projeto ainda não foi declarada em um arquivo `LICENSE`; essa decisão continua pendente para atender integralmente à exigência de código aberto.
+Os nomes, telefones e responsabilidades informados pela equipe estão no [índice da entrega](docs/entrega/README.md); o grupo deve conferir os dados antes do envio. A licença do código do projeto ainda não foi declarada em um arquivo `LICENSE`; essa decisão continua pendente para atender integralmente à exigência de código aberto.

@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
 - [[Task 8 Qualidade, acessibilidade e responsivo — implementada com alcance documentado]] - `references` [EXTRACTED]
-- [[Verificação web oito E2E Chromium, seis telas e axe selecionado]] - `references` [EXTRACTED]
+- [[Verificação web 60 Vitest e 11 E2E no checkpoint 09f5754; axe nas telas exercitadas]] - `references` [INFERRED]
 
 #graphify/concept #graphify/EXTRACTED #community/Plano_histórico_frontend_implementado

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "rationale"
-community: "Entrega e manutenção documental"
-location: "L46"
+community: "Demonstração e troca de modo"
+location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entrega_e_manutenção_documental
+  - community/Demonstração_e_troca_de_modo
 ---
 
 # 56 regras em suposicao_a_validar e nenhuma validada
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[CF não é probabilidade clínica; sem_problema não comprova saúde]] - `semantically_similar_to` [INFERRED]
 - [[Fontes contextuais; todos os 56 CF como suposição a validar]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
+- [[S6-12 achado histórico — Fontes clínicas e CF continuam provisórios]] - `conceptually_related_to` [EXTRACTED]
+- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entrega_e_manutenção_documental
+#graphify/rationale #graphify/EXTRACTED #community/Demonstração_e_troca_de_modo
