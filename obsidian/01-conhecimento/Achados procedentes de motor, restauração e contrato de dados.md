@@ -1,11 +1,12 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "concept"
-community: "Arquitetura e demonstração web"
+community: "Revisões e decisões técnicas"
+location: "L7-L11"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_demonstração_web
+  - community/Revisões_e_decisões_técnicas
 ---
 
 # Achados procedentes de motor, restauração e contrato de dados
@@ -16,4 +17,4 @@ tags:
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web
+#graphify/concept #graphify/EXTRACTED #community/Revisões_e_decisões_técnicas

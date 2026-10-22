@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Acidose e sinais digestivos"
+community: "Tristeza parasitária bovina"
 location: "L121"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Acidose_e_sinais_digestivos
+  - community/Tristeza_parasitária_bovina
 ---
 
 # R-TPB-01: tpb (CF 0,7)
@@ -17,4 +17,4 @@ tags:
 - [[Tristeza Parasitária Bovina (tpb)]] - `implements` [EXTRACTED]
 - [[Urina escura (urina_escura)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Acidose_e_sinais_digestivos
+#graphify/concept #graphify/EXTRACTED #community/Tristeza_parasitária_bovina

@@ -1,15 +1,16 @@
 ---
 type: community
-members: 51
+members: 45
 ---
 
 # Casos sintéticos na v0002
 
-**Members:** 51 nodes
+**Members:** 45 nodes
 
 ## Members
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - document - docs/entrega/04-casos-de-teste.md
 - [[34 casos oito doenças, dois modos, seis bandeiras e regressão de diálogo]] - concept - docs/entrega/02-arquitetura.md
+- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - concept - docs/entrega/02-arquitetura.md
 - [[C-ACI-01 passou, observar, acidose]] - concept - docs/entrega/04-casos-de-teste.md
 - [[C-ACI-02 passou, observar, acidose]] - concept - docs/entrega/04-casos-de-teste.md
 - [[C-ACI-03 passou, sem_problema, acidose]] - concept - docs/entrega/04-casos-de-teste.md
@@ -42,23 +43,16 @@ members: 51
 - [[C-TPB-01 passou, chamar_agora, tpb]] - concept - docs/entrega/04-casos-de-teste.md
 - [[C-TPB-02 passou, chamar_agora, tpb]] - concept - docs/entrega/04-casos-de-teste.md
 - [[C-TPB-03 passou, sem_problema, acidose]] - concept - docs/entrega/04-casos-de-teste.md
-- [[CLI de reserva alerta, explicação, troca e snapshot sem banco]] - concept - docs/entrega/05-apresentacao-e-demo.md
 - [[Cetose  Hipercetonemia (cetose)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[Correção em Sessao retirar decúbito remove R-BV-01 e pausa]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - concept - docs/entrega/04-casos-de-teste.md
 - [[DEV-MAS-01 passou, observar, mastite]] - concept - docs/entrega/04-casos-de-teste.md
-- [[Dermatite Digital Bovina (dermatite_digital)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Deslocamento de Abomaso (deslocamento_abomaso)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Exemplos sintéticos de alerta e sinais mamários pela CLI]] - concept - base/desenvolvimento/LEIA-ME.txt
-- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - rationale - README.md
-- [[HackAtom anamnese explicável com interface React integrada]] - document - README.md
-- [[Inicializador preserva bancobuild e compila SPA se ausente]] - concept - README.md
-- [[Mastite (mastite)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-BV-01 chamar_agora (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R15 coleta adicional pode faltar com evidência inicial fraca]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[R16 esperados históricos diferem; v0002 acrescenta domínio e precisão numéricos]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[Vitestbuild e Playwright com API própriaSQLite temporário]] - concept - README.md
-- [[v0002 ativa e imutável, pai v0001; ativação não valida clínica]] - concept - docs/entrega/02-arquitetura.md
+- [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[S6-02 achado histórico — Caso do abomaso promete coleta não demonstrada]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -68,29 +62,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
-- 9 edges to [[_COMMUNITY_Arquitetura e demonstração web]]
-- 6 edges to [[_COMMUNITY_Cetose e início da lactação]]
-- 6 edges to [[_COMMUNITY_Bandeiras de urgência]]
-- 6 edges to [[_COMMUNITY_Hipocalcemia e mobilidade]]
-- 5 edges to [[_COMMUNITY_Acidose e sinais digestivos]]
-- 4 edges to [[_COMMUNITY_Demonstração e troca de modo]]
-- 4 edges to [[_COMMUNITY_Processo documental verificável]]
+- 12 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
+- 6 edges to [[_COMMUNITY_Mastite e monitoramento]]
+- 5 edges to [[_COMMUNITY_Integração e proveniência da base]]
+- 4 edges to [[_COMMUNITY_Dermatite digital e mobilidade]]
+- 4 edges to [[_COMMUNITY_Hipocalcemia e mobilidade]]
+- 4 edges to [[_COMMUNITY_Bandeiras de urgência]]
+- 4 edges to [[_COMMUNITY_Tristeza parasitária bovina]]
+- 3 edges to [[_COMMUNITY_Acidose e sinais digestivos]]
 - 3 edges to [[_COMMUNITY_Metrite e puerpério]]
-- 3 edges to [[_COMMUNITY_Riscos da interface integrada]]
-- 2 edges to [[_COMMUNITY_Tristeza parasitária bovina]]
-- 2 edges to [[_COMMUNITY_Entrega e manutenção documental]]
-- 2 edges to [[_COMMUNITY_Snapshot e pressupostos do motor]]
-- 2 edges to [[_COMMUNITY_E2E e verificação offline]]
+- 3 edges to [[_COMMUNITY_Demonstração e troca de modo]]
+- 3 edges to [[_COMMUNITY_Revisões e decisões técnicas]]
+- 3 edges to [[_COMMUNITY_Processo documental verificável]]
+- 3 edges to [[_COMMUNITY_Entrega, revisão e contatos]]
+- 3 edges to [[_COMMUNITY_Riscos e limites da entrega]]
+- 1 edge to [[_COMMUNITY_Sinais térmicos e urgência]]
 - 1 edge to [[_COMMUNITY_Sessões, API e motor]]
-- 1 edge to [[_COMMUNITY_Contratos e integração localhost]]
-- 1 edge to [[_COMMUNITY_Consulta web e correções]]
+- 1 edge to [[_COMMUNITY_Plano histórico frontend implementado]]
+- 1 edge to [[_COMMUNITY_Persistência e validação da base]]
 - 1 edge to [[_COMMUNITY_Ensaio humano e entrega final]]
-- 1 edge to [[_COMMUNITY_Versões e execução de casos]]
+- 1 edge to [[_COMMUNITY_Arquitetura do motor e base]]
 
 ## Top bridge nodes
-- [[HackAtom anamnese explicável com interface React integrada]] - degree 14, connects to 9 communities
-- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - degree 6, connects to 4 communities
-- [[CLI de reserva alerta, explicação, troca e snapshot sem banco]] - degree 6, connects to 4 communities
-- [[34 casos sintéticos aprovados na v0002 por executar_caso]] - degree 40, connects to 3 communities
-- [[v0002 ativa e imutável, pai v0001; ativação não valida clínica]] - degree 39, connects to 3 communities
+- [[34 casos sintéticos aprovados na v0002 por executar_caso]] - degree 40, connects to 5 communities
+- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - degree 39, connects to 4 communities
+- [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - degree 6, connects to 4 communities
+- [[R-BV-01 chamar_agora (CF 0,99)]] - degree 6, connects to 3 communities
+- [[34 casos oito doenças, dois modos, seis bandeiras e regressão de diálogo]] - degree 6, connects to 3 communities

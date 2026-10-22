@@ -1,17 +1,18 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Riscos da interface integrada"
+community: "Revisões e decisões técnicas"
 location: "L19"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Riscos_da_interface_integrada
+  - community/Revisões_e_decisões_técnicas
 ---
 
 # R11: Tempo da fala e infraestrutura desconhecidos
 
 ## Connections
-- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
+- [[S6-11 achado histórico — Limites de tempo e envio dependem da organização]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riscos_da_interface_integrada
+#graphify/concept #graphify/EXTRACTED #community/Revisões_e_decisões_técnicas

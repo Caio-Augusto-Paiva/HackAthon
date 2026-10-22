@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Contrato OpenAPI versionado e exemplos por operationId]] - `references` [EXTRACTED]
-- [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - `rationale_for` [EXTRACTED]
+- [[Núcleo local regras explícitas e CF MYCIN; IA auxilia o desenvolvimento]] - `rationale_for` [EXTRACTED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Contratos_e_integração_localhost

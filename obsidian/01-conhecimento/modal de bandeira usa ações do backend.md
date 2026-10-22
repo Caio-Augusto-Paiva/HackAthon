@@ -15,7 +15,7 @@ tags:
 - [[Alerta não fecha por Escfundo; outros diálogos devolvem foco]] - `implements` [EXTRACTED]
 - [[Bandeira vermelha pausa, continuar, ver_parecer]] - `references` [EXTRACTED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
-- [[R21 continuidade após parada automática permanece limitada pelo backend]] - `conceptually_related_to` [EXTRACTED]
+- [[R21 continuidade após parada automática permanece limitada pelo backend]] - `conceptually_related_to` [INFERRED]
 - [[Task 5 Alerta de bandeira — implementada com alcance documentado]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
 

@@ -88,7 +88,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Entrega e manutenção documental]]
+- 1 edge to [[_COMMUNITY_Entrega, revisão e contatos]]
 - 1 edge to [[_COMMUNITY_Agentes de implementação]]
 - 1 edge to [[_COMMUNITY_Fontes clínicas contextuais]]
 

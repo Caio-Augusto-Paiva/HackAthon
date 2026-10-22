@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "document"
-community: "Backend e isolamento do motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Backend_e_isolamento_do_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # Motor de inferencia README (engine/)
@@ -18,4 +18,4 @@ tags:
 - [[Motor independente de web, banco, LLM e servicos externos]] - `references` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor
+#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base

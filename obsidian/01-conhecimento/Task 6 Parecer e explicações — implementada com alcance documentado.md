@@ -12,9 +12,9 @@ tags:
 # Task 6: Parecer e explicações — implementada com alcance documentado
 
 ## Connections
-- [[Camada web implementada Início, Anamnese e Parecer]] - `implements` [EXTRACTED]
+- [[Camada web implementada Início, Anamnese e Parecer]] - `conceptually_related_to` [INFERRED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
-- [[Retomada manual do Parecer pelo alerta continuar e navegar pelo estado]] - `implements` [EXTRACTED]
+- [[Retomada manual do Parecer pelo alerta continuar e navegar pelo estado]] - `conceptually_related_to` [INFERRED]
 - [[parecer de oito doenças, blocos e Como cheguei aqui]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Parecer_retomada_e_limites

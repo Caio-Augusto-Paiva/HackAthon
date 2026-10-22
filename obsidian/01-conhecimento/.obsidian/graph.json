@@ -15,14 +15,14 @@
       }
     },
     {
-      "query": "tag:#community/Especifica\u00e7\u00e3o_do_sistema_especialista",
+      "query": "tag:#community/Persist\u00eancia_e_valida\u00e7\u00e3o_da_base",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Casos_sint\u00e9ticos_na_v0002",
+      "query": "tag:#community/Especifica\u00e7\u00e3o_do_sistema_especialista",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -36,133 +36,133 @@
       }
     },
     {
-      "query": "tag:#community/Sistema_visual_e_componentes",
+      "query": "tag:#community/Casos_sint\u00e9ticos_na_v0002",
       "color": {
         "a": 1,
         "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Sistema_visual_e_componentes",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Riscos_e_limites_da_entrega",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Regras_e_s\u00edmbolos_da_v0002",
       "color": {
         "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Arquitetura_e_demonstra\u00e7\u00e3o_web",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Plano_hist\u00f3rico_frontend_implementado",
-      "color": {
-        "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Hipocalcemia_e_mobilidade",
+      "query": "tag:#community/Entrega_revis\u00e3o_e_contatos",
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Riscos_da_interface_integrada",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Sess\u00f5es_API_e_motor",
       "color": {
         "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Fontes_cl\u00ednicas_contextuais",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Revis\u00e3o_do_validador_kb",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Persist\u00eancia_e_valida\u00e7\u00e3o_da_base",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Agentes_de_implementa\u00e7\u00e3o",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Demonstra\u00e7\u00e3o_e_troca_de_modo",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Contratos_e_integra\u00e7\u00e3o_localhost",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Processo_documental_verific\u00e1vel",
       "color": {
         "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Consulta_web_e_corre\u00e7\u00f5es",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Acidose_e_sinais_digestivos",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Cetose_e_in\u00edcio_da_lacta\u00e7\u00e3o",
-      "color": {
-        "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Backend_e_isolamento_do_motor",
+      "query": "tag:#community/Plano_hist\u00f3rico_frontend_implementado",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
+      "query": "tag:#community/Integra\u00e7\u00e3o_e_proveni\u00eancia_da_base",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Demonstra\u00e7\u00e3o_e_troca_de_modo",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Fontes_cl\u00ednicas_contextuais",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Revis\u00e3o_do_validador_kb",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
       "query": "tag:#community/Produto_e_limites_cl\u00ednicos",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Agentes_de_implementa\u00e7\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Revis\u00f5es_e_decis\u00f5es_t\u00e9cnicas",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Hipocalcemia_e_mobilidade",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Ensaio_humano_e_entrega_final",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Contratos_e_integra\u00e7\u00e3o_localhost",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Sinais_t\u00e9rmicos_e_urg\u00eancia",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -176,35 +176,35 @@
       }
     },
     {
-      "query": "tag:#community/Sinais_t\u00e9rmicos_e_urg\u00eancia",
+      "query": "tag:#community/Ledger_de_implementa\u00e7\u00e3o_kb",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Entrega_e_manuten\u00e7\u00e3o_documental",
+      "query": "tag:#community/Acidose_e_sinais_digestivos",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Ledger_de_implementa\u00e7\u00e3o_kb",
+      "query": "tag:#community/Tristeza_parasit\u00e1ria_bovina",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Modelos_e_valida\u00e7\u00e3o_do_kb",
+      "query": "tag:#community/Arquitetura_do_motor_e_base",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Snapshot_e_pressupostos_do_motor",
+      "query": "tag:#community/Parecer_retomada_e_limites",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -232,220 +232,185 @@
       }
     },
     {
-      "query": "tag:#community/Parecer_retomada_e_limites",
+      "query": "tag:#community/Dermatite_digital_e_mobilidade",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Bandeiras_de_urg\u00eancia",
+      "query": "tag:#community/Mastite_e_monitoramento",
       "color": {
         "a": 1,
         "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Tristeza_parasit\u00e1ria_bovina",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Fontes_can\u00f4nicas_e_revis\u00f5es",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Ciclos_de_depend\u00eancias",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Vers\u00f5es_e_execu\u00e7\u00e3o_de_casos",
+      "query": "tag:#community/Bandeiras_de_urg\u00eancia",
       "color": {
         "a": 1,
-        "rgb": 10253663
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Versionamento_imut\u00e1vel_da_base",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Valores_e_serializa\u00e7\u00e3o",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/M\u00f3dulos_da_base_de_conhecimento",
       "color": {
         "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Contratos_de_sess\u00e3o_e_conflitos",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Precis\u00e3o_num\u00e9rica_da_interface",
+      "color": {
+        "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/E2E_e_verifica\u00e7\u00e3o_offline",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Cliente_da_API_e_erros",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Ensaio_humano_e_entrega_final",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Parecer_e_fatores_de_certeza",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Valida\u00e7\u00e3o_de_grupos_max",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Identificadores_e_telas",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Regras_estruturais_do_validador",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Decis\u00f5es_sobre_branches",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Hist\u00f3rico_das_bandeiras",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Limiares_e_fatores_MYCIN",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Decis\u00e3o_sobre_agentes",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Apresenta\u00e7\u00e3o_RERUM",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Entregas_e_demonstra\u00e7\u00e3o_localhost",
       "color": {
         "a": 1,
-        "rgb": 5873999
+        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/Regulamento_e_cronograma",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Document\u00e1rio_RERUM",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Adapta\u00e7\u00f5es_entre_API_e_motor",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Viabilidade_das_bandeiras",
       "color": {
         "a": 1,
-        "rgb": 10253663
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Prioridades_das_regras",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Hist\u00f3rico_do_executor_de_casos",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Parada_com_m\u00faltiplas_doen\u00e7as",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Tratamento_de_nao_sei",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/C\u00e1lculo_de_potencial",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 10253663
       }
     }
   ]

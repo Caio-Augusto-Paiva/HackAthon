@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Backend e isolamento do motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Backend_e_isolamento_do_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # Compatibilidade com o motor via para_motor (exclude_none)
@@ -16,4 +16,4 @@ tags:
 - [[kb como pacote folha (nao importa engine)]] - `rationale_for` [INFERRED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Backend_e_isolamento_do_motor
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

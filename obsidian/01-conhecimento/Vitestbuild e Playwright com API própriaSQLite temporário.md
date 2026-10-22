@@ -1,17 +1,17 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
-location: "L30"
+community: "Integração e proveniência da base"
+location: "L30-L41"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Integração_e_proveniência_da_base
 ---
 
 # Vitest/build e Playwright com API própria/SQLite temporário
 
 ## Connections
-- [[Inicializador preserva bancobuild e compila SPA se ausente]] - `references` [EXTRACTED]
+- [[Inicializador preserva banco e build existente; compila SPA quando ausente]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Integração_e_proveniência_da_base

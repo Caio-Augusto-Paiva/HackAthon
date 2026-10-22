@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Cetose e início da lactação"
+community: "Regras e símbolos da v0002"
 location: "L69"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cetose_e_início_da_lactação
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # R-CET-01: cetose (CF 0,4)
@@ -18,4 +18,4 @@ tags:
 - [[Inicio lactacao (inicio_lactacao)]] - `references` [EXTRACTED]
 - [[Queda de produção de leite (queda_producao)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cetose_e_início_da_lactação
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

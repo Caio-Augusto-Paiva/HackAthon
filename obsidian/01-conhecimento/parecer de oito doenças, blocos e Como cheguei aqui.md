@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
-- [[R21 continuidade após parada automática permanece limitada pelo backend]] - `conceptually_related_to` [EXTRACTED]
+- [[R21 continuidade após parada automática permanece limitada pelo backend]] - `conceptually_related_to` [INFERRED]
 - [[Task 6 Parecer e explicações — implementada com alcance documentado]] - `references` [EXTRACTED]
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `references` [EXTRACTED]
 

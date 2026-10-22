@@ -43,7 +43,7 @@ tags:
 - [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
 - [[Grumos na caneca (teste_caneca_grumos)]] - `references` [EXTRACTED]
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
-- [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
+- [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Hemoparasitas no esfregaço (esfregaco_hemoparasitas)]] - `references` [EXTRACTED]
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - `references` [EXTRACTED]
 - [[Hipotermia (hipotermia)]] - `references` [EXTRACTED]
@@ -134,6 +134,6 @@ tags:
 - [[Tristeza Parasitária Bovina (tpb)]] - `references` [EXTRACTED]
 - [[Urina escura (urina_escura)]] - `references` [EXTRACTED]
 - [[pH ruminal (ph_ruminal)]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
+- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

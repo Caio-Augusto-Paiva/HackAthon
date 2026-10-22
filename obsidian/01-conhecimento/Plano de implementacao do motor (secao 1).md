@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "document"
-community: "Fontes canônicas e revisões"
+community: "Persistência e validação da base"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Fontes_canônicas_e_revisões
+  - community/Persistência_e_validação_da_base
 ---
 
 # Plano de implementacao do motor (secao 1)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Especificacao autorizada da secao 1 (docspromptssecao-1.md)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Fontes_canônicas_e_revisões
+#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base

@@ -1,15 +1,16 @@
 ---
 type: community
-members: 12
+members: 13
 ---
 
 # Sinais térmicos e urgência
 
-**Members:** 12 nodes
+**Members:** 13 nodes
 
 ## Members
 - [[Febre (febre)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Hipotermia (hipotermia)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-BV-06 chamar_agora (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DER-04 febre (CF 0,95)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DER-05 hipotermia (CF 0,85)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DER-06 hipotermia (CF 0,6)]] - concept - docs/entrega/03-regras-de-producao.md
@@ -29,16 +30,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
+- 13 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
 - 3 edges to [[_COMMUNITY_Bandeiras de urgência]]
 - 2 edges to [[_COMMUNITY_Hipocalcemia e mobilidade]]
-- 1 edge to [[_COMMUNITY_Tristeza parasitária bovina]]
+- 2 edges to [[_COMMUNITY_Tristeza parasitária bovina]]
+- 1 edge to [[_COMMUNITY_Casos sintéticos na v0002]]
 - 1 edge to [[_COMMUNITY_Metrite e puerpério]]
-- 1 edge to [[_COMMUNITY_Acidose e sinais digestivos]]
 
 ## Top bridge nodes
-- [[Febre (febre)]] - degree 10, connects to 6 communities
+- [[Febre (febre)]] - degree 10, connects to 5 communities
 - [[Hipotermia (hipotermia)]] - degree 6, connects to 3 communities
-- [[Temperatura retal (temperatura_retal)]] - degree 7, connects to 2 communities
+- [[R-BV-06 chamar_agora (CF 0,99)]] - degree 4, connects to 3 communities
+- [[Temperatura retal (temperatura_retal)]] - degree 7, connects to 1 community
 - [[Temperatura ao toque das extremidades (extremidades)]] - degree 5, connects to 1 community
-- [[R-DER-10 febre (CF -0,4)]] - degree 3, connects to 1 community
