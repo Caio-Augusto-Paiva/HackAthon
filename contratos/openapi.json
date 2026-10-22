@@ -770,6 +770,7 @@
                 "type": "number"
               },
               {
+                "maxLength": 16,
                 "type": "string"
               },
               {
@@ -1012,6 +1013,7 @@
                 "type": "number"
               },
               {
+                "maxLength": 16,
                 "type": "string"
               },
               {
@@ -2400,6 +2402,7 @@
                 "type": "number"
               },
               {
+                "maxLength": 16,
                 "type": "string"
               },
               {
@@ -2436,10 +2439,12 @@
                       "type": "number"
                     },
                     {
+                      "maxLength": 16,
                       "type": "string"
                     }
                   ]
                 },
+                "maxProperties": 20,
                 "type": "object"
               },
               {
