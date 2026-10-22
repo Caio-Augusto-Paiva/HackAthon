@@ -30,6 +30,13 @@ As probabilidades de ocorrência não foram medidas; não atribuímos percentuai
 - **Correção de resposta:** o modelo `kb.Caso` não representa operações de correção. O cenário é exercitado diretamente com `Sessao` em `tests/casos/test_casos_conhecidos.py`: retirar decúbito remove R-BV-01 e a pausa, preservando dias em lactação e estado térmico. Não foi criado campo incompatível com o contrato em paralelo.
 - **Contagens desta etapa:** 34 casos JSON (31 cenários adaptados, dois exemplos preservados e uma regressão explícita de diálogo), além do teste dedicado de correção. Cada esperado é literal e revisado contra as regras atuais; não é calculado pelo mesmo código que faz a asserção. Esses casos não são validação clínica.
 
+## Ensaio HTTP e dependências de rede
+
+- **Resultado observado:** `scripts/rodar.ps1 -Reset -SemNavegador` iniciou a API com `v0001` e banco fictício em `%LOCALAPPDATA%\anamnese\anamnese.db`, fora do OneDrive. Saúde e HTML do Swagger responderam 200; animal e sessão foram criados, o diálogo chegou ao parecer, `/porque` e `/como` responderam, e 34/34 casos passaram pela API. Os processos iniciados pelo ensaio foram encerrados e a porta 8000 ficou livre.
+- O fluxo foi repetido bloqueando conexões TCP e resolução DNS externas nos processos Python do reset, semente e servidor; loopback permaneceu permitido. O bloqueio foi comprovado por tentativa interceptada para um endereço não loopback. Esse isolamento comprova o fluxo do backend nesse alcance, **não** um ensaio físico com Wi-Fi desligado nem um E2E de navegador. Adaptadores físicos permaneceram ativos; a conta não é administradora e outras sessões dependem da conexão. A equipe ainda deve ensaiar sem Wi-Fi na máquina principal e na reserva.
+- **R17 — Swagger depende de recursos externos (média; B):** `/api/docs` retorna HTML 200, mas referencia JavaScript/CSS em `cdn.jsdelivr.net` e ícone em `fastapi.tiangolo.com`. Pedido à sessão da API: avaliar servir os recursos localmente ou documentar outro cliente offline. Não foi editado nenhum arquivo em `api/`, `web/`, `contratos/` ou `tests/api/`. Até a resolução, não apresentar HTML 200 como prova de Swagger interativo sem internet.
+- Comandos, corpos de requisição, respostas e logs estão em [evidencias-verificacao.json](evidencias-verificacao.json). São dados fictícios de software; não há envio externo nem validação clínica.
+
 ## Correções editoriais aplicadas na Seção 5
 
 | Trecho do roteiro original | Veredito | Evidência integrada | Ajuste aplicado nesta documentação |

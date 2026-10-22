@@ -1,5 +1,5 @@
 {
-  "verificado_em_utc": "2026-10-22T02:00:57.661587+00:00",
+  "verificado_em_utc": "2026-10-22T02:02:23.031306+00:00",
   "python": "3.12.14",
   "branch": "codex-davi",
   "baseline_integracao": "f46cd6e",
@@ -209,7 +209,7 @@
         "-q"
       ],
       "codigo_saida": 0,
-      "saida": "........................................................................ [  7%]\n........................................................................ [ 14%]\n........................................................................ [ 21%]\n........................................................................ [ 28%]\n........................................................................ [ 35%]\n........................................................................ [ 42%]\n.......................................s................................ [ 50%]\n........................................................................ [ 57%]\n...............uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu........................................................................................... [ 67%]\n........................................................................ [ 74%]\n........................................................................ [ 82%]\n........................................................................ [ 89%]\n........................................................................ [ 96%]\n.....................................                                    [100%]\n1006 passed, 1 skipped, 110 subtests passed in 79.30s (0:01:19)\n"
+      "saida": "........................................................................ [  7%]\n........................................................................ [ 14%]\n........................................................................ [ 21%]\n........................................................................ [ 28%]\n........................................................................ [ 35%]\n........................................................................ [ 42%]\n.......................................s................................ [ 50%]\n........................................................................ [ 57%]\n...............uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu........................................................................................... [ 67%]\n........................................................................ [ 74%]\n........................................................................ [ 82%]\n........................................................................ [ 89%]\n........................................................................ [ 96%]\n.....................................                                    [100%]\n1006 passed, 1 skipped, 110 subtests passed in 80.93s (0:01:20)\n"
     },
     {
       "comando": [
@@ -223,7 +223,7 @@
         "."
       ],
       "codigo_saida": 0,
-      "saida": ".............................................................................................................................\n----------------------------------------------------------------------\nRan 125 tests in 3.005s\n\nOK\n"
+      "saida": ".............................................................................................................................\n----------------------------------------------------------------------\nRan 125 tests in 2.975s\n\nOK\n"
     },
     {
       "comando": [
@@ -237,11 +237,5012 @@
       "saida": "Documentação sincronizada com a base e os casos.\n"
     }
   ],
-  "ensaio_http": {
-    "status": "pendente_etapa_4"
-  },
   "ensaio_wifi_fisicamente_desligado": {
     "status": "pendente_equipe",
     "motivo": "Conta sem privilegios administrativos; preservar conectividade das sessoes paralelas. Isolamento dos processos Python sera registrado separadamente."
+  },
+  "ensaios_http": [
+    {
+      "inicio_utc": "2026-10-22T02:01:36.824977+00:00",
+      "modo": "online",
+      "banco": "C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db",
+      "requisicoes": [
+        {
+          "metodo": "GET",
+          "rota": "/api/saude",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "status": "ok",
+            "versao_api": "0.1.0"
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/docs",
+          "corpo": null,
+          "status": 200,
+          "resposta": "\n    <!DOCTYPE html>\n    <html>\n    <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css\">\n    <link rel=\"shortcut icon\" href=\"https://fastapi.tiangolo.com/img/favicon.png\">\n    <title>API de anamnese de bovinos leiteiros - Swagger UI</title>\n    </head>\n    <body>\n    <div id=\"swagger-ui\">\n    </div>\n    <script src=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js\"></script>\n    <!-- `SwaggerUIBundle` is now available on the page -->\n    <script>\n    const ui = SwaggerUIBundle({\n        url: '/api/openapi.json',\n    \"dom_id\": \"#swagger-ui\",\n\"layout\": \"BaseLayout\",\n\"deepLinking\": true,\n\"showExtensions\": true,\n\"showCommonExtensions\": true,\n\n    presets: [\n        SwaggerUIBundle.presets.apis,\n        SwaggerUIBundle.SwaggerUIStandalonePreset\n        ],\n    })\n    </script>\n    </body>\n    </html>\n    "
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/animais",
+          "corpo": {
+            "brinco": "ENSAIO-SECAO5",
+            "nome": "Mimosa fictícia",
+            "ficha": {
+              "data_ultimo_parto": "2026-10-11"
+            }
+          },
+          "status": 201,
+          "resposta": {
+            "id": "an_005",
+            "brinco": "ENSAIO-SECAO5",
+            "nome": "Mimosa fictícia",
+            "dias_em_lactacao": 10,
+            "ficha": {
+              "data_ultimo_parto": "2026-10-11",
+              "retencao_placenta": null
+            },
+            "origens": {}
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes",
+          "corpo": {
+            "animal_id": "an_005",
+            "modo": "produtor"
+          },
+          "status": 201,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 1,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 1,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "estado_termico",
+              "selecao": "unica",
+              "permite_nao_sei": true,
+              "titulo": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
+              "campos": [
+                {
+                  "simbolo": "extremidades",
+                  "entrada": "categorico",
+                  "rotulo": "Temperatura ao toque das extremidades",
+                  "opcoes": [
+                    {
+                      "valor": "normal",
+                      "rotulo": "normal"
+                    },
+                    {
+                      "valor": "quente",
+                      "rotulo": "quente"
+                    },
+                    {
+                      "valor": "fria",
+                      "rotulo": "fria"
+                    }
+                  ],
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/extremidades",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "extremidades",
+            "origem": "triagem",
+            "pergunta": "As orelhas e as patas parecem normais, quentes ou frias ao toque?",
+            "motivo": "Triagem obrigatória, tela 2 de 6",
+            "serve_a": [
+              {
+                "doenca": "hipocalcemia",
+                "nome": "Hipocalcemia Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-HIP-02",
+                  "R-HIP-04"
+                ]
+              },
+              {
+                "doenca": "metrite",
+                "nome": "Metrite Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-MET-02"
+                ]
+              },
+              {
+                "doenca": "tpb",
+                "nome": "Tristeza Parasitária Bovina",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-TPB-01",
+                  "R-TPB-03"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0001"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/estado_termico",
+          "corpo": {
+            "valores": {
+              "extremidades": "normal"
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 2,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 2,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "atitude_locomocao",
+              "selecao": "multipla",
+              "permite_nao_sei": true,
+              "titulo": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção.",
+              "campos": [
+                {
+                  "simbolo": "apatia",
+                  "entrada": "booleano",
+                  "rotulo": "Apatia",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "claudicacao",
+                  "entrada": "booleano",
+                  "rotulo": "Claudicação",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "decubito",
+                  "entrada": "booleano",
+                  "rotulo": "Decúbito",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/apatia",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "apatia",
+            "origem": "triagem",
+            "pergunta": "A vaca está abatida ou pouco responsiva?",
+            "motivo": "Triagem obrigatória, tela 3 de 6",
+            "serve_a": [],
+            "evento_traco": "ev_0002"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/atitude_locomocao",
+          "corpo": {
+            "valores": {
+              "apatia": false,
+              "claudicacao": false,
+              "decubito": false
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 3,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 3,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "apetite_ruminacao",
+              "selecao": "unica",
+              "permite_nao_sei": true,
+              "titulo": "Informe o apetite: normal, reduzido ou ausente.",
+              "campos": [
+                {
+                  "simbolo": "apetite",
+                  "entrada": "categorico",
+                  "rotulo": "Apetite",
+                  "opcoes": [
+                    {
+                      "valor": "normal",
+                      "rotulo": "normal"
+                    },
+                    {
+                      "valor": "reduzido",
+                      "rotulo": "reduzido"
+                    },
+                    {
+                      "valor": "ausente",
+                      "rotulo": "ausente"
+                    }
+                  ],
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/apetite",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "apetite",
+            "origem": "triagem",
+            "pergunta": "Como está o apetite: normal, reduzido ou ausente?",
+            "motivo": "Triagem obrigatória, tela 4 de 6",
+            "serve_a": [
+              {
+                "doenca": "acidose",
+                "nome": "Acidose Ruminal",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-ACI-01"
+                ]
+              },
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-01"
+                ]
+              },
+              {
+                "doenca": "deslocamento_abomaso",
+                "nome": "Deslocamento de Abomaso",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-DAB-01"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0005"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/apetite_ruminacao",
+          "corpo": {
+            "valores": {
+              "apetite": "normal"
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 4,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 4,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "producao_leite",
+              "selecao": "multipla",
+              "permite_nao_sei": true,
+              "titulo": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção.",
+              "campos": [
+                {
+                  "simbolo": "queda_producao",
+                  "entrada": "booleano",
+                  "rotulo": "Queda de produção de leite",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "leite_alterado",
+                  "entrada": "booleano",
+                  "rotulo": "Alteração visível do leite",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "ubere_inflamado",
+                  "entrada": "booleano",
+                  "rotulo": "Inflamação do úbere",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/queda_producao",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "queda_producao",
+            "origem": "triagem",
+            "pergunta": "A produção de leite caiu em relação ao habitual?",
+            "motivo": "Triagem obrigatória, tela 5 de 6",
+            "serve_a": [
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-01"
+                ]
+              },
+              {
+                "doenca": "deslocamento_abomaso",
+                "nome": "Deslocamento de Abomaso",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-DAB-01"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0006"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/producao_leite",
+          "corpo": {
+            "valores": {
+              "queda_producao": false,
+              "leite_alterado": true,
+              "ubere_inflamado": true
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 5,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 5,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "excrecoes",
+              "selecao": "multipla",
+              "permite_nao_sei": true,
+              "titulo": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção.",
+              "campos": [
+                {
+                  "simbolo": "diarreia",
+                  "entrada": "booleano",
+                  "rotulo": "Diarreia",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "corrimento_vaginal",
+                  "entrada": "booleano",
+                  "rotulo": "Corrimento vaginal",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "urina_escura",
+                  "entrada": "booleano",
+                  "rotulo": "Urina escura",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/diarreia",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "diarreia",
+            "origem": "triagem",
+            "pergunta": "A vaca está com diarreia?",
+            "motivo": "Triagem obrigatória, tela 6 de 6",
+            "serve_a": [
+              {
+                "doenca": "acidose",
+                "nome": "Acidose Ruminal",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-ACI-01",
+                  "R-ACI-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0009"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/excrecoes",
+          "corpo": {
+            "valores": {
+              "diarreia": false,
+              "corrimento_vaginal": false,
+              "urina_escura": false
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 6,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "corrimento_fetido",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A secreção da vulva tem cheiro forte e desagradável?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/corrimento_fetido",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "corrimento_fetido",
+            "origem": "fase_dinamica",
+            "pergunta": "A secreção da vulva tem cheiro forte e desagradável?",
+            "motivo": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+            "serve_a": [
+              {
+                "doenca": "metrite",
+                "nome": "Metrite Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-MET-01"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0012"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "corrimento_fetido",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 7,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 1,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "teste_caneca_grumos",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "O teste da caneca mostrou grumos no leite?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/teste_caneca_grumos",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "teste_caneca_grumos",
+            "origem": "fase_dinamica",
+            "pergunta": "O teste da caneca mostrou grumos no leite?",
+            "motivo": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+            "serve_a": [
+              {
+                "doenca": "mastite",
+                "nome": "Mastite",
+                "gravidade": "media",
+                "cf_atual": 0.797,
+                "regras": [
+                  "R-MAS-05"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0013"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "teste_caneca_grumos",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 8,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 2,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "mucosas_palidas_ou_ictericas",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/mucosas_palidas_ou_ictericas",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "mucosas_palidas_ou_ictericas",
+            "origem": "fase_dinamica",
+            "pergunta": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+            "motivo": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+            "serve_a": [
+              {
+                "doenca": "tpb",
+                "nome": "Tristeza Parasitária Bovina",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-TPB-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0014"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "mucosas_palidas_ou_ictericas",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 9,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 3,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "fezes_aquosas_espuma_graos",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/fezes_aquosas_espuma_graos",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "fezes_aquosas_espuma_graos",
+            "origem": "fase_dinamica",
+            "pergunta": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+            "motivo": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+            "serve_a": [
+              {
+                "doenca": "acidose",
+                "nome": "Acidose Ruminal",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-ACI-03"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0015"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "fezes_aquosas_espuma_graos",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 10,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 4,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "halito_adocicado_acetona",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/halito_adocicado_acetona",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "halito_adocicado_acetona",
+            "origem": "fase_dinamica",
+            "pergunta": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+            "motivo": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+            "serve_a": [
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0016"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "halito_adocicado_acetona",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 11,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 5,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "recusa_concentrado_come_volumoso",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A vaca recusa a ração, mas ainda come capim ou feno?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/recusa_concentrado_come_volumoso",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "recusa_concentrado_come_volumoso",
+            "origem": "fase_dinamica",
+            "pergunta": "A vaca recusa a ração, mas ainda come capim ou feno?",
+            "motivo": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+            "serve_a": [
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-03"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0017"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "recusa_concentrado_come_volumoso",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 12,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 6,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "flanco_esquerdo_afundado",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A região do flanco esquerdo parece mais afundada que o habitual?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/flanco_esquerdo_afundado",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "flanco_esquerdo_afundado",
+            "origem": "fase_dinamica",
+            "pergunta": "A região do flanco esquerdo parece mais afundada que o habitual?",
+            "motivo": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+            "serve_a": [
+              {
+                "doenca": "deslocamento_abomaso",
+                "nome": "Deslocamento de Abomaso",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-DAB-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0018"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "flanco_esquerdo_afundado",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 13,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 7,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "retencao_placenta",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "Houve retenção de placenta neste parto?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/retencao_placenta",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "retencao_placenta",
+            "origem": "fase_dinamica",
+            "pergunta": "Houve retenção de placenta neste parto?",
+            "motivo": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+            "serve_a": [
+              {
+                "doenca": "metrite",
+                "nome": "Metrite Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-MET-04"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0019"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "retencao_placenta",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 14,
+            "fase": "encerrada",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 8,
+              "limite_dinamico": 12
+            },
+            "proxima": null,
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": false,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/parecer",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "versao_base": "v0001",
+            "modo": "produtor",
+            "final": true,
+            "motivo_parada": "sem_perguntas",
+            "urgencia": {
+              "nivel": "observar",
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ],
+              "texto": "Observe o animal de perto e chame um veterinário se ele piorar."
+            },
+            "aviso": "A porcentagem é o grau de confiança do sistema, não uma probabilidade.",
+            "blocos": [
+              {
+                "id": "hipoteses_principais",
+                "titulo": "Hipóteses principais",
+                "itens": [
+                  {
+                    "doenca": "mastite",
+                    "nome": "Mastite",
+                    "gravidade": "media",
+                    "cf": 0.797,
+                    "percentual": 80,
+                    "situacao": "com_evidencia"
+                  }
+                ]
+              },
+              {
+                "id": "diagnostico_diferencial",
+                "titulo": "Diagnóstico diferencial / sinais inespecíficos",
+                "itens": []
+              },
+              {
+                "id": "pouco_provavel",
+                "titulo": "Pouco provável ou descartada",
+                "itens": [
+                  {
+                    "doenca": "acidose",
+                    "nome": "Acidose Ruminal",
+                    "gravidade": "media",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "cetose",
+                    "nome": "Cetose / Hipercetonemia",
+                    "gravidade": "media",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "dermatite_digital",
+                    "nome": "Dermatite Digital Bovina",
+                    "gravidade": "baixa",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "deslocamento_abomaso",
+                    "nome": "Deslocamento de Abomaso",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "hipocalcemia",
+                    "nome": "Hipocalcemia Puerperal",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "metrite",
+                    "nome": "Metrite Puerperal",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "tpb",
+                    "nome": "Tristeza Parasitária Bovina",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  }
+                ]
+              }
+            ],
+            "inconclusivas": [],
+            "bandeiras_nao_verificadas": []
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/como/mastite",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "mastite",
+            "nome": "Mastite",
+            "cf": 0.797,
+            "percentual": 80,
+            "combinacao": [
+              {
+                "apos_regra": "R-MAS-02",
+                "antes": 0.0,
+                "depois": 0.5
+              },
+              {
+                "apos_regra": "R-MAS-05",
+                "antes": 0.5,
+                "depois": 0.797
+              }
+            ],
+            "evidencias": [
+              {
+                "regra_id": "R-MAS-02",
+                "texto": "R-MAS-02: SE Inflamação do úbere = sim ENTÃO Mastite (CF 0,5)",
+                "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+                "status": "suposicao_a_validar",
+                "premissa": 1.0,
+                "cf_regra": 0.5,
+                "cf_saida": 0.5,
+                "entradas": [
+                  {
+                    "simbolo": "ubere_inflamado",
+                    "valor": true,
+                    "cf": 1.0,
+                    "origem": "resposta",
+                    "tela_id": "producao_leite",
+                    "evidencias": null
+                  }
+                ]
+              },
+              {
+                "regra_id": "R-MAS-05",
+                "texto": "R-MAS-05: SE Evidência agrupada de alteração do leite = sim ENTÃO Mastite (CF 0,99)",
+                "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+                "status": "suposicao_a_validar",
+                "premissa": 0.6,
+                "cf_regra": 0.99,
+                "cf_saida": 0.594,
+                "entradas": [
+                  {
+                    "simbolo": "evidencia_alteracao_leite",
+                    "valor": true,
+                    "cf": 0.6,
+                    "origem": "regra",
+                    "tela_id": null,
+                    "evidencias": [
+                      {
+                        "regra_id": "R-MAS-01",
+                        "texto": "R-MAS-01: SE Alteração visível do leite = sim ENTÃO Evidência agrupada de alteração do leite (CF 0,6)",
+                        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+                        "status": "suposicao_a_validar",
+                        "premissa": 1.0,
+                        "cf_regra": 0.6,
+                        "cf_saida": 0.6,
+                        "entradas": [
+                          {
+                            "simbolo": "leite_alterado",
+                            "valor": true,
+                            "cf": 1.0,
+                            "origem": "resposta",
+                            "tela_id": "producao_leite",
+                            "evidencias": null
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/base/versoes/v0001/execucoes",
+          "corpo": {
+            "casos": null
+          },
+          "status": 201,
+          "resposta": {
+            "execucao_id": "ex_0001",
+            "versao": "v0001",
+            "executada_em": "2026-10-21T23:01:45",
+            "total": 34,
+            "passou": 34,
+            "falhou": 0,
+            "comparada_com": null,
+            "resultados": [
+              {
+                "caso_id": "C-MAS-01",
+                "descricao": "Mastite: leite alterado e úbere inflamado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 80,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MAS-02",
+                "descricao": "Mastite com sinais sistêmicos Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 88,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "metrite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [
+                    "R-BV-05"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MAS-03",
+                "descricao": "Mastite ambígua: só úbere inflamado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 50,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MET-01",
+                "descricao": "Metrite no puerpério com corrimento fétido Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "metrite",
+                  "top3_contem": [
+                    "metrite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "metrite": 85,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MET-02",
+                "descricao": "Metrite: febre e achados uterinos Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "metrite",
+                  "top3_contem": [
+                    "metrite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "metrite": 85,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MET-03",
+                "descricao": "Metrite ambígua: corrimento sem confirmação de odor Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-TPB-01",
+                "descricao": "TPB: urina escura, mucosas e carrapatos Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "tpb",
+                  "top3_contem": [
+                    "tpb",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "tpb": 77,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [
+                    "R-BV-02"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-TPB-02",
+                "descricao": "TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "tpb",
+                  "top3_contem": [
+                    "tpb",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "tpb": 97,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [
+                    "R-BV-02"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-TPB-03",
+                "descricao": "TPB ambígua: calor e carrapatos sem mucosas informadas Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-CET-01",
+                "descricao": "Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 83,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-CET-02",
+                "descricao": "Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 91,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-CET-03",
+                "descricao": "Cetose ambígua: só apetite e produção Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 40,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-HIP-01",
+                "descricao": "Hipocalcemia: decúbito no periparto Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "hipocalcemia",
+                  "top3_contem": [
+                    "hipocalcemia",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "hipocalcemia": 64,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [
+                    "R-BV-01"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-HIP-02",
+                "descricao": "Hipocalcemia: hipotermia, apatia e cálcio baixo Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "hipocalcemia",
+                  "top3_contem": [
+                    "hipocalcemia",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "hipocalcemia": 90,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [
+                    "R-BV-04"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-HIP-03",
+                "descricao": "Hipocalcemia ambígua: frio sem decúbito Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-01",
+                "descricao": "Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício de regressão; suposição a validar. Observação prévia fictícia de flanco afundado fornecida na ficha do executor; não comprova coleta pelo diálogo/API. Ver R15.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "deslocamento_abomaso",
+                  "top3_contem": [
+                    "deslocamento_abomaso",
+                    "cetose",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "deslocamento_abomaso": 58,
+                    "cetose": 40,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-02",
+                "descricao": "Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "deslocamento_abomaso",
+                  "top3_contem": [
+                    "deslocamento_abomaso",
+                    "cetose",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "deslocamento_abomaso": 93,
+                    "cetose": 40,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-03",
+                "descricao": "Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-ACI-01",
+                "descricao": "Acidose: diarreia após mudança de concentrado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 85,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-ACI-02",
+                "descricao": "Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 92,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-ACI-03",
+                "descricao": "Acidose ambígua: diarreia e fezes com grãos Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DD-01",
+                "descricao": "Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "dermatite_digital",
+                  "top3_contem": [
+                    "dermatite_digital",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "dermatite_digital": 65,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DD-02",
+                "descricao": "Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "dermatite_digital",
+                  "top3_contem": [
+                    "dermatite_digital",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "dermatite_digital": 90,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DD-03",
+                "descricao": "Dermatite digital ambígua: claudicação sem inspeção de lesão Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "dermatite_digital",
+                  "top3_contem": [
+                    "dermatite_digital",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "dermatite_digital": 30,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-BV-01",
+                "descricao": "Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [
+                    "R-BV-01"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-BV-02",
+                "descricao": "Bandeira de apetite ausente com apatia Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [
+                    "R-BV-03"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-BV-03",
+                "descricao": "Bandeira de febre alta isolada Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [
+                    "R-BV-06"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-COM-01",
+                "descricao": "Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "metrite",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "mastite": 80,
+                    "metrite": 74,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MODO-01",
+                "descricao": "Troca produtor para veterinário preserva evidência e acrescenta ping Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "deslocamento_abomaso",
+                  "top3_contem": [
+                    "deslocamento_abomaso",
+                    "cetose",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "deslocamento_abomaso": 93,
+                    "cetose": 40,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-LIM-01",
+                "descricao": "Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de regressão; suposição a validar. Só cetose supera o limiar estrito de 0,35; acidose=0,35 e dermatite=0,30 não são inconclusivas.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "acidose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "cetose": 40,
+                    "acidose": 35,
+                    "dermatite_digital": 30,
+                    "deslocamento_abomaso": 30,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "limite",
+                  "bandeiras": [],
+                  "inconclusivas": [
+                    "cetose"
+                  ],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-SAD-01",
+                "descricao": "Triagem sem alterações Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "DEV-BV-01",
+                "descricao": "Demonstração sintética de alerta por incapacidade de se levantar. Suposição a validar; não constitui caso clínico validado.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "hipocalcemia",
+                  "top3_contem": [
+                    "hipocalcemia",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "hipocalcemia": 64,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "limite",
+                  "bandeiras": [
+                    "R-BV-01"
+                  ],
+                  "inconclusivas": [
+                    "hipocalcemia"
+                  ],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "DEV-MAS-01",
+                "descricao": "Demonstração sintética de leite alterado e úbere inflamado durante a triagem. Suposição a validar; não constitui caso clínico validado.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 80,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "limite",
+                  "bandeiras": [],
+                  "inconclusivas": [
+                    "mastite"
+                  ],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-DIALOGO",
+                "descricao": "Regressão da limitação R15: sem observação prévia do flanco, o diálogo não a solicita. Caso fictício; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 40,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              }
+            ],
+            "mudancas": []
+          }
+        }
+      ],
+      "adaptadores_fisicos_desligados": false,
+      "comando": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/rodar.ps1 -Reset -SemNavegador",
+      "swagger_recursos_externos": [
+        "https://cdn.jsdelivr.net",
+        "https://fastapi.tiangolo.com"
+      ],
+      "resumo": {
+        "versao": "v0001",
+        "sessao_final": true,
+        "urgencia": "observar",
+        "casos": 34,
+        "passou": 34,
+        "falhou": 0
+      },
+      "status": "passou",
+      "log_servidor": "Recriando o banco C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db e semeando animais fict�cios...\nBanco recriado: C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db\nAnimais fictícios criados: 4 (banco: C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db).\nAviso: web\\dist n�o existe; s� a API estar� no ar (documenta��o em /api/docs).\nSubindo o servidor em http://127.0.0.1:8000 ...\nINFO:     Started server process [7884]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     127.0.0.1:57263 - \"GET /api/saude HTTP/1.1\" 200 OK\n\nPronto: http://localhost:8000\nDocumenta��o da API: http://localhost:8000/api/docs\nCtrl+C encerra o servidor.\nINFO:     127.0.0.1:57262 - \"GET /api/saude HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/saude HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/docs HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/animais HTTP/1.1\" 201 Created\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes HTTP/1.1\" 201 Created\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/extremidades HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/triagem/estado_termico HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/apatia HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/triagem/atitude_locomocao HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/apetite HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/triagem/apetite_ruminacao HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/queda_producao HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/triagem/producao_leite HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/diarreia HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/triagem/excrecoes HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/corrimento_fetido HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/teste_caneca_grumos HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/mucosas_palidas_ou_ictericas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/fezes_aquosas_espuma_graos HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/halito_adocicado_acetona HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/recusa_concentrado_come_volumoso HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/flanco_esquerdo_afundado HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/porque/retencao_placenta HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/parecer HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"GET /api/sessoes/ses_0001/como/mastite HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57262 - \"POST /api/base/versoes/v0001/execucoes HTTP/1.1\" 201 Created\n",
+      "servidor_encerrado": true,
+      "fim_utc": "2026-10-22T02:01:45.538894+00:00"
+    },
+    {
+      "inicio_utc": "2026-10-22T02:02:14.779642+00:00",
+      "modo": "isolado",
+      "banco": "C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db",
+      "requisicoes": [
+        {
+          "metodo": "GET",
+          "rota": "/api/saude",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "status": "ok",
+            "versao_api": "0.1.0"
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/docs",
+          "corpo": null,
+          "status": 200,
+          "resposta": "\n    <!DOCTYPE html>\n    <html>\n    <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css\">\n    <link rel=\"shortcut icon\" href=\"https://fastapi.tiangolo.com/img/favicon.png\">\n    <title>API de anamnese de bovinos leiteiros - Swagger UI</title>\n    </head>\n    <body>\n    <div id=\"swagger-ui\">\n    </div>\n    <script src=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js\"></script>\n    <!-- `SwaggerUIBundle` is now available on the page -->\n    <script>\n    const ui = SwaggerUIBundle({\n        url: '/api/openapi.json',\n    \"dom_id\": \"#swagger-ui\",\n\"layout\": \"BaseLayout\",\n\"deepLinking\": true,\n\"showExtensions\": true,\n\"showCommonExtensions\": true,\n\n    presets: [\n        SwaggerUIBundle.presets.apis,\n        SwaggerUIBundle.SwaggerUIStandalonePreset\n        ],\n    })\n    </script>\n    </body>\n    </html>\n    "
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/animais",
+          "corpo": {
+            "brinco": "ENSAIO-SECAO5",
+            "nome": "Mimosa fictícia",
+            "ficha": {
+              "data_ultimo_parto": "2026-10-11"
+            }
+          },
+          "status": 201,
+          "resposta": {
+            "id": "an_005",
+            "brinco": "ENSAIO-SECAO5",
+            "nome": "Mimosa fictícia",
+            "dias_em_lactacao": 10,
+            "ficha": {
+              "data_ultimo_parto": "2026-10-11",
+              "retencao_placenta": null
+            },
+            "origens": {}
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes",
+          "corpo": {
+            "animal_id": "an_005",
+            "modo": "produtor"
+          },
+          "status": 201,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 1,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 1,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "estado_termico",
+              "selecao": "unica",
+              "permite_nao_sei": true,
+              "titulo": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
+              "campos": [
+                {
+                  "simbolo": "extremidades",
+                  "entrada": "categorico",
+                  "rotulo": "Temperatura ao toque das extremidades",
+                  "opcoes": [
+                    {
+                      "valor": "normal",
+                      "rotulo": "normal"
+                    },
+                    {
+                      "valor": "quente",
+                      "rotulo": "quente"
+                    },
+                    {
+                      "valor": "fria",
+                      "rotulo": "fria"
+                    }
+                  ],
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/extremidades",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "extremidades",
+            "origem": "triagem",
+            "pergunta": "As orelhas e as patas parecem normais, quentes ou frias ao toque?",
+            "motivo": "Triagem obrigatória, tela 2 de 6",
+            "serve_a": [
+              {
+                "doenca": "hipocalcemia",
+                "nome": "Hipocalcemia Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-HIP-02",
+                  "R-HIP-04"
+                ]
+              },
+              {
+                "doenca": "metrite",
+                "nome": "Metrite Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-MET-02"
+                ]
+              },
+              {
+                "doenca": "tpb",
+                "nome": "Tristeza Parasitária Bovina",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-TPB-01",
+                  "R-TPB-03"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0001"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/estado_termico",
+          "corpo": {
+            "valores": {
+              "extremidades": "normal"
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 2,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 2,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "atitude_locomocao",
+              "selecao": "multipla",
+              "permite_nao_sei": true,
+              "titulo": "Marque as alterações: abatimento, mancar ou incapacidade de se levantar. Sem alteração: nenhuma opção.",
+              "campos": [
+                {
+                  "simbolo": "apatia",
+                  "entrada": "booleano",
+                  "rotulo": "Apatia",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "claudicacao",
+                  "entrada": "booleano",
+                  "rotulo": "Claudicação",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "decubito",
+                  "entrada": "booleano",
+                  "rotulo": "Decúbito",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/apatia",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "apatia",
+            "origem": "triagem",
+            "pergunta": "A vaca está abatida ou pouco responsiva?",
+            "motivo": "Triagem obrigatória, tela 3 de 6",
+            "serve_a": [],
+            "evento_traco": "ev_0002"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/atitude_locomocao",
+          "corpo": {
+            "valores": {
+              "apatia": false,
+              "claudicacao": false,
+              "decubito": false
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 3,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 3,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "apetite_ruminacao",
+              "selecao": "unica",
+              "permite_nao_sei": true,
+              "titulo": "Informe o apetite: normal, reduzido ou ausente.",
+              "campos": [
+                {
+                  "simbolo": "apetite",
+                  "entrada": "categorico",
+                  "rotulo": "Apetite",
+                  "opcoes": [
+                    {
+                      "valor": "normal",
+                      "rotulo": "normal"
+                    },
+                    {
+                      "valor": "reduzido",
+                      "rotulo": "reduzido"
+                    },
+                    {
+                      "valor": "ausente",
+                      "rotulo": "ausente"
+                    }
+                  ],
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/apetite",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "apetite",
+            "origem": "triagem",
+            "pergunta": "Como está o apetite: normal, reduzido ou ausente?",
+            "motivo": "Triagem obrigatória, tela 4 de 6",
+            "serve_a": [
+              {
+                "doenca": "acidose",
+                "nome": "Acidose Ruminal",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-ACI-01"
+                ]
+              },
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-01"
+                ]
+              },
+              {
+                "doenca": "deslocamento_abomaso",
+                "nome": "Deslocamento de Abomaso",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-DAB-01"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0005"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/apetite_ruminacao",
+          "corpo": {
+            "valores": {
+              "apetite": "normal"
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 4,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 4,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "producao_leite",
+              "selecao": "multipla",
+              "permite_nao_sei": true,
+              "titulo": "Marque as alterações: queda de produção, leite alterado ou úbere inflamado. Sem alteração: nenhuma opção.",
+              "campos": [
+                {
+                  "simbolo": "queda_producao",
+                  "entrada": "booleano",
+                  "rotulo": "Queda de produção de leite",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "leite_alterado",
+                  "entrada": "booleano",
+                  "rotulo": "Alteração visível do leite",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "ubere_inflamado",
+                  "entrada": "booleano",
+                  "rotulo": "Inflamação do úbere",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "sem_problema",
+              "provisoria": true,
+              "origem": "padrao",
+              "regras": []
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/queda_producao",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "queda_producao",
+            "origem": "triagem",
+            "pergunta": "A produção de leite caiu em relação ao habitual?",
+            "motivo": "Triagem obrigatória, tela 5 de 6",
+            "serve_a": [
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-01"
+                ]
+              },
+              {
+                "doenca": "deslocamento_abomaso",
+                "nome": "Deslocamento de Abomaso",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-DAB-01"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0006"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/producao_leite",
+          "corpo": {
+            "valores": {
+              "queda_producao": false,
+              "leite_alterado": true,
+              "ubere_inflamado": true
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 5,
+            "fase": "triagem",
+            "progresso": {
+              "triagem_respondidas": 5,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "tela_triagem",
+              "tela_id": "excrecoes",
+              "selecao": "multipla",
+              "permite_nao_sei": true,
+              "titulo": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção.",
+              "campos": [
+                {
+                  "simbolo": "diarreia",
+                  "entrada": "booleano",
+                  "rotulo": "Diarreia",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "corrimento_vaginal",
+                  "entrada": "booleano",
+                  "rotulo": "Corrimento vaginal",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                },
+                {
+                  "simbolo": "urina_escura",
+                  "entrada": "booleano",
+                  "rotulo": "Urina escura",
+                  "opcoes": null,
+                  "unidade": null,
+                  "min": null,
+                  "max": null
+                }
+              ]
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/diarreia",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "diarreia",
+            "origem": "triagem",
+            "pergunta": "A vaca está com diarreia?",
+            "motivo": "Triagem obrigatória, tela 6 de 6",
+            "serve_a": [
+              {
+                "doenca": "acidose",
+                "nome": "Acidose Ruminal",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-ACI-01",
+                  "R-ACI-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0009"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/triagem/excrecoes",
+          "corpo": {
+            "valores": {
+              "diarreia": false,
+              "corrimento_vaginal": false,
+              "urina_escura": false
+            }
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 6,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 0,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "corrimento_fetido",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A secreção da vulva tem cheiro forte e desagradável?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/corrimento_fetido",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "corrimento_fetido",
+            "origem": "fase_dinamica",
+            "pergunta": "A secreção da vulva tem cheiro forte e desagradável?",
+            "motivo": "Esclarecer as hipóteses relacionadas a corrimento vaginal fétido.",
+            "serve_a": [
+              {
+                "doenca": "metrite",
+                "nome": "Metrite Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-MET-01"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0012"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "corrimento_fetido",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 7,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 1,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "teste_caneca_grumos",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "O teste da caneca mostrou grumos no leite?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/teste_caneca_grumos",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "teste_caneca_grumos",
+            "origem": "fase_dinamica",
+            "pergunta": "O teste da caneca mostrou grumos no leite?",
+            "motivo": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+            "serve_a": [
+              {
+                "doenca": "mastite",
+                "nome": "Mastite",
+                "gravidade": "media",
+                "cf_atual": 0.797,
+                "regras": [
+                  "R-MAS-05"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0013"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "teste_caneca_grumos",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 8,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 2,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "mucosas_palidas_ou_ictericas",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/mucosas_palidas_ou_ictericas",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "mucosas_palidas_ou_ictericas",
+            "origem": "fase_dinamica",
+            "pergunta": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+            "motivo": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+            "serve_a": [
+              {
+                "doenca": "tpb",
+                "nome": "Tristeza Parasitária Bovina",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-TPB-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0014"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "mucosas_palidas_ou_ictericas",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 9,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 3,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "fezes_aquosas_espuma_graos",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/fezes_aquosas_espuma_graos",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "fezes_aquosas_espuma_graos",
+            "origem": "fase_dinamica",
+            "pergunta": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+            "motivo": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+            "serve_a": [
+              {
+                "doenca": "acidose",
+                "nome": "Acidose Ruminal",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-ACI-03"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0015"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "fezes_aquosas_espuma_graos",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 10,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 4,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "halito_adocicado_acetona",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/halito_adocicado_acetona",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "halito_adocicado_acetona",
+            "origem": "fase_dinamica",
+            "pergunta": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+            "motivo": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+            "serve_a": [
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0016"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "halito_adocicado_acetona",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 11,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 5,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "recusa_concentrado_come_volumoso",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A vaca recusa a ração, mas ainda come capim ou feno?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/recusa_concentrado_come_volumoso",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "recusa_concentrado_come_volumoso",
+            "origem": "fase_dinamica",
+            "pergunta": "A vaca recusa a ração, mas ainda come capim ou feno?",
+            "motivo": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+            "serve_a": [
+              {
+                "doenca": "cetose",
+                "nome": "Cetose / Hipercetonemia",
+                "gravidade": "media",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-CET-03"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0017"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "recusa_concentrado_come_volumoso",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 12,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 6,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "flanco_esquerdo_afundado",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "A região do flanco esquerdo parece mais afundada que o habitual?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/flanco_esquerdo_afundado",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "flanco_esquerdo_afundado",
+            "origem": "fase_dinamica",
+            "pergunta": "A região do flanco esquerdo parece mais afundada que o habitual?",
+            "motivo": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+            "serve_a": [
+              {
+                "doenca": "deslocamento_abomaso",
+                "nome": "Deslocamento de Abomaso",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-DAB-02"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0018"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "flanco_esquerdo_afundado",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 13,
+            "fase": "dinamica",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 7,
+              "limite_dinamico": 12
+            },
+            "proxima": {
+              "tipo": "pergunta",
+              "simbolo": "retencao_placenta",
+              "entrada": "booleano",
+              "permite_nao_sei": true,
+              "texto": "Houve retenção de placenta neste parto?",
+              "motivo_resumo": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+              "porque_disponivel": true,
+              "opcoes": null,
+              "unidade": null,
+              "min": null,
+              "max": null
+            },
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": true,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/porque/retencao_placenta",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "retencao_placenta",
+            "origem": "fase_dinamica",
+            "pergunta": "Houve retenção de placenta neste parto?",
+            "motivo": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+            "serve_a": [
+              {
+                "doenca": "metrite",
+                "nome": "Metrite Puerperal",
+                "gravidade": "alta",
+                "cf_atual": 0.0,
+                "regras": [
+                  "R-MET-04"
+                ]
+              }
+            ],
+            "evento_traco": "ev_0019"
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/sessoes/ses_0001/respostas",
+          "corpo": {
+            "simbolo": "retencao_placenta",
+            "nao_sei": true
+          },
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "animal_id": "an_005",
+            "modo": "produtor",
+            "versao_base": "v0001",
+            "revisao": 14,
+            "fase": "encerrada",
+            "progresso": {
+              "triagem_respondidas": 6,
+              "triagem_total": 6,
+              "dinamicas_feitas": 8,
+              "limite_dinamico": 12
+            },
+            "proxima": null,
+            "urgencia": {
+              "nivel": "observar",
+              "provisoria": false,
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ]
+            },
+            "alerta": null
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/parecer",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "sessao_id": "ses_0001",
+            "versao_base": "v0001",
+            "modo": "produtor",
+            "final": true,
+            "motivo_parada": "sem_perguntas",
+            "urgencia": {
+              "nivel": "observar",
+              "origem": "regra_urgencia",
+              "regras": [
+                "R-URG-05"
+              ],
+              "texto": "Observe o animal de perto e chame um veterinário se ele piorar."
+            },
+            "aviso": "A porcentagem é o grau de confiança do sistema, não uma probabilidade.",
+            "blocos": [
+              {
+                "id": "hipoteses_principais",
+                "titulo": "Hipóteses principais",
+                "itens": [
+                  {
+                    "doenca": "mastite",
+                    "nome": "Mastite",
+                    "gravidade": "media",
+                    "cf": 0.797,
+                    "percentual": 80,
+                    "situacao": "com_evidencia"
+                  }
+                ]
+              },
+              {
+                "id": "diagnostico_diferencial",
+                "titulo": "Diagnóstico diferencial / sinais inespecíficos",
+                "itens": []
+              },
+              {
+                "id": "pouco_provavel",
+                "titulo": "Pouco provável ou descartada",
+                "itens": [
+                  {
+                    "doenca": "acidose",
+                    "nome": "Acidose Ruminal",
+                    "gravidade": "media",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "cetose",
+                    "nome": "Cetose / Hipercetonemia",
+                    "gravidade": "media",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "dermatite_digital",
+                    "nome": "Dermatite Digital Bovina",
+                    "gravidade": "baixa",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "deslocamento_abomaso",
+                    "nome": "Deslocamento de Abomaso",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "hipocalcemia",
+                    "nome": "Hipocalcemia Puerperal",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "metrite",
+                    "nome": "Metrite Puerperal",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  },
+                  {
+                    "doenca": "tpb",
+                    "nome": "Tristeza Parasitária Bovina",
+                    "gravidade": "alta",
+                    "cf": 0.0,
+                    "percentual": 0,
+                    "situacao": "sem_evidencia"
+                  }
+                ]
+              }
+            ],
+            "inconclusivas": [],
+            "bandeiras_nao_verificadas": []
+          }
+        },
+        {
+          "metodo": "GET",
+          "rota": "/api/sessoes/ses_0001/como/mastite",
+          "corpo": null,
+          "status": 200,
+          "resposta": {
+            "simbolo": "mastite",
+            "nome": "Mastite",
+            "cf": 0.797,
+            "percentual": 80,
+            "combinacao": [
+              {
+                "apos_regra": "R-MAS-02",
+                "antes": 0.0,
+                "depois": 0.5
+              },
+              {
+                "apos_regra": "R-MAS-05",
+                "antes": 0.5,
+                "depois": 0.797
+              }
+            ],
+            "evidencias": [
+              {
+                "regra_id": "R-MAS-02",
+                "texto": "R-MAS-02: SE Inflamação do úbere = sim ENTÃO Mastite (CF 0,5)",
+                "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+                "status": "suposicao_a_validar",
+                "premissa": 1.0,
+                "cf_regra": 0.5,
+                "cf_saida": 0.5,
+                "entradas": [
+                  {
+                    "simbolo": "ubere_inflamado",
+                    "valor": true,
+                    "cf": 1.0,
+                    "origem": "resposta",
+                    "tela_id": "producao_leite",
+                    "evidencias": null
+                  }
+                ]
+              },
+              {
+                "regra_id": "R-MAS-05",
+                "texto": "R-MAS-05: SE Evidência agrupada de alteração do leite = sim ENTÃO Mastite (CF 0,99)",
+                "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+                "status": "suposicao_a_validar",
+                "premissa": 0.6,
+                "cf_regra": 0.99,
+                "cf_saida": 0.594,
+                "entradas": [
+                  {
+                    "simbolo": "evidencia_alteracao_leite",
+                    "valor": true,
+                    "cf": 0.6,
+                    "origem": "regra",
+                    "tela_id": null,
+                    "evidencias": [
+                      {
+                        "regra_id": "R-MAS-01",
+                        "texto": "R-MAS-01: SE Alteração visível do leite = sim ENTÃO Evidência agrupada de alteração do leite (CF 0,6)",
+                        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+                        "status": "suposicao_a_validar",
+                        "premissa": 1.0,
+                        "cf_regra": 0.6,
+                        "cf_saida": 0.6,
+                        "entradas": [
+                          {
+                            "simbolo": "leite_alterado",
+                            "valor": true,
+                            "cf": 1.0,
+                            "origem": "resposta",
+                            "tela_id": "producao_leite",
+                            "evidencias": null
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "metodo": "POST",
+          "rota": "/api/base/versoes/v0001/execucoes",
+          "corpo": {
+            "casos": null
+          },
+          "status": 201,
+          "resposta": {
+            "execucao_id": "ex_0001",
+            "versao": "v0001",
+            "executada_em": "2026-10-21T23:02:22",
+            "total": 34,
+            "passou": 34,
+            "falhou": 0,
+            "comparada_com": null,
+            "resultados": [
+              {
+                "caso_id": "C-MAS-01",
+                "descricao": "Mastite: leite alterado e úbere inflamado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 80,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MAS-02",
+                "descricao": "Mastite com sinais sistêmicos Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 88,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "metrite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [
+                    "R-BV-05"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MAS-03",
+                "descricao": "Mastite ambígua: só úbere inflamado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 50,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MET-01",
+                "descricao": "Metrite no puerpério com corrimento fétido Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "metrite",
+                  "top3_contem": [
+                    "metrite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "metrite": 85,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MET-02",
+                "descricao": "Metrite: febre e achados uterinos Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "metrite",
+                  "top3_contem": [
+                    "metrite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "metrite": 85,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MET-03",
+                "descricao": "Metrite ambígua: corrimento sem confirmação de odor Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-TPB-01",
+                "descricao": "TPB: urina escura, mucosas e carrapatos Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "tpb",
+                  "top3_contem": [
+                    "tpb",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "tpb": 77,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [
+                    "R-BV-02"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-TPB-02",
+                "descricao": "TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "tpb",
+                  "top3_contem": [
+                    "tpb",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "tpb": 97,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [
+                    "R-BV-02"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-TPB-03",
+                "descricao": "TPB ambígua: calor e carrapatos sem mucosas informadas Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-CET-01",
+                "descricao": "Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 83,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-CET-02",
+                "descricao": "Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 91,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-CET-03",
+                "descricao": "Cetose ambígua: só apetite e produção Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 40,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-HIP-01",
+                "descricao": "Hipocalcemia: decúbito no periparto Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "hipocalcemia",
+                  "top3_contem": [
+                    "hipocalcemia",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "hipocalcemia": 64,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [
+                    "R-BV-01"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-HIP-02",
+                "descricao": "Hipocalcemia: hipotermia, apatia e cálcio baixo Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "hipocalcemia",
+                  "top3_contem": [
+                    "hipocalcemia",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "hipocalcemia": 90,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [
+                    "R-BV-04"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-HIP-03",
+                "descricao": "Hipocalcemia ambígua: frio sem decúbito Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-01",
+                "descricao": "Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício de regressão; suposição a validar. Observação prévia fictícia de flanco afundado fornecida na ficha do executor; não comprova coleta pelo diálogo/API. Ver R15.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "deslocamento_abomaso",
+                  "top3_contem": [
+                    "deslocamento_abomaso",
+                    "cetose",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "deslocamento_abomaso": 58,
+                    "cetose": 40,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-02",
+                "descricao": "Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "deslocamento_abomaso",
+                  "top3_contem": [
+                    "deslocamento_abomaso",
+                    "cetose",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "deslocamento_abomaso": 93,
+                    "cetose": 40,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-03",
+                "descricao": "Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-ACI-01",
+                "descricao": "Acidose: diarreia após mudança de concentrado Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 85,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-ACI-02",
+                "descricao": "Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 92,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-ACI-03",
+                "descricao": "Acidose ambígua: diarreia e fezes com grãos Caso fictício de regressão; suposição a validar. Limitação documentada em R15: o sinal adicional não é solicitado no diálogo da v0001.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DD-01",
+                "descricao": "Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "dermatite_digital",
+                  "top3_contem": [
+                    "dermatite_digital",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "dermatite_digital": 65,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DD-02",
+                "descricao": "Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "dermatite_digital",
+                  "top3_contem": [
+                    "dermatite_digital",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "dermatite_digital": 90,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DD-03",
+                "descricao": "Dermatite digital ambígua: claudicação sem inspeção de lesão Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "dermatite_digital",
+                  "top3_contem": [
+                    "dermatite_digital",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "dermatite_digital": 30,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-BV-01",
+                "descricao": "Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [
+                    "R-BV-01"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-BV-02",
+                "descricao": "Bandeira de apetite ausente com apatia Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [
+                    "R-BV-03"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-BV-03",
+                "descricao": "Bandeira de febre alta isolada Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0,
+                    "hipocalcemia": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [
+                    "R-BV-06"
+                  ],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-COM-01",
+                "descricao": "Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "metrite",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "mastite": 80,
+                    "metrite": 74,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_perguntas",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-MODO-01",
+                "descricao": "Troca produtor para veterinário preserva evidência e acrescenta ping Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "deslocamento_abomaso",
+                  "top3_contem": [
+                    "deslocamento_abomaso",
+                    "cetose",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "deslocamento_abomaso": 93,
+                    "cetose": 40,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "confirmacao",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-LIM-01",
+                "descricao": "Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de regressão; suposição a validar. Só cetose supera o limiar estrito de 0,35; acidose=0,35 e dermatite=0,30 não são inconclusivas.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "acidose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "cetose": 40,
+                    "acidose": 35,
+                    "dermatite_digital": 30,
+                    "deslocamento_abomaso": 30,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "limite",
+                  "bandeiras": [],
+                  "inconclusivas": [
+                    "cetose"
+                  ],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-SAD-01",
+                "descricao": "Triagem sem alterações Caso fictício de regressão; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "sem_problema",
+                  "top1": "acidose",
+                  "top3_contem": [
+                    "acidose",
+                    "cetose",
+                    "dermatite_digital"
+                  ],
+                  "percentuais": {
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "DEV-BV-01",
+                "descricao": "Demonstração sintética de alerta por incapacidade de se levantar. Suposição a validar; não constitui caso clínico validado.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "chamar_agora",
+                  "top1": "hipocalcemia",
+                  "top3_contem": [
+                    "hipocalcemia",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "hipocalcemia": 64,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "limite",
+                  "bandeiras": [
+                    "R-BV-01"
+                  ],
+                  "inconclusivas": [
+                    "hipocalcemia"
+                  ],
+                  "alerta": {
+                    "pausa": true
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "DEV-MAS-01",
+                "descricao": "Demonstração sintética de leite alterado e úbere inflamado durante a triagem. Suposição a validar; não constitui caso clínico validado.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "mastite",
+                  "top3_contem": [
+                    "mastite",
+                    "acidose",
+                    "cetose"
+                  ],
+                  "percentuais": {
+                    "mastite": 80,
+                    "acidose": 0,
+                    "cetose": 0,
+                    "dermatite_digital": 0,
+                    "deslocamento_abomaso": 0,
+                    "hipocalcemia": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "limite",
+                  "bandeiras": [],
+                  "inconclusivas": [
+                    "mastite"
+                  ],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              },
+              {
+                "caso_id": "C-DAB-DIALOGO",
+                "descricao": "Regressão da limitação R15: sem observação prévia do flanco, o diálogo não a solicita. Caso fictício; suposição a validar.",
+                "status": "passou",
+                "mudou_vs_pai": null,
+                "falhas": [],
+                "obtido": {
+                  "urgencia": "observar",
+                  "top1": "cetose",
+                  "top3_contem": [
+                    "cetose",
+                    "deslocamento_abomaso",
+                    "acidose"
+                  ],
+                  "percentuais": {
+                    "cetose": 40,
+                    "deslocamento_abomaso": 30,
+                    "acidose": 0,
+                    "dermatite_digital": 0,
+                    "hipocalcemia": 0,
+                    "mastite": 0,
+                    "metrite": 0,
+                    "tpb": 0
+                  },
+                  "motivo_parada": "sem_potencial",
+                  "bandeiras": [],
+                  "inconclusivas": [],
+                  "alerta": {
+                    "pausa": false
+                  }
+                },
+                "erro": null
+              }
+            ],
+            "mudancas": []
+          }
+        }
+      ],
+      "adaptadores_fisicos_desligados": false,
+      "comando": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/rodar.ps1 -Reset -SemNavegador",
+      "prova_bloqueio_externo": "PermissionError: SECAO5: rede externa bloqueada",
+      "escopo_isolamento": "Processos Python do reset, semente e servidor: conexões TCP e DNS só em loopback; não é desligamento físico do Wi-Fi.",
+      "swagger_recursos_externos": [
+        "https://cdn.jsdelivr.net",
+        "https://fastapi.tiangolo.com"
+      ],
+      "resumo": {
+        "versao": "v0001",
+        "sessao_final": true,
+        "urgencia": "observar",
+        "casos": 34,
+        "passou": 34,
+        "falhou": 0
+      },
+      "status": "passou",
+      "log_servidor": "Recriando o banco C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db e semeando animais fict�cios...\nBanco recriado: C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db\nAnimais fictícios criados: 4 (banco: C:\\Users\\Usuario\\AppData\\Local\\anamnese\\anamnese.db).\nAviso: web\\dist n�o existe; s� a API estar� no ar (documenta��o em /api/docs).\nSubindo o servidor em http://127.0.0.1:8000 ...\nINFO:     Started server process [1156]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     127.0.0.1:63016 - \"GET /api/saude HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/saude HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/docs HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/animais HTTP/1.1\" 201 Created\nINFO:     127.0.0.1:63017 - \"GET /api/saude HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes HTTP/1.1\" 201 Created\n\nPronto: http://localhost:8000\nDocumenta��o da API: http://localhost:8000/api/docs\nCtrl+C encerra o servidor.\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/extremidades HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/triagem/estado_termico HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/apatia HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/triagem/atitude_locomocao HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/apetite HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/triagem/apetite_ruminacao HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/queda_producao HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/triagem/producao_leite HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/diarreia HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/triagem/excrecoes HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/corrimento_fetido HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/teste_caneca_grumos HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/mucosas_palidas_ou_ictericas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/fezes_aquosas_espuma_graos HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/halito_adocicado_acetona HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/recusa_concentrado_come_volumoso HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/flanco_esquerdo_afundado HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/porque/retencao_placenta HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/sessoes/ses_0001/respostas HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/parecer HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"GET /api/sessoes/ses_0001/como/mastite HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:63016 - \"POST /api/base/versoes/v0001/execucoes HTTP/1.1\" 201 Created\n",
+      "servidor_encerrado": true,
+      "fim_utc": "2026-10-22T02:02:22.867679+00:00"
+    }
+  ],
+  "swagger_offline": {
+    "status": "pendente_api",
+    "motivo": "HTML retorna 200, mas JavaScript/CSS e icone referenciam CDN/hosts externos. Nenhuma alteracao em api/ foi feita. Ver R17."
   }
 }
