@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "rationale"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # Revisão independente requer pessoa/modelo, data, localização, evidência e veredito
@@ -14,4 +14,4 @@ tags:
 - [[Checkpoint codex-davi Relatos pessoais, ensaio e entendimento ainda a registrar]] - `rationale_for` [EXTRACTED]
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros

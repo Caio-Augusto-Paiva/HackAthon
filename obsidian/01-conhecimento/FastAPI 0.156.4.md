@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "obra/superpowers (repositorio de skills)"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Playwright_Test_webServer
 ---
 
 # FastAPI 0.156.4
@@ -16,4 +16,4 @@ tags:
 - [[Python 3.15.0]] - `references` [EXTRACTED]
 - [[uvicorn 0.54.0]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

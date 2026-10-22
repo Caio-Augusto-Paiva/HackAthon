@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "concept"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # Exemplos sintéticos de alerta e sinais mamários pela CLI
@@ -15,4 +15,4 @@ tags:
 - [[DEV-BV-01 decúbito, chamar_agora, hipocalcemia 64% e pausa]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 leite alteradoúbere inflamado, mastite 80%, observar e sem pausa]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros

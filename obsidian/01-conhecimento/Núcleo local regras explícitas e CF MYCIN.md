@@ -1,18 +1,18 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # Núcleo local: regras explícitas e CF MYCIN
 
 ## Connections
-- [[Checkpoint codex-davi Exigências núcleo por regras disponível; aplicação localhost e licença pendentes]] - `references` [EXTRACTED]
 - [[Checkpoint codex-davi IA aplicada ao desenvolvimento e à documentação, fora da consulta]] - `rationale_for` [EXTRACTED]
+- [[Exigências backend localhost disponível; frontend, licença e validação clínica pendentes]] - `references` [EXTRACTED]
 - [[HackAtom T1 Anamnese explicável de bovinos leiteiros]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros

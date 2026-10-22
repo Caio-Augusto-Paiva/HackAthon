@@ -12,8 +12,8 @@ O projeto aborda **T1 Anamnese**: coleta estruturada de sinais e histórico de b
 |---|---|---|
 | [01-processo](01-processo.md) | Linha do tempo verificável, uso de IA, decisões e evidências | Preparado; faltam relatos pessoais de B/C e confirmação da equipe |
 | [02-arquitetura](02-arquitetura.md) | Núcleo implementado, contratos, limites e componentes planejados | Preparado com distinção entre presente e futuro |
-| [03-regras-de-producao](03-regras-de-producao.md) | Todas as regras, fontes, CF, símbolos e triagem | Gerado da base de desenvolvimento |
-| [04-casos-de-teste](04-casos-de-teste.md) | Entradas, critérios e resultados dos dois exemplos disponíveis | Gerado por execução real |
+| [03-regras-de-producao](03-regras-de-producao.md) | Todas as regras, fontes, CF, símbolos e triagem | Gerado da ativa `v0001`, ainda de desenvolvimento |
+| [04-casos-de-teste](04-casos-de-teste.md) | Entradas, critérios e resultados dos 34 casos sintéticos | Gerado por execução real |
 | [05-apresentacao-e-demo](05-apresentacao-e-demo.md) | Roteiros de 10 e 5 minutos, demo e perguntas da banca | Roteiro preparado; duração oficial e ensaio pendentes |
 | [06-riscos-e-pendencias](06-riscos-e-pendencias.md) | Riscos, lacunas, responsáveis por papel e checklist de envio | Registro aberto |
 
@@ -57,7 +57,7 @@ Os papéis abaixo vêm do planejamento e não identificam pessoas por inferênci
 
 ## Mapa do pacote e trabalho restante
 
-O código atual está em `engine/`, a base em `base/desenvolvimento/`, os testes em `tests/` e os geradores em `scripts/`. As fontes oficiais e o planejamento estão em `docs/fontes/` e `docs/superpowers/`. O grafo navegável e seu cofre ficam em `graphify-out/` e `obsidian/01-conhecimento/`.
+O código atual está em `engine/`, `kb/` e `api/`; a versão ativa em `base/versoes/`, os casos em `base/casos/`, a cópia de desenvolvimento em `base/desenvolvimento/`, os testes em `tests/` e os utilitários em `scripts/`. As fontes oficiais e o planejamento estão em `docs/fontes/` e `docs/superpowers/`. O grafo navegável e seu cofre ficam em `graphify-out/` e `obsidian/01-conhecimento/`.
 
 Esta entrega contém fontes Markdown e evidências de software. PDFs finais, slides em PDF e formato editável, vídeo de reserva, licença e pacote `.zip` final ainda dependem da conclusão/revisão do grupo. Dependências Python estão em `pyproject.toml`; a instalação foi feita em `.venv`. Nenhum manifesto ou lock do frontend foi alterado por esta sessão.
 

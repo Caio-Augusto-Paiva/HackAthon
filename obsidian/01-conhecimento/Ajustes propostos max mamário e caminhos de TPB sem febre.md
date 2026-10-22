@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "concept"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # Ajustes propostos: max mamário e caminhos de TPB sem febre
@@ -15,4 +15,4 @@ tags:
 - [[Evidência mamária agrupada por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros

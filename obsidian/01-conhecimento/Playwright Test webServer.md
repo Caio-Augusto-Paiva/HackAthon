@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "obra/superpowers (repositorio de skills)"
+community: "Playwright Test webServer"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Playwright_Test_webServer
 ---
 
 # Playwright Test webServer
@@ -17,4 +17,4 @@ tags:
 - [[uvicorn 0.54.0]] - `references` [EXTRACTED]
 - [[webapp-testing (skill)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/rationale #graphify/INFERRED #community/Playwright_Test_webServer

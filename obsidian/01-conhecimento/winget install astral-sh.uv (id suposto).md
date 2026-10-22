@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "obra/superpowers (repositorio de skills)"
+community: "Playwright Test webServer"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Playwright_Test_webServer
 ---
 
 # winget install astral-sh.uv (id suposto)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[uv 0.13.4]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/concept #graphify/INFERRED #community/Playwright_Test_webServer

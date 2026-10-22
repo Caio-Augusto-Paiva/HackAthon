@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "document"
-community: "obra/superpowers (repositorio de skills)"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Playwright_Test_webServer
 ---
 
 # rodar.ps1 (script de execucao)
@@ -15,4 +15,4 @@ tags:
 - [[PowerShell ExecutionPolicy Bypass]] - `conceptually_related_to` [INFERRED]
 - [[uv (sync, run, python pin)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

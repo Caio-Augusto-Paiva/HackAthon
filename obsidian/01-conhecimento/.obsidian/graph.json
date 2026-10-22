@@ -8,7 +8,7 @@
       }
     },
     {
-      "query": "tag:#community/Checkpoint_codex-davi_Arquitetura_dispon\u00edvel_CLI/Python_JSON_sess\u00e3o_infer\u00eancia_e_explica\u00e7\u00e3o",
+      "query": "tag:#community/HackAtom_T1_Anamnese_explic\u00e1vel_de_bovinos_leiteiros",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -29,21 +29,21 @@
       }
     },
     {
-      "query": "tag:#community/obra/superpowers_repositorio_de_skills",
+      "query": "tag:#community/Classe_Sessao_dialogo_estado_correcao_modo",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Classe_Sessao_dialogo_estado_correcao_modo",
+      "query": "tag:#community/Task_1_Ambiente_e_modelos_Pydantic",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Task_1_Ambiente_e_modelos_Pydantic",
+      "query": "tag:#community/Playwright_Test_webServer",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -57,185 +57,199 @@
       }
     },
     {
-      "query": "tag:#community/validar",
+      "query": "tag:#community/obra/superpowers_repositorio_de_skills",
       "color": {
         "a": 1,
         "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/validar",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/SDD_ledger",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Google_Antigravity_app_IDE_e_CLI",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Task_1",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Rodada_unica_de_correcao_final",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId",
       "color": {
         "a": 1,
-        "rgb": 5873999
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/34_casos_fict\u00edcios_oito_doen\u00e7as_nos_dois_modos_bandeiras_limite_comorbidade_e_troca_de_modo",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Task_2",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Task_5",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Condicaovalor",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/kb/modelospy",
       "color": {
         "a": 1,
-        "rgb": 10253663
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/E14_cobre_max_fora_de_derivado",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/E02_id_duplicado",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Branch_sessao-pair-programming",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Bandeira_some_apos_correcao_divergencia",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Limiares_de_decis\u00e3o_descarte_premissa_confirma\u00e7\u00e3o_etc",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Agentes_e_skills_por_prompt_decisao_de_20/10/2026",
       "color": {
         "a": 1,
-        "rgb": 5873999
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Transcricao_da_apresentacao_RERUM_A",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Transcricao_do_documentario_RERUM_D",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Adaptacoes_que_a_API_precisa_fazer_sobre_o_motor",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/bandeiras_nao_verificadas_restrito_a_regras_viaveis_e_perguntaveis",
       "color": {
         "a": 1,
-        "rgb": 10253663
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Prioridade_padrao_por_classe_100/50/10_e_demais_correcoes_menores",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Executor_de_casos_incompleto_inconclusivas_e_pausa",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Doencas_confirmadas_nao_bloqueiam_umas_as_outras_na_parada",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/nao_sei_e_registrado_e_nao_e_repetido_automaticamente",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Potencial_usa_cada_regra_uma_unica_vez",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 15583560
       }
     }
   ]

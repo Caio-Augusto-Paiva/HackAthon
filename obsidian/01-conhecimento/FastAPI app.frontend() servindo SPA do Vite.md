@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "obra/superpowers (repositorio de skills)"
+community: "Playwright Test webServer"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Playwright_Test_webServer
 ---
 
 # FastAPI app.frontend() servindo SPA do Vite
@@ -14,4 +14,4 @@ tags:
 - [[FastAPI 0.156.4]] - `references` [INFERRED]
 - [[Vite (build e server.proxy)]] - `shares_data_with` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/rationale #graphify/INFERRED #community/Playwright_Test_webServer

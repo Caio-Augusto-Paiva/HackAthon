@@ -48,7 +48,7 @@ Preparar Python 3.12+, abrir a raiz do repositório e deixar os dois comandos ab
 
 | Intervalo | Ação executável | O que explicar |
 |---|---|---|
-| 0:00–0:30 | Mostrar o resumo de `python -m unittest discover` | Quantidade, conclusão real e separação entre testes e casos clínicos |
+| 0:00–0:30 | Mostrar o resumo de `python -m unittest discover -s tests/engine -t .` | Quantidade, conclusão real e separação entre testes e casos clínicos |
 | 0:30–1:10 | Executar o caso `alerta-decubito.json` | `chamar_agora`, R-BV-01 e `alerta.pausa: true`; o executor reconhece a pausa automaticamente |
 | 1:10–2:00 | Executar o trecho Python abaixo, até `como` | Estado, pausa, razão da pergunta e encadeamento de hipocalcemia |
 | 2:00–2:50 | Continuar o trecho com troca de modo e snapshot | Mesmos fatos, termometria adicional, preservação de ordem e restauração sem banco |

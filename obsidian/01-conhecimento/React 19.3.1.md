@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "obra/superpowers (repositorio de skills)"
+community: "Playwright Test webServer"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/obra/superpowers_repositorio_de_skills
+  - community/Playwright_Test_webServer
 ---
 
 # React 19.3.1
@@ -14,4 +14,4 @@ tags:
 - [[@xyflowreact 12.12.0 (React Flow)]] - `references` [INFERRED]
 - [[frontend-design (skill)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/obra/superpowers_repositorio_de_skills
+#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer

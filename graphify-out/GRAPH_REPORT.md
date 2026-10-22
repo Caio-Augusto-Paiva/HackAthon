@@ -1,24 +1,25 @@
-# Graph Report - HackAtom  (2026-10-21)
+# Graph Report - secao5-davi  (2026-10-21)
 
 ## Corpus Check
-- 37 files · ~69,571 words
+- 40 files · ~97,129 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 3 file(s) not represented in the graph (top: (none) 3)
+- Unclassified: 4 file(s) not represented in the graph (top: (none) 4)
 
 ## Summary
-- 518 nodes · 880 edges · 34 communities (19 shown, 15 thin omitted)
+- 527 nodes · 889 edges · 36 communities (21 shown, 15 thin omitted)
 - Extraction: 86% EXTRACTED · 13% INFERRED · 1% AMBIGUOUS · INFERRED: 117 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)|CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)]]
-- [[_COMMUNITY_Checkpoint codex-davi Arquitetura disponível CLIPython, JSON, sessão, inferência e explicação|Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação]]
+- [[_COMMUNITY_HackAtom T1 Anamnese explicável de bovinos leiteiros|HackAtom: T1 Anamnese explicável de bovinos leiteiros]]
 - [[_COMMUNITY_Plano de implementação API (Seção 4)|Plano de implementação API (Seção 4)]]
 - [[_COMMUNITY_Motor de inferência (engine)|Motor de inferência (engine/)]]
-- [[_COMMUNITY_obrasuperpowers (repositorio de skills)|obra/superpowers (repositorio de skills)]]
 - [[_COMMUNITY_Classe Sessao (dialogo, estado, correcao, modo)|Classe Sessao (dialogo, estado, correcao, modo)]]
 - [[_COMMUNITY_Task 1 Ambiente e modelos Pydantic|Task 1: Ambiente e modelos Pydantic]]
+- [[_COMMUNITY_Playwright Test webServer|Playwright Test webServer]]
 - [[_COMMUNITY_MSD Vet Manual|MSD Vet Manual]]
+- [[_COMMUNITY_obrasuperpowers (repositorio de skills)|obra/superpowers (repositorio de skills)]]
 - [[_COMMUNITY_validar|validar]]
 - [[_COMMUNITY_Alocacao de agente principal e alternativa por prompt de revisao|Alocacao de agente principal e alternativa por prompt de revisao]]
 - [[_COMMUNITY_SDD ledger|SDD ledger]]
@@ -26,6 +27,7 @@
 - [[_COMMUNITY_Task 1|Task 1]]
 - [[_COMMUNITY_Rodada unica de correcao final|Rodada unica de correcao final]]
 - [[_COMMUNITY_Contrato OpenAPI versionado e exemplos por operationId|Contrato OpenAPI versionado e exemplos por operationId]]
+- [[_COMMUNITY_34 casos fictícios oito doenças nos dois modos, bandeiras, limite, comorbidade e troca de modo|34 casos fictícios: oito doenças nos dois modos, bandeiras, limite, comorbidade e troca de modo]]
 - [[_COMMUNITY_Task 2|Task 2]]
 - [[_COMMUNITY_Task 5|Task 5]]
 - [[_COMMUNITY_Condicao.valor|Condicao.valor]]
@@ -49,23 +51,23 @@
 3. `Task 1` - 17 edges
 4. `Motor de inferencia` - 15 edges
 5. `Motor de inferência (engine/)` - 15 edges
-6. `Conteudo obrigatorio do plano final (12 itens)` - 13 edges
-7. `Especificação PoC Anamnese de Bovinos Leiteiros` - 13 edges
-8. `MSD Vet Manual` - 13 edges
-9. `Task 5: Criar sessão e EstadoSessao` - 13 edges
-10. `Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação` - 13 edges
+6. `HackAtom: T1 Anamnese explicável de bovinos leiteiros` - 14 edges
+7. `Conteudo obrigatorio do plano final (12 itens)` - 13 edges
+8. `Arquitetura integrada: API, SQLite, kb, base ativa, motor e explicação` - 13 edges
+9. `Índice da entrega da Seção 5 na codex-davi; baseline f46cd6e` - 13 edges
+10. `Plano de execução da documentação parcial do núcleo e base existentes` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Cinco tarefas TDD do motor (vermelho antes do verde)` --semantically_similar_to--> `Testes com casos conhecidos por versao da base`  [INFERRED] [semantically similar]
   docs/superpowers/plans/2026-10-20-motor-secao-1.md → CLAUDE.md
 - `Status de conferencia das fontes (L, R, N)` --semantically_similar_to--> `Marcacao de suposicao a validar (conhecimento veterinario)`  [INFERRED] [semantically similar]
   docs/fontes/fontes.md → CLAUDE.md
+- `Estudo pendente: persistência integral de snapshot, ordem e versão da base` --semantically_similar_to--> `Restauração direta por snapshot integral, sem repetir o diálogo`  [INFERRED] [semantically similar]
+  docs/processo/B.md → engine/README.md
 - `Decisao deterministica, sem LLM nem rede no caminho` --semantically_similar_to--> `Motor independente de web, banco, LLM e servicos externos`  [INFERRED] [semantically similar]
   api/README.md → engine/README.md
 - `Motor independente de web, banco, LLM e servicos externos` --semantically_similar_to--> `kb como pacote folha (nao importa engine)`  [INFERRED] [semantically similar]
   engine/README.md → kb/README.md
-- `Estudo pendente: persistência integral de snapshot, ordem e versão da base` --semantically_similar_to--> `Restauração direta por snapshot integral, sem repetir o diálogo`  [INFERRED] [semantically similar]
-  docs/processo/B.md → engine/README.md
 
 ## Import Cycles
 - None detected.
@@ -95,15 +97,15 @@
 - **Stack de execucao local em localhost** — docs_pesquisa_execucao_local_fastapi_frontend, docs_pesquisa_execucao_local_vite, docs_pesquisa_execucao_local_uv, docs_pesquisa_execucao_local_playwright_webserver, docs_pesquisa_versoes_bibliotecas_uvicorn [INFERRED 0.85]
 - **Regras do validador e codigos de erro** — docs_revisoes_2026_10_21_ledger_kb_secao_2_formato_de_id_gera_e20, docs_revisoes_2026_10_21_ledger_kb_secao_2_valor_none_gera_e03, docs_revisoes_2026_10_21_ledger_kb_secao_2_e08_so_sem_condicao_de_triagem, docs_revisoes_2026_10_21_ledger_kb_secao_2_e15_cf_min_e_max_juntos, docs_revisoes_2026_10_21_ledger_kb_secao_2_e16_exige_texto_nos_dois_modos, docs_revisoes_2026_10_21_ledger_kb_secao_2_e17_estrito_com_pivo_zero, docs_revisoes_2026_10_21_ledger_kb_secao_2_e14_cobre_max_fora_de_derivado, docs_revisoes_2026_10_21_ledger_kb_secao_2_novo_e21_tela_simbolo_invalido [INFERRED 0.85]
 
-## Communities (34 total, 15 thin omitted)
+## Communities (36 total, 15 thin omitted)
 
 ### Community 0 - "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
 Cohesion: 0.07
 Nodes (60): CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros), Aquisicao de conhecimento, Motor de regras em Python independente de interface, Base de conhecimento, Testes com casos conhecidos por versao da base, Componentes da arquitetura (modelo conceitual), Conteudo obrigatorio do plano final (12 itens), Criterios de avaliacao do hackathon (+52 more)
 
-### Community 1 - "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+### Community 1 - "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 Cohesion: 0.07
-Nodes (42): Base de desenvolvimento 3.1.0-revisao1: 51 símbolos, 56 regras, 8 doenças e 6 telas, Exemplos sintéticos de alerta e sinais mamários pela CLI, Checkpoint codex-davi: Histórico: correções do motor e integração de desenvolvimento em 898512c, Checkpoint codex-davi: IA aplicada ao desenvolvimento e à documentação, fora da consulta, Checkpoint codex-davi: Processo verificável do checkpoint de 21/10/2026, Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação, Checkpoint codex-davi: Contratos de sessão, parecer, porque/como e snapshot integral, Checkpoint codex-davi: Integração futura: FastAPI/Pydantic, React, SQLite e editor em grafo (+34 more)
+Nodes (43): Base de desenvolvimento 3.1.0-revisao1: 51 símbolos, 56 regras, 8 doenças e 6 telas, Exemplos sintéticos de alerta e sinais mamários pela CLI, Checkpoint codex-davi: Histórico: correções do motor e integração de desenvolvimento em 898512c, Checkpoint codex-davi: IA aplicada ao desenvolvimento e à documentação, fora da consulta, Checkpoint codex-davi: Processo verificável do checkpoint de 21/10/2026, Arquitetura integrada: API, SQLite, kb, base ativa, motor e explicação, Contratos de sessão, parecer, porque/como e snapshot integral, Integração disponível: FastAPI/Pydantic e SQLite; React/editor em andamento (+35 more)
 
 ### Community 2 - "Plano de implementação API (Seção 4)"
 Cohesion: 0.07
@@ -113,63 +115,71 @@ Nodes (50): 27 endpoints da Seção 4.5, Bandeira vermelha e pausa de alerta, ba
 Cohesion: 0.07
 Nodes (48): Apresentação e roteiro da demonstração, Bandeiras vermelhas (chamar_agora), Base de conhecimento JSON versionada (kb/), Três camadas estritas (derivado, doença, urgência), Casos de teste conhecidos (31 casos), Contratos da API e formato único de erro, Correções e recálculo dos fatos, Critérios de parada (confirmação, limite, exaustão) (+40 more)
 
-### Community 4 - "obra/superpowers (repositorio de skills)"
-Cohesion: 0.05
-Nodes (42): anthropics/skills (repositorio), brainstorming (skill), executing-plans (skill), frontend-design (skill), playwright-skill (lackeyjb), pptx (skill, source-available), Restricao de open source do hackathon, skill-creator (skill) (+34 more)
-
-### Community 5 - "Classe Sessao (dialogo, estado, correcao, modo)"
+### Community 4 - "Classe Sessao (dialogo, estado, correcao, modo)"
 Cohesion: 0.06
 Nodes (36): API README (api/), Backend FastAPI + SQLite (casca fina sobre motor e kb), Comparacao de casos com a versao pai, Concorrencia: BEGIN IMMEDIATE e conferencia de revisao, Host confiavel (TrustedHostMiddleware contra DNS rebinding), Importacao de animais CSV/JSON sem 500, ordem_respostas no snapshot (reprocessar lotes na correcao), Portao de ativacao de versao (casos_falhando, confirmar_falhas) (+28 more)
 
-### Community 6 - "Task 1: Ambiente e modelos Pydantic"
+### Community 5 - "Task 1: Ambiente e modelos Pydantic"
 Cohesion: 0.09
 Nodes (30): Script rodar.ps1 / rodar.sh (execucao em localhost), Sementes de animais ficticios e reset seguro do banco, Servir web/dist com rota coringa propria (api/frontend.py), Sessao presa a versao da base com que nasceu, Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB, Caso de teste da base (entrada e resultado esperado), Dependências entre símbolos, ciclo e ordem topológica, Plano de implementação do kb (Seção 2) (+22 more)
+
+### Community 6 - "Playwright Test webServer"
+Cohesion: 0.08
+Nodes (26): anthropics/skills (repositorio), frontend-design (skill), playwright-skill (lackeyjb), pptx (skill, source-available), Restricao de open source do hackathon, skill-creator (skill), webapp-testing (skill), uv (sync, run, python pin) (+18 more)
 
 ### Community 7 - "MSD Vet Manual"
 Cohesion: 0.13
 Nodes (15): Acidose ruminal (categoria), Acidose ruminal subaguda, Anaplasmose, Babesiose, Cetose bovina (hiperCetonemia), Dermatite digital, Deslocamento de abomaso, Embrapa ADM158 (tristeza parasitaria) (+7 more)
 
-### Community 8 - "validar"
+### Community 8 - "obra/superpowers (repositorio de skills)"
+Cohesion: 0.16
+Nodes (16): brainstorming (skill), executing-plans (skill), subagent-driven-development (skill), obra/superpowers (repositorio de skills), systematic-debugging (skill), test-driven-development (skill), verification-before-completion (skill), writing-plans (skill) (+8 more)
+
+### Community 9 - "validar"
 Cohesion: 0.13
 Nodes (11): Achado E06 doenca sem regra, Arquivos kb_invalidas Secao 5.1, E08 bandeira sem triagem, E11 criterio de triagem, E15 cf_minimo e cf_maximo, E16 texto da tela de triagem, E17 ordem de limiares, E20 id_invalido (+3 more)
 
-### Community 9 - "Alocacao de agente principal e alternativa por prompt de revisao"
+### Community 10 - "Alocacao de agente principal e alternativa por prompt de revisao"
 Cohesion: 0.16
 Nodes (10): Alocacao de agente principal e alternativa por prompt de revisao, anthropics/skills (pptx, docx, pdf, webapp-testing, frontend-design), Antigravity (plano Pro), Claude Code (Claude Pro), Codex (ChatGPT Plus), Gemini Pro (Google AI Pro, app web), Implementacao por pessoa (A, B, C) com agente principal e reserva, Fontes do projeto (fontes oficiais e de dominio) (+2 more)
 
-### Community 10 - "SDD ledger"
+### Community 11 - "SDD ledger"
 Cohesion: 0.23
 Nodes (10): Achado fato numerico inerte no teste, Ambiente venv, engine.modelos.Base.de_dict, .gitattributes, Pacote engine, SDD ledger, Spec anamnese bovinos, Task 6 (+2 more)
 
-### Community 11 - "Google Antigravity (app, IDE e CLI)"
+### Community 12 - "Google Antigravity (app, IDE e CLI)"
 Cohesion: 0.42
 Nodes (9): AGENTS.md (instrucoes do projeto), Google Antigravity (app, IDE e CLI), Claude Code, CLAUDE.md (instrucoes do projeto), OpenAI Codex (CLI, IDE, app desktop), Gemini CLI, GEMINI.md (instrucoes do projeto), Limites de uso dos planos (+1 more)
 
-### Community 12 - "Task 1"
+### Community 13 - "Task 1"
 Cohesion: 0.28
 Nodes (7): Achado carregar_base excecoes nativas, Achado prioridade zero no teste, carregar_base, Plano kb secao 2, pyproject.toml, Task 1, tests/kb/test_modelos.py
 
-### Community 13 - "Rodada unica de correcao final"
+### Community 14 - "Rodada unica de correcao final"
 Cohesion: 0.28
 Nodes (7): Achado kb aceita base invalida, Achado ordem ausente no contrato, Aresta.ordem, kb/__init__.py, para_motor, Revisao final, validar_edicao
 
-### Community 14 - "Contrato OpenAPI versionado e exemplos por operationId"
+### Community 15 - "Contrato OpenAPI versionado e exemplos por operationId"
 Cohesion: 0.25
 Nodes (6): API sobe sem a base (409 conflito em vez de 500), Contrato OpenAPI versionado e exemplos por operationId, Formato unico de erro (codigos e X-Requisicao-Id), Notas para o frontend (proxima nulo, reabrir, 409 conflito), Mapa de 27 rotas por arquivo (prefixo /api), Testes da API (pytest, marca lento, base minima de fixtures)
 
-### Community 15 - "Task 2"
+### Community 16 - "34 casos fictícios: oito doenças nos dois modos, bandeiras, limite, comorbidade e troca de modo"
+Cohesion: 0.25
+Nodes (8): 34 casos fictícios: oito doenças nos dois modos, bandeiras, limite, comorbidade e troca de modo, Correção de decúbito testada diretamente em Sessao; kb.Caso não codifica correções, Ensaio HTTP: reset fora do OneDrive, saúde, animal, sessão, parecer, porque/como, 34/34 casos e servidor encerrado, Fluxo repetido com TCP/DNS externos bloqueados nos processos Python; Wi-Fi físico não desligado, R15: evidência fraca pode encerrar sem perguntar sinais adicionais; abomaso produtor usa observação prévia explícita, R16: esperados históricos e sinais da especificação diferem da v0001; nenhuma regra alterada silenciosamente, R17: HTML Swagger retorna 200, mas recursos de CDN impedem comprovar interface offline, v0001 operacionalmente ativa, imutável e sem aprovação clínica
+
+### Community 17 - "Task 2"
 Cohesion: 0.43
 Nodes (6): Achado direcao do caminho do ciclo, Achado op e negado None viram default, encontrar_ciclo, kb/grafo.py, Task 2, Task 3
 
-### Community 16 - "Task 5"
+### Community 18 - "Task 5"
 Cohesion: 0.53
 Nodes (5): Achado temporario fixo ativa.json.tmp, Achado pai explicito nao verificado, ativa.json, salvar_nova, Task 5
 
-### Community 17 - "Condicao.valor"
+### Community 19 - "Condicao.valor"
 Cohesion: 0.40
 Nodes (4): Achado Condicao valor int, Condicao.valor, E03 valor_invalido, model_fields_set da Aresta
 
-### Community 18 - "kb/modelos.py"
+### Community 20 - "kb/modelos.py"
 Cohesion: 0.33
 Nodes (4): kb/analise.py, kb/carregador.py, kb/modelos.py, LimiteDinamico
 
@@ -186,23 +196,23 @@ Nodes (4): kb/analise.py, kb/carregador.py, kb/modelos.py, LimiteDinamico
   docs/pesquisa/execucao-local.md · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **84 isolated node(s):** `graphify --update`, `.graphifyignore (escopo do grafo)`, `Spec anamnese bovinos`, `pyproject.toml`, `Aresta.ordem` (+79 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 110 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **89 isolated node(s):** `graphify --update`, `.graphifyignore (escopo do grafo)`, `Spec anamnese bovinos`, `pyproject.toml`, `Aresta.ordem` (+84 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 115 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Conteudo obrigatorio do plano final (12 itens)` connect `CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)` to `MSD Vet Manual`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Motor de inferencia` (e.g. with `Sistema especialista` and `Memoria de trabalho`) actually correct?**
   _`Motor de inferencia` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `graphify --update`, `.graphifyignore (escopo do grafo)`, `Spec anamnese bovinos` to the rest of the system?**
-  _84 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _89 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)` be split into smaller, more focused modules?**
   _Cohesion score 0.06971153846153846 - nodes in this community are weakly interconnected._
-- **Should `Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação` be split into smaller, more focused modules?**
-  _Cohesion score 0.0742447516641065 - nodes in this community are weakly interconnected._
+- **Should `HackAtom: T1 Anamnese explicável de bovinos leiteiros` be split into smaller, more focused modules?**
+  _Cohesion score 0.07242063492063493 - nodes in this community are weakly interconnected._
 
 ### Low-confidence Hints
 _AMBIGUOUS edges — the extractor was unsure. Verify before acting on these._

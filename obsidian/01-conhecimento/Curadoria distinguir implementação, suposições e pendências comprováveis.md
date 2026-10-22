@@ -1,17 +1,17 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-documentacao-entrega-parcial.md"
 type: "rationale"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # Curadoria: distinguir implementação, suposições e pendências comprováveis
 
 ## Connections
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Proveniência base 3.1.0-revisao1, pai 3.0.0 e hash canônico]] - `rationale_for` [EXTRACTED]
+- [[Proveniência operacional v0001 ativa e imutável; hash canônico e 56 regras não validadas]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros

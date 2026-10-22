@@ -1,11 +1,11 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "rationale"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # Checkpoint codex-davi: Julgamento técnico: snapshot direto, ordem real, grupo max e TPB sem febre
@@ -15,4 +15,4 @@ tags:
 - [[Evidência mamária agrupada por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros

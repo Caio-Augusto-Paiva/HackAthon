@@ -1,19 +1,19 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Checkpoint codex-davi: Arquitetura disponível: CLI/Python, JSON, sessão, inferência e explicação"
+community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
 ---
 
 # DEV-MAS-01: leite alterado/úbere inflamado, mastite 80%, observar e sem pausa
 
 ## Connections
-- [[Checkpoint codex-davi Demo por terminal bandeira, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
-- [[Documento gerado por executar_caso 2 casos sintéticos aprovados]] - `references` [EXTRACTED]
+- [[Demo por terminal bandeira, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
+- [[Documento gerado por executar_caso 34 casos sintéticos aprovados na v0001]] - `references` [EXTRACTED]
 - [[Evidência mamária agrupada por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Exemplos sintéticos de alerta e sinais mamários pela CLI]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Checkpoint_codex-davi_Arquitetura_disponível_CLI/Python_JSON_sessão_inferência_e_explicação
+#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
