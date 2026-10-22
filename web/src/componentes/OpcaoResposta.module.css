@@ -11,8 +11,8 @@
 @media (max-width: 600px) { .opcao { font-size: 18px; min-height: 60px; padding: 14px 16px; } }
 /* Borda luminosa: um feixe laranja percorre a borda da opção enquanto o mouse estiver em cima. */
 @property --angulo-borda { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-.opcao::before { content: ''; position: absolute; inset: -3px; padding: 3px; border-radius: inherit; pointer-events: none; z-index: 1;
-  background: conic-gradient(from var(--angulo-borda), transparent 0 62%, #f0913a 80%, #ffd2a6 88%, transparent 96%);
+.opcao::before { content: ''; position: absolute; inset: -5px; padding: 6px; border-radius: inherit; pointer-events: none; z-index: 1;
+  background: conic-gradient(from var(--angulo-borda), transparent 0 52%, #f0913a 74%, #ffd2a6 86%, transparent 97%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); opacity: 0; transition: opacity 200ms ease-out; }
 .opcao:hover:not(.desabilitada)::before { opacity: 1; animation: girar-borda 2s linear infinite; }
