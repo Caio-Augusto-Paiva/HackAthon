@@ -119,7 +119,7 @@ def gravar_fonte(base: Base, pasta: Path) -> list[Path]:
     escritos = []
     for relativo, dados in conteudo.items():
         caminho = pasta / relativo
-        caminho.write_text(_texto(dados), encoding="utf-8")
+        caminho.write_text(_texto(dados), encoding="utf-8", newline="\n")
         escritos.append(caminho)
     return escritos
 
