@@ -6,7 +6,7 @@ Base de desenvolvimento; não é uma base ativa aprovada.
 
 Versão: `3.1.0-revisao1`. Pai declarado: `3.0.0`. Data declarada na base: `2026-10-21`.
 
-Arquivo: `base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json`. SHA-256 do JSON canônico: `395e2b49eb7db736b779b3eb9404707c81c27a60eac31eb6ecbcff2c9aaba1cf`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json`. SHA-256 do JSON canônico: `1158e30d64570015d9ae10c0afb9fc2f533a4aec92b15c89da440579f1d895ca`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
 Regras: **56**. Símbolos: **51**. Doenças: **8**.
 
@@ -119,7 +119,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `R-TPB-01` | febre = sim E urina_escura = sim | tpb | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar; [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals) | suposicao_a_validar | Combinação de febre aguda e hemoglobinúria por hemólise intravascular típica de babesiose. |
-| `R-TPB-02` | mucosas_palidas_ou_ictéricas = sim | tpb | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Palidez ou icterícia mantêm TPB entre as hipóteses mesmo sem febre na medição atual; não identificam a causa da anemia ou icterícia. |
+| `R-TPB-02` | mucosas_palidas_ou_ictericas = sim | tpb | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Palidez ou icterícia mantêm TPB entre as hipóteses mesmo sem febre na medição atual; não identificam a causa da anemia ou icterícia. |
 | `R-TPB-03` | carrapatos_historico_recente = sim E febre = sim | tpb | 0,35 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar; [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals) | suposicao_a_validar | Exposição ao vetor carrapato combinada com febre é indicativo epidemiológico inicial. |
 | `R-TPB-04` | esfregaco_hemoparasitas = sim | tpb | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar; [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals) | suposicao_a_validar | Esfregaço compatível sustenta infecção por hemoparasitas, mesmo sem febre atual; não distingue sozinho doença ativa de estado de portador. |
 
@@ -184,7 +184,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | lesao_erosiva_talao_morango | Lesão característica no talão | pergunta | tipo: booleano | — | Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital? | — | mycin |
 | mastite | Mastite | doenca | tipo: booleano | — | — | media | mycin |
 | metrite | Metrite Puerperal | doenca | tipo: booleano | — | — | alta | mycin |
-| mucosas_palidas_ou_ictéricas | Mucosas pálidas ou amareladas | pergunta | tipo: booleano | A parte interna da pálpebra ou da vulva está muito pálida ou amarelada? | Mucosas pálidas ou ictéricas à inspeção? | — | mycin |
+| mucosas_palidas_ou_ictericas | Mucosas pálidas ou amareladas | pergunta | tipo: booleano | A parte interna da pálpebra ou da vulva está muito pálida ou amarelada? | Mucosas pálidas ou ictéricas à inspeção? | — | mycin |
 | mudanca_abrupta_concentrado | Mudança abrupta de concentrado | pergunta | tipo: booleano | Houve aumento brusco de ração ou acesso excessivo a grãos? | Mudança abrupta de concentrado ou acesso excessivo a grãos? | — | mycin |
 | observar | Monitoramento Clínico Contínuo | urgencia | tipo: booleano | — | — | — | mycin |
 | periparto_imediato | Periparto imediato | derivado | tipo: booleano | — | — | — | mycin |

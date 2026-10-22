@@ -155,7 +155,7 @@ class RegrasDaBase(unittest.TestCase):
         return inferir(carregar(), fatos)
 
     def test_tpb_com_mucosas_alteradas_nao_exige_febre(self):
-        resultado = self.calcular(temperatura_retal=38.5, **{'mucosas_palidas_ou_ictéricas': True})
+        resultado = self.calcular(temperatura_retal=38.5, **{'mucosas_palidas_ou_ictericas': True})
         self.assertGreaterEqual(resultado.cfs['tpb'], 0.5)
         self.assertEqual(resultado.urgencia, 'chamar_agora')
 
