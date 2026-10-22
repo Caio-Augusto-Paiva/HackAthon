@@ -28,6 +28,7 @@
             "gravidade": "alta",
             "cf": 0.87,
             "percentual": 87,
+            "potencial": 87,
             "situacao": "com_evidencia"
           }
         ]
@@ -42,6 +43,7 @@
             "gravidade": "media",
             "cf": 0.32,
             "percentual": 32,
+            "potencial": 52,
             "situacao": "com_evidencia"
           }
         ]
@@ -56,6 +58,7 @@
             "gravidade": "media",
             "cf": 0.15,
             "percentual": 15,
+            "potencial": 35,
             "situacao": "sem_evidencia"
           },
           {
@@ -64,6 +67,7 @@
             "gravidade": "alta",
             "cf": 0.05,
             "percentual": 5,
+            "potencial": 25,
             "situacao": "sem_evidencia"
           },
           {
@@ -72,6 +76,7 @@
             "gravidade": "baixa",
             "cf": 0.0,
             "percentual": 0,
+            "potencial": 20,
             "situacao": "sem_evidencia"
           },
           {
@@ -80,6 +85,7 @@
             "gravidade": "alta",
             "cf": -0.1,
             "percentual": 0,
+            "potencial": 20,
             "situacao": "sem_evidencia"
           },
           {
@@ -88,6 +94,7 @@
             "gravidade": "alta",
             "cf": -0.35,
             "percentual": 0,
+            "potencial": 20,
             "situacao": "descartada"
           },
           {
@@ -96,6 +103,7 @@
             "gravidade": "media",
             "cf": -0.6,
             "percentual": 0,
+            "potencial": 20,
             "situacao": "descartada"
           }
         ]

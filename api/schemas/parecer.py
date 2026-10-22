@@ -28,6 +28,7 @@ class ItemDoenca(BaseModel):
     gravidade: Gravidade
     cf: float
     percentual: int  # round(max(0, cf) * 100): grau de confiança do sistema, não probabilidade
+    potencial: int = Field(ge=0, le=100, description="Teto de confiança que a doença ainda pode alcançar com mais respostas (>= percentual).")
     situacao: Situacao
 
 

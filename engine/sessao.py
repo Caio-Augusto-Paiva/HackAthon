@@ -314,7 +314,7 @@ class Sessao:
             if any(v==0 for v in valores) and all(v>=0 for v in valores):
                 nao_verificadas.append(regra['id'])
         return montar_parecer(self.resultado,estado['motivo_parada'],estado['urgencia'],
-                              sorted(self.bandeiras_historicas),sorted(nao_verificadas))
+                              sorted(self.bandeiras_historicas),sorted(nao_verificadas),self.analise.potenciais)
 
     def porque(self,simbolo):
         if simbolo not in self.perguntas: raise ValueError('Pergunta ainda não apresentada')

@@ -947,6 +947,11 @@ export interface components {
             /** Percentual */
             percentual: number;
             /**
+             * Potencial
+             * @description Teto de confiança que a doença ainda pode alcançar com mais respostas (>= percentual).
+             */
+            potencial: number;
+            /**
              * Situacao
              * @enum {string}
              */

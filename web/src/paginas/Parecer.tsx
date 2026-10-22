@@ -51,6 +51,7 @@ export function Parecer() {
     <Botao onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</Botao><Link to="/">Voltar ao início</Link></> : <p role="status">Carregando parecer…</p>}</main>;
   const blocos = dados.blocos.map(b => ({ ...b, itens: [...b.itens].sort((a, b) => b.percentual - a.percentual) }));
   const primeira = blocos.flatMap(b => b.itens)[0];
+  const nenhumaConfirmada = blocos.every(b => b.itens.every(i => i.percentual === 0));
   let posicao = 0;
   return <div className={estilos.pagina}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link><span>Modo {dados.modo === 'produtor' ? 'produtor' : 'especialista'}</span>
@@ -61,6 +62,10 @@ export function Parecer() {
       <section role="status" data-nivel={dados.urgencia.nivel} className={estilos.urgencia}>
         <img src={alerta} width={30} height={30} alt="" /><div><h2>{urgencias[dados.urgencia.nivel]}</h2><p>{dados.urgencia.texto}</p></div>
       </section>
+      {nenhumaConfirmada && <section role="status" className={estilos.nadaFechou}>
+        <p>Nenhuma doença foi confirmada com as respostas dadas. Responda mais perguntas para o sistema calcular as chances.</p>
+        <Link className={estilos.continuarAviso} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Continuar respondendo</Link>
+      </section>}
       <aside role="note" aria-labelledby="titulo-laudo" className={estilos.laudo}>
         <h2 id="titulo-laudo">Este parecer não é um laudo</h2>
         <p>Esta análise não substitui um laudo médico e é importante procurar um médico-veterinário para melhor entendimento e segurança.</p>
@@ -72,7 +77,8 @@ export function Parecer() {
           {bloco.itens.length ? bloco.itens.map(item => { const ordem = posicao; return <tr key={item.doenca} className={estilos.linha} style={{ '--ordem': ordem } as CSSProperties}>
             <td className={estilos.posicao}>{++posicao}º</td><th scope="row" className={estilos.doenca}>{item.nome}</th>
             <td><span className={estilos.gravidade} data-gravidade={item.gravidade}><span className={estilos.prefixo}>Gravidade </span>{gravidades[item.gravidade]}</span></td>
-            <td><div className={estilos.confianca}><BarraConfianca percentual={item.percentual} rotulo={item.nome} atraso={200 + ordem * 70} /><strong><Contador valor={item.percentual} atraso={200 + ordem * 70} /></strong></div></td>
+            <td><div className={estilos.confianca}><BarraConfianca percentual={item.percentual} rotulo={item.nome} atraso={200 + ordem * 70} /><strong><Contador valor={item.percentual} atraso={200 + ordem * 70} /></strong></div>
+              {item.potencial > item.percentual && <small className={estilos.potencial}>pode chegar a {item.potencial}%</small>}</td>
           </tr>; }) : <tr><td colSpan={4} className={estilos.vazio}>Nenhuma hipótese neste grupo.</td></tr>}
         </tbody>)}
       </table><p className={estilos.aviso}>{dados.aviso}</p>

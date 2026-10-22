@@ -25,6 +25,29 @@ describe('parecer do sistema', () => {
     expect(linhas[0]).toHaveTextContent('Alta'); expect(linhas[1]).toHaveTextContent('Média'); expect(linhas[4]).toHaveTextContent('Baixa');
     expect(screen.getByRole('status')).toHaveTextContent(exemploParecer.urgencia.texto);
   });
+  it('mostra até quanto a confiança pode chegar quando o potencial supera o percentual', async () => {
+    montar();
+    const tabela = await screen.findByRole('table', { name: 'Hipóteses e confiança do sistema' });
+    const linhas = within(tabela).getAllByRole('row').filter(l => l.querySelector('td'));
+    const comPotencial = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual);
+    expect(comPotencial.length).toBeGreaterThan(0);
+    expect(within(tabela).getAllByText(/pode chegar a \d+%/)).toHaveLength(comPotencial.length);
+    expect(linhas[0]).not.toHaveTextContent('pode chegar a');
+    expect(linhas[1]).toHaveTextContent(`pode chegar a ${exemploParecer.blocos[1].itens[0].potencial}%`);
+  });
+  it('avisa e oferece continuar quando nenhuma doença foi confirmada', async () => {
+    const zerado = { ...exemploParecer, final: true, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => ({ ...i, percentual: 0, potencial: 60 })) })) };
+    montar(zerado);
+    const aviso = await screen.findByText('Nenhuma doença foi confirmada com as respostas dadas. Responda mais perguntas para o sistema calcular as chances.');
+    expect(aviso.closest('[role="status"]')).not.toBeNull();
+    await userEvent.click(within(aviso.closest('[role="status"]') as HTMLElement).getByRole('link', { name: 'Continuar respondendo' }));
+    expect(await screen.findByRole('heading', { name: 'Pergunta retomada' })).toBeInTheDocument();
+  });
+  it('não mostra o aviso de nada confirmado quando alguma doença tem percentual', async () => {
+    montar();
+    await screen.findByRole('table', { name: 'Hipóteses e confiança do sistema' });
+    expect(screen.queryByText(/Nenhuma doença foi confirmada/)).toBeNull();
+  });
   it.each(['chamar_agora', 'observar', 'sem_problema'] as const)('avisa que não substitui o laudo, mesmo com urgência %s', async nivel => {
     montar({ ...exemploParecer, urgencia: { ...exemploParecer.urgencia, nivel } });
     const aviso = await screen.findByRole('note', { name: 'Este parecer não é um laudo' });

@@ -12,7 +12,7 @@ def percentual(cf):
     return numero.numerator//numero.denominator
 
 
-def montar_parecer(resultado, motivo=None, urgencia=None, bandeiras=(), pendentes=()):
+def montar_parecer(resultado, motivo=None, urgencia=None, bandeiras=(), pendentes=(), potenciais=None):
     base=resultado.base
     blocos=[{'id':id,'titulo':titulo,'itens':[]} for id,titulo in BLOCOS]
     doencas=sorted((id for id,s in base.simbolos.items() if s['tipo']=='doenca'),
@@ -22,6 +22,7 @@ def montar_parecer(resultado, motivo=None, urgencia=None, bandeiras=(), pendente
         situacao='descartada' if cf < -Fraction(1,5) else 'sem_evidencia' if cf<=Fraction(1,5) else 'com_evidencia'
         item={'doenca':id,'nome':s['nome'],'gravidade':s['gravidade'],'cf':float(cf),
               'percentual':percentual(cf),'situacao':situacao}
+        item['potencial']=max(item['percentual'],percentual(potenciais[id])) if potenciais and id in potenciais else item['percentual']
         lim=base.meta['limiares']
         indice=0 if cf>=lim['bloco_principal'] else 1 if cf>lim['bloco_diferencial'] else 2
         blocos[indice]['itens'].append(item)
