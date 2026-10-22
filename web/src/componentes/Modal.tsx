@@ -9,7 +9,7 @@ type Propriedades = {
   variante?: 'centro' | 'folha'; resumo?: ReactNode;
 };
 
-const margemTopo = 12;
+const margemTopo = 48;
 const alturaMinima = 220;
 
 export function Modal({ titulo, children, aoFechar, seguranca = false, variante = 'centro', resumo }: Propriedades) {
