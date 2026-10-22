@@ -291,7 +291,7 @@ A base `base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json` carrega no m
 
 Já verificado: sem esses dois pontos, `kb.validador.validar` dá **zero erros** (só o aviso W03) e `engine.modelos.Base.de_dict(kb.para_motor(base))` carrega.
 
-Depois: grave a base como `base/versoes/v0001.json` **pelo** `kb.carregador.Repositorio.salvar_nova(base, autor="equipe", nota="base clínica 3.1.0-revisao1")` e ative com `Repositorio.ativar("v0001")` (nunca escreva os arquivos à mão). Teste novo: `tests/casos/test_base_ativa.py` confere que `base/ativa.json` aponta para uma versão que passa em `kb.validar` sem erros e carrega no motor.
+**Já feito em 22/10 (commit da sessão de frontend):** a `v0001` foi gravada pelo `Repositorio` com essas duas correções aplicadas em memória (o texto dos quatro campos foi para `meta.nota`) e está **ativa** (`base/ativa.json`). Não recrie nem altere `v0001` (versões são imutáveis). Sua parte nesta etapa: aplicar as mesmas duas correções no arquivo de `base/desenvolvimento/` e em `tests/engine/test_base_clinica.py` (id `mucosas_palidas_ou_ictericas`), para os testes da base e a `v0001` ficarem coerentes; qualquer mudança de regra vira `v0002` via `Repositorio.salvar_nova(..., pai="v0001")` + execução dos casos antes de ativar. Teste novo: `tests/casos/test_base_ativa.py` confere que `base/ativa.json` aponta para uma versão que passa em `kb.validar` sem erros e carrega no motor.
 
 ## Etapa 2 — Casos conhecidos (Camada 3)
 
