@@ -1,21 +1,19 @@
 ---
-source_file: "kb/README.md"
-type: "document"
-community: "Pacote kb (Seção 2)"
+source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
+type: "concept"
+community: "Serviços e infraestrutura da API"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Serviços_e_infraestrutura_da_API
 ---
 
 # Pacote kb (base de conhecimento)
 
 ## Connections
-- [[Task 6 Integração com o motor, schema e documentação]] - `implements` [EXTRACTED]
-- [[kbanalise.py]] - `references` [EXTRACTED]
-- [[kbcarregador.py (Repositorio)]] - `references` [EXTRACTED]
-- [[kbgrafo.py]] - `references` [EXTRACTED]
-- [[kbmodelos.py]] - `references` [EXTRACTED]
-- [[kbvalidador.py]] - `references` [EXTRACTED]
+- [[Plano de implementação API (Seção 4)]] - `references` [EXTRACTED]
+- [[Schemas Pydantic (sessao, parecer, explicacao, animal, base)]] - `references` [EXTRACTED]
+- [[base_servico.py]] - `references` [EXTRACTED]
+- [[sessao_motor.py (carregaraplicar)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/concept #graphify/EXTRACTED #community/Serviços_e_infraestrutura_da_API

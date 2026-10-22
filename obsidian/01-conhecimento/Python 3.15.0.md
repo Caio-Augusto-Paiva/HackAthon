@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Skills superpowers"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Execução_local_e_ferramentas
+  - community/Skills_superpowers
 ---
 
 # Python 3.15.0
@@ -16,4 +16,4 @@ tags:
 - [[pytest 9.1.1]] - `references` [EXTRACTED]
 - [[uv (sync, run, python pin)]] - `conceptually_related_to` [AMBIGUOUS]
 
-#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/EXTRACTED #community/Skills_superpowers

@@ -15,7 +15,7 @@ tags:
 - [[EstadoSessao (contrato da API)]] - `implements` [EXTRACTED]
 - [[Importação de prontuário CSVJSON]] - `implements` [EXTRACTED]
 - [[Modelo conceitual - módulos (diagrama)]] - `references` [EXTRACTED]
-- [[Pacote engine]] - `references` [EXTRACTED]
+- [[Pacote engine_1]] - `references` [EXTRACTED]
 - [[Persistência SQLite]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura

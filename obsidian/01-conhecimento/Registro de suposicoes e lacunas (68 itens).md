@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Execução local e ferramentas"
+community: "Skills superpowers"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Execução_local_e_ferramentas
+  - community/Skills_superpowers
 ---
 
 # Registro de suposicoes e lacunas (68 itens)
@@ -15,4 +15,4 @@ tags:
 - [[Fatores de certeza (CF) sem calibracao]] - `references` [EXTRACTED]
 - [[Suposicoes clinicas veterinarias (suposicao a validar)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Execução_local_e_ferramentas
+#graphify/concept #graphify/EXTRACTED #community/Skills_superpowers

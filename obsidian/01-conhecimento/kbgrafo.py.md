@@ -1,19 +1,19 @@
 ---
-source_file: "kb/README.md"
+source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Pacote kb (Seção 2)"
+community: "Grafo do kb e ciclos"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Grafo_do_kb_e_ciclos
 ---
 
 # kb/grafo.py
 
 ## Connections
-- [[Aresta.ordem opcional e ordem por lista]] - `references` [EXTRACTED]
-- [[Pacote kb (base de conhecimento)]] - `references` [EXTRACTED]
-- [[Task 3 Conversão base-grafo]] - `implements` [EXTRACTED]
-- [[kbmodelos.py]] - `references` [INFERRED]
+- [[Achado op e negado None viram default]] - `references` [EXTRACTED]
+- [[Aresta ordem opcional]] - `references` [INFERRED]
+- [[Task 3]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/code #graphify/EXTRACTED #community/Grafo_do_kb_e_ciclos

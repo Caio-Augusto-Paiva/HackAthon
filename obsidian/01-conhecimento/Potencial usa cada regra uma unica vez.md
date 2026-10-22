@@ -1,16 +1,13 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Potencial e parada (implementação)"
+community: "Potencial por regra"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Potencial_e_parada_implementação
+  - community/Potencial_por_regra
 ---
 
 # Potencial usa cada regra uma unica vez
 
-## Connections
-- [[Potencial com limites inferior e superior]] - `rationale_for` [EXTRACTED]
-
-#graphify/rationale #graphify/EXTRACTED #community/Potencial_e_parada_implementação
+#graphify/rationale #graphify/EXTRACTED #community/Potencial_por_regra

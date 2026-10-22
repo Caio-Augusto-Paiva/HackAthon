@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Instruções e regras do hackathon (2)"
+community: "Instruções e regras do hackathon"
 location: "L17"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon_2
+  - community/Instruções_e_regras_do_hackathon
 ---
 
 # .graphifyignore (escopo do grafo)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Grafo de conhecimento — ler PRIMEIRO, em todo prompt]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_2
+#graphify/document #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

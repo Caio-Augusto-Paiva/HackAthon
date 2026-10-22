@@ -1,0 +1,23 @@
+---
+source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
+type: "concept"
+community: "Serviços e infraestrutura da API"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Serviços_e_infraestrutura_da_API
+---
+
+# Task 11: Salvar nova versão e ativar
+
+## Connections
+- [[D4 EdicaoBase frouxa]] - `rationale_for` [EXTRACTED]
+- [[D7 casos antes de salvarativar]] - `rationale_for` [EXTRACTED]
+- [[Plano de implementação API (Seção 4)]] - `conceptually_related_to` [EXTRACTED]
+- [[Review Focus (5 pontos de risco)]] - `references` [EXTRACTED]
+- [[Sessão presa à versao_base]] - `rationale_for` [EXTRACTED]
+- [[Task 10 Execução dos casos de teste]] - `references` [EXTRACTED]
+- [[Task 9 Base de conhecimento leitura e validação]] - `references` [EXTRACTED]
+- [[base_servico.py]] - `implements` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Serviços_e_infraestrutura_da_API

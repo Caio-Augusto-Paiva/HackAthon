@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Planejamento, agentes e alocação"
+community: "README da API e decisões"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Planejamento_agentes_e_alocação
+  - community/README_da_API_e_decisões
 ---
 
 # Especificacao canonica do projeto (anamnese bovinos)
@@ -16,4 +16,4 @@ tags:
 - [[Revisao do motor de inferencia (21102026)]] - `references` [EXTRACTED]
 - [[Tabela de conformidade com a especificacao (16 itens)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Planejamento_agentes_e_alocação
+#graphify/document #graphify/EXTRACTED #community/README_da_API_e_decisões

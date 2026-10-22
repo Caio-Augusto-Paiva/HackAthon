@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Decisões da execução do kb"
+community: "Grafo do kb e ciclos"
 location: "L46"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Grafo_do_kb_e_ciclos
 ---
 
 # Caminho do ciclo no sentido do fluxo
@@ -16,4 +16,4 @@ tags:
 - [[encontrar_ciclo]] - `references` [EXTRACTED]
 - [[validar]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/rationale #graphify/EXTRACTED #community/Grafo_do_kb_e_ciclos

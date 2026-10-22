@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Pacote kb (Seção 2)"
+community: "Versões da base, casos e execução local"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Versões_da_base_casos_e_execução_local
 ---
 
 # Task 2: Análise de dependências
@@ -16,6 +16,6 @@ tags:
 - [[Task 1 Ambiente e modelos Pydantic]] - `references` [EXTRACTED]
 - [[Task 3 Conversão base-grafo]] - `references` [EXTRACTED]
 - [[Task 4 Validador]] - `references` [EXTRACTED]
-- [[kbanalise.py]] - `implements` [EXTRACTED]
+- [[kbanalise.py (dependencias, ciclo, ordem topologica)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/document #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local

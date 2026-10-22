@@ -21,7 +21,6 @@ tags:
 - [[Interface do usuario]] - `conceptually_related_to` [EXTRACTED]
 - [[Memoria de trabalho]] - `shares_data_with` [INFERRED]
 - [[Modelo conceitual de sistema especialista (slide 14)]] - `references` [EXTRACTED]
-- [[Motor de inferencia da secao 1 (pacote engine)]] - `implements` [INFERRED]
 - [[Motor de regras em Python independente de interface]] - `implements` [EXTRACTED]
 - [[Projeto proposto (slide 8)]] - `references` [EXTRACTED]
 - [[Resolucao de conflito]] - `conceptually_related_to` [EXTRACTED]

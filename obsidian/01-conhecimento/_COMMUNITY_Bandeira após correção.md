@@ -1,17 +1,17 @@
 ---
 type: community
-members: 4
+cohesion: 1.00
+members: 2
 ---
 
 # Bandeira após correção
 
-**Members:** 4 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 2 nodes
 
 ## Members
 - [[Bandeira disparada permanece apos correcao (urgencia irreversivel)]] - rationale - docs/superpowers/plans/2026-10-20-motor-secao-1.md
 - [[Bandeira some apos correcao (divergencia)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
-- [[Bandeira alerta com pausa e encerramento]] - concept - engine/README.md
-- [[bandeiras_nao_verificadas restrito a regras viaveis e perguntaveis]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
 
 ## Live Query (requires Dataview plugin)
 

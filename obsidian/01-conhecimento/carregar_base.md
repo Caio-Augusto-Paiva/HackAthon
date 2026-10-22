@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Decisões da execução do kb"
+community: "Plano do kb e carregar_base"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Plano_do_kb_e_carregar_base
 ---
 
 # carregar_base
@@ -15,4 +15,4 @@ tags:
 - [[Achado carregar_base excecoes nativas]] - `references` [EXTRACTED]
 - [[Task 1]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/code #graphify/EXTRACTED #community/Plano_do_kb_e_carregar_base

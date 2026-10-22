@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Decisões da execução do kb"
+community: "Grafo do kb e ciclos"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Grafo_do_kb_e_ciclos
 ---
 
 # Achado direcao do caminho do ciclo
@@ -16,4 +16,4 @@ tags:
 - [[Task 2]] - `references` [EXTRACTED]
 - [[encontrar_ciclo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Grafo_do_kb_e_ciclos

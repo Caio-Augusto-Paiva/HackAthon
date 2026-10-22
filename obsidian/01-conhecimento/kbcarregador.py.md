@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Decisões da execução do kb (2)"
+community: "Módulos do kb"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb_2
+  - community/Módulos_do_kb
 ---
 
 # kb/carregador.py
@@ -15,4 +15,4 @@ tags:
 - [[Modulos do kb implementados aqui]] - `implements` [EXTRACTED]
 - [[Task 5]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Decisões_da_execução_do_kb_2
+#graphify/code #graphify/EXTRACTED #community/Módulos_do_kb

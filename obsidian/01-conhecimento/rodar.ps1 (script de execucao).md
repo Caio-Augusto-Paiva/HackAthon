@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Skills anthropics e open source"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Skills_anthropics_e_open_source
 ---
 
 # rodar.ps1 (script de execucao)
@@ -15,4 +15,4 @@ tags:
 - [[PowerShell ExecutionPolicy Bypass]] - `conceptually_related_to` [INFERRED]
 - [[uv (sync, run, python pin)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/INFERRED #community/Skills_anthropics_e_open_source

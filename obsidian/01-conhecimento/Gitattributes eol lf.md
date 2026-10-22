@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Decisões da execução do kb"
+community: "Ambiente e motor (testes)"
 location: "L57"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Ambiente_e_motor_testes
 ---
 
 # Gitattributes eol lf
@@ -15,4 +15,4 @@ tags:
 - [[dot-gitattributes]] - `implements` [EXTRACTED]
 - [[Task 6]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/rationale #graphify/EXTRACTED #community/Ambiente_e_motor_testes

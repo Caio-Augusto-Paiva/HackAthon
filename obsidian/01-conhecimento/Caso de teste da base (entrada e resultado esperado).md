@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Pacote kb (Seção 2)"
+community: "Versões da base, casos e execução local"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Versões_da_base_casos_e_execução_local
 ---
 
 # Caso de teste da base (entrada e resultado esperado)
@@ -14,4 +14,4 @@ tags:
 - [[Símbolo (variável da base)]] - `references` [INFERRED]
 - [[Task 1 Ambiente e modelos Pydantic]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/concept #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local

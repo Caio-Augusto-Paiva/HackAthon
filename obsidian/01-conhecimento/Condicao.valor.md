@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Decisões da execução do kb"
+community: "Condicao.valor e E03"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Condicaovalor_e_E03
 ---
 
 # Condicao.valor
@@ -17,4 +17,4 @@ tags:
 - [[valor None gera E03]] - `references` [EXTRACTED]
 - [[valor None preservado na ida e volta]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/code #graphify/EXTRACTED #community/Condicaovalor_e_E03

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Decisões da execução do kb"
+community: "Grafo do kb e ciclos"
 location: "L39-L44"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Grafo_do_kb_e_ciclos
 ---
 
 # Task 3
@@ -16,6 +16,6 @@ tags:
 - [[SDD ledger]] - `references` [EXTRACTED]
 - [[Task 1]] - `shares_data_with` [EXTRACTED]
 - [[Task 2]] - `shares_data_with` [EXTRACTED]
-- [[kbgrafo.py_1]] - `implements` [EXTRACTED]
+- [[kbgrafo.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Grafo_do_kb_e_ciclos

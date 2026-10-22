@@ -3,6 +3,10 @@
 engine/*.py
 kb/*.py
 kb/schema/
+api/*.py
+api/**/*.py
+api/db/*.sql
+contratos/
 scripts/
 pyproject.toml
 .superpowers/

@@ -1,22 +1,20 @@
 ---
-source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
+source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Especificação: entrega e arquitetura"
-location: "Seção 4.3"
+community: "Ambiente e motor (testes)"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Especificação_entrega_e_arquitetura
+  - community/Ambiente_e_motor_testes
 ---
 
 # Pacote engine
 
 ## Connections
-- [[Explicação por quê e como]] - `implements` [EXTRACTED]
-- [[Memória de trabalho (enginememoria.py)]] - `implements` [EXTRACTED]
-- [[Modelo conceitual - módulos (diagrama)]] - `references` [EXTRACTED]
-- [[Motor de inferência (engine)]] - `implements` [EXTRACTED]
-- [[Pacote api (FastAPI)]] - `references` [EXTRACTED]
-- [[Pacote kb]] - `references` [EXTRACTED]
+- [[Achado fato numerico inerte no teste]] - `references` [INFERRED]
+- [[Comando de teste do motor com Python do sistema]] - `references` [EXTRACTED]
+- [[Verificacao final]] - `references` [EXTRACTED]
+- [[enginevalidacao.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura
+#graphify/code #graphify/EXTRACTED #community/Ambiente_e_motor_testes

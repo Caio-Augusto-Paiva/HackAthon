@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Decisões da execução do kb (2)"
+community: "E14 derivado max"
 location: "L68"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb_2
+  - community/E14_derivado_max
 ---
 
 # E14 cobre max fora de derivado
@@ -16,4 +16,4 @@ tags:
 - [[E14 max e cf]] - `references` [EXTRACTED]
 - [[derivado_max_negativo]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisões_da_execução_do_kb_2
+#graphify/rationale #graphify/EXTRACTED #community/E14_derivado_max

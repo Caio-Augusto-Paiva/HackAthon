@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Base de conhecimento]] - `references` [EXTRACTED]
-- [[CF estilo MYCIN em Fraction]] - `implements` [INFERRED]
 - [[Motor de inferencia]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

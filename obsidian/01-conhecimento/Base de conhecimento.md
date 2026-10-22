@@ -17,7 +17,6 @@ tags:
 - [[Conteudo obrigatorio do plano final (12 itens)]] - `references` [EXTRACTED]
 - [[Editor grafico do fluxo da anamnese]] - `shares_data_with` [EXTRACTED]
 - [[Fatores de certeza (CF)]] - `references` [EXTRACTED]
-- [[Guardas nao substituem a validacao editorial de kb]] - `conceptually_related_to` [INFERRED]
 - [[Motor de inferencia]] - `shares_data_with` [EXTRACTED]
 - [[Sistema especialista]] - `implements` [INFERRED]
 - [[Testes com casos conhecidos por versao da base]] - `conceptually_related_to` [EXTRACTED]

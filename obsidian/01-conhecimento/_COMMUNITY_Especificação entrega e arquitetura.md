@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.07
 members: 53
 ---
 
 # Especificação: entrega e arquitetura
 
+**Cohesion:** 0.07 - loosely connected
 **Members:** 53 nodes
 
 ## Members
@@ -39,7 +41,7 @@ members: 53
 - [[Modelo conceitual - módulos (diagrama)]] - concept - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
 - [[Motor de inferência (engine)]] - concept - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
 - [[Pacote api (FastAPI)]] - code - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
-- [[Pacote engine]] - code - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
+- [[Pacote engine_1]] - code - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
 - [[Pacote kb]] - code - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
 - [[Pacote web (React + TypeScript)]] - code - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md
 - [[Parecer 8 doenças, % e três blocos]] - concept - docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md

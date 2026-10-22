@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Decisões da execução do kb"
+community: "Validador: achados e casos inválidos"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Validador_achados_e_casos_inválidos
 ---
 
 # Casos invalidos como mutacoes pytest
@@ -15,4 +15,4 @@ tags:
 - [[Arquivos kb_invalidas Secao 5.1]] - `rationale_for` [EXTRACTED]
 - [[validar]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/rationale #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos

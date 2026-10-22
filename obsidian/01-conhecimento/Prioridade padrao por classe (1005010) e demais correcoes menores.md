@@ -1,16 +1,13 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Instruções e regras do hackathon (3)"
+community: "Prioridade padrão por classe"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Instruções_e_regras_do_hackathon_3
+  - community/Prioridade_padrão_por_classe
 ---
 
 # Prioridade padrao por classe (100/50/10) e demais correcoes menores
 
-## Connections
-- [[Agenda em camadas (prioridade, especificidade, id)]] - `references` [EXTRACTED]
-
-#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon_3
+#graphify/concept #graphify/EXTRACTED #community/Prioridade_padrão_por_classe

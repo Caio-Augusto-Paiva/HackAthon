@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Execução local e ferramentas"
+community: "Skills superpowers"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Skills_superpowers
 ---
 
 # Casos de teste inventados (engine/casos.py)
@@ -17,4 +17,4 @@ tags:
 - [[pytest parametrize com pytest.param(id=...)]] - `shares_data_with` [INFERRED]
 - [[test-driven-development (skill)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/concept #graphify/INFERRED #community/Skills_superpowers

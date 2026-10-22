@@ -15,7 +15,7 @@ tags:
 - [[Base de conhecimento JSON versionada (kb)]] - `implements` [EXTRACTED]
 - [[Grafo bipartido símbolo-regra (conversão 11)]] - `implements` [EXTRACTED]
 - [[Modelo conceitual - módulos (diagrama)]] - `references` [EXTRACTED]
-- [[Pacote engine]] - `references` [EXTRACTED]
+- [[Pacote engine_1]] - `references` [EXTRACTED]
 - [[Validador da base (erros e avisos)]] - `implements` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura

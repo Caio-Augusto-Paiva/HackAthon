@@ -1,18 +1,17 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Pacote kb (Seção 2)"
+community: "Versões da base, casos e execução local"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Versões_da_base_casos_e_execução_local
 ---
 
 # Task 1: Ambiente e modelos Pydantic
 
 ## Connections
 - [[Caso de teste da base (entrada e resultado esperado)]] - `implements` [EXTRACTED]
-- [[Divergência kb-motor operadores ASCII]] - `conceptually_related_to` [INFERRED]
 - [[Foco de revisão do plano]] - `rationale_for` [EXTRACTED]
 - [[Plano de implementação do kb (Seção 2)]] - `references` [EXTRACTED]
 - [[Regra de produção (condições, conclusão, CF)]] - `implements` [EXTRACTED]
@@ -23,6 +22,6 @@ tags:
 - [[Task 4 Validador]] - `references` [EXTRACTED]
 - [[Task 5 Repositório de versões]] - `references` [EXTRACTED]
 - [[Tela de triagem]] - `implements` [EXTRACTED]
-- [[kbmodelos.py]] - `implements` [EXTRACTED]
+- [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/document #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local

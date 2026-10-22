@@ -15,6 +15,6 @@ tags:
 - [[Correções e recálculo dos fatos]] - `references` [INFERRED]
 - [[Importação de prontuário CSVJSON]] - `shares_data_with` [EXTRACTED]
 - [[Motor de inferência (engine)]] - `references` [EXTRACTED]
-- [[Pacote engine]] - `implements` [EXTRACTED]
+- [[Pacote engine_1]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Especificação_entrega_e_arquitetura

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "rationale"
-community: "Pacote kb (Seção 2)"
+community: "Versões da base, casos e execução local"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Pacote_kb_Seção_2
+  - community/Versões_da_base_casos_e_execução_local
 ---
 
 # Forma canônica de negação booleana (X = não)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Regra de produção (condições, conclusão, CF)]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Pacote_kb_Seção_2
+#graphify/rationale #graphify/INFERRED #community/Versões_da_base_casos_e_execução_local

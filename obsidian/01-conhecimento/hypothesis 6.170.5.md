@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Execução local e ferramentas"
+community: "Skills superpowers"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Execução_local_e_ferramentas
+  - community/Skills_superpowers
 ---
 
 # hypothesis 6.170.5
@@ -14,4 +14,4 @@ tags:
 - [[Hypothesis (floats, lists, permutations)]] - `references` [INFERRED]
 - [[Python 3.15.0]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Execução_local_e_ferramentas
+#graphify/document #graphify/EXTRACTED #community/Skills_superpowers

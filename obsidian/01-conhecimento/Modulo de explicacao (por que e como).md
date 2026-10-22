@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Componentes da arquitetura (modelo conceitual)]] - `references` [EXTRACTED]
 - [[Conteudo obrigatorio do plano final (12 itens)]] - `references` [EXTRACTED]
-- [[Explicacoes por que e como]] - `implements` [INFERRED]
 - [[Interface do usuario]] - `conceptually_related_to` [INFERRED]
 - [[Traco de inferencia]] - `conceptually_related_to` [EXTRACTED]
 

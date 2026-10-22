@@ -17,7 +17,6 @@ tags:
 - [[Cinco tarefas TDD do motor (vermelho antes do verde)]] - `semantically_similar_to` [INFERRED]
 - [[Conteudo obrigatorio do plano final (12 itens)]] - `references` [EXTRACTED]
 - [[Dicas do hackathon (slide 13)]] - `references` [EXTRACTED]
-- [[Executor de casos (engine.casos)]] - `implements` [INFERRED]
 - [[Fontes oficiais A apresentacaoRerun.pdf e D DocumentarioRerun.pdf]] - `cites` [EXTRACTED]
 - [[Playwright]] - `conceptually_related_to` [INFERRED]
 - [[pytest]] - `conceptually_related_to` [EXTRACTED]

@@ -19,7 +19,7 @@ tags:
 - [[Especificação PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
 - [[Fatos (variável, valor, CF) e avaliação de condições]] - `references` [EXTRACTED]
 - [[Memória de trabalho (enginememoria.py)]] - `references` [EXTRACTED]
-- [[Pacote engine]] - `implements` [EXTRACTED]
+- [[Pacote engine_1]] - `implements` [EXTRACTED]
 - [[Parecer 8 doenças, % e três blocos]] - `references` [EXTRACTED]
 - [[Resolução de conflito (agenda)]] - `references` [EXTRACTED]
 - [[Restrição sem LLM no caminho da decisão]] - `rationale_for` [EXTRACTED]

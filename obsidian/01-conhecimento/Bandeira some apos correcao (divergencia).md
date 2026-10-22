@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Bandeira disparada permanece apos correcao (urgencia irreversivel)]] - `references` [EXTRACTED]
-- [[Bandeira alerta com pausa e encerramento]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Bandeira_após_correção

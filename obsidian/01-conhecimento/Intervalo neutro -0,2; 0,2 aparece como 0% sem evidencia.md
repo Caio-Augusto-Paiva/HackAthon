@@ -1,17 +1,17 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Interface, memória e lacunas da API"
+community: "README da API e decisões"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Interface_memória_e_lacunas_da_API
+  - community/README_da_API_e_decisões
 ---
 
 # Intervalo neutro [-0,2; 0,2] aparece como 0% sem evidencia
 
 ## Connections
-- [[Parecer final em tres blocos]] - `rationale_for` [EXTRACTED]
 - [[Percentual do parecer max(0, CF) x 100 (divergencia)]] - `references` [EXTRACTED]
+- [[parecer() tres blocos, CF, percentuais, urgencia]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Interface_memória_e_lacunas_da_API
+#graphify/rationale #graphify/EXTRACTED #community/README_da_API_e_decisões

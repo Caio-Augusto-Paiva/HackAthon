@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "rationale"
-community: "Pacote kb (Seção 2)"
+community: "Versões da base, casos e execução local"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Pacote_kb_Seção_2
+  - graphify/EXTRACTED
+  - community/Versões_da_base_casos_e_execução_local
 ---
 
 # Restrições globais do kb
@@ -13,6 +13,5 @@ tags:
 ## Connections
 - [[Plano de implementação do kb (Seção 2)]] - `references` [EXTRACTED]
 - [[Task 1 Ambiente e modelos Pydantic]] - `rationale_for` [INFERRED]
-- [[kb como pacote folha (não importa engine)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Pacote_kb_Seção_2
+#graphify/rationale #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local

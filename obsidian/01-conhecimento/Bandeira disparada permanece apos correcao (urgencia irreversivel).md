@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Bandeira some apos correcao (divergencia)]] - `references` [EXTRACTED]
-- [[Bandeira alerta com pausa e encerramento]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Bandeira_após_correção

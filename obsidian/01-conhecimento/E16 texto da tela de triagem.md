@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Decisões da execução do kb"
+community: "Validador: achados e casos inválidos"
 location: "L52"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Validador_achados_e_casos_inválidos
 ---
 
 # E16 texto da tela de triagem
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[E16 exige texto nos dois modos]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Validador_achados_e_casos_inválidos

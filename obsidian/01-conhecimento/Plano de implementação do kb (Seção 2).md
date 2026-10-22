@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Pacote kb (Seção 2)"
+community: "Versões da base, casos e execução local"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Versões_da_base_casos_e_execução_local
 ---
 
 # Plano de implementação do kb (Seção 2)
@@ -13,7 +13,6 @@ tags:
 ## Connections
 - [[Especificação de anamnese (docssuperpowersspecs, Seção 2 e 5.1)]] - `references` [EXTRACTED]
 - [[Foco de revisão do plano]] - `references` [EXTRACTED]
-- [[Pydantic fixado em =2.14,2.15 (README)]] - `conceptually_related_to` [AMBIGUOUS]
 - [[Restrições globais do kb]] - `references` [EXTRACTED]
 - [[Revisão do motor (docsrevisoes2026-10-21-revisao-motor.md)]] - `references` [EXTRACTED]
 - [[Task 1 Ambiente e modelos Pydantic]] - `references` [EXTRACTED]
@@ -23,4 +22,4 @@ tags:
 - [[Task 5 Repositório de versões]] - `references` [EXTRACTED]
 - [[Task 6 Integração com o motor, schema e documentação]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/document #graphify/EXTRACTED #community/Versões_da_base_casos_e_execução_local

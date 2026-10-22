@@ -72,10 +72,10 @@
     "semantic_hash": "1355d27bf0db4d5b684ac9208fce1a12"
   },
   "engine/README.md": {
-    "mtime": 1792551354.6297457,
-    "seen": 1792553138.974145,
-    "ast_hash": "6f74a28b070151597a037e92d921735e",
-    "semantic_hash": "6f74a28b070151597a037e92d921735e"
+    "mtime": 1792589950.5578115,
+    "seen": 1792631208.7729166,
+    "ast_hash": "59e8ce2bb1188e155b06226f368066cc",
+    "semantic_hash": "59e8ce2bb1188e155b06226f368066cc"
   },
   "CLAUDE.md": {
     "mtime": 1792553789.0914888,
@@ -90,15 +90,27 @@
     "semantic_hash": "0954431767c1eb897562543b81d3badd"
   },
   "kb/README.md": {
-    "mtime": 1792565605.6682029,
-    "seen": 1792565985.74888,
-    "ast_hash": "858e2cd5b263242d1fe0bc604bebbd93",
-    "semantic_hash": "858e2cd5b263242d1fe0bc604bebbd93"
+    "mtime": 1792590904.140442,
+    "seen": 1792631208.7729166,
+    "ast_hash": "c85791992ce8deeb72305f4a9725661e",
+    "semantic_hash": "c85791992ce8deeb72305f4a9725661e"
   },
   "docs/revisoes/2026-10-21-ledger-kb-secao-2.md": {
     "mtime": 1792565996.827138,
     "seen": 1792567875.2353735,
     "ast_hash": "198fa93dd11674d43e8689fcce9196d6",
     "semantic_hash": "198fa93dd11674d43e8689fcce9196d6"
+  },
+  "api/README.md": {
+    "mtime": 1792630623.0349376,
+    "seen": 1792631208.7729166,
+    "ast_hash": "302633e336a483f73bdb2e7f3a3112da",
+    "semantic_hash": "302633e336a483f73bdb2e7f3a3112da"
+  },
+  "docs/superpowers/plans/2026-10-21-api-secao-4.md": {
+    "mtime": 1792590592.278376,
+    "seen": 1792631208.7729166,
+    "ast_hash": "b1dd155151f4877010543d0b56422160",
+    "semantic_hash": "b1dd155151f4877010543d0b56422160"
   }
 }

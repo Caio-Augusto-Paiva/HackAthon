@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Execução local e ferramentas"
+community: "Skills anthropics e open source"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Execução_local_e_ferramentas
+  - community/Skills_anthropics_e_open_source
 ---
 
 # Playwright Test webServer
@@ -17,4 +17,4 @@ tags:
 - [[uvicorn 0.54.0]] - `references` [EXTRACTED]
 - [[webapp-testing (skill)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Execução_local_e_ferramentas
+#graphify/rationale #graphify/INFERRED #community/Skills_anthropics_e_open_source

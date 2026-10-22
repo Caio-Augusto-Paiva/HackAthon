@@ -5,7 +5,7 @@ community: "Instruções e regras do hackathon"
 location: "L113"
 tags:
   - graphify/concept
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Instruções_e_regras_do_hackathon
 ---
 
@@ -13,9 +13,8 @@ tags:
 
 ## Connections
 - [[Decisao deterministica e auditavel]] - `rationale_for` [INFERRED]
-- [[Explicacoes por que e como]] - `conceptually_related_to` [INFERRED]
 - [[Modulo de explicacao (por que e como)]] - `conceptually_related_to` [EXTRACTED]
 - [[Motor de inferencia]] - `references` [EXTRACTED]
 - [[Traco da sessao reacumula eventos (parcial)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Instruções_e_regras_do_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Instruções_e_regras_do_hackathon

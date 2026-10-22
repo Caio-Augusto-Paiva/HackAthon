@@ -1,19 +1,19 @@
 ---
 type: community
-members: 22
+cohesion: 0.13
+members: 20
 ---
 
 # Domínio veterinário e suposições
 
-**Members:** 22 nodes
+**Cohesion:** 0.13 - loosely connected
+**Members:** 20 nodes
 
 ## Members
 - [[Acidose ruminal (categoria)]] - concept - docs/fontes/fontes.md
 - [[Acidose ruminal subaguda]] - concept - docs/fontes/fontes.md
 - [[Anaplasmose]] - concept - docs/fontes/fontes.md
 - [[Babesiose]] - concept - docs/fontes/fontes.md
-- [[Base artificial sem conhecimento veterinario, nao serve para triagem]] - rationale - engine/README.md
-- [[Base de demonstracao artificial (testsfixturesmotorbase.json)]] - concept - engine/README.md
 - [[Cetose bovina (hiperCetonemia)]] - concept - docs/fontes/fontes.md
 - [[Dados ficticios apenas]] - rationale - CLAUDE.md
 - [[Dermatite digital]] - concept - docs/fontes/fontes.md
@@ -43,4 +43,4 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[Marcacao de suposicao a validar (conhecimento veterinario)]] - degree 5, connects to 1 community
-- [[Dados ficticios apenas]] - degree 3, connects to 1 community
+- [[Dados ficticios apenas]] - degree 2, connects to 1 community

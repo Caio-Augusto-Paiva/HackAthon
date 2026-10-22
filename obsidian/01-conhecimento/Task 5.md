@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Decisões da execução do kb (2)"
+community: "Gravação e ativação de versões"
 location: "L56-L62"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb_2
+  - community/Gravação_e_ativação_de_versões
 ---
 
 # Task 5
@@ -22,4 +22,4 @@ tags:
 - [[kbcarregador.py]] - `implements` [INFERRED]
 - [[salvar_nova]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_da_execução_do_kb_2
+#graphify/concept #graphify/EXTRACTED #community/Gravação_e_ativação_de_versões

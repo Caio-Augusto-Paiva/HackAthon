@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Decisões da execução do kb (2)"
+community: "para_motor e revisão final do kb"
 location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb_2
+  - community/para_motor_e_revisão_final_do_kb
 ---
 
 # Aresta ordem opcional
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Achado ordem ausente no contrato]] - `rationale_for` [EXTRACTED]
 - [[Aresta.ordem]] - `implements` [EXTRACTED]
-- [[kbgrafo.py_1]] - `references` [INFERRED]
+- [[kbgrafo.py]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisões_da_execução_do_kb_2
+#graphify/rationale #graphify/EXTRACTED #community/para_motor_e_revisão_final_do_kb

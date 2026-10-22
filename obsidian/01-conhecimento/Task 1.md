@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Decisões da execução do kb"
+community: "Plano do kb e carregar_base"
 location: "L26-L31"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Plano_do_kb_e_carregar_base
 ---
 
 # Task 1
@@ -27,7 +27,7 @@ tags:
 - [[carregar_base]] - `implements` [EXTRACTED]
 - [[engine.modelos.Base.de_dict]] - `references` [EXTRACTED]
 - [[kb__init__.py]] - `references` [AMBIGUOUS]
-- [[kbmodelos.py_1]] - `implements` [EXTRACTED]
+- [[kbmodelos.py]] - `implements` [EXTRACTED]
 - [[testskbtest_modelos.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Plano_do_kb_e_carregar_base

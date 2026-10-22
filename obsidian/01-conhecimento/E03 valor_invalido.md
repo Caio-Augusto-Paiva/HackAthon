@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Decisões da execução do kb"
+community: "Condicao.valor e E03"
 location: "L45"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Condicaovalor_e_E03
 ---
 
 # E03 valor_invalido
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[valor None gera E03]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Condicaovalor_e_E03

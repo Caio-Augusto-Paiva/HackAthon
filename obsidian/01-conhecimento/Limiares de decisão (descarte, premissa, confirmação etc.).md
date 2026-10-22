@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Pacote kb (Seção 2) (2)"
+community: "Limiares e combinação MYCIN"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Pacote_kb_Seção_2_2
+  - community/Limiares_e_combinação_MYCIN
 ---
 
 # Limiares de decisão (descarte, premissa, confirmação etc.)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Combinação MYCIN de fatores de certeza]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Pacote_kb_Seção_2_2
+#graphify/concept #graphify/INFERRED #community/Limiares_e_combinação_MYCIN

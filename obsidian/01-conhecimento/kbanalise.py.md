@@ -1,19 +1,17 @@
 ---
-source_file: "kb/README.md"
+source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Pacote kb (Seção 2)"
+community: "Módulos do kb"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pacote_kb_Seção_2
+  - community/Módulos_do_kb
 ---
 
 # kb/analise.py
 
 ## Connections
-- [[Pacote kb (base de conhecimento)]] - `references` [EXTRACTED]
-- [[Task 2 Análise de dependências]] - `implements` [EXTRACTED]
-- [[kbmodelos.py]] - `references` [INFERRED]
-- [[kbvalidador.py]] - `references` [EXTRACTED]
+- [[Modulos do kb implementados aqui]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pacote_kb_Seção_2
+#graphify/code #graphify/EXTRACTED #community/Módulos_do_kb

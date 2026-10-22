@@ -1,18 +1,22 @@
 ---
 type: community
-members: 59
+cohesion: 0.07
+members: 65
 ---
 
 # Instruções e regras do hackathon
 
-**Members:** 59 nodes
+**Cohesion:** 0.07 - loosely connected
+**Members:** 65 nodes
 
 ## Members
+- [[dot-graphifyignore (escopo do grafo)]] - document - CLAUDE.md
 - [[Aquisicao de conhecimento]] - concept - CLAUDE.md
 - [[Autorizacao explicita supera a fase de planejamento do CLAUDE]] - rationale - docs/superpowers/plans/2026-10-20-motor-secao-1.md
 - [[Base de conhecimento]] - concept - CLAUDE.md
-- [[CF estilo MYCIN em Fraction]] - concept - engine/README.md
 - [[CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)]] - document - CLAUDE.md
+- [[Cinco tarefas TDD do motor (vermelho antes do verde)]] - concept - docs/superpowers/plans/2026-10-20-motor-secao-1.md
+- [[Cofre Obsidian obsidian01-conhecimento (grafo 1)]] - document - CLAUDE.md
 - [[Componentes da arquitetura (modelo conceitual)]] - document - CLAUDE.md
 - [[Conteudo obrigatorio do plano final (12 itens)]] - concept - CLAUDE.md
 - [[Criterios de avaliacao do hackathon]] - concept - CLAUDE.md
@@ -25,22 +29,20 @@ members: 59
 - [[Encadeamento para frente e para tras]] - concept - CLAUDE.md
 - [[Entrega, demonstracao e localhost (slides 10 e 15)]] - concept - docs/fontes/transcricao-apresentacao-rerum.md
 - [[Especificacao canonica docssuperpowersspecs2026-10-20-anamnese-bovinos-design]] - document - CLAUDE.md
-- [[Executor de casos (engine.casos)]] - concept - engine/README.md
-- [[Executor de casos incompleto (inconclusivas e pausa)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
-- [[Explicacoes por que e como]] - concept - engine/README.md
 - [[FastAPI + Pydantic]] - concept - CLAUDE.md
 - [[Fatores de certeza (CF)]] - concept - CLAUDE.md
+- [[Fontes de dados externas]] - concept - CLAUDE.md
 - [[Fontes oficiais A apresentacaoRerun.pdf e D DocumentarioRerun.pdf]] - document - CLAUDE.md
-- [[Fraction evita arredondar conclusao quase certa]] - rationale - engine/README.md
-- [[Guardas de validacao do nucleo]] - concept - engine/README.md
-- [[Guardas nao substituem a validacao editorial de kb]] - rationale - engine/README.md
+- [[Grafo de conhecimento — ler PRIMEIRO, em todo prompt]] - document - CLAUDE.md
 - [[Interface do usuario]] - concept - CLAUDE.md
 - [[Limite da fase de planejamento (sem implementacao)]] - concept - CLAUDE.md
 - [[Linguagens escolhidas Python no backend, React no frontend]] - concept - CLAUDE.md
+- [[Manter o grafo atualizado]] - document - CLAUDE.md
+- [[Memoria de trabalho]] - concept - CLAUDE.md
 - [[Modelo conceitual de sistema especialista (slide 14)]] - concept - docs/fontes/transcricao-apresentacao-rerum.md
 - [[Modulo de explicacao (por que e como)]] - concept - CLAUDE.md
 - [[Motor de inferencia]] - concept - CLAUDE.md
-- [[Nucleo inferir(base, fatos), sem estado]] - concept - engine/README.md
+- [[Motor de regras em Python independente de interface]] - concept - CLAUDE.md
 - [[Passo a passo sugerido do hackathon]] - document - CLAUDE.md
 - [[Playwright]] - concept - CLAUDE.md
 - [[Processo obrigatorio de planejamento]] - document - CLAUDE.md
@@ -50,6 +52,8 @@ members: 59
 - [[React Flow]] - concept - CLAUDE.md
 - [[Regras de conduta]] - document - CLAUDE.md
 - [[Regulamento, pontuacao e cronograma (slide 3)]] - concept - docs/fontes/transcricao-apresentacao-rerum.md
+- [[Resolucao de conflito]] - concept - CLAUDE.md
+- [[Restauracao da sessao a partir do banco (ausente, bloqueia a API)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
 - [[Restricao execucao completa em localhost]] - rationale - CLAUDE.md
 - [[Restricao nao usar a LLM como sistema especialista]] - rationale - CLAUDE.md
 - [[Restricao open source]] - rationale - CLAUDE.md
@@ -65,6 +69,10 @@ members: 59
 - [[Testes com casos conhecidos por versao da base]] - concept - CLAUDE.md
 - [[Traco da sessao reacumula eventos (parcial)]] - concept - docs/revisoes/2026-10-21-revisao-motor.md
 - [[Traco de inferencia]] - concept - CLAUDE.md
+- [[Transcricao .md de PDFs de imagem em docsfontes]] - concept - CLAUDE.md
+- [[graphify --update]] - concept - CLAUDE.md
+- [[graphify query]] - concept - CLAUDE.md
+- [[graphify-outGRAPH_REPORT.md (indice do grafo)]] - document - CLAUDE.md
 - [[obrasuperpowers (skills em formato aberto)]] - concept - docs/agentes-e-skills.md
 - [[pytest]] - concept - CLAUDE.md
 
@@ -76,15 +84,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Planejamento, agentes e alocação]]
-- 4 edges to [[_COMMUNITY_Instruções e regras do hackathon (2)]]
 - 3 edges to [[_COMMUNITY_Domínio veterinário e suposições]]
-- 1 edge to [[_COMMUNITY_Interface, memória e lacunas da API]]
-- 1 edge to [[_COMMUNITY_Instruções e regras do hackathon (3)]]
+- 2 edges to [[_COMMUNITY_Agentes e alocação por pessoa]]
 
 ## Top bridge nodes
-- [[Motor de inferencia]] - degree 16, connects to 2 communities
-- [[Proposta inicial de arquitetura (hipotese a validar)]] - degree 10, connects to 2 communities
-- [[Interface do usuario]] - degree 6, connects to 2 communities
-- [[CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)]] - degree 28, connects to 1 community
 - [[Conteudo obrigatorio do plano final (12 itens)]] - degree 13, connects to 1 community
+- [[Proposta inicial de arquitetura (hipotese a validar)]] - degree 10, connects to 1 community
+- [[Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)]] - degree 5, connects to 1 community
+- [[obrasuperpowers (skills em formato aberto)]] - degree 4, connects to 1 community
+- [[Regras de conduta]] - degree 3, connects to 1 community

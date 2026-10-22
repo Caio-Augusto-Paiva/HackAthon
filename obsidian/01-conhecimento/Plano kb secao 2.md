@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "document"
-community: "Decisões da execução do kb"
+community: "Plano do kb e carregar_base"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Decisões_da_execução_do_kb
+  - community/Plano_do_kb_e_carregar_base
 ---
 
 # Plano kb secao 2
@@ -15,4 +15,4 @@ tags:
 - [[Execucao sequencial das tarefas]] - `rationale_for` [EXTRACTED]
 - [[SDD ledger]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Decisões_da_execução_do_kb
+#graphify/document #graphify/EXTRACTED #community/Plano_do_kb_e_carregar_base
