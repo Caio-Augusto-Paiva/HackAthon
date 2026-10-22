@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import type { EstadoSessao } from '../api/sessao';
-import { primeira, segunda, multipla, perguntaDinamica, exemploParecer, exemploPorque, resposta } from '../teste/cenarios';
+import { primeira, segunda, multipla, perguntaDinamica, exemploParecer, exemploPorque, estadoPausado, resposta } from '../teste/cenarios';
 import { Anamnese } from './Anamnese';
 
 type Mutacao = { caminho: string; metodo: string; corpo: unknown };
@@ -183,5 +183,154 @@ describe('diálogo da anamnese', () => {
     await screen.findByRole('checkbox', { name: 'Abatida' });
     await userEvent.click(screen.getByRole('button', { name: 'Voltar' }));
     expect(await screen.findByRole('heading', { name: 'Como estão as orelhas e as pontas dos membros?' })).toBeInTheDocument();
+  });
+});
+
+const especialista: EstadoSessao = { ...segunda, modo: 'veterinario', revisao: 2,
+  progresso: { ...segunda.progresso, limite_dinamico: 25 } };
+async function pedirEspecialista() {
+  await userEvent.click(await screen.findByRole('button', { name: 'Mudar para modo especialista' }));
+  return screen.findByRole('dialog', { name: 'Mudar para modo especialista?' });
+}
+describe('troca de modo sem reiniciar a anamnese', () => {
+  it.each([false, true])('corrige o fato térmico original e retorna ao especialista (temperatura respondida: %s)', async temperaturaRespondida => {
+    const termicaVet: EstadoSessao = { ...especialista, proxima: { tipo: 'tela_triagem', tela_id: 'estado_termico',
+      titulo: 'Informe a temperatura retal', selecao: 'unica', permite_nao_sei: true,
+      campos: [{ simbolo: 'temperatura_retal', entrada: 'numerico', rotulo: 'Temperatura retal', unidade: '°C', min: 30, max: 45, opcoes: null }] } };
+    let termicaFeita = false;
+    const controle = simular(segunda, (c, m) => {
+      if (m.metodo === 'PATCH') c.estado = (m.corpo as { modo: string }).modo === 'produtor' ? multipla
+        : termicaFeita ? { ...multipla, modo: 'veterinario' } : termicaVet;
+      else if (m.metodo === 'POST' && c.estado.modo === 'veterinario') { termicaFeita = true; c.estado = { ...multipla, modo: 'veterinario' }; }
+      else if (m.metodo === 'PUT' && c.estado.modo === 'veterinario') return resposta({ erro: {
+        codigo: termicaFeita ? 'resposta_invalida' : 'nao_respondida', mensagem: 'Símbolo de outro modo.', requisicao_id: 'rq_termica' } }, termicaFeita ? 422 : 409);
+      else c.estado = multipla;
+      return resposta(c.estado);
+    }); montar();
+    await userEvent.click(await screen.findByRole('radio', { name: 'Frias' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    const dialogo = await pedirEspecialista();
+    await userEvent.click(within(dialogo).getByRole('button', { name: 'Confirmar troca' }));
+    if (temperaturaRespondida) {
+      await userEvent.type(await screen.findByRole('textbox'), '38.5');
+      await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    }
+    await userEvent.click(await screen.findByRole('button', { name: 'Voltar' }));
+    if (temperaturaRespondida) await userEvent.click(screen.getByRole('button', { name: 'Voltar' }));
+    await userEvent.click(await screen.findByRole('radio', { name: 'Normais' }));
+    const anteriores = controle.mutacoes.length;
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await waitFor(() => expect(controle.mutacoes.slice(anteriores).map(m => m.metodo)).toEqual(['PATCH', 'PUT', 'PATCH']));
+    expect(controle.mutacoes[anteriores].corpo).toEqual({ modo: 'produtor' });
+    expect(controle.mutacoes[anteriores + 1].corpo).toEqual({ valores: { extremidades: 'normal' } });
+    expect(controle.mutacoes[anteriores + 2].corpo).toEqual({ modo: 'veterinario' });
+    expect(screen.getByText('Modo especialista', { exact: true })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Voltar' })).toBeEnabled();
+  });
+  it('descarta só o rascunho do campo que mudou de modo e não envia símbolos de outra tela', async () => {
+    const termicaVet: EstadoSessao = { ...especialista, proxima: { tipo: 'tela_triagem', tela_id: 'estado_termico',
+      titulo: 'Informe a temperatura retal', selecao: 'unica', permite_nao_sei: true,
+      campos: [{ simbolo: 'temperatura_retal', entrada: 'numerico', rotulo: 'Temperatura retal', unidade: '°C', min: 30, max: 45, opcoes: null }] } };
+    const controle = simular(termicaVet, c => { c.estado = segunda; return resposta(c.estado); }); montar();
+    await userEvent.type(await screen.findByRole('textbox'), '38.5');
+    await userEvent.click(screen.getByRole('button', { name: 'Mudar para modo produtor' }));
+    await userEvent.click(await screen.findByRole('radio', { name: 'Normais' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await waitFor(() => expect(controle.mutacoes).toHaveLength(2));
+    expect(controle.mutacoes[1].corpo).toEqual({ valores: { extremidades: 'normal' } });
+  });
+  it('confirma o aviso, faz PATCH e atualiza modo, progresso, foco e anúncio', async () => {
+    const controle = simular(segunda, c => { c.estado = especialista; return resposta(c.estado); });
+    montar();
+    const dialogo = await pedirEspecialista();
+    expect(dialogo).toHaveTextContent('No modo especialista as perguntas têm complexidade maior');
+    expect(controle.mutacoes).toHaveLength(0);
+    await userEvent.click(within(dialogo).getByRole('button', { name: 'Confirmar troca' }));
+    expect(await screen.findByText('Modo especialista', { exact: true })).toBeInTheDocument();
+    expect(screen.getByText('Pergunta 2 de até 31')).toBeInTheDocument();
+    expect(screen.getByText('Modo especialista ativado.')).toHaveAttribute('role', 'status');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveFocus();
+    expect(controle.mutacoes).toEqual([{ caminho: '/api/sessoes/ses_0001', metodo: 'PATCH', corpo: { modo: 'veterinario' } }]);
+  });
+  it('cancela a confirmação sem alterar a sessão', async () => {
+    const controle = simular(segunda); montar();
+    const dialogo = await pedirEspecialista();
+    await userEvent.click(within(dialogo).getByRole('button', { name: 'Fechar' }));
+    expect(controle.mutacoes).toHaveLength(0);
+    expect(screen.getByText('Modo produtor', { exact: true })).toBeInTheDocument();
+  });
+  it('volta ao produtor diretamente, sem confirmação', async () => {
+    const controle = simular(especialista, c => { c.estado = segunda; return resposta(c.estado); }); montar();
+    await userEvent.click(await screen.findByRole('button', { name: 'Mudar para modo produtor' }));
+    expect(await screen.findByText('Modo produtor ativado.')).toBeInTheDocument();
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(controle.mutacoes[0].corpo).toEqual({ modo: 'produtor' });
+  });
+  it('bloqueia resposta e duplo clique enquanto o PATCH está em andamento', async () => {
+    let concluir!: (valor: Response) => void;
+    const controle = simular(especialista, () => new Promise(resolve => { concluir = resolve; })); montar();
+    await userEvent.click((await screen.findAllByRole('radio'))[0]);
+    await userEvent.dblClick(screen.getByRole('button', { name: 'Mudar para modo produtor' }));
+    await userEvent.click(screen.getByRole('button', { name: /Responder/ }));
+    expect(controle.mutacoes).toHaveLength(1);
+    expect(screen.getByRole('button', { name: /Responder/ })).toBeDisabled();
+    await act(async () => concluir(resposta(segunda)));
+  });
+  it('não permite trocar de modo durante o envio de uma resposta', async () => {
+    let concluir!: (valor: Response) => void;
+    const controle = simular(primeira, () => new Promise(resolve => { concluir = resolve; })); montar();
+    await userEvent.type(await screen.findByRole('textbox'), '12');
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    const mudar = screen.getByRole('button', { name: 'Mudar para modo especialista' });
+    expect(mudar).toBeDisabled(); await userEvent.click(mudar);
+    expect(controle.mutacoes).toHaveLength(1); expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    await act(async () => concluir(resposta(segunda)));
+  });
+  it('relê a sessão no 409 sem repetir o PATCH', async () => {
+    const controle = simular(especialista, c => {
+      c.estado = segunda;
+      return resposta({ erro: { codigo: 'conflito', mensagem: 'Conflito de revisão.', requisicao_id: 'rq_modo' } }, 409);
+    }); montar();
+    await userEvent.click(await screen.findByRole('button', { name: 'Mudar para modo produtor' }));
+    expect(await screen.findByText('Modo produtor', { exact: true })).toBeInTheDocument();
+    expect(controle.mutacoes).toHaveLength(1);
+    expect(screen.queryByText('Conflito de revisão.')).not.toBeInTheDocument();
+  });
+  it.each([404, 422, 500])('mantém o modo e informa falha recuperável no erro %s', async status => {
+    simular(especialista, () => resposta({ erro: { codigo: 'erro', mensagem: 'Detalhe do servidor', requisicao_id: 'rq_erro' } }, status)); montar();
+    await userEvent.click(await screen.findByRole('button', { name: 'Mudar para modo produtor' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent('Não consegui trocar o modo. Tente novamente.');
+    expect(screen.getByText('Modo especialista', { exact: true })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Mudar para modo produtor' })).toBeEnabled();
+  });
+  it('conserva o histórico e corrige por PUT a resposta dada antes da troca, sem reenviá-la', async () => {
+    const controle = simular(primeira, (c, m) => {
+      c.estado = m.metodo === 'POST' ? segunda : especialista;
+      return resposta(c.estado);
+    }); montar();
+    await userEvent.type(await screen.findByRole('textbox'), '12');
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    const dialogo = await pedirEspecialista();
+    await userEvent.click(within(dialogo).getByRole('button', { name: 'Confirmar troca' }));
+    await screen.findByText('Modo especialista', { exact: true });
+    expect(controle.mutacoes.map(m => m.metodo)).toEqual(['POST', 'PATCH']);
+    await userEvent.click(screen.getByRole('button', { name: 'Voltar' }));
+    const campo = await screen.findByRole('textbox'); expect(campo).toHaveValue('12');
+    await userEvent.clear(campo); await userEvent.type(campo, '13');
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await waitFor(() => expect(controle.mutacoes).toHaveLength(3));
+    expect(controle.mutacoes[2]).toMatchObject({ metodo: 'PUT', corpo: { valores: { dias_em_lactacao: '13' } } });
+    expect(screen.getByText('Modo especialista', { exact: true })).toBeInTheDocument();
+  });
+  it('oferece a troca dentro da pausa e remove o alerta quando o PATCH retorna sem pausa', async () => {
+    const controle = simular(estadoPausado, c => { c.estado = especialista; return resposta(c.estado); }); montar();
+    const alerta = await screen.findByRole('alertdialog');
+    await userEvent.click(within(alerta).getByRole('button', { name: 'Mudar para modo especialista' }));
+    const confirmacao = await screen.findByRole('dialog', { name: 'Mudar para modo especialista?' });
+    expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
+    await userEvent.click(within(confirmacao).getByRole('button', { name: 'Confirmar troca' }));
+    await screen.findByText('Modo especialista', { exact: true });
+    expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
+    expect(controle.mutacoes).toHaveLength(1);
   });
 });

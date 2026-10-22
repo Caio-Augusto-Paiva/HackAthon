@@ -59,4 +59,24 @@ describe('parecer do sistema', () => {
     await screen.findByRole('table');
     expect(screen.queryByRole('button', { name: 'Continuar respondendo' })).not.toBeInTheDocument();
   });
+  it('oferece troca no parecer parcial e navega à mesma anamnese após confirmar', async () => {
+    const fetch = montar({ ...exemploParecer, final: false });
+    fetch.mockImplementation(async (caminho, opcoes) => resposta(opcoes.method === 'PATCH'
+      ? { ...segunda, modo: 'veterinario' } : caminho.includes('/como/') ? exemploComo : { ...exemploParecer, final: false }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Mudar para modo especialista' }));
+    const dialogo = await screen.findByRole('dialog');
+    await userEvent.click(within(dialogo).getByRole('button', { name: 'Confirmar troca' }));
+    expect(await screen.findByRole('heading', { name: 'Pergunta retomada' })).toBeInTheDocument();
+    expect(fetch).toHaveBeenCalledWith('/api/sessoes/ses_0001', expect.objectContaining({ method: 'PATCH', body: JSON.stringify({ modo: 'veterinario' }) }));
+  });
+  it('mantém o parecer parcial e informa falha sem trocar o modo quando o PATCH falha', async () => {
+    const fetch = montar({ ...exemploParecer, final: false, modo: 'veterinario' });
+    fetch.mockImplementation(async (_caminho, opcoes) => opcoes.method === 'PATCH'
+      ? resposta({ erro: { codigo: 'erro_interno', mensagem: 'Falha técnica', requisicao_id: 'rq_troca' } }, 500)
+      : resposta({ ...exemploParecer, final: false, modo: 'veterinario' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Mudar para modo produtor' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent('Não consegui trocar o modo. Tente novamente.');
+    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Mudar para modo produtor' })).toBeEnabled();
+  });
 });

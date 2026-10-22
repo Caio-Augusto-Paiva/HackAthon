@@ -3,3 +3,4 @@
 .regras { font-size: 15px; color: var(--cor-texto-suave); margin: 0; }
 .acoes { display: grid; gap: 14px; }
 .erro { color: var(--cor-perigo); }
+.complemento { border: 0; padding: 0; margin: 0; min-width: 0; }

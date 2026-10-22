@@ -6,6 +6,8 @@ import { Botao } from '../componentes/Botao';
 import { Boi } from '../componentes/Boi';
 import { BarraConfianca } from '../componentes/BarraConfianca';
 import { ComoChegou } from '../anamnese/ComoChegou';
+import { ControleModo, ConfirmacaoEspecialista } from '../anamnese/ControleModo';
+import { useTrocaModo } from '../anamnese/useTrocaModo';
 import alerta from '../assets/alerta-parecer.svg';
 import estilos from './Parecer.module.css';
 
@@ -20,6 +22,8 @@ export function Parecer() {
   const [comoAberto, definirComo] = useState(false);
   const [retomando, definirRetomando] = useState(false);
   const trava = useRef(false);
+  const troca = useTrocaModo({ sessaoId, modo: dados?.modo, trava, definirEnviando: definirRetomando,
+    aoAtualizar: atualizado => navegar(`/anamnese/${encodeURIComponent(atualizado.sessao_id)}`, { state: { anuncioModo: `Modo ${atualizado.modo === 'produtor' ? 'produtor' : 'especialista'} ativado.` } }) });
   async function retomar() {
     if (trava.current) return;
     trava.current = true; definirRetomando(true); definirErro(undefined);
@@ -73,9 +77,12 @@ export function Parecer() {
       <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link>
         <Botao variante="secundario" disabled={!primeira} onClick={() => definirComo(true)}>Como cheguei aqui?</Botao>
         {!dados.final && <Link className={estilos.continuar} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Continuar respondendo</Link>}
+        {!dados.final && <ControleModo modo={dados.modo} mostrarModo={false} enviando={retomando} aoMudar={troca.solicitar} />}
         {dados.final && dados.motivo_parada === null && <Botao variante="secundario" carregando={retomando} onClick={retomar}>Continuar respondendo</Botao>}
       </div>
       {erro && <p role="alert" className={estilos.erro}>{erro}</p>}
+      {troca.erro && <p role="alert" className={estilos.erro}>{troca.erro}</p>}
+      {troca.confirmando && <ConfirmacaoEspecialista enviando={retomando} aoConfirmar={troca.confirmar} aoFechar={troca.fechar} />}
       {comoAberto && primeira && <ComoChegou sessaoId={sessaoId} simbolo={primeira.doenca} aoFechar={() => definirComo(false)} />}
     </main>
   </div>;

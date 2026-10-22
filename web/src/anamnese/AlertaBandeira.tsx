@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, type ReactNode } from 'react';
 import type { components } from '../api/tipos.gerado';
 import { agirBandeira, obterSessao, type EstadoSessao } from '../api/sessao';
 import { ErroApi } from '../api/cliente';
@@ -7,8 +7,9 @@ import { Botao } from '../componentes/Botao';
 import icone from '../assets/alerta-modal.svg';
 import estilos from './AlertaBandeira.module.css';
 
-export function AlertaBandeira({ alerta, sessaoId, aoAtualizar }: {
+export function AlertaBandeira({ alerta, sessaoId, aoAtualizar, complemento, erroExterno }: {
   alerta: components['schemas']['Alerta']; sessaoId: string; aoAtualizar: (estado: EstadoSessao) => void;
+  complemento?: ReactNode; erroExterno?: string;
 }) {
   const [enviando, definirEnviando] = useState<string>();
   const [erro, definirErro] = useState<string>();
@@ -29,9 +30,13 @@ export function AlertaBandeira({ alerta, sessaoId, aoAtualizar }: {
     <p className={estilos.texto}>{alerta.texto}</p>
     <p className={estilos.regras}>Bandeira(s) identificada(s): {alerta.regras.join(', ')}</p>
     {erro && <p role="alert" className={estilos.erro}>{erro}</p>}
+    {erroExterno && <p role="alert" className={estilos.erro}>{erroExterno}</p>}
     <div className={estilos.acoes}>
       {alerta.acoes.includes('ver_parecer') && <Botao carregando={enviando === 'ver_parecer'} disabled={Boolean(enviando)} onClick={() => agir('ver_parecer')}>Ver parecer</Botao>}
       {alerta.acoes.includes('continuar') && <Botao variante="secundario" carregando={enviando === 'continuar'} disabled={Boolean(enviando)} onClick={() => agir('continuar')}>Continuar respondendo</Botao>}
     </div>
+    {complemento && <fieldset className={estilos.complemento} disabled={Boolean(enviando)}>
+      <legend className="somenteLeitor">Modo da verificação</legend>{complemento}
+    </fieldset>}
   </Modal>;
 }

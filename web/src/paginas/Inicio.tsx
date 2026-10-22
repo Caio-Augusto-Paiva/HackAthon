@@ -4,6 +4,7 @@ import { iniciarVerificacao, type Modo } from '../api/sessao';
 import { ErroApi } from '../api/cliente';
 import { Boi } from '../componentes/Boi';
 import { Botao } from '../componentes/Botao';
+import { avisoEspecialista } from '../anamnese/ControleModo';
 import alerta from '../assets/alerta.svg';
 import estilos from './Inicio.module.css';
 
@@ -48,7 +49,7 @@ export function Inicio() {
         </Botao>
         <div className={estilos.aviso}>
           <img src={alerta} alt="" width={22} height={22} />
-          <p id="aviso-especialista">No modo especialista as perguntas têm complexidade maior: exames e sinais clínicos (temperatura retal, CMT, cálcio, BHB...).</p>
+          <p id="aviso-especialista">{avisoEspecialista}</p>
         </div>
         {erro && <div className={estilos.falha}>
           <p role="alert">{erro}</p>
