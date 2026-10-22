@@ -2,7 +2,7 @@
 
 Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0002`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
 
-A duração oficial não consta dos materiais fornecidos. **10 minutos de fala mais 4 de demonstração** e a alternativa de **5 minutos incluindo demo** são hipóteses de preparação, sujeitas à confirmação com a organização. O conteúdo abaixo é um roteiro editorial; slides finais e PDFs ainda precisam ser produzidos/revisados.
+A duração oficial não consta dos materiais fornecidos. A equipe confirmou nesta revisão **10 minutos de fala mais 4 de demonstração como estimativas**, sujeitas à confirmação com a organização. A alternativa de **5 minutos incluindo demo** permanece apenas como reserva. O conteúdo abaixo é um roteiro editorial; slides finais e PDFs ainda precisam ser produzidos e revisados. Nenhum tempo abaixo foi cronometrado em ensaio humano.
 
 ## Fala principal — 10 minutos
 
@@ -13,12 +13,14 @@ A duração oficial não consta dos materiais fornecidos. **10 minutos de fala m
 | 3. Arquitetura disponível | Diagrama do documento 02: React, API FastAPI, SQLite, `kb`, versão ativa, motor e explicação; editor pendente | B | 1:15 |
 | 4. Raciocínio e segurança | Três camadas, premissa mínima, combinação MYCIN, seis telas e bandeiras; um único exemplo numérico | A | 1:45 |
 | 5. Base e limites clínicos | 8 doenças, 56 regras, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
-| 6. Evidência de funcionamento | Baseline integrado: 1066 testes Python aprovados, 1 ignorado, 170 subtestes e 34 casos sintéticos; testes de interface e navegador registrados no relatório web; não confundir com validação clínica | B | 1:00 |
+| 6. Evidência de funcionamento | Checkpoint integrado: 1066 testes Python aprovados, 1 ignorado, 170 subtestes e 34 casos sintéticos; troca de modo: 60 Vitest e 11 E2E no relatório web; não confundir com validação clínica | B | 1:00 |
 | 7. IA e julgamento da equipe | Três exemplos comprovados: restauração direta, regra de TPB sem febre e rejeição de aprovação clínica automática; 40 s por papel | A/B/C | 2:00 |
 | 8. Riscos e próximos passos | Revisão especializada, licença, editor, limitações de coleta R15/R16, Swagger offline e ensaio físico sem rede | A | 0:45 |
 | 9. Encerramento | A decisão é reproduzível a partir da base, fatos e ordem; mostrar repositório e limitações | C | 0:30 |
 
 Total: **600 segundos (10:00)**. A demo soma **240 segundos (4:00)**; total de preparação: **14:00**, sem perguntas da banca. Não acrescentar uma demonstração de componente planejado para preencher o tempo.
+
+Na abertura, apresentar o tema e os três integrantes do índice. Situar o público com os tópicos: motor de inferência, arquitetura, linguagens, base de conhecimento, documentação e tecnologias; o último slide reserva o convite às perguntas. A/B/C na tabela são papéis de fala sugeridos, não uma confirmação de autoria ou disponibilidade. Distribuir as falas entre os três integrantes no ensaio, conforme as responsabilidades reais do índice. Os 14 minutos não incluem montagem do equipamento nem perguntas; cronometrar também cliques, respostas, carregamentos e transições de voz. Se ultrapassar a estimativa, retirar primeiro a segunda consulta da demo e usar a captura do alerta como apoio, declarando que é captura.
 
 Um exemplo de CF pode usar dois apoios positivos independentes de 0,60 e 0,50: `0,60 + 0,50 × (1 − 0,60) = 0,80`. É uma ilustração aritmética, não calibração clínica. Explique que sinais duplicados não devem ser considerados independentes; a base agrupa leite/caneca com `max`.
 
@@ -40,6 +42,8 @@ powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -SemNavegador
 | 2:40–3:10 | Examinar o parecer e abrir Como cheguei aqui? | Um único parecer combina as respostas de antes e depois da troca; mastite continua sustentada pelos sinais mamários. Exibir o percentual retornado pela API, sem fixar valor após exames adicionais |
 | 3:10–3:40 | Nova verificação: caso C-HIP-01, 1 dia, extremidades frias, decúbito; mostrar a troca dentro do alerta ou abrir o parecer | Pausa e urgência chamar_agora preservadas; trocar para especialista não apaga a bandeira. Esc e clique no fundo não dispensam o alerta |
 | 3:40–4:00 | Mostrar o relatório web e declarar limitações | Casos sintéticos, editor pendente e revisão clínica não realizada; não apresentar teste automatizado como ensaio humano |
+
+As ações são um roteiro estimado, não uma execução garantida em quatro minutos. A próxima pergunta depende do estado real: seguir o que a API retornar, sem forçar perguntas nem copiar um percentual antigo. O caso completo e as correções estão exercitados no E2E de troca de modo; o operador deve ensaiar o mesmo caminho antes da apresentação. No corte para uma única consulta, usar os 30 segundos do segundo caso para mostrar o traço e as limitações, mantendo o teto de 4:00.
 
 `/api/docs` serve o HTML do Swagger, mas usa recursos externos de CDN na configuração atual. A SPA usa fontes e ilustrações locais e os E2E verificam que não há requisições externas. O ensaio automatizado HTTP histórico está em [evidencias-verificacao.json](evidencias-verificacao.json); a verificação atual de navegador está em [web/QUALIDADE.md](../../web/QUALIDADE.md), com [capturas das telas](capturas/). Nenhum deles substitui o ensaio humano com Wi-Fi desligado. Encerrar o servidor com Ctrl+C ao terminar.
 
@@ -126,12 +130,17 @@ Total: **300 segundos (5:00)**. A troca de modo e a restauração ficam como apo
 | Corrigir uma resposta muda uma bandeira? | Pode mudar. O motor reprocessa os valores corrigidos na ordem real dos lotes, preservando gatilhos históricos ainda justificados. |
 | A ordem importa? | O cálculo de CF é testado com permutações; a memória de alertas da sessão também depende da ordem de chegada, que é persistida no snapshot. |
 | O sistema roda sem internet? | Motor, base, API, fontes e imagens da interface executam localmente após instalar e compilar. E2E não emitem chamadas externas; Wi-Fi fisicamente desligado e máquina reserva ainda exigem ensaio da equipe. Swagger usa CDN. |
-| Onde está o editor? | Em andamento em outra sessão. Neste recorte, JSON, validador, conversão de grafo e rotas de versões estão disponíveis; não se afirma conclusão da edição visual. |
+| Onde está o editor? | Fora do escopo desta consulta entregue. JSON, validador, conversão de grafo e rotas de versões estão disponíveis; não se afirma conclusão nem andamento da edição visual sem evidência. |
 | Por que essas oito doenças? | São o recorte definido pela equipe na especificação. Não representam todos os diagnósticos diferenciais da clínica bovina. |
 | O que significa `sem_problema`? | Ausência de um gatilho de urgência pelos critérios atuais; não é comprovação de saúde ou segurança clínica. |
 | Como mudam a base sem perder rastreabilidade? | `kb.Repositorio` grava versões imutáveis; a API executa casos, controla a ativação e prende a sessão à versão. Alteração de regra exige nova versão; `v0002` foi preservada. |
 | O projeto atende integralmente a open source? | O código está disponível; falta registrar a licença do projeto e revisar o pacote final. Não declarar essa pendência resolvida. |
+| Como evitar que uma edição da base quebre a demo? | Gravar uma nova versão imutável, validar e executar os 34 casos antes de ativar; confirmar falhas, quando aplicável, não equivale a validar conhecimento clínico. A sessão permanece vinculada à sua versão. |
+| O que cada integrante aprendeu? | Cada pessoa deve explicar uma decisão própria e uma parte alheia, apontando regra, teste ou commit real. O roteiro e os diários técnicos não substituem essa demonstração humana. |
+| Quando e como será entregue? | Prazo oficial de 22/10 às 20:00, por e-mail ou WhatsApp, com nome e telefone dos três. A equipe adotou ZIP + PDFs e alvo 18:30; não se afirma envio ou recebimento sem comprovante. |
 
 ## Ensaio e reserva
 
 Cada pessoa deve explicar uma regra e uma parte que não escreveu, identificar uma limitação e demonstrar o trecho sob sua responsabilidade. Registrar resultado, dúvida e correção no diário correspondente. Preparar captura ou vídeo da execução atual como reserva, sem substituir a demonstração real exigida. Ainda faltam registro de ensaio, arquivos visuais e confirmação do tempo oficial.
+
+Usar o [modelo de ensaio e conferência](07-ensaio-e-envio.md) para registrar os dois computadores, a duração real e a abertura dos arquivos do pacote. O modelo não comprova ensaio nem envio.
