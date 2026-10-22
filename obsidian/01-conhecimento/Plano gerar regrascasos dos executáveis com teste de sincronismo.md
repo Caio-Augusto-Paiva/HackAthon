@@ -1,17 +1,17 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-documentacao-entrega-parcial.md"
 type: "rationale"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Processo documental verificável"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Processo_documental_verificável
 ---
 
 # Plano: gerar regras/casos dos executáveis com teste de sincronismo
 
 ## Connections
+- [[Gerador segue baseativa.json v0002 e verifica sincronismo]] - `rationale_for` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Regras e casos documentados por geração e verificação]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável

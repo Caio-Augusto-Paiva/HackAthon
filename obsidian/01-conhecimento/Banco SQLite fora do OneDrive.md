@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Task 1: Ambiente e modelos Pydantic"
+community: "Frontend planejado e contrato API"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Task_1_Ambiente_e_modelos_Pydantic
+  - community/Frontend_planejado_e_contrato_API
 ---
 
 # Banco SQLite fora do OneDrive
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic
+#graphify/rationale #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API

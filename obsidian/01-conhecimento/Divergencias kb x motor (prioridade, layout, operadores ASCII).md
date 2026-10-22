@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # Divergencias kb x motor (prioridade, layout, operadores ASCII)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Compatibilidade com o motor via para_motor (exclude_none)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_da_base

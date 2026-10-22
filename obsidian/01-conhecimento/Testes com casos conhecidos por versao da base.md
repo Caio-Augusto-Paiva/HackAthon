@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L69"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Testes com casos conhecidos por versao da base
@@ -21,4 +21,4 @@ tags:
 - [[Playwright]] - `conceptually_related_to` [INFERRED]
 - [[pytest]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

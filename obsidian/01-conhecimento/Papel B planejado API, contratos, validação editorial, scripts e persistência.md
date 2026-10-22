@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/B.md"
 type: "concept"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Arquitetura e demonstração"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Arquitetura_e_demonstração
 ---
 
 # Papel B planejado: API, contratos, validação editorial, scripts e persistência
@@ -14,4 +14,4 @@ tags:
 - [[Integração disponível FastAPIPydantic e SQLite; Reacteditor em andamento]] - `references` [EXTRACTED]
 - [[Papel B diário a preencher, sem interações ou resultados inventados]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração

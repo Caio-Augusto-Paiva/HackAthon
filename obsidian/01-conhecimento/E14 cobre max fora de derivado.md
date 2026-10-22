@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "E14 cobre max fora de derivado"
+community: "Validação de grupos max"
 location: "L68"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/E14_cobre_max_fora_de_derivado
+  - community/Validação_de_grupos_max
 ---
 
 # E14 cobre max fora de derivado
@@ -16,4 +16,4 @@ tags:
 - [[E14 max e cf]] - `references` [EXTRACTED]
 - [[derivado_max_negativo]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/E14_cobre_max_fora_de_derivado
+#graphify/rationale #graphify/EXTRACTED #community/Validação_de_grupos_max

@@ -147,7 +147,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "mmol/L",
-        "min": 0
+        "min": 0.0,
+        "max": 20.0,
+        "casas_decimais": 2
       },
       "nome": "BHB sanguíneo",
       "pergunta": {
@@ -163,7 +165,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "mmol/L",
-        "min": 0
+        "min": 0.0,
+        "max": 20.0,
+        "casas_decimais": 2
       },
       "nome": "Cálcio sérico total",
       "pergunta": {
@@ -289,7 +293,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "dias",
-        "min": 0
+        "min": 0.0,
+        "max": 1000.0,
+        "casas_decimais": 0
       },
       "nome": "Dias em lactação",
       "pergunta": {
@@ -499,8 +505,9 @@
       "dominio": {
         "tipo": "numerico",
         "unidade": "pH",
-        "min": 0,
-        "max": 14
+        "min": 0.0,
+        "max": 14.0,
+        "casas_decimais": 1
       },
       "nome": "pH ruminal",
       "pergunta": {
@@ -578,7 +585,10 @@
       "tipo": "pergunta",
       "dominio": {
         "tipo": "numerico",
-        "unidade": "°C"
+        "unidade": "°C",
+        "min": 30.0,
+        "max": 45.0,
+        "casas_decimais": 1
       },
       "nome": "Temperatura retal",
       "pergunta": {

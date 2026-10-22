@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Rodada unica de correcao final"
+community: "Correções finais da base"
 location: "L72"
 tags:
   - graphify/code
   - graphify/AMBIGUOUS
-  - community/Rodada_unica_de_correcao_final
+  - community/Correções_finais_da_base
 ---
 
 # kb/__init__.py
@@ -15,4 +15,4 @@ tags:
 - [[Rodada unica de correcao final]] - `references` [EXTRACTED]
 - [[Task 1]] - `references` [AMBIGUOUS]
 
-#graphify/code #graphify/AMBIGUOUS #community/Rodada_unica_de_correcao_final
+#graphify/code #graphify/AMBIGUOUS #community/Correções_finais_da_base

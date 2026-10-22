@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Snapshot e revisão do motor"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Snapshot_e_revisão_do_motor
 ---
 
 # Restauração direta por snapshot integral, sem repetir o diálogo
@@ -14,8 +14,8 @@ tags:
 - [[Achados procedentes de motor, restauração e contrato de dados]] - `references` [EXTRACTED]
 - [[Checkpoint codex-davi Julgamento técnico snapshot direto, ordem real, grupo max e TPB sem febre]] - `references` [EXTRACTED]
 - [[Contratos de sessão, parecer, porquecomo e snapshot integral]] - `references` [EXTRACTED]
-- [[Demo por terminal bandeira, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
+- [[Demo CLI de reserva alerta, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
 - [[Estudo pendente persistência integral de snapshot, ordem e versão da base]] - `semantically_similar_to` [INFERRED]
-- [[Riscos de integração frontend paralelo, restauração e regressões]] - `references` [EXTRACTED]
+- [[Riscos frontend paralelo, snapshot integral e regressões após integração]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_revisão_do_motor

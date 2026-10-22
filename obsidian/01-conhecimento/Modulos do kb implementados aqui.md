@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "kb/modelos.py"
+community: "Módulos da base de conhecimento"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/kb/modelospy
+  - community/Módulos_da_base_de_conhecimento
 ---
 
 # Modulos do kb implementados aqui
@@ -16,4 +16,4 @@ tags:
 - [[kbcarregador.py]] - `implements` [EXTRACTED]
 - [[kbmodelos.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/kb/modelospy
+#graphify/rationale #graphify/EXTRACTED #community/Módulos_da_base_de_conhecimento

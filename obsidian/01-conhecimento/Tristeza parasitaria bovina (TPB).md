@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "concept"
-community: "MSD Vet Manual"
+community: "Fontes clínicas contextuais"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/MSD_Vet_Manual
+  - community/Fontes_clínicas_contextuais
 ---
 
 # Tristeza parasitaria bovina (TPB)
@@ -15,4 +15,4 @@ tags:
 - [[Babesiose]] - `conceptually_related_to` [EXTRACTED]
 - [[Embrapa ADM158 (tristeza parasitaria)]] - `cites` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/MSD_Vet_Manual
+#graphify/concept #graphify/EXTRACTED #community/Fontes_clínicas_contextuais

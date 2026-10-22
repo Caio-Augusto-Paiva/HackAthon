@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "MSD Vet Manual"
+community: "Requisitos e arquitetura conceitual"
 location: "L115"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/MSD_Vet_Manual
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Marcacao de suposicao a validar (conhecimento veterinario)
@@ -18,4 +18,4 @@ tags:
 - [[Regras de conduta]] - `references` [EXTRACTED]
 - [[Status de conferencia das fontes (L, R, N)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/MSD_Vet_Manual
+#graphify/rationale #graphify/INFERRED #community/Requisitos_e_arquitetura_conceitual

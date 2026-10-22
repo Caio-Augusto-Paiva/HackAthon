@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Alocacao de agente principal e alternativa por prompt de revisao"
+community: "Agentes de implementação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
+  - community/Agentes_de_implementação
 ---
 
 # Antigravity (plano Pro)
@@ -14,4 +14,4 @@ tags:
 - [[Alocacao de agente principal e alternativa por prompt de revisao]] - `references` [EXTRACTED]
 - [[Implementacao por pessoa (A, B, C) com agente principal e reserva]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alocacao_de_agente_principal_e_alternativa_por_prompt_de_revisao
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_implementação

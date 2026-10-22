@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Playwright Test webServer"
+community: "Pesquisa de ferramentas locais"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Playwright_Test_webServer
+  - community/Pesquisa_de_ferramentas_locais
 ---
 
 # Node.js LTS 24 (Krypton)
@@ -17,4 +17,4 @@ tags:
 - [[TypeScript 7.0.2]] - `references` [EXTRACTED]
 - [[Vite 8.3.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Playwright_Test_webServer
+#graphify/document #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais

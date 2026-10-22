@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/B.md"
 type: "rationale"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Snapshot e revisão do motor"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Snapshot_e_revisão_do_motor
 ---
 
 # Estudo pendente: persistência integral de snapshot, ordem e versão da base
@@ -15,4 +15,4 @@ tags:
 - [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `semantically_similar_to` [INFERRED]
 - [[Sessões persistidas vinculadas à mesma versão da base]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_revisão_do_motor

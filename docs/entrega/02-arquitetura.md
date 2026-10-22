@@ -6,7 +6,7 @@ O núcleo é um pacote Python independente de interface, banco e base clínica. 
 
 ```mermaid
 flowchart LR
-    J[base/ativa.json: v0001 imutável] --> K[kb: validação, versões e adaptação]
+    J[base/ativa.json: v0002 imutável] --> K[kb: validação, versões e adaptação]
     K --> V[Base.de_dict e guardas]
     C[API FastAPI ou CLI/Python] --> S[Sessao e memória]
     V --> S
@@ -30,7 +30,7 @@ flowchart LR
 |---|---|---|
 | Interface com o usuário | CLI `engine/__main__.py` e interface Python de `Sessao` | Formulários e parecer no navegador |
 | Motor de inferência | `inferencia`, `avaliacao`, `cf`, `selecao` e `parada`, consumidos pela API | Revisão/calibração clínica |
-| Base de conhecimento | `kb/`, versões imutáveis, `base/ativa.json` e `base/versoes/v0001.json` | Edição no frontend e novas versões revisadas |
+| Base de conhecimento | `kb/`, versões imutáveis, `base/ativa.json` e `base/versoes/v0002.json` | Edição no frontend e novas versões revisadas |
 | Memória de trabalho | `memoria.py`, `Fato`, `sessao.py` e snapshot persistido pela API em SQLite | Validação da interface em navegador |
 | Módulo de explicação | `traco.py` e `explicacao.py`, chamados por `porque`/`como` | Visualização dessas respostas na interface |
 | Aquisição de conhecimento | Edição e revisão do JSON, com regras documentadas pelo gerador | Editor em grafo e revisão por especialista |
@@ -101,9 +101,9 @@ Para restauração exata, persistir o snapshot completo, inclusive `ordem_respos
 
 ## Base, validação e rastreabilidade
 
-A base ativa tem `meta`, `simbolos`, `regras` e `layout`, com 51 símbolos e 56 regras. `base/ativa.json` aponta para `v0001`; esse arquivo imutável foi recebido da branch compartilhada e preservado. `kb.validar` não registra erros (W03 informa as 56 suposições pendentes). `Base.de_dict(kb.para_motor(base))` carrega no motor. O arquivo de desenvolvimento foi normalizado para o mesmo contrato, sem mudar símbolos, regras ou triagem.
+A base ativa tem `meta`, `simbolos`, `regras` e `layout`, com 51 símbolos e 56 regras. `base/ativa.json` aponta para `v0002`; esse arquivo imutável foi recebido da branch compartilhada e preservado. `kb.validar` não registra erros (W03 informa as 56 suposições pendentes). `Base.de_dict(kb.para_motor(base))` carrega no motor. O arquivo de desenvolvimento foi alinhado aos domínios numéricos da `v0002`, sem mudar IDs, regras ou triagem. Dias em lactação aceita 0–1000 inteiros; temperatura retal, 30–45 °C com uma casa; pH ruminal, 0–14 com uma casa; BHB e cálcio sérico, 0–20 com duas casas. As versões imutáveis foram preservadas.
 
-Uma alteração de regra deve ser gravada com `Repositorio.salvar_nova(..., pai="v0001")`, tornando-se uma versão nova; executar os casos antes de ativar. `v0001` não foi regravada nem promovida a base clinicamente validada. Os 34 casos em `base/casos/casos.json` cobrem os dois modos, oito doenças, seis bandeiras, comorbidade, limite, troca de modo e os dois exemplos preservados. A correção é testada diretamente em `Sessao`, pois `kb.Caso` não codifica essa operação. Os desvios e a observação prévia do caso de abomaso estão em R15/R16 do [registro de riscos](06-riscos-e-pendencias.md).
+Uma alteração de regra deve ser gravada com `Repositorio.salvar_nova(..., pai="v0002")`, tornando-se uma versão nova; executar os casos antes de ativar. `v0001` não foi regravada nem promovida a base clinicamente validada. Os 34 casos em `base/casos/casos.json` cobrem os dois modos, oito doenças, seis bandeiras, comorbidade, limite, troca de modo e os dois exemplos preservados. A correção é testada diretamente em `Sessao`, pois `kb.Caso` não codifica essa operação. Os desvios e a observação prévia do caso de abomaso estão em R15/R16 do [registro de riscos](06-riscos-e-pendencias.md).
 
 Os eventos documentam observações, regras e combinações de CF. O motivo de uma pergunta é registrado quando ela é apresentada. A sessão conserva perguntas/correções e somente o cálculo de inferência atual, evitando acumulação de traços antigos. O documento 03 é gerado do JSON; o documento 04, da execução dos casos. O teste de sincronismo impede afirmar uma regra diferente da executável.
 

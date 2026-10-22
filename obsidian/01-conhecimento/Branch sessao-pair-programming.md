@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Branch sessao-pair-programming"
+community: "Decisões sobre branches"
 location: "L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Branch_sessao-pair-programming
+  - community/Decisões_sobre_branches
 ---
 
 # Branch sessao-pair-programming
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Sem worktree no branch]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Branch_sessao-pair-programming
+#graphify/concept #graphify/EXTRACTED #community/Decisões_sobre_branches

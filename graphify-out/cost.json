@@ -6,8 +6,19 @@
       "output_tokens": 0,
       "files": 14,
       "nota": "tokens = total dos subagentes (entrada+saída), sem divisão"
+    },
+    {
+      "date": "2026-10-22T05:35:33.186920+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "files": 17,
+      "semantic_files": 8,
+      "usage_status": "unavailable_not_measured",
+      "financial_cost": null,
+      "nota": "Uso do agente hospedeiro indisponível; totais históricos não foram incrementados."
     }
   ],
   "total_input_tokens": 520209,
-  "total_output_tokens": 0
+  "total_output_tokens": 0,
+  "unmeasured_runs": 1
 }

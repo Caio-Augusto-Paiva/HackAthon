@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "SDD ledger"
+community: "Ledger de implementação kb"
 location: "L57"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SDD_ledger
+  - community/Ledger_de_implementação_kb
 ---
 
 # Gitattributes eol lf
@@ -15,4 +15,4 @@ tags:
 - [[dot-gitattributes]] - `implements` [EXTRACTED]
 - [[Task 6]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SDD_ledger
+#graphify/rationale #graphify/EXTRACTED #community/Ledger_de_implementação_kb

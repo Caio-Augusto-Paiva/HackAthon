@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Skills em formato aberto (.agents/skills, .claude/skills, AGENTS.md)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[obrasuperpowers (skills em formato aberto)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Task 1: Ambiente e modelos Pydantic"
+community: "Frontend planejado e contrato API"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Task_1_Ambiente_e_modelos_Pydantic
+  - community/Frontend_planejado_e_contrato_API
 ---
 
 # Script rodar.ps1 / rodar.sh (execucao em localhost)
@@ -15,4 +15,4 @@ tags:
 - [[Servir webdist com rota coringa propria (apifrontend.py)]] - `references` [EXTRACTED]
 - [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Task_1_Ambiente_e_modelos_Pydantic
+#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API

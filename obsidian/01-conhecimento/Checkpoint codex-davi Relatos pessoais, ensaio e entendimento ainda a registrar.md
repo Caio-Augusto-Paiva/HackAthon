@@ -1,11 +1,11 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "rationale"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Processo documental verificável"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Processo_documental_verificável
 ---
 
 # Checkpoint codex-davi: Relatos pessoais, ensaio e entendimento ainda a registrar
@@ -15,4 +15,4 @@ tags:
 - [[Papel A pessoa, blocos reais, decisões humanas e aprendizado a completar]] - `conceptually_related_to` [EXTRACTED]
 - [[Revisão independente requer pessoamodelo, data, localização, evidência e veredito]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável

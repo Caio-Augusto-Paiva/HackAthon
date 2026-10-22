@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "kb/modelos.py"
+community: "Módulos da base de conhecimento"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kb/modelospy
+  - community/Módulos_da_base_de_conhecimento
 ---
 
 # kb/modelos.py
@@ -16,4 +16,4 @@ tags:
 - [[Task 1]] - `implements` [EXTRACTED]
 - [[allow_inf_nan e ge zero]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/kb/modelospy
+#graphify/code #graphify/EXTRACTED #community/Módulos_da_base_de_conhecimento

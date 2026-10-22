@@ -1,13 +1,13 @@
 ---
 source_file: "docs/fontes/transcricao-documentario-rerum.md"
 type: "document"
-community: "Transcricao do documentario RERUM [D]"
+community: "Documentário RERUM"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Transcricao_do_documentario_RERUM_D
+  - community/Documentário_RERUM
 ---
 
 # Transcricao do documentario RERUM [D]
 
-#graphify/document #graphify/EXTRACTED #community/Transcricao_do_documentario_RERUM_D
+#graphify/document #graphify/EXTRACTED #community/Documentário_RERUM

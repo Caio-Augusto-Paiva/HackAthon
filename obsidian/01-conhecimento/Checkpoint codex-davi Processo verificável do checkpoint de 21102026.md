@@ -1,11 +1,11 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "document"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Processo documental verificável"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Processo_documental_verificável
 ---
 
 # Checkpoint codex-davi: Processo verificável do checkpoint de 21/10/2026
@@ -21,7 +21,7 @@ tags:
 - [[Papel B diário a preencher, sem interações ou resultados inventados]] - `references` [EXTRACTED]
 - [[Papel C diário a preencher, sem interações ou aprendizado inventados]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Registro aberto de riscos e checklist de fechamento]] - `references` [EXTRACTED]
-- [[Índice da entrega da Seção 5 na codex-davi; baseline f46cd6e]] - `references` [EXTRACTED]
+- [[Registro aberto R01–R17 e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Índice Seção 5 na codex-davi, após baseline f46cd6e]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/document #graphify/EXTRACTED #community/Processo_documental_verificável

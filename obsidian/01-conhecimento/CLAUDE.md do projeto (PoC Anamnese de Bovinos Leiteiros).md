@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)
@@ -41,4 +41,4 @@ tags:
 - [[Temas T1 a T3 (slide 9)]] - `cites` [EXTRACTED]
 - [[Testes com casos conhecidos por versao da base]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Contrato OpenAPI versionado e exemplos por operationId"
+community: "Frontend planejado e contrato API"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
+  - community/Frontend_planejado_e_contrato_API
 ---
 
 # Contrato OpenAPI versionado e exemplos por operationId
@@ -14,6 +14,7 @@ tags:
 - [[D6 respostas validadas por TypeAdapter e registro CONTRATOS]] - `rationale_for` [EXTRACTED]
 - [[Mapa de 27 rotas por arquivo (prefixo api)]] - `shares_data_with` [EXTRACTED]
 - [[Notas para o frontend (proxima nulo, reabrir, 409 conflito)]] - `references` [EXTRACTED]
+- [[Planejado cliente envia valor ou nao_sei, nunca CF]] - `references` [EXTRACTED]
 - [[Testes da API (pytest, marca lento, base minima de fixtures)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
+#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API

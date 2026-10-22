@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Sessão, snapshot e parecer"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Sessão_snapshot_e_parecer
 ---
 
 # Percentual max(0,CF)*100 e cortes de bloco por meta.limiares
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer

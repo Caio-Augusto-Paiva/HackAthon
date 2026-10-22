@@ -1,9 +1,9 @@
 {
   "docs/referencias/exemplo-base-usuario.json": {
-    "mtime": 1792544440.928389,
-    "seen": 1792553138.974145,
-    "ast_hash": "7d51f023627b2c6b8ed0431654993edf",
-    "semantic_hash": "7d51f023627b2c6b8ed0431654993edf"
+    "mtime": 1792633361.239197,
+    "seen": 1792647333.1759186,
+    "ast_hash": "47b875e212a806422e4de9a6ae31f8d0",
+    "semantic_hash": "47b875e212a806422e4de9a6ae31f8d0"
   },
   "docs/agentes-e-skills.md": {
     "mtime": 1792633361.2017326,
@@ -114,10 +114,10 @@
     "semantic_hash": "f26024e109b1c5459f23139fe17582e3"
   },
   "README.md": {
-    "mtime": 1792634146.7857292,
-    "seen": 1792634684.460751,
-    "ast_hash": "",
-    "semantic_hash": "3120d8fab191b2201b25e2dcd8ade10f"
+    "mtime": 1792646868.8636107,
+    "seen": 1792647333.1759186,
+    "ast_hash": "34cffad457a4c6ee2edd6bc4ad249346",
+    "semantic_hash": "34cffad457a4c6ee2edd6bc4ad249346"
   },
   "base/desenvolvimento/LEIA-ME.txt": {
     "mtime": 1792634263.3158534,
@@ -132,40 +132,40 @@
     "semantic_hash": "6efbfd4faa32f69071874cc982031d0e"
   },
   "docs/entrega/02-arquitetura.md": {
-    "mtime": 1792634146.7867327,
-    "seen": 1792634684.460751,
-    "ast_hash": "",
-    "semantic_hash": "0aa9528bcc0928435a937fe9178506e1"
+    "mtime": 1792646868.8656113,
+    "seen": 1792647333.1759186,
+    "ast_hash": "9e2cd331d401efcbfe61ae50be892db1",
+    "semantic_hash": "9e2cd331d401efcbfe61ae50be892db1"
   },
   "docs/entrega/03-regras-de-producao.md": {
-    "mtime": 1792634293.573204,
-    "seen": 1792634684.460751,
-    "ast_hash": "",
-    "semantic_hash": "658e0c3cb535c22f109dc1fb7c855ad9"
+    "mtime": 1792646875.281276,
+    "seen": 1792647333.1759186,
+    "ast_hash": "da2777c324def2d4d4baa667d857433b",
+    "semantic_hash": "da2777c324def2d4d4baa667d857433b"
   },
   "docs/entrega/04-casos-de-teste.md": {
-    "mtime": 1792634293.5741844,
-    "seen": 1792634684.460751,
-    "ast_hash": "",
-    "semantic_hash": "452a3620a6984173d4945ba80c3f88af"
+    "mtime": 1792646875.281276,
+    "seen": 1792647333.1759186,
+    "ast_hash": "0001974714e44c5d0ff4e73d5135772a",
+    "semantic_hash": "0001974714e44c5d0ff4e73d5135772a"
   },
   "docs/entrega/05-apresentacao-e-demo.md": {
-    "mtime": 1792634806.5852823,
-    "seen": 1792634858.0805235,
-    "ast_hash": "",
-    "semantic_hash": "9b2be8ca1f487afda3aa11808363dc91"
+    "mtime": 1792646868.8646114,
+    "seen": 1792647333.1759186,
+    "ast_hash": "9160623bfa5f1a6dc415d4fa7d729c1a",
+    "semantic_hash": "9160623bfa5f1a6dc415d4fa7d729c1a"
   },
   "docs/entrega/06-riscos-e-pendencias.md": {
-    "mtime": 1792634543.2583911,
-    "seen": 1792634684.460751,
-    "ast_hash": "",
-    "semantic_hash": "e3083773eeb84416ec8f5290ddbc8ab8"
+    "mtime": 1792646868.866612,
+    "seen": 1792647333.1759186,
+    "ast_hash": "d104f743259cc2c2494d99b9cec908f0",
+    "semantic_hash": "d104f743259cc2c2494d99b9cec908f0"
   },
   "docs/entrega/README.md": {
-    "mtime": 1792634857.416683,
-    "seen": 1792634858.0805235,
-    "ast_hash": "",
-    "semantic_hash": "7b7766d78af6ab86f2131c245a95cdb5"
+    "mtime": 1792646868.8636107,
+    "seen": 1792647333.1759186,
+    "ast_hash": "f9c843b479e3638869f06001680e750c",
+    "semantic_hash": "f9c843b479e3638869f06001680e750c"
   },
   "docs/processo/A.md": {
     "mtime": 1792633361.229259,
@@ -196,5 +196,59 @@
     "seen": 1792634684.460751,
     "ast_hash": "",
     "semantic_hash": "bed0f13d16e78bb0f2e5b5a4e7b9d12c"
+  },
+  "base/ativa.json": {
+    "mtime": 1792645007.1696944,
+    "seen": 1792647333.1759186,
+    "ast_hash": "d06ad578dfa8c2dc9ae8cb8fad04d679",
+    "semantic_hash": "d06ad578dfa8c2dc9ae8cb8fad04d679"
+  },
+  "base/casos/casos.json": {
+    "mtime": 1792633779.1255937,
+    "seen": 1792647333.1759186,
+    "ast_hash": "a83cdf698905035d49e5b91fde9b1e94",
+    "semantic_hash": "a83cdf698905035d49e5b91fde9b1e94"
+  },
+  "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": {
+    "mtime": 1792646868.8626096,
+    "seen": 1792647333.1759186,
+    "ast_hash": "98242e038aa7dc4d8d9857e37638dc36",
+    "semantic_hash": "98242e038aa7dc4d8d9857e37638dc36"
+  },
+  "base/desenvolvimento/casos/alerta-decubito.json": {
+    "mtime": 1792633361.2017326,
+    "seen": 1792647333.1759186,
+    "ast_hash": "b8c4f35860bf2f21a7482d6f101b80a2",
+    "semantic_hash": "b8c4f35860bf2f21a7482d6f101b80a2"
+  },
+  "base/desenvolvimento/casos/sinais-mamarios.json": {
+    "mtime": 1792633361.2017326,
+    "seen": 1792647333.1759186,
+    "ast_hash": "cc749ecb9d7e7f29efda0b7e0cecdda0",
+    "semantic_hash": "cc749ecb9d7e7f29efda0b7e0cecdda0"
+  },
+  "base/versoes/v0001.json": {
+    "mtime": 1792633363.3225684,
+    "seen": 1792647333.1759186,
+    "ast_hash": "62ab1b724e3d9d3e1c2a75fd0f076245",
+    "semantic_hash": "62ab1b724e3d9d3e1c2a75fd0f076245"
+  },
+  "base/versoes/v0002.json": {
+    "mtime": 1792645007.1757271,
+    "seen": 1792647333.1759186,
+    "ast_hash": "9c5968aa66b640c148969dba545a8bdc",
+    "semantic_hash": "9c5968aa66b640c148969dba545a8bdc"
+  },
+  "docs/entrega/evidencias-verificacao.json": {
+    "mtime": 1792634935.5429938,
+    "seen": 1792647333.1759186,
+    "ast_hash": "97358acb92b1d2d4d895efd3e7e0b4bc",
+    "semantic_hash": "97358acb92b1d2d4d895efd3e7e0b4bc"
+  },
+  "docs/superpowers/plans/2026-10-22-frontend-web.md": {
+    "mtime": 1792645007.208868,
+    "seen": 1792647333.1759186,
+    "ast_hash": "43c804971d6dd9f797a69ebecd955f66",
+    "semantic_hash": "43c804971d6dd9f797a69ebecd955f66"
   }
 }

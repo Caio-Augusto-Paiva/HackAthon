@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L9"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Cofre Obsidian obsidian/01-conhecimento (grafo 1)
@@ -16,4 +16,4 @@ tags:
 - [[Manter o grafo atualizado]] - `references` [EXTRACTED]
 - [[graphify-outGRAPH_REPORT.md (indice do grafo)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

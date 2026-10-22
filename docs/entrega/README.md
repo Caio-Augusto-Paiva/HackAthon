@@ -2,7 +2,7 @@
 
 Documentação da execução da **Seção 5** na branch `codex-davi`, após integrar o baseline `f46cd6e`. O checkpoint inicial `898512c` é histórico: os documentos de processo preservam o contexto em que foram escritos.
 
-O estado atual contém `kb/`, API FastAPI com 27 operações HTTP, SQLite, scripts de localhost, base ativa `v0001` e 34 casos sintéticos. Consulte [a API](../../api/README.md), [a base editorial](../../kb/README.md) e [o README principal](../../README.md). Interface web e editor gráfico estão em andamento em outra sessão. Os diretórios `api/`, `web/`, `contratos/` e `tests/api/` não foram alterados nesta execução; a equipe fará a integração na branch compartilhada.
+O estado atual contém `kb/`, API FastAPI com 27 operações HTTP, SQLite, scripts de localhost, base ativa `v0002` e 34 casos sintéticos. Consulte [a API](../../api/README.md), [a base editorial](../../kb/README.md) e [o README principal](../../README.md). Interface web e editor gráfico estão em andamento em outra sessão. Os diretórios `api/`, `web/`, `contratos/` e `tests/api/` não foram alterados nesta execução; a equipe fará a integração na branch compartilhada.
 
 O projeto aborda **T1 Anamnese**: coleta estruturada de sinais e histórico de bovinos leiteiros em lactação, com triagem explicável. A exigência e os critérios vêm das [transcrições oficiais da apresentação](../fontes/transcricao-apresentacao-rerum.md) e do [documentário](../fontes/transcricao-documentario-rerum.md). As transcrições são referências locais dos PDFs, não novos requisitos.
 
@@ -12,7 +12,7 @@ O projeto aborda **T1 Anamnese**: coleta estruturada de sinais e histórico de b
 |---|---|---|
 | [01-processo](01-processo.md) | Linha do tempo verificável, uso de IA, decisões e evidências | Preparado; faltam relatos pessoais de B/C e confirmação da equipe |
 | [02-arquitetura](02-arquitetura.md) | Núcleo implementado, contratos, limites e componentes planejados | Preparado com distinção entre presente e futuro |
-| [03-regras-de-producao](03-regras-de-producao.md) | Todas as regras, fontes, CF, símbolos e triagem | Gerado da ativa `v0001`, ainda de desenvolvimento |
+| [03-regras-de-producao](03-regras-de-producao.md) | Todas as regras, fontes, CF, símbolos e triagem | Gerado da ativa `v0002`, ainda de desenvolvimento |
 | [04-casos-de-teste](04-casos-de-teste.md) | Entradas, critérios e resultados dos 34 casos sintéticos | Gerado por execução real |
 | [05-apresentacao-e-demo](05-apresentacao-e-demo.md) | Roteiros de 10 e 5 minutos, demo e perguntas da banca | Roteiro preparado; duração oficial e ensaio pendentes |
 | [06-riscos-e-pendencias](06-riscos-e-pendencias.md) | Riscos, lacunas, responsáveis por papel e checklist de envio | Registro aberto |

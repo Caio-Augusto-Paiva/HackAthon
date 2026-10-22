@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Contrato OpenAPI versionado e exemplos por operationId"
+community: "Frontend planejado e contrato API"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
+  - community/Frontend_planejado_e_contrato_API
 ---
 
 # Formato unico de erro (codigos e X-Requisicao-Id)
@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[API sobe sem a base (409 conflito em vez de 500)]] - `references` [EXTRACTED]
 - [[Mapa de 27 rotas por arquivo (prefixo api)]] - `shares_data_with` [INFERRED]
+- [[Planejado cliente tipado e ErroApi padronizado]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contrato_OpenAPI_versionado_e_exemplos_por_operationId
+#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API

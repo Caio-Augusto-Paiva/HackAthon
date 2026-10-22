@@ -4,9 +4,9 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0001`. Pai declarado: `não informado`. Data declarada na base: `2026-10-21`.
+Versão: `v0002`. Pai declarado: `v0001`. Data declarada na base: `2026-10-22`.
 
-Arquivo: `base/versoes/v0001.json`. SHA-256 do JSON canônico: `d11ab51c736d750beb925ab07dc824a6a58ddb591c4e951e149a100f044348e3`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0002.json`. SHA-256 do JSON canônico: `3b01b9df6db6ebd5902ed31aee0256afd03a2cdadd575f1271b38e5a1e2b8c92`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
 Regras: **56**. Símbolos: **51**. Doenças: **8**.
 
@@ -154,8 +154,8 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | acidose | Acidose Ruminal | doenca | tipo: booleano | — | — | media | mycin |
 | apatia | Apatia | pergunta | tipo: booleano | A vaca está abatida ou pouco responsiva? | Animal apático ou com resposta reduzida ao ambiente? | — | mycin |
 | apetite | Apetite | pergunta | tipo: categorico, valores: {normal, reduzido, ausente} | Como está o apetite: normal, reduzido ou ausente? | Apetite normal, reduzido ou ausente? | — | mycin |
-| bhb_sanguineo | BHB sanguíneo | pergunta | min: 0, tipo: numerico, unidade: mmol/L | — | Qual é a concentração sanguínea de BHB, em mmol/L? | — | mycin |
-| calcio_serico | Cálcio sérico total | pergunta | min: 0, tipo: numerico, unidade: mmol/L | — | Qual é o cálcio sérico total, em mmol/L? | — | mycin |
+| bhb_sanguineo | BHB sanguíneo | pergunta | casas_decimais: 2, max: 20, min: 0, tipo: numerico, unidade: mmol/L | — | Qual é a concentração sanguínea de BHB, em mmol/L? | — | mycin |
+| calcio_serico | Cálcio sérico total | pergunta | casas_decimais: 2, max: 20, min: 0, tipo: numerico, unidade: mmol/L | — | Qual é o cálcio sérico total, em mmol/L? | — | mycin |
 | carrapatos_historico_recente | Exposição recente a carrapatos | pergunta | tipo: booleano | Foram vistos carrapatos na vaca recentemente? | Histórico recente de exposição a carrapatos? | — | mycin |
 | cetose | Cetose / Hipercetonemia | doenca | tipo: booleano | — | — | media | mycin |
 | chamar_agora | Atendimento Veterinário Imediato | urgencia | tipo: booleano | — | — | — | mycin |
@@ -167,7 +167,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | dermatite_digital | Dermatite Digital Bovina | doenca | tipo: booleano | — | — | baixa | mycin |
 | deslocamento_abomaso | Deslocamento de Abomaso | doenca | tipo: booleano | — | — | alta | mycin |
 | diarreia | Diarreia | pergunta | tipo: booleano | A vaca está com diarreia? | Presença de diarreia? | — | mycin |
-| dias_em_lactacao | Dias em lactação | ficha | min: 0, tipo: numerico, unidade: dias | Há quantos dias a vaca pariu? | Dias transcorridos desde o último parto? | — | mycin |
+| dias_em_lactacao | Dias em lactação | ficha | casas_decimais: 0, max: 1000, min: 0, tipo: numerico, unidade: dias | Há quantos dias a vaca pariu? | Dias transcorridos desde o último parto? | — | mycin |
 | dor_flexao_talao | Dor na região do talão | pergunta | tipo: booleano | A vaca demonstra dor na região do talão ao se movimentar? | Dor localizada na região dos bulbos do talão? | — | mycin |
 | esfregaco_hemoparasitas | Hemoparasitas no esfregaço | pergunta | tipo: booleano | — | Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma? | — | mycin |
 | evidencia_alteracao_leite | Evidência agrupada de alteração do leite | derivado | tipo: booleano | — | — | — | max |
@@ -189,14 +189,14 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | observar | Monitoramento Clínico Contínuo | urgencia | tipo: booleano | — | — | — | mycin |
 | periparto_imediato | Periparto imediato | derivado | tipo: booleano | — | — | — | mycin |
 | pescoco_em_s | Desvio cervical em S | pergunta | tipo: booleano | A vaca mantém o pescoço curvado em forma de S? | Desvio cervical em S observado? | — | mycin |
-| ph_ruminal | pH ruminal | pergunta | max: 14, min: 0, tipo: numerico, unidade: pH | — | Qual é o pH ruminal medido, considerando método e momento da coleta? | — | mycin |
+| ph_ruminal | pH ruminal | pergunta | casas_decimais: 1, max: 14, min: 0, tipo: numerico, unidade: pH | — | Qual é o pH ruminal medido, considerando método e momento da coleta? | — | mycin |
 | ping_metalico_flanco_esquerdo | Ping no flanco esquerdo | pergunta | tipo: booleano | — | Ping metálico no flanco esquerdo à percussão e auscultação simultâneas? | — | mycin |
 | puerperio | Puerperio | derivado | tipo: booleano | — | — | — | mycin |
 | queda_producao | Queda de produção de leite | pergunta | tipo: booleano | A produção de leite caiu em relação ao habitual? | Queda da produção em relação ao padrão individual? | — | mycin |
 | recusa_concentrado_come_volumoso | Recusa seletiva de concentrado | pergunta | tipo: booleano | A vaca recusa a ração, mas ainda come capim ou feno? | Recusa de concentrado com manutenção da ingestão de volumoso? | — | mycin |
 | retencao_placenta | Histórico de retenção de placenta | ficha | tipo: booleano | Houve retenção de placenta neste parto? | Retenção de membranas fetais após o último parto? | — | mycin |
 | sem_problema | Sem evidência de urgência pelos critérios da base | urgencia | tipo: booleano | — | — | — | mycin |
-| temperatura_retal | Temperatura retal | pergunta | tipo: numerico, unidade: °C | — | Qual é a temperatura retal medida em °C? | — | mycin |
+| temperatura_retal | Temperatura retal | pergunta | casas_decimais: 1, max: 45, min: 30, tipo: numerico, unidade: °C | — | Qual é a temperatura retal medida em °C? | — | mycin |
 | teste_caneca_grumos | Grumos na caneca | pergunta | tipo: booleano | O teste da caneca mostrou grumos no leite? | Grumos detectados no teste da caneca? | — | mycin |
 | tpb | Tristeza Parasitária Bovina | doenca | tipo: booleano | — | — | alta | mycin |
 | ubere_inflamado | Inflamação do úbere | pergunta | tipo: booleano | O úbere está inchado, quente ou dolorido? | Há edema, calor ou dor no úbere? | — | mycin |

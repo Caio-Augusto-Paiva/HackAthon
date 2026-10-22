@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # Ficha com null tratada como nao sei (deve ser ausente)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Especificacao canonica do projeto (anamnese bovinos)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_da_base

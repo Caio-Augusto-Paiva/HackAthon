@@ -1,6 +1,6 @@
 # Roteiro de apresentação e demonstração — versão disponível
 
-Este roteiro acompanha a execução da Seção 5 em `codex-davi`: motor, `kb/`, base ativa `v0001`, API FastAPI com 27 operações e persistência SQLite. A interface web e o editor gráfico estão em andamento em outra sessão; não há evidência de teste de navegador neste trabalho. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
+Este roteiro acompanha a execução da Seção 5 em `codex-davi`: motor, `kb/`, base ativa `v0002`, API FastAPI com 27 operações e persistência SQLite. A interface web e o editor gráfico estão em andamento em outra sessão; não há evidência de teste de navegador neste trabalho. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
 
 A duração oficial não consta dos materiais fornecidos. **10 minutos de fala mais 4 de demonstração** e a alternativa de **5 minutos incluindo demo** são hipóteses de preparação, sujeitas à confirmação com a organização. O conteúdo abaixo é um roteiro editorial; slides finais e PDFs ainda precisam ser produzidos/revisados.
 
@@ -33,11 +33,11 @@ powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -Reset -SemNavegador
 
 | Intervalo | Ação | Evidência a mostrar |
 |---|---|---|
-| 0:00–0:30 | Consultar `GET /api/saude` e a versão ativa | HTTP 200; `base/ativa.json` aponta para `v0001` |
-| 0:30–1:00 | Criar animal fictício e sessão em modo produtor | `POST /api/animais` e `POST /api/sessoes` retornam 201; sessão vinculada a `v0001` |
+| 0:00–0:30 | Consultar `GET /api/saude` e a versão ativa | HTTP 200; `base/ativa.json` aponta para `v0002` |
+| 0:30–1:00 | Criar animal fictício e sessão em modo produtor | `POST /api/animais` e `POST /api/sessoes` retornam 201; sessão vinculada a `v0002` |
 | 1:00–2:00 | Responder as telas de triagem e as perguntas dinâmicas | `POST /api/sessoes/{id}/triagem/{tela}` e `/respostas`; para o exemplo mamário, marcar leite alterado e úbere inflamado |
 | 2:00–3:00 | Abrir parecer, por quê e como | `/parecer`, `/porque/{simbolo}` e `/como/mastite` retornam 200 e explicações das regras |
-| 3:00–3:40 | Executar os casos pela API | `POST /api/base/versoes/v0001/execucoes` com `{"casos":null}`: 34 passaram, zero falhas, execução persistida |
+| 3:00–3:40 | Executar os casos pela API | `POST /api/base/versoes/v0002/execucoes` com `{"casos":null}`: 34 passaram, zero falhas, execução persistida |
 | 3:40–4:00 | Mostrar limites e evidências | R15/R16, CF não é probabilidade e validação clínica pendente |
 
 `/api/docs` serve o HTML do Swagger, mas usa recursos externos de CDN na configuração atual. Não prometer Swagger utilizável sem internet; o roteiro offline deve usar chamadas HTTP locais ou a CLI. O ensaio automatizado HTTP está em [evidencias-verificacao.json](evidencias-verificacao.json); não substitui ensaio humano nem teste E2E do frontend. Encerrar o servidor com Ctrl+C ao terminar.
@@ -120,7 +120,7 @@ Total: **300 segundos (5:00)**. A troca de modo e a restauração ficam como apo
 | Onde está o editor? | Em andamento em outra sessão. Neste recorte, JSON, validador, conversão de grafo e rotas de versões estão disponíveis; não se afirma conclusão da edição visual. |
 | Por que essas oito doenças? | São o recorte definido pela equipe na especificação. Não representam todos os diagnósticos diferenciais da clínica bovina. |
 | O que significa `sem_problema`? | Ausência de um gatilho de urgência pelos critérios atuais; não é comprovação de saúde ou segurança clínica. |
-| Como mudam a base sem perder rastreabilidade? | `kb.Repositorio` grava versões imutáveis; a API executa casos, controla a ativação e prende a sessão à versão. Alteração de regra exige nova versão; `v0001` foi preservada. |
+| Como mudam a base sem perder rastreabilidade? | `kb.Repositorio` grava versões imutáveis; a API executa casos, controla a ativação e prende a sessão à versão. Alteração de regra exige nova versão; `v0002` foi preservada. |
 | O projeto atende integralmente a open source? | O código está disponível; falta registrar a licença do projeto e revisar o pacote final. Não declarar essa pendência resolvida. |
 
 ## Ensaio e reserva

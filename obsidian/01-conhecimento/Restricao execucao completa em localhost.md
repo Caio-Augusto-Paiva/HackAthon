@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L54"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Restricao: execucao completa em localhost
@@ -18,4 +18,4 @@ tags:
 - [[SQLite]] - `rationale_for` [INFERRED]
 - [[Temas T1 a T3 (documento D, pagina 3)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

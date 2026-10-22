@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Requisitos e entregas pendentes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Requisitos_e_entregas_pendentes
 ---
 
 # Checkpoint codex-davi: IA aplicada ao desenvolvimento e à documentação, fora da consulta
 
 ## Connections
 - [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
-- [[Núcleo local regras explícitas e CF MYCIN]] - `rationale_for` [EXTRACTED]
+- [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_entregas_pendentes

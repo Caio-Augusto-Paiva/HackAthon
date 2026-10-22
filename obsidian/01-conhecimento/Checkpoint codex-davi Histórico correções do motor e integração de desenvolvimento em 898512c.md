@@ -1,11 +1,11 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Processo documental verificável"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Processo_documental_verificável
 ---
 
 # Checkpoint codex-davi: Histórico: correções do motor e integração de desenvolvimento em 898512c
@@ -15,4 +15,4 @@ tags:
 - [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
 - [[Decisões verificáveis de motor, base e documentação]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável

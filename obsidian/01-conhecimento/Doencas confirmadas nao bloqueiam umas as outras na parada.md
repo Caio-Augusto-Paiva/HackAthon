@@ -1,13 +1,13 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Doencas confirmadas nao bloqueiam umas as outras na parada"
+community: "Parada com múltiplas doenças"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Doencas_confirmadas_nao_bloqueiam_umas_as_outras_na_parada
+  - community/Parada_com_múltiplas_doenças
 ---
 
 # Doencas confirmadas nao bloqueiam umas as outras na parada
 
-#graphify/rationale #graphify/EXTRACTED #community/Doencas_confirmadas_nao_bloqueiam_umas_as_outras_na_parada
+#graphify/rationale #graphify/EXTRACTED #community/Parada_com_múltiplas_doenças

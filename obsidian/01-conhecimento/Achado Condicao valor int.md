@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Condicao.valor"
+community: "Valores e serialização"
 location: "L27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Condicaovalor
+  - community/Valores_e_serialização
 ---
 
 # Achado Condicao valor int
@@ -15,4 +15,4 @@ tags:
 - [[Condicao.valor]] - `references` [EXTRACTED]
 - [[Task 1]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Condicaovalor
+#graphify/concept #graphify/EXTRACTED #community/Valores_e_serialização

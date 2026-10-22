@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "rationale"
-community: "MSD Vet Manual"
+community: "Fontes clínicas contextuais"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/MSD_Vet_Manual
+  - community/Fontes_clínicas_contextuais
 ---
 
 # Pagina F12 trata de dermatite digital e foot rot, nao de laminite
@@ -14,4 +14,4 @@ tags:
 - [[Dermatite digital]] - `rationale_for` [EXTRACTED]
 - [[Fonte F6 (cetose) nao menciona cheiro de acetona]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/MSD_Vet_Manual
+#graphify/rationale #graphify/EXTRACTED #community/Fontes_clínicas_contextuais

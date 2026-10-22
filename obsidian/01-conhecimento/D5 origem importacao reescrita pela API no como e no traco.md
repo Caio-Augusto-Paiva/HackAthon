@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Sessão, snapshot e parecer"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Sessão_snapshot_e_parecer
 ---
 
 # D5: origem importacao reescrita pela API no como e no traco
@@ -16,4 +16,4 @@ tags:
 - [[Observacoes com valor, cf e origem (resposta, ficha, importacao)]] - `references` [EXTRACTED]
 - [[Traco de inferencia e eventos (fato_adicionado, regra_disparada)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/rationale #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer

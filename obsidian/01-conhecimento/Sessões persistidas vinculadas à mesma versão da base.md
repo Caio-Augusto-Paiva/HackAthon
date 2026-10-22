@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "rationale"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Snapshot e revisão do motor"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Snapshot_e_revisão_do_motor
 ---
 
 # Sessões persistidas vinculadas à mesma versão da base
@@ -14,4 +14,4 @@ tags:
 - [[Base de desenvolvimento 3.1.0-revisao1 51 símbolos, 56 regras, 8 doenças e 6 telas]] - `references` [EXTRACTED]
 - [[Estudo pendente persistência integral de snapshot, ordem e versão da base]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_e_revisão_do_motor

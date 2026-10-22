@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # engine.casos.executar_caso (casos de teste reproduziveis)
@@ -14,4 +14,4 @@ tags:
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - `calls` [INFERRED]
 - [[Portao de ativacao de versao (casos_falhando, confirmar_falhas)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/INFERRED #community/Modelos_e_validação_da_base

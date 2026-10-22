@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Task 2"
+community: "Ciclos de dependências"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Task_2
+  - community/Ciclos_de_dependências
 ---
 
 # Achado direcao do caminho do ciclo
@@ -16,4 +16,4 @@ tags:
 - [[Task 2]] - `references` [EXTRACTED]
 - [[encontrar_ciclo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Task_2
+#graphify/concept #graphify/EXTRACTED #community/Ciclos_de_dependências

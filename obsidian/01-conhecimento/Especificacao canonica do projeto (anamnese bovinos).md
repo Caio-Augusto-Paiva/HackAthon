@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # Especificacao canonica do projeto (anamnese bovinos)
@@ -16,4 +16,4 @@ tags:
 - [[Revisao do motor de inferencia (21102026)]] - `references` [EXTRACTED]
 - [[Tabela de conformidade com a especificacao (16 itens)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/document #graphify/EXTRACTED #community/Modelos_e_validação_da_base

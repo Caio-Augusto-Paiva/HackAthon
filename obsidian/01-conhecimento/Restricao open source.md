@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "CLAUDE.md do projeto (PoC Anamnese de Bovinos Leiteiros)"
+community: "Requisitos e arquitetura conceitual"
 location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+  - community/Requisitos_e_arquitetura_conceitual
 ---
 
 # Restricao: open source
@@ -18,4 +18,4 @@ tags:
 - [[Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)]] - `references` [EXTRACTED]
 - [[Regulamento, pontuacao e cronograma (slide 3)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLAUDEmd_do_projeto_PoC_Anamnese_de_Bovinos_Leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual

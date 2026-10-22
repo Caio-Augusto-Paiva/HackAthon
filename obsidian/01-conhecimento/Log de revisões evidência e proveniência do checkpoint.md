@@ -1,11 +1,11 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "document"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Proveniência e pressupostos clínicos"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Proveniência_e_pressupostos_clínicos
 ---
 
 # Log de revisões: evidência e proveniência do checkpoint
@@ -17,4 +17,4 @@ tags:
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
 - [[Revisão independente requer pessoamodelo, data, localização, evidência e veredito]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/document #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos

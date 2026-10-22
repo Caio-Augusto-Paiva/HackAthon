@@ -1,17 +1,17 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Snapshot e revisão do motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Snapshot_e_revisão_do_motor
 ---
 
 # Sessao: triagem, diálogo, modo, bandeiras, parecer e porque/como
 
 ## Connections
-- [[Demo por terminal bandeira, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
-- [[Diálogo de triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
+- [[Demo CLI de reserva alerta, explicação, troca de modo e snapshot]] - `references` [EXTRACTED]
+- [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/concept #graphify/EXTRACTED #community/Snapshot_e_revisão_do_motor

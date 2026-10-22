@@ -1,16 +1,16 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "HackAtom: T1 Anamnese explicável de bovinos leiteiros"
+community: "Proveniência e pressupostos clínicos"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+  - community/Proveniência_e_pressupostos_clínicos
 ---
 
 # Fraction, potencial conservador e seleção prioritária de bandeiras
 
 ## Connections
-- [[Inferência estrita em três camadas com combinação MYCIN racional]] - `references` [EXTRACTED]
+- [[Três camadas estritas e combinação MYCIN racional]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/HackAtom_T1_Anamnese_explicável_de_bovinos_leiteiros
+#graphify/rationale #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos

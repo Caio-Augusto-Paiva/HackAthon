@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Task 1: Ambiente e modelos Pydantic"
+community: "Modelos e validação da base"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Task_1_Ambiente_e_modelos_Pydantic
+  - community/Modelos_e_validação_da_base
 ---
 
 # Dependências entre símbolos, ciclo e ordem topológica
@@ -15,4 +15,4 @@ tags:
 - [[Tabela de códigos do validador (E01-E19, W01-W03)]] - `conceptually_related_to` [INFERRED]
 - [[Task 2 Análise de dependências]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Task_1_Ambiente_e_modelos_Pydantic
+#graphify/concept #graphify/INFERRED #community/Modelos_e_validação_da_base

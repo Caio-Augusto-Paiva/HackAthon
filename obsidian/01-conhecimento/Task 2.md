@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Task 2"
+community: "Ciclos de dependências"
 location: "L33-L38"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Task_2
+  - community/Ciclos_de_dependências
 ---
 
 # Task 2
@@ -19,4 +19,4 @@ tags:
 - [[Task 4]] - `shares_data_with` [EXTRACTED]
 - [[encontrar_ciclo]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Task_2
+#graphify/concept #graphify/EXTRACTED #community/Ciclos_de_dependências

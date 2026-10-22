@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Task 2"
+community: "Ciclos de dependências"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Task_2
+  - community/Ciclos_de_dependências
 ---
 
 # kb/grafo.py
@@ -16,4 +16,4 @@ tags:
 - [[Aresta ordem opcional]] - `references` [INFERRED]
 - [[Task 3]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Task_2
+#graphify/code #graphify/EXTRACTED #community/Ciclos_de_dependências

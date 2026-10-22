@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Classe Sessao (dialogo, estado, correcao, modo)"
+community: "Modelos e validação da base"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Classe_Sessao_dialogo_estado_correcao_modo
+  - community/Modelos_e_validação_da_base
 ---
 
 # Portao de ativacao de versao (casos_falhando, confirmar_falhas)
@@ -15,4 +15,4 @@ tags:
 - [[engine.casos.executar_caso (casos de teste reproduziveis)]] - `references` [INFERRED]
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Classe_Sessao_dialogo_estado_correcao_modo
+#graphify/concept #graphify/INFERRED #community/Modelos_e_validação_da_base
