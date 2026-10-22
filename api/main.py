@@ -6,6 +6,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import APIRouter, FastAPI
 from starlette.datastructures import MutableHeaders
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from api.config import VERSAO_API, Configuracao, carregar_configuracao
@@ -13,6 +14,9 @@ from api.db.conexao import inicializar
 from api.erros import CABECALHO_REQUISICAO_ID, novo_requisicao_id, registrar_handlers
 from api.frontend import montar_frontend
 from api.rotas import animais, base, sessoes, sistema
+
+
+HOSTS_PERMITIDOS = ["localhost", "127.0.0.1", "testserver"]
 
 
 class MiddlewareRequisicaoId:
@@ -55,6 +59,10 @@ def criar_app(config: Configuracao | None = None) -> FastAPI:
         lifespan=_ciclo_de_vida,
     )
     app.state.config = config or carregar_configuracao()
+    # Só o nome local atende (defesa contra DNS rebinding: uma página de fora que aponte o DNS para 127.0.0.1 não lê a API).
+    # "testserver" é o host do TestClient. O 400 sai em texto simples, não no formato único de erro. Registrado antes do
+    # middleware de id para ficar por dentro dele: a resposta 400 também leva o X-Requisicao-Id.
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=HOSTS_PERMITIDOS)
     app.add_middleware(MiddlewareRequisicaoId)
     registrar_handlers(app)
 

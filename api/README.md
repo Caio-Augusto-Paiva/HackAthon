@@ -55,6 +55,16 @@ Sem o script: `.venv\Scripts\python -m uvicorn api.main:app --host 127.0.0.1 --p
 Caminhos relativos valem a partir da pasta de onde o servidor sobe; os scripts sobem sempre da raiz do repositório. O
 `dados/` está no `.gitignore`.
 
+**Banco fora do OneDrive.** Se o repositório está numa pasta sincronizada (OneDrive), o padrão `dados/anamnese.db` cai nela, e
+a sincronização pode travar o arquivo ou corromper o SQLite (o banco usa o diário padrão, com vários arquivos auxiliares). Aponte
+`ANAMNESE_DB` para fora, por exemplo, no PowerShell, antes de subir:
+
+```
+$env:ANAMNESE_DB = "$env:LOCALAPPDATA\anamnese\anamnese.db"
+```
+
+(a pasta é criada sozinha). Os scripts `rodar.ps1` e `rodar.sh` imprimem um aviso quando o caminho do banco contém "OneDrive".
+
 **A API sobe sem a base.** Sem `ativa.json` (ou sem a versão apontada), `GET /api/saude`, `GET /api/animais` e
 `GET /api/base/versoes` respondem normalmente; `POST /api/sessoes` e `POST /api/animais` respondem **409 `conflito`**
 ("Nenhuma versão ativa ...") e nunca 500. A semente também roda sem a base (veja abaixo).
@@ -160,7 +170,11 @@ O que o `openapi.json` sozinho não diz (as descrições também estão nos camp
 .venv\Scripts\python -m pytest tests/api -q    # só a API
 .venv\Scripts\python -m pytest -q              # tudo (kb, engine, api)
 .venv\Scripts\python -m unittest discover      # testes do motor
+.venv\Scripts\python -m pytest tests/api -q -m "not lento"   # pula os testes que abrem subprocesso
 ```
+
+Os testes marcados `@pytest.mark.lento` (em `tests/api`) abrem subprocesso: PowerShell, bash ou outro Python. A marca está registrada em
+`pyproject.toml`; `-m "not lento"` os pula para um ciclo mais curto, e sem `-m` a suíte roda tudo.
 
 Os testes da API usam a base mínima de `tests/fixtures/kb/base_minima.json` (nunca a base real) e um SQLite temporário.
 
@@ -216,4 +230,7 @@ Os testes da API usam a base mínima de `tests/fixtures/kb/base_minima.json` (nu
   no meio, é 409 `conflito` ("recarregue"). Um `GET` que precisaria regravar o snapshot e encontra a revisão mudada não regrava e responde
   com o estado que calculou. `casos_servico.executar` e `base_servico.sincronizar_indice` abrem a própria transação: nunca chame
   dentro de outra (o `BEGIN` aninhado levanta `sqlite3.OperationalError`).
+- **Host confiável.** O app só atende com o cabeçalho `Host` `localhost`, `127.0.0.1` (com ou sem porta) ou `testserver` (o do
+  `TestClient`); outro host é 400 `Invalid host header` (`TrustedHostMiddleware`), contra DNS rebinding. Esse 400 vem em texto simples,
+  não no formato único de erro, mas leva o `X-Requisicao-Id`. Se for preciso expor por outro nome, ajuste `HOSTS_PERMITIDOS` em `api/main.py`.
 - **Autor das versões.** Toda versão salva pela API tem autor `equipe` (suposição: não há login).

@@ -67,6 +67,11 @@ if (-not (Test-Path $python)) {
 
 # 2. Banco: cria e semeia se não existir (ou se -Reset)
 $banco = if ($env:ANAMNESE_DB) { $env:ANAMNESE_DB } else { 'dados\anamnese.db' }
+if ([System.IO.Path]::GetFullPath($banco) -match 'OneDrive') {
+    Write-Host ('Aviso: o banco fica numa pasta do OneDrive; a sincronização pode travar ou corromper o SQLite. ' +
+                'Prefira um caminho fora dela em ANAMNESE_DB, por exemplo: ' +
+                '$env:ANAMNESE_DB = "$env:LOCALAPPDATA\anamnese\anamnese.db"') -ForegroundColor Yellow
+}
 if ($Reset -or -not (Test-Path $banco)) {
     if ($Reset) { Write-Host "Recriando o banco $banco e semeando animais fictícios..." }
     else { Write-Host "Criando o banco $banco e semeando animais fictícios..." }

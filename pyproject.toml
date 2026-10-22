@@ -26,6 +26,9 @@ packages = ["kb", "engine", "api", "api.db", "api.rotas", "api.schemas", "api.se
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "lento: roda subprocesso (PowerShell, bash, outro Python); pule com -m \"not lento\"",
+]
 filterwarnings = [
     # a spec fixa httpx==0.28.1 e o TestClient do Starlette 1.9 já prefere o httpx2; só este aviso é ignorado
     'ignore:Using `httpx` with `starlette.testclient` is deprecated',

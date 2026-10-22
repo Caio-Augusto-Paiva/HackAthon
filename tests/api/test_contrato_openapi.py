@@ -113,6 +113,7 @@ def test_gerar_texto_formato_estavel():
     assert "\r" not in texto
 
 
+@pytest.mark.lento
 def test_gerar_texto_igual_em_outro_processo():
     """A ordem das chaves e das listas não depende do hash aleatório do Python (PYTHONHASHSEED)."""
     codigo = "import sys; from api.exportar_openapi import gerar_texto; sys.stdout.buffer.write(gerar_texto().encode('utf-8'))"

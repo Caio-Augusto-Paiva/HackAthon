@@ -42,6 +42,12 @@ fi
 
 # 2. Banco: cria e semeia se não existir (ou se --reset)
 BANCO="${ANAMNESE_DB:-dados/anamnese.db}"
+case "$BANCO" in /*|[A-Za-z]:*) CAMINHO_BANCO="$BANCO" ;; *) CAMINHO_BANCO="$RAIZ/$BANCO" ;; esac
+case "$CAMINHO_BANCO" in
+    *[Oo]ne[Dd]rive*)
+        echo "Aviso: o banco fica numa pasta do OneDrive; a sincronização pode travar ou corromper o SQLite." \
+             "Prefira um caminho fora dela em ANAMNESE_DB, por exemplo: export ANAMNESE_DB=\"\$HOME/anamnese/anamnese.db\"" ;;
+esac
 if [ "$RESET" -eq 1 ] || [ ! -e "$BANCO" ]; then
     if [ "$RESET" -eq 1 ]; then
         echo "Recriando o banco $BANCO e semeando animais fictícios..."

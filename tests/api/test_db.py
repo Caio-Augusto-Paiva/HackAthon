@@ -85,6 +85,21 @@ def test_inicializar_idempotente_cria_sete_tabelas(tmp_path: Path) -> None:
         conexao.close()
 
 
+def test_inicializar_e_atomico_um_ddl_quebrado_nao_deixa_tabela_pela_metade(tmp_path: Path, monkeypatch) -> None:
+    """O DDL roda numa transação só: se uma instrução falha, as anteriores também são desfeitas."""
+    ddl = tmp_path / "quebrado.sql"
+    ddl.write_text("CREATE TABLE IF NOT EXISTS a (x INTEGER);\nCREATE TABLE IF NOT EXISTS b (x INTEGER;\n", encoding="utf-8")
+    monkeypatch.setattr("api.db.conexao.CAMINHO_ESQUEMA", ddl)
+    caminho = tmp_path / "anamnese.db"
+    with pytest.raises(sqlite3.OperationalError):
+        inicializar(caminho)
+    conexao = abrir(caminho)
+    try:
+        assert _tabelas(conexao) == set()
+    finally:
+        conexao.close()
+
+
 def test_abrir_configura_conexao_e_serve_outra_thread(conn: sqlite3.Connection) -> None:
     assert conn.row_factory is sqlite3.Row
     assert conn.execute("pragma foreign_keys").fetchone()[0] == 1

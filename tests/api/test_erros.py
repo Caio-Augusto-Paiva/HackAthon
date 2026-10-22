@@ -320,3 +320,24 @@ def test_config_le_ambiente(monkeypatch, tmp_path):
     assert padrao.db_path == Path("dados/anamnese.db")
     assert padrao.base_dir == Path("base")
     assert padrao.web_dist == Path("web/dist")
+
+
+# --- host confiável (defesa contra DNS rebinding) --------------------------------------------------------------
+
+
+@pytest.mark.parametrize("host", ["localhost", "localhost:8000", "127.0.0.1", "127.0.0.1:8000", "testserver"])
+def test_host_local_e_aceito(cliente, host):
+    assert cliente.get("/api/saude", headers={"host": host}).status_code == 200
+
+
+@pytest.mark.parametrize("host", ["evil.example", "evil.example:8000", "localhost.evil.example", "10.0.0.5:8000"])
+def test_host_estranho_e_recusado_com_400(cliente, host):
+    """O servidor só atende pelo nome local: página de fora que aponte o DNS para 127.0.0.1 não lê a API.
+
+    O 400 vem do ``TrustedHostMiddleware`` do Starlette, em texto simples (``Invalid host header``) e não no formato
+    único de erro; o ``X-Requisicao-Id`` está presente porque o middleware de id fica por fora.
+    """
+    resposta = cliente.get("/api/saude", headers={"host": host})
+    assert resposta.status_code == 400
+    assert resposta.text == "Invalid host header"
+    assert resposta.headers["X-Requisicao-Id"].startswith("rq_")

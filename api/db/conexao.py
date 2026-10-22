@@ -22,11 +22,16 @@ def abrir(caminho: Path) -> sqlite3.Connection:
 
 
 def inicializar(caminho: Path) -> None:
-    """Cria a pasta do banco e executa o DDL (``CREATE ... IF NOT EXISTS``), sem tocar no que já existe."""
+    """Cria a pasta do banco e executa o DDL (``CREATE ... IF NOT EXISTS``), sem tocar no que já existe.
+
+    O DDL roda numa transação só (``BEGIN`` ... ``COMMIT``): o ``executescript`` sozinho confirma cada instrução
+    (um ``fsync`` por ``CREATE``), o que pesa em disco lento ou sincronizado (OneDrive), e um erro no meio deixaria o
+    esquema pela metade. Com o ``BEGIN``, o erro desfaz tudo ao fechar a conexão.
+    """
     caminho.parent.mkdir(parents=True, exist_ok=True)
     ddl = CAMINHO_ESQUEMA.read_text(encoding="utf-8")
     with closing(abrir(caminho)) as conn:
-        conn.executescript(ddl)
+        conn.executescript("BEGIN;\n" + ddl + "\nCOMMIT;")
 
 
 @contextmanager

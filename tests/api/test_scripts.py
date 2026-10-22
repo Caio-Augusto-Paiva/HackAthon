@@ -401,6 +401,7 @@ def test_app_sobe_sem_base_ativa(tmp_path, agora, hoje):
 # --- script de subida ------------------------------------------------------------------------------------
 
 
+@pytest.mark.lento
 @pytest.mark.skipif(sys.platform != "win32" or shutil.which("powershell") is None, reason="só no Windows PowerShell")
 def test_rodar_ps1_e_valido_no_powershell_5():
     """O parser do Windows PowerShell aceita o roteiro (sem ``&&`` nem ``?:``) e ele expõe só as duas chaves."""
@@ -426,9 +427,49 @@ def _bash() -> str | None:
     return caminho
 
 
+@pytest.mark.lento
 @pytest.mark.skipif(_bash() is None, reason="sem bash")
 def test_rodar_sh_tem_sintaxe_valida():
     resultado = subprocess.run(
         [_bash(), "-n", (RAIZ / "scripts" / "rodar.sh").as_posix()], capture_output=True, text=True, timeout=60
     )
     assert resultado.returncode == 0, resultado.stderr
+
+
+# --- aviso do OneDrive -----------------------------------------------------------------------------------
+
+
+def _preparar(comando: list[str], banco: Path, base_dir: Path) -> subprocess.CompletedProcess:
+    ambiente = {**os.environ, "ANAMNESE_DB": str(banco), "ANAMNESE_BASE_DIR": str(base_dir), "PYTHONIOENCODING": "utf-8"}
+    return subprocess.run(comando, capture_output=True, text=True, encoding="utf-8", errors="replace", env=ambiente, timeout=120, cwd=RAIZ)
+
+
+def _roteiros_de_preparo(tmp_path: Path, base_dir: Path):
+    """``(comando, aviso)`` de cada roteiro disponível neste computador, rodando só o preparo do banco."""
+    roteiros = []
+    if sys.platform == "win32" and shutil.which("powershell") is not None:
+        roteiros.append(
+            ["powershell", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File",
+             str(RAIZ / "scripts" / "rodar.ps1"), "-SoPreparar"]
+        )
+    if _bash() is not None:
+        roteiros.append([_bash(), (RAIZ / "scripts" / "rodar.sh").as_posix(), "--so-preparar"])
+    return roteiros
+
+
+@pytest.mark.lento
+def test_roteiros_avisam_quando_o_banco_esta_no_onedrive(tmp_path, base_dir):
+    roteiros = _roteiros_de_preparo(tmp_path, base_dir)
+    if not roteiros:
+        pytest.skip("sem PowerShell nem bash")
+    for i, comando in enumerate(roteiros):
+        no_onedrive = tmp_path / f"r{i}" / "OneDrive" / "Desktop" / "anamnese.db"
+        resultado = _preparar(comando, no_onedrive, base_dir)
+        assert resultado.returncode == 0, resultado.stdout + resultado.stderr
+        avisos = [l for l in resultado.stdout.splitlines() if l.startswith("Aviso") and "OneDrive" in l]
+        assert avisos, resultado.stdout  # a linha de "Criando o banco ..." também traz o caminho; o que conta é o aviso
+        assert "ANAMNESE_DB" in avisos[0]  # diz o que fazer
+        fora = tmp_path / f"f{i}" / "dados" / "anamnese.db"
+        resultado = _preparar(comando, fora, base_dir)
+        assert resultado.returncode == 0, resultado.stdout + resultado.stderr
+        assert "OneDrive" not in resultado.stdout, resultado.stdout
