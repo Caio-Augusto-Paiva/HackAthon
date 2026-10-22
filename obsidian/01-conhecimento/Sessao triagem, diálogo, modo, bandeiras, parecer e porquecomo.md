@@ -1,17 +1,17 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Arquitetura e demonstração web"
+community: "Revisões e decisões técnicas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_demonstração_web
+  - community/Revisões_e_decisões_técnicas
 ---
 
 # Sessao: triagem, diálogo, modo, bandeiras, parecer e porque/como
 
 ## Connections
-- [[CLI de reserva alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
+- [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
 - [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web
+#graphify/concept #graphify/EXTRACTED #community/Revisões_e_decisões_técnicas

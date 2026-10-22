@@ -12,8 +12,8 @@ tags:
 # Proveniência: v0002 ativa, pai v0001, 56 regras sem validação clínica
 
 ## Connections
+- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - `references` [EXTRACTED]
 - [[Curadoria distinguir implementação, suposições e pendências comprováveis]] - `rationale_for` [EXTRACTED]
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
-- [[v0002 ativa e imutável, pai v0001; ativação não valida clínica]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável

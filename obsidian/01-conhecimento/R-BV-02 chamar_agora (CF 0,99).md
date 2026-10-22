@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Acidose e sinais digestivos"
+community: "Tristeza parasitária bovina"
 location: "L131"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Acidose_e_sinais_digestivos
+  - community/Tristeza_parasitária_bovina
 ---
 
 # R-BV-02: chamar_agora (CF 0,99)
@@ -18,4 +18,4 @@ tags:
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 - [[Urina escura (urina_escura)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Acidose_e_sinais_digestivos
+#graphify/concept #graphify/EXTRACTED #community/Tristeza_parasitária_bovina

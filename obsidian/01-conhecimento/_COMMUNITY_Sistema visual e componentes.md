@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 32
 ---
 
 # Sistema visual e componentes
 
-**Members:** 30 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[375768 px uma coluna e 1024 px margens reduzidas]] - concept - DESIGN.md
@@ -38,6 +38,8 @@ members: 30
 - [[Token cortexto 1e2a20]] - concept - DESIGN.md
 - [[Token cortrilho e3dcc8]] - concept - DESIGN.md
 - [[Uma transição de balão subida leve e fade]] - concept - DESIGN.md
+- [[Varela Round em títulos e Nunito Sans no conteúdo]] - concept - DESIGN.md
+- [[tokens cor do Figma, Varela Round e Nunito Sans]] - concept - docs/superpowers/plans/2026-10-22-frontend-web.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -47,10 +49,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Produto e limites clínicos]]
-- 1 edge to [[_COMMUNITY_Parecer, retomada e limites]]
-- 1 edge to [[_COMMUNITY_Cliente da API e erros]]
+- 3 edges to [[_COMMUNITY_Produto e limites clínicos]]
 - 1 edge to [[_COMMUNITY_Plano histórico frontend implementado]]
+- 1 edge to [[_COMMUNITY_Contratos e integração localhost]]
 
 ## Top bridge nodes
-- [[Sistema visual documentado do protótipo HackAtom]] - degree 34, connects to 4 communities
+- [[Sistema visual documentado do protótipo HackAtom]] - degree 34, connects to 2 communities
+- [[tokens cor do Figma, Varela Round e Nunito Sans]] - degree 2, connects to 1 community

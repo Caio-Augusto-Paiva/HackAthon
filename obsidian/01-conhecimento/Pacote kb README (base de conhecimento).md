@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "document"
-community: "Modelos e validação do kb"
+community: "Persistência e validação da base"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_do_kb
+  - community/Persistência_e_validação_da_base
 ---
 
 # Pacote kb README (base de conhecimento)
@@ -19,6 +19,6 @@ tags:
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `references` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `references` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `references` [EXTRACTED]
-- [[Índice da Seção 5 e consulta web; checkpoints históricos distinguidos]] - `references` [EXTRACTED]
+- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Modelos_e_validação_do_kb
+#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base

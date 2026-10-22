@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
-- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Plano_histórico_frontend_implementado

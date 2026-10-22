@@ -2,7 +2,7 @@
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
 type: "concept"
 community: "Demonstração e troca de modo"
-location: "L52"
+location: "L56"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

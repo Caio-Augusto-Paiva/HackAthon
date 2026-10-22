@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Modelos e validação do kb"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_do_kb
+  - community/Persistência_e_validação_da_base
 ---
 
 # kb/modelos.py (modelos Pydantic, carregar_base, para_motor)
@@ -19,4 +19,4 @@ tags:
 - [[Task 1 Ambiente e modelos Pydantic]] - `implements` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `calls` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_do_kb
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

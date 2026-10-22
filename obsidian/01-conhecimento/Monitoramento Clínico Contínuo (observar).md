@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Mastite e monitoramento"
 location: "L189"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Mastite_e_monitoramento
 ---
 
 # Monitoramento Clínico Contínuo (observar)
@@ -18,4 +18,4 @@ tags:
 - [[R-URG-07 observar (CF 0,8)]] - `implements` [EXTRACTED]
 - [[R-URG-08 observar (CF 0,7)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Mastite_e_monitoramento

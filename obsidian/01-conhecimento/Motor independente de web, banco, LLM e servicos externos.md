@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Backend e isolamento do motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Backend_e_isolamento_do_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # Motor independente de web, banco, LLM e servicos externos
@@ -16,4 +16,4 @@ tags:
 - [[Organizacao dos modulos do motor]] - `rationale_for` [INFERRED]
 - [[kb como pacote folha (nao importa engine)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Backend_e_isolamento_do_motor
+#graphify/rationale #graphify/INFERRED #community/Persistência_e_validação_da_base

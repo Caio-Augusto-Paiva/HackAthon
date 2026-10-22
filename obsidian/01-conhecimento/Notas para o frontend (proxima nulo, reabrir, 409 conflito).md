@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Contratos e integração localhost"
+community: "Contratos de sessão e conflitos"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Contratos_de_sessão_e_conflitos
 ---
 
 # Notas para o frontend (proxima nulo, reabrir, 409 conflito)
@@ -15,4 +15,4 @@ tags:
 - [[SPA Vite servida por FastAPI, EstadoSessao.proxima autoritativo]] - `references` [EXTRACTED]
 - [[envio único e recuperação 409 por recarregar sessão]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/concept #graphify/EXTRACTED #community/Contratos_de_sessão_e_conflitos

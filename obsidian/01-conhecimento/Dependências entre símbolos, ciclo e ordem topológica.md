@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Regras estruturais do validador"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Regras_estruturais_do_validador
+  - community/Persistência_e_validação_da_base
 ---
 
 # Dependências entre símbolos, ciclo e ordem topológica
@@ -15,4 +15,4 @@ tags:
 - [[Tabela de códigos do validador (E01-E19, W01-W03)]] - `conceptually_related_to` [INFERRED]
 - [[Task 2 Análise de dependências]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Regras_estruturais_do_validador
+#graphify/concept #graphify/INFERRED #community/Persistência_e_validação_da_base
