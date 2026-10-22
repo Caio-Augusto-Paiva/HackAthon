@@ -56,7 +56,7 @@ export function Inicio() {
           <Botao variante="secundario" onClick={() => iniciar(ultimoModo)} carregando={carregando !== null}>Tentar de novo</Botao>
         </div>}
       </div>
-      <p className={estilos.nota}>Triagem explicável por um sistema especialista. Não substitui o médico-veterinário. Dados fictícios.</p>
+      <p className={estilos.nota}>Triagem explicável por um sistema especialista, com dados fictícios. <strong>Não substitui o laudo de um médico-veterinário: qualquer que seja o resultado, procure um.</strong></p>
     </section>
   </main>;
 }

@@ -25,6 +25,11 @@ describe('parecer do sistema', () => {
     expect(linhas[0]).toHaveTextContent('Alta'); expect(linhas[1]).toHaveTextContent('Média'); expect(linhas[4]).toHaveTextContent('Baixa');
     expect(screen.getByRole('status')).toHaveTextContent(exemploParecer.urgencia.texto);
   });
+  it.each(['chamar_agora', 'observar', 'sem_problema'] as const)('avisa que não substitui o laudo, mesmo com urgência %s', async nivel => {
+    montar({ ...exemploParecer, urgencia: { ...exemploParecer.urgencia, nivel } });
+    const aviso = await screen.findByRole('note', { name: 'Este parecer não é um laudo' });
+    expect(aviso).toHaveTextContent('Independentemente do resultado, procure um médico-veterinário');
+  });
   it.each(['chamar_agora', 'observar', 'sem_problema'] as const)('identifica a urgência %s com texto da API', async nivel => {
     montar({ ...exemploParecer, urgencia: { ...exemploParecer.urgencia, nivel, texto: `Orientação ${nivel}` } });
     await screen.findByText(`Orientação ${nivel}`);

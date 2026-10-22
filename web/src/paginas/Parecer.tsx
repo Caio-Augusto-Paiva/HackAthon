@@ -61,6 +61,10 @@ export function Parecer() {
       <section role="status" data-nivel={dados.urgencia.nivel} className={estilos.urgencia}>
         <img src={alerta} width={30} height={30} alt="" /><div><h2>{urgencias[dados.urgencia.nivel]}</h2><p>{dados.urgencia.texto}</p></div>
       </section>
+      <aside role="note" aria-labelledby="titulo-laudo" className={estilos.laudo}>
+        <h2 id="titulo-laudo">Este parecer não é um laudo</h2>
+        <p>É uma triagem de apoio, feita por regras que ainda precisam de validação clínica. Independentemente do resultado, procure um médico-veterinário para examinar o animal.</p>
+      </aside>
       <div className={estilos.quadro}><table className={estilos.tabela}>
         <caption className="somenteLeitor">Hipóteses e confiança do sistema</caption>
         <thead className="somenteLeitor"><tr><th>Ordem</th><th>Doença</th><th>Gravidade</th><th>Confiança</th></tr></thead>
