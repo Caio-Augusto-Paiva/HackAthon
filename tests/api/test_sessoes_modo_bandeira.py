@@ -267,3 +267,65 @@ def test_trocar_para_veterinario_levanta_a_pausa(pausada):
     assert corpo["alerta"]["acoes"] == []
     assert corpo["urgencia"] == URGENCIA_BANDEIRA
     assert corpo["proxima"]["tela_id"] == "extra"
+
+
+# --- depois de ver_parecer ---------------------------------------------------------------------------
+
+
+def _depois_de_ver_parecer(pausada) -> tuple:
+    config, cliente, _ = pausada
+    resposta = _bandeira(cliente, "ver_parecer")
+    assert resposta.status_code == 200, resposta.text
+    encerrada = resposta.json()
+    assert (encerrada["fase"], encerrada["proxima"], encerrada["alerta"]["pausa"]) == ("encerrada", None, False)
+    assert cliente.get("/api/sessoes/ses_0001/parecer").json()["final"] is True
+    return config, cliente, encerrada
+
+
+def _reaberta(corpo: dict) -> None:
+    """O estado de uma sessão reaberta: de volta à triagem, com a tela ``extra`` pela frente e sem pausa."""
+    assert corpo["fase"] == "triagem" and corpo["proxima"]["tela_id"] == "extra"
+    assert corpo["alerta"]["pausa"] is False and corpo["alerta"]["acoes"] == []
+    assert corpo["urgencia"]["provisoria"] is True  # voltou a ser o quadro em andamento
+
+
+def test_continuar_depois_de_ver_parecer_reabre_a_sessao(pausada):
+    config, cliente, encerrada = _depois_de_ver_parecer(pausada)
+    resposta = _bandeira(cliente, "continuar")
+    assert resposta.status_code == 200, resposta.text
+    corpo = resposta.json()
+    validar_contrato("acao_bandeira", corpo)
+    _reaberta(corpo)
+    assert corpo["revisao"] == encerrada["revisao"] + 1
+    assert cliente.get("/api/sessoes/ses_0001/parecer").json()["final"] is False  # o parecer voltou a ser parcial
+    assert _consultar(config, "SELECT fase FROM sessoes") == [("triagem",)]
+    assert cliente.get("/api/sessoes/ses_0001").json() == corpo
+
+
+@pytest.mark.parametrize("modo", ["produtor", "veterinario"])
+def test_patch_de_modo_depois_de_ver_parecer_reabre_a_sessao(pausada, modo):
+    """Até o PATCH para o mesmo modo reabre: o motor refaz o quadro e a sessão já não está encerrada."""
+    _, cliente, encerrada = _depois_de_ver_parecer(pausada)
+    resposta = _modo(cliente, modo)
+    assert resposta.status_code == 200, resposta.text
+    corpo = resposta.json()
+    validar_contrato("trocar_modo", corpo)
+    assert corpo["fase"] == "triagem" and corpo["proxima"]["tela_id"] == "extra"
+    assert corpo["modo"] == modo and corpo["revisao"] == encerrada["revisao"] + 1
+
+
+def test_correcao_depois_de_ver_parecer_reabre_a_sessao(pausada):
+    _, cliente, encerrada = _depois_de_ver_parecer(pausada)
+    resposta = _triagem(cliente, "sinais", SINAIS_COM_BANDEIRA, metodo="PUT")  # a mesma resposta, só reenviada
+    assert resposta.status_code == 200, resposta.text
+    corpo = resposta.json()
+    validar_contrato("corrigir_triagem", corpo)
+    assert corpo["fase"] == "triagem" and corpo["proxima"]["tela_id"] == "extra"
+    assert corpo["revisao"] == encerrada["revisao"] + 1
+
+
+def test_resposta_nova_depois_de_ver_parecer_422_e_nada_muda(pausada):
+    """Responder (POST) a uma sessão encerrada é recusado pelo motor: a tela já não é a próxima."""
+    _, cliente, encerrada = _depois_de_ver_parecer(pausada)
+    _erro(_triagem(cliente, "extra", {"valores": {"pergunta_x": True}}), 422, "resposta_invalida")
+    assert cliente.get("/api/sessoes/ses_0001").json() == encerrada

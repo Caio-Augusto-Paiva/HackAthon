@@ -373,3 +373,96 @@ def test_tela_respondida_no_produtor_volta_pendente_no_veterinario(cliente_tela_
     validar_contrato("responder_triagem", resposta.json())
     assert resposta.json()["fase"] != "triagem"
     _erro(_triagem(cliente, "sinais", {"valores": {"exame_v": True}}), 409, "ja_respondida")
+
+
+# --- pergunta dinâmica numérica e categórica ---------------------------------------------------------
+
+
+def _pergunta_x_numerica(dados: dict) -> None:
+    """``pergunta_x`` vira a temperatura (numérica, 30 a 45 °C); a regra R-D1-02 passa a pedir ``>= 39``."""
+    simbolo = next(s for s in dados["simbolos"] if s["id"] == "pergunta_x")
+    simbolo["dominio"] = {"tipo": "numerico", "min": 30, "max": 45, "unidade": "°C"}
+    regra = next(r for r in dados["regras"] if r["id"] == "R-D1-02")
+    regra["se"] = [{"simbolo": "recente"}, {"simbolo": "pergunta_x", "op": "≥", "valor": 39}]
+
+
+def _pergunta_x_categorica(dados: dict) -> None:
+    """``pergunta_x`` vira o apetite (categórica); a regra R-D1-02 passa a pedir ``= reduzido``."""
+    simbolo = next(s for s in dados["simbolos"] if s["id"] == "pergunta_x")
+    simbolo["dominio"] = {"tipo": "categorico", "valores": ["normal", "reduzido", "ausente"]}
+    regra = next(r for r in dados["regras"] if r["id"] == "R-D1-02")
+    regra["se"] = [{"simbolo": "recente"}, {"simbolo": "pergunta_x", "op": "=", "valor": "reduzido"}]
+
+
+def _sessao_dinamica(cliente_com, ajustar) -> tuple[TestClient, dict]:
+    """``(cliente, estado)`` com ``sinais`` respondida: a próxima é a pergunta dinâmica ``pergunta_x``."""
+    _, cliente = cliente_com(ajustar)
+    criar_sessao_teste(cliente, criar_animal_teste(cliente)["id"])
+    resposta = _triagem(cliente, "sinais", SINAIS)
+    assert resposta.status_code == 200, resposta.text
+    estado = resposta.json()
+    assert estado["proxima"]["tipo"] == "pergunta" and estado["proxima"]["simbolo"] == "pergunta_x"
+    return cliente, estado
+
+
+def _responder_x(cliente, valor) -> object:
+    return cliente.post("/api/sessoes/ses_0001/respostas", json={"simbolo": "pergunta_x", "valor": valor})
+
+
+def test_dinamica_numerica_expoe_limites_e_aceita_numero(cliente_com):
+    cliente, estado = _sessao_dinamica(cliente_com, _pergunta_x_numerica)
+    proxima = estado["proxima"]
+    validar_contrato("responder_triagem", estado)
+    assert (proxima["entrada"], proxima["unidade"], proxima["min"], proxima["max"], proxima["opcoes"]) == (
+        "numerico", "°C", 30, 45, None,
+    )
+    resposta = _responder_x(cliente, 39)  # o JSON 39 chega como 39.0: é número, não texto
+    assert resposta.status_code == 200, resposta.text
+    corpo = resposta.json()
+    validar_contrato("responder_pergunta", corpo)
+    assert corpo["revisao"] == 3 and corpo["progresso"]["dinamicas_feitas"] == 1
+    como = cliente.get("/api/sessoes/ses_0001/como/d1").json()
+    assert "R-D1-02" in [e["regra_id"] for e in como["evidencias"]]  # 39 >= 39: a regra com o limiar disparou
+
+
+@pytest.mark.parametrize("valor", ["39.5", "39", True, "alto"], ids=["texto_com_ponto", "texto", "booleano", "palavra"])
+def test_dinamica_numerica_so_aceita_json_numerico(cliente_com, valor):
+    cliente, estado = _sessao_dinamica(cliente_com, _pergunta_x_numerica)
+    _erro(_responder_x(cliente, valor), 422, "resposta_invalida")
+    assert cliente.get("/api/sessoes/ses_0001").json() == estado  # nada foi gravado
+
+
+@pytest.mark.parametrize("valor", [29.9, 45.1, 1000], ids=["abaixo", "acima", "absurdo"])
+def test_dinamica_numerica_fora_dos_limites_422(cliente_com, valor):
+    cliente, estado = _sessao_dinamica(cliente_com, _pergunta_x_numerica)
+    _erro(_responder_x(cliente, valor), 422, "resposta_invalida")
+    assert cliente.get("/api/sessoes/ses_0001").json() == estado
+
+
+def test_dinamica_categorica_expoe_opcoes_e_aceita_uma_valida(cliente_com):
+    cliente, estado = _sessao_dinamica(cliente_com, _pergunta_x_categorica)
+    proxima = estado["proxima"]
+    validar_contrato("responder_triagem", estado)
+    assert proxima["entrada"] == "categorico"
+    assert [o["valor"] for o in proxima["opcoes"]] == ["normal", "reduzido", "ausente"]
+    assert (proxima["unidade"], proxima["min"], proxima["max"]) == (None, None, None)
+    resposta = _responder_x(cliente, "reduzido")
+    assert resposta.status_code == 200, resposta.text
+    validar_contrato("responder_pergunta", resposta.json())
+    como = cliente.get("/api/sessoes/ses_0001/como/d1").json()
+    assert "R-D1-02" in [e["regra_id"] for e in como["evidencias"]]
+
+
+@pytest.mark.parametrize("valor", ["inexistente", "Reduzido ", 3, True], ids=["fora_da_lista", "caixa_e_espaco", "numero", "booleano"])
+def test_dinamica_categorica_opcao_invalida_422(cliente_com, valor):
+    cliente, estado = _sessao_dinamica(cliente_com, _pergunta_x_categorica)
+    _erro(_responder_x(cliente, valor), 422, "resposta_invalida")
+    assert cliente.get("/api/sessoes/ses_0001").json() == estado
+
+
+def test_dinamica_numerica_e_categorica_aceitam_nao_sei(cliente_com):
+    for ajustar in (_pergunta_x_numerica, _pergunta_x_categorica):
+        cliente, _ = _sessao_dinamica(cliente_com, ajustar)
+        resposta = _pergunta(cliente, "pergunta_x", nao_sei=True)
+        assert resposta.status_code == 200, resposta.text
+        assert resposta.json()["progresso"]["dinamicas_feitas"] == 1

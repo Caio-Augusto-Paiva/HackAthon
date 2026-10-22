@@ -570,3 +570,18 @@ def test_nome_em_branco_na_importacao_vira_none(cliente):
 def test_importacao_so_cabecalho_nao_cria_nada(cliente):
     corpo = _enviar(cliente, b"brinco,nome\n").json()
     assert corpo == {"formato": "csv", "gravado": True, "criados": [], "atualizados": [], "rejeitados": []}
+
+
+def test_busca_de_animais_com_acento_ignora_a_caixa(cliente):
+    """O filtro é feito em Python com ``casefold`` (o ``lower()`` do SQLite só trata ASCII)."""
+    for brinco, nome in (("BR-0801", "Ângela"), ("BR-0802", "ÊNIO"), ("BR-0803", "Mimosa")):
+        assert cliente.post("/api/animais", json={"brinco": brinco, "nome": nome}).status_code == 201
+
+    def brincos(busca: str) -> list[str]:
+        return [a["brinco"] for a in cliente.get("/api/animais", params={"busca": busca}).json()["itens"]]
+
+    assert brincos("âng") == ["BR-0801"]  # minúscula acentuada acha a maiúscula acentuada
+    assert brincos("ÂNG") == ["BR-0801"]
+    assert brincos("ênio") == ["BR-0802"]  # e o nome todo em maiúsculas acha pela minúscula
+    assert brincos("ÊNIO") == ["BR-0802"]
+    assert brincos("ela") == ["BR-0801"]  # no meio do nome
