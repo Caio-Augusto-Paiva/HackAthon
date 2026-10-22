@@ -4,3 +4,9 @@
 .instrucao { color: var(--cor-texto-claro); margin: 0 0 4px; font-size: 16px; }
 .acoes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
 .erro { color: var(--cor-erro-no-escuro); }
+/* Responder e Voltar: faixa de luz diagonal atravessa devagar o botão, repetindo enquanto o mouse estiver em cima. */
+.acoes > button { position: relative; overflow: hidden; isolation: isolate; }
+.acoes > button::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgb(255 255 255 / 75%), transparent); transform: translateX(0) skewX(-18deg); opacity: 0; }
+.acoes > button:hover:not(:disabled)::after { animation: brilho 2.4s ease-in-out infinite; }
+@keyframes brilho { 0% { opacity: 1; transform: translateX(0) skewX(-18deg); } 70%, 100% { opacity: 1; transform: translateX(420%) skewX(-18deg); } }

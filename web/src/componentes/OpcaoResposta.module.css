@@ -9,9 +9,11 @@
 @keyframes marcar { from { transform: scale(.7); } }
 .desabilitada { cursor: not-allowed; opacity: .7; }
 @media (max-width: 600px) { .opcao { font-size: 18px; min-height: 60px; padding: 14px 16px; } }
-/* Brilho que atravessa devagar a opção sob o mouse, repetindo enquanto ele estiver em cima. */
-.opcao { overflow: hidden; isolation: isolate; }
-.opcao::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
-  background: linear-gradient(105deg, transparent, rgb(255 255 255 / 75%), transparent); transform: translateX(0) skewX(-18deg); opacity: 0; }
-.opcao:hover:not(.desabilitada)::after { animation: brilho 2.4s ease-in-out infinite; }
-@keyframes brilho { 0% { opacity: 1; transform: translateX(0) skewX(-18deg); } 70%, 100% { opacity: 1; transform: translateX(420%) skewX(-18deg); } }
+/* Borda luminosa: um feixe laranja percorre a borda da opção enquanto o mouse estiver em cima. */
+@property --angulo-borda { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.opcao::before { content: ''; position: absolute; inset: -3px; padding: 3px; border-radius: inherit; pointer-events: none; z-index: 1;
+  background: conic-gradient(from var(--angulo-borda), transparent 0 62%, #f0913a 80%, #ffd2a6 88%, transparent 96%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); opacity: 0; transition: opacity 200ms ease-out; }
+.opcao:hover:not(.desabilitada)::before { opacity: 1; animation: girar-borda 2s linear infinite; }
+@keyframes girar-borda { to { --angulo-borda: 360deg; } }
