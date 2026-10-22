@@ -5,7 +5,7 @@
 .marcador { display: flex; flex: 0 0 28px; width: 28px; height: 28px; justify-content: center; align-items: center; border: 3px solid var(--cor-primaria); border-radius: 8px; }
 .circular { border-radius: 50%; }
 .selecionada { background: var(--cor-creme); border-color: var(--cor-acento); font-weight: 700; box-shadow: 0 4px 4px rgb(181 84 92 / 40%), inset 0 -4px 6px rgb(181 84 92 / 22%), inset 0 3px 4px rgb(255 255 255 / 55%); }
-.selecionada .marcador { background: var(--cor-acento); border-color: var(--cor-acento-escuro); animation: marcar 220ms cubic-bezier(.34, 1.4, .64, 1); }
+.selecionada .marcador { background: var(--cor-acento); border-color: var(--cor-acento-escuro); animation: marcar 200ms cubic-bezier(.25, 1, .5, 1); }
 @keyframes marcar { from { transform: scale(.7); } }
 .desabilitada { cursor: not-allowed; opacity: .7; }
 @media (max-width: 600px) { .opcao { font-size: 18px; min-height: 60px; padding: 14px 16px; } }
