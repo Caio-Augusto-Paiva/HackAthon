@@ -35,12 +35,21 @@ powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -SemNavegador
 |---|---|---|
 | 0:00–0:30 | Abrir http://localhost:8000/ e clicar em Iniciar verificação | Tela inicial com os dois modos; API cria animal fictício e sessão na `v0002` |
 | 0:30–1:00 | Digitar `12,5` em dias, enviar e corrigir para `90` | Mensagem 422 junto ao campo, sem avanço; após corrigir, aparece a lateral de hipóteses |
-| 1:00–2:00 | Reproduzir C-MAS-01: estado térmico normal, nenhuma alteração de postura, apetite normal, leite alterado + úbere inflamado + queda de produção, nenhuma alteração de excreções; responder Não sei às perguntas adicionais sem observação | Opções fechadas, desconhecimento explícito e perguntas escolhidas pelo motor; abrir o por quê antes de responder |
-| 2:00–2:40 | Examinar o parecer e abrir Como cheguei aqui? | Mastite 80%, observar; oito doenças nos blocos da API, confiança diferente de probabilidade, regras com fonte e status |
-| 2:40–3:40 | Nova verificação: caso C-HIP-01, 1 dia, extremidades frias, decúbito; abrir o parecer pelo alerta | Pausa de segurança e urgência chamar_agora; o alerta não fecha por Esc nem pelo fundo |
+| 1:00–2:00 | Começar C-MAS-01 no produtor: estado térmico normal, nenhuma alteração de postura, apetite normal, leite alterado + úbere inflamado + queda de produção; abrir o por quê antes de responder | Opções fechadas e sinais mamários registrados antes da troca, na mesma sessão |
+| 2:00–2:40 | Clicar Mudar para modo especialista, ler o aviso e confirmar. Responder à temperatura retal (38,5 °C no caso fictício, digitando `38.5`) e às excreções; responder Não sei aos exames sem observação | PATCH usa `veterinario`; próxima pergunta e limite vêm da API. Os sinais anteriores permanecem; Voltar permite corrigi-los. Mudar para modo produtor faz o caminho inverso sem confirmação |
+| 2:40–3:10 | Examinar o parecer e abrir Como cheguei aqui? | Um único parecer combina as respostas de antes e depois da troca; mastite continua sustentada pelos sinais mamários. Exibir o percentual retornado pela API, sem fixar valor após exames adicionais |
+| 3:10–3:40 | Nova verificação: caso C-HIP-01, 1 dia, extremidades frias, decúbito; mostrar a troca dentro do alerta ou abrir o parecer | Pausa e urgência chamar_agora preservadas; trocar para especialista não apaga a bandeira. Esc e clique no fundo não dispensam o alerta |
 | 3:40–4:00 | Mostrar o relatório web e declarar limitações | Casos sintéticos, editor pendente e revisão clínica não realizada; não apresentar teste automatizado como ensaio humano |
 
 `/api/docs` serve o HTML do Swagger, mas usa recursos externos de CDN na configuração atual. A SPA usa fontes e ilustrações locais e os E2E verificam que não há requisições externas. O ensaio automatizado HTTP histórico está em [evidencias-verificacao.json](evidencias-verificacao.json); a verificação atual de navegador está em [web/QUALIDADE.md](../../web/QUALIDADE.md), com [capturas das telas](capturas/). Nenhum deles substitui o ensaio humano com Wi-Fi desligado. Encerrar o servidor com Ctrl+C ao terminar.
+
+### Troca de modo sem reiniciar a análise
+
+O controle do cabeçalho mostra o modo atual e permite produtor ↔ especialista. Entrar no especialista exige confirmação com o aviso de complexidade; voltar ao produtor é direto. Durante a chamada, envio de resposta e outra troca ficam bloqueados. Há anúncio para leitores de tela, foco na pergunta retornada e recuperação de conflito por leitura da sessão. O parecer parcial oferece a mesma troca e retorna à anamnese.
+
+As respostas anteriores não são reenviadas ao mudar de modo. O histórico permanece acessível por Voltar, e as correções são recalculadas pelo servidor. A tela térmica tem símbolos diferentes em cada modo: para corrigir o fato original, a interface muda temporariamente ao modo da resposta, envia o PUT e restaura o modo escolhido sob a mesma trava, mostrando apenas o resultado final. Se houver falha, relê o estado, conserva o histórico e informa se a correção foi gravada ou se o modo não pôde ser restaurado. Não converte observação de extremidades em temperatura nem calcula CF no navegador.
+
+O teste `web/e2e/troca-modo.spec.ts` usa a API real e cobre sinais mamários informados no produtor, termometria no especialista, correção de dias e da observação térmica anterior, pausa, volta ao produtor e parecer parcial. O parecer final conserva o mesmo identificador de sessão e a evidência dos sinais anteriores. Esses testes são sintéticos, não validação clínica.
 
 ## Reserva — núcleo por terminal, 4 minutos
 

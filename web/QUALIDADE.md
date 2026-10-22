@@ -37,3 +37,11 @@ O alerta usa o texto e as ações do backend. Esc e clique fora não o dispensam
 [Capturas das seis telas e do erro numérico](../docs/entrega/capturas/) foram obtidas da implementação com API real. O conjunto desktop mostra início, pergunta numérica, lateral, múltipla, alerta e parecer. Há uma captura adicional em 375 px. O protótipo foi comparado com os renders em tipografia, cores, ilustrações, proporções, espaçamento e hierarquia; as perguntas reais podem ocupar mais linhas que o texto do Figma.
 
 Os resultados são evidência de software em dados fictícios. Não demonstram acurácia clínica. Riscos de coleta, precisão no contrato, histórico de edição após recarga, editor e ensaios físicos permanecem registrados no [documento de riscos](../docs/entrega/06-riscos-e-pendencias.md).
+
+## Checkpoint posterior — troca de modo durante a anamnese
+
+O merge `7494e3e` trouxe o prompt e os SVGs animados com classes `olho`/`sino`, preservados nesta alteração. A verificação deste checkpoint amplia a cobertura inicial acima para **60 testes unitários em nove arquivos e 11 cenários E2E**. O build continua em TypeScript estrito; a suíte Python permanece com 1066 aprovados, 1 ignorado e 170 subtestes.
+
+A troca usa PATCH na mesma sessão, confirmação ao entrar no especialista, bloqueio compartilhado com respostas, anúncio para leitores de tela e foco na pergunta. Há cobertura de cancelamento, duplo clique, conflitos 409, erros 404/422/500, histórico corrigível, pausa e parecer parcial. A tabela final continua sendo o parecer único da API, com os sinais anteriores à troca.
+
+A revisão encontrou dois cuidados adicionais cobertos por regressões RED → GREEN: descartar apenas o rascunho quando o campo da tela muda entre modos, e corrigir a tela antiga com os símbolos do modo original antes de restaurar o modo escolhido. A operação permanece sob a mesma trava; falhas são reconciliadas por leitura do estado, sem apagar histórico ou repetir o PUT. Os testes da API real corrigem dias e a observação térmica do produtor antes e depois da termometria do especialista. Axe e a revisão das capturas cobrem o novo controle e a confirmação. Esses resultados continuam sendo evidência de software, sem validação clínica.
