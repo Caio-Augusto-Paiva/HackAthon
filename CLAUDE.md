@@ -31,19 +31,6 @@ Mudanças só em código, testes, `web/`, `docs/prompts/` ou `docs/rascunhos/` *
 
 Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Obsidian) e `obsidian/02-a-definir/` (grafo 2, reservado).
 
-## Papel e limite da sessão de planejamento
-
-- Esta fase é só de **planejamento**: arquitetura, motor de inferência, base de conhecimento, linguagens e bibliotecas, estrutura de pastas, contratos de API, estratégia de testes e execução em localhost.
-- **NÃO escreva código de implementação.** Arquivos de especificação e de plano em Markdown são permitidos; código-fonte não.
-- Pare depois do plano. Não comece a implementar sem ordem explícita.
-
-## Processo obrigatório
-
-1. **Antes de qualquer coisa**, explicar em poucos parágrafos o que é um sistema especialista e como funciona um motor de inferência: encadeamento para frente e para trás, resolução de conflito, fatores de certeza, explicação "por quê?" e "como?" (diretriz do hackathon, [A] slide 12, passo 2).
-2. Usar a skill `superpowers:brainstorming` para refinar escopo e desenho. Uma pergunta por vez, alternativas com recomendação. Ao final, gravar a especificação aprovada em `docs/superpowers/specs/`.
-3. Após aprovação da especificação, usar `superpowers:writing-plans` para gerar o plano em `docs/superpowers/plans/`: tarefas pequenas e verificáveis, com testes definidos antes do código de cada tarefa.
-4. Parar depois do plano.
-
 ## O desafio
 
 - **Objetivo:** "construir uma aplicação para usuário final que resolva um problema da pecuária leiteira por meio de uma base explícita de conhecimento e um motor de inferência" ([A] slide 8; [D] p. 3).
@@ -79,7 +66,7 @@ Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Ob
 - **Demonstração** em localhost.
 - **Documentação obrigatória:** processo de desenvolvimento, arquitetura tecnológica e regras de produção.
 - **Apresentação obrigatória:** todo o processo, do uso da IA ao resultado.
-- Início terça 20/10 às 9:00; envio de documentação, apresentação e código-fonte até **quinta 22/10 às 20:00**; apresentação sexta 23/10 às 9:00. O plano tem que caber em cerca de dois dias e meio.
+- Início terça 20/10 às 9:00; envio de documentação, apresentação e código-fonte até **quinta 22/10 às 20:00**; apresentação sexta 23/10 às 9:00.
 
 ### Avaliação ([A] slides 3, 5 e 11; [D] p. 2)
 
@@ -92,38 +79,15 @@ Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1, abrir como cofre no Ob
 
 1. Escolher o agente de IA. 2. Pedir à IA que explique sistema especialista e motor de inferência. 3. Escolher a tecnologia. 4. Pesquisar o contexto de negócio. 5. Definir escopo e diretrizes da arquitetura. 6. Definir as regras de produção. 7. Implementar e testar. 8. Estudar em detalhes o que foi produzido.
 
-A fase de planejamento cobre os passos 2 a 6.
+## Estado atual e onde está cada coisa
 
-## Decisões já tomadas (não vêm dos documentos)
+Fase de **implementação e entrega**. A especificação e os planos já foram aprovados; não refaça brainstorming nem plano sem pedido.
 
-- **Tema:** T1 Anamnese.
-- **Motor gráfico:** editor visual onde se desenha o fluxo da anamnese (perguntas, condições, regras, conclusões) como grafo. Corresponde ao componente "Aquisição de conhecimento".
-- **Linguagens:** Python no backend, React no frontend (inicialmente).
-
-## Proposta inicial de arquitetura (hipótese a validar no brainstorming)
-
-- Motor de regras em Python, puro e independente de interface (pacote próprio, testável sem web): encadeamento, resolução de conflito, fatores de certeza, traço de inferência.
-- Base de conhecimento/fluxo como dado versionável (JSON ou YAML com schema), lido pelo editor gráfico e pelo motor; cada versão testável.
-- API: FastAPI + Pydantic.
-- Frontend: React + TypeScript; React Flow no editor gráfico; tela de anamnese em diálogo, com parecer e explicação.
-- Persistência: SQLite.
-- Testes: pytest (motor e casos conhecidos) e Playwright (ponta a ponta).
+- Desenho canônico: `docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md`; planos em `docs/superpowers/plans/`.
+- Código: `engine/` (motor, Python só com biblioteca padrão), `kb/` (validação e versões da base), `api/` (FastAPI + SQLite), `web/` (React + TypeScript, feito pelo Codex), `base/` (versões imutáveis; ativa em `base/ativa.json`).
+- Documentação de entrega: `docs/entrega/`.
+- Editor gráfico da base e sensores ficaram **fora do escopo** do PoC.
 - **Dados fictícios apenas.** Nenhum dado real de propriedade ou animal.
-
-## O plano final deve conter
-
-1. Escopo do PoC (o que entra e o que fica de fora, justificado pelo prazo).
-2. Diagrama Mermaid mapeando cada componente do modelo conceitual ([A] slide 14) a um módulo do código.
-3. Desenho do motor: tipo de encadeamento e por quê, resolução de conflito, modelo de incerteza (representação e combinação dos CF), formato do traço e geração de "por quê?" e "como?".
-4. Formato da base: schema, versionamento, conversão grafo ↔ regras, validação (ciclos, variáveis não definidas, regras inalcançáveis).
-5. Conhecimento do domínio: sinais, histórico, categorias de triagem e regras em pseudocódigo, **cada uma marcada como suposição a validar** com especialista ou RERUM.
-6. Linguagens, bibliotecas e versões (todas open source) com justificativa.
-7. Estrutura de pastas do monorepo e contratos da API (endpoints, payloads).
-8. Estratégia de testes: casos conhecidos por versão da base, unitários do motor, ponta a ponta.
-9. Execução em localhost com o mínimo de comandos (script ou `docker compose`), sem nuvem.
-10. Plano por dia até 22/10 às 20:00, com marcos verificáveis e o que cortar se o prazo apertar.
-11. O que vai para a documentação e a apresentação (processo, arquitetura, regras de produção, uso da IA).
-12. Riscos e pontos em aberto.
 
 ## Regras de conduta
 
