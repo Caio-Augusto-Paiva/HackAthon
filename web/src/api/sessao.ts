@@ -8,6 +8,8 @@ export type Parecer = components['schemas']['Parecer'];
 export type Porque = components['schemas']['PorQue'];
 export const caminhoSessao = (id: string) => `/sessoes/${encodeURIComponent(id)}`;
 export const obterSessao = (id: string) => chamar<EstadoSessao>('GET', caminhoSessao(id));
+export const trocarModo = (id: string, modo: Modo): Promise<EstadoSessao> =>
+  chamar<EstadoSessao>('PATCH', caminhoSessao(id), { modo } satisfies components['schemas']['TrocaModo']);
 export const obterParecer = (id: string) => chamar<Parecer>('GET', `${caminhoSessao(id)}/parecer`);
 export const obterComo = (id: string, simbolo: string) => chamar<components['schemas']['Como']>('GET', `${caminhoSessao(id)}/como/${encodeURIComponent(simbolo)}`);
 export const obterPorque = (id: string, simbolo: string) => chamar<Porque>('GET', `${caminhoSessao(id)}/porque/${encodeURIComponent(simbolo)}`);
