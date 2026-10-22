@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './estilo/global.css';
+import { App } from './App';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode><main aria-label="Anamnese Bovina" /></StrictMode>,
+  <StrictMode><App /></StrictMode>,
 );
