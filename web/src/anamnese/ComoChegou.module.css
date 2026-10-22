@@ -1,3 +1,25 @@
-.lista { padding-left: 22px; display: grid; gap: 24px; font-size: 16px; overflow-wrap: anywhere; }
-.lista p { margin: 8px 0; line-height: 1.5; }
-.lista ul { padding-left: 20px; }
+.resumo { font-size: 17px; color: var(--cor-texto-suave); }
+.resumo strong { color: var(--cor-texto); }
+.lista, .aninhadas { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.regra { display: grid; gap: 10px; padding: 20px 22px; border-radius: 22px; background: var(--cor-superficie); box-shadow: 0 6px 14px rgb(14 38 20 / 12%); overflow-wrap: anywhere; }
+.aninhadas .regra { padding: 14px 16px; background: var(--cor-creme); box-shadow: none; border: 2px solid var(--cor-trilho); }
+.topo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.id { font: 400 18px/1.2 var(--fonte-titulo); color: var(--cor-primaria-escura); }
+.status { padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; background: var(--cor-alerta-fundo); color: var(--cor-alerta-texto); }
+.status[data-status='validada'] { background: var(--cor-ok-fundo); color: var(--cor-primaria-escura); }
+.subida { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--cor-primaria-escura); }
+.trilho { position: relative; width: 120px; height: 10px; border-radius: 5px; background: var(--cor-trilho); overflow: hidden; }
+.trilho > span { position: absolute; inset-block: 0; left: 0; border-radius: 5px; background: color-mix(in srgb, var(--cor-primaria) 45%, var(--cor-trilho)); }
+.trilho > .ganho { background: var(--cor-primaria); }
+.frase { font-size: 17px; line-height: 1.5; }
+.palavra { font-weight: 800; color: var(--cor-acento-escuro); }
+.fatos { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.fato { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 8px 12px; border-radius: 12px; background: var(--cor-creme); font-size: 15px; }
+.origem { color: var(--cor-texto-suave); font-size: 13px; }
+.deducao { margin-top: 8px; }
+.deducao summary { cursor: pointer; width: fit-content; font-size: 14px; font-weight: 700; color: var(--cor-primaria); text-decoration: underline; text-underline-offset: .2em; }
+.deducao[open] summary { margin-bottom: 10px; }
+.fonte { font-size: 14px; color: var(--cor-texto-suave); line-height: 1.45; }
+.fonte a { color: var(--cor-primaria-escura); font-weight: 700; }
+.nota { color: var(--cor-texto-suave); }
+@media (max-width: 600px) { .subida { margin-left: 0; width: 100%; } .trilho { flex: 1; } .regra { padding: 16px; } }

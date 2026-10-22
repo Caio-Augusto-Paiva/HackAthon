@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { Botao } from './Botao';
@@ -67,5 +67,19 @@ describe('controles de resposta', () => {
     await userEvent.keyboard('{Escape}');
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Explicar' })).toHaveFocus();
+  });
+
+  it('folha arrastável: expande pelo teclado e fecha ao ser arrastada para baixo', async () => {
+    const fechar = vi.fn();
+    render(<Modal variante="folha" titulo="Como cheguei aqui?" aoFechar={fechar}><p>Texto longo</p></Modal>);
+    const puxador = screen.getByRole('button', { name: 'Expandir painel' });
+    expect(puxador).toHaveAttribute('aria-expanded', 'false');
+    await userEvent.click(puxador);
+    expect(screen.getByRole('button', { name: 'Recolher painel' })).toHaveAttribute('aria-expanded', 'true');
+    expect(fechar).not.toHaveBeenCalled();
+    fireEvent.pointerDown(puxador, { clientY: 100, pointerId: 1 });
+    fireEvent.pointerMove(puxador, { clientY: 700, pointerId: 1 });
+    fireEvent.pointerUp(puxador, { clientY: 700, pointerId: 1 });
+    expect(fechar).toHaveBeenCalledTimes(1);
   });
 });

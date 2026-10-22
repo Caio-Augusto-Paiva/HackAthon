@@ -38,7 +38,10 @@ describe('parecer do sistema', () => {
     expect(await within(dialogo).findByText('R-MAS-01')).toBeInTheDocument();
     expect(dialogo).toHaveTextContent('F1');
     expect(dialogo).toHaveTextContent('Suposição a validar');
-    expect(dialogo).toHaveTextContent('leite_alterado');
+    expect(dialogo).toHaveTextContent('Leite alterado');
+    expect(within(dialogo).getByText('0% → 70%')).toBeInTheDocument();
+    expect(within(dialogo).getByText('70% → 88%')).toBeInTheDocument();
+    expect(within(dialogo).getByRole('button', { name: 'Expandir painel' })).toBeInTheDocument();
     expect(fetch).toHaveBeenCalledWith('/api/sessoes/ses_0001/como/hipocalcemia', expect.objectContaining({ method: 'GET' }));
   });
   it('avisa que o parecer é parcial e permite nova verificação', async () => {
