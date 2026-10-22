@@ -25,7 +25,9 @@ A especificação pede que o usuário troque entre modo produtor e modo especial
    - Use um botão do componente `Botao` (variante secundária) com o texto "Mudar para modo especialista" ou "Mudar para modo produtor". Não use um seletor nativo.
    - Ao ir para o especialista, peça confirmação no `Modal` existente com o mesmo aviso em vermelho da tela de início (as perguntas têm complexidade maior). Ao ir para o produtor, troque direto.
    - Durante a chamada, reuse a trava `trava` e o estado `enviando`: não pode haver troca de modo e envio de resposta ao mesmo tempo, e o duplo clique não pode disparar duas chamadas.
-   - No sucesso: `definirEstado(atualizado)`, limpe o modo de correção (`definirCorrecao(undefined)`) e o histórico local (`definirHistorico([])`), porque as telas guardadas foram calculadas no modo antigo. Leve o foco para a pergunta (`[data-pergunta]`).
+   - No sucesso: `definirEstado(atualizado)`, saia do modo de correção (`definirCorrecao(undefined)`) e leve o foco para a pergunta (`[data-pergunta]`).
+   - **Não limpe o histórico.** A troca de modo continua a mesma análise, não começa outra. As respostas dadas antes da troca continuam valendo para o motor, e o usuário ainda pode voltar e corrigi-las pelo "Voltar". A correção vai para o servidor, que recalcula tudo no modo atual. A barra de hipóteses continua mostrando o que já foi calculado e só se atualiza com o novo estado.
+   - O parecer final é **um só**, calculado a partir de tudo o que já foi respondido e inferido, antes e depois da troca. O front não refaz nem mistura cálculos: só exibe o `GET /parecer` do servidor, que já usa todas as respostas da sessão.
    - No 409: recarregue com `obterSessao`, como o `enviar` já faz. Nos outros erros: mensagem em `role="alert"`, "Não consegui trocar o modo. Tente novamente.", e mantenha o modo antigo.
    - Se a sessão estiver pausada pela bandeira vermelha (`estado.alerta?.pausa`), o controle continua disponível. O motor reabre a sessão, e o `AlertaBandeira` some se o novo estado não tiver pausa.
 3. **Parecer parcial:** em `web/src/paginas/Parecer.tsx`, quando `!dados.final`, ofereça o mesmo controle ao lado de "Continuar respondendo". Depois de trocar, navegue para `/anamnese/{id}`.
@@ -40,8 +42,9 @@ A especificação pede que o usuário troque entre modo produtor e modo especial
   - (d) Um 409 recarrega a sessão.
   - (e) Um 500 mostra o alerta e mantém o modo.
   - (f) As respostas já dadas não são reenviadas.
+  - (g) Depois da troca, o histórico continua: "Voltar" chega a uma resposta dada antes da troca, e corrigi-la faz `PUT` normalmente.
 - `web/src/api/cliente.test.ts` ou um teste novo de `sessao.ts`: `trocarModo` monta o método, a rota e o corpo corretos.
-- `web/e2e/troca-modo.spec.ts`: começa no produtor, responde a triagem, troca para o especialista, confirma que a próxima pergunta vem do modo especialista, responde mais uma e chega ao parecer. Inclua a checagem de acessibilidade com axe, como nos outros specs.
+- `web/e2e/troca-modo.spec.ts`: começa no produtor, responde a triagem, troca para o especialista, confirma que a próxima pergunta vem do modo especialista, responde mais uma e chega ao parecer. O parecer precisa refletir também as respostas dadas antes da troca: escolha na triagem um sinal que sustente uma hipótese e verifique que ela aparece no parecer final. Inclua a checagem de acessibilidade com axe, como nos outros specs.
 
 ## Fechamento
 
