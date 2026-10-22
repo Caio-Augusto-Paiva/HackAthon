@@ -2,13 +2,14 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
-import { exemploComo, exemploParecer, resposta } from '../teste/cenarios';
+import { exemploComo, exemploParecer, resposta, segunda } from '../teste/cenarios';
 import { Parecer } from './Parecer';
 
 function montar(parecer = exemploParecer) {
-  const fetch = vi.fn(async (caminho: string) => resposta(caminho.includes('/como/') ? exemploComo : parecer));
+  const fetch = vi.fn(async (caminho: string, opcoes: RequestInit) => resposta(opcoes.method === 'POST' ? segunda : caminho.includes('/como/') ? exemploComo : parecer));
   vi.stubGlobal('fetch', fetch);
   render(<MemoryRouter initialEntries={['/parecer/ses_0001']}><Routes><Route path="/parecer/:sessaoId" element={<Parecer />} />
+    <Route path="/anamnese/:sessaoId" element={<h1>Pergunta retomada</h1>} />
     <Route path="/" element={<h1>Início da verificação</h1>} /></Routes></MemoryRouter>);
   return fetch;
 }
@@ -45,5 +46,17 @@ describe('parecer do sistema', () => {
     expect(await screen.findByText('Parecer parcial')).toBeInTheDocument();
     await userEvent.click(screen.getByRole('link', { name: 'Nova verificação' }));
     expect(await screen.findByRole('heading', { name: 'Início da verificação' })).toBeInTheDocument();
+  });
+  it('reabre por continuar o parecer encerrado voluntariamente', async () => {
+    montar({ ...exemploParecer, motivo_parada: null });
+    const fetch = vi.mocked(globalThis.fetch);
+    await userEvent.click(await screen.findByRole('button', { name: 'Continuar respondendo' }));
+    expect(await screen.findByRole('heading', { name: 'Pergunta retomada' })).toBeInTheDocument();
+    expect(fetch).toHaveBeenCalledWith('/api/sessoes/ses_0001/acoes/bandeira', expect.objectContaining({ method: 'POST', body: JSON.stringify({ acao: 'continuar' }) }));
+  });
+  it('não promete reabrir uma sessão encerrada por parada automática', async () => {
+    montar();
+    await screen.findByRole('table');
+    expect(screen.queryByRole('button', { name: 'Continuar respondendo' })).not.toBeInTheDocument();
   });
 });

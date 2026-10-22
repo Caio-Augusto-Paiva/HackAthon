@@ -12,7 +12,7 @@ tags:
 # 34 casos sintéticos aprovados na v0002 por executar_caso
 
 ## Connections
-- [[Arquitetura API, SQLite, kb, v0002, motor e explicação]] - `references` [EXTRACTED]
+- [[Arquitetura implementada React→FastAPI→Sessao, kbv0002 e SQLite]] - `references` [EXTRACTED]
 - [[C-ACI-01 passou, observar, acidose]] - `references` [EXTRACTED]
 - [[C-ACI-02 passou, observar, acidose]] - `references` [EXTRACTED]
 - [[C-ACI-03 passou, sem_problema, acidose]] - `references` [EXTRACTED]
@@ -48,9 +48,9 @@ tags:
 - [[Casos sintéticos verificam software, sem métricas clínicas]] - `references` [EXTRACTED]
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
-- [[Gerador segue baseativa.json v0002 e verifica sincronismo]] - `implements` [EXTRACTED]
-- [[HackAtom T1 Anamnese explicável de bovinos leiteiros]] - `references` [EXTRACTED]
+- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
+- [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Índice Seção 5 na codex-davi, após baseline f46cd6e]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

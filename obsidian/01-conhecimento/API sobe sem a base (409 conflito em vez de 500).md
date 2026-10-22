@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Frontend planejado e contrato API"
+community: "Cliente da API e erros"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Frontend_planejado_e_contrato_API
+  - community/Cliente_da_API_e_erros
 ---
 
 # API sobe sem a base (409 conflito em vez de 500)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Formato unico de erro (codigos e X-Requisicao-Id)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API
+#graphify/concept #graphify/EXTRACTED #community/Cliente_da_API_e_erros

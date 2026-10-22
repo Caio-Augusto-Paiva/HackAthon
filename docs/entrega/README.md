@@ -1,8 +1,8 @@
 # Entrega parcial — índice para a equipe e a banca
 
-Documentação da execução da **Seção 5** na branch `codex-davi`, após integrar o baseline `f46cd6e`. O checkpoint inicial `898512c` é histórico: os documentos de processo preservam o contexto em que foram escritos.
+Documentação da **Seção 5 e da integração da consulta web** na branch `codex-davi`, com base ativa `v0002`. Os checkpoints `898512c` e `f46cd6e` são históricos: os documentos de processo preservam o contexto em que foram escritos.
 
-O estado atual contém `kb/`, API FastAPI com 27 operações HTTP, SQLite, scripts de localhost, base ativa `v0002` e 34 casos sintéticos. Consulte [a API](../../api/README.md), [a base editorial](../../kb/README.md) e [o README principal](../../README.md). Interface web e editor gráfico estão em andamento em outra sessão. Os diretórios `api/`, `web/`, `contratos/` e `tests/api/` não foram alterados nesta execução; a equipe fará a integração na branch compartilhada.
+O estado atual contém consulta React em `web/`, `kb/`, API FastAPI com 27 operações HTTP, SQLite, scripts de localhost, base ativa `v0002` e 34 casos sintéticos. Consulte [a API](../../api/README.md), [a base editorial](../../kb/README.md) e [o README principal](../../README.md). O editor gráfico permanece pendente. API, motor, kb, contratos e versões imutáveis foram preservados na implementação da interface.
 
 O projeto aborda **T1 Anamnese**: coleta estruturada de sinais e histórico de bovinos leiteiros em lactação, com triagem explicável. A exigência e os critérios vêm das [transcrições oficiais da apresentação](../fontes/transcricao-apresentacao-rerum.md) e do [documentário](../fontes/transcricao-documentario-rerum.md). As transcrições são referências locais dos PDFs, não novos requisitos.
 
@@ -27,7 +27,7 @@ Na raiz do repositório, com Python 3.12+:
 .venv/Scripts/python scripts/gerar_doc_regras.py --casos base/casos/casos.json --verificar
 ```
 
-A verificação desta etapa contém **1006 testes aprovados, 1 ignorado e 110 subtestes aprovados**. A execução separada de **125 testes unittest** já está contida no pytest, não é somada. São **34 casos sintéticos, zero falhas na ativa**, uma contagem distinta de testes e de validação clínica. Os dois exemplos originais foram preservados nesse conjunto. As saídas completas e o alcance do ensaio HTTP ficam em [evidencias-verificacao.json](evidencias-verificacao.json). A aplicação em navegador é trabalho paralelo; `scripts/rodar.ps1` já está implementado.
+A verificação integrada contém **1066 testes Python aprovados, 1 ignorado e 170 subtestes aprovados**. A execução separada de **132 testes unittest** já está contida no pytest, não é somada. São **34 casos sintéticos, zero falhas na ativa**, uma contagem distinta de testes e de validação clínica. Os dois exemplos originais foram preservados nesse conjunto. As saídas históricas e o alcance do ensaio HTTP ficam em [evidencias-verificacao.json](evidencias-verificacao.json). A consulta no navegador acrescenta 39 testes de interface e oito cenários E2E, descritos em [QUALIDADE.md](../../web/QUALIDADE.md); o inicializador serve a SPA em localhost:8000.
 
 ## Atendimento às exigências oficiais
 
@@ -36,9 +36,9 @@ A verificação desta etapa contém **1006 testes aprovados, 1 ignorado e 110 su
 | IA apoiando o desenvolvimento — [A], slides 3 e 7 | [Processo](01-processo.md), testes e histórico de commits | Comprovado nesta sessão; diários das demais pessoas incompletos |
 | Decisão por regras, sem LLM em execução — [A], slides 8 e 13 | `engine/` e teste de arquitetura | Atendido no núcleo disponível |
 | Determinismo e auditoria — [A], slide 8 | `Fraction`, agenda, traço, snapshot e testes de ordem/reprocessamento | Atendido nos contratos testados; inclui a ordem das respostas da sessão |
-| Solução em localhost — [A], slide 10 | Motor, `kb/`, API, SQLite e `scripts/rodar.ps1` | Backend disponível; frontend/E2E em andamento |
+| Solução em localhost — [A], slide 10 | React, motor, `kb/`, API, SQLite e `scripts/rodar.ps1` | Consulta web integrada e E2E com API real; editor pendente |
 | Processo, arquitetura e regras — [A], slide 10; [D], p. 2 | Documentos 01, 02 e 03 desta pasta | Adiantado para o escopo implementado |
-| Demonstração em funcionamento — [A], slide 10 | CLI e fluxo HTTP até parecer, por quê/como e execução dos casos | Ensaio registrado nas evidências; apresentação humana e navegador pendentes |
+| Demonstração em funcionamento — [A], slide 10 | CLI, fluxo HTTP e consulta web até parecer, por quê/como; casos executados na API | Ensaio HTTP histórico e E2E de navegador disponíveis; apresentação e ensaio humano pendentes |
 | Ferramentas e código aberto — [A], slides 3 e 13 | Fontes do núcleo disponíveis; runtime sem bibliotecas externas | Licença do projeto e revisão final de licenças pendentes |
 | Apresentação do processo ao resultado — [A], slide 10 | Roteiro e perguntas no documento 05 | Falta material visual final e ensaio |
 | Nome e telefone de todos no envio — [A], slide 15 | Campos abaixo | A preencher pela equipe |
@@ -57,8 +57,8 @@ Os papéis abaixo vêm do planejamento e não identificam pessoas por inferênci
 
 ## Mapa do pacote e trabalho restante
 
-O código atual está em `engine/`, `kb/` e `api/`; a versão ativa em `base/versoes/`, os casos em `base/casos/`, a cópia de desenvolvimento em `base/desenvolvimento/`, os testes em `tests/` e os utilitários em `scripts/`. As fontes oficiais e o planejamento estão em `docs/fontes/` e `docs/superpowers/`. O grafo navegável e seu cofre ficam em `graphify-out/` e `obsidian/01-conhecimento/`.
+O código atual está em `engine/`, `kb/`, `api/` e `web/`; a versão ativa em `base/versoes/`, os casos em `base/casos/`, a cópia de desenvolvimento em `base/desenvolvimento/`, os testes Python em `tests/`, os testes da interface em `web/src/` e `web/e2e/` e os utilitários em `scripts/`. As fontes oficiais e o planejamento estão em `docs/fontes/` e `docs/superpowers/`. O grafo navegável e seu cofre ficam em `graphify-out/` e `obsidian/01-conhecimento/`.
 
-Esta entrega contém fontes Markdown e evidências de software. PDFs finais, slides em PDF e formato editável, vídeo de reserva, licença e pacote `.zip` final ainda dependem da conclusão/revisão do grupo. Dependências Python estão em `pyproject.toml`; a instalação foi feita em `.venv`. Nenhum manifesto ou lock do frontend foi alterado por esta sessão.
+Esta entrega contém fontes Markdown, capturas da interface e evidências de software. PDFs finais, slides em PDF e formato editável, vídeo de reserva, licença e pacote `.zip` final ainda dependem da conclusão/revisão do grupo. Dependências Python estão em `pyproject.toml`; as do frontend, em `web/package.json` e `web/package-lock.json`. Os arquivos instalados e o build não entram no versionamento.
 
 Prazo informado nos documentos oficiais: **22/10/2026 às 20:00**. Apresentação: **23/10/2026 às 09:00**. O alvo interno de envio às **18:30** é uma decisão da equipe no planejamento. Duração da fala, limite de anexo e infraestrutura da apresentação precisam de confirmação com a organização.

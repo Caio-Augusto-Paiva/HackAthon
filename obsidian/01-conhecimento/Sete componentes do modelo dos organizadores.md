@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "concept"
-community: "Arquitetura e demonstração"
-location: "L27"
+community: "Arquitetura e demonstração web"
+location: "L28"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arquitetura_e_demonstração
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Sete componentes do modelo dos organizadores
 
 ## Connections
-- [[Arquitetura API, SQLite, kb, v0002, motor e explicação]] - `references` [EXTRACTED]
+- [[Arquitetura implementada React→FastAPI→Sessao, kbv0002 e SQLite]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração
+#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Modelos e validação da base"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Modelos_e_validação_da_base
+  - community/Persistência_e_validação_da_base
 ---
 
 # Organizacao dos modulos do motor
@@ -16,4 +16,4 @@ tags:
 - [[Motor de inferencia README (engine)]] - `references` [EXTRACTED]
 - [[Motor independente de web, banco, LLM e servicos externos]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modelos_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

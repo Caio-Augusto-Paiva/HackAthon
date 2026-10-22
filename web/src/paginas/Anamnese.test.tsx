@@ -152,4 +152,36 @@ describe('diálogo da anamnese', () => {
     expect(controle.mutacoes[1]).toEqual({ caminho: '/api/sessoes/ses_0001/triagem/dias_em_lactacao',
       metodo: 'PUT', corpo: { valores: { dias_em_lactacao: '13' } } });
   });
+  it('corrige pergunta dinâmica com o símbolo só na rota, conforme o contrato', async () => {
+    const controle = simular(perguntaDinamica);
+    montar();
+    await userEvent.click(await screen.findByRole('radio', { name: 'Sim' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Voltar' }));
+    await userEvent.click(await screen.findByRole('radio', { name: 'Não' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await waitFor(() => expect(controle.mutacoes).toHaveLength(2));
+    expect(controle.mutacoes[1]).toEqual({ caminho: '/api/sessoes/ses_0001/respostas/teste_caneca_positivo', metodo: 'PUT', corpo: { valor: false } });
+  });
+  it('conserva as respostas posteriores no histórico ao corrigir uma resposta antiga', async () => {
+    simular(primeira, controle => {
+      controle.estado = controle.mutacoes.length === 1 ? segunda : multipla;
+      return resposta(controle.estado);
+    });
+    montar();
+    await userEvent.type(await screen.findByRole('textbox'), '12');
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await userEvent.click((await screen.findAllByRole('radio'))[0]);
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await screen.findByRole('checkbox', { name: 'Abatida' });
+    await userEvent.click(screen.getByRole('button', { name: 'Voltar' }));
+    await screen.findByRole('radio', { name: 'Não sei' });
+    await userEvent.click(screen.getByRole('button', { name: 'Voltar' }));
+    const dias = await screen.findByRole('textbox');
+    await userEvent.clear(dias); await userEvent.type(dias, '13');
+    await userEvent.click(screen.getByRole('button', { name: 'Responder' }));
+    await screen.findByRole('checkbox', { name: 'Abatida' });
+    await userEvent.click(screen.getByRole('button', { name: 'Voltar' }));
+    expect(await screen.findByRole('heading', { name: 'Como estão as orelhas e as pontas dos membros?' })).toBeInTheDocument();
+  });
 });

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # Sessao.restaurar / exportar sem replay
@@ -15,4 +15,4 @@ tags:
 - [[Correcao reprocessa respostas em lotes na ordem real]] - `shares_data_with` [EXTRACTED]
 - [[D1 snapshot_json como fonte da verdade da sessao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

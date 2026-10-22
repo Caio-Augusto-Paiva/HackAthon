@@ -10,6 +10,7 @@ export function BarraHipoteses({ sessaoId, revisao }: { sessaoId: string; revisa
   useEffect(() => {
     let ativa = true;
     definirErro(false);
+    definirParecer(undefined);
     obterParecer(sessaoId).then(p => { if (ativa) definirParecer(p); }).catch(() => { if (ativa) definirErro(true); });
     return () => { ativa = false; };
   }, [sessaoId, revisao, tentativa]);

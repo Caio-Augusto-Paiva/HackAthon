@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Índice Seção 5 na codex-davi, após baseline f46cd6e]] - `conceptually_related_to` [EXTRACTED]
+- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Entrega_e_manutenção_documental

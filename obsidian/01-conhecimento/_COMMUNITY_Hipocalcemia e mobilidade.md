@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.12
-members: 18
+cohesion: 0.11
+members: 19
 ---
 
 # Hipocalcemia e mobilidade
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 18 nodes
+**Cohesion:** 0.11 - loosely connected
+**Members:** 19 nodes
 
 ## Members
 - [[Claudicação (claudicacao)]] - concept - docs/entrega/03-regras-de-producao.md
@@ -21,6 +21,7 @@ members: 18
 - [[R-DD-01 dermatite_digital (CF 0,3)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DD-02 dermatite_digital (CF 0,5)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DER-01 periparto_imediato (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-DER-03 inicio_lactacao (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-HIP-01 hipocalcemia (CF 0,65)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-HIP-02 hipocalcemia (CF 0,8)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-HIP-03 hipocalcemia (CF 0,9)]] - concept - docs/entrega/03-regras-de-producao.md
@@ -37,16 +38,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Regras mamárias e de produção]]
+- 19 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
 - 6 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
-- 2 edges to [[_COMMUNITY_Sinais térmicos derivados]]
+- 2 edges to [[_COMMUNITY_Sinais térmicos e urgência]]
 - 2 edges to [[_COMMUNITY_Bandeiras de urgência]]
 - 1 edge to [[_COMMUNITY_Cetose e início da lactação]]
 - 1 edge to [[_COMMUNITY_Metrite e puerpério]]
 
 ## Top bridge nodes
-- [[Dias em lactação (dias_em_lactacao)]] - degree 5, connects to 3 communities
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - degree 9, connects to 2 communities
+- [[Dias em lactação (dias_em_lactacao)]] - degree 5, connects to 2 communities
 - [[R-HIP-02 hipocalcemia (CF 0,8)]] - degree 5, connects to 2 communities
 - [[Decúbito (decubito)]] - degree 4, connects to 2 communities
 - [[R-DD-02 dermatite_digital (CF 0,5)]] - degree 4, connects to 2 communities

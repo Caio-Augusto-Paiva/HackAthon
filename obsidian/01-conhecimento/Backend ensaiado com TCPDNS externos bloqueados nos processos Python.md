@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Frontend planejado e contrato API"
+community: "E2E e verificação offline"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Frontend_planejado_e_contrato_API
+  - community/E2E_e_verificação_offline
 ---
 
 # Backend ensaiado com TCP/DNS externos bloqueados nos processos Python
 
 ## Connections
 - [[Ensaio HTTP histórico na v0001 saúde, sessão, explicações e 3434 casos]] - `verifies` [EXTRACTED]
-- [[R17 HTML Swagger200 não comprova interface offline por dependência CDN]] - `rationale_for` [EXTRACTED]
+- [[R17 HTML Swagger 200 não comprova interface offline por dependência CDN]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API
+#graphify/concept #graphify/EXTRACTED #community/E2E_e_verificação_offline

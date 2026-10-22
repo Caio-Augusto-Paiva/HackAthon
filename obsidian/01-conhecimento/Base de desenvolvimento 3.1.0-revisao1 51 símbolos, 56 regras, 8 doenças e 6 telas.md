@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "concept"
-community: "Snapshot e revisão do motor"
+community: "Snapshot e pressupostos do motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Snapshot_e_revisão_do_motor
+  - community/Snapshot_e_pressupostos_do_motor
 ---
 
 # Base de desenvolvimento 3.1.0-revisao1: 51 símbolos, 56 regras, 8 doenças e 6 telas
@@ -18,4 +18,4 @@ tags:
 - [[Motor Python 3.12+ independente de web, banco, LLM e serviços externos]] - `shares_data_with` [EXTRACTED]
 - [[Sessões persistidas vinculadas à mesma versão da base]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Snapshot_e_revisão_do_motor
+#graphify/concept #graphify/EXTRACTED #community/Snapshot_e_pressupostos_do_motor

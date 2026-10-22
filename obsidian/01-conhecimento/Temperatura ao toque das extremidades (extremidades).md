@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos derivados"
+community: "Sinais térmicos e urgência"
 location: "L174"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_derivados
+  - community/Sinais_térmicos_e_urgência
 ---
 
 # Temperatura ao toque das extremidades (extremidades)
@@ -18,4 +18,4 @@ tags:
 - [[R-DER-10 febre (CF -0,4)]] - `references` [EXTRACTED]
 - [[Triagem 2 estado_termico]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_derivados
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência

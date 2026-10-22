@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Frontend planejado e contrato API"
+community: "Persistência e validação da base"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Frontend_planejado_e_contrato_API
+  - community/Persistência_e_validação_da_base
 ---
 
 # Script rodar.ps1 / rodar.sh (execucao em localhost)
@@ -15,4 +15,4 @@ tags:
 - [[Servir webdist com rota coringa propria (apifrontend.py)]] - `references` [EXTRACTED]
 - [[Variaveis ANAMNESE_BASE_DIR e ANAMNESE_DB]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Frontend_planejado_e_contrato_API
+#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # Importacao de animais CSV/JSON sem 500
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[D5 origem importacao reescrita pela API no como e no traco]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

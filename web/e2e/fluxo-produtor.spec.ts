@@ -11,5 +11,5 @@ test('C-MAS-01: produtor completa a consulta e vê o parecer da API', async ({ p
   expect(parecer.urgencia.nivel).toBe(dados.esperado.urgencia);
   await expect(page.getByRole('table')).toBeVisible();
   await expect(page.getByRole('meter')).toHaveCount(8);
-  await page.screenshot({ path: 'test-results/capturas/06-parecer.png', fullPage: true });
+  await page.screenshot({ animations: 'disabled', path: 'test-results/capturas/06-parecer.png', fullPage: true });
 });

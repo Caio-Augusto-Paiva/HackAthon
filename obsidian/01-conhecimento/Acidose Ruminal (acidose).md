@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Acidose e sinais digestivos"
 location: "L154"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Acidose_e_sinais_digestivos
 ---
 
 # Acidose Ruminal (acidose)
@@ -22,4 +22,4 @@ tags:
 - [[R-ACI-04 acidose (CF 0,88)]] - `implements` [EXTRACTED]
 - [[R-URG-07 observar (CF 0,8)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Acidose_e_sinais_digestivos

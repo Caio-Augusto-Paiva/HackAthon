@@ -1,18 +1,17 @@
 ---
 type: community
-cohesion: 0.09
-members: 53
+cohesion: 0.10
+members: 47
 ---
 
 # Casos sintéticos na v0002
 
-**Cohesion:** 0.09 - loosely connected
-**Members:** 53 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 47 nodes
 
 ## Members
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - document - docs/entrega/04-casos-de-teste.md
 - [[34 casos oito doenças, dois modos, seis bandeiras e regressão de diálogo]] - concept - docs/entrega/02-arquitetura.md
-- [[Acidose Ruminal (acidose)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[C-ACI-01 passou, observar, acidose]] - concept - docs/entrega/04-casos-de-teste.md
 - [[C-ACI-02 passou, observar, acidose]] - concept - docs/entrega/04-casos-de-teste.md
 - [[C-ACI-03 passou, sem_problema, acidose]] - concept - docs/entrega/04-casos-de-teste.md
@@ -54,13 +53,8 @@ members: 53
 - [[Deslocamento de Abomaso (deslocamento_abomaso)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Exemplos sintéticos de alerta e sinais mamários pela CLI]] - concept - base/desenvolvimento/LEIA-ME.txt
 - [[Mastite (mastite)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[Monitoramento Clínico Contínuo (observar)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-BV-01 chamar_agora (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-URG-05 observar (CF 0,8)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-URG-06 observar (CF 0,8)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-URG-07 observar (CF 0,8)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-URG-08 observar (CF 0,7)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R15 sinais fracos podem encerrar sem coleta adicional; abomaso prévio é fictício]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R15 coleta adicional pode faltar com evidência inicial fraca]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[R16 esperados históricos diferem; v0002 acrescenta domínio e precisão numéricos]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[v0002 ativa e imutável, pai v0001; ativação não valida clínica]] - concept - docs/entrega/02-arquitetura.md
 
@@ -72,22 +66,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_Regras mamárias e de produção]]
-- 7 edges to [[_COMMUNITY_Bandeiras de urgência]]
+- 14 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
+- 6 edges to [[_COMMUNITY_Cetose e início da lactação]]
+- 6 edges to [[_COMMUNITY_Bandeiras de urgência]]
 - 6 edges to [[_COMMUNITY_Hipocalcemia e mobilidade]]
-- 5 edges to [[_COMMUNITY_Cetose e início da lactação]]
-- 4 edges to [[_COMMUNITY_Acidose e sinais digestivos]]
-- 4 edges to [[_COMMUNITY_Snapshot e revisão do motor]]
+- 5 edges to [[_COMMUNITY_Acidose e sinais digestivos]]
+- 5 edges to [[_COMMUNITY_Snapshot e pressupostos do motor]]
 - 3 edges to [[_COMMUNITY_Metrite e puerpério]]
-- 3 edges to [[_COMMUNITY_Arquitetura e demonstração]]
+- 3 edges to [[_COMMUNITY_Processo documental verificável]]
+- 3 edges to [[_COMMUNITY_Entrega e manutenção documental]]
 - 2 edges to [[_COMMUNITY_Tristeza parasitária bovina]]
-- 2 edges to [[_COMMUNITY_Processo documental verificável]]
-- 2 edges to [[_COMMUNITY_Riscos e pendências clínicas]]
-- 2 edges to [[_COMMUNITY_Requisitos e entregas pendentes]]
-- 2 edges to [[_COMMUNITY_Frontend planejado e contrato API]]
-- 2 edges to [[_COMMUNITY_Entrega e manutenção documental]]
-- 1 edge to [[_COMMUNITY_Proveniência e pressupostos clínicos]]
-- 1 edge to [[_COMMUNITY_Modelos e validação da base]]
+- 2 edges to [[_COMMUNITY_Consulta integrada e pendências]]
+- 2 edges to [[_COMMUNITY_E2E e verificação offline]]
+- 2 edges to [[_COMMUNITY_Riscos da interface integrada]]
+- 1 edge to [[_COMMUNITY_Persistência e validação da base]]
+- 1 edge to [[_COMMUNITY_Arquitetura e demonstração web]]
 
 ## Top bridge nodes
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - degree 40, connects to 4 communities

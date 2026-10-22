@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Regras e símbolos da v0002"
 location: "L145"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # R-URG-05: observar (CF 0,8)
@@ -16,4 +16,4 @@ tags:
 - [[Mastite (mastite)]] - `references` [EXTRACTED]
 - [[Monitoramento Clínico Contínuo (observar)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

@@ -1,0 +1,9 @@
+.pagina { min-height: 100dvh; padding: 140px 24px 48px; display: flex; align-items: center; flex-direction: column; gap: 36px; }
+.conjunto { display: flex; align-items: end; gap: 20px; width: min(100%, 740px); }
+.conjunto img { width: 132px; }
+.balao { flex: 1; padding: 32px; border-radius: var(--raio-balao); background: var(--cor-creme); box-shadow: var(--sombra-clay); }
+.balao span { display: block; height: 24px; border-radius: 8px; background: var(--cor-trilho); margin: 8px 0; }
+.balao span:last-child { width: 70%; }
+.opcoes { width: min(100%, 560px); display: grid; gap: 16px; }
+.opcoes span { display: block; height: 70px; background: var(--cor-creme); opacity: .8; border-radius: var(--raio-opcao); }
+@media(max-width: 600px) { .pagina { padding-top: 80px; } .conjunto img { width: 64px; } .conjunto { gap: 12px; } .balao { padding: 20px; } }

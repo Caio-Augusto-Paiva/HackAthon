@@ -1,11 +1,11 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Requisitos e entregas pendentes"
+community: "Contratos e integração localhost"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_entregas_pendentes
+  - community/Contratos_e_integração_localhost
 ---
 
 # Checkpoint codex-davi: IA aplicada ao desenvolvimento e à documentação, fora da consulta
@@ -14,4 +14,4 @@ tags:
 - [[Checkpoint codex-davi Processo verificável do checkpoint de 21102026]] - `references` [EXTRACTED]
 - [[Núcleo local regras explícitas e CF MYCIN, sem LLM em execução]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_entregas_pendentes
+#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost

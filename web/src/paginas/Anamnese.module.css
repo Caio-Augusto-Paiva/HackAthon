@@ -4,8 +4,8 @@
 .cabecalho > a { color: var(--cor-creme); text-decoration: none; font: 26px var(--fonte-titulo); }
 .modo { border: 1px solid rgb(246 241 228 / 40%); border-radius: 99px; padding: 6px 14px; font-size: 14px; }
 .contador { margin-left: auto; font-size: 16px; font-variant-numeric: tabular-nums; }
-.dialogo { padding: 64px 40px; display: flex; flex-direction: column; align-items: center; gap: 36px; }
-.resposta { width: min(100%, 560px); animation: chegar 280ms cubic-bezier(.16,1,.3,1); }
+.dialogo { padding: 64px 40px; display: flex; flex-direction: column; align-items: center; gap: 36px; animation: chegar 280ms cubic-bezier(.16,1,.3,1); }
+.resposta { width: min(100%, 560px); }
 .espera { min-height: 100dvh; padding: 64px 24px; display: grid; align-content: center; justify-items: center; gap: 20px; color: var(--cor-creme); }
 .espera a, .correcao button { color: var(--cor-creme); text-decoration: underline; text-underline-offset: 3px; }
 .correcao { margin: 0 0 20px; }

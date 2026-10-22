@@ -15,6 +15,6 @@ tags:
 - [[34 casos oito doenças, dois modos, seis bandeiras e regressão de diálogo]] - `qualifies` [EXTRACTED]
 - [[C-COM-01 passou, chamar_agora, mastite]] - `references` [EXTRACTED]
 - [[C-LIM-01 passou, observar, cetose]] - `references` [EXTRACTED]
-- [[Registro aberto R01–R17 e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

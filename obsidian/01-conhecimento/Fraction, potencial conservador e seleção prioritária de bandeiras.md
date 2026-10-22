@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Proveniência e pressupostos clínicos"
+community: "Arquitetura e demonstração web"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Proveniência_e_pressupostos_clínicos
+  - community/Arquitetura_e_demonstração_web
 ---
 
 # Fraction, potencial conservador e seleção prioritária de bandeiras
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Três camadas estritas e combinação MYCIN racional]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Proveniência_e_pressupostos_clínicos
+#graphify/rationale #graphify/EXTRACTED #community/Arquitetura_e_demonstração_web

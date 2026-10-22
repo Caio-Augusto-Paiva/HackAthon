@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # D2: estado() registra perguntas, GET nao sobe revisao
@@ -14,4 +14,4 @@ tags:
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - `references` [EXTRACTED]
 - [[D1 snapshot_json como fonte da verdade da sessao]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/rationale #graphify/EXTRACTED #community/Sessões_API_e_motor

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "document"
-community: "Regras mamárias e de produção"
+community: "Regras e símbolos da v0002"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Regras_mamárias_e_de_produção
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # Documento gerado da v0002: 56 regras, 51 símbolos e 8 doenças
@@ -16,8 +16,7 @@ tags:
 - [[Alteração visível do leite (leite_alterado)]] - `references` [EXTRACTED]
 - [[Apatia (apatia)]] - `references` [EXTRACTED]
 - [[Apetite (apetite)]] - `references` [EXTRACTED]
-- [[Apresentação API localhost como demo principal e CLI de reserva]] - `references` [EXTRACTED]
-- [[Arquitetura API, SQLite, kb, v0002, motor e explicação]] - `references` [EXTRACTED]
+- [[Arquitetura implementada React→FastAPI→Sessao, kbv0002 e SQLite]] - `references` [EXTRACTED]
 - [[Atendimento Veterinário Imediato (chamar_agora)]] - `references` [EXTRACTED]
 - [[Aumento uterino à palpação (utero_aumentado_palpacao)]] - `references` [EXTRACTED]
 - [[BHB sanguíneo (bhb_sanguineo)]] - `references` [EXTRACTED]
@@ -41,10 +40,10 @@ tags:
 - [[Fezes com espuma e grãos (fezes_aquosas_espuma_graos)]] - `references` [EXTRACTED]
 - [[Flanco esquerdo afundado (flanco_esquerdo_afundado)]] - `references` [EXTRACTED]
 - [[Fontes contextuais; todos os 56 CF como suposição a validar]] - `references` [EXTRACTED]
-- [[Gerador segue baseativa.json v0002 e verifica sincronismo]] - `implements` [EXTRACTED]
+- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
 - [[Grumos na caneca (teste_caneca_grumos)]] - `references` [EXTRACTED]
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
-- [[HackAtom T1 Anamnese explicável de bovinos leiteiros]] - `references` [EXTRACTED]
+- [[HackAtom anamnese explicável com interface React integrada]] - `references` [EXTRACTED]
 - [[Hemoparasitas no esfregaço (esfregaco_hemoparasitas)]] - `references` [EXTRACTED]
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - `references` [EXTRACTED]
 - [[Hipotermia (hipotermia)]] - `references` [EXTRACTED]
@@ -122,6 +121,7 @@ tags:
 - [[R-URG-07 observar (CF 0,8)]] - `references` [EXTRACTED]
 - [[R-URG-08 observar (CF 0,7)]] - `references` [EXTRACTED]
 - [[Recusa seletiva de concentrado (recusa_concentrado_come_volumoso)]] - `references` [EXTRACTED]
+- [[Roteiro consulta React em localhost e CLI de reserva]] - `references` [EXTRACTED]
 - [[Sem evidência de urgência pelos critérios da base (sem_problema)]] - `references` [EXTRACTED]
 - [[Temperatura ao toque das extremidades (extremidades)]] - `references` [EXTRACTED]
 - [[Temperatura retal (temperatura_retal)]] - `references` [EXTRACTED]
@@ -134,6 +134,6 @@ tags:
 - [[Tristeza Parasitária Bovina (tpb)]] - `references` [EXTRACTED]
 - [[Urina escura (urina_escura)]] - `references` [EXTRACTED]
 - [[pH ruminal (ph_ruminal)]] - `references` [EXTRACTED]
-- [[Índice Seção 5 na codex-davi, após baseline f46cd6e]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Regras_mamárias_e_de_produção
+#graphify/document #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

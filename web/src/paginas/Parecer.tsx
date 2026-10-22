@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { obterParecer, type Parecer as DadosParecer } from '../api/sessao';
+import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { agirBandeira, obterParecer, obterSessao, type Parecer as DadosParecer } from '../api/sessao';
+import { ErroApi } from '../api/cliente';
 import { Botao } from '../componentes/Botao';
 import { Boi } from '../componentes/Boi';
 import { BarraConfianca } from '../componentes/BarraConfianca';
@@ -12,10 +13,28 @@ const gravidades = { alta: 'Alta', media: 'Média', baixa: 'Baixa' };
 const urgencias = { chamar_agora: 'Chamar agora', observar: 'Observar de perto', sem_problema: 'Sem problema identificado' };
 export function Parecer() {
   const { sessaoId = '' } = useParams();
+  const navegar = useNavigate();
   const [dados, definirDados] = useState<DadosParecer>();
   const [erro, definirErro] = useState<string>();
   const [tentativa, definirTentativa] = useState(0);
   const [comoAberto, definirComo] = useState(false);
+  const [retomando, definirRetomando] = useState(false);
+  const trava = useRef(false);
+  async function retomar() {
+    if (trava.current) return;
+    trava.current = true; definirRetomando(true); definirErro(undefined);
+    try {
+      const estado = await agirBandeira(sessaoId, 'continuar').catch(e => {
+        if (e instanceof ErroApi && e.status === 409) return obterSessao(sessaoId);
+        throw e;
+      });
+      if (estado.fase === 'encerrada' && !estado.alerta?.pausa) {
+        definirDados(await obterParecer(sessaoId));
+        definirErro('O sistema concluiu a consulta e não tem outra pergunta disponível.');
+      } else navegar(`/anamnese/${encodeURIComponent(sessaoId)}`);
+    } catch (e) { definirErro(e instanceof Error ? e.message : 'Não consegui retomar as perguntas. Tente novamente.'); }
+    finally { trava.current = false; definirRetomando(false); }
+  }
   useEffect(() => {
     let ativa = true; definirErro(undefined);
     obterParecer(sessaoId).then(p => { if (ativa) definirDados(p); })
@@ -54,7 +73,9 @@ export function Parecer() {
       <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link>
         <Botao variante="secundario" disabled={!primeira} onClick={() => definirComo(true)}>Como cheguei aqui?</Botao>
         {!dados.final && <Link className={estilos.continuar} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Continuar respondendo</Link>}
+        {dados.final && dados.motivo_parada === null && <Botao variante="secundario" carregando={retomando} onClick={retomar}>Continuar respondendo</Botao>}
       </div>
+      {erro && <p role="alert" className={estilos.erro}>{erro}</p>}
       {comoAberto && primeira && <ComoChegou sessaoId={sessaoId} simbolo={primeira.doenca} aoFechar={() => definirComo(false)} />}
     </main>
   </div>;

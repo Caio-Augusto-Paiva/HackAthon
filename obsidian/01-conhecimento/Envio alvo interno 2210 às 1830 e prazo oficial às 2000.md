@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Datas oficiais entrega 22102026 20h; apresentação 23102026 09h]] - `references` [EXTRACTED]
-- [[Registro aberto R01–R17 e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Entrega_e_manutenção_documental

@@ -10,6 +10,7 @@ import { PerguntaDinamica } from '../anamnese/PerguntaDinamica';
 import { BarraHipoteses } from '../anamnese/BarraHipoteses';
 import { PorQue } from '../anamnese/PorQue';
 import { AlertaBandeira } from '../anamnese/AlertaBandeira';
+import { CarregandoPergunta } from '../anamnese/CarregandoPergunta';
 import { paraCorpoPergunta, paraCorpoTriagem, passoAtual, type Escolha } from '../anamnese/mapearResposta';
 import estilos from './Anamnese.module.css';
 
@@ -44,9 +45,12 @@ export function Anamnese() {
     if (!tela || !estado || trava.current) return;
     trava.current = true; definirEnviando(true); definirErro(undefined);
     try {
-      const corpo = tela.tipo === 'tela_triagem' ? paraCorpoTriagem(tela, escolha) : paraCorpoPergunta(tela, escolha);
+      const resposta = tela.tipo === 'pergunta' ? paraCorpoPergunta(tela, escolha) : undefined;
+      const corpo = tela.tipo === 'tela_triagem' ? paraCorpoTriagem(tela, escolha)
+        : anterior ? { valor: resposta?.valor, ...(resposta?.nao_sei ? { nao_sei: true } : {}) } : resposta;
       const atualizado = await responder(sessaoId, tela, corpo, anterior !== undefined);
-      definirHistorico(h => anterior ? h.slice(0, indiceCorrecao).concat({ estado: anterior.estado, escolha }) : [...h, { estado, escolha }]);
+      definirHistorico(h => anterior ? h.map((item, indice) => indice === indiceCorrecao
+        ? { estado: anterior.estado, escolha } : item) : [...h, { estado, escolha }]);
       definirCorrecao(undefined); definirEstado(atualizado);
     } catch (e) {
       if (e instanceof ErroApi && e.status === 409) {
@@ -55,8 +59,8 @@ export function Anamnese() {
       } else definirErro(e instanceof Error ? e.message : 'Não consegui enviar a resposta. Tente novamente.');
     } finally { trava.current = false; definirEnviando(false); }
   }
-  if (!estado) return <main className={estilos.espera}>{erro ? <><h1>Não consegui abrir a verificação</h1><p role="alert">{erro}</p>
-    <Botao onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</Botao><Link to="/">Voltar ao início</Link></> : <p role="status">Carregando verificação…</p>}</main>;
+  if (!estado) return erro ? <main className={estilos.espera}><h1>Não consegui abrir a verificação</h1><p role="alert">{erro}</p>
+    <Botao onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</Botao><Link to="/">Voltar ao início</Link></main> : <CarregandoPergunta />;
   const passo = passoAtual(visivel!.progresso);
   const total = estado.progresso.triagem_total + estado.progresso.limite_dinamico;
   const propriedades = { inicial: anterior?.escolha, erro, carregando: enviando, aoEnviar: enviar, aoEditar: () => definirErro(undefined),
@@ -65,7 +69,7 @@ export function Anamnese() {
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link><span className={estilos.modo}>Modo {estado.modo === 'produtor' ? 'produtor' : 'especialista'}</span>
       <span className={estilos.contador}>Pergunta {passo} de até {total}</span></header>
     <BarraProgresso atual={passo - 1} total={total} />
-    <div className={estilos.dialogo}>
+    <div className={estilos.dialogo} key={`${chave}-${indiceCorrecao ?? 'atual'}`}>
       {tela ? <><Balao texto={tela.tipo === 'tela_triagem' ? tela.titulo : tela.texto} aoPorque={() => definirPorque(true)} />
         <div className={estilos.resposta} key={`${chave}-${indiceCorrecao ?? 'atual'}`}>
           {anterior && <p className={estilos.correcao}>Corrigindo resposta anterior. <button onClick={() => { definirCorrecao(undefined); definirErro(undefined); }}>Retomar pergunta atual</button></p>}

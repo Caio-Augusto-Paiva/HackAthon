@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Envio alvo interno 2210 às 1830 e prazo oficial às 2000]] - `references` [EXTRACTED]
-- [[Índice Seção 5 na codex-davi, após baseline f46cd6e]] - `references` [EXTRACTED]
+- [[Índice da Seção 5 e da consulta web integrada na codex-davi]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Entrega_e_manutenção_documental

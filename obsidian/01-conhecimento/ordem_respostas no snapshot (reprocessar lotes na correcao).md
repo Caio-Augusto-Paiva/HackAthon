@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # ordem_respostas no snapshot (reprocessar lotes na correcao)
@@ -14,4 +14,4 @@ tags:
 - [[Correcao reprocessa respostas em lotes na ordem real]] - `shares_data_with` [EXTRACTED]
 - [[D1 snapshot_json como fonte da verdade da sessao]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

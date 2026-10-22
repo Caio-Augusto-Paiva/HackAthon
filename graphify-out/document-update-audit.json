@@ -1,0 +1,178 @@
+{
+  "verified_at": "2026-10-22T10:05:31.358925+00:00",
+  "baseline_nodes": 718,
+  "baseline_edges": 1333,
+  "nodes": 790,
+  "edges": 1444,
+  "communities": 55,
+  "hyperedges": 25,
+  "prior_ids_preserved": 718,
+  "missing_prior_ids": [],
+  "intermediate_ids_preserved": 788,
+  "documents": {
+    "DESIGN.md": {
+      "lines": 87,
+      "sha256": "7cf467089f9ff9de062e1c9452973058ae8033c906057e9944b5d455e64b677d"
+    },
+    "PRODUCT.md": {
+      "lines": 48,
+      "sha256": "41100c643a3c9b5e079962b9180d2c162c66b5b81f9cd89fb6ade0900842fde1"
+    },
+    "README.md": {
+      "lines": 67,
+      "sha256": "3d9f8eff22452e34f5ee8cfec712d824a1c25fa5a6b8ba072b05add5145d8180"
+    },
+    "docs/entrega/02-arquitetura.md": {
+      "lines": 128,
+      "sha256": "a83bbfd1e7e18360de02b7b671ba1dd24f4fc9ccc6734396592070482ef17437"
+    },
+    "docs/entrega/05-apresentacao-e-demo.md": {
+      "lines": 128,
+      "sha256": "8b57b457c005a7539fe69d2ba6df063a1f0fde088fda89a2db3297fc2b99a5d3"
+    },
+    "docs/entrega/06-riscos-e-pendencias.md": {
+      "lines": 89,
+      "sha256": "ad625fc5626570aa6ae2d9200b98f529394470355094c7e33fda3122994c7681"
+    },
+    "docs/entrega/README.md": {
+      "lines": 64,
+      "sha256": "e05ecfbea7c3d97585a4b3f9bddcb81a350e6f41110d84d1d45f076807e5d57c"
+    },
+    "docs/superpowers/plans/2026-10-22-frontend-web.md": {
+      "lines": 155,
+      "sha256": "d69b5ed4603bc7fd8dabbed95b206a55a31bc4c5d4e33a4b8acd9ff4964be319"
+    }
+  },
+  "document_count": 8,
+  "document_lines": 766,
+  "corpus_files": 44,
+  "corpus_words": 108228,
+  "vault_markdown_notes": 845,
+  "canvas_file_nodes": 790,
+  "canvas_groups": 55,
+  "canvas_edges": 200,
+  "vault_graph_edges_verified": 1444,
+  "broken_wikilinks": 0,
+  "incremental_pending_files": 0,
+  "health": {
+    "node_count": 790,
+    "unverified_node_count": 0,
+    "raw_edge_count": 1444,
+    "non_object_edges": 0,
+    "missing_endpoint_edges": 0,
+    "dangling_endpoint_edges": 0,
+    "external_reference_edges": 0,
+    "self_loop_edges": 0,
+    "valid_candidate_edges": 1444,
+    "exact_duplicate_edges": 0,
+    "directed_unique_endpoint_pairs": 1444,
+    "directed_same_endpoint_collapsed_edges": 0,
+    "undirected_unique_endpoint_pairs": 1444,
+    "undirected_same_endpoint_collapsed_edges": 0,
+    "same_endpoint_group_count": 0,
+    "relation_variant_groups": 0,
+    "source_file_variant_groups": 0,
+    "source_location_variant_groups": 0,
+    "context_variant_groups": 0,
+    "post_build_graph_type": "Graph",
+    "post_build_node_count": 790,
+    "post_build_edge_count": 1444,
+    "post_build_error": "",
+    "producer_suppression": {
+      "path": "C:\\Users\\Usuario\\.codex\\skills\\graphify\\.runtime\\graphify\\extract.py",
+      "total_sites": 12,
+      "sites": [
+        {
+          "line": 1813,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2377,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2379,
+          "name": "seen_doc_refs",
+          "tuple_arity": 0,
+          "sample": "seen_doc_refs: set[str] = set()"
+        },
+        {
+          "line": 3046,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 3193,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+        },
+        {
+          "line": 4203,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 4389,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 7641,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 7749,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 7828,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8343,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 8344,
+          "name": "seen_edges",
+          "tuple_arity": 4,
+          "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        }
+      ],
+      "error": ""
+    },
+    "examples": []
+  },
+  "token_usage_status": "unavailable_not_measured",
+  "execution_status": "verified_after_resume",
+  "execution_interruptions": [
+    {
+      "stage": "semantic_refresh",
+      "reason": "usage_limit",
+      "result": "interrupted_not_published",
+      "measured_tokens": null
+    }
+  ],
+  "financial_cost": null,
+  "clinical_validation": "not_performed",
+  "excluded_artifacts": [
+    "web/",
+    "docs/entrega/capturas/"
+  ]
+}

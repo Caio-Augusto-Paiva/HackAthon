@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessão, snapshot e parecer"
+community: "Sessões, API e motor"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessão_snapshot_e_parecer
+  - community/Sessões_API_e_motor
 ---
 
 # Correcao reprocessa respostas em lotes na ordem real
@@ -15,4 +15,4 @@ tags:
 - [[Sessao.restaurar  exportar sem replay]] - `shares_data_with` [EXTRACTED]
 - [[ordem_respostas no snapshot (reprocessar lotes na correcao)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessão_snapshot_e_parecer
+#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor

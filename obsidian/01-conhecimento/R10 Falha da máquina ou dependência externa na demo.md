@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Riscos e pendências clínicas"
+community: "Riscos da interface integrada"
 location: "L18"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Riscos_e_pendências_clínicas
+  - community/Riscos_da_interface_integrada
 ---
 
 # R10: Falha da máquina ou dependência externa na demo
 
 ## Connections
-- [[Registro aberto R01–R17 e checklist de fechamento]] - `references` [EXTRACTED]
+- [[Riscos abertos R01–R21, web integrada e checklist de fechamento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riscos_e_pendências_clínicas
+#graphify/concept #graphify/EXTRACTED #community/Riscos_da_interface_integrada
