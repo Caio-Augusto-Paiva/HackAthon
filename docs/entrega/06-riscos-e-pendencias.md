@@ -57,6 +57,7 @@ As probabilidades de ocorrência não foram medidas; não atribuímos percentuai
 - [x] Explicitar o caráter sintético dos exemplos e a validação clínica pendente.
 - [x] Registrar nomes, responsabilidades e telefones fornecidos; corrigir a grafia confirmada de Davi Monção Fernandes.
 - [ ] Conferir com os três integrantes os dados já registrados e incluí-los na mensagem de envio.
+- [ ] Confirmar inscrição dos três alunos e presença na apresentação, conforme [A], slide 3.
 - [ ] Completar diários pessoais, revisões realmente realizadas e prova de entendimento.
 - [ ] Registrar licença do projeto e revisar as licenças do material empacotado.
 - [x] Integrar base ativa, `kb/`, API, persistência e casos conhecidos deste recorte.
@@ -93,6 +94,7 @@ React 19, TypeScript e Vite 8 estão conectados à API e ao motor. A SPA usa o p
 
 - **R22 — Reprodutibilidade Python sem lockfile (média; B):** a Seção 6 prevê `uv.lock`, mas ele não existe no checkout auditado. `pyproject.toml` fixa dependências diretas de runtime e deixa faixas em desenvolvimento; isso não equivale a travar todas as transitivas. Decidir e testar o mecanismo de instalação reproduzível em uma máquina limpa antes de prometer `uv sync --frozen --offline`. Esta revisão não cria um lockfile sem validar a instalação.
 - **R23 — Material editorial tratado como entrega concluída (alta; todos):** os roteiros e o modelo de conferência estão escritos, mas não há PDFs/slides finais, ZIP ou comprovante de envio no checkout. Não marcar esses itens como entregues apenas por existir Markdown. Arquivos visuais e pacote devem ser produzidos, abertos e conferidos separadamente.
+- **R24 — Elegibilidade e presença sem confirmação (alta; todos):** [A], slide 3, exige grupo de até três participantes, alunos inscritos e presentes na apresentação. Há três nomes informados, mas inscrição e presença não podem ser verificadas no código. Cada integrante deve confirmar essas condições com a equipe/organização antes da apresentação; não se presume conformidade nem irregularidade.
 - **Estimativas de tempo:** a equipe confirmou 10 minutos de fala + 4 de demo, sem alegar duração oficial. As tabelas somam 600 + 240 segundos; cliques, transições e respostas ainda precisam de cronometragem humana. Cortar a segunda consulta antes de sacrificar a explicação do raciocínio.
 - **Dependências externas:** perguntar à organização a duração oficial, infraestrutura e limite/formato de anexos; perguntar aos integrantes qual licença autorizam e quem encerra cada ação. Não é necessário aguardar essas respostas para corrigir os documentos existentes.
 - **Perguntas de encerramento:** quem revisou clinicamente a base e com qual escopo? Quem assumirá cada ação pendente? Os três conseguem explicar uma parte própria e uma alheia? A máquina reserva abriu os arquivos e executou a mesma consulta sem rede? Registrar resposta e evidência no modelo 07.

@@ -12,6 +12,7 @@
 
 ## Antes do ensaio
 
+- [ ] Confirmar que os três integrantes são alunos inscritos e estarão presentes na apresentação, conforme [A], slide 3; conferência humana pendente.
 - [ ] Nomear operador e apresentadores, conferindo os [dados da equipe](README.md).
 - [ ] Registrar commit, base ativa e versões das ferramentas nos dois computadores.
 - [ ] Instalar dependências e compilar a SPA com internet antes de testar sem rede; não copiar `.venv` ou `node_modules` de outro computador.

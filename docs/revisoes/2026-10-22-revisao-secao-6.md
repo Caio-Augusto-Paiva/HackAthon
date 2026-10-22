@@ -15,6 +15,7 @@ Os campos abaixo distinguem erro verificável, lacuna de evidência, decisão ex
 
 | Exigência | Evidência disponível | Resultado desta auditoria |
 |---|---|---|
+| Até três participantes, alunos inscritos e presentes — A3 | Três integrantes identificados no índice | Quantidade compatível; inscrição e presença precisam de confirmação humana, não certificável pelo checkout |
 | Agente de IA no desenvolvimento — A3/A7 | Processo, commits e diários técnicos | Evidência disponível; atribuição pessoal e aprendizado precisam de complementação humana |
 | Sem LLM na decisão; determinismo/auditoria — A8/A13 | Motor local, base explícita, traço e testes de arquitetura | Atendido no alcance testado; ordem de respostas também integra o estado |
 | Ferramentas e código aberto — A3/A13, D2 | Código disponível e dependências declaradas | **Aberto:** ausência de licença do projeto e conferência final de atribuições |
@@ -112,6 +113,13 @@ ZIP, PDFs, vídeo, reserva e alvo de 18:30 são decisões internas, não novos r
 - **Prova:** 56/56 regras permanecem `suposicao_a_validar`. Fontes contextuais e testes sintéticos não calibram CF nem comprovam revisão por veterinário. Esta auditoria documental não supre a leitura clínica ou a calibração pendentes.
 - **Correção mínima:** preservar o aviso e registrar fonte/trecho e revisor de cada validação futura. Não atribuir CF estimado a uma publicação como se fosse um valor extraído dela. Pergunta necessária: “Quem revisou quais regras, com quais critérios e evidências?” R01/R02 permanecem abertos.
 
+### S6-13 — Elegibilidade dos participantes não estava na conferência
+
+- **Veredito:** lacuna de cobertura, identificada na revisão final em contexto separado.
+- **Trecho exato (6, exigências resumidas):** “identificando todos do grupo com nome e telefone”. O resumo não inclui inscrição e presença; não afirma que estejam dispensadas.
+- **Prova:** A3 exige grupo de até três participantes, somente alunos inscritos e presentes na apresentação. O índice identifica três pessoas, mas o checkout não comprova as outras duas condições. A auditoria solicitada deve cobrir também esse requisito, sem presumir irregularidade ou conformidade.
+- **Correção mínima:** “Confirmar que os três integrantes são alunos inscritos e estarão presentes na apresentação — conferência humana pendente.” Acrescentada à matriz, ao modelo 07 e a R24.
+
 ## Problemas adicionais encontrados no material atual
 
 ### AD-01 — Documentos de processo negavam a integração existente
@@ -168,7 +176,17 @@ Não foram produzidos slides/PDFs/ZIP, escolhido licenciamento, enviados contato
 | Durações extraídas das tabelas vigentes | Fala 600 s, demo 240 s com intervalos contíguos, reserva curta 300 s |
 | Escopo de arquivos e `git diff --check` | Sem alteração do runtime, contratos, base, testes ou tabelas geradas; sem erros de espaços |
 
+Após a correção documental de A3, `pytest -q` foi repetido: **1066 aprovados, 1 ignorado e 170 subtestes aprovados, em 103,22 s**. A nova conferência também verificou elegibilidade explícita nos quatro documentos e destinos locais existentes. Isso confirma a cobertura documental; a inscrição e presença reais seguem pendentes de confirmação humana.
+
 60 Vitest e 11 E2E são evidências do checkpoint `09f5754`, não execuções novas desta revisão documental. A suíte Python foi repetida; nenhum resultado de teste foi usado para preencher campos de ensaio humano. A conferência de links verifica existência de destinos locais, não a disponibilidade de sites externos ou a navegação de todos os fragmentos Markdown.
+
+## Revisão final em contexto separado
+
+A primeira tentativa de revisão foi interrompida por limite de uso, sem produzir achados. A alternativa disponível, `gpt-6.1-sol`, conferiu os 12 arquivos alterados, fontes A/D transcritas, Seção 6, contagens e sincronismo. Não repetiu testes completos nem a inspeção visual dos PDFs; também não certificou ensaio humano ou prontidão do pacote. Não se afirma revisão por outra família de modelo.
+
+O único achado foi a falta de elegibilidade A3, inicialmente rotulada Minor pelo revisor. O executor a tratou como relevante para completar a auditoria das exigências oficiais, por ser condição expressa de participação, e aplicou a correção em uma única passada. A ausência foi observada antes da edição; após a correção, os quatro documentos envolvidos registram a conferência pendente. Não foram criados testes que espelham prosa nem modificado código de produção.
+
+Os demais limites avaliados permanecem explícitos: materiais visuais/pacote e envio; licença; lockfile e instalação limpa; editor; questões históricas de runtime; validação clínica; inscrição/presença reais; autoria e aprendizado; duração prática; reserva e rede física; Swagger; execuções web históricas; provas numéricas e leituras clínicas históricas; atualização posterior do grafo; disponibilidade de links externos e fragmentos. Cada um exige trabalho ou confirmação próprios; nenhum foi encerrado por inferência desta revisão.
 
 ## Resumo — exatamente três linhas
 

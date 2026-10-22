@@ -34,6 +34,7 @@ A verificação integrada contém **1066 testes Python aprovados, 1 ignorado e 1
 
 | Exigência | Evidência disponível | Situação |
 |---|---|---|
+| Até três integrantes, alunos inscritos e presentes — [A], slide 3 | Três integrantes identificados abaixo | Quantidade compatível; confirmar inscrição e presença de todos antes da apresentação |
 | IA apoiando o desenvolvimento — [A], slides 3 e 7 | [Processo](01-processo.md), testes e histórico de commits | Evidência técnica disponível; relatos pessoais dos três integrantes ainda incompletos |
 | Decisão por regras, sem LLM em execução — [A], slides 8 e 13 | `engine/` e teste de arquitetura | Atendido no núcleo disponível |
 | Determinismo e auditoria — [A], slide 8 | `Fraction`, agenda, traço, snapshot e testes de ordem/reprocessamento | Atendido nos contratos testados; inclui a ordem das respostas da sessão |
