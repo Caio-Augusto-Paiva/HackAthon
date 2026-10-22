@@ -1,39 +1,247 @@
 {
-  "verificado_em_utc": "2026-10-21T14:27:58.734491+00:00",
+  "verificado_em_utc": "2026-10-22T02:00:57.661587+00:00",
   "python": "3.12.14",
-  "codigo_base_referencia": "898512c",
-  "base": "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json",
-  "versao_base": "3.1.0-revisao1",
-  "sha256_json_canonico": "395e2b49eb7db736b779b3eb9404707c81c27a60eac31eb6ecbcff2c9aaba1cf",
-  "testes_automatizados": 135,
-  "casos_sinteticos": 2,
+  "branch": "codex-davi",
+  "baseline_integracao": "f46cd6e",
+  "base": "base/versoes/v0001.json",
+  "versao_base": "v0001",
+  "sha256_arquivo_versao": "10dc339ec6f80cbfb4ab60d82a0f3debc50c13445a0a5ba2233a287af58afe08",
+  "sha256_json_canonico": "d11ab51c736d750beb925ab07dc824a6a58ddb591c4e951e149a100f044348e3",
+  "testes_automatizados_aprovados": 1006,
+  "testes_ignorados": 1,
+  "subtestes_aprovados": 110,
+  "unittest_motor_base": {
+    "aprovados": 125,
+    "incluidos_no_pytest": true
+  },
+  "casos_sinteticos": 34,
+  "casos_passou": 34,
+  "casos_falhou": 0,
   "validacao_clinica": "pendente",
-  "roteiro_python_executado": true,
-  "links_locais_verificados": 32,
+  "api_operacoes_http": 27,
+  "web_editor": "em andamento em outra sessao; sem alteracoes neste trabalho",
+  "diretorios_protegidos": [
+    "api/",
+    "web/",
+    "contratos/",
+    "tests/api/"
+  ],
+  "links_locais_verificados": 45,
   "links_quebrados": [],
+  "resultados_casos": [
+    {
+      "id": "C-MAS-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-MAS-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-MAS-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-MET-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-MET-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-MET-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-TPB-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-TPB-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-TPB-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-CET-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-CET-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-CET-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-HIP-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-HIP-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-HIP-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DAB-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DAB-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DAB-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-ACI-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-ACI-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-ACI-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DD-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DD-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DD-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-BV-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-BV-02",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-BV-03",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-COM-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-MODO-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-LIM-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-SAD-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "DEV-BV-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "DEV-MAS-01",
+      "status": "passou",
+      "falhas": []
+    },
+    {
+      "id": "C-DAB-DIALOGO",
+      "status": "passou",
+      "falhas": []
+    }
+  ],
   "resultados": [
     {
       "comando": [
-        "python",
+        ".venv/Scripts/python",
         "-m",
-        "unittest",
-        "discover"
+        "pytest",
+        "-q"
       ],
       "codigo_saida": 0,
-      "saida": ".......................................................................................................................................\n----------------------------------------------------------------------\nRan 135 tests in 3.796s\n\nOK\n"
+      "saida": "........................................................................ [  7%]\n........................................................................ [ 14%]\n........................................................................ [ 21%]\n........................................................................ [ 28%]\n........................................................................ [ 35%]\n........................................................................ [ 42%]\n.......................................s................................ [ 50%]\n........................................................................ [ 57%]\n...............uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu........................................................................................... [ 67%]\n........................................................................ [ 74%]\n........................................................................ [ 82%]\n........................................................................ [ 89%]\n........................................................................ [ 96%]\n.....................................                                    [100%]\n1006 passed, 1 skipped, 110 subtests passed in 79.30s (0:01:19)\n"
     },
     {
       "comando": [
-        "python",
+        ".venv/Scripts/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/engine",
+        "-t",
+        "."
+      ],
+      "codigo_saida": 0,
+      "saida": ".............................................................................................................................\n----------------------------------------------------------------------\nRan 125 tests in 3.005s\n\nOK\n"
+    },
+    {
+      "comando": [
+        ".venv/Scripts/python",
         "scripts/gerar_doc_regras.py",
-        "--base",
-        "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json",
         "--casos",
-        "base/desenvolvimento/casos",
+        "base/casos/casos.json",
         "--verificar"
       ],
       "codigo_saida": 0,
       "saida": "Documentação sincronizada com a base e os casos.\n"
     }
-  ]
+  ],
+  "ensaio_http": {
+    "status": "pendente_etapa_4"
+  },
+  "ensaio_wifi_fisicamente_desligado": {
+    "status": "pendente_equipe",
+    "motivo": "Conta sem privilegios administrativos; preservar conectividade das sessoes paralelas. Isolamento dos processos Python sera registrado separadamente."
+  }
 }

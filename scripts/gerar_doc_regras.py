@@ -62,7 +62,7 @@ def gerar_regras(dados, *, caminho_base, sha256, ativa=False):
     partes = [
         '# Regras de produção — documentação gerada',
         '> GERADO por `scripts/gerar_doc_regras.py`. Edite a base e regenere este arquivo.',
-        'Base indicada pelo ponteiro ativo.' if ativa else 'Base de desenvolvimento; não é uma base ativa aprovada.',
+        'Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.' if ativa else 'Base de desenvolvimento; não é uma base ativa aprovada.',
         f"Versão: `{meta.get('versao', 'não informada')}`. Pai declarado: `{meta.get('pai', 'não informado')}`. "
         f"Data declarada na base: `{meta.get('data', 'não informada')}`.",
         f'Arquivo: `{caminho_base}`. SHA-256 do JSON canônico: `{sha256}`. '
@@ -150,9 +150,11 @@ def gerar_casos(dados, casos):
                        '```json\n' + json.dumps(caso, ensure_ascii=False, indent=2) + '\n```',
                        '### Resultado observado',
                        '```json\n' + json.dumps(resultado, ensure_ascii=False, indent=2, allow_nan=False) + '\n```'])
-    partes.append('A base canônica planejada prevê uma cobertura clínica maior. Os dois exemplos atuais '
-                  'não substituem esse conjunto nem validação especializada. `limite_dinamico: 0` '
-                  'nos exemplos encerra após a triagem; os limites normais da base continuam 12/25.')
+    limites = dados.get('meta', {}).get('limite_dinamico', {})
+    partes.append(f'Este documento executa {len(resultados)} cenário(s) sintético(s); não substitui validação especializada. '
+                  'Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. '
+                  '`limite_dinamico: 0`, quando presente no caso, encerra após a triagem; '
+                  f"os limites normais da base são {limites.get('produtor', 12)}/{limites.get('veterinario', 25)}.")
     return '\n\n'.join(partes) + '\n', passou
 
 

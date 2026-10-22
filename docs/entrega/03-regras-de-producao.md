@@ -2,11 +2,11 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`. Edite a base e regenere este arquivo.
 
-Base de desenvolvimento; não é uma base ativa aprovada.
+Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `3.1.0-revisao1`. Pai declarado: `3.0.0`. Data declarada na base: `2026-10-21`.
+Versão: `v0001`. Pai declarado: `não informado`. Data declarada na base: `2026-10-21`.
 
-Arquivo: `base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json`. SHA-256 do JSON canônico: `1158e30d64570015d9ae10c0afb9fc2f533a4aec92b15c89da440579f1d895ca`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0001.json`. SHA-256 do JSON canônico: `d11ab51c736d750beb925ab07dc824a6a58ddb591c4e951e149a100f044348e3`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
 Regras: **56**. Símbolos: **51**. Doenças: **8**.
 

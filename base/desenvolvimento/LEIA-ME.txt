@@ -9,6 +9,12 @@ MYCIN e critérios clínicos continuam como suposições a validar. O CF express
 confiança do sistema, não probabilidade. A integração não cria base/ativa.json
 nem promove esta versão a base clínica aprovada.
 
+Na integração da Seção 5, uma cópia normalizada foi registrada anteriormente
+como base/versoes/v0001.json e está indicada por base/ativa.json. Essa ativação
+é operacional, não clínica. Este arquivo de desenvolvimento foi alinhado ao
+contrato de kb sem mudar as regras; v0001 continua imutável. O conjunto maior
+de regressões fica em base/casos/casos.json (34 casos fictícios).
+
 O arquivo contém 51 símbolos, 56 regras, oito doenças e seis telas de triagem.
 O motor recebe seu caminho explicitamente e continua independente dos dados
 clínicos, de kb/, da API e de bibliotecas externas. As assinaturas públicas
