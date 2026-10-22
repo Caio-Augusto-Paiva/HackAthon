@@ -21,7 +21,7 @@ describe('interrupção por bandeira vermelha', () => {
     montar();
     const dialogo = await screen.findByRole('alertdialog');
     const primeiro = within(dialogo).getByRole('button', { name: 'Ver parecer' });
-    expect(primeiro).toHaveFocus();
+    await waitFor(() => expect(primeiro).toHaveFocus());
     await userEvent.tab({ shift: true });
     expect(within(dialogo).getByRole('button', { name: 'Mudar para modo especialista' })).toHaveFocus();
     await userEvent.tab(); expect(primeiro).toHaveFocus();

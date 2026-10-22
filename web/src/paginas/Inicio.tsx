@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { iniciarVerificacao, type Modo } from '../api/sessao';
 import { ErroApi } from '../api/cliente';
 import { Boi } from '../componentes/Boi';
@@ -56,7 +56,7 @@ export function Inicio() {
           <Botao variante="secundario" onClick={() => iniciar(ultimoModo)} carregando={carregando !== null}>Tentar de novo</Botao>
         </div>}
       </div>
-      <p className={estilos.nota}>Triagem explicável por um sistema especialista, com dados fictícios. <strong>Não substitui o laudo de um médico-veterinário: qualquer que seja o resultado, procure um.</strong></p>
+      <p className={estilos.nota}>Triagem explicável por um sistema especialista, com dados fictícios. <strong>Não substitui o laudo de um médico-veterinário: qualquer que seja o resultado, procure um.</strong> <Link to="/privacidade">Política de privacidade</Link></p>
     </section>
   </main>;
 }

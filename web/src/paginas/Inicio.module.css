@@ -9,6 +9,7 @@
 .aviso img { flex-shrink: 0; }
 .nota { color: var(--cor-texto-claro); font-size: 15px; line-height: 1.5; }
 .nota strong { color: var(--cor-acento); }
+.nota a { color: var(--cor-creme); white-space: nowrap; }
 .falha { display: grid; gap: 16px; color: var(--cor-perigo); }
 @media (min-width: 1101px) { .chamada h1 { white-space: nowrap; } }
 @media (max-width: 1100px) { .inicio { gap: 40px; padding: 40px; } .palco { flex-basis: 340px; } }

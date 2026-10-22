@@ -63,7 +63,7 @@ export function Parecer() {
       </section>
       <aside role="note" aria-labelledby="titulo-laudo" className={estilos.laudo}>
         <h2 id="titulo-laudo">Este parecer não é um laudo</h2>
-        <p>É uma triagem de apoio, feita por regras que ainda precisam de validação clínica. Independentemente do resultado, procure um médico-veterinário para examinar o animal.</p>
+        <p>É uma triagem de apoio à decisão. Independentemente do resultado, procure um médico-veterinário para examinar o animal.</p>
       </aside>
       <div className={estilos.quadro}><table className={estilos.tabela}>
         <caption className="somenteLeitor">Hipóteses e confiança do sistema</caption>
@@ -79,7 +79,7 @@ export function Parecer() {
       {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {dados.inconclusivas.join(', ')}.</p>}
       {dados.bandeiras_nao_verificadas.length > 0 && <p className={estilos.aviso}>Bandeiras ainda não verificadas: {dados.bandeiras_nao_verificadas.join(', ')}.</p>}
       </div>
-      <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link>
+      <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link><Link className={estilos.privacidade} to="/privacidade">Política de privacidade</Link>
         <Botao variante="secundario" disabled={!primeira} onClick={() => definirComo(true)}>Como cheguei aqui?</Botao>
         {!dados.final && <Link className={estilos.continuar} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Continuar respondendo</Link>}
         {!dados.final && <ControleModo modo={dados.modo} mostrarModo={false} enviando={retomando} aoMudar={troca.solicitar} />}

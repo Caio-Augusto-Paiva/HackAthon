@@ -1,0 +1,14 @@
+.pagina { color: var(--cor-texto-claro); padding-bottom: 72px; }
+.cabecalho { padding: 28px 56px; }
+.cabecalho a { color: var(--cor-creme); text-decoration: none; font: 26px var(--fonte-titulo); }
+.folha { width: min(760px, calc(100% - 48px)); margin: 8px auto 0; display: grid; gap: 28px; padding: 48px 56px; border: 3px solid var(--cor-primaria-escura); border-radius: var(--raio-cartao); background: var(--cor-creme); color: var(--cor-texto); box-shadow: var(--sombra-clay); animation: chegar 320ms cubic-bezier(.16, 1, .3, 1); }
+.folha h1 { font: 400 44px/1.2 var(--fonte-titulo); color: var(--cor-primaria-escura); }
+.resumo { font-size: 20px; line-height: 1.5; }
+.resumo strong { color: var(--cor-acento-escuro); }
+.folha section { display: grid; gap: 10px; }
+.folha h2 { font: 800 21px/1.3 var(--fonte-corpo); color: var(--cor-primaria); }
+.folha p, .folha li { font-size: 17px; line-height: 1.6; max-width: 68ch; }
+.folha ul { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.nota { padding-top: 20px; border-top: 2px solid var(--cor-trilho); color: var(--cor-texto-suave); font-size: 15px !important; }
+.voltar { justify-self: start; color: var(--cor-primaria-escura); font-weight: 800; }
+@keyframes chegar { from { opacity: 0; transform: translateY(8px); } }
