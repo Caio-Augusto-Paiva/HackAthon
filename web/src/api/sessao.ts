@@ -3,6 +3,19 @@ import { chamar } from './cliente';
 
 export type EstadoSessao = components['schemas']['EstadoSessao'];
 export type Modo = EstadoSessao['modo'];
+export type Tela = NonNullable<EstadoSessao['proxima']>;
+export type Parecer = components['schemas']['Parecer'];
+export type Porque = components['schemas']['PorQue'];
+export const caminhoSessao = (id: string) => `/sessoes/${encodeURIComponent(id)}`;
+export const obterSessao = (id: string) => chamar<EstadoSessao>('GET', caminhoSessao(id));
+export const obterParecer = (id: string) => chamar<Parecer>('GET', `${caminhoSessao(id)}/parecer`);
+export const obterPorque = (id: string, simbolo: string) => chamar<Porque>('GET', `${caminhoSessao(id)}/porque/${encodeURIComponent(simbolo)}`);
+
+export function responder(id: string, tela: Tela, corpo: unknown, corrigir = false) {
+  const sufixo = tela.tipo === 'tela_triagem' ? `/triagem/${encodeURIComponent(tela.tela_id)}`
+    : `/respostas${corrigir ? `/${encodeURIComponent(tela.simbolo)}` : ''}`;
+  return chamar<EstadoSessao>(corrigir ? 'PUT' : 'POST', `${caminhoSessao(id)}${sufixo}`, corpo);
+}
 type AnimalCriado = operations['criar_animal']['responses'][201]['content']['application/json'];
 
 /** Cria um animal fictício anônimo e inicia uma consulta na base ativa. */
