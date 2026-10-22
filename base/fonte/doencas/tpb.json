@@ -1,0 +1,198 @@
+{
+  "doenca": "tpb",
+  "simbolos": [
+    {
+      "id": "carrapatos_historico_recente",
+      "tipo": "pergunta",
+      "nome": "Exposição recente a carrapatos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Foram vistos carrapatos na vaca recentemente?",
+        "veterinario": "Histórico recente de exposição a carrapatos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a exposição recente a carrapatos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a exposição recente a carrapatos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "esfregaco_hemoparasitas",
+      "tipo": "pergunta",
+      "nome": "Hemoparasitas no esfregaço",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a hemoparasitas no esfregaço."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "mucosas_palidas_ou_ictericas",
+      "tipo": "pergunta",
+      "nome": "Mucosas pálidas ou amareladas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A parte interna da pálpebra ou da vulva está muito pálida ou amarelada?",
+        "veterinario": "Mucosas pálidas ou ictéricas à inspeção?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a mucosas pálidas ou amareladas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "urina_escura",
+      "tipo": "pergunta",
+      "nome": "Urina escura",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A urina está avermelhada ou escura como café?",
+        "veterinario": "Urina avermelhada ou castanha observada?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a urina escura.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a urina escura."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tpb",
+      "tipo": "doenca",
+      "nome": "Tristeza Parasitária Bovina",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-TPB-01",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "urina_escura",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+      "status": "suposicao_a_validar",
+      "nota": "Combinação de febre aguda e hemoglobinúria por hemólise intravascular típica de babesiose."
+    },
+    {
+      "id": "R-TPB-03",
+      "se": [
+        {
+          "simbolo": "carrapatos_historico_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+      "status": "suposicao_a_validar",
+      "nota": "Exposição ao vetor carrapato combinada com febre é indicativo epidemiológico inicial."
+    },
+    {
+      "id": "R-TPB-02",
+      "se": [
+        {
+          "simbolo": "mucosas_palidas_ou_ictericas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Palidez ou icterícia mantêm TPB entre as hipóteses mesmo sem febre na medição atual; não identificam a causa da anemia ou icterícia."
+    },
+    {
+      "id": "R-TPB-04",
+      "se": [
+        {
+          "simbolo": "esfregaco_hemoparasitas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tpb",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants; CF e tradução para regra: suposição do projeto a validar; https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals",
+      "status": "suposicao_a_validar",
+      "nota": "Esfregaço compatível sustenta infecção por hemoparasitas, mesmo sem febre atual; não distingue sozinho doença ativa de estado de portador."
+    },
+    {
+      "id": "R-URG-02",
+      "se": [
+        {
+          "simbolo": "tpb",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de tpb é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

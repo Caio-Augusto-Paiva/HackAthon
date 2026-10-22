@@ -1,0 +1,205 @@
+{
+  "doenca": "acidose",
+  "simbolos": [
+    {
+      "id": "diarreia",
+      "tipo": "pergunta",
+      "nome": "Diarreia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com diarreia?",
+        "veterinario": "Presença de diarreia?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a diarreia.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a diarreia."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fezes_aquosas_espuma_graos",
+      "tipo": "pergunta",
+      "nome": "Fezes com espuma e grãos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+        "veterinario": "Fezes aquosas, com espuma ou grãos não digeridos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "mudanca_abrupta_concentrado",
+      "tipo": "pergunta",
+      "nome": "Mudança abrupta de concentrado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Houve aumento brusco de ração ou acesso excessivo a grãos?",
+        "veterinario": "Mudança abrupta de concentrado ou acesso excessivo a grãos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a mudança abrupta de concentrado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a mudança abrupta de concentrado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ph_ruminal",
+      "tipo": "pergunta",
+      "nome": "pH ruminal",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 14.0,
+        "unidade": "pH",
+        "casas_decimais": 1
+      },
+      "pergunta": {
+        "veterinario": "Qual é o pH ruminal medido, considerando método e momento da coleta?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ph ruminal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "acidose",
+      "tipo": "doenca",
+      "nome": "Acidose Ruminal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-ACI-01",
+      "se": [
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Hiporexia com fezes diarreicas sugere distúrbio fermentativo gastrointestinal."
+    },
+    {
+      "id": "R-ACI-02",
+      "se": [
+        {
+          "simbolo": "mudanca_abrupta_concentrado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.55
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sobrecarga alimentar de grãos associada à diarreia aponta fermentação ruminal acelerada."
+    },
+    {
+      "id": "R-ACI-03",
+      "se": [
+        {
+          "simbolo": "fezes_aquosas_espuma_graos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Fezes aquosas, espuma e grãos não digeridos apoiam distúrbio digestivo, sem confirmar a etiologia."
+    },
+    {
+      "id": "R-ACI-04",
+      "se": [
+        {
+          "simbolo": "ph_ruminal",
+          "op": "<",
+          "valor": 5.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "acidose",
+        "cf": 0.88
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "pH ruminal abaixo de 5,5 apoia acidificação ruminal conforme método, horário da coleta e quadro clínico; não confirma sozinho acidose sistêmica nem distingue apresentação aguda de subaguda."
+    },
+    {
+      "id": "R-URG-07",
+      "se": [
+        {
+          "simbolo": "acidose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de acidose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "doenca": "dermatite_digital",
+  "simbolos": [
+    {
+      "id": "claudicacao",
+      "tipo": "pergunta",
+      "nome": "Claudicação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está mancando ou poupando uma pata?",
+        "veterinario": "Presença de claudicação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a claudicação.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a claudicação."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "dor_flexao_talao",
+      "tipo": "pergunta",
+      "nome": "Dor na região do talão",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca demonstra dor na região do talão ao se movimentar?",
+        "veterinario": "Dor localizada na região dos bulbos do talão?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a dor na região do talão.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a dor na região do talão."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "lesao_erosiva_talao_morango",
+      "tipo": "pergunta",
+      "nome": "Lesão característica no talão",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a lesão característica no talão."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "dermatite_digital",
+      "tipo": "doenca",
+      "nome": "Dermatite Digital Bovina",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "baixa",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-DD-02",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dor_flexao_talao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Dor no talão com claudicação localiza o problema, mas não substitui inspeção de lesão característica."
+    },
+    {
+      "id": "R-DD-01",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Claudicação é inespecífica e pode decorrer de várias doenças locomotoras."
+    },
+    {
+      "id": "R-DD-03",
+      "se": [
+        {
+          "simbolo": "lesao_erosiva_talao_morango",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Lesão ulcerativa circunscrita e granulomatosa no espaço interdigital/talão com aspecto de framboesa/morango."
+    },
+    {
+      "id": "R-URG-08",
+      "se": [
+        {
+          "simbolo": "dermatite_digital",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.7
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de dermatite_digital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

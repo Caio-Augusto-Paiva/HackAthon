@@ -1,0 +1,235 @@
+{
+  "doenca": "cetose",
+  "simbolos": [
+    {
+      "id": "bhb_sanguineo",
+      "tipo": "pergunta",
+      "nome": "BHB sanguíneo",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 20.0,
+        "unidade": "mmol/L",
+        "casas_decimais": 2
+      },
+      "pergunta": {
+        "veterinario": "Qual é a concentração sanguínea de BHB, em mmol/L?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a bhb sanguíneo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fita_urina_corpos_cetonicos",
+      "tipo": "pergunta",
+      "nome": "Corpos cetônicos na urina",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Teste urinário para corpos cetônicos positivo, lido no tempo indicado pelo fabricante?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a corpos cetônicos na urina."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "halito_adocicado_acetona",
+      "tipo": "pergunta",
+      "nome": "Hálito adocicado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O hálito da vaca tem cheiro adocicado, semelhante à acetona?",
+        "veterinario": "Odor adocicado ou de acetona no hálito?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a hálito adocicado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a hálito adocicado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "recusa_concentrado_come_volumoso",
+      "tipo": "pergunta",
+      "nome": "Recusa seletiva de concentrado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca recusa a ração, mas ainda come capim ou feno?",
+        "veterinario": "Recusa de concentrado com manutenção da ingestão de volumoso?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a recusa seletiva de concentrado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "cetose",
+      "tipo": "doenca",
+      "nome": "Cetose / Hipercetonemia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-CET-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Hiporexia e queda de produção no início da lactação são sinais inespecíficos; outras doenças podem coexistir."
+    },
+    {
+      "id": "R-CET-02",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "halito_adocicado_acetona",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Relato de odor de acetona pode apoiar a hipótese, mas é subjetivo e requer confirmação."
+    },
+    {
+      "id": "R-CET-03",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "recusa_concentrado_come_volumoso",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Recusa seletiva de concentrado é um achado inespecífico e não confirma cetose isoladamente."
+    },
+    {
+      "id": "R-CET-04",
+      "se": [
+        {
+          "simbolo": "bhb_sanguineo",
+          "op": "≥",
+          "valor": 1.2,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "BHB sanguíneo de pelo menos 1,2 mmol/L é compatível com hipercetonemia; sinais adicionais são necessários para caracterizar cetose clínica."
+    },
+    {
+      "id": "R-CET-05",
+      "se": [
+        {
+          "simbolo": "fita_urina_corpos_cetonicos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cetose",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica."
+    },
+    {
+      "id": "R-URG-06",
+      "se": [
+        {
+          "simbolo": "cetose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de cetose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

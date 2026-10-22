@@ -1,0 +1,217 @@
+{
+  "doenca": "mastite",
+  "simbolos": [
+    {
+      "id": "cmt_reagente",
+      "tipo": "pergunta",
+      "nome": "CMT reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "O CMT foi reagente conforme a leitura do teste?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a cmt reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "leite_alterado",
+      "tipo": "pergunta",
+      "nome": "Alteração visível do leite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O leite apresenta grumos, sangue ou aspecto aguado?",
+        "veterinario": "Alteração macroscópica do leite?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a alteração visível do leite.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a alteração visível do leite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "teste_caneca_grumos",
+      "tipo": "pergunta",
+      "nome": "Grumos na caneca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O teste da caneca mostrou grumos no leite?",
+        "veterinario": "Grumos detectados no teste da caneca?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a grumos na caneca.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a grumos na caneca."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ubere_inflamado",
+      "tipo": "pergunta",
+      "nome": "Inflamação do úbere",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O úbere está inchado, quente ou dolorido?",
+        "veterinario": "Há edema, calor ou dor no úbere?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a inflamação do úbere.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a inflamação do úbere."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "evidencia_alteracao_leite",
+      "tipo": "derivado",
+      "nome": "Evidência agrupada de alteração do leite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "max"
+    },
+    {
+      "id": "mastite",
+      "tipo": "doenca",
+      "nome": "Mastite",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-MAS-01",
+      "se": [
+        {
+          "simbolo": "leite_alterado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "evidencia_alteracao_leite",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Alteração macroscópica do leite alimenta o grupo de evidência mamária compartilhado com a caneca."
+    },
+    {
+      "id": "R-MAS-03",
+      "se": [
+        {
+          "simbolo": "teste_caneca_grumos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "evidencia_alteracao_leite",
+        "cf": 0.65
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Grumos na caneca alimentam o mesmo grupo da alteração visual do leite, evitando contagem duplicada."
+    },
+    {
+      "id": "R-MAS-02",
+      "se": [
+        {
+          "simbolo": "ubere_inflamado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "mastite",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Edema, calor ou dor no úbere sustentam inflamação mamária; não identificam isoladamente o agente causal."
+    },
+    {
+      "id": "R-MAS-04",
+      "se": [
+        {
+          "simbolo": "cmt_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "mastite",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "CMT reagente indica aumento de células somáticas e sustenta inflamação; não diferencia sozinho mastite clínica de subclínica."
+    },
+    {
+      "id": "R-MAS-05",
+      "se": [
+        {
+          "simbolo": "evidencia_alteracao_leite",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "mastite",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/mastitis-in-large-animals/mastitis-in-cattle; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Propaga a maior evidência de alteração do leite sem somar novamente o resultado da caneca. A multiplicação por 0,99 evita peso unitário fora do contrato."
+    },
+    {
+      "id": "R-URG-05",
+      "se": [
+        {
+          "simbolo": "mastite",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de mastite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

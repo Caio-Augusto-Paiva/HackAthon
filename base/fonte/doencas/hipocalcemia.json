@@ -1,0 +1,293 @@
+{
+  "doenca": "hipocalcemia",
+  "simbolos": [
+    {
+      "id": "calcio_serico",
+      "tipo": "pergunta",
+      "nome": "Cálcio sérico total",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 20.0,
+        "unidade": "mmol/L",
+        "casas_decimais": 2
+      },
+      "pergunta": {
+        "veterinario": "Qual é o cálcio sérico total, em mmol/L?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a cálcio sérico total."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "decubito",
+      "tipo": "pergunta",
+      "nome": "Decúbito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está caída e não consegue se levantar?",
+        "veterinario": "Animal em decúbito, incapaz de se levantar?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a decúbito.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a decúbito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pescoco_em_s",
+      "tipo": "pergunta",
+      "nome": "Desvio cervical em S",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca mantém o pescoço curvado em forma de S?",
+        "veterinario": "Desvio cervical em S observado?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a desvio cervical em s.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a desvio cervical em s."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "hipotermia",
+      "tipo": "derivado",
+      "nome": "Hipotermia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "periparto_imediato",
+      "tipo": "derivado",
+      "nome": "Periparto imediato",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "hipocalcemia",
+      "tipo": "doenca",
+      "nome": "Hipocalcemia Puerperal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin"
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-DER-01",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 3.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "periparto_imediato",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela padrão de risco para distúrbios puerperais agudos imediatos."
+    },
+    {
+      "id": "R-DER-05",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "<",
+          "valor": 38.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotermia",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Temperatura abaixo do corte operacional de hipotermia; não identifica sua causa."
+    },
+    {
+      "id": "R-DER-06",
+      "se": [
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "fria",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotermia",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Extremidades frias são um indício indireto, de menor confiança, de hipotermia ou comprometimento circulatório."
+    },
+    {
+      "id": "R-DER-09",
+      "se": [
+        {
+          "simbolo": "temperatura_retal",
+          "op": "≥",
+          "valor": 38.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipotermia",
+        "cf": -0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Medição acima do corte operacional fornece evidência contrária à hipotermia central; extremidades frias podem ter outras causas."
+    },
+    {
+      "id": "R-HIP-02",
+      "se": [
+        {
+          "simbolo": "periparto_imediato",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "pescoco_em_s",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "hipotermia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Perda do tônus cervical e hipotermia periférica sustentam fase parética clínica."
+    },
+    {
+      "id": "R-HIP-01",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "periparto_imediato",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.65
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vaca caída nas primeiras 72 horas pós-parto sugere paresia por hipocalcemia puerperal."
+    },
+    {
+      "id": "R-HIP-03",
+      "se": [
+        {
+          "simbolo": "calcio_serico",
+          "op": "<",
+          "valor": 1.5,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Cálcio sérico total < 1,5 mmol/L (ou < 6,0 mg/dL) confirma hipocalcemia bioquímica acentuada."
+    },
+    {
+      "id": "R-HIP-04",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipocalcemia",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Paresia puerperal clássica é afebril; presença de pirexia enfraquece a hipótese primária."
+    },
+    {
+      "id": "R-URG-01",
+      "se": [
+        {
+          "simbolo": "hipocalcemia",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de hipocalcemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}
