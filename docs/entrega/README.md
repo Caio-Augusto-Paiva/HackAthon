@@ -1,8 +1,8 @@
 # Entrega — índice para a equipe e a banca
 
-Documentação das **Seções 5 e 6 e da consulta web integrada** na branch `codex-davi`, com base ativa `v0002`. A [revisão da Seção 6](../revisoes/2026-10-22-revisao-secao-6.md) confronta o roteiro histórico com as fontes oficiais e a implementação até `d9eda27`. Os checkpoints anteriores são preservados como histórico, sem serem apresentados como estado atual.
+Documentação das **Seções 5 e 6 e da consulta web integrada** na branch `codex-davi`, com base ativa `v0003` (pai `v0002`). A [revisão da Seção 6](../revisoes/2026-10-22-revisao-secao-6.md) confronta o roteiro histórico com as fontes oficiais e a implementação até `d9eda27`. Os checkpoints anteriores são preservados como histórico, sem serem apresentados como estado atual.
 
-O estado atual contém consulta React em `web/`, `kb/`, API FastAPI com 27 operações HTTP, SQLite, scripts de localhost, base ativa `v0002` e 34 casos sintéticos. Consulte [a API](../../api/README.md), [a base editorial](../../kb/README.md) e [o README principal](../../README.md). O editor gráfico permanece pendente. API, motor, kb, contratos e versões imutáveis foram preservados na implementação da interface.
+O estado atual contém consulta React em `web/`, `kb/`, API FastAPI com 27 operações HTTP, SQLite, scripts de localhost, base ativa `v0003` (61 regras, todas suposição) e 34 casos sintéticos. Consulte [a API](../../api/README.md), [a base editorial](../../kb/README.md) e [o README principal](../../README.md). O editor gráfico permanece pendente. API, motor, kb, contratos e versões imutáveis foram preservados na implementação da interface.
 
 O projeto aborda **T1 Anamnese**: coleta estruturada de sinais e histórico de bovinos leiteiros em lactação, com triagem explicável. A exigência e os critérios vêm das [transcrições oficiais da apresentação](../fontes/transcricao-apresentacao-rerum.md) e do [documentário](../fontes/transcricao-documentario-rerum.md). As transcrições são referências locais dos PDFs, não novos requisitos.
 
@@ -12,7 +12,7 @@ O projeto aborda **T1 Anamnese**: coleta estruturada de sinais e histórico de b
 |---|---|---|
 | [01-processo](01-processo.md) | Linha do tempo verificável, uso de IA, decisões e evidências | Preparado; faltam relatos pessoais de B/C e confirmação da equipe |
 | [02-arquitetura](02-arquitetura.md) | Núcleo implementado, contratos, limites e componentes planejados | Preparado com distinção entre presente e futuro |
-| [03-regras-de-producao](03-regras-de-producao.md) | Todas as regras, fontes, CF, símbolos e triagem | Gerado da ativa `v0002`, ainda de desenvolvimento |
+| [03-regras-de-producao](03-regras-de-producao.md) | Todas as regras, fontes, CF, símbolos e triagem | Gerado da ativa `v0003`, ainda de desenvolvimento |
 | [04-casos-de-teste](04-casos-de-teste.md) | Entradas, critérios e resultados dos 34 casos sintéticos | Gerado por execução real |
 | [05-apresentacao-e-demo](05-apresentacao-e-demo.md) | Roteiros de 10 e 5 minutos, demo e perguntas da banca | Roteiro preparado; duração oficial e ensaio pendentes |
 | [06-riscos-e-pendencias](06-riscos-e-pendencias.md) | Riscos, lacunas, responsáveis por papel e checklist de envio | Registro aberto |
@@ -28,7 +28,7 @@ Na raiz do repositório, com Python 3.12+:
 .venv/Scripts/python scripts/gerar_doc_regras.py --casos base/casos/casos.json --verificar
 ```
 
-No fechamento de 22/10 (após o merge `7587de4`), o estado atual é de **1077 testes Python aprovados, 170 subtestes aprovados e 0 ignorados** e **68 testes Vitest em 11 arquivos**; os 6 arquivos de spec E2E em `web/e2e/` não foram rodados neste checkpoint. Histórico da verificação integrada anterior: **1066 testes Python aprovados, 1 ignorado e 170 subtestes aprovados**. A execução separada de **132 testes unittest** já está contida no pytest, não é somada. São **34 casos sintéticos, zero falhas na ativa**, uma contagem distinta de testes e de validação clínica. Os dois exemplos originais foram preservados nesse conjunto. As saídas históricas e o alcance do ensaio HTTP ficam em [evidencias-verificacao.json](evidencias-verificacao.json). O checkpoint da troca de modo (`09f5754`) registra **60 testes de interface e 11 E2E**, descritos em [QUALIDADE.md](../../web/QUALIDADE.md); 39/8 são as contagens históricas da integração inicial. O inicializador serve a SPA em localhost:8000.
+O estado atual (após `0300cdb`) é de **1080 testes Python aprovados** (motor 134, kb 296, API 629, casos 9, documentação 12), 170 subtestes e **71 testes Vitest em 11 arquivos**; os 6 arquivos de spec E2E em `web/e2e/` não foram rodados. Histórico: no fechamento de 22/10 (após o merge `7587de4`) eram 1077 Python, 170 subtestes, 0 ignorados e 68 Vitest, também sem E2E. Histórico da verificação integrada anterior: **1066 testes Python aprovados, 1 ignorado e 170 subtestes aprovados**. A execução separada de **132 testes unittest** já está contida no pytest, não é somada. São **34 casos sintéticos, zero falhas na ativa**, uma contagem distinta de testes e de validação clínica. Os dois exemplos originais foram preservados nesse conjunto. As saídas históricas e o alcance do ensaio HTTP ficam em [evidencias-verificacao.json](evidencias-verificacao.json). O checkpoint da troca de modo (`09f5754`) registra **60 testes de interface e 11 E2E**, descritos em [QUALIDADE.md](../../web/QUALIDADE.md); 39/8 são as contagens históricas da integração inicial. O inicializador serve a SPA em localhost:8000.
 
 ## Atendimento às exigências oficiais
 
@@ -45,7 +45,7 @@ No fechamento de 22/10 (após o merge `7587de4`), o estado atual é de **1077 te
 | Apresentação do processo ao resultado — [A], slide 10 | Roteiro e perguntas no documento 05 | Falta material visual final e ensaio |
 | Nome e telefone de todos no envio — [A], slide 15 | Tabela abaixo, informada pela equipe | Dados presentes; conferência final e inclusão na mensagem de envio ainda necessárias |
 
-Dados dos exemplos são sintéticos. Todas as **56 regras** permanecem em `suposicao_a_validar`; há zero regras registradas como `validada`. Fontes clínicas contextuais não demonstram calibração dos CF nem participação de especialista na revisão desta base.
+Dados dos exemplos são sintéticos. Todas as **61 regras** permanecem em `suposicao_a_validar`; há zero regras registradas como `validada`. Fontes clínicas contextuais não demonstram calibração dos CF nem participação de especialista na revisão desta base.
 
 ## Equipe — dados informados para conferência antes do envio
 

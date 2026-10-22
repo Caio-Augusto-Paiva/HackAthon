@@ -1,6 +1,6 @@
 # Roteiro de apresentação e demonstração — versão disponível
 
-Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0002`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
+Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0003`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
 
 A duração oficial não consta dos materiais fornecidos. A equipe confirmou nesta revisão **10 minutos de fala mais 4 de demonstração como estimativas**, sujeitas à confirmação com a organização. A alternativa de **5 minutos incluindo demo** permanece apenas como reserva. O conteúdo abaixo é um roteiro editorial; slides finais e PDFs ainda precisam ser produzidos e revisados. Nenhum tempo abaixo foi cronometrado em ensaio humano.
 
@@ -12,8 +12,8 @@ A duração oficial não consta dos materiais fornecidos. A equipe confirmou nes
 | 2. O que é sistema especialista | Mostrar fato → regra → conclusão; IA auxiliou a construção, motor faz a consulta | A | 1:00 |
 | 3. Arquitetura disponível | Diagrama do documento 02: React, API FastAPI, SQLite, `kb`, versão ativa, motor e explicação; editor pendente | B | 1:15 |
 | 4. Raciocínio e segurança | Três camadas, premissa mínima, combinação MYCIN, seis telas e bandeiras; um único exemplo numérico | A | 1:45 |
-| 5. Base e limites clínicos | 8 doenças, 56 regras, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
-| 6. Evidência de funcionamento | Fechamento de 22/10: 1077 testes Python aprovados, 170 subtestes, 0 ignorados, 68 Vitest e 34 casos sintéticos (E2E: 6 specs, não rodados neste checkpoint; histórico `09f5754`: 1066 Python, 60 Vitest, 11 E2E); não confundir com validação clínica | B | 1:00 |
+| 5. Base e limites clínicos | 8 doenças, 61 regras, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
+| 6. Evidência de funcionamento | Estado atual: 1080 testes Python aprovados, 170 subtestes, 71 Vitest e 34 casos sintéticos (E2E: 6 specs, não rodados; histórico do fechamento de 22/10: 1077 Python e 68 Vitest; histórico `09f5754`: 1066 Python, 60 Vitest, 11 E2E); não confundir com validação clínica | B | 1:00 |
 | 7. IA e julgamento da equipe | Três exemplos comprovados: restauração direta, regra de TPB sem febre e rejeição de aprovação clínica automática; 40 s por papel | A/B/C | 2:00 |
 | 8. Riscos e próximos passos | Revisão especializada, licença, editor, limitações de coleta R15/R16, Swagger offline e ensaio físico sem rede | A | 0:45 |
 | 9. Encerramento | A decisão é reproduzível a partir da base, fatos e ordem; mostrar repositório e limitações | C | 0:30 |
@@ -35,7 +35,7 @@ powershell -ExecutionPolicy Bypass -File scripts\rodar.ps1 -SemNavegador
 
 | Intervalo | Ação | Evidência a mostrar |
 |---|---|---|
-| 0:00–0:30 | Abrir http://localhost:8000/ e clicar em Iniciar verificação | Tela inicial com os dois modos; API cria animal fictício e sessão na `v0002` |
+| 0:00–0:30 | Abrir http://localhost:8000/ e clicar em Iniciar verificação | Tela inicial com os dois modos; API cria animal fictício e sessão na `v0003` |
 | 0:30–1:00 | Digitar `12,5` em dias, enviar e corrigir para `90` | Mensagem 422 junto ao campo, sem avanço; após corrigir, aparece a lateral de hipóteses |
 | 1:00–2:00 | Começar C-MAS-01 no produtor: estado térmico normal, nenhuma alteração de postura, apetite normal, leite alterado + úbere inflamado + queda de produção; abrir o por quê antes de responder | Opções fechadas e sinais mamários registrados antes da troca, na mesma sessão |
 | 2:00–2:40 | Clicar Mudar para modo especialista, ler o aviso e confirmar. Responder à temperatura retal (38,5 °C no caso fictício, digitando `38.5`) e às excreções; responder Não sei aos exames sem observação | PATCH usa `veterinario`; próxima pergunta e limite vêm da API. Os sinais anteriores permanecem; Voltar permite corrigi-los. Mudar para modo produtor faz o caminho inverso sem confirmação |
@@ -135,7 +135,7 @@ Total: **300 segundos (5:00)**. A troca de modo e a restauração ficam como apo
 | Onde está o editor? | Fora do escopo desta consulta entregue. JSON, validador, conversão de grafo e rotas de versões estão disponíveis; não se afirma conclusão nem andamento da edição visual sem evidência. |
 | Por que essas oito doenças? | São o recorte definido pela equipe na especificação. Não representam todos os diagnósticos diferenciais da clínica bovina. |
 | O que significa `sem_problema`? | Ausência de um gatilho de urgência pelos critérios atuais; não é comprovação de saúde ou segurança clínica. |
-| Como mudam a base sem perder rastreabilidade? | `kb.Repositorio` grava versões imutáveis; a API executa casos, controla a ativação e prende a sessão à versão. Alteração de regra exige nova versão; `v0002` foi preservada. |
+| Como mudam a base sem perder rastreabilidade? | `kb.Repositorio` grava versões imutáveis; a API executa casos, controla a ativação e prende a sessão à versão. Alteração de regra exige nova versão; `v0001` e `v0002` foram preservadas e a `v0003` é a ativa. |
 | O projeto atende integralmente a open source? | O código está disponível; falta registrar a licença do projeto e revisar o pacote final. Não declarar essa pendência resolvida. |
 | Como evitar que uma edição da base quebre a demo? | Gravar uma nova versão imutável, validar e executar os 34 casos antes de ativar; confirmar falhas, quando aplicável, não equivale a validar conhecimento clínico. A sessão permanece vinculada à sua versão. |
 | O que cada integrante aprendeu? | Cada pessoa deve explicar uma decisão própria e uma parte alheia, apontando regra, teste ou commit real. O roteiro e os diários técnicos não substituem essa demonstração humana. |

@@ -2,7 +2,7 @@
 
 Prova de conceito do tema T1 do Hackathon UFJF 2026. O núcleo executa regras explícitas, combina fatores de certeza pelo modelo MYCIN e explica as conclusões. A IA auxilia o desenvolvimento; a decisão em execução sai da base e do motor.
 
-**Estado integrado, branch `codex-davi`:** interface React conectada ao motor local, base ativa `v0002`, módulo `kb/` e API FastAPI com persistência SQLite. São 27 operações HTTP e 34 casos sintéticos versionados. O editor gráfico permanece pendente. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
+**Estado integrado, branch `codex-davi`:** interface React conectada ao motor local, base ativa `v0003`, módulo `kb/` e API FastAPI com persistência SQLite. São 27 operações HTTP e 34 casos sintéticos versionados. O editor gráfico permanece pendente. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
 
 ## Executar a demonstração do motor
 
@@ -10,7 +10,7 @@ Requer Python 3.12 ou superior. Abra um terminal na raiz deste repositório. O m
 
 ```powershell
 python -m unittest discover -s tests/engine -t .
-python -m engine base/versoes/v0002.json base/desenvolvimento/casos/alerta-decubito.json
+python -m engine base/versoes/v0003.json base/desenvolvimento/casos/alerta-decubito.json
 ```
 
 O primeiro comando executa os testes do motor e da base de desenvolvimento. O segundo executa um caso sintético, imprime JSON com `status: "passou"` e código de saída 0. Veja o [exemplo mamário e o uso Python](base/desenvolvimento/LEIA-ME.txt).
@@ -47,14 +47,14 @@ O navegador renderiza `EstadoSessao.proxima`, envia números como a string digit
 - [Índice da entrega e atendimento às exigências](docs/entrega/README.md).
 - [Processo de desenvolvimento](docs/entrega/01-processo.md).
 - [Arquitetura implementada](docs/entrega/02-arquitetura.md).
-- [56 regras de produção geradas da base](docs/entrega/03-regras-de-producao.md).
+- [61 regras de produção geradas da base](docs/entrega/03-regras-de-producao.md).
 - [Resultados dos 34 casos sintéticos](docs/entrega/04-casos-de-teste.md).
 - [Roteiro de apresentação, demonstração e perguntas](docs/entrega/05-apresentacao-e-demo.md).
 - [Riscos, pendências e checklist de envio](docs/entrega/06-riscos-e-pendencias.md).
 - [Revisão técnica da Seção 6](docs/revisoes/2026-10-22-revisao-secao-6.md).
 - [Contrato detalhado do motor](engine/README.md).
 - [Grafo 2: dados de treino por doença](obsidian/02-Dados%20de%20Treino/README.md) e a [spec do grafo 2](docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md).
-- Estado no fechamento de 22/10 (após `7587de4`): 1077 testes Python aprovados, 170 subtestes aprovados, 0 ignorados; 68 Vitest em 11 arquivos; E2E (6 specs) não rodados neste checkpoint. Histórico (`09f5754`): 1066 Python, 60 Vitest, 11 E2E.
+- Estado atual (após `0300cdb`): **1080 testes Python** (motor 134, kb 296, API 629, casos 9, documentação 12) e 170 subtestes, e **71 Vitest em 11 arquivos**; os 6 arquivos de spec E2E não foram rodados. Histórico: no fechamento de 22/10 (após `7587de4`), 1077 testes Python aprovados, 170 subtestes aprovados, 0 ignorados; 68 Vitest em 11 arquivos; E2E (6 specs) não rodados neste checkpoint. Histórico (`09f5754`): 1066 Python, 60 Vitest, 11 E2E.
 
 ## Manter as tabelas sincronizadas
 
@@ -63,7 +63,7 @@ python scripts/gerar_doc_regras.py --casos base/casos/casos.json
 python scripts/gerar_doc_regras.py --casos base/casos/casos.json --verificar
 ```
 
-O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado. A suíte também verifica esse sincronismo. Sem `--base`, o gerador segue `base/ativa.json`, atualmente `v0002`. As versões são imutáveis: alteração de regra exige nova versão e execução dos casos antes de ativar. A ativação é operacional e não representa aprovação clínica. As contagens e os resultados reais ficam em [evidências de verificação](docs/entrega/evidencias-verificacao.json).
+O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado. A suíte também verifica esse sincronismo. Sem `--base`, o gerador segue `base/ativa.json`, atualmente `v0003`. As versões são imutáveis: alteração de regra exige nova versão e execução dos casos antes de ativar. A ativação é operacional e não representa aprovação clínica. As contagens e os resultados reais ficam em [evidências de verificação](docs/entrega/evidencias-verificacao.json).
 
 ## Equipe e licença
 
