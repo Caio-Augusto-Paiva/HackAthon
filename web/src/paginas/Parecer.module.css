@@ -1,0 +1,38 @@
+.pagina { min-height: 100dvh; background: var(--cor-fundo-escuro); color: var(--cor-creme); padding-bottom: 44px; }
+.cabecalho { padding: 28px 56px; display: flex; align-items: center; gap: 16px; font-size: 16px; flex-wrap: wrap; }
+.cabecalho a { margin-right: auto; color: var(--cor-creme); font: 26px var(--fonte-titulo); text-decoration: none; }
+.cabecalho span:first-of-type { border-radius: 99px; background: rgb(246 241 228 / 12%); padding: 8px 16px; }
+.conteudo { width: min(1040px, calc(100% - 48px)); margin: 0 auto; }
+.titulo { display: flex; align-items: center; gap: 20px; margin: 0 0 26px; }
+.titulo h1 { font: 38px/1.25 var(--fonte-titulo); margin: 0 0 10px; }
+.titulo p { margin: 0; font-size: 18px; }
+.urgencia { display: flex; align-items: center; gap: 18px; padding: 20px 28px; border: 3px solid var(--cor-alerta); border-radius: 22px; background: var(--cor-alerta-fundo); color: var(--cor-texto); margin-bottom: 24px; }
+.urgencia h2 { margin: 0 0 4px; font-size: 24px; }
+.urgencia p { margin: 0; font-size: 17px; line-height: 1.5; }
+.urgencia[data-nivel='chamar_agora'] { border-color: var(--cor-perigo); background: var(--cor-perigo-fundo); }
+.urgencia[data-nivel='sem_problema'] { border-color: var(--cor-ok); background: var(--cor-ok-fundo); }
+.quadro { border-radius: 28px; padding: 18px 24px 24px; color: var(--cor-texto); background: var(--cor-creme); box-shadow: var(--sombra-clay); }
+.tabela { width: 100%; border-collapse: separate; border-spacing: 0 10px; text-align: left; }
+.bloco th { color: var(--cor-primaria); font-size: 16px; padding: 0; }
+.linha td, .linha th { background: var(--cor-superficie); padding: 16px 12px; }
+.linha td:first-child { border-radius: 14px 0 0 14px; }
+.linha td:last-child { border-radius: 0 14px 14px 0; width: 40%; }
+.posicao { width: 7%; color: var(--cor-primaria); font-weight: 800; font-size: 20px; }
+.doenca { width: 35%; font-size: 20px; font-weight: 700; }
+.gravidade { display: block; min-width: 130px; padding: 4px 12px; border-radius: 99px; font-size: 14px; font-weight: 700; text-align: center; }
+.gravidade[data-gravidade='alta'] { background: var(--cor-perigo-fundo); color: var(--cor-perigo); }
+.gravidade[data-gravidade='media'] { background: var(--cor-alerta-fundo); color: var(--cor-alerta-texto); }
+.gravidade[data-gravidade='baixa'] { background: var(--cor-ok-fundo); color: var(--cor-primaria); }
+.confianca { display: flex; gap: 24px; align-items: center; }
+.confianca > div { flex: 1; min-width: 80px; }
+.confianca strong { min-width: 66px; text-align: right; font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.aviso, .vazio { font-size: 14px; line-height: 1.5; color: var(--cor-texto-suave); margin: 0; }
+.acoes { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 24px; align-items: center; }
+.nova { display: grid; place-items: center; min-height: 70px; padding: 14px 36px; color: var(--cor-texto); background: var(--cor-acento); border: 3px solid var(--cor-acento-escuro); border-radius: var(--raio-botao); box-shadow: var(--sombra-clay); text-decoration: none; font-weight: 800; font-size: 22px; }
+.nova:hover { background: color-mix(in srgb, var(--cor-acento) 90%, white); }
+.continuar { color: var(--cor-creme); text-underline-offset: 4px; }
+.parcial { font-size: 20px; font-weight: 800; }
+.espera { min-height: 100dvh; padding: 48px 24px; display: grid; justify-items: center; align-content: center; gap: 20px; color: var(--cor-creme); }
+.espera a { color: var(--cor-creme); }
+@media(max-width: 800px) { .cabecalho { padding: 24px; } .titulo h1 { font-size: 28px; } .titulo img { width: 72px; height: 72px; } .quadro { padding: 14px; } .linha td, .linha th { padding: 12px 8px; } .prefixo { display: none; } .gravidade { min-width: 70px; } .doenca { font-size: 16px; } .confianca { gap: 8px; } .confianca > div { min-width: 50px; } .confianca strong { font-size: 20px; min-width: 48px; } }
+@media(max-width: 520px) { .conteudo { width: calc(100% - 32px); } .cabecalho a { width: 100%; } .titulo { align-items: flex-start; gap: 12px; } .titulo h1 { font-size: 24px; } .titulo p { font-size: 16px; } .urgencia { padding: 18px; align-items: flex-start; } .urgencia h2 { font-size: 20px; } .urgencia img { width: 24px; height: 24px; } .quadro { padding: 12px; } .posicao { font-size: 15px; } .doenca { font-size: 14px; width: 38%; overflow-wrap: anywhere; } .linha td, .linha th { padding: 10px 5px; } .gravidade { min-width: 0; padding: 4px 6px; font-size: 12px; } .confianca { flex-direction: column-reverse; align-items: stretch; gap: 5px; } .confianca strong { font-size: 18px; text-align: center; } .confianca > div { min-width: 40px; } .acoes { flex-direction: column; align-items: stretch; } .nova { font-size: 20px; } }

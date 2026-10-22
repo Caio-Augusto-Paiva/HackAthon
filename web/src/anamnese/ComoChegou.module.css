@@ -1,0 +1,3 @@
+.lista { padding-left: 22px; display: grid; gap: 24px; font-size: 16px; overflow-wrap: anywhere; }
+.lista p { margin: 8px 0; line-height: 1.5; }
+.lista ul { padding-left: 20px; }

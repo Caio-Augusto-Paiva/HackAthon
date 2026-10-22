@@ -9,6 +9,7 @@ export type Porque = components['schemas']['PorQue'];
 export const caminhoSessao = (id: string) => `/sessoes/${encodeURIComponent(id)}`;
 export const obterSessao = (id: string) => chamar<EstadoSessao>('GET', caminhoSessao(id));
 export const obterParecer = (id: string) => chamar<Parecer>('GET', `${caminhoSessao(id)}/parecer`);
+export const obterComo = (id: string, simbolo: string) => chamar<components['schemas']['Como']>('GET', `${caminhoSessao(id)}/como/${encodeURIComponent(simbolo)}`);
 export const obterPorque = (id: string, simbolo: string) => chamar<Porque>('GET', `${caminhoSessao(id)}/porque/${encodeURIComponent(simbolo)}`);
 export const agirBandeira = (id: string, acao: components['schemas']['AcaoBandeira']['acao']) =>
   chamar<EstadoSessao>('POST', `${caminhoSessao(id)}/acoes/bandeira`, { acao });
