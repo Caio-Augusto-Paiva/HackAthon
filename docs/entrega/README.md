@@ -49,11 +49,11 @@ Dados dos exemplos são sintéticos. Todas as **56 regras** permanecem em `supos
 
 Os papéis abaixo vêm do planejamento e não identificam pessoas por inferência do nome de uma branch ou de um autor de commit.
 
-| Papel planejado | Nome completo | Responsabilidade prevista |
+| Papel planejado | Nome completo | Número de Telefone | Responsabilidade prevista |
 |---|---|---|
-| A | Caio Augusto de Paiva Teixeira | Arquitetura dos sistemas, Arquitetura dos prompts |
-| B | Davi MOnção Fernades | Motor de inferência, Documentação |
-| C | Luis Henrique Poubel Buettel | Base de conhecimento, Banco de Dados(Jason) |
+| A | Caio Augusto de Paiva Teixeira | (32)99996-0047 | Arquitetura dos sistemas, Arquitetura dos prompts |
+| B | Davi Monção Fernades | (32)99967-0773 | Motor de inferência, Documentação |
+| C | Luis Henrique Poubel Buettel | (32)98803-1744 | Base de conhecimento, Banco de Dados(Jason) |
 
 ## Mapa do pacote e trabalho restante
 
