@@ -338,6 +338,46 @@ def test_como_ficha_corrigida_pela_tela_deixa_de_ser_importacao(cliente):
     assert (depois["origem"], depois["valor"], depois["tela_id"]) == ("resposta", 10.0, "dias")
 
 
+def _origens_do_traco(corpo: dict, simbolo: str) -> set[str]:
+    """As origens do ``simbolo`` no traço: nos ``fato_adicionado`` e nas entradas de cada ``regra_disparada``."""
+    origens = {e["origem"] for e in corpo["eventos"] if e["tipo"] == "fato_adicionado" and e["simbolo"] == simbolo}
+    for evento in corpo["eventos"]:
+        if evento["tipo"] == "regra_disparada":
+            origens |= {e["origem"] for e in evento["entradas"] if e["simbolo"] == simbolo}
+    return origens
+
+
+def test_traco_origem_importacao_concorda_com_o_como(cliente):
+    animal = _importar_animal(cliente)
+    criar_sessao_teste(cliente, animal["id"])
+    assert _triagem(cliente, "sinais", SINAIS).status_code == 200
+    assert _pergunta(cliente, "pergunta_x", True).status_code == 200
+    traco = _corpo(cliente, "traco", "obter_traco")
+    assert _origens_do_traco(traco, "dias_em_lactacao") == {"importacao"}  # no fato e na entrada da R-REC-01
+    como = _corpo(cliente, "como/recente", "obter_como")
+    assert _entrada(como["evidencias"][0], "dias_em_lactacao")["origem"] == "importacao"
+    assert _origens_do_traco(traco, "sinal_a") == {"resposta"}  # o que foi respondido nunca vira importação
+
+
+def test_traco_ficha_a_mao_continua_ficha_e_corrigida_vira_resposta(cliente, sessao):
+    assert _triagem(cliente, "sinais", SINAIS).status_code == 200
+    assert _origens_do_traco(_corpo(cliente, "traco", "obter_traco"), "dias_em_lactacao") == {"ficha"}
+    animal = _importar_animal_com_brinco(cliente)
+    criar_sessao_teste(cliente, animal["id"])
+    assert _triagem(cliente, "sinais", SINAIS, sessao_id="ses_0002").status_code == 200
+    correcao = _triagem(cliente, "dias", {"valores": {"dias_em_lactacao": 10}}, metodo="PUT", sessao_id="ses_0002")
+    assert correcao.status_code == 200, correcao.text
+    traco = _corpo(cliente, "traco", "obter_traco", sessao_id="ses_0002")
+    assert _origens_do_traco(traco, "dias_em_lactacao") == {"resposta"}
+
+
+def _importar_animal_com_brinco(cliente) -> dict:
+    csv = "brinco,nome,data_ultimo_parto\nBR-0008,Aurora,2026-10-14\n".encode()
+    resposta = cliente.post("/api/animais/importacao", files={"arquivo": ("prontuario.csv", csv, "text/csv")})
+    assert resposta.status_code == 200, resposta.text
+    return cliente.get("/api/animais?busca=BR-0008").json()["itens"][0]
+
+
 def test_como_de_simbolo_sem_conclusao_devolve_cf_zero_e_nada_a_explicar(cliente, apos_sinais):
     corpo = _corpo(cliente, "como/recente", "obter_como")  # dias_em_lactacao = 6: R-REC-01 já disparou
     assert corpo["cf"] == pytest.approx(0.99)

@@ -153,7 +153,8 @@ Os testes da API usam a base mínima de `tests/fixtures/kb/base_minima.json` (nu
 - **D4, `EdicaoBase` frouxa:** `meta`, `grafo.nos`, `grafo.arestas` e `layout` são `dict`/lista de `dict`, para erros de estrutura
   chegarem ao validador do `kb` e voltarem como `E00` com 200 em `/base/validar`. A tipagem forte fica no `Grafo` do `kb`.
 - **D5, origem `importacao`:** o motor só conhece `ficha`. A API grava `origens_ficha` no snapshot e, ao montar o "como?", reescreve
-  `origem: "ficha"` para `"importacao"` nos campos assim marcados.
+  `origem: "ficha"` para `"importacao"` nos campos assim marcados, no "como?" e também no `/traco` (eventos `fato_adicionado` e `entradas`
+  das `regra_disparada`), para as duas respostas concordarem. Um fato corrigido por PUT é `resposta` nos dois.
 - **D6, contrato das respostas reais:** sem `jsonschema`. Cada resposta real e cada exemplo é validado com `TypeAdapter` do modelo
   registrado em `api/schemas/registro.py::CONTRATOS` (por `operationId`); o teste do `openapi.json` confere regeneração idêntica e que os
   `operationId` são os de `CONTRATOS`.

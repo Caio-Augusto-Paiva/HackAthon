@@ -10,7 +10,8 @@ O que a API acrescenta ao que o motor devolve:
   ``meta.versao`` interno); descarta ``bandeiras`` (já em ``urgencia.regras``);
 - "por quê?": a ``pergunta`` de uma pergunta da triagem (o evento da triagem não a traz);
 - "como?": o ``texto`` de cada regra (o evento ``regra_disparada`` não o traz) e a origem ``importacao`` no lugar
-  de ``ficha`` (decisão D5: o motor só conhece ``ficha``; ``origens_ficha`` diz o que veio do prontuário).
+  de ``ficha`` (decisão D5: o motor só conhece ``ficha``; ``origens_ficha`` diz o que veio do prontuário);
+- traço: a mesma troca de origem nos ``fato_adicionado`` e nas ``entradas`` das ``regra_disparada``.
 """
 from __future__ import annotations
 
@@ -105,22 +106,26 @@ def obter_porque(ctx: Contexto, sessao_id: str, simbolo: str) -> PorQue:
 # --- como? -----------------------------------------------------------------------------------
 
 
+def _origem(origem: str, simbolo: str, origens_ficha: Mapping[str, str]) -> str:
+    """``importacao`` no lugar de ``ficha`` para o símbolo que veio do prontuário; o resto fica como está.
+
+    Só reescreve ``origem == "ficha"``: depois de corrigir uma tela só de ficha, o fato é ``resposta`` e fica assim.
+    """
+    return "importacao" if origem == "ficha" and origens_ficha.get(simbolo) == "importacao" else origem
+
+
 def _completar(
     evidencias: list[dict],
     regras: Mapping[str, Regra],
     simbolos: Mapping[str, Simbolo],
     origens_ficha: Mapping[str, str],
 ) -> None:
-    """Acrescenta o ``texto`` a cada evidência e troca ``ficha`` por ``importacao``, descendo pelas aninhadas.
-
-    Só reescreve ``origem == "ficha"``: depois de corrigir uma tela só de ficha, o fato é ``resposta`` e fica assim.
-    """
+    """Acrescenta o ``texto`` a cada evidência e troca ``ficha`` por ``importacao`` (``_origem``), descendo pelas aninhadas."""
     for evidencia in evidencias:
         regra = regras.get(evidencia["regra_id"])
         evidencia["texto"] = texto_da_regra(regra, simbolos) if regra is not None else evidencia["regra_id"]
         for entrada in evidencia["entradas"]:
-            if entrada["origem"] == "ficha" and origens_ficha.get(entrada["simbolo"]) == "importacao":
-                entrada["origem"] = "importacao"
+            entrada["origem"] = _origem(entrada["origem"], entrada["simbolo"], origens_ficha)
             if entrada.get("evidencias"):
                 _completar(entrada["evidencias"], regras, simbolos, origens_ficha)
 
@@ -160,6 +165,18 @@ def obter_como(ctx: Contexto, sessao_id: str, simbolo: str) -> Como:
 
 
 def obter_traco(ctx: Contexto, sessao_id: str) -> Traco:
-    """Os eventos do motor como estão: o que alimenta o "por quê?" e o "como?"."""
+    """Os eventos do motor, com a mesma regra de origem do "como?": ``importacao`` no lugar de ``ficha``.
+
+    Vale para os ``fato_adicionado`` e para as ``entradas`` de cada ``regra_disparada``; o resto vai como o motor o gerou.
+    """
     carregada, _ = _ler(ctx, sessao_id)
-    return Traco(eventos=carregada.motor.traco)
+    origens_ficha = carregada.origens_ficha
+    eventos = []
+    for evento in carregada.motor.traco:
+        if evento["tipo"] == "fato_adicionado":
+            evento = {**evento, "origem": _origem(evento["origem"], evento["simbolo"], origens_ficha)}
+        elif evento["tipo"] == "regra_disparada":
+            entradas = [{**e, "origem": _origem(e["origem"], e["simbolo"], origens_ficha)} for e in evento["entradas"]]
+            evento = {**evento, "entradas": entradas}
+        eventos.append(evento)
+    return Traco(eventos=eventos)
