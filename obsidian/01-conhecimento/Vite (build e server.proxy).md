@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "document"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # Vite (build e server.proxy)
@@ -15,4 +15,4 @@ tags:
 - [[VITE_USAR_MOCKS (modo dev)]] - `conceptually_related_to` [INFERRED]
 - [[Vite 8.3.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local

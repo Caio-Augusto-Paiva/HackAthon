@@ -1,16 +1,16 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Arquitetura do motor e base"
+community: "Documentação e visão geral"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Arquitetura_do_motor_e_base
+  - graphify/INFERRED
+  - community/Documentação_e_visão_geral
 ---
 
 # Fraction, potencial conservador e seleção prioritária de bandeiras
 
 ## Connections
-- [[Inferência em três camadas e combinação racional MYCIN]] - `references` [EXTRACTED]
+- [[Modelo MYCIN de fatores de certeza]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Arquitetura_do_motor_e_base
+#graphify/rationale #graphify/INFERRED #community/Documentação_e_visão_geral

@@ -1,16 +1,16 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "concept"
-community: "Requisitos oficiais e evidências"
+community: "Casos de teste e hackathon"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Requisitos_oficiais_e_evidências
+  - community/Casos_de_teste_e_hackathon
 ---
 
 # Cinco tarefas TDD do motor (vermelho antes do verde)
 
 ## Connections
-- [[Casos de teste com resultado esperado por versão da base]] - `semantically_similar_to` [INFERRED]
+- [[Casos de teste com resultado esperado por versao da base]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Requisitos_oficiais_e_evidências
+#graphify/concept #graphify/INFERRED #community/Casos_de_teste_e_hackathon

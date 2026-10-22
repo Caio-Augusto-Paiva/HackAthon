@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "rationale"
-community: "Plano de API localhost"
+community: "Plano da API Seção 4"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Plano_de_API_localhost
+  - community/Plano_da_API_Seção_4
 ---
 
 # Motor sem estado entre requisições
@@ -15,4 +15,4 @@ tags:
 - [[sessao_motor.py (carregaraplicar)]] - `rationale_for` [EXTRACTED]
 - [[sessoes.snapshot_json]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Plano_de_API_localhost
+#graphify/rationale #graphify/EXTRACTED #community/Plano_da_API_Seção_4

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Revisão do motor"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Persistência_e_validação_da_base
+  - community/Revisão_do_motor
 ---
 
 # Focos da revisao (sem valor, contradicoes, loops, bandeiras)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Revisao do motor de inferencia (21102026)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/INFERRED #community/Revisão_do_motor

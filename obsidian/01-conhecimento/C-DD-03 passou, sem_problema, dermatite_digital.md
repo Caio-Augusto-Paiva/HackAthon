@@ -1,19 +1,18 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Dermatite digital e claudicação"
 location: "L2245"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Dermatite_digital_e_claudicação
 ---
 
 # C-DD-03: passou, sem_problema, dermatite_digital
 
 ## Connections
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - `references` [EXTRACTED]
 - [[Dermatite Digital Bovina (dermatite_digital)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_claudicação

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # frontend-design (skill)
@@ -14,4 +14,4 @@ tags:
 - [[React 19.3.1]] - `references` [INFERRED]
 - [[anthropicsskills (repositorio)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pesquisa_de_ferramentas_locais
+#graphify/document #graphify/EXTRACTED #community/Ferramentas_e_ambiente_local

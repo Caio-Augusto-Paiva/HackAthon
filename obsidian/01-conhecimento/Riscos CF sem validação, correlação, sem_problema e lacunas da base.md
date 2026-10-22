@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Integração e proveniência da base"
+community: "Grupo mamário por max"
 location: "L9-L14"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Grupo_mamário_por_max
 ---
 
 # Riscos: CF sem validação, correlação, sem_problema e lacunas da base
@@ -16,4 +16,4 @@ tags:
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/rationale #graphify/EXTRACTED #community/Grupo_mamário_por_max

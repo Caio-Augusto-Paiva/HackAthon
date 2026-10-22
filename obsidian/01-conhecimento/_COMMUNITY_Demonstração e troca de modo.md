@@ -1,30 +1,29 @@
 ---
 type: community
-members: 17
+cohesion: 0.14
+members: 14
 ---
 
 # Demonstração e troca de modo
 
-**Members:** 17 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 14 nodes
 
 ## Members
-- [[CF não é probabilidade clínica; sem_problema não comprova saúde]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Correção térmica PATCH origem → PUT correção → PATCH destino]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[E2E sintético com API real cobre troca e correções]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Exemplo aritmético MYCIN 0,60 e 0,50 combinam para 0,80]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Histórico corrigível por Voltar, incluindo observação térmica original]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Modo especialista da interface corresponde a veterinario na API]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Não sei CF zero sem inferir ausência]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Parecer parcial permite trocar modo e retomar anamnese]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Parecer único da API combina fatos antes e depois da troca]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Preparação banco fora do OneDrive e build local]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Reconciliação por GET após falha ou conflito]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Roteiro atual consulta React integrada e CLI de reserva]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Roteiro de alerta troca não apaga a bandeira; produtor tem pausa e especialista não]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Roteiro estimado da demo web 422, troca de modo, parecer único e alerta]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Trava única durante troca e correção]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Troca acessível anúncio e foco na pergunta devolvida]] - rationale - docs/entrega/05-apresentacao-e-demo.md
-- [[Troca produtor ↔ especialista sem reiniciar análise]] - rationale - docs/entrega/05-apresentacao-e-demo.md
+- [[Anúncio para leitores de tela e foco na pergunta]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Assets locais e E2E com API real]] - concept - docs/entrega/02-arquitetura.md
+- [[C-MAS-01 passou, observar, mastite]] - concept - docs/entrega/04-casos-de-teste.md
+- [[Caso C-MAS-01 mastite no produtor, depois especialista]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Comandos CLI alerta-decubito.json e sinais-mamarios.json]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[E2E troca-modo.spec.ts com API real]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Histórico corrigível por Voltar]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[PATCH usa o nome técnico veterinario]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Parecer parcial oferece a troca de modo]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Reserva núcleo por terminal (4 min)]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Trava de interação durante a troca]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Trecho Python Sessao, trocar_modo, exportar e restaurar]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Troca de modo sem reiniciar a análise]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Um único parecer combina respostas antes e depois da troca]] - concept - docs/entrega/05-apresentacao-e-demo.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,24 +33,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Processo documental verificável]]
-- 2 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
-- 2 edges to [[_COMMUNITY_Riscos e limites da entrega]]
-- 2 edges to [[_COMMUNITY_Revisões e decisões técnicas]]
-- 2 edges to [[_COMMUNITY_Arquitetura do motor e base]]
-- 2 edges to [[_COMMUNITY_Entrega, revisão e contatos]]
-- 1 edge to [[_COMMUNITY_Persistência e validação da base]]
+- 3 edges to [[_COMMUNITY_Roteiro de apresentação e demo]]
+- 2 edges to [[_COMMUNITY_Casos de teste sintéticos]]
+- 2 edges to [[_COMMUNITY_Integração web e contrato]]
 - 1 edge to [[_COMMUNITY_Regras e símbolos da v0002]]
-- 1 edge to [[_COMMUNITY_Hipocalcemia e mobilidade]]
-- 1 edge to [[_COMMUNITY_Sessões, API e motor]]
-- 1 edge to [[_COMMUNITY_Evidências de software e clínica]]
-- 1 edge to [[_COMMUNITY_Entrega e contatos da equipe]]
-- 1 edge to [[_COMMUNITY_Escopo e pendências reais]]
-- 1 edge to [[_COMMUNITY_Integração e proveniência da base]]
+- 1 edge to [[_COMMUNITY_Bandeiras e diálogo]]
+- 1 edge to [[_COMMUNITY_Perguntas da banca]]
+- 1 edge to [[_COMMUNITY_Log de revisões]]
 
 ## Top bridge nodes
-- [[Roteiro atual consulta React integrada e CLI de reserva]] - degree 31, connects to 11 communities
-- [[Troca produtor ↔ especialista sem reiniciar análise]] - degree 10, connects to 1 community
-- [[Roteiro estimado da demo web 422, troca de modo, parecer único e alerta]] - degree 7, connects to 1 community
-- [[Correção térmica PATCH origem → PUT correção → PATCH destino]] - degree 5, connects to 1 community
-- [[Preparação banco fora do OneDrive e build local]] - degree 3, connects to 1 community
+- [[Troca de modo sem reiniciar a análise]] - degree 11, connects to 4 communities
+- [[Assets locais e E2E com API real]] - degree 3, connects to 2 communities
+- [[C-MAS-01 passou, observar, mastite]] - degree 3, connects to 2 communities
+- [[Caso C-MAS-01 mastite no produtor, depois especialista]] - degree 4, connects to 1 community
+- [[Reserva núcleo por terminal (4 min)]] - degree 3, connects to 1 community

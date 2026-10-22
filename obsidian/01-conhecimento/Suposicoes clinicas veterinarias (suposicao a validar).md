@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "concept"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # Suposicoes clinicas veterinarias (suposicao a validar)
@@ -15,4 +15,4 @@ tags:
 - [[Fatores de certeza (CF) sem calibracao]] - `shares_data_with` [INFERRED]
 - [[Registro de suposicoes e lacunas (68 itens)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/concept #graphify/INFERRED #community/Ferramentas_e_ambiente_local

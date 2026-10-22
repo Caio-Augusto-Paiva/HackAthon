@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Dermatite digital e claudicação"
 location: "L162"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Dermatite_digital_e_claudicação
 ---
 
 # Claudicação (claudicacao)
@@ -17,4 +17,4 @@ tags:
 - [[R-DD-02 dermatite_digital (CF 0,5)]] - `references` [EXTRACTED]
 - [[Triagem 3 atitude_locomocao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_claudicação

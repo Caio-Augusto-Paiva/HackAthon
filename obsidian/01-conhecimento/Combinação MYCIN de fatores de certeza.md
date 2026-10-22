@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Limiares e fatores MYCIN"
+community: "Limiares e MYCIN"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Limiares_e_fatores_MYCIN
+  - community/Limiares_e_MYCIN
 ---
 
 # Combinação MYCIN de fatores de certeza
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Limiares de decisão (descarte, premissa, confirmação etc.)]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Limiares_e_fatores_MYCIN
+#graphify/concept #graphify/INFERRED #community/Limiares_e_MYCIN

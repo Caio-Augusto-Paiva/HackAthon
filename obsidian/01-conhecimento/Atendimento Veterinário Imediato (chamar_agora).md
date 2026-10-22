@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Bandeiras de urgência"
+community: "Urgência e hipocalcemia"
 location: "L161"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bandeiras_de_urgência
+  - community/Urgência_e_hipocalcemia
 ---
 
 # Atendimento Veterinário Imediato (chamar_agora)
@@ -24,4 +24,4 @@ tags:
 - [[R-URG-03 chamar_agora (CF 0,99)]] - `implements` [EXTRACTED]
 - [[R-URG-04 chamar_agora (CF 0,99)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bandeiras_de_urgência
+#graphify/concept #graphify/EXTRACTED #community/Urgência_e_hipocalcemia

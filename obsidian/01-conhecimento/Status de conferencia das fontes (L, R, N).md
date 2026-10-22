@@ -1,17 +1,17 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "rationale"
-community: "Conduta e fontes clínicas"
+community: "Limites clínicos"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Conduta_e_fontes_clínicas
+  - community/Limites_clínicos
 ---
 
 # Status de conferencia das fontes (L, R, N)
 
 ## Connections
-- [[Conhecimento veterinário sempre como suposição a validar]] - `semantically_similar_to` [INFERRED]
+- [[Conhecimento veterinario sempre suposicao a validar, citando fonte]] - `semantically_similar_to` [INFERRED]
 - [[MSD Vet Manual]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Conduta_e_fontes_clínicas
+#graphify/rationale #graphify/EXTRACTED #community/Limites_clínicos

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos e urgência"
+community: "Urgência e hipocalcemia"
 location: "L98"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_e_urgência
+  - community/Urgência_e_hipocalcemia
 ---
 
 # R-HIP-04: hipocalcemia (CF -0,4)
@@ -16,4 +16,4 @@ tags:
 - [[Febre (febre)]] - `references` [EXTRACTED]
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência
+#graphify/concept #graphify/EXTRACTED #community/Urgência_e_hipocalcemia

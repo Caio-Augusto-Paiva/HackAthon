@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Persistência e validação da base"
+community: "Plano do kb Seção 2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Plano_do_kb_Seção_2
 ---
 
 # Plano de implementação do kb (Seção 2)
@@ -22,4 +22,4 @@ tags:
 - [[Task 5 Repositório de versões]] - `references` [EXTRACTED]
 - [[Task 6 Integração com o motor, schema e documentação]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/document #graphify/EXTRACTED #community/Plano_do_kb_Seção_2

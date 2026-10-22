@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Camadas de símbolos"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Persistência_e_validação_da_base
+  - community/Camadas_de_símbolos
 ---
 
 # Dependências entre símbolos, ciclo e ordem topológica
@@ -15,4 +15,4 @@ tags:
 - [[Tabela de códigos do validador (E01-E19, W01-W03)]] - `conceptually_related_to` [INFERRED]
 - [[Task 2 Análise de dependências]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/INFERRED #community/Camadas_de_símbolos

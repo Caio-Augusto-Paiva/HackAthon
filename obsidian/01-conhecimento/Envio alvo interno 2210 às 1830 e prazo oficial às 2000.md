@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Entrega e contatos da equipe"
+community: "Roteiro de apresentação e demo"
 location: "L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entrega_e_contatos_da_equipe
+  - community/Roteiro_de_apresentação_e_demo
 ---
 
 # Envio: alvo interno 22/10 às 18:30 e prazo oficial às 20:00
 
 ## Connections
-- [[Prazos oficiais envio 22102026 20h e apresentação 23102026 09h]] - `references` [EXTRACTED]
+- [[Cronograma prazo 2210 2000, apresentação 2310 0900]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entrega_e_contatos_da_equipe
+#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_apresentação_e_demo

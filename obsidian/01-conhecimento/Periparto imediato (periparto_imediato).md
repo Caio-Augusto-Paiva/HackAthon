@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Regras e símbolos da v0002"
 location: "L190"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # Periparto imediato (periparto_imediato)
@@ -17,4 +17,4 @@ tags:
 - [[R-HIP-01 hipocalcemia (CF 0,65)]] - `references` [EXTRACTED]
 - [[R-HIP-02 hipocalcemia (CF 0,8)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

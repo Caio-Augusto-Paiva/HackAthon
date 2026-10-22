@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Pacote kb README"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Pacote_kb_README
 ---
 
 # kb/validador.py (validar, validar_dados, validar_edicao, Relatorio)
@@ -22,4 +22,4 @@ tags:
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `calls` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `calls` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_README

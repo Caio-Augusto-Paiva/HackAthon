@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Agentes de implementação"
+community: "Agentes de codificação por pessoa"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_de_implementação
+  - community/Agentes_de_codificação_por_pessoa
 ---
 
 # Claude Code (Claude Pro)
@@ -15,4 +15,4 @@ tags:
 - [[Claude Code fica com o critico e fora da revisao]] - `rationale_for` [EXTRACTED]
 - [[Implementacao por pessoa (A, B, C) com agente principal e reserva]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_de_implementação
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_codificação_por_pessoa

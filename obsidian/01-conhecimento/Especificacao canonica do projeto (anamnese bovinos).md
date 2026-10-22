@@ -1,11 +1,11 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "document"
-community: "Persistência e validação da base"
+community: "Revisão do motor"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Revisão_do_motor
 ---
 
 # Especificacao canonica do projeto (anamnese bovinos)
@@ -16,4 +16,4 @@ tags:
 - [[Revisao do motor de inferencia (21102026)]] - `references` [EXTRACTED]
 - [[Tabela de conformidade com a especificacao (16 itens)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/document #graphify/EXTRACTED #community/Revisão_do_motor

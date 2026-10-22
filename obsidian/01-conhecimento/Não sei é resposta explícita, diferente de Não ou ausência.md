@@ -1,12 +1,12 @@
 ---
 source_file: "PRODUCT.md"
 type: "concept"
-community: "Produto e limites clínicos"
+community: "Sistema visual e Figma"
 location: "L32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Produto_e_limites_clínicos
+  - community/Sistema_visual_e_Figma
 ---
 
 # Não sei é resposta explícita, diferente de Não ou ausência
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Produto_e_limites_clínicos
+#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Persistência e validação da base"
+community: "Motor e API README"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - graphify/INFERRED
+  - community/Motor_e_API_README
 ---
 
 # CF MYCIN com Fraction (sem arredondar para +-1)
@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[Nucleo sem estado inferir() e analisar()]] - `conceptually_related_to` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `rationale_for` [INFERRED]
+- [[Propagacao com fatores de certeza MYCIN]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/rationale #graphify/INFERRED #community/Motor_e_API_README

@@ -1,17 +1,17 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "concept"
-community: "Fontes clínicas contextuais"
+community: "Fontes clínicas MSD"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fontes_clínicas_contextuais
+  - community/Fontes_clínicas_MSD
 ---
 
 # Anaplasmose
 
 ## Connections
 - [[MSD Vet Manual]] - `cites` [EXTRACTED]
-- [[Tristeza parasitaria bovina (TPB)]] - `conceptually_related_to` [EXTRACTED]
+- [[Tristeza Parasitária Bovina (tpb)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fontes_clínicas_contextuais
+#graphify/concept #graphify/EXTRACTED #community/Fontes_clínicas_MSD

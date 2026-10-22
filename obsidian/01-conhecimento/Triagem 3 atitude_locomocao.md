@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Urgência e hipocalcemia"
 location: "L212"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Urgência_e_hipocalcemia
 ---
 
 # Triagem 3: atitude_locomocao
@@ -17,4 +17,4 @@ tags:
 - [[Decúbito (decubito)]] - `references` [EXTRACTED]
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Urgência_e_hipocalcemia

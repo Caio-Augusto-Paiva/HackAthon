@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Motor e API README"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Motor_e_API_README
 ---
 
 # Backend FastAPI + SQLite (casca fina sobre motor e kb)
@@ -14,8 +14,7 @@ tags:
 - [[API README (api)]] - `references` [EXTRACTED]
 - [[Decisao deterministica, sem LLM nem rede no caminho]] - `rationale_for` [EXTRACTED]
 - [[Host confiavel (TrustedHostMiddleware contra DNS rebinding)]] - `conceptually_related_to` [EXTRACTED]
-- [[Integração implementada React, FastAPIPydantic, SQLite e scripts localhost]] - `references` [EXTRACTED]
 - [[Motor de inferencia README (engine)]] - `references` [EXTRACTED]
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Motor_e_API_README

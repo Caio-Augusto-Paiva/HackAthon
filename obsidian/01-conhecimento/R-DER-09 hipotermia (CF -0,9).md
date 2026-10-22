@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos e urgência"
+community: "Sinais térmicos e febre"
 location: "L51"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_e_urgência
+  - community/Sinais_térmicos_e_febre
 ---
 
 # R-DER-09: hipotermia (CF -0,9)
@@ -16,4 +16,4 @@ tags:
 - [[Hipotermia (hipotermia)]] - `implements` [EXTRACTED]
 - [[Temperatura retal (temperatura_retal)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_febre

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "concept"
-community: "Assistentes e instruções"
+community: "Agentes de IA e limites"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Assistentes_e_instruções
+  - community/Agentes_de_IA_e_limites
 ---
 
 # GEMINI.md (instrucoes do projeto)
@@ -15,4 +15,4 @@ tags:
 - [[Gemini CLI]] - `references` [EXTRACTED]
 - [[Google Antigravity (app, IDE e CLI)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Assistentes_e_instruções
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_IA_e_limites

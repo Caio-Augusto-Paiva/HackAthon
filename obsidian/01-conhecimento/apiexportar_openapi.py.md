@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "code"
-community: "Plano de API localhost"
+community: "Schemas e contratos Pydantic"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Plano_de_API_localhost
+  - community/Schemas_e_contratos_Pydantic
 ---
 
 # api/exportar_openapi.py
@@ -14,4 +14,4 @@ tags:
 - [[Task 12 OpenAPI versionado e teste de contrato]] - `implements` [EXTRACTED]
 - [[contratosopenapi.json versionado]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Plano_de_API_localhost
+#graphify/code #graphify/EXTRACTED #community/Schemas_e_contratos_Pydantic

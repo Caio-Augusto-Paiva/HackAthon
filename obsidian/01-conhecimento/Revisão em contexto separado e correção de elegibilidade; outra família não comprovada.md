@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "rationale"
-community: "Entrega, revisão e contatos"
+community: "Revisão técnica da Seção 6"
 location: "L183-L189"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Revisão_técnica_da_Seção_6
 ---
 
 # Revisão em contexto separado e correção de elegibilidade; outra família não comprovada
@@ -15,4 +15,4 @@ tags:
 - [[R24 Elegibilidade e presença sem confirmação]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/rationale #graphify/EXTRACTED #community/Revisão_técnica_da_Seção_6

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # pytest parametrize com pytest.param(id=...)
@@ -14,4 +14,4 @@ tags:
 - [[Casos de teste inventados (enginecasos.py)]] - `shares_data_with` [INFERRED]
 - [[pytest 9.1.1]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/rationale #graphify/INFERRED #community/Ferramentas_e_ambiente_local

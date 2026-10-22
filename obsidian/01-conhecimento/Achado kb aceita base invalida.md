@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Correções finais da base"
+community: "Revisão final do kb"
 location: "L67"
 tags:
   - graphify/concept
   - graphify/AMBIGUOUS
-  - community/Correções_finais_da_base
+  - community/Revisão_final_do_kb
 ---
 
 # Achado kb aceita base invalida
@@ -16,4 +16,4 @@ tags:
 - [[Revisao final]] - `references` [EXTRACTED]
 - [[Rodada unica de correcao final]] - `rationale_for` [INFERRED]
 
-#graphify/concept #graphify/AMBIGUOUS #community/Correções_finais_da_base
+#graphify/concept #graphify/AMBIGUOUS #community/Revisão_final_do_kb

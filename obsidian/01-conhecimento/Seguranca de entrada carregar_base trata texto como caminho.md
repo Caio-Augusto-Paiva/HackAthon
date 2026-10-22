@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "rationale"
-community: "Persistência e validação da base"
+community: "Pacote kb README"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Pacote_kb_README
 ---
 
 # Seguranca de entrada: carregar_base trata texto como caminho
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/rationale #graphify/EXTRACTED #community/Pacote_kb_README

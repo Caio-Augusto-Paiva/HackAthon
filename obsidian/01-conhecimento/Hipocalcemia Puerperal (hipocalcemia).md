@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Urgência e hipocalcemia"
 location: "L180"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Urgência_e_hipocalcemia
 ---
 
 # Hipocalcemia Puerperal (hipocalcemia)
@@ -22,4 +22,4 @@ tags:
 - [[R-HIP-04 hipocalcemia (CF -0,4)]] - `implements` [EXTRACTED]
 - [[R-URG-01 chamar_agora (CF 0,99)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Urgência_e_hipocalcemia

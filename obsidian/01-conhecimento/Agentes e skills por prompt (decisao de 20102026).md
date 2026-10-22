@@ -1,13 +1,13 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "document"
-community: "Decisão sobre agentes"
+community: "Agentes e skills"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Decisão_sobre_agentes
+  - community/Agentes_e_skills
 ---
 
 # Agentes e skills por prompt (decisao de 20/10/2026)
 
-#graphify/document #graphify/EXTRACTED #community/Decisão_sobre_agentes
+#graphify/document #graphify/EXTRACTED #community/Agentes_e_skills

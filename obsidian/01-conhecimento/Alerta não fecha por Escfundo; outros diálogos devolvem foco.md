@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "concept"
-community: "Parecer, alerta e retomada"
+community: "Sistema visual e Figma"
 location: "L80"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Parecer_alerta_e_retomada
+  - graphify/EXTRACTED
+  - community/Sistema_visual_e_Figma
 ---
 
 # Alerta não fecha por Esc/fundo; outros diálogos devolvem foco
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Pausa exige alerta mesmo com proxima nulo]] - `semantically_similar_to` [INFERRED]
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
-- [[modal de bandeira usa ações do backend]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Parecer_alerta_e_retomada
+#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma

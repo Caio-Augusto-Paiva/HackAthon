@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "concept"
-community: "Assistentes e instruções"
+community: "Agentes de IA e limites"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Assistentes_e_instruções
+  - community/Agentes_de_IA_e_limites
 ---
 
 # Formato SKILL.md (Agent Skills)
@@ -15,4 +15,4 @@ tags:
 - [[Google Antigravity (app, IDE e CLI)]] - `implements` [EXTRACTED]
 - [[OpenAI Codex (CLI, IDE, app desktop)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Assistentes_e_instruções
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_IA_e_limites

@@ -12,6 +12,7 @@ tags:
 # Alteração visível do leite (leite_alterado)
 
 ## Connections
+- [[Ajustado grupo derivado max para caneca e alteracao do leite]] - `conceptually_related_to` [INFERRED]
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 - [[R-MAS-01 evidencia_alteracao_leite (CF 0,6)]] - `references` [EXTRACTED]
 - [[Triagem 5 producao_leite]] - `references` [EXTRACTED]

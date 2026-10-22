@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/suposicoes.md"
 type: "document"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # rodar.ps1 (script de execucao)
@@ -15,4 +15,4 @@ tags:
 - [[PowerShell ExecutionPolicy Bypass]] - `conceptually_related_to` [INFERRED]
 - [[uv (sync, run, python pin)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local

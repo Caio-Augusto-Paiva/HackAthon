@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Acidose e diarreia"
 location: "L60"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Acidose_e_diarreia
 ---
 
 # R-ACI-01: acidose (CF 0,35)
@@ -17,4 +17,4 @@ tags:
 - [[Diarreia (diarreia)]] - `references` [EXTRACTED]
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Acidose_e_diarreia

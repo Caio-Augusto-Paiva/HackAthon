@@ -1,19 +1,19 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "E2E e verificação offline"
+community: "Ensaio offline e Swagger"
 location: "L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/E2E_e_verificação_offline
+  - community/Ensaio_offline_e_Swagger
 ---
 
 # Ensaio HTTP histórico na v0001: saúde, sessão, explicações e 34/34 casos
 
 ## Connections
-- [[34 casos oito doenças, dois modos, seis bandeiras e regressão de diálogo]] - `references` [EXTRACTED]
+- [[1077 testes Python, 170 subtestes, 68 Vitest (2210)]] - `references` [EXTRACTED]
 - [[Backend ensaiado com TCPDNS externos bloqueados nos processos Python]] - `references` [EXTRACTED]
-- [[Camada 4b Playwright com API real e ativa v0002]] - `semantically_similar_to` [INFERRED]
+- [[Ensaio offline com Wi-Fi desligado pendente]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/E2E_e_verificação_offline
+#graphify/concept #graphify/EXTRACTED #community/Ensaio_offline_e_Swagger

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "rationale"
-community: "Riscos e limites da entrega"
+community: "Riscos e pendências"
 location: "L181"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riscos_e_limites_da_entrega
+  - community/Riscos_e_pendências
 ---
 
 # 60 Vitest e 11 E2E pertencem ao checkpoint 09f5754; não houve novo run web
@@ -15,4 +15,4 @@ tags:
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 - [[Verificação web 60 Vitest e 11 E2E no checkpoint 09f5754; axe nas telas exercitadas]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riscos_e_limites_da_entrega
+#graphify/rationale #graphify/EXTRACTED #community/Riscos_e_pendências

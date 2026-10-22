@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # FastAPI 0.156.4
@@ -16,4 +16,4 @@ tags:
 - [[Python 3.15.0]] - `references` [EXTRACTED]
 - [[uvicorn 0.54.0]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local

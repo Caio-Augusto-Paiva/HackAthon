@@ -1,18 +1,17 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Estado e instruções do projeto"
-location: "L89"
+community: "Arquitetura e instruções do projeto"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Estado_e_instruções_do_projeto
+  - community/Arquitetura_e_instruções_do_projeto
 ---
 
 # Sensores fora do escopo do PoC
 
 ## Connections
-- [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
-- [[Editor gráfico da base fora do escopo do PoC]] - `conceptually_related_to` [EXTRACTED]
+- [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
+- [[Fontes de dados externas prontuario, sensores, APIs]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto
+#graphify/concept #graphify/EXTRACTED #community/Arquitetura_e_instruções_do_projeto

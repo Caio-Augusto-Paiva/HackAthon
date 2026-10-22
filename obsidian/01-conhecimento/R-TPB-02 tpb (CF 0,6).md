@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Tristeza parasitária bovina"
 location: "L122"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Tristeza_parasitária_bovina
 ---
 
 # R-TPB-02: tpb (CF 0,6)
@@ -16,4 +16,4 @@ tags:
 - [[Mucosas pálidas ou amareladas (mucosas_palidas_ou_ictericas)]] - `references` [EXTRACTED]
 - [[Tristeza Parasitária Bovina (tpb)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Tristeza_parasitária_bovina

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "document"
-community: "Ledger de implementação kb"
+community: "Ledger SDD do motor"
 location: "L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ledger_de_implementação_kb
+  - community/Ledger_SDD_do_motor
 ---
 
 # Spec anamnese bovinos
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SDD ledger]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ledger_de_implementação_kb
+#graphify/document #graphify/EXTRACTED #community/Ledger_SDD_do_motor

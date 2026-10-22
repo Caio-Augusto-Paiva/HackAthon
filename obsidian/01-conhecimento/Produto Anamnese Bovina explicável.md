@@ -1,12 +1,12 @@
 ---
 source_file: "PRODUCT.md"
 type: "document"
-community: "Produto e limites clínicos"
+community: "Sistema visual e Figma"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Produto_e_limites_clínicos
+  - community/Sistema_visual_e_Figma
 ---
 
 # Produto: Anamnese Bovina explicável
@@ -16,10 +16,9 @@ tags:
 - [[Editor visual fora do frontend de anamnese]] - `references` [EXTRACTED]
 - [[Não sei é resposta explícita, diferente de Não ou ausência]] - `references` [EXTRACTED]
 - [[Números como string sem coerção, arredondamento ou CF]] - `references` [EXTRACTED]
-- [[PRODUCT.md e DESIGN.md a partir do protótipo]] - `references` [EXTRACTED]
 - [[Pausa exige alerta mesmo com proxima nulo]] - `references` [EXTRACTED]
 - [[Percentual é confiança do sistema; regras não validadas]] - `references` [EXTRACTED]
-- [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
+- [[Plano de implementação Frontend web (React)]] - `references` [EXTRACTED]
 - [[Produtor e médico-veterinário compartilham fatos e motor]] - `references` [EXTRACTED]
 - [[Prova de conceito localhost com casos e animais fictícios]] - `references` [EXTRACTED]
 - [[Rede, base ausente, carregamento, duplo envio e 409]] - `references` [EXTRACTED]
@@ -28,4 +27,4 @@ tags:
 - [[Tom próximolúdico no diálogo e sério na gravidade]] - `references` [EXTRACTED]
 - [[Triagem estruturada de vaca em lactação, com hipóteses e explicações]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Produto_e_limites_clínicos
+#graphify/document #graphify/EXTRACTED #community/Sistema_visual_e_Figma

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/execucao-local.md"
 type: "rationale"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # FastAPI app.frontend() servindo SPA do Vite
@@ -14,4 +14,4 @@ tags:
 - [[FastAPI 0.156.4]] - `references` [INFERRED]
 - [[Vite (build e server.proxy)]] - `shares_data_with` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/rationale #graphify/INFERRED #community/Ferramentas_e_ambiente_local

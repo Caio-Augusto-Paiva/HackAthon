@@ -1,20 +1,19 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Demonstração e troca de modo"
 location: "L52"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Demonstração_e_troca_de_modo
 ---
 
 # C-MAS-01: passou, observar, mastite
 
 ## Connections
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
-- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - `references` [EXTRACTED]
+- [[Caso C-MAS-01 mastite no produtor, depois especialista]] - `references` [EXTRACTED]
 - [[Mastite (mastite)]] - `references` [EXTRACTED]
-- [[Roteiro estimado da demo web 422, troca de modo, parecer único e alerta]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Demonstração_e_troca_de_modo

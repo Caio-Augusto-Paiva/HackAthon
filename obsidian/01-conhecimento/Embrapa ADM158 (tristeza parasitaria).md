@@ -1,16 +1,16 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Fontes clínicas contextuais"
+community: "Tristeza parasitária bovina"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Fontes_clínicas_contextuais
+  - community/Tristeza_parasitária_bovina
 ---
 
 # Embrapa ADM158 (tristeza parasitaria)
 
 ## Connections
-- [[Tristeza parasitaria bovina (TPB)]] - `cites` [EXTRACTED]
+- [[Tristeza Parasitária Bovina (tpb)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Fontes_clínicas_contextuais
+#graphify/document #graphify/EXTRACTED #community/Tristeza_parasitária_bovina

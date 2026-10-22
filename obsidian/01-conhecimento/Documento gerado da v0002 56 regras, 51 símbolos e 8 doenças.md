@@ -16,7 +16,6 @@ tags:
 - [[Alteração visível do leite (leite_alterado)]] - `references` [EXTRACTED]
 - [[Apatia (apatia)]] - `references` [EXTRACTED]
 - [[Apetite (apetite)]] - `references` [EXTRACTED]
-- [[Arquitetura implementada React→FastAPI→Sessao, kbv0002 e SQLite]] - `references` [EXTRACTED]
 - [[Atendimento Veterinário Imediato (chamar_agora)]] - `references` [EXTRACTED]
 - [[Aumento uterino à palpação (utero_aumentado_palpacao)]] - `references` [EXTRACTED]
 - [[BHB sanguíneo (bhb_sanguineo)]] - `references` [EXTRACTED]
@@ -40,10 +39,8 @@ tags:
 - [[Fezes com espuma e grãos (fezes_aquosas_espuma_graos)]] - `references` [EXTRACTED]
 - [[Flanco esquerdo afundado (flanco_esquerdo_afundado)]] - `references` [EXTRACTED]
 - [[Fontes contextuais; todos os 56 CF como suposição a validar]] - `references` [EXTRACTED]
-- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
 - [[Grumos na caneca (teste_caneca_grumos)]] - `references` [EXTRACTED]
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
-- [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Hemoparasitas no esfregaço (esfregaco_hemoparasitas)]] - `references` [EXTRACTED]
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - `references` [EXTRACTED]
 - [[Hipotermia (hipotermia)]] - `references` [EXTRACTED]
@@ -121,7 +118,6 @@ tags:
 - [[R-URG-07 observar (CF 0,8)]] - `references` [EXTRACTED]
 - [[R-URG-08 observar (CF 0,7)]] - `references` [EXTRACTED]
 - [[Recusa seletiva de concentrado (recusa_concentrado_come_volumoso)]] - `references` [EXTRACTED]
-- [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[Sem evidência de urgência pelos critérios da base (sem_problema)]] - `references` [EXTRACTED]
 - [[Temperatura ao toque das extremidades (extremidades)]] - `references` [EXTRACTED]
 - [[Temperatura retal (temperatura_retal)]] - `references` [EXTRACTED]
@@ -134,6 +130,5 @@ tags:
 - [[Tristeza Parasitária Bovina (tpb)]] - `references` [EXTRACTED]
 - [[Urina escura (urina_escura)]] - `references` [EXTRACTED]
 - [[pH ruminal (ph_ruminal)]] - `references` [EXTRACTED]
-- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

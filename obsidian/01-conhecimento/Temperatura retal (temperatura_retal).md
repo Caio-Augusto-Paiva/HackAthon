@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos e urgência"
+community: "Sinais térmicos e febre"
 location: "L199"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_e_urgência
+  - community/Sinais_térmicos_e_febre
 ---
 
 # Temperatura retal (temperatura_retal)
@@ -20,4 +20,4 @@ tags:
 - [[R-DER-09 hipotermia (CF -0,9)]] - `references` [EXTRACTED]
 - [[Triagem 2 estado_termico]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_febre

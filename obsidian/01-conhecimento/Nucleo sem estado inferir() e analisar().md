@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # Nucleo sem estado inferir() e analisar()
@@ -16,4 +16,4 @@ tags:
 - [[Potencial conservador com intervalos inferiorsuperior]] - `conceptually_related_to` [EXTRACTED]
 - [[Traco de inferencia e eventos (fato_adicionado, regra_disparada)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/concept #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

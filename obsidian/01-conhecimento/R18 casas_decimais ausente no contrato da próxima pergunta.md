@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Parecer, retomada e limites"
+community: "Integração web e contrato"
 location: "L86"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_retomada_e_limites
+  - community/Integração_web_e_contrato
 ---
 
 # R18: casas_decimais ausente no contrato da próxima pergunta
 
 ## Connections
-- [[Precisão não exposta por proxima; backend valida casas decimais]] - `references` [EXTRACTED]
+- [[Precisão numérica validada pelo backend (R18)]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_retomada_e_limites
+#graphify/concept #graphify/EXTRACTED #community/Integração_web_e_contrato

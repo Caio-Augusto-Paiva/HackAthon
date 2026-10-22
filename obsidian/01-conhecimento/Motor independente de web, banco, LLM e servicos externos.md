@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Persistência e validação da base"
+community: "Motor e API README"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Persistência_e_validação_da_base
+  - community/Motor_e_API_README
 ---
 
 # Motor independente de web, banco, LLM e servicos externos
@@ -16,4 +16,4 @@ tags:
 - [[Organizacao dos modulos do motor]] - `rationale_for` [INFERRED]
 - [[kb como pacote folha (nao importa engine)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Persistência_e_validação_da_base
+#graphify/rationale #graphify/INFERRED #community/Motor_e_API_README

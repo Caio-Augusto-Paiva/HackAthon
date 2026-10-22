@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "document"
-community: "Persistência e validação da base"
+community: "Plano do kb Seção 2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Plano_do_kb_Seção_2
 ---
 
 # Task 1: Ambiente e modelos Pydantic
@@ -24,4 +24,4 @@ tags:
 - [[Tela de triagem]] - `implements` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/document #graphify/EXTRACTED #community/Plano_do_kb_Seção_2

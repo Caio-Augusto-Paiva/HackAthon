@@ -1,16 +1,16 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Componentes do sistema especialista"
+community: "Arquitetura e instruções do projeto"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Componentes_do_sistema_especialista
+  - community/Arquitetura_e_instruções_do_projeto
 ---
 
 # Restauracao da sessao a partir do banco (ausente, bloqueia a API)
 
 ## Connections
-- [[Memória de trabalho da sessão]] - `conceptually_related_to` [INFERRED]
+- [[Memoria de trabalho respostas e conclusoes da sessao]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Componentes_do_sistema_especialista
+#graphify/concept #graphify/INFERRED #community/Arquitetura_e_instruções_do_projeto

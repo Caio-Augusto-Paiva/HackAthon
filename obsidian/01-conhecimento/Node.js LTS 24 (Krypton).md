@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/versoes-bibliotecas.md"
 type: "document"
-community: "Pesquisa de ferramentas locais"
+community: "Ferramentas e ambiente local"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Pesquisa_de_ferramentas_locais
+  - community/Ferramentas_e_ambiente_local
 ---
 
 # Node.js LTS 24 (Krypton)
@@ -17,4 +17,4 @@ tags:
 - [[TypeScript 7.0.2]] - `references` [EXTRACTED]
 - [[Vite 8.3.4]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Pesquisa_de_ferramentas_locais
+#graphify/document #graphify/INFERRED #community/Ferramentas_e_ambiente_local

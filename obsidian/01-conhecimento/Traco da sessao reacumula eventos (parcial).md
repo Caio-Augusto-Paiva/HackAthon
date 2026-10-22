@@ -1,16 +1,16 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Componentes do sistema especialista"
+community: "Restrições obrigatórias"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Componentes_do_sistema_especialista
+  - community/Restrições_obrigatórias
 ---
 
 # Traco da sessao reacumula eventos (parcial)
 
 ## Connections
-- [[Traço de inferência para explicar as conclusões]] - `conceptually_related_to` [INFERRED]
+- [[Traco de inferencia]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Componentes_do_sistema_especialista
+#graphify/concept #graphify/INFERRED #community/Restrições_obrigatórias

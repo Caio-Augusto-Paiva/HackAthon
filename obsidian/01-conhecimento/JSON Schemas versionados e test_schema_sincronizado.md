@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Pacote kb README"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Pacote_kb_README
 ---
 
 # JSON Schemas versionados e test_schema_sincronizado
@@ -14,4 +14,4 @@ tags:
 - [[Task 6 Integração com o motor, schema e documentação]] - `implements` [EXTRACTED]
 - [[kbmodelos.py (modelos Pydantic, carregar_base, para_motor)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_README

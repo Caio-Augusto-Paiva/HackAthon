@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Bandeiras de urgência"
+community: "Urgência e hipocalcemia"
 location: "L134"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bandeiras_de_urgência
+  - community/Urgência_e_hipocalcemia
 ---
 
 # R-BV-05: chamar_agora (CF 0,99)
@@ -19,4 +19,4 @@ tags:
 - [[Febre (febre)]] - `references` [EXTRACTED]
 - [[Inflamação do úbere (ubere_inflamado)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bandeiras_de_urgência
+#graphify/concept #graphify/EXTRACTED #community/Urgência_e_hipocalcemia

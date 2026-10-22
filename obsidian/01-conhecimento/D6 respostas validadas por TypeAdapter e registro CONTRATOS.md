@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Contratos e integração localhost"
+community: "Contrato OpenAPI"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Contrato_OpenAPI
 ---
 
 # D6: respostas validadas por TypeAdapter e registro CONTRATOS
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Contrato OpenAPI versionado e exemplos por operationId]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/rationale #graphify/EXTRACTED #community/Contrato_OpenAPI

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # Traco de inferencia e eventos (fato_adicionado, regra_disparada)
@@ -15,4 +15,4 @@ tags:
 - [[Explicacao por que e como (porquecomo)]] - `shares_data_with` [EXTRACTED]
 - [[Nucleo sem estado inferir() e analisar()]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/concept #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Entrega, revisão e contatos"
+community: "Ensaio e envio pendentes"
 location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Ensaio_e_envio_pendentes
 ---
 
 # R22: Reprodutibilidade Python sem lockfile
@@ -16,4 +16,4 @@ tags:
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[S6-09 achado histórico — Lockfile prometido não existe]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/rationale #graphify/EXTRACTED #community/Ensaio_e_envio_pendentes

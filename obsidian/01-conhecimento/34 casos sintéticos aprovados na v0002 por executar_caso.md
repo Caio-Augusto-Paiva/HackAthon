@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "document"
-community: "Casos sintéticos na v0002"
+community: "Casos de teste sintéticos"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Casos_de_teste_sintéticos
 ---
 
 # 34 casos sintéticos aprovados na v0002 por executar_caso
 
 ## Connections
-- [[Arquitetura implementada React→FastAPI→Sessao, kbv0002 e SQLite]] - `references` [EXTRACTED]
+- [[34 casos sintéticos em basecasoscasos.json]] - `semantically_similar_to` [INFERRED]
 - [[C-ACI-01 passou, observar, acidose]] - `references` [EXTRACTED]
 - [[C-ACI-02 passou, observar, acidose]] - `references` [EXTRACTED]
 - [[C-ACI-03 passou, sem_problema, acidose]] - `references` [EXTRACTED]
@@ -48,9 +48,6 @@ tags:
 - [[Casos sintéticos verificam software, sem métricas clínicas]] - `references` [EXTRACTED]
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
-- [[Gerador segue ativa v0002 e verifica sincronismo de regrascasos]] - `implements` [EXTRACTED]
-- [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/document #graphify/EXTRACTED #community/Casos_de_teste_sintéticos

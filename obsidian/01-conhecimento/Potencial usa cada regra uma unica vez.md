@@ -1,13 +1,13 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-20-motor-secao-1.md"
 type: "rationale"
-community: "Cálculo de potencial"
+community: "Potencial das regras"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Cálculo_de_potencial
+  - community/Potencial_das_regras
 ---
 
 # Potencial usa cada regra uma unica vez
 
-#graphify/rationale #graphify/EXTRACTED #community/Cálculo_de_potencial
+#graphify/rationale #graphify/EXTRACTED #community/Potencial_das_regras

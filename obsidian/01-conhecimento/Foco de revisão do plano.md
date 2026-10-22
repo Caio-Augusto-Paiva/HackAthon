@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-kb-secao-2.md"
 type: "rationale"
-community: "Persistência e validação da base"
+community: "Plano do kb Seção 2"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Plano_do_kb_Seção_2
 ---
 
 # Foco de revisão do plano
@@ -18,4 +18,4 @@ tags:
 - [[Task 5 Repositório de versões]] - `rationale_for` [EXTRACTED]
 - [[Task 6 Integração com o motor, schema e documentação]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/rationale #graphify/EXTRACTED #community/Plano_do_kb_Seção_2

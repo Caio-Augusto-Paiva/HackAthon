@@ -1,18 +1,18 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "rationale"
-community: "Evidências de software e clínica"
+community: "Evidência de testes"
 location: "L166-L179"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Evidências_de_software_e_clínica
+  - community/Evidência_de_testes
 ---
 
 # Revisão executou novamente Python: 1066 aprovados, 1 ignorado, 170 subtestes
 
 ## Connections
-- [[Evidências distintas 1066 Python, 1 ignorado, 170 subtestes, 34 casos; web 6011 no checkpoint]] - `references` [EXTRACTED]
+- [[Evidência de testes (1077 Python, 68 Vitest)]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Evidências_de_software_e_clínica
+#graphify/rationale #graphify/EXTRACTED #community/Evidência_de_testes

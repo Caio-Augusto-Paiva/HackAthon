@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.18
 members: 13
 ---
 
 # Cetose e início da lactação
 
+**Cohesion:** 0.18 - loosely connected
 **Members:** 13 nodes
 
 ## Members
@@ -13,12 +15,12 @@ members: 13
 - [[Hálito adocicado (halito_adocicado_acetona)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Inicio lactacao (inicio_lactacao)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Queda de produção de leite (queda_producao)]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-BV-03 chamar_agora (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-CET-01 cetose (CF 0,4)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-CET-02 cetose (CF 0,5)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-CET-03 cetose (CF 0,45)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DAB-01 deslocamento_abomaso (CF 0,3)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[R-DAB-02 deslocamento_abomaso (CF 0,4)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[R-DER-03 inicio_lactacao (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Recusa seletiva de concentrado (recusa_concentrado_come_volumoso)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Triagem 4 apetite_ruminacao]] - concept - docs/entrega/03-regras-de-producao.md
 
@@ -31,13 +33,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_Regras e símbolos da v0002]]
-- 6 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
-- 2 edges to [[_COMMUNITY_Bandeiras de urgência]]
-- 1 edge to [[_COMMUNITY_Metrite e puerpério]]
+- 5 edges to [[_COMMUNITY_Casos de teste sintéticos]]
+- 1 edge to [[_COMMUNITY_Acidose e diarreia]]
+- 1 edge to [[_COMMUNITY_Urgência e hipocalcemia]]
 
 ## Top bridge nodes
-- [[R-BV-03 chamar_agora (CF 0,99)]] - degree 5, connects to 3 communities
-- [[Inicio lactacao (inicio_lactacao)]] - degree 7, connects to 2 communities
-- [[R-DAB-01 deslocamento_abomaso (CF 0,3)]] - degree 5, connects to 2 communities
+- [[Apetite (apetite)]] - degree 6, connects to 3 communities
 - [[R-CET-01 cetose (CF 0,4)]] - degree 5, connects to 2 communities
-- [[R-DAB-02 deslocamento_abomaso (CF 0,4)]] - degree 4, connects to 2 communities
+- [[R-DAB-01 deslocamento_abomaso (CF 0,3)]] - degree 5, connects to 2 communities
+- [[R-CET-02 cetose (CF 0,5)]] - degree 4, connects to 2 communities
+- [[R-CET-03 cetose (CF 0,45)]] - degree 4, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Tristeza parasitária bovina"
 location: "L123"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Tristeza_parasitária_bovina
 ---
 
 # R-TPB-03: tpb (CF 0,35)
@@ -17,4 +17,4 @@ tags:
 - [[Febre (febre)]] - `references` [EXTRACTED]
 - [[Tristeza Parasitária Bovina (tpb)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Tristeza_parasitária_bovina

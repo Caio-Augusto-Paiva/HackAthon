@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Casos de teste sintéticos"
 location: "L168"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Casos_de_teste_sintéticos
 ---
 
 # Deslocamento de Abomaso (deslocamento_abomaso)
@@ -26,4 +26,4 @@ tags:
 - [[R-DAB-03 deslocamento_abomaso (CF 0,9)]] - `implements` [EXTRACTED]
 - [[R-URG-03 chamar_agora (CF 0,99)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_sintéticos

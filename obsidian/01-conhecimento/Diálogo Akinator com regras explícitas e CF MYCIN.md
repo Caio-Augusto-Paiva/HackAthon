@@ -1,12 +1,12 @@
 ---
 source_file: "PRODUCT.md"
 type: "concept"
-community: "Produto e limites clínicos"
+community: "Sistema visual e Figma"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Produto_e_limites_clínicos
+  - community/Sistema_visual_e_Figma
 ---
 
 # Diálogo Akinator com regras explícitas e CF MYCIN
@@ -15,4 +15,4 @@ tags:
 - [[Identidade Figma e autoridade API preservadas]] - `semantically_similar_to` [INFERRED]
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Produto_e_limites_clínicos
+#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma

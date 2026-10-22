@@ -1,11 +1,11 @@
 ---
 source_file: "docs/pesquisa/agentes-e-skills.md"
 type: "document"
-community: "Assistentes e instruções"
+community: "Agentes de IA e limites"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Assistentes_e_instruções
+  - community/Agentes_de_IA_e_limites
 ---
 
 # Claude Code
@@ -15,4 +15,4 @@ tags:
 - [[Formato SKILL.md (Agent Skills)]] - `implements` [EXTRACTED]
 - [[Limites de uso dos planos]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Assistentes_e_instruções
+#graphify/document #graphify/EXTRACTED #community/Agentes_de_IA_e_limites

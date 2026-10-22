@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação do sistema especialista"
+community: "Especificação e arquitetura do sistema"
 location: "Seção 4.3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_do_sistema_especialista
+  - community/Especificação_e_arquitetura_do_sistema
 ---
 
 # Memória de trabalho (engine/memoria.py)
@@ -15,6 +15,6 @@ tags:
 - [[Correções e recálculo dos fatos]] - `references` [INFERRED]
 - [[Importação de prontuário CSVJSON]] - `shares_data_with` [EXTRACTED]
 - [[Motor de inferência (engine)]] - `references` [EXTRACTED]
-- [[Pacote engine_1]] - `implements` [EXTRACTED]
+- [[Pacote engine]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema

@@ -1,17 +1,16 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Arquitetura do motor e base"
+community: "Processo de desenvolvimento e IA"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Arquitetura_do_motor_e_base
+  - graphify/INFERRED
+  - community/Processo_de_desenvolvimento_e_IA
 ---
 
 # Sessao: triagem, diálogo, modo, bandeiras, parecer e porque/como
 
 ## Connections
-- [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
-- [[Triagem e bandeiras por prefixos na ordem real das respostas]] - `implements` [EXTRACTED]
+- [[2210 troca produtorespecialista, historico corrigivel, parecer unico]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arquitetura_do_motor_e_base
+#graphify/concept #graphify/INFERRED #community/Processo_de_desenvolvimento_e_IA

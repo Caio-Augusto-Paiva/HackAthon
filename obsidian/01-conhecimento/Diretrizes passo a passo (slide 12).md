@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Base de conhecimento e anamnese"
+community: "Instruções CLAUDE e AGENTS"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Base_de_conhecimento_e_anamnese
+  - community/Instruções_CLAUDE_e_AGENTS
 ---
 
 # Diretrizes passo a passo (slide 12)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Sistema especialista para anamnese de bovinos leiteiros]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Base_de_conhecimento_e_anamnese
+#graphify/concept #graphify/EXTRACTED #community/Instruções_CLAUDE_e_AGENTS

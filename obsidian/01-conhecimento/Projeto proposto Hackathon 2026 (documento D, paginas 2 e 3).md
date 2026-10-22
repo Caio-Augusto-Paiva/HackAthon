@@ -1,18 +1,18 @@
 ---
 source_file: "docs/fontes/transcricao-documentario-rerum.md"
 type: "concept"
-community: "Inferência determinística sem LLM"
+community: "Casos de teste e hackathon"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Inferência_determinística_sem_LLM
+  - community/Casos_de_teste_e_hackathon
 ---
 
 # Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)
 
 ## Connections
 - [[Desenvolvimento de Sistemas Especialistas com Vibe Coding]] - `references` [EXTRACTED]
+- [[Open source; linguagem a escolha do grupo]] - `references` [EXTRACTED]
 - [[Projeto proposto (slide 8)]] - `shares_data_with` [INFERRED]
-- [[Restrição oficial de código aberto]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Inferência_determinística_sem_LLM
+#graphify/concept #graphify/EXTRACTED #community/Casos_de_teste_e_hackathon

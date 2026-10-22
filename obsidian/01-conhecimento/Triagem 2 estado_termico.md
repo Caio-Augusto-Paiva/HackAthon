@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos e urgência"
+community: "Sinais térmicos e febre"
 location: "L211"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_e_urgência
+  - community/Sinais_térmicos_e_febre
 ---
 
 # Triagem 2: estado_termico
@@ -16,4 +16,4 @@ tags:
 - [[Temperatura ao toque das extremidades (extremidades)]] - `references` [EXTRACTED]
 - [[Temperatura retal (temperatura_retal)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_febre

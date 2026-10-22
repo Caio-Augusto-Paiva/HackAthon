@@ -1,11 +1,11 @@
 ---
 source_file: "docs/agentes-e-skills.md"
 type: "concept"
-community: "Agentes de implementação"
+community: "Agentes de codificação por pessoa"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Agentes_de_implementação
+  - community/Agentes_de_codificação_por_pessoa
 ---
 
 # Alocacao de agente principal e alternativa por prompt de revisao
@@ -20,4 +20,4 @@ tags:
 - [[anthropicsskills (pptx, docx, pdf, webapp-testing, frontend-design)]] - `references` [EXTRACTED]
 - [[obrasuperpowers (skills em formato aberto)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Agentes_de_implementação
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_codificação_por_pessoa

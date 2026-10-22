@@ -1,18 +1,18 @@
 ---
 source_file: "docs/processo/C.md"
 type: "rationale"
-community: "Processo documental verificável"
+community: "Plano de documentação parcial"
 location: "L17"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Plano_de_documentação_parcial
 ---
 
 # Ensaio humano pendente: CF, bandeiras, desconhecimento, troca de modo e duração real
 
 ## Connections
+- [[Ensaio, slides e PDFs finais pendentes]] - `semantically_similar_to` [INFERRED]
 - [[Papel C diário a preencher, sem interações ou aprendizado inventados]] - `references` [EXTRACTED]
-- [[Pendentes ensaio humano, material visual final e tempo oficial]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/rationale #graphify/EXTRACTED #community/Plano_de_documentação_parcial

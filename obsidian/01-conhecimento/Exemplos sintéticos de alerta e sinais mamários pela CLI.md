@@ -1,11 +1,11 @@
 ---
 source_file: "base/desenvolvimento/LEIA-ME.txt"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Escopo e integração entregue"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Escopo_e_integração_entregue
 ---
 
 # Exemplos sintéticos de alerta e sinais mamários pela CLI
@@ -15,4 +15,4 @@ tags:
 - [[DEV-BV-01 passou, chamar_agora, hipocalcemia]] - `references` [EXTRACTED]
 - [[DEV-MAS-01 passou, observar, mastite]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Escopo_e_integração_entregue

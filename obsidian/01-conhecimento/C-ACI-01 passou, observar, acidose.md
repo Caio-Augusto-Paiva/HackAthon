@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Acidose e diarreia"
 location: "L1772"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Acidose_e_diarreia
 ---
 
 # C-ACI-01: passou, observar, acidose
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[34 casos sintéticos aprovados na v0002 por executar_caso]] - `references` [EXTRACTED]
 - [[Acidose Ruminal (acidose)]] - `references` [EXTRACTED]
-- [[Base ativa v0002 e versões imutáveis preservadas; ativação não é aprovação clínica]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Acidose_e_diarreia

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Revisão do validador kb"
+community: "Validador de erros kb"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Revisão_do_validador_kb
+  - community/Validador_de_erros_kb
 ---
 
 # validar
@@ -22,4 +22,4 @@ tags:
 - [[Formato de id gera E20]] - `rationale_for` [EXTRACTED]
 - [[Task 4]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Revisão_do_validador_kb
+#graphify/code #graphify/EXTRACTED #community/Validador_de_erros_kb

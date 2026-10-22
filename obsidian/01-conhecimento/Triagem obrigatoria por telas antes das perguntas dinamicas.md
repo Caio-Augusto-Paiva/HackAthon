@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # Triagem obrigatoria por telas antes das perguntas dinamicas
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/concept #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

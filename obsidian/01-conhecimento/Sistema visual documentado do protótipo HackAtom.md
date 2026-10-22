@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "document"
-community: "Sistema visual e componentes"
+community: "Sistema visual e Figma"
 location: "L48-L54"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Sistema_visual_e_componentes
+  - community/Sistema_visual_e_Figma
 ---
 
 # Sistema visual documentado do protótipo HackAtom
@@ -24,7 +24,6 @@ tags:
 - [[Figma HackAtomProtótipo como referência conferida]] - `references` [EXTRACTED]
 - [[Identidade Figma e autoridade API preservadas]] - `references` [EXTRACTED]
 - [[Opções radiocheckbox com fieldset e legend]] - `references` [EXTRACTED]
-- [[PRODUCT.md e DESIGN.md a partir do protótipo]] - `references` [EXTRACTED]
 - [[Parecer em tabela semântica, caption e blocos da API]] - `references` [EXTRACTED]
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 - [[Sombras claymórficas suaves e brilho SVG original]] - `references` [EXTRACTED]
@@ -47,4 +46,4 @@ tags:
 - [[Uma transição de balão subida leve e fade]] - `references` [EXTRACTED]
 - [[Varela Round em títulos e Nunito Sans no conteúdo]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Sistema_visual_e_componentes
+#graphify/document #graphify/EXTRACTED #community/Sistema_visual_e_Figma

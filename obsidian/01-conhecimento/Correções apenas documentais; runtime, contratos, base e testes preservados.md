@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "rationale"
-community: "Entrega, revisão e contatos"
+community: "Ensaio e envio pendentes"
 location: "L160-L164"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Ensaio_e_envio_pendentes
 ---
 
 # Correções apenas documentais; runtime, contratos, base e testes preservados
@@ -15,4 +15,4 @@ tags:
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/rationale #graphify/EXTRACTED #community/Ensaio_e_envio_pendentes

@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # D5: origem importacao reescrita pela API no como e no traco
@@ -16,4 +16,4 @@ tags:
 - [[Observacoes com valor, cf e origem (resposta, ficha, importacao)]] - `references` [EXTRACTED]
 - [[Traco de inferencia e eventos (fato_adicionado, regra_disparada)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/rationale #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

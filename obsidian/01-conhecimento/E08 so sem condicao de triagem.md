@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Revisão do validador kb"
+community: "Validador de erros kb"
 location: "L50"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Revisão_do_validador_kb
+  - community/Validador_de_erros_kb
 ---
 
 # E08 so sem condicao de triagem
@@ -16,4 +16,4 @@ tags:
 - [[E11 criterio de triagem]] - `references` [EXTRACTED]
 - [[validar]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Revisão_do_validador_kb
+#graphify/rationale #graphify/EXTRACTED #community/Validador_de_erros_kb

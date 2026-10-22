@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação do sistema especialista"
+community: "Especificação e arquitetura do sistema"
 location: "Seções 4.9, 5.5, 6.4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_do_sistema_especialista
+  - community/Especificação_e_arquitetura_do_sistema
 ---
 
 # Decisões do arquiteto (4.9, 5.5, 6.4)
@@ -16,4 +16,4 @@ tags:
 - [[Grafo bipartido símbolo-regra (conversão 11)]] - `references` [INFERRED]
 - [[Trabalho em paralelo ABC por pasta]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema

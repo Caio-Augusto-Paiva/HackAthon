@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Hipocalcemia e mobilidade"
+community: "Regras e símbolos da v0002"
 location: "L96"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Hipocalcemia_e_mobilidade
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # R-HIP-02: hipocalcemia (CF 0,8)
@@ -18,4 +18,4 @@ tags:
 - [[Hipotermia (hipotermia)]] - `references` [EXTRACTED]
 - [[Periparto imediato (periparto_imediato)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

@@ -1,21 +1,19 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Parecer, alerta e retomada"
+community: "Bandeiras e diálogo"
 location: "L89"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Parecer_alerta_e_retomada
+  - graphify/EXTRACTED
+  - community/Bandeiras_e_diálogo
 ---
 
 # R21: continuidade após parada automática permanece limitada pelo backend
 
 ## Connections
+- [[Continuar respondendo após encerrar pelo alerta]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
-- [[Retomada manual do Parecer pelo alerta continuar e navegar pelo estado]] - `references` [EXTRACTED]
-- [[Task 5 Alerta de bandeira — implementada com alcance documentado]] - `conceptually_related_to` [INFERRED]
-- [[modal de bandeira usa ações do backend]] - `conceptually_related_to` [INFERRED]
-- [[parecer de oito doenças, blocos e Como cheguei aqui]] - `conceptually_related_to` [INFERRED]
+- [[Task 5 Alerta de bandeira vermelha]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Parecer_alerta_e_retomada
+#graphify/rationale #graphify/EXTRACTED #community/Bandeiras_e_diálogo

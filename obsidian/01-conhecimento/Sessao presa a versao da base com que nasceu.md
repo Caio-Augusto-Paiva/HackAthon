@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Pacote kb README"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Persistência_e_validação_da_base
+  - community/Pacote_kb_README
 ---
 
 # Sessao presa a versao da base com que nasceu
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/INFERRED #community/Pacote_kb_README

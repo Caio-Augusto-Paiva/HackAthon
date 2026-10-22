@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Sinais térmicos e urgência"
+community: "Sinais térmicos e febre"
 location: "L175"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sinais_térmicos_e_urgência
+  - community/Sinais_térmicos_e_febre
 ---
 
 # Febre (febre)
@@ -23,4 +23,4 @@ tags:
 - [[R-TPB-01 tpb (CF 0,7)]] - `references` [EXTRACTED]
 - [[R-TPB-03 tpb (CF 0,35)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_urgência
+#graphify/concept #graphify/EXTRACTED #community/Sinais_térmicos_e_febre

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Metrite e puerpério"
 location: "L186"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Metrite_e_puerpério
 ---
 
 # Metrite Puerperal (metrite)
@@ -22,4 +22,4 @@ tags:
 - [[R-MET-04 metrite (CF 0,25)]] - `implements` [EXTRACTED]
 - [[R-URG-04 chamar_agora (CF 0,99)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Metrite_e_puerpério

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "concept"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # Classe Sessao (dialogo, estado, correcao, modo)
@@ -22,4 +22,4 @@ tags:
 - [[engine.casos.executar_caso (casos de teste reproduziveis)]] - `calls` [INFERRED]
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/concept #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

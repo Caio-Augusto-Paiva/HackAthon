@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Dermatite digital e claudicação"
 location: "L167"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Dermatite_digital_e_claudicação
 ---
 
 # Dermatite Digital Bovina (dermatite_digital)
@@ -22,4 +22,4 @@ tags:
 - [[R-DD-03 dermatite_digital (CF 0,85)]] - `implements` [EXTRACTED]
 - [[R-URG-08 observar (CF 0,7)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_claudicação

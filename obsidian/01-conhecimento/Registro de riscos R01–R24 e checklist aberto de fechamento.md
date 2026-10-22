@@ -1,26 +1,23 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "document"
-community: "Riscos e limites da entrega"
+community: "Riscos e pendências"
 location: "L5-L24"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Riscos_e_limites_da_entrega
+  - community/Riscos_e_pendências
 ---
 
 # Registro de riscos R01–R24 e checklist aberto de fechamento
 
 ## Connections
-- [[Arquitetura implementada React→FastAPI→Sessao, kbv0002 e SQLite]] - `references` [EXTRACTED]
 - [[Envio alvo interno 2210 às 1830 e prazo oficial às 2000]] - `references` [EXTRACTED]
 - [[Fechamento pendente conferência dos contatos, licença, ensaio humano e arquivos finais]] - `references` [EXTRACTED]
-- [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Integração web verificada no checkpoint; limites de histórico, dispositivos e ensaio físico]] - `references` [EXTRACTED]
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - `references` [EXTRACTED]
+- [[Pacote final pendente (PDFs, slides, vídeo, ZIP)]] - `references` [EXTRACTED]
 - [[Plano de execução da documentação parcial do núcleo e base existentes]] - `references` [EXTRACTED]
-- [[Plano protege backend, motor, kb, base, contratos e testes]] - `references` [EXTRACTED]
-- [[Processo consolidado em 2210 integração atual e checkpoints históricos com proveniência]] - `references` [EXTRACTED]
 - [[R01 Conhecimento clínico e CF sem validação especializada]] - `references` [EXTRACTED]
 - [[R02 Confiança excessiva por sinais correlacionados]] - `references` [EXTRACTED]
 - [[R03 Falso entendimento de `sem_problema`]] - `references` [EXTRACTED]
@@ -47,10 +44,9 @@ tags:
 - [[R24 Elegibilidade e presença sem confirmação]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 - [[Riscos CF sem validação, correlação, sem_problema e lacunas da base]] - `references` [EXTRACTED]
-- [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[SPA compilada sem requisições externas nos E2E]] - `references` [EXTRACTED]
+- [[Sem validação clínica nem autenticação neste recorte]] - `references` [EXTRACTED]
 - [[UI preservou regras, versões imutáveis, contratos e APImotorkb]] - `references` [EXTRACTED]
 - [[Verificação web 60 Vitest e 11 E2E no checkpoint 09f5754; axe nas telas exercitadas]] - `references` [EXTRACTED]
-- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Riscos_e_limites_da_entrega
+#graphify/document #graphify/EXTRACTED #community/Riscos_e_pendências

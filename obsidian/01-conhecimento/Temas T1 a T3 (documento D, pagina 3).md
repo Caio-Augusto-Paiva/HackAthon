@@ -1,17 +1,17 @@
 ---
 source_file: "docs/fontes/transcricao-documentario-rerum.md"
 type: "concept"
-community: "Requisitos oficiais e evidências"
+community: "Restrições obrigatórias"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_oficiais_e_evidências
+  - community/Restrições_obrigatórias
 ---
 
 # Temas T1 a T3 (documento D, pagina 3)
 
 ## Connections
-- [[Execução completa em localhost]] - `references` [EXTRACTED]
+- [[Rodar por completo em localhost, sem nuvem obrigatoria]] - `references` [EXTRACTED]
 - [[Temas T1 a T3 (slide 9)]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências
+#graphify/concept #graphify/EXTRACTED #community/Restrições_obrigatórias

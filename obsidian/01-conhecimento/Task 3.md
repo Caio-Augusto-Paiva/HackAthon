@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "concept"
-community: "Ciclos de dependências"
+community: "Ciclo no grafo kb"
 location: "L39-L44"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ciclos_de_dependências
+  - community/Ciclo_no_grafo_kb
 ---
 
 # Task 3
@@ -18,4 +18,4 @@ tags:
 - [[Task 2]] - `shares_data_with` [EXTRACTED]
 - [[kbgrafo.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ciclos_de_dependências
+#graphify/concept #graphify/EXTRACTED #community/Ciclo_no_grafo_kb

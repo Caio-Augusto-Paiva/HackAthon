@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Fontes clínicas contextuais"
+community: "Fontes clínicas MSD"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Fontes_clínicas_contextuais
+  - community/Fontes_clínicas_MSD
 ---
 
 # MSD Vet Manual
@@ -24,4 +24,4 @@ tags:
 - [[Sobrecarga de grao]] - `cites` [EXTRACTED]
 - [[Status de conferencia das fontes (L, R, N)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Fontes_clínicas_contextuais
+#graphify/document #graphify/EXTRACTED #community/Fontes_clínicas_MSD

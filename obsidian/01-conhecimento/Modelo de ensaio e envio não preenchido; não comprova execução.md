@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/07-ensaio-e-envio.md"
 type: "document"
-community: "Entrega, revisão e contatos"
+community: "Ensaio e envio pendentes"
 location: "L1-L11"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Ensaio_e_envio_pendentes
 ---
 
 # Modelo de ensaio e envio não preenchido; não comprova execução
@@ -17,12 +17,10 @@ tags:
 - [[Correções apenas documentais; runtime, contratos, base e testes preservados]] - `references` [EXTRACTED]
 - [[Cronometragem humana pendente fala estimada em 1000 e demo em 400]] - `references` [EXTRACTED]
 - [[Fechamento pendente conferência dos contatos, licença, ensaio humano e arquivos finais]] - `references` [EXTRACTED]
-- [[Pendentes ensaio humano, material visual final e tempo oficial]] - `references` [EXTRACTED]
 - [[Preparar dois computadores, ambiente, banco fictício e consulta local]] - `references` [EXTRACTED]
 - [[Prova de entendimento de cada integrante ainda a registrar]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[Registro real por computador versão, rede, consulta e resultado a preencher]] - `references` [EXTRACTED]
-- [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
-- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
+- [[Roteiro de apresentação e demonstração]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/document #graphify/EXTRACTED #community/Ensaio_e_envio_pendentes

@@ -1,22 +1,20 @@
 ---
-source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
+source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Especificação do sistema especialista"
-location: "Seção 4.3"
+community: "Ledger SDD do motor"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Especificação_do_sistema_especialista
+  - community/Ledger_SDD_do_motor
 ---
 
 # Pacote engine
 
 ## Connections
-- [[Explicação por quê e como]] - `implements` [EXTRACTED]
-- [[Memória de trabalho (enginememoria.py)]] - `implements` [EXTRACTED]
-- [[Modelo conceitual - módulos (diagrama)]] - `references` [EXTRACTED]
-- [[Motor de inferência (engine)]] - `implements` [EXTRACTED]
-- [[Pacote api (FastAPI)]] - `references` [EXTRACTED]
-- [[Pacote kb]] - `references` [EXTRACTED]
+- [[Achado fato numerico inerte no teste]] - `references` [INFERRED]
+- [[Comando de teste do motor com Python do sistema]] - `references` [EXTRACTED]
+- [[Verificacao final]] - `references` [EXTRACTED]
+- [[enginevalidacao.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Especificação_do_sistema_especialista
+#graphify/code #graphify/EXTRACTED #community/Ledger_SDD_do_motor

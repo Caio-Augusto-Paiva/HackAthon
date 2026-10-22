@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-22-revisao-secao-6.md"
 type: "document"
-community: "Entrega, revisão e contatos"
+community: "Revisão técnica da Seção 6"
 location: "L1-L12"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Revisão_técnica_da_Seção_6
 ---
 
 # Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano
@@ -20,7 +20,6 @@ tags:
 - [[AD-05 achado histórico — Vídeo não resolve falha de todo meio de exibição]] - `references` [EXTRACTED]
 - [[Correções apenas documentais; runtime, contratos, base e testes preservados]] - `references` [EXTRACTED]
 - [[Fontes AD e checkout auditado; leitura clínica e provas históricas mantêm seus limites]] - `references` [EXTRACTED]
-- [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Matriz de exigências oficiais e evidências técnicas, humanas e materiais distintas]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[Revisão da Seção 6 promessas e textos históricos corrigidos]] - `references` [EXTRACTED]
@@ -39,6 +38,5 @@ tags:
 - [[S6-11 achado histórico — Limites de tempo e envio dependem da organização]] - `references` [EXTRACTED]
 - [[S6-12 achado histórico — Fontes clínicas e CF continuam provisórios]] - `references` [EXTRACTED]
 - [[S6-13 achado histórico — Elegibilidade dos participantes não estava na conferência]] - `references` [EXTRACTED]
-- [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/document #graphify/EXTRACTED #community/Revisão_técnica_da_Seção_6

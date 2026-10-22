@@ -1,11 +1,11 @@
 ---
 source_file: "kb/README.md"
 type: "concept"
-community: "Persistência e validação da base"
+community: "Pacote kb README"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persistência_e_validação_da_base
+  - community/Pacote_kb_README
 ---
 
 # kb/analise.py (dependencias, ciclo, ordem topologica)
@@ -15,4 +15,4 @@ tags:
 - [[Task 2 Análise de dependências]] - `implements` [EXTRACTED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `calls` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persistência_e_validação_da_base
+#graphify/concept #graphify/EXTRACTED #community/Pacote_kb_README

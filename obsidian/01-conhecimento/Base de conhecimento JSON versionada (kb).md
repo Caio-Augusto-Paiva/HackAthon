@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação do sistema especialista"
+community: "Especificação e arquitetura do sistema"
 location: "Seção 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_do_sistema_especialista
+  - community/Especificação_e_arquitetura_do_sistema
 ---
 
 # Base de conhecimento JSON versionada (kb/)
@@ -21,5 +21,7 @@ tags:
 - [[Pacote kb]] - `implements` [EXTRACTED]
 - [[Validador da base (erros e avisos)]] - `references` [EXTRACTED]
 - [[Versões imutáveis vNNNN.json com pai]] - `references` [EXTRACTED]
+- [[kbfonte.py — separar e juntar]] - `references` [INFERRED]
+- [[ler_fonte(pasta) - Base]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema

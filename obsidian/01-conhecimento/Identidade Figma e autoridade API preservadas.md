@@ -1,12 +1,12 @@
 ---
 source_file: "DESIGN.md"
 type: "concept"
-community: "Produto e limites clínicos"
+community: "Sistema visual e Figma"
 location: "L87"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Produto_e_limites_clínicos
+  - community/Sistema_visual_e_Figma
 ---
 
 # Identidade Figma e autoridade API preservadas
@@ -15,4 +15,4 @@ tags:
 - [[Diálogo Akinator com regras explícitas e CF MYCIN]] - `semantically_similar_to` [INFERRED]
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Produto_e_limites_clínicos
+#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_e_Figma

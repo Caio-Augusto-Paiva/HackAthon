@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação do sistema especialista"
+community: "Especificação e arquitetura do sistema"
 location: "Seção 4.4 e 4.5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_do_sistema_especialista
+  - community/Especificação_e_arquitetura_do_sistema
 ---
 
 # Contratos da API e formato único de erro
@@ -17,4 +17,4 @@ tags:
 - [[Tipos TypeScript gerados do OpenAPI]] - `shares_data_with` [EXTRACTED]
 - [[Trabalho em paralelo ABC por pasta]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema

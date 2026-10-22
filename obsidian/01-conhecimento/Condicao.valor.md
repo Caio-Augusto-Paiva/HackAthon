@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "code"
-community: "Valores e serialização"
+community: "Condição valor nulo"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Valores_e_serialização
+  - community/Condição_valor_nulo
 ---
 
 # Condicao.valor
@@ -17,4 +17,4 @@ tags:
 - [[valor None gera E03]] - `references` [EXTRACTED]
 - [[valor None preservado na ida e volta]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Valores_e_serialização
+#graphify/code #graphify/EXTRACTED #community/Condição_valor_nulo

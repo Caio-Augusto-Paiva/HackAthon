@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Metrite e puerpério"
+community: "Regras e símbolos da v0002"
 location: "L170"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Metrite_e_puerpério
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # Dias em lactação (dias_em_lactacao)
@@ -18,4 +18,4 @@ tags:
 - [[R-DER-03 inicio_lactacao (CF 0,99)]] - `references` [EXTRACTED]
 - [[Triagem 1 dias_em_lactacao]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Metrite_e_puerpério
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

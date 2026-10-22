@@ -1,11 +1,11 @@
 ---
 source_file: "api/README.md"
 type: "rationale"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # D1: snapshot_json como fonte da verdade da sessao
@@ -16,4 +16,4 @@ tags:
 - [[Sessao.restaurar  exportar sem replay]] - `references` [EXTRACTED]
 - [[ordem_respostas no snapshot (reprocessar lotes na correcao)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/rationale #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

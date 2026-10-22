@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Sessões, API e motor"
+community: "Sessão, parecer e explicação"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Sessão_parecer_e_explicação
 ---
 
 # Potencial conservador com intervalos inferior/superior
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Nucleo sem estado inferir() e analisar()]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/rationale #graphify/EXTRACTED #community/Sessão_parecer_e_explicação

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Regras e símbolos da v0002"
+community: "Acidose e diarreia"
 location: "L169"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regras_e_símbolos_da_v0002
+  - community/Acidose_e_diarreia
 ---
 
 # Diarreia (diarreia)
@@ -17,4 +17,4 @@ tags:
 - [[R-ACI-02 acidose (CF 0,55)]] - `references` [EXTRACTED]
 - [[Triagem 6 excrecoes]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002
+#graphify/concept #graphify/EXTRACTED #community/Acidose_e_diarreia

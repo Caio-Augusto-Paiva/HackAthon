@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Especificação do sistema especialista"
+community: "Especificação e arquitetura do sistema"
 location: "Seção 5.3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Especificação_do_sistema_especialista
+  - community/Especificação_e_arquitetura_do_sistema
 ---
 
 # Cronograma por blocos até quinta 22/10
@@ -16,4 +16,4 @@ tags:
 - [[Plano de corte]] - `references` [EXTRACTED]
 - [[Trabalho em paralelo ABC por pasta]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Especificação_do_sistema_especialista
+#graphify/concept #graphify/EXTRACTED #community/Especificação_e_arquitetura_do_sistema

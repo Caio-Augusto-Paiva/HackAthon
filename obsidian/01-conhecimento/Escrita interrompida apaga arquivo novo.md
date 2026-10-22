@@ -1,12 +1,12 @@
 ---
 source_file: "docs/revisoes/2026-10-21-ledger-kb-secao-2.md"
 type: "rationale"
-community: "Versionamento imutável da base"
+community: "Persistência de versões kb"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/AMBIGUOUS
-  - community/Versionamento_imutável_da_base
+  - community/Persistência_de_versões_kb
 ---
 
 # Escrita interrompida apaga arquivo novo
@@ -16,4 +16,4 @@ tags:
 - [[Task 5]] - `rationale_for` [EXTRACTED]
 - [[salvar_nova]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/AMBIGUOUS #community/Versionamento_imutável_da_base
+#graphify/rationale #graphify/AMBIGUOUS #community/Persistência_de_versões_kb

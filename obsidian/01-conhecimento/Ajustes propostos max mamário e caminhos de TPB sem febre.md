@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "concept"
-community: "Integração e proveniência da base"
+community: "Grupo mamário por max"
 location: "L12-L16"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Grupo_mamário_por_max
 ---
 
 # Ajustes propostos: max mamário e caminhos de TPB sem febre
@@ -16,4 +16,4 @@ tags:
 - [[Grupo mamário por max R-MAS-010305]] - `references` [EXTRACTED]
 - [[Log de revisões evidência e proveniência do checkpoint]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/concept #graphify/EXTRACTED #community/Grupo_mamário_por_max
