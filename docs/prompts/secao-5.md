@@ -277,7 +277,7 @@ Você vai executar a Seção 5 (testes, execução em localhost, ensaio e docume
 
 ## Regras
 
-- **Não altere `api/`, `web/`, `contratos/` nem `tests/api/`.** O design e o frontend estão sendo feitos em paralelo em outra sessão. Se a API precisar de ajuste, registre o pedido em `docs/entrega/06-riscos-e-pendencias.md` e não edite.
+- **Não altere `api/`, `contratos/` nem `tests/api/`.** O frontend (`web/`) agora é seu também: siga `docs/prompts/frontend-codex.md` e o plano `docs/superpowers/plans/2026-10-22-frontend-web.md`. Se a API precisar de ajuste, registre o pedido em `docs/entrega/06-riscos-e-pendencias.md` e não edite.
 - Não altere `engine/` nem `kb/` sem antes escrever o teste que mostra o defeito; mudança no motor ou no validador exige registro em `docs/processo/revisoes-cruzadas.md`.
 - TDD; rode a suíte inteira antes de cada commit: `.venv/Scripts/python -m pytest -q` e `python -m unittest discover -s tests/engine -t .`. Um commit por etapa; push ao final de cada etapa.
 - Conhecimento veterinário continua **suposição a validar**; dados fictícios apenas.
@@ -291,7 +291,7 @@ A base `base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json` carrega no m
 
 Já verificado: sem esses dois pontos, `kb.validador.validar` dá **zero erros** (só o aviso W03) e `engine.modelos.Base.de_dict(kb.para_motor(base))` carrega.
 
-**Já feito em 22/10 (commit da sessão de frontend):** a `v0001` foi gravada pelo `Repositorio` com essas duas correções aplicadas em memória (o texto dos quatro campos foi para `meta.nota`) e está **ativa** (`base/ativa.json`). Não recrie nem altere `v0001` (versões são imutáveis). Sua parte nesta etapa: aplicar as mesmas duas correções no arquivo de `base/desenvolvimento/` e em `tests/engine/test_base_clinica.py` (id `mucosas_palidas_ou_ictericas`), para os testes da base e a `v0001` ficarem coerentes; qualquer mudança de regra vira `v0002` via `Repositorio.salvar_nova(..., pai="v0001")` + execução dos casos antes de ativar. Teste novo: `tests/casos/test_base_ativa.py` confere que `base/ativa.json` aponta para uma versão que passa em `kb.validar` sem erros e carrega no motor.
+**Já feito em 22/10 (commit da sessão de frontend):** a `v0001` foi gravada pelo `Repositorio` com essas duas correções aplicadas em memória (o texto dos quatro campos foi para `meta.nota`) e está **ativa** (`base/ativa.json`). Não recrie nem altere `v0001` (versões são imutáveis). Sua parte nesta etapa: aplicar as mesmas duas correções no arquivo de `base/desenvolvimento/` e em `tests/engine/test_base_clinica.py` (id `mucosas_palidas_ou_ictericas`), para os testes da base e a `v0001` ficarem coerentes; **a `v0002` (pai `v0001`) também já existe e está ativa**: limita os domínios numéricos (`dias_em_lactacao` 0–1000 inteiro, `temperatura_retal` 30–45 com 1 casa, etc.) para a resposta digitada pelo usuário, validada no motor só com dígitos ASCII. Qualquer mudança de regra sua vira `v0003` via `Repositorio.salvar_nova(..., pai="v0002")` + execução dos casos antes de ativar. Teste novo: `tests/casos/test_base_ativa.py` confere que `base/ativa.json` aponta para uma versão que passa em `kb.validar` sem erros e carrega no motor.
 
 ## Etapa 2 — Casos conhecidos (Camada 3)
 

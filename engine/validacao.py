@@ -15,6 +15,9 @@ def validar(dados):
     for s in simbolos:
         if s['tipo'] not in CAMADAS or s['dominio']['tipo'] not in ('booleano','numerico','categorico'):
             raise ValueError('Tipo de símbolo/domínio inválido')
+        casas = s['dominio'].get('casas_decimais')
+        if 'casas_decimais' in s['dominio'] and (s['dominio']['tipo'] != 'numerico' or type(casas) is not int or not 0 <= casas <= 3):
+            raise ValueError('casas_decimais deve ser inteiro de 0 a 3 em domínio numérico')
         if s['tipo'] == 'doenca' and s.get('gravidade') not in GRAVIDADES:
             raise ValueError('Doença sem gravidade válida')
         if s.get('combinacao','mycin') not in ('mycin','max') or (s.get('combinacao') == 'max' and s['tipo'] != 'derivado'):

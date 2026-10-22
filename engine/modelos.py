@@ -1,6 +1,9 @@
 """Fronteira de dados do motor, compatível com JSON e model_dump do kb."""
 from copy import deepcopy
 from dataclasses import dataclass
+import math
+import re
+from decimal import Decimal
 from fractions import Fraction
 from .cf import fracao
 
@@ -53,6 +56,67 @@ class Base:
         return tuple(r for r in self.regras if r['entao']['simbolo'] == id)
 
 
+CASAS_PADRAO = 2
+_NUMERO_DIGITADO = re.compile(r'[0-9]{1,6}(?:[.,][0-9]{1,3})?', re.ASCII)
+
+
+def _formatar_limite(x):
+    f = Fraction(str(x))
+    return str(f.numerator) if f.denominator == 1 else str(float(f)).replace('.', ',')
+
+
+def _mensagem_numero(id, dominio):
+    lo, hi = dominio.get('min'), dominio.get('max')
+    if lo is not None and hi is not None:
+        return f'{id}: informe apenas números de {_formatar_limite(lo)} a {_formatar_limite(hi)}'
+    if lo is not None:
+        return f'{id}: informe apenas números a partir de {_formatar_limite(lo)}'
+    if hi is not None:
+        return f'{id}: informe apenas números até {_formatar_limite(hi)}'
+    return f'{id}: informe apenas números'
+
+
+def numero_estrito(id, valor, dominio):
+    """Política única (texto ou número): só dígitos ASCII, domínio e casas decimais respeitados.
+
+    A mensagem de erro nunca ecoa o valor recebido."""
+    casas = dominio.get('casas_decimais', CASAS_PADRAO)
+    erro = ValueError(_mensagem_numero(id, dominio))
+    if isinstance(valor, bool):
+        raise erro
+    try:
+        if isinstance(valor, str):
+            if not _NUMERO_DIGITADO.fullmatch(valor):
+                raise erro
+            normal = valor.replace(',', '.')
+            if '.' in normal and (casas == 0 or len(normal.split('.')[1]) > casas):
+                raise erro
+            numero = Fraction(normal)
+        else:
+            if isinstance(valor, float):
+                if not math.isfinite(valor):
+                    raise erro
+                numero = Fraction(repr(valor))
+            elif isinstance(valor, int):
+                numero = Fraction(valor)
+            elif isinstance(valor, Fraction):
+                numero = valor
+            elif isinstance(valor, Decimal):
+                if not valor.is_finite():
+                    raise erro
+                numero = Fraction(valor)
+            else:
+                raise erro
+            if (numero * 10 ** casas).denominator != 1:
+                raise erro
+        if ('min' in dominio and numero < Fraction(str(dominio['min']))) or ('max' in dominio and numero > Fraction(str(dominio['max']))):
+            raise erro
+    except (ValueError, TypeError, ZeroDivisionError, OverflowError) as causa:
+        raise erro from causa
+    return numero
+
+
+
 def observar(id, entrada, simbolos, *, origem='resposta', tela_id=None):
     """Normaliza valor/certeza sem confundir intensidade com certeza."""
     simbolo = simbolos[id]
@@ -86,14 +150,7 @@ def observar(id, entrada, simbolos, *, origem='resposta', tela_id=None):
         if tipo == 'categorico' and 'valores' in dominio and valor not in dominio['valores']:
             raise ValueError(f'{id}: valor fora do domínio')
         if tipo == 'numerico':
-            try:
-                if isinstance(valor,bool): raise ValueError()
-                numero = Fraction(str(valor))
-                if ('min' in dominio and numero < Fraction(str(dominio['min']))) or ('max' in dominio and numero > Fraction(str(dominio['max']))):
-                    raise ValueError()
-            except (ValueError,TypeError,ZeroDivisionError) as erro:
-                raise ValueError(f'{id}: número fora do domínio') from erro
-            valor = numero
+            valor = numero_estrito(id, valor, dominio)
     return Fato(id,valor,cf,origem,tela_id)
 
 
