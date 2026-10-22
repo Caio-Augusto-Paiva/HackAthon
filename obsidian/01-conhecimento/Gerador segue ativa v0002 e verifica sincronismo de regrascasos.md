@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Ensaio humano e entrega final"
+community: "Processo documental verificável"
 location: "L57-L64"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ensaio_humano_e_entrega_final
+  - community/Processo_documental_verificável
 ---
 
 # Gerador segue ativa v0002 e verifica sincronismo de regras/casos
@@ -19,4 +19,4 @@ tags:
 - [[HackAtom prova de conceito T1 de anamnese explicável para bovinos leiteiros]] - `references` [EXTRACTED]
 - [[Plano gerar regrascasos dos executáveis com teste de sincronismo]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ensaio_humano_e_entrega_final
+#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/A.md"
 type: "concept"
-community: "Integração e proveniência da base"
+community: "Processo documental verificável"
 location: "L7-L18"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Processo_documental_verificável
 ---
 
 # Decisões verificáveis de motor, base e documentação
@@ -17,4 +17,4 @@ tags:
 - [[Histórico verificável correções do motor, integração da base e consulta web]] - `references` [EXTRACTED]
 - [[Papel A registro técnico curado, sem depoimento pessoal atribuído]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável

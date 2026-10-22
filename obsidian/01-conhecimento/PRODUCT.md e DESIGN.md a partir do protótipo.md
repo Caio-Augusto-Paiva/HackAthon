@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Contratos e integração localhost"
+community: "Plano histórico frontend implementado"
 location: "L60"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Plano_histórico_frontend_implementado
 ---
 
 # PRODUCT.md e DESIGN.md a partir do protótipo
@@ -17,4 +17,4 @@ tags:
 - [[Sistema visual documentado do protótipo HackAtom]] - `references` [EXTRACTED]
 - [[Task 1 Projeto, tokens e cliente API — implementada com alcance documentado]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/concept #graphify/EXTRACTED #community/Plano_histórico_frontend_implementado

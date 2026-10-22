@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Riscos e limites da entrega"
+community: "E2E e verificação offline"
 location: "L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Riscos_e_limites_da_entrega
+  - community/E2E_e_verificação_offline
 ---
 
 # Ensaio HTTP histórico na v0001: saúde, sessão, explicações e 34/34 casos
@@ -16,4 +16,4 @@ tags:
 - [[Backend ensaiado com TCPDNS externos bloqueados nos processos Python]] - `references` [EXTRACTED]
 - [[Camada 4b Playwright com API real e ativa v0002]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riscos_e_limites_da_entrega
+#graphify/concept #graphify/EXTRACTED #community/E2E_e_verificação_offline

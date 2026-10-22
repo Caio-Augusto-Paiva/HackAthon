@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Requisitos oficiais e evidências"
 location: "L5"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Requisitos_oficiais_e_evidências
 ---
 
 # Fontes oficiais [A] apresentação RERUM e [D] documentário
@@ -25,4 +25,4 @@ tags:
 - [[Restrição oficial de código aberto]] - `cites` [EXTRACTED]
 - [[T1 Anamnese sinais, histórico e triagem explicável]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências

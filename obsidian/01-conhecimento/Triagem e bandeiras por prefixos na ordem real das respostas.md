@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
 type: "rationale"
-community: "Revisões e decisões técnicas"
+community: "Arquitetura do motor e base"
 location: "L91-L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Revisões_e_decisões_técnicas
+  - community/Arquitetura_do_motor_e_base
 ---
 
 # Triagem e bandeiras por prefixos na ordem real das respostas
@@ -20,4 +20,4 @@ tags:
 - [[Sessao triagem, diálogo, modo, bandeiras, parecer e porquecomo]] - `implements` [EXTRACTED]
 - [[modal de bandeira usa ações do backend]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Revisões_e_decisões_técnicas
+#graphify/rationale #graphify/EXTRACTED #community/Arquitetura_do_motor_e_base

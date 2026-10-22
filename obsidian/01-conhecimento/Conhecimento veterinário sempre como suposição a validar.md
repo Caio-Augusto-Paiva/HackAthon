@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Conduta e fontes clínicas"
 location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Conduta_e_fontes_clínicas
 ---
 
 # Conhecimento veterinário sempre como suposição a validar
@@ -16,4 +16,4 @@ tags:
 - [[Conduta requisitos comprovados e suposições explícitas]] - `references` [EXTRACTED]
 - [[Status de conferencia das fontes (L, R, N)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Conduta_e_fontes_clínicas

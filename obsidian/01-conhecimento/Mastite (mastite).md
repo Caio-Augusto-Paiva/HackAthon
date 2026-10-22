@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Mastite e monitoramento"
+community: "Casos sintéticos na v0002"
 location: "L185"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Mastite_e_monitoramento
+  - community/Casos_sintéticos_na_v0002
 ---
 
 # Mastite (mastite)
@@ -23,4 +23,4 @@ tags:
 - [[R-MAS-05 mastite (CF 0,99)]] - `implements` [EXTRACTED]
 - [[R-URG-05 observar (CF 0,8)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Mastite_e_monitoramento
+#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002

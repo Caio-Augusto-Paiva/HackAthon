@@ -33,7 +33,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Requisitos e arquitetura conceitual]]
+- 1 edge to [[_COMMUNITY_Inferência determinística sem LLM]]
 
 ## Top bridge nodes
 - [[Desenvolvimento de Sistemas Especialistas com Vibe Coding]] - degree 2, connects to 1 community

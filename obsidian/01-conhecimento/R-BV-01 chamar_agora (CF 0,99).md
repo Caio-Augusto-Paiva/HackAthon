@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Hipocalcemia e mobilidade"
 location: "L130"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Hipocalcemia_e_mobilidade
 ---
 
 # R-BV-01: chamar_agora (CF 0,99)
@@ -19,4 +19,4 @@ tags:
 - [[Decúbito (decubito)]] - `references` [EXTRACTED]
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade

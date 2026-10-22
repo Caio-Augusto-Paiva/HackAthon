@@ -9,7 +9,6 @@ members: 26
 
 ## Members
 - [[Bandeira vermelha pausa, continuar, ver_parecer]] - concept - engine/README.md
-- [[CF MYCIN com Fraction (sem arredondar para +-1)]] - rationale - engine/README.md
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - concept - engine/README.md
 - [[Comparacao de casos com a versao pai]] - concept - api/README.md
 - [[Concorrencia BEGIN IMMEDIATE e conferencia de revisao]] - concept - api/README.md
@@ -32,6 +31,7 @@ members: 26
 - [[Traco de inferencia e eventos (fato_adicionado, regra_disparada)]] - concept - engine/README.md
 - [[Triagem obrigatoria por telas antes das perguntas dinamicas]] - concept - engine/README.md
 - [[engine.casos.executar_caso (casos de teste reproduziveis)]] - concept - engine/README.md
+- [[hipóteses desde segunda pergunta e explicação Por quê]] - concept - docs/superpowers/plans/2026-10-22-frontend-web.md
 - [[ordem_respostas no snapshot (reprocessar lotes na correcao)]] - concept - api/README.md
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - concept - engine/README.md
 
@@ -44,14 +44,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Persistência e validação da base]]
-- 2 edges to [[_COMMUNITY_Parecer, retomada e limites]]
-- 1 edge to [[_COMMUNITY_Casos sintéticos na v0002]]
+- 2 edges to [[_COMMUNITY_Plano histórico frontend implementado]]
+- 2 edges to [[_COMMUNITY_Parecer, alerta e retomada]]
 - 1 edge to [[_COMMUNITY_Demonstração e troca de modo]]
-- 1 edge to [[_COMMUNITY_Plano histórico frontend implementado]]
+- 1 edge to [[_COMMUNITY_Hipocalcemia e mobilidade]]
 
 ## Top bridge nodes
 - [[Correção e alertas respeitam ordem real dos lotes persistida]] - degree 3, connects to 2 communities
 - [[Classe Sessao (dialogo, estado, correcao, modo)]] - degree 10, connects to 1 community
 - [[parecer() tres blocos, CF, percentuais, urgencia]] - degree 6, connects to 1 community
-- [[Explicacao por que e como (porquecomo)]] - degree 4, connects to 1 community
-- [[Portao de ativacao de versao (casos_falhando, confirmar_falhas)]] - degree 3, connects to 1 community
+- [[Nucleo sem estado inferir() e analisar()]] - degree 4, connects to 1 community
+- [[hipóteses desde segunda pergunta e explicação Por quê]] - degree 3, connects to 1 community

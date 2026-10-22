@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/07-ensaio-e-envio.md"
 type: "rationale"
-community: "Ensaio humano e entrega final"
+community: "Entrega, revisão e contatos"
 location: "L55-L61"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ensaio_humano_e_entrega_final
+  - community/Entrega_revisão_e_contatos
 ---
 
 # Prova de entendimento de cada integrante ainda a registrar
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ensaio_humano_e_entrega_final
+#graphify/rationale #graphify/EXTRACTED #community/Entrega_revisão_e_contatos

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/07-ensaio-e-envio.md"
 type: "document"
-community: "Ensaio humano e entrega final"
+community: "Entrega, revisão e contatos"
 location: "L1-L11"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ensaio_humano_e_entrega_final
+  - community/Entrega_revisão_e_contatos
 ---
 
 # Modelo de ensaio e envio não preenchido; não comprova execução
@@ -25,4 +25,4 @@ tags:
 - [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ensaio_humano_e_entrega_final
+#graphify/document #graphify/EXTRACTED #community/Entrega_revisão_e_contatos

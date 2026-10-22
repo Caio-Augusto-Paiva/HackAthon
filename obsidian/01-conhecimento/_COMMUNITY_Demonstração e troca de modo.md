@@ -1,14 +1,13 @@
 ---
 type: community
-members: 18
+members: 17
 ---
 
 # Demonstração e troca de modo
 
-**Members:** 18 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[56 regras em suposicao_a_validar e nenhuma validada]] - rationale - docs/entrega/README.md
 - [[CF não é probabilidade clínica; sem_problema não comprova saúde]] - rationale - docs/entrega/05-apresentacao-e-demo.md
 - [[Correção térmica PATCH origem → PUT correção → PATCH destino]] - rationale - docs/entrega/05-apresentacao-e-demo.md
 - [[E2E sintético com API real cobre troca e correções]] - concept - docs/entrega/05-apresentacao-e-demo.md
@@ -35,21 +34,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Entrega, revisão e contatos]]
-- 3 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
-- 3 edges to [[_COMMUNITY_Revisões e decisões técnicas]]
-- 3 edges to [[_COMMUNITY_Riscos e limites da entrega]]
-- 2 edges to [[_COMMUNITY_Processo documental verificável]]
-- 2 edges to [[_COMMUNITY_Integração e proveniência da base]]
-- 2 edges to [[_COMMUNITY_Ensaio humano e entrega final]]
-- 1 edge to [[_COMMUNITY_Sessões, API e motor]]
+- 3 edges to [[_COMMUNITY_Processo documental verificável]]
+- 2 edges to [[_COMMUNITY_Casos sintéticos na v0002]]
+- 2 edges to [[_COMMUNITY_Riscos e limites da entrega]]
+- 2 edges to [[_COMMUNITY_Revisões e decisões técnicas]]
+- 2 edges to [[_COMMUNITY_Arquitetura do motor e base]]
+- 2 edges to [[_COMMUNITY_Entrega, revisão e contatos]]
 - 1 edge to [[_COMMUNITY_Persistência e validação da base]]
-- 1 edge to [[_COMMUNITY_Arquitetura do motor e base]]
 - 1 edge to [[_COMMUNITY_Regras e símbolos da v0002]]
+- 1 edge to [[_COMMUNITY_Hipocalcemia e mobilidade]]
+- 1 edge to [[_COMMUNITY_Sessões, API e motor]]
+- 1 edge to [[_COMMUNITY_Evidências de software e clínica]]
+- 1 edge to [[_COMMUNITY_Entrega e contatos da equipe]]
+- 1 edge to [[_COMMUNITY_Escopo e pendências reais]]
+- 1 edge to [[_COMMUNITY_Integração e proveniência da base]]
 
 ## Top bridge nodes
-- [[Roteiro atual consulta React integrada e CLI de reserva]] - degree 31, connects to 10 communities
-- [[56 regras em suposicao_a_validar e nenhuma validada]] - degree 4, connects to 3 communities
+- [[Roteiro atual consulta React integrada e CLI de reserva]] - degree 31, connects to 11 communities
 - [[Troca produtor ↔ especialista sem reiniciar análise]] - degree 10, connects to 1 community
 - [[Roteiro estimado da demo web 422, troca de modo, parecer único e alerta]] - degree 7, connects to 1 community
 - [[Correção térmica PATCH origem → PUT correção → PATCH destino]] - degree 5, connects to 1 community
+- [[Preparação banco fora do OneDrive e build local]] - degree 3, connects to 1 community

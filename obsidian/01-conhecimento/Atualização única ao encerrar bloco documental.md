@@ -1,12 +1,12 @@
 ---
 source_file: "AGENTS.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
-location: "L11"
+community: "Manutenção dos dois grafos"
+location: "L13"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Manutenção_dos_dois_grafos
 ---
 
 # Atualização única ao encerrar bloco documental
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[AGENTS.md instruções de busca e manutenção documental]] - `references` [EXTRACTED]
 - [[Atualização do grafo uma vez por bloco documental]] - `semantically_similar_to` [INFERRED]
-- [[Cofre Obsidian 01-conhecimento e reserva 02-a-definir]] - `references` [EXTRACTED]
+- [[Dois cofres distintos documentação e dados determinísticos das doenças]] - `references` [EXTRACTED]
 - [[graphify --update extração incremental única ao fechar o bloco]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Manutenção_dos_dois_grafos

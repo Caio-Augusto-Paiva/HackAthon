@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Dermatite digital e mobilidade"
+community: "Regras e símbolos da v0002"
 location: "L184"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dermatite_digital_e_mobilidade
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # Lesão característica no talão (lesao_erosiva_talao_morango)
@@ -15,4 +15,4 @@ tags:
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 - [[R-DD-03 dermatite_digital (CF 0,85)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dermatite_digital_e_mobilidade
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

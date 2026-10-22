@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Ensaio humano e entrega final"
+community: "Entrega, revisão e contatos"
 location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ensaio_humano_e_entrega_final
+  - community/Entrega_revisão_e_contatos
 ---
 
 # R22: Reprodutibilidade Python sem lockfile
@@ -16,4 +16,4 @@ tags:
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 - [[S6-09 achado histórico — Lockfile prometido não existe]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ensaio_humano_e_entrega_final
+#graphify/rationale #graphify/EXTRACTED #community/Entrega_revisão_e_contatos

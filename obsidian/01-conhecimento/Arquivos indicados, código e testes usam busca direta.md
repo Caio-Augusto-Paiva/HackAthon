@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Busca documental sob demanda"
 location: "L11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Busca_documental_sob_demanda
 ---
 
 # Arquivos indicados, código e testes usam busca direta
@@ -15,4 +15,4 @@ tags:
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 - [[Grafo de conhecimento ferramenta de busca sob demanda]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Busca_documental_sob_demanda

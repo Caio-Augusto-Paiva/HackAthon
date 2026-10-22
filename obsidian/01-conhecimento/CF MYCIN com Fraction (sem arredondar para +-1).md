@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Sessões, API e motor"
+community: "Persistência e validação da base"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sessões_API_e_motor
+  - community/Persistência_e_validação_da_base
 ---
 
 # CF MYCIN com Fraction (sem arredondar para +-1)
@@ -14,4 +14,4 @@ tags:
 - [[Nucleo sem estado inferir() e analisar()]] - `conceptually_related_to` [EXTRACTED]
 - [[Organizacao dos modulos do motor]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sessões_API_e_motor
+#graphify/rationale #graphify/EXTRACTED #community/Persistência_e_validação_da_base

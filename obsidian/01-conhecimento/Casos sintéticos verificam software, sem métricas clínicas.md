@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "rationale"
-community: "Integração e proveniência da base"
+community: "Evidências de software e clínica"
 location: "L7"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integração_e_proveniência_da_base
+  - community/Evidências_de_software_e_clínica
 ---
 
 # Casos sintéticos verificam software, sem métricas clínicas
@@ -17,4 +17,4 @@ tags:
 - [[Evidências distintas 1066 Python, 1 ignorado, 170 subtestes, 34 casos; web 6011 no checkpoint]] - `references` [EXTRACTED]
 - [[Limiares, seis telas e limites dinâmicos produtor 12veterinário 25]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Integração_e_proveniência_da_base
+#graphify/rationale #graphify/EXTRACTED #community/Evidências_de_software_e_clínica

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Requisitos oficiais e evidências"
 location: "L71"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Requisitos_oficiais_e_evidências
 ---
 
 # Avaliação: potencial, complexidade, assertividade e organização com IA
@@ -15,4 +15,4 @@ tags:
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 - [[Fontes oficiais A apresentação RERUM e D documentário]] - `cites` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Acidose e sinais digestivos"
+community: "Regras e símbolos da v0002"
 location: "L154"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Acidose_e_sinais_digestivos
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # Acidose Ruminal (acidose)
@@ -22,4 +22,4 @@ tags:
 - [[R-ACI-04 acidose (CF 0,88)]] - `implements` [EXTRACTED]
 - [[R-URG-07 observar (CF 0,8)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Acidose_e_sinais_digestivos
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

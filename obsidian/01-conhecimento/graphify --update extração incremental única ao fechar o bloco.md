@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Manutenção dos dois grafos"
 location: "L24"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Manutenção_dos_dois_grafos
 ---
 
 # graphify --update: extração incremental única ao fechar o bloco
@@ -16,4 +16,4 @@ tags:
 - [[Atualização única ao encerrar bloco documental]] - `references` [EXTRACTED]
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Manutenção_dos_dois_grafos

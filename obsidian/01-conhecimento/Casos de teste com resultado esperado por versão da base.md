@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Requisitos oficiais e evidências"
 location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Requisitos_oficiais_e_evidências
 ---
 
 # Casos de teste com resultado esperado por versão da base
@@ -18,4 +18,4 @@ tags:
 - [[Dicas do hackathon (slide 13)]] - `references` [EXTRACTED]
 - [[Fontes oficiais A apresentação RERUM e D documentário]] - `cites` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências

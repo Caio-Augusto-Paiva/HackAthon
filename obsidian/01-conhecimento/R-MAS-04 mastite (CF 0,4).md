@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
 type: "concept"
-community: "Mastite e monitoramento"
+community: "Regras e símbolos da v0002"
 location: "L105"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Mastite_e_monitoramento
+  - community/Regras_e_símbolos_da_v0002
 ---
 
 # R-MAS-04: mastite (CF 0,4)
@@ -16,4 +16,4 @@ tags:
 - [[Documento gerado da v0002 56 regras, 51 símbolos e 8 doenças]] - `references` [EXTRACTED]
 - [[Mastite (mastite)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Mastite_e_monitoramento
+#graphify/concept #graphify/EXTRACTED #community/Regras_e_símbolos_da_v0002

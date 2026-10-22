@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/04-casos-de-teste.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Hipocalcemia e mobilidade"
 location: "L3138"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Hipocalcemia_e_mobilidade
 ---
 
 # DEV-MAS-01: passou, observar, mastite
@@ -19,4 +19,4 @@ tags:
 - [[Mastite (mastite)]] - `references` [EXTRACTED]
 - [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade

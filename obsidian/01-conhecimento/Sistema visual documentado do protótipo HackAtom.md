@@ -2,7 +2,7 @@
 source_file: "DESIGN.md"
 type: "document"
 community: "Sistema visual e componentes"
-location: "L48"
+location: "L48-L54"
 tags:
   - graphify/document
   - graphify/EXTRACTED
@@ -16,7 +16,7 @@ tags:
 - [[Alerta não fecha por Escfundo; outros diálogos devolvem foco]] - `references` [EXTRACTED]
 - [[Barras role=meter com preenchimento sólido]] - `references` [EXTRACTED]
 - [[Bordas 3 px, raios 18–32 px e marcadores por seleção]] - `references` [EXTRACTED]
-- [[Botão laranja primário e brancoverde secundário]] - `references` [EXTRACTED]
+- [[Botão primário rosa e secundário branco com contorno verde]] - `references` [EXTRACTED]
 - [[Campo numérico textual preserva entrada ao erro]] - `references` [EXTRACTED]
 - [[Composição desktop 1440 px derivada dos frames]] - `references` [EXTRACTED]
 - [[Controles com loading, erro, vazio, disabled e foco]] - `references` [EXTRACTED]
@@ -28,8 +28,8 @@ tags:
 - [[Parecer em tabela semântica, caption e blocos da API]] - `references` [EXTRACTED]
 - [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 - [[Sombras claymórficas suaves e brilho SVG original]] - `references` [EXTRACTED]
-- [[Token coracento-escuro b9601a]] - `references` [EXTRACTED]
-- [[Token coracento f0913a]] - `references` [EXTRACTED]
+- [[Token coracento-escuro b5545c]] - `references` [EXTRACTED]
+- [[Token coracento f4a6a6]] - `references` [EXTRACTED]
 - [[Token coralerta e8a317]] - `references` [EXTRACTED]
 - [[Token corcreme f6f1e4]] - `references` [EXTRACTED]
 - [[Token corfundo-escuro 1f4d2c]] - `references` [EXTRACTED]

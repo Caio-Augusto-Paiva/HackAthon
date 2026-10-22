@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Busca documental sob demanda"
 location: "L84"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Busca_documental_sob_demanda
 ---
 
 # Especificação e planos aprovados; implementação e entrega em curso
@@ -15,4 +15,4 @@ tags:
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
 - [[Desenho canônico da anamnese bovina]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Busca_documental_sob_demanda

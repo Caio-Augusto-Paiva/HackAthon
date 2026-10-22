@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "rationale"
-community: "Parecer, retomada e limites"
+community: "Parecer, alerta e retomada"
 location: "L89"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Parecer_retomada_e_limites
+  - community/Parecer_alerta_e_retomada
 ---
 
 # R21: continuidade após parada automática permanece limitada pelo backend
@@ -18,4 +18,4 @@ tags:
 - [[modal de bandeira usa ações do backend]] - `conceptually_related_to` [INFERRED]
 - [[parecer de oito doenças, blocos e Como cheguei aqui]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Parecer_retomada_e_limites
+#graphify/rationale #graphify/INFERRED #community/Parecer_alerta_e_retomada

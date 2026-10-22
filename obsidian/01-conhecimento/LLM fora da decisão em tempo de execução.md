@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Requisitos e arquitetura conceitual"
+community: "Inferência determinística sem LLM"
 location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Inferência_determinística_sem_LLM
 ---
 
 # LLM fora da decisão em tempo de execução
@@ -16,4 +16,4 @@ tags:
 - [[Fontes oficiais A apresentação RERUM e D documentário]] - `cites` [EXTRACTED]
 - [[Motor de inferência com base e fatos explícitos]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/rationale #graphify/EXTRACTED #community/Inferência_determinística_sem_LLM

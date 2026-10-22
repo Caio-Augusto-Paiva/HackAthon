@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
 type: "concept"
-community: "Ensaio humano e entrega final"
+community: "Processo documental verificável"
 location: "L52-L80"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ensaio_humano_e_entrega_final
+  - community/Processo_documental_verificável
 ---
 
 # Fechamento pendente: conferência dos contatos, licença, ensaio humano e arquivos finais
@@ -18,4 +18,4 @@ tags:
 - [[Pendentes ensaio humano, material visual final e tempo oficial]] - `references` [EXTRACTED]
 - [[Registro de riscos R01–R24 e checklist aberto de fechamento]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ensaio_humano_e_entrega_final
+#graphify/concept #graphify/EXTRACTED #community/Processo_documental_verificável

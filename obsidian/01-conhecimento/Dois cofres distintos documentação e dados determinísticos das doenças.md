@@ -1,20 +1,21 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Manutenção dos dois grafos"
 location: "L32"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Manutenção_dos_dois_grafos
 ---
 
-# Cofre Obsidian 01-conhecimento e reserva 02-a-definir
+# Dois cofres distintos: documentação e dados determinísticos das doenças
 
 ## Connections
 - [[Atualização do grafo uma vez por bloco documental]] - `references` [EXTRACTED]
 - [[Atualização única ao encerrar bloco documental]] - `references` [EXTRACTED]
 - [[CLAUDE.md instruções atuais do PoC de anamnese bovina]] - `references` [EXTRACTED]
+- [[Grafo 2 dos dados das 8 doenças, separado do grafo documental]] - `references` [EXTRACTED]
 - [[Grafo de conhecimento ferramenta de busca sob demanda]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Manutenção_dos_dois_grafos

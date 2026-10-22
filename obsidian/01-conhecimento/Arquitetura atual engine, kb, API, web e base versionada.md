@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Requisitos e arquitetura conceitual"
+community: "Estado e instruções do projeto"
 location: "L87"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Estado_e_instruções_do_projeto
 ---
 
 # Arquitetura atual: engine, kb, API, web e base versionada
@@ -18,4 +18,4 @@ tags:
 - [[Motor Python com biblioteca padrão]] - `references` [EXTRACTED]
 - [[Persistência SQLite na API]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/document #graphify/EXTRACTED #community/Estado_e_instruções_do_projeto

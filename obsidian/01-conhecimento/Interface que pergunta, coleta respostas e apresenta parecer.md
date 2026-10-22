@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Componentes do sistema especialista"
 location: "L56"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Componentes_do_sistema_especialista
 ---
 
 # Interface que pergunta, coleta respostas e apresenta parecer
@@ -16,4 +16,4 @@ tags:
 - [[Componentes do modelo conceitual exigido]] - `references` [EXTRACTED]
 - [[Explicação por quê e como a partir do traço]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Componentes_do_sistema_especialista

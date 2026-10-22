@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-documentario-rerum.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Inferência determinística sem LLM"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Inferência_determinística_sem_LLM
 ---
 
 # Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)
@@ -15,4 +15,4 @@ tags:
 - [[Projeto proposto (slide 8)]] - `shares_data_with` [INFERRED]
 - [[Restrição oficial de código aberto]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Inferência_determinística_sem_LLM

@@ -1,11 +1,11 @@
 ---
 source_file: "engine/README.md"
 type: "rationale"
-community: "Processo documental verificável"
+community: "Integração e proveniência da base"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Processo_documental_verificável
+  - community/Integração_e_proveniência_da_base
 ---
 
 # Restauração direta por snapshot integral, sem repetir o diálogo
@@ -18,4 +18,4 @@ tags:
 - [[Integração web verificada no checkpoint; limites de histórico, dispositivos e ensaio físico]] - `references` [EXTRACTED]
 - [[Reserva CLI estimada alerta, explicação, troca e snapshot sem banco]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Processo_documental_verificável
+#graphify/rationale #graphify/EXTRACTED #community/Integração_e_proveniência_da_base

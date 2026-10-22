@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Parecer, retomada e limites"
+community: "Parecer, alerta e retomada"
 location: "L109"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_retomada_e_limites
+  - community/Parecer_alerta_e_retomada
 ---
 
 # Task 5: Alerta de bandeira — implementada com alcance documentado
@@ -17,4 +17,4 @@ tags:
 - [[R21 continuidade após parada automática permanece limitada pelo backend]] - `conceptually_related_to` [INFERRED]
 - [[modal de bandeira usa ações do backend]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_retomada_e_limites
+#graphify/concept #graphify/EXTRACTED #community/Parecer_alerta_e_retomada

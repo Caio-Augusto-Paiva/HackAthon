@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "document"
-community: "Entrega, revisão e contatos"
+community: "Entrega e contatos da equipe"
 location: "L1-L19"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Entrega_revisão_e_contatos
+  - community/Entrega_e_contatos_da_equipe
 ---
 
 # Índice das Seções 5 e 6, consulta integrada e documentos 01–07
@@ -34,4 +34,4 @@ tags:
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 - [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Entrega_revisão_e_contatos
+#graphify/document #graphify/EXTRACTED #community/Entrega_e_contatos_da_equipe

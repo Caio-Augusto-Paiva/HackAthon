@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "rationale"
-community: "Demonstração e troca de modo"
+community: "Integração e proveniência da base"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Demonstração_e_troca_de_modo
+  - community/Integração_e_proveniência_da_base
 ---
 
 # 56 regras em suposicao_a_validar e nenhuma validada
@@ -17,4 +17,4 @@ tags:
 - [[S6-12 achado histórico — Fontes clínicas e CF continuam provisórios]] - `conceptually_related_to` [EXTRACTED]
 - [[Índice das Seções 5 e 6, consulta integrada e documentos 01–07]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Demonstração_e_troca_de_modo
+#graphify/rationale #graphify/EXTRACTED #community/Integração_e_proveniência_da_base

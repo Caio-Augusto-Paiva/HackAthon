@@ -1,11 +1,11 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Requisitos e arquitetura conceitual"
+community: "Requisitos oficiais e evidências"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Requisitos_e_arquitetura_conceitual
+  - community/Requisitos_oficiais_e_evidências
 ---
 
 # Dicas do hackathon (slide 13)
@@ -14,4 +14,4 @@ tags:
 - [[Casos de teste com resultado esperado por versão da base]] - `references` [EXTRACTED]
 - [[Restrição oficial de código aberto]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Requisitos_e_arquitetura_conceitual
+#graphify/concept #graphify/EXTRACTED #community/Requisitos_oficiais_e_evidências

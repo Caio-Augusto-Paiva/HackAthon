@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "rationale"
-community: "Contratos e integração localhost"
+community: "Escopo e pendências reais"
 location: "L17"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Contratos_e_integração_localhost
+  - community/Escopo_e_pendências_reais
 ---
 
 # cliente envia valor ou nao_sei, nunca CF
@@ -16,4 +16,4 @@ tags:
 - [[Núcleo local regras explícitas e CF MYCIN; IA auxilia o desenvolvimento]] - `rationale_for` [EXTRACTED]
 - [[Plano histórico do frontend; implementação Tasks 1–8 documentada nas fontes atuais]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Contratos_e_integração_localhost
+#graphify/rationale #graphify/EXTRACTED #community/Escopo_e_pendências_reais

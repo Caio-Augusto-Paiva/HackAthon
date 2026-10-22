@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "rationale"
-community: "Precisão numérica da interface"
+community: "Parecer, retomada e limites"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Precisão_numérica_da_interface
+  - community/Parecer_retomada_e_limites
 ---
 
 # entrada numérica preserva string e validação backend
@@ -16,4 +16,4 @@ tags:
 - [[Precisão não exposta por proxima; backend valida casas decimais]] - `conceptually_related_to` [INFERRED]
 - [[v0002 limites numéricos e precisão; cópia de desenvolvimento alinhada]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Precisão_numérica_da_interface
+#graphify/rationale #graphify/EXTRACTED #community/Parecer_retomada_e_limites

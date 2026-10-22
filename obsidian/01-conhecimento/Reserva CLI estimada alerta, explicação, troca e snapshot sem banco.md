@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
 type: "concept"
-community: "Casos sintéticos na v0002"
+community: "Hipocalcemia e mobilidade"
 location: "L58-L102"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_sintéticos_na_v0002
+  - community/Hipocalcemia_e_mobilidade
 ---
 
 # Reserva CLI estimada: alerta, explicação, troca e snapshot sem banco
@@ -19,4 +19,4 @@ tags:
 - [[Roteiro atual consulta React integrada e CLI de reserva]] - `references` [EXTRACTED]
 - [[Sessao triagem, diálogo, modo, bandeiras, parecer e porquecomo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_sintéticos_na_v0002
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_mobilidade
