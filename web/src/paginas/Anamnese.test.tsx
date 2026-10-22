@@ -87,12 +87,13 @@ describe('diálogo da anamnese', () => {
     expect(screen.getByText('Pergunta 2 de até 18')).toBeInTheDocument();
   });
 
-  it('abre o porquê com o motivo, as doenças e as regras retornadas', async () => {
+  it('abre o porquê com as doenças em frases simples, sem a legenda da triagem', async () => {
     simular(primeira);
     montar();
     await userEvent.click(await screen.findByRole('button', { name: 'Por que estou perguntando isso?' }));
     const dialogo = await screen.findByRole('dialog');
-    expect(await within(dialogo).findByText(exemploPorque.motivo)).toBeInTheDocument();
+    expect(await within(dialogo).findByText(/Em casos de/)).toBeInTheDocument();
+    expect(dialogo).not.toHaveTextContent(exemploPorque.motivo);
     expect(dialogo).toHaveTextContent('Em casos de Mastite clínica, o animal pode apresentar grumos na caneca.');
     expect(dialogo).not.toHaveTextContent('R-MAS-03');
   });

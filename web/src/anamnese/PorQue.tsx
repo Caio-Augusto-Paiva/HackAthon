@@ -40,7 +40,6 @@ export function PorQue({ sessaoId, simbolos, aoFechar }: { sessaoId: string; sim
     {erro ? <p role="alert">Não consegui carregar a explicação. <button onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</button></p>
       : !motivos ? <p role="status">Carregando explicação…</p>
       : <div className={estilos.corpo}>
-        <p className={estilos.motivo}>{motivos[0]?.motivo}</p>
         {motivos.map(m => <section key={m.simbolo} className={estilos.secao}>
           {motivos.length > 1 && <h3>{m.pergunta}</h3>}
           {m.serve_a.length

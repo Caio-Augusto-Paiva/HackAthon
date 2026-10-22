@@ -9,3 +9,9 @@
 @keyframes marcar { from { transform: scale(.7); } }
 .desabilitada { cursor: not-allowed; opacity: .7; }
 @media (max-width: 600px) { .opcao { font-size: 18px; min-height: 60px; padding: 14px 16px; } }
+/* Brilho que atravessa a opção sob o mouse: uma faixa clara em diagonal, uma vez por entrada. */
+.opcao { overflow: hidden; isolation: isolate; }
+.opcao::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgb(255 255 255 / 75%), transparent); transform: translateX(0) skewX(-18deg); opacity: 0; }
+.opcao:hover:not(.desabilitada)::after { animation: brilho 900ms cubic-bezier(.25, 1, .5, 1); }
+@keyframes brilho { 0% { opacity: 1; transform: translateX(0) skewX(-18deg); } 100% { opacity: 1; transform: translateX(420%) skewX(-18deg); } }

@@ -1,5 +1,4 @@
 .corpo { display: grid; gap: 18px; }
-.motivo { font-size: 15px; font-weight: 700; color: var(--cor-texto-suave); }
 .secao { display: grid; gap: 10px; }
 .secao h3 { font: 800 17px/1.35 var(--fonte-corpo); color: var(--cor-primaria-escura); }
 .lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
