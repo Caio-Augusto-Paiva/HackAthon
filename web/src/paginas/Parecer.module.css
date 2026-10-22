@@ -15,6 +15,9 @@
 .tabela { width: 100%; border-collapse: separate; border-spacing: 0 10px; text-align: left; }
 .bloco th { color: var(--cor-primaria); font-size: 16px; padding: 0; }
 .linha td, .linha th { background: var(--cor-superficie); padding: 16px 12px; }
+.linha { animation: entrarLinha 480ms cubic-bezier(.16, 1, .3, 1) calc(120ms + var(--ordem, 0) * 70ms) backwards; }
+.urgencia { animation: entrarLinha 420ms cubic-bezier(.16, 1, .3, 1) backwards; }
+@keyframes entrarLinha { from { opacity: 0; transform: translateY(10px); } }
 .linha td:first-child { border-radius: 14px 0 0 14px; }
 .linha td:last-child { border-radius: 0 14px 14px 0; width: 40%; }
 .posicao { width: 7%; color: var(--cor-primaria); font-weight: 800; font-size: 20px; }

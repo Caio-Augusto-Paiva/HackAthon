@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { obterParecer, type Parecer } from '../api/sessao';
 import { BarraConfianca } from '../componentes/BarraConfianca';
+import { Contador } from '../componentes/Contador';
 import estilos from './BarraHipoteses.module.css';
 
 export function BarraHipoteses({ sessaoId, revisao }: { sessaoId: string; revisao: number }) {
@@ -10,7 +11,6 @@ export function BarraHipoteses({ sessaoId, revisao }: { sessaoId: string; revisa
   useEffect(() => {
     let ativa = true;
     definirErro(false);
-    definirParecer(undefined);
     obterParecer(sessaoId).then(p => { if (ativa) definirParecer(p); }).catch(() => { if (ativa) definirErro(true); });
     return () => { ativa = false; };
   }, [sessaoId, revisao, tentativa]);
@@ -19,8 +19,8 @@ export function BarraHipoteses({ sessaoId, revisao }: { sessaoId: string; revisa
     <h2>O que estou pensando</h2><p>A cada resposta, as hipóteses vão ficando mais claras.</p>
     {erro ? <div role="alert">Não consegui atualizar as hipóteses. <button onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</button></div>
       : !itens ? <p role="status">Atualizando hipóteses…</p>
-      : <ul>{itens.map(i => <li key={i.doenca}><div><strong>{i.nome}</strong><span>{i.percentual}%</span></div>
-        <BarraConfianca percentual={i.percentual} rotulo={i.nome} /></li>)}</ul>}
+      : <ul>{itens.map((i, n) => <li key={i.doenca}><div><strong>{i.nome}</strong><span><Contador valor={i.percentual} atraso={n * 80} /></span></div>
+        <BarraConfianca percentual={i.percentual} rotulo={i.nome} atraso={n * 80} /></li>)}</ul>}
     <p className={estilos.nota}>A porcentagem é a confiança do sistema, não uma probabilidade.</p>
   </aside>;
 }

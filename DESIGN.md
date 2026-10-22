@@ -8,8 +8,8 @@ colors:
   superficie: "#ffffff"
   primaria: "#2e6b3f"
   primaria-escura: "#173d22"
-  acento: "#f0913a"
-  acento-escuro: "#b9601a"
+  acento: "#f4a6a6"
+  acento-escuro: "#b5545c"
   texto: "#1e2a20"
   texto-suave: "#55604f"
   texto-claro: "#f6f1e4"
@@ -47,7 +47,7 @@ spacing:
 
 ## Overview
 
-Referência fixa: [HackAtom, página Protótipo](https://www.figma.com/design/MUiGJ81WjX97iyjX0yE6jz/HackAtom?node-id=9-2), conferida por `get_design_context`, `get_variable_defs` e leitura da coleção “Tokens” em 22/10/2026. O desenho usa fundo verde, superfícies creme, boi ilustrado e ação principal laranja. A adaptação implementa o fluxo real da API em layouts responsivos, sem substituir conteúdo clínico por exemplos estáticos do Figma.
+Referência fixa: [HackAtom, página Protótipo](https://www.figma.com/design/MUiGJ81WjX97iyjX0yE6jz/HackAtom?node-id=9-2), conferida por `get_design_context`, `get_variable_defs` e leitura da coleção “Tokens” em 22/10/2026. O desenho usa fundo verde, superfícies creme, boi ilustrado e ação principal rosa (o rosa do focinho do boi). A adaptação implementa o fluxo real da API em layouts responsivos, sem substituir conteúdo clínico por exemplos estáticos do Figma.
 
 ## Colors
 
@@ -65,7 +65,7 @@ Em 375/768 px, reorganizar em uma coluna e preservar a ordem de leitura. A later
 
 ## Elevation & Depth
 
-Profundidade claymórfica macia. Cartão/balão: sombra externa `0 10px 20px rgba(14,38,20,.45)`, interna inferior `inset 0 -4px 6px rgba(14,38,20,.22)` e superior `inset 0 3px 4px rgba(255,255,255,.55)`. Botão laranja: externa `0 6px 6px rgba(185,96,26,.45)` e interiores com o mesmo tratamento. Opções: externa `0 4px 4px rgba(143,134,112,.45)`. Nenhuma sombra dura sem desfoque. O brilho de fundo é o SVG fornecido pelo Figma.
+Profundidade claymórfica macia. Cartão/balão: sombra externa `0 10px 20px rgba(14,38,20,.45)`, interna inferior `inset 0 -4px 6px rgba(14,38,20,.22)` e superior `inset 0 3px 4px rgba(255,255,255,.55)`. Botão rosa: externa `0 6px 6px rgba(181,84,92,.40)` e interiores com o mesmo tratamento. Opções: externa `0 4px 4px rgba(143,134,112,.45)`. Nenhuma sombra dura sem desfoque. O brilho de fundo é o SVG fornecido pelo Figma.
 
 ## Shapes
 
@@ -73,8 +73,8 @@ Bordas de 3 px e raios de 18–32 px conforme os tokens. Balão com canto inferi
 
 ## Components
 
-- Botão primário laranja e secundário branco com contorno verde. Carregando impede novo envio e informa `aria-busy`.
-- Opções usam `radio`/`checkbox` nativos dentro de `fieldset` e `legend`. Selecionada recebe fundo creme, contorno laranja e check original do Figma.
+- Botão primário rosa e secundário branco com contorno verde. Carregando impede novo envio e informa `aria-busy`.
+- Opções usam `radio`/`checkbox` nativos dentro de `fieldset` e `legend`. Selecionada recebe fundo creme, contorno rosa e check original do Figma.
 - Campo numérico é texto com teclado numérico/decimal, rótulo, unidade e ajuda. O erro preserva a entrada e aparece abaixo, com borda vermelha e texto acessível. Sem valor inicial inventado.
 - Barras usam `role="meter"` e preenchimento sólido proporcional ao percentual recebido. Não reproduzir o gradiente usado no protótipo.
 - Alerta de segurança protege foco, mostra texto e ações da API e não fecha por Esc ou clique externo. Outros diálogos permitem fechamento explícito e devolvem foco.

@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { agirBandeira, obterParecer, obterSessao, type Parecer as DadosParecer } from '../api/sessao';
 import { ErroApi } from '../api/cliente';
 import { Botao } from '../componentes/Botao';
 import { Boi } from '../componentes/Boi';
 import { BarraConfianca } from '../componentes/BarraConfianca';
+import { Contador } from '../componentes/Contador';
 import { ComoChegou } from '../anamnese/ComoChegou';
 import { ControleModo, ConfirmacaoEspecialista } from '../anamnese/ControleModo';
 import { useTrocaModo } from '../anamnese/useTrocaModo';
@@ -64,11 +65,11 @@ export function Parecer() {
         <caption className="somenteLeitor">Hipóteses e confiança do sistema</caption>
         <thead className="somenteLeitor"><tr><th>Ordem</th><th>Doença</th><th>Gravidade</th><th>Confiança</th></tr></thead>
         {blocos.map(bloco => <tbody key={bloco.id}><tr className={estilos.bloco}><th colSpan={4} scope="rowgroup">{bloco.titulo}</th></tr>
-          {bloco.itens.length ? bloco.itens.map(item => <tr key={item.doenca} className={estilos.linha}>
+          {bloco.itens.length ? bloco.itens.map(item => { const ordem = posicao; return <tr key={item.doenca} className={estilos.linha} style={{ '--ordem': ordem } as CSSProperties}>
             <td className={estilos.posicao}>{++posicao}º</td><th scope="row" className={estilos.doenca}>{item.nome}</th>
             <td><span className={estilos.gravidade} data-gravidade={item.gravidade}><span className={estilos.prefixo}>Gravidade </span>{gravidades[item.gravidade]}</span></td>
-            <td><div className={estilos.confianca}><BarraConfianca percentual={item.percentual} rotulo={item.nome} /><strong>{item.percentual}%</strong></div></td>
-          </tr>) : <tr><td colSpan={4} className={estilos.vazio}>Nenhuma hipótese neste grupo.</td></tr>}
+            <td><div className={estilos.confianca}><BarraConfianca percentual={item.percentual} rotulo={item.nome} atraso={200 + ordem * 70} /><strong><Contador valor={item.percentual} atraso={200 + ordem * 70} /></strong></div></td>
+          </tr>; }) : <tr><td colSpan={4} className={estilos.vazio}>Nenhuma hipótese neste grupo.</td></tr>}
         </tbody>)}
       </table><p className={estilos.aviso}>{dados.aviso}</p>
       {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {dados.inconclusivas.join(', ')}.</p>}
