@@ -277,7 +277,7 @@ Você vai executar a Seção 5 (testes, execução em localhost, ensaio e docume
 
 ## Regras
 
-- **Não altere `api/`, `web/`, `contratos/` nem `tests/api/`.** O design e o frontend estão sendo feitos em paralelo em outra sessão. Se a API precisar de ajuste, registre o pedido em `docs/entrega/06-riscos-e-pendencias.md` e não edite.
+- **Não altere `api/`, `contratos/` nem `tests/api/`.** O frontend (`web/`) agora é seu também: siga `docs/prompts/frontend-codex.md` e o plano `docs/superpowers/plans/2026-10-22-frontend-web.md`. Se a API precisar de ajuste, registre o pedido em `docs/entrega/06-riscos-e-pendencias.md` e não edite.
 - Não altere `engine/` nem `kb/` sem antes escrever o teste que mostra o defeito; mudança no motor ou no validador exige registro em `docs/processo/revisoes-cruzadas.md`.
 - TDD; rode a suíte inteira antes de cada commit: `.venv/Scripts/python -m pytest -q` e `python -m unittest discover -s tests/engine -t .`. Um commit por etapa; push ao final de cada etapa.
 - Conhecimento veterinário continua **suposição a validar**; dados fictícios apenas.
