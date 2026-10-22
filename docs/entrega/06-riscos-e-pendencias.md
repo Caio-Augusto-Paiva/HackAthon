@@ -23,6 +23,13 @@ Estado em 21/10/2026. Este registro descreve o checkout auditado; responsáveis 
 
 As probabilidades de ocorrência não foram medidas; não atribuímos percentuais artificiais aos riscos. A prioridade deve ser revista pela equipe conforme avanço de API/web e disponibilidade de especialista.
 
+## Achados da Camada 3 — Seção 5, branch codex-davi
+
+- **R15 — Seleção e coleta de sinais com evidência inicial fraca (alta; A/B):** na `v0001`, `C-DAB-DIALOGO` termina com cetose 40% e abomaso 30%; `flanco_esquerdo_afundado` não é perguntado. O positivo `C-DAB-01` fornece esse achado como observação prévia fictícia na ficha do executor, alcançando 57%; não demonstra que a interface/API capture esse campo. `C-MET-03`, `C-TPB-03`, `C-HIP-03`, `C-DAB-03` e `C-ACI-03` podem encerrar em `sem_problema` sem solicitar os sinais adicionais. Os percentuais são confiança do sistema, não probabilidades. Equipe deve decidir política de coleta, limiares e mensagem; não houve alteração silenciosa em regra, motor ou API.
+- **R16 — Os esperados históricos da Seção 5 não equivalem à base revisada (alta; A):** mastite com leite alterado + úbere tem CF 0,797, exibido como 80%, porém não alcança confirmação de 0,80 e encerra por `sem_perguntas`. Decúbito no periparto produz hipocalcemia 64%, não 80–100%; claudicação + dor produz dermatite 65%, não 80–100%. No caso de limite, só cetose excede 0,35; acidose=0,35 e dermatite=0,30 não entram nas inconclusivas. Metrite na comorbidade alcança 74%, abaixo do antigo 75%. A `v0001` não contém alguns sinais do roteiro (por exemplo, perda de condição corporal e lesão podal perguntável ao produtor); os cenários usam os símbolos disponíveis e registram os desvios. Revisão clínica e eventual `v0002` dependem de decisão da equipe.
+- **Correção de resposta:** o modelo `kb.Caso` não representa operações de correção. O cenário é exercitado diretamente com `Sessao` em `tests/casos/test_casos_conhecidos.py`: retirar decúbito remove R-BV-01 e a pausa, preservando dias em lactação e estado térmico. Não foi criado campo incompatível com o contrato em paralelo.
+- **Contagens desta etapa:** 34 casos JSON (31 cenários adaptados, dois exemplos preservados e uma regressão explícita de diálogo), além do teste dedicado de correção. Cada esperado é literal e revisado contra as regras atuais; não é calculado pelo mesmo código que faz a asserção. Esses casos não são validação clínica.
+
 ## Correções editoriais da Seção 6 que já podem ser aplicadas
 
 | Trecho do roteiro original | Veredito | Prova no checkpoint | Ajuste aplicado nesta documentação |
