@@ -3,8 +3,9 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
+from api.schemas import CONFIG_RESPOSTA_COMPLETA
 from api.schemas.parecer import Gravidade
 from api.schemas.sessao import Valor
 
@@ -15,7 +16,9 @@ class ServeA(BaseModel):
     doenca: str
     nome: str
     gravidade: Gravidade
-    cf_atual: float
+    cf_atual: float = Field(
+        description="CF da doença no momento em que a pergunta foi feita (congelado no evento); não acompanha as respostas seguintes."
+    )
     regras: list[str]
 
 
@@ -48,7 +51,9 @@ class Evidencia(BaseModel):
 
 
 class Entrada(BaseModel):
-    """Um fato que alimentou a regra; com ``origem: "regra"`` traz as ``evidencias`` que o produziram."""
+    """Um fato que alimentou a regra; com ``origem: "regra"`` traz as ``evidencias`` que o produziram (senão ``null``)."""
+
+    model_config = CONFIG_RESPOSTA_COMPLETA
 
     simbolo: str
     valor: Valor | None  # None = "não sei"

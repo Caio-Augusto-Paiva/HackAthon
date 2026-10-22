@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from api.schemas.sessao import NivelUrgencia, OrigemUrgencia
 from kb.modelos import Modo
@@ -41,8 +41,14 @@ class Parecer(BaseModel):
     sessao_id: str
     versao_base: str
     modo: Modo
-    final: bool  # False se a sessão ainda não encerrou
-    motivo_parada: MotivoParada | None
+    final: bool = Field(
+        description="Verdadeiro se a sessão está encerrada; false é o quadro parcial. Depois de `ver_parecer` `final` "
+        "é true com `motivo_parada` null (a anamnese foi encerrada pelo usuário, não por uma regra de parada)."
+    )
+    motivo_parada: MotivoParada | None = Field(
+        description="Por que o motor parou (`confirmacao`, `sem_perguntas`, `limite`, `sem_potencial`). null enquanto a "
+        "sessão está aberta e também depois de `ver_parecer`, mesmo com `final: true`."
+    )
     urgencia: UrgenciaParecer
     aviso: str
     blocos: list[Bloco]

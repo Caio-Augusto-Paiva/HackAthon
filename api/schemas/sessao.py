@@ -10,7 +10,7 @@ from typing import Annotated, Literal, Self
 
 from pydantic import BaseModel, Field, model_validator
 
-from api.schemas import CONFIG_REQUISICAO
+from api.schemas import CONFIG_REQUISICAO, CONFIG_RESPOSTA_COMPLETA
 from kb.modelos import Modo
 
 TipoEntrada = Literal["booleano", "categorico", "numerico"]
@@ -29,7 +29,12 @@ class Opcao(BaseModel):
 
 
 class Campo(BaseModel):
-    """Um símbolo de uma tela de triagem. Categórico traz ``opcoes``; numérico, ``unidade``, ``min`` e ``max``."""
+    """Um símbolo de uma tela de triagem. Categórico traz ``opcoes``; numérico, ``unidade``, ``min`` e ``max``.
+
+    Todos os campos vêm sempre na resposta; os que não se aplicam ao tipo de entrada vão como ``null``.
+    """
+
+    model_config = CONFIG_RESPOSTA_COMPLETA
 
     simbolo: str
     entrada: TipoEntrada
@@ -50,12 +55,19 @@ class TelaTriagem(BaseModel):
 
 
 class PerguntaDinamica(BaseModel):
+    """Pergunta da fase dinâmica. ``opcoes``, ``unidade``, ``min`` e ``max`` vêm sempre (``null`` se não se aplicam)."""
+
+    model_config = CONFIG_RESPOSTA_COMPLETA
+
     tipo: Literal["pergunta"]
     simbolo: str
     entrada: TipoEntrada
     permite_nao_sei: bool
     texto: str
-    motivo_resumo: str
+    motivo_resumo: str = Field(
+        description="Motivo curto da pergunta, congelado na primeira apresentação: não muda com as respostas seguintes "
+        "nem com as correções. O motivo completo (e o que a pergunta serve a confirmar) vem de `GET .../porque/{simbolo}`."
+    )
     porque_disponivel: bool
     opcoes: list[Opcao] | None = None
     unidade: str | None = None
@@ -71,6 +83,8 @@ class Progresso(BaseModel):
 
 
 class UrgenciaEstado(BaseModel):
+    model_config = CONFIG_RESPOSTA_COMPLETA
+
     nivel: NivelUrgencia
     provisoria: bool
     origem: OrigemUrgencia
@@ -82,8 +96,15 @@ class Alerta(BaseModel):
 
     nivel: Literal["chamar_agora"]
     regras: list[str]
-    pausa: bool
-    acoes: list[AcaoDaBandeira]
+    pausa: bool = Field(
+        description="Verdadeiro só no modo produtor, com bandeira ainda não reconhecida: a anamnese fica parada "
+        "(`proxima` é null) até `continuar` ou `ver_parecer`. Depois de `ver_parecer` (fase encerrada) vale false."
+    )
+    acoes: list[AcaoDaBandeira] = Field(
+        description="Ações aceitas agora em `POST .../acoes/bandeira`. Com a pausa ativa: `continuar` e `ver_parecer`; "
+        "com a sessão já encerrada e a pausa ativa, só `ver_parecer`. Sem pausa (por exemplo, depois de "
+        "`ver_parecer`, ou no modo veterinário): `[]`."
+    )
     texto: str
 
 
@@ -96,9 +117,17 @@ class EstadoSessao(BaseModel):
     modo: Modo
     versao_base: str
     revisao: int
-    fase: Fase
+    fase: Fase = Field(
+        description="`triagem`, `dinamica` ou `encerrada`. Depois de `ver_parecer` a fase é `encerrada` (pausa false, "
+        "`alerta.acoes` vazio) e `GET .../parecer` traz `final: true`. `continuar`, a troca de modo (PATCH) e a "
+        "correção de uma resposta (PUT) reabrem a sessão (a fase volta a `triagem` ou `dinamica`); uma resposta nova "
+        "(POST) a uma sessão encerrada é recusada com 422 `resposta_invalida`."
+    )
     progresso: Progresso
-    proxima: Proxima | None  # None = sessão encerrada ou pausada pela bandeira
+    proxima: Proxima | None = Field(
+        description="Próxima tela da triagem ou pergunta dinâmica a mostrar. null quando a sessão está encerrada OU "
+        "pausada por bandeira vermelha (veja `fase` e `alerta.pausa`): nesse caso mostre o alerta ou o parecer, não uma pergunta."
+    )
     urgencia: UrgenciaEstado
     alerta: Alerta | None
 

@@ -130,6 +130,30 @@ Monta o app sem subir servidor e sem tocar no banco. O primeiro teste de `tests/
 arquivo versionado não for idêntico ao gerado. Por isso o `pydantic` está fixado em `pyproject.toml` (`==2.14.1`): um patch
 dele pode mudar o texto do JSON Schema e invalidar o arquivo.
 
+## Para o frontend
+
+O que o `openapi.json` sozinho não diz (as descrições também estão nos campos do schema):
+
+- **`proxima` nulo.** `EstadoSessao.proxima` é `null` quando a sessão está encerrada **ou** pausada por bandeira vermelha
+  (`alerta.pausa == true`). Nos dois casos não há pergunta a mostrar: mostre o alerta (com `alerta.acoes`) ou o parecer.
+- **`ver_parecer`.** Depois dele a sessão fica `fase: "encerrada"`, `alerta.pausa == false` e `alerta.acoes == []`; `GET .../parecer`
+  traz `final: true` com `motivo_parada: null` (o usuário encerrou; nenhuma regra de parada disparou). Com a sessão já encerrada e a
+  pausa ativa, `alerta.acoes` é só `["ver_parecer"]`.
+- **Reabrir.** Depois de `ver_parecer`, `continuar`, a troca de modo (`PATCH`) e a correção de uma resposta (`PUT`) reabrem a sessão
+  (a fase volta a `triagem` ou `dinamica`). Uma resposta nova (`POST`) a uma sessão encerrada é 422 `resposta_invalida`.
+- **`serve_a[].cf_atual`** (em `/porque`) é o CF da doença **no momento em que a pergunta foi feita**; não acompanha as respostas seguintes.
+- **`motivo_resumo`** da pergunta dinâmica é congelado na primeira apresentação: não muda com as respostas nem com as correções.
+- **Campos sempre presentes.** Nos modelos de resposta o servidor sempre envia todos os campos, com `null` quando não se aplicam
+  (por exemplo `Campo.opcoes/unidade/min/max`, `UrgenciaEstado.regras`, `Entrada.evidencias`, `ResultadoCaso.mudou_vs_pai/obtido/erro`,
+  `SalvarResposta.execucao_pai`). No schema eles são obrigatórios (nulos permitidos); nos corpos de requisição nada mudou.
+- **409 `conflito` em mutação de sessão.** Duas abas ou um duplo clique podem alterar a mesma sessão ao mesmo tempo. Se uma mutação
+  (`PATCH`, `POST`/`PUT` de triagem ou de resposta, ação de bandeira) volta 409 `conflito` ("alterada por outra requisição"), faça
+  `GET /sessoes/{id}` e reapresente o estado; não repita o envio às cegas. O 409 `ja_respondida` (a mesma tela de novo) pede o mesmo `GET`.
+- **409 sem base ativa.** Sem versão ativa, `POST /animais` e `POST /animais/importacao` (que validam a ficha contra a base ativa) e
+  `POST /sessoes` sem `versao_base` respondem 409 `conflito`.
+- **Não edite `vNNNN.json` à mão.** O hash e o índice vêm da gravação pela API; um arquivo de versão alterado ou malformado em
+  `base/versoes/` faz a listagem (`GET /base/versoes`) responder 500. Edite pelo editor (`POST /base/versoes`).
+
 ## Testes
 
 ```

@@ -23,6 +23,7 @@
         "description": "Bandeira vermelha. ``pausa`` só é verdadeiro no modo produtor, com bandeira ainda não reconhecida.",
         "properties": {
           "acoes": {
+            "description": "Ações aceitas agora em `POST .../acoes/bandeira`. Com a pausa ativa: `continuar` e `ver_parecer`; com a sessão já encerrada e a pausa ativa, só `ver_parecer`. Sem pausa (por exemplo, depois de `ver_parecer`, ou no modo veterinário): `[]`.",
             "items": {
               "enum": [
                 "ver_parecer",
@@ -39,6 +40,7 @@
             "type": "string"
           },
           "pausa": {
+            "description": "Verdadeiro só no modo produtor, com bandeira ainda não reconhecida: a anamnese fica parada (`proxima` é null) até `continuar` ou `ver_parecer`. Depois de `ver_parecer` (fase encerrada) vale false.",
             "title": "Pausa",
             "type": "boolean"
           },
@@ -461,7 +463,7 @@
         "type": "object"
       },
       "Campo": {
-        "description": "Um símbolo de uma tela de triagem. Categórico traz ``opcoes``; numérico, ``unidade``, ``min`` e ``max``.",
+        "description": "Um símbolo de uma tela de triagem. Categórico traz ``opcoes``; numérico, ``unidade``, ``min`` e ``max``.\n\nTodos os campos vêm sempre na resposta; os que não se aplicam ao tipo de entrada vão como ``null``.",
         "properties": {
           "entrada": {
             "enum": [
@@ -537,7 +539,12 @@
         },
         "required": [
           "simbolo",
-          "entrada"
+          "entrada",
+          "rotulo",
+          "opcoes",
+          "unidade",
+          "min",
+          "max"
         ],
         "title": "Campo",
         "type": "object"
@@ -938,7 +945,7 @@
         "type": "object"
       },
       "Entrada": {
-        "description": "Um fato que alimentou a regra; com ``origem: \"regra\"`` traz as ``evidencias`` que o produziram.",
+        "description": "Um fato que alimentou a regra; com ``origem: \"regra\"`` traz as ``evidencias`` que o produziram (senão ``null``).",
         "properties": {
           "cf": {
             "title": "Cf",
@@ -1006,7 +1013,8 @@
           "valor",
           "cf",
           "origem",
-          "tela_id"
+          "tela_id",
+          "evidencias"
         ],
         "title": "Entrada",
         "type": "object"
@@ -1058,6 +1066,7 @@
             "type": "string"
           },
           "fase": {
+            "description": "`triagem`, `dinamica` ou `encerrada`. Depois de `ver_parecer` a fase é `encerrada` (pausa false, `alerta.acoes` vazio) e `GET .../parecer` traz `final: true`. `continuar`, a troca de modo (PATCH) e a correção de uma resposta (PUT) reabrem a sessão (a fase volta a `triagem` ou `dinamica`); uma resposta nova (POST) a uma sessão encerrada é recusada com 422 `resposta_invalida`.",
             "enum": [
               "triagem",
               "dinamica",
@@ -1100,6 +1109,7 @@
                 "type": "null"
               }
             ],
+            "description": "Próxima tela da triagem ou pergunta dinâmica a mostrar. null quando a sessão está encerrada OU pausada por bandeira vermelha (veja `fase` e `alerta.pausa`): nesse caso mostre o alerta ou o parecer, não uma pergunta.",
             "title": "Proxima"
           },
           "revisao": {
@@ -1942,6 +1952,7 @@
             "type": "array"
           },
           "final": {
+            "description": "Verdadeiro se a sessão está encerrada; false é o quadro parcial. Depois de `ver_parecer` `final` é true com `motivo_parada` null (a anamnese foi encerrada pelo usuário, não por uma regra de parada).",
             "title": "Final",
             "type": "boolean"
           },
@@ -1975,6 +1986,7 @@
                 "type": "null"
               }
             ],
+            "description": "Por que o motor parou (`confirmacao`, `sem_perguntas`, `limite`, `sem_potencial`). null enquanto a sessão está aberta e também depois de `ver_parecer`, mesmo com `final: true`.",
             "title": "Motivo Parada"
           },
           "sessao_id": {
@@ -2005,6 +2017,7 @@
         "type": "object"
       },
       "PerguntaDinamica": {
+        "description": "Pergunta da fase dinâmica. ``opcoes``, ``unidade``, ``min`` e ``max`` vêm sempre (``null`` se não se aplicam).",
         "properties": {
           "entrada": {
             "enum": [
@@ -2038,6 +2051,7 @@
             "title": "Min"
           },
           "motivo_resumo": {
+            "description": "Motivo curto da pergunta, congelado na primeira apresentação: não muda com as respostas seguintes nem com as correções. O motivo completo (e o que a pergunta serve a confirmar) vem de `GET .../porque/{simbolo}`.",
             "title": "Motivo Resumo",
             "type": "string"
           },
@@ -2095,7 +2109,11 @@
           "permite_nao_sei",
           "texto",
           "motivo_resumo",
-          "porque_disponivel"
+          "porque_disponivel",
+          "opcoes",
+          "unidade",
+          "min",
+          "max"
         ],
         "title": "PerguntaDinamica",
         "type": "object"
@@ -2422,6 +2440,7 @@
         "type": "object"
       },
       "ResultadoCaso": {
+        "description": "``mudou_vs_pai``, ``obtido`` e ``erro`` vêm sempre (``null`` quando não se aplicam).",
         "properties": {
           "caso_id": {
             "title": "Caso Id",
@@ -2486,7 +2505,10 @@
           "caso_id",
           "descricao",
           "status",
-          "falhas"
+          "mudou_vs_pai",
+          "falhas",
+          "obtido",
+          "erro"
         ],
         "title": "ResultadoCaso",
         "type": "object"
@@ -2612,6 +2634,7 @@
           "hash",
           "validacao",
           "execucao_nova",
+          "execucao_pai",
           "mudancas"
         ],
         "title": "SalvarResposta",
@@ -2640,6 +2663,7 @@
         "description": "Uma doença que a pergunta ajuda a confirmar ou afastar.",
         "properties": {
           "cf_atual": {
+            "description": "CF da doença no momento em que a pergunta foi feita (congelado no evento); não acompanha as respostas seguintes.",
             "title": "Cf Atual",
             "type": "number"
           },
@@ -3105,7 +3129,8 @@
         "required": [
           "nivel",
           "provisoria",
-          "origem"
+          "origem",
+          "regras"
         ],
         "title": "UrgenciaEstado",
         "type": "object"

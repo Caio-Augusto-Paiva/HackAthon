@@ -9,7 +9,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from api.schemas import CONFIG_REQUISICAO
+from api.schemas import CONFIG_REQUISICAO, CONFIG_RESPOSTA_COMPLETA
 from kb.validador import Relatorio
 
 StatusCaso = Literal["passou", "falhou", "erro"]
@@ -81,6 +81,8 @@ class Mudanca(BaseModel):
 
 
 class SalvarResposta(BaseModel):
+    model_config = CONFIG_RESPOSTA_COMPLETA
+
     versao: str
     pai: str | None
     hash: str
@@ -115,6 +117,10 @@ class FalhaCaso(BaseModel):
 
 
 class ResultadoCaso(BaseModel):
+    """``mudou_vs_pai``, ``obtido`` e ``erro`` vêm sempre (``null`` quando não se aplicam)."""
+
+    model_config = CONFIG_RESPOSTA_COMPLETA
+
     caso_id: str
     descricao: str
     status: StatusCaso
