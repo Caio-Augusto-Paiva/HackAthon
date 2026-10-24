@@ -71,6 +71,16 @@ def test_exclusao_duplicada():
     "http://www.embrapa.br/x",
     "https://embrapa.br.evil.com/x",
     "https://exemplo.com",
+    "https://evil.com\\@embrapa.br/x",
+    "https://embrapa.br/x y",
+    "https://embrapa.br/x\ty",
+    "https://embrapa.br/x\x00y",
+    "https://user:senha@www.embrapa.br/x",
+    "https://embrapa.br@evil.com/x",
+    "https://embrapa.br:8080/x",
+    "https://embrapa.br:abc/x",
+    "https://embrapa.br./x",
+    "https://evilgov.br/x",
 ])
 def test_tratamento_url_fora_da_lista_recusada(url):
     d = _base_com_d2()
@@ -84,6 +94,8 @@ def test_tratamento_url_fora_da_lista_recusada(url):
     "https://www.embrapa.br/x",
     "https://www.gov.br/agricultura/x",
     "https://www.msdvetmanual.com/pt/x",
+    "HTTPS://WWW.EMBRAPA.BR/x",
+    "https://www.embrapa.br:443/x",
 ])
 def test_tratamento_url_permitida(url):
     d = _base_com_d2()

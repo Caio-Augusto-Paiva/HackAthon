@@ -1,16 +1,16 @@
 """Validação semântica da base de conhecimento (sem I/O, determinística).
 
 ``validar`` recebe uma ``Base`` já carregada e devolve um ``Relatorio`` com erros
-(E01-E23) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
+(E01-E28) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
 o payload do editor (grafo); ambas convertem falhas de estrutura em erros ``E00`` e
 nunca levantam. Cada código é uma função privada.
 """
 from __future__ import annotations
 
 import re
-from urllib.parse import urlsplit
 from collections import Counter
 from typing import Literal
+from urllib.parse import urlsplit
 
 from pydantic import BaseModel, ValidationError
 
@@ -494,12 +494,14 @@ def _e23_dominio_conceito_nao_booleano(base: Base) -> list[Problema]:
 
 
 def _url_tratamento_permitida(url: str) -> bool:
+    if any(c == "\\" or c.isspace() or ord(c) < 32 or ord(c) == 127 for c in url):
+        return False
     try:
         partes = urlsplit(url)
-        host = partes.hostname
+        host, porta = partes.hostname, partes.port
     except ValueError:
         return False
-    if partes.scheme != "https" or not host:
+    if partes.scheme != "https" or not host or "@" in partes.netloc or porta not in (None, 443):
         return False
     return any(host == d or host.endswith("." + d) for d in _DOMINIOS_TRATAMENTO)
 
