@@ -30,6 +30,11 @@ TEXTO_ALERTA: dict[str, str] = {
 AVISO_PARECER = "A porcentagem é o grau de confiança do sistema, não uma probabilidade."
 
 
+def frase_exclusao(vencedora: str) -> str:
+    """A frase da etapa de exclusão em "Como cheguei aqui?"; ``vencedora`` é o nome da doença que ficou mais forte."""
+    return f"Ficou menos provável porque {vencedora} ficou mais forte, e as duas não costumam ocorrer juntas."
+
+
 # --- texto de uma regra ----------------------------------------------------------------------
 #
 # O motor não escreve o texto de uma regra (o evento ``regra_disparada`` não tem ``texto``). A API o monta dos dados

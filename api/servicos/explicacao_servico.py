@@ -24,7 +24,7 @@ from api.schemas.parecer import Parecer, UrgenciaParecer
 from api.schemas.sessao import EstadoSessao
 from api.servicos.ficha import mostrar_valor
 from api.servicos.sessao_motor import SessaoCarregada, aplicar, carregar
-from api.servicos.textos import AVISO_PARECER, TEXTO_URGENCIA, sinal_legivel, texto_da_regra
+from api.servicos.textos import AVISO_PARECER, TEXTO_URGENCIA, frase_exclusao, sinal_legivel, texto_da_regra
 from kb.modelos import Regra, Simbolo
 
 TIPOS_COM_COMO = ("doenca", "derivado", "urgencia")  # o que uma regra conclui: o resto é entrada, não conclusão
@@ -180,12 +180,19 @@ def obter_como(ctx: Contexto, sessao_id: str, simbolo: str) -> Como:
         {s.id: s for s in base.simbolos},
         carregada.origens_ficha,
     )
+    simbolos = {s.id: s for s in base.simbolos}
+    exclusoes = [
+        {**e, "por_nome": simbolos[e["por"]].nome if e["por"] in simbolos else e["por"],
+         "frase": frase_exclusao(simbolos[e["por"]].nome if e["por"] in simbolos else e["por"])}
+        for e in explicacao.get("exclusoes", [])
+    ]
     return Como(
         simbolo=explicacao["simbolo"],
         nome=explicacao["nome"],
         cf=explicacao["cf"],
         percentual=explicacao["percentual"],
         combinacao=explicacao["combinacao"],
+        exclusoes=exclusoes,
         evidencias=explicacao["evidencias"],
     )
 

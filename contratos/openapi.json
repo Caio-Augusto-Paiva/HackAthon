@@ -593,6 +593,13 @@
             "title": "Evidencias",
             "type": "array"
           },
+          "exclusoes": {
+            "items": {
+              "$ref": "#/components/schemas/EtapaExclusao"
+            },
+            "title": "Exclusoes",
+            "type": "array"
+          },
           "nome": {
             "title": "Nome",
             "type": "string"
@@ -1171,6 +1178,69 @@
         "title": "EstadoSessao",
         "type": "object"
       },
+      "EtapaExclusao": {
+        "description": "A doença perdeu força porque outra do mesmo par excludente ficou mais forte (``por``).",
+        "properties": {
+          "antes": {
+            "title": "Antes",
+            "type": "number"
+          },
+          "depois": {
+            "title": "Depois",
+            "type": "number"
+          },
+          "fonte": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fonte"
+          },
+          "frase": {
+            "title": "Frase",
+            "type": "string"
+          },
+          "nota": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nota"
+          },
+          "por": {
+            "description": "Id da doença vencedora do par.",
+            "title": "Por",
+            "type": "string"
+          },
+          "por_nome": {
+            "title": "Por Nome",
+            "type": "string"
+          },
+          "tipo": {
+            "const": "exclusao",
+            "default": "exclusao",
+            "title": "Tipo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "por",
+          "por_nome",
+          "antes",
+          "depois",
+          "frase"
+        ],
+        "title": "EtapaExclusao",
+        "type": "object"
+      },
       "Evidencia": {
         "properties": {
           "cf_regra": {
@@ -1560,6 +1630,17 @@
             ],
             "title": "Situacao",
             "type": "string"
+          },
+          "tratamento": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Tratamento"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Link de fonte pública sobre a doença (título e URL), quando a base o traz; senão null."
           }
         },
         "required": [

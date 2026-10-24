@@ -6,7 +6,7 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 from api.schemas.sessao import NivelUrgencia, OrigemUrgencia
-from kb.modelos import Modo
+from kb.modelos import Modo, Tratamento
 
 Gravidade = Literal["alta", "media", "baixa"]
 Situacao = Literal["com_evidencia", "sem_evidencia", "descartada"]
@@ -30,6 +30,9 @@ class ItemDoenca(BaseModel):
     percentual: int  # round(max(0, cf) * 100): grau de confiança do sistema, não probabilidade
     potencial: int = Field(ge=0, le=100, description="Teto de confiança que a doença ainda pode alcançar com mais respostas (>= percentual).")
     situacao: Situacao
+    tratamento: Tratamento | None = Field(
+        default=None, description="Link de fonte pública sobre a doença (título e URL), quando a base o traz; senão null."
+    )
 
 
 class Bloco(BaseModel):

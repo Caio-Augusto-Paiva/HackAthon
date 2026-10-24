@@ -21,6 +21,7 @@
         "depois": 0.88
       }
     ],
+    "exclusoes": [],
     "evidencias": [
       {
         "regra_id": "R-MAS-01",

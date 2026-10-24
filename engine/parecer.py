@@ -22,6 +22,7 @@ def montar_parecer(resultado, motivo=None, urgencia=None, bandeiras=(), pendente
         situacao='descartada' if cf < -Fraction(1,5) else 'sem_evidencia' if cf<=Fraction(1,5) else 'com_evidencia'
         item={'doenca':id,'nome':s['nome'],'gravidade':s['gravidade'],'cf':float(cf),
               'percentual':percentual(cf),'situacao':situacao}
+        if s.get('tratamento'): item['tratamento']=dict(s['tratamento'])
         if id in resultado.excluidas or not potenciais or id not in potenciais:
             item['potencial']=item['percentual']
         else:

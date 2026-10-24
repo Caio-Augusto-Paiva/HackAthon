@@ -70,12 +70,26 @@ class Entrada(BaseModel):
 Evidencia.model_rebuild()
 
 
+class EtapaExclusao(BaseModel):
+    """A doença perdeu força porque outra do mesmo par excludente ficou mais forte (``por``)."""
+
+    tipo: Literal["exclusao"] = "exclusao"
+    por: str = Field(description="Id da doença vencedora do par.")
+    por_nome: str
+    antes: float
+    depois: float
+    fonte: str | None = None
+    nota: str | None = None
+    frase: str
+
+
 class Como(BaseModel):
     simbolo: str
     nome: str
     cf: float
     percentual: int
     combinacao: list[Combinacao]
+    exclusoes: list[EtapaExclusao] = Field(default_factory=list)
     evidencias: list[Evidencia]
 
 
