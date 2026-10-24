@@ -200,6 +200,41 @@
       "title": "DominioNumerico",
       "type": "object"
     },
+    "Exclusao": {
+      "additionalProperties": false,
+      "properties": {
+        "doencas": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "title": "Doencas",
+          "type": "array"
+        },
+        "fonte": {
+          "minLength": 1,
+          "title": "Fonte",
+          "type": "string"
+        },
+        "nota": {
+          "title": "Nota",
+          "type": "string"
+        }
+      },
+      "required": [
+        "doencas",
+        "fonte",
+        "nota"
+      ],
+      "title": "Exclusao",
+      "type": "object"
+    },
     "Limiares": {
       "additionalProperties": false,
       "properties": {
@@ -241,6 +276,11 @@
         "bloco_diferencial": {
           "default": 0.2,
           "title": "Bloco Diferencial",
+          "type": "number"
+        },
+        "exclusao": {
+          "default": 0.5,
+          "title": "Exclusao",
           "type": "number"
         }
       },
@@ -340,6 +380,13 @@
             "$ref": "#/$defs/Tela"
           },
           "title": "Triagem",
+          "type": "array"
+        },
+        "exclusoes": {
+          "items": {
+            "$ref": "#/$defs/Exclusao"
+          },
+          "title": "Exclusoes",
           "type": "array"
         }
       },
@@ -578,6 +625,17 @@
           ],
           "default": null,
           "title": "Nota"
+        },
+        "tratamento": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Tratamento"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -672,6 +730,27 @@
         "simbolos"
       ],
       "title": "Tela",
+      "type": "object"
+    },
+    "Tratamento": {
+      "additionalProperties": false,
+      "properties": {
+        "titulo": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Titulo",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "titulo",
+        "url"
+      ],
+      "title": "Tratamento",
       "type": "object"
     }
   },

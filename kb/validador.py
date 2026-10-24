@@ -8,6 +8,7 @@ nunca levantam. Cada código é uma função privada.
 from __future__ import annotations
 
 import re
+from urllib.parse import urlsplit
 from collections import Counter
 from typing import Literal
 
@@ -38,6 +39,9 @@ CODIGOS: dict[str, str] = {
     "E19": "classe_incompativel", "E20": "id_invalido",
     "E21": "tela_simbolo_invalido", "E22": "cf_urgencia_nao_positivo",
     "E23": "dominio_conceito_nao_booleano",
+    "E24": "exclusao_doenca_inexistente", "E25": "exclusao_mesma_doenca",
+    "E26": "exclusao_duplicada", "E27": "tratamento_url_invalida",
+    "E28": "tratamento_fora_de_doenca",
     "W01": "simbolo_nao_usado", "W02": "regras_contraditorias", "W03": "suposicoes_pendentes",
 }
 
@@ -46,6 +50,7 @@ _ID_REGRA = re.compile(r"[A-Za-z0-9_-]+")
 _CONCEITOS = ("derivado", "doenca", "urgencia")  # símbolos concluídos por regras (booleanos)
 _ORDEM_LIMIARES = ("descarte", "0", "premissa", "hipotese_relevante", "exaustao", "potencial", "confirmacao")
 _MODOS = ("produtor", "veterinario")
+_DOMINIOS_TRATAMENTO = ("embrapa.br", "gov.br", "msdvetmanual.com")
 
 
 class Alvo(BaseModel):
@@ -488,6 +493,55 @@ def _e23_dominio_conceito_nao_booleano(base: Base) -> list[Problema]:
     ]
 
 
+def _url_tratamento_permitida(url: str) -> bool:
+    try:
+        partes = urlsplit(url)
+        host = partes.hostname
+    except ValueError:
+        return False
+    if partes.scheme != "https" or not host:
+        return False
+    return any(host == d or host.endswith("." + d) for d in _DOMINIOS_TRATAMENTO)
+
+
+def _e24_exclusao_doenca_inexistente(base: Base) -> list[Problema]:
+    doencas = {s.id for s in base.simbolos if s.tipo == "doenca"}
+    return [
+        _p("E24", Alvo(tipo="meta", id="exclusoes"), f"A exclusão {list(e.doencas)} cita '{d}', que não é uma doença da base.")
+        for e in base.meta.exclusoes for d in dict.fromkeys(e.doencas) if d not in doencas
+    ]
+
+
+def _e25_exclusao_mesma_doenca(base: Base) -> list[Problema]:
+    return [
+        _p("E25", Alvo(tipo="meta", id="exclusoes"), f"A exclusão {list(e.doencas)} repete a mesma doença; o par precisa de duas doenças diferentes.")
+        for e in base.meta.exclusoes if e.doencas[0] == e.doencas[1]
+    ]
+
+
+def _e26_exclusao_duplicada(base: Base) -> list[Problema]:
+    contagem = Counter(frozenset(e.doencas) for e in base.meta.exclusoes if e.doencas[0] != e.doencas[1])
+    return [
+        _p("E26", Alvo(tipo="meta", id="exclusoes"), f"O par excludente {sorted(par)} aparece {n} vezes (a ordem não importa).")
+        for par, n in sorted(contagem.items(), key=lambda kv: sorted(kv[0])) if n > 1
+    ]
+
+
+def _e27_tratamento_url_invalida(base: Base) -> list[Problema]:
+    return [
+        _p("E27", _simb(s), f"A URL de tratamento de '{s.id}' deve ser https e de um destes domínios: {', '.join(_DOMINIOS_TRATAMENTO)}.")
+        for s in base.simbolos
+        if s.tratamento is not None and not _url_tratamento_permitida(s.tratamento.url)
+    ]
+
+
+def _e28_tratamento_fora_de_doenca(base: Base) -> list[Problema]:
+    return [
+        _p("E28", _simb(s), f"O símbolo '{s.id}' ({s.tipo}) tem tratamento, que só vale para doença.")
+        for s in base.simbolos if s.tratamento is not None and s.tipo != "doenca"
+    ]
+
+
 # --- avisos ---------------------------------------------------------------
 
 def _w01_simbolo_nao_usado(base: Base) -> list[Problema]:
@@ -533,6 +587,8 @@ _VERIFICACOES = (
     _e16_tela_sem_texto, _e17_limiares_fora_de_ordem, _e18_regra_sem_fonte,
     _e19_classe_incompativel, _e20_id_invalido, _e21_tela_simbolo_invalido,
     _e22_cf_urgencia_nao_positivo, _e23_dominio_conceito_nao_booleano,
+    _e24_exclusao_doenca_inexistente, _e25_exclusao_mesma_doenca, _e26_exclusao_duplicada,
+    _e27_tratamento_url_invalida, _e28_tratamento_fora_de_doenca,
     _w01_simbolo_nao_usado, _w02_regras_contraditorias, _w03_suposicoes_pendentes,
 )
 

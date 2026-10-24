@@ -1239,6 +1239,41 @@
         "title": "Evidencia",
         "type": "object"
       },
+      "Exclusao": {
+        "additionalProperties": false,
+        "properties": {
+          "doencas": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Doencas",
+            "type": "array"
+          },
+          "fonte": {
+            "minLength": 1,
+            "title": "Fonte",
+            "type": "string"
+          },
+          "nota": {
+            "title": "Nota",
+            "type": "string"
+          }
+        },
+        "required": [
+          "doencas",
+          "fonte",
+          "nota"
+        ],
+        "title": "Exclusao",
+        "type": "object"
+      },
       "Execucao": {
         "properties": {
           "comparada_com": {
@@ -1567,6 +1602,11 @@
             "title": "Exaustao",
             "type": "number"
           },
+          "exclusao": {
+            "default": 0.5,
+            "title": "Exclusao",
+            "type": "number"
+          },
           "hipotese_relevante": {
             "default": 0.35,
             "title": "Hipotese Relevante",
@@ -1775,6 +1815,13 @@
               }
             ],
             "title": "Data"
+          },
+          "exclusoes": {
+            "items": {
+              "$ref": "#/components/schemas/Exclusao"
+            },
+            "title": "Exclusoes",
+            "type": "array"
           },
           "limiares": {
             "$ref": "#/components/schemas/Limiares"
@@ -2954,6 +3001,16 @@
             ],
             "title": "Tipo",
             "type": "string"
+          },
+          "tratamento": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Tratamento"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "required": [
@@ -3111,6 +3168,27 @@
           "eventos"
         ],
         "title": "Traco",
+        "type": "object"
+      },
+      "Tratamento": {
+        "additionalProperties": false,
+        "properties": {
+          "titulo": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Titulo",
+            "type": "string"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "titulo",
+          "url"
+        ],
+        "title": "Tratamento",
         "type": "object"
       },
       "TrocaModo": {

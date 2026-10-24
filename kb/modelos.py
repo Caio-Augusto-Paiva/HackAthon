@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, field_validator, model_serializer
 
 Modo = Literal["produtor", "veterinario"]
 TipoSimbolo = Literal["pergunta", "ficha", "derivado", "doenca", "urgencia"]
@@ -48,6 +48,11 @@ Dominio = Annotated[
 ]
 
 
+class Tratamento(_Modelo):
+    titulo: str = Field(min_length=1, max_length=120)
+    url: str
+
+
 class Simbolo(_Modelo):
     id: str
     tipo: TipoSimbolo
@@ -60,6 +65,7 @@ class Simbolo(_Modelo):
     gravidade: Literal["alta", "media", "baixa"] | None = None
     combinacao: Literal["mycin", "max"] = "mycin"
     nota: str | None = None
+    tratamento: Tratamento | None = None  # só para tipo "doenca" (ver validador)
 
 
 # --- regras ---------------------------------------------------------------
@@ -119,11 +125,26 @@ class Limiares(_Modelo):
     confirmacao: float = 0.80
     bloco_principal: float = 0.50
     bloco_diferencial: float = 0.20
+    exclusao: float = 0.5
+
+    @model_serializer(mode="wrap")
+    def _omite_exclusao_padrao(self, proximo):
+        # versões antigas não têm o campo; omiti-lo no padrão mantém o JSON (e o hash) delas idêntico
+        dados = proximo(self)
+        if dados.get("exclusao") == 0.5:
+            dados.pop("exclusao", None)
+        return dados
 
 
 class LimiteDinamico(_Modelo):
     produtor: StrictInt = Field(default=12, ge=0)
     veterinario: StrictInt = Field(default=25, ge=0)
+
+
+class Exclusao(_Modelo):
+    doencas: tuple[str, str]
+    fonte: str = Field(min_length=1)
+    nota: str
 
 
 class Meta(_Modelo):
@@ -135,6 +156,14 @@ class Meta(_Modelo):
     limiares: Limiares = Field(default_factory=Limiares)
     limite_dinamico: LimiteDinamico = Field(default_factory=LimiteDinamico)
     triagem: list[Tela] = Field(default_factory=list)
+    exclusoes: list[Exclusao] = Field(default_factory=list)
+
+    @model_serializer(mode="wrap")
+    def _omite_exclusoes_vazias(self, proximo):
+        dados = proximo(self)
+        if not dados.get("exclusoes"):
+            dados.pop("exclusoes", None)
+        return dados
 
 
 class Posicao(_Modelo):
