@@ -45,7 +45,9 @@ class Base:
         from .validacao import validar
         validar(dados)
         meta = dados.get('meta', {})
-        meta['limiares'] = {k: fracao(meta.get('limiares', {}).get(k,v)) for k,v in {**LIMIARES,**CORTES}.items()}
+        brutos = meta.get('limiares', {})
+        meta['limiares'] = {k: fracao(brutos.get(k,v)) for k,v in {**LIMIARES,**CORTES}.items()}
+        meta['limiares']['exclusao'] = fracao(brutos.get('exclusao', 0.5))
         meta['limite_dinamico'] = {'produtor': 12, 'veterinario': 25, **meta.get('limite_dinamico', {})}
         meta.setdefault('triagem', [])
         for regra in dados['regras']:

@@ -28,6 +28,7 @@ As fontes descrevem o contexto clínico. Os números de CF são escolhas de mode
 | confirmacao | 0,8 |
 | bloco_principal | 0,5 |
 | bloco_diferencial | 0,2 |
+| exclusao | 0,5 |
 
 | Modo | Limite de perguntas dinâmicas |
 | --- | --- |

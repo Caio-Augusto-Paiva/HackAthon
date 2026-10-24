@@ -16,11 +16,37 @@ class Resultado:
     bandeiras: tuple
     urgencia: str
     traco: list
+    excluidas: frozenset = frozenset()
 
 
 def agenda(base):
     return sorted(base.regras, key=lambda r:(CAMADAS[base.simbolos[r['entao']['simbolo']]['tipo']],
                                            -r.get('prioridade',0),-len(r['se']),r['id']))
+
+
+def aplicar_exclusoes(base, cfs, memoria, traco):
+    """Rebaixa a doença mais fraca de cada par excludente; devolve os ids rebaixados.
+
+    Os CFs de todos os pares são lidos antes de qualquer alteração, então a ordem
+    dos pares não muda o resultado. Empate e vencedora abaixo do limiar não agem.
+    """
+    limiar=fracao(base.meta.get('limiares',{}).get('exclusao',0.5))
+    originais=dict(cfs)
+    novos={}
+    for par in base.meta.get('exclusoes',[]):
+        a,b=par['doencas']
+        v,p=(a,b) if originais[a]>=originais[b] else (b,a)
+        if originais[v]<limiar or originais[v]<=originais[p]: continue
+        saida=combinar(originais[p],-originais[v])
+        if p not in novos or saida<novos[p][0]:
+            novos[p]=(saida,v,par)
+    for p in sorted(novos):
+        saida,v,par=novos[p]
+        evento(traco,'exclusao_aplicada',simbolo=p,por=v,antes=originais[p],depois=saida,
+               fonte=par.get('fonte'),nota=par.get('nota'))
+        cfs[p]=saida
+        memoria[p]=Fato(p,True,saida,'regra')
+    return frozenset(novos)
 
 
 def inferir(base, fatos):
@@ -54,6 +80,7 @@ def inferir(base, fatos):
         evento(traco,'fato_adicionado',**dados_fato(memoria[id]),regra_id=r['id'])
         disparadas.append(r)
         if r.get('classe') in ('urgencia','bandeira_vermelha'): urgencias.append(id)
+    excluidas=aplicar_exclusoes(base,cfs,memoria,traco)
     bandeiras=[r['id'] for r in disparadas if r.get('classe')=='bandeira_vermelha'
                and cfs[r['entao']['simbolo']]>0]
     urgencias={id for id in urgencias if cfs[id]>0}
@@ -64,4 +91,4 @@ def inferir(base, fatos):
         urgencia='observar'
     else:
         urgencia='sem_problema'
-    return Resultado(base,memoria,cfs,tuple(disparadas),tuple(bandeiras),urgencia,traco)
+    return Resultado(base,memoria,cfs,tuple(disparadas),tuple(bandeiras),urgencia,traco,excluidas)

@@ -156,7 +156,7 @@ def analisar(base, fatos, modo):
     lim=base.meta['limiares']
     intervalos,viaveis=_calcular_intervalos(resultado,modo)
     potenciais={id:intervalos[id][1] for id,s in base.simbolos.items() if s['tipo']=='doenca'}
-    abertas=tuple(sorted(id for id in potenciais if lim['descarte']<resultado.cfs[id]<lim['confirmacao']))
+    abertas=tuple(sorted(id for id in potenciais if id not in resultado.excluidas and lim['descarte']<resultado.cfs[id]<lim['confirmacao']))
     candidatos={}
 
     def folhas(id, fator):
