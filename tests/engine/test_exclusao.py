@@ -81,14 +81,33 @@ class Exclusao(unittest.TestCase):
 
     def test_excluida_nao_fica_aberta_na_selecao(self):
         from engine.selecao import analisar
-        a = analisar(montar(), fatos(x='0.8', y='0.4'), 'veterinario')
+        # y termina em -0.1, acima do descarte (-0.2): só o filtro de excluídas a tira das abertas.
+        a = analisar(montar(), fatos(x='0.55', y='0.5'), 'veterinario')
+        self.assertEqual(a.resultado.excluidas, frozenset({'y'}))
+        self.assertEqual(a.resultado.cfs['y'], Fraction(-1, 10))
         self.assertNotIn('y', a.abertas)
+        self.assertIn('x', a.abertas)
+
+    def test_perdedora_em_dois_pares_fica_com_a_menor_saida(self):
+        r = inferir(montar([('x', 'y'), ('w', 'y')], ('x', 'y', 'w')), fatos(x='0.9', y='0.6', w='0.7'))
+        self.assertEqual(r.cfs['y'], min(combinar('0.6', '-0.9'), combinar('0.6', '-0.7')))
+        self.assertEqual(r.cfs['y'], combinar('0.6', '-0.9'))
+        eventos = [e for e in r.traco if e['tipo'] == 'exclusao_aplicada' and e['simbolo'] == 'y']
+        self.assertEqual([e['por'] for e in eventos], ['x'])
+
+    def test_limite_exato_do_limiar_rebaixa(self):
+        r = inferir(montar(), fatos(x='0.5', y='0.3'))
+        self.assertEqual(r.excluidas, frozenset({'y'}))
+        self.assertEqual(r.cfs['y'], combinar('0.3', '-0.5'))
 
     def test_como_mostra_exclusao(self):
         s = Sessao(montar(), ficha=fatos(x='0.8', y='0.4'))
         etapas = [e for e in s.como('y').get('exclusoes', []) if e['tipo'] == 'exclusao']
         self.assertEqual(len(etapas), 1)
         self.assertEqual(etapas[0]['por'], 'x')
+        self.assertAlmostEqual(etapas[0]['antes'], 0.4)
+        self.assertAlmostEqual(etapas[0]['depois'], -2 / 3)
+        self.assertEqual((etapas[0]['fonte'], etapas[0]['nota']), ('Teste sintético', 'nota'))
 
 
 if __name__ == '__main__':
