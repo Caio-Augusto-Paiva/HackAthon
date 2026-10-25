@@ -181,11 +181,10 @@ def obter_como(ctx: Contexto, sessao_id: str, simbolo: str) -> Como:
         carregada.origens_ficha,
     )
     simbolos = {s.id: s for s in base.simbolos}
-    exclusoes = [
-        {**e, "por_nome": simbolos[e["por"]].nome if e["por"] in simbolos else e["por"],
-         "frase": frase_exclusao(simbolos[e["por"]].nome if e["por"] in simbolos else e["por"])}
-        for e in explicacao.get("exclusoes", [])
-    ]
+    exclusoes = []
+    for e in explicacao.get("exclusoes", []):
+        por_nome = simbolos[e["por"]].nome if e["por"] in simbolos else e["por"]
+        exclusoes.append({**e, "por_nome": por_nome, "frase": frase_exclusao(por_nome)})
     return Como(
         simbolo=explicacao["simbolo"],
         nome=explicacao["nome"],

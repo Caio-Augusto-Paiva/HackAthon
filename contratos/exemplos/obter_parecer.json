@@ -29,7 +29,11 @@
             "cf": 0.87,
             "percentual": 87,
             "potencial": 87,
-            "situacao": "com_evidencia"
+            "situacao": "com_evidencia",
+            "tratamento": {
+              "titulo": "Hipocalcemia em vacas leiteiras",
+              "url": "https://www.msdvetmanual.com/metabolic-disorders/hypocalcemia"
+            }
           }
         ]
       },

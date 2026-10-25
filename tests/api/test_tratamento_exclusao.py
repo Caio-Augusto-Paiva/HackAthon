@@ -66,17 +66,33 @@ def test_como_frase_exclusao(cliente_com):
 
 
 def test_sessao_v0004_restaura_apos_ativar_v0005(cliente):
-    """A sessão fica presa à versão em que nasceu: ativar outra depois não a quebra."""
+    """A sessão fica presa à versão em que nasceu, mesmo que a ativa depois não tenha mais a doença que ela usa.
+
+    Se ``carregar`` usasse a base ativa, ``d1`` não existiria: o parecer perderia o item, o "como" daria 404 e a
+    resposta nova não acharia as regras de ``d1``.
+    """
     _sessao(cliente)
-    antes = cliente.get(f"{BASE}/parecer").json()
+    antes = _itens(cliente.get(f"{BASE}/parecer").json())
+    assert "d1" in antes
     grafo = cliente.get("/api/base/versoes/v0001/grafo").json()
-    corpo = {"pai": "v0001", "nota": "nova versão", "meta": grafo["meta"],
-             "grafo": {"nos": grafo["nos"], "arestas": grafo["arestas"]}, "layout": grafo["layout"]}
+    fora = {"d1", "R-D1-01", "R-D1-02", "R-D1-03", "R-URG-d1"}  # a doença e tudo o que a toca
+    corpo = {
+        "pai": "v0001", "nota": "sem a doença d1", "meta": grafo["meta"], "layout": grafo["layout"],
+        "grafo": {
+            "nos": [n for n in grafo["nos"] if n["id"] not in fora],
+            "arestas": [a for a in grafo["arestas"] if a["origem"] not in fora and a["destino"] not in fora],
+        },
+    }
     salva = cliente.post("/api/base/versoes", json=corpo)
     assert salva.status_code == 201, salva.text
     nova = salva.json()["versao"]
-    assert cliente.put("/api/base/ativa", json={"versao": nova, "confirmar_falhas": True}).status_code == 200
-    resposta = cliente.get(f"{BASE}/parecer")
+    # sem pasta de casos não há execução a confirmar: a ativação passa sem `confirmar_falhas`
+    assert cliente.put("/api/base/ativa", json={"versao": nova}).status_code == 200
+
+    parecer = cliente.get(f"{BASE}/parecer")
+    assert parecer.status_code == 200, parecer.text
+    assert parecer.json()["versao_base"] == "v0001"
+    assert "d1" in _itens(parecer.json())
+    assert cliente.get(f"{BASE}/como/d1").status_code == 200
+    resposta = cliente.post(f"{BASE}/respostas", json={"simbolo": "pergunta_x", "valor": True})
     assert resposta.status_code == 200, resposta.text
-    assert resposta.json()["versao_base"] == "v0001"
-    assert set(_itens(resposta.json())) == set(_itens(antes))
