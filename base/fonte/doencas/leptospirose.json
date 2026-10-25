@@ -91,6 +91,12 @@
           "op": "=",
           "valor": true,
           "negado": false
+        },
+        {
+          "simbolo": "leite_alterado",
+          "op": "=",
+          "valor": true,
+          "negado": false
         }
       ],
       "entao": {
@@ -101,7 +107,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose."
+      "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose. Só vale com leite alterado: leite com sangue já é leite alterado, e a pergunta não contradiz a triagem."
     },
     {
       "id": "R-LEP-03",

@@ -238,12 +238,12 @@
     },
     {
       "id": "regra:R-LEP-02",
-      "label": "R-LEP-02: SE Leite rosado ou com sangue E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Leptospirose",
+      "label": "R-LEP-02: SE Leite rosado ou com sangue E Queda de produ\u00e7\u00e3o de leite E Altera\u00e7\u00e3o vis\u00edvel do leite ENT\u00c3O Leptospirose",
       "classe": "evidencia",
       "community": 11,
       "community_name": "Leptospirose",
       "file_type": "concept",
-      "norm_label": "r-lep-02: se leite rosado ou com sangue e queda de producao de leite entao leptospirose",
+      "norm_label": "r-lep-02: se leite rosado ou com sangue e queda de producao de leite e alteracao visivel do leite entao leptospirose",
       "source_file": "base/fonte/doencas/leptospirose.json"
     },
     {
@@ -328,12 +328,12 @@
     },
     {
       "id": "regra:R-MET-01",
-      "label": "R-MET-01: SE Puerp\u00e9rio E Corrimento vaginal f\u00e9tido ENT\u00c3O Metrite Puerperal",
+      "label": "R-MET-01: SE Puerp\u00e9rio E Corrimento vaginal f\u00e9tido E Corrimento vaginal ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
       "community": 13,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
-      "norm_label": "r-met-01: se puerperio e corrimento vaginal fetido entao metrite puerperal",
+      "norm_label": "r-met-01: se puerperio e corrimento vaginal fetido e corrimento vaginal entao metrite puerperal",
       "source_file": "base/fonte/doencas/metrite.json"
     },
     {
@@ -718,12 +718,12 @@
     },
     {
       "id": "regra:R-TUB-01",
-      "label": "R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Tuberculose",
+      "label": "R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produ\u00e7\u00e3o de leite E Apetite ENT\u00c3O Tuberculose",
       "classe": "evidencia",
       "community": 20,
       "community_name": "Tuberculose",
       "file_type": "concept",
-      "norm_label": "r-tub-01: se emagrecimento progressivo e tosse e queda de producao de leite entao tuberculose",
+      "norm_label": "r-tub-01: se emagrecimento progressivo e tosse e queda de producao de leite e apetite entao tuberculose",
       "source_file": "base/fonte/doencas/tuberculose.json"
     },
     {
@@ -3931,6 +3931,14 @@
     },
     {
       "source": "sim:apetite",
+      "target": "regra:R-TUB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:apetite",
       "target": "regra:R-TUB-04",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -4040,6 +4048,14 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-MET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/metrite.json"
     },
     {
       "source": "sim:corrimento_vaginal",
@@ -4715,6 +4731,14 @@
     },
     {
       "source": "sim:leite_alterado",
+      "target": "regra:R-LEP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "sim:leite_alterado",
       "target": "regra:R-MAS-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -5355,5 +5379,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "77378770ea544fa5c7869631217469d18a2c90e0"
+  "built_at_commit": "613b1e3a877af4b5e2de185e039c4163ca6c4a58"
 }

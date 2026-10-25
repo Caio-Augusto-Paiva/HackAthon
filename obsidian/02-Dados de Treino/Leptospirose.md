@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[R-LEP-01 SE Aborto recente E Febre ENTÃO Leptospirose]] - `conclui` [EXTRACTED]
-- [[R-LEP-02 SE Leite rosado ou com sangue E Queda de produção de leite ENTÃO Leptospirose]] - `conclui` [EXTRACTED]
+- [[R-LEP-02 SE Leite rosado ou com sangue E Queda de produção de leite E Alteração visível do leite ENTÃO Leptospirose]] - `conclui` [EXTRACTED]
 - [[R-LEP-03 SE Sorologia para leptospirose reagente ENTÃO Leptospirose]] - `conclui` [EXTRACTED]
 - [[R-LEP-04 SE Urina escura E Febre ENTÃO Leptospirose]] - `conclui` [EXTRACTED]
 - [[R-LEP-05 SE Hemoparasitas no esfregaço ENTÃO Leptospirose]] - `conclui` [EXTRACTED]

@@ -35,6 +35,7 @@ tags:
 - [[R-TES-04 SE Apetite E Queda de produção de leite ENTÃO Timpanismo Espumoso]] - `condicao_de` [EXTRACTED]
 - [[R-TGA-01 SE Barriga estufada do lado esquerdo E Engasgo ou dificuldade de engolir E Apetite ENTÃO Timpanismo Gasoso]] - `condicao_de` [EXTRACTED]
 - [[R-TGA-04 SE Apetite E Apatia ENTÃO Timpanismo Gasoso]] - `condicao_de` [EXTRACTED]
+- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite E Apetite ENTÃO Tuberculose]] - `condicao_de` [EXTRACTED]
 - [[R-TUB-04 SE Apetite E Queda de produção de leite ENTÃO Tuberculose]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

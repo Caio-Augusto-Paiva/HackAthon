@@ -11,7 +11,7 @@ members: 10
 
 ## Members
 - [[Emagrecimento progressivo]] - concept - base/fonte/doencas/tuberculose.json
-- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite ENTÃO Tuberculose]] - concept - base/fonte/doencas/tuberculose.json
+- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite E Apetite ENTÃO Tuberculose]] - concept - base/fonte/doencas/tuberculose.json
 - [[R-TUB-02 SE Ínguas aumentadas E Queda de produção de leite ENTÃO Tuberculose]] - concept - base/fonte/doencas/tuberculose.json
 - [[R-TUB-03 SE Tuberculinização reagente ENTÃO Tuberculose]] - concept - base/fonte/doencas/tuberculose.json
 - [[R-TUB-04 SE Apetite E Queda de produção de leite ENTÃO Tuberculose]] - concept - base/fonte/doencas/tuberculose.json
@@ -29,10 +29,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
+- 8 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
 
 ## Top bridge nodes
-- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite ENTÃO Tuberculose]] - degree 4, connects to 1 community
+- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite E Apetite ENTÃO Tuberculose]] - degree 5, connects to 1 community
 - [[R-TUB-02 SE Ínguas aumentadas E Queda de produção de leite ENTÃO Tuberculose]] - degree 3, connects to 1 community
 - [[R-TUB-04 SE Apetite E Queda de produção de leite ENTÃO Tuberculose]] - degree 3, connects to 1 community
 - [[R-TUB-05 SE Febre ENTÃO Tuberculose]] - degree 2, connects to 1 community

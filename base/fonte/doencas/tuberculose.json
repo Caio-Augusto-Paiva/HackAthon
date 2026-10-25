@@ -88,6 +88,15 @@
           "op": "=",
           "valor": true,
           "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "normal",
+            "reduzido"
+          ],
+          "negado": false
         }
       ],
       "entao": {
@@ -98,7 +107,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Emagrecimento progressivo com tosse, em vaca com queda de produção, é compatível com tuberculose."
+      "nota": "Emagrecimento progressivo com tosse, em vaca com queda de produção, é compatível com tuberculose. Só vale quando a vaca ainda come: \"emagrece mesmo comendo\" não se aplica a apetite ausente."
     },
     {
       "id": "R-TUB-02",

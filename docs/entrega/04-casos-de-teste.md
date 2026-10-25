@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0005`. Casos sintéticos executados: **60**. Aprovados: **60**.
+Base `v0006`. Casos sintéticos executados: **60**. Aprovados: **60**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -1198,7 +1198,6 @@ Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de 
     "halito_adocicado_acetona",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
@@ -1425,7 +1424,6 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
     "apatia",
     "apetite",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
@@ -1439,7 +1437,6 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
     "halito_adocicado_acetona",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
@@ -1541,7 +1538,6 @@ Hipocalcemia: decúbito no periparto Caso fictício de regressão; suposição a
     "apatia",
     "apetite",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
@@ -1766,7 +1762,6 @@ Hipocalcemia ambígua: frio sem decúbito Caso fictício de regressão; suposiç
     "apatia",
     "apetite",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
@@ -1892,9 +1887,9 @@ Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
+    "outros_animais_estufados",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
     "respiracao_ofegante",
@@ -2001,7 +1996,6 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
@@ -2015,7 +2009,6 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
     "halito_adocicado_acetona",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
@@ -3379,7 +3372,6 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
     "halito_adocicado_acetona",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
@@ -3961,7 +3953,6 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
     "halito_adocicado_acetona",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
@@ -4068,7 +4059,6 @@ Deslocamento à direita: barriga estufada à direita, pouco esterco e desidrata�
     "apatia",
     "apetite",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
@@ -4082,16 +4072,17 @@ Deslocamento à direita: barriga estufada à direita, pouco esterco e desidrata�
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
+    "respiracao_ofegante",
     "secrecao_nasal",
     "teste_caneca_grumos",
     "tosse",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -4190,7 +4181,6 @@ Deslocamento à direita: ping no flanco direito Caso fictício de regressão; su
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
@@ -4205,7 +4195,6 @@ Deslocamento à direita: ping no flanco direito Caso fictício de regressão; su
     "halito_adocicado_acetona",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
@@ -4286,7 +4275,7 @@ Timpanismo espumoso: barriga estufada após leguminosa, outras vacas estufadas C
       "cetose"
     ],
     "percentuais": {
-      "timpanismo_espumoso": 70,
+      "timpanismo_espumoso": 79,
       "acidose": 5,
       "cetose": 5,
       "deslocamento_abomaso_esquerda": 5,
@@ -4336,9 +4325,9 @@ Timpanismo espumoso: barriga estufada após leguminosa, outras vacas estufadas C
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
+    "outros_animais_estufados",
     "pasto_leguminosa_recente",
     "queda_producao",
     "teste_caneca_grumos",
@@ -4551,6 +4540,7 @@ Timpanismo gasoso: barriga estufada com engasgo, sem leguminosa Caso fictício d
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
+    "desidratacao",
     "diarreia",
     "dias_em_lactacao",
     "distensao_flanco_direito",
@@ -4563,7 +4553,6 @@ Timpanismo gasoso: barriga estufada com engasgo, sem leguminosa Caso fictício d
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "pasto_leguminosa_recente",
@@ -5011,7 +5000,6 @@ Pneumonia: tosse, respiração com esforço e catarro Caso fictício de regress�
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
@@ -5019,7 +5007,8 @@ Pneumonia: tosse, respiração com esforço e catarro Caso fictício de regress�
     "teste_caneca_grumos",
     "tosse",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -5231,6 +5220,7 @@ Reticulopericardite: costas arqueadas e gemido Caso fictício de regressão; sup
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
+    "desidratacao",
     "diarreia",
     "dias_em_lactacao",
     "distensao_flanco_direito",
@@ -5241,7 +5231,6 @@ Reticulopericardite: costas arqueadas e gemido Caso fictício de regressão; sup
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
@@ -5845,7 +5834,8 @@ Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposiçã
     "atitude_locomocao": [],
     "apetite_ruminacao": "reduzido",
     "producao_leite": [
-      "queda_producao"
+      "queda_producao",
+      "leite_alterado"
     ],
     "excrecoes": []
   },
@@ -5878,11 +5868,12 @@ Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposiçã
     "top1": "leptospirose",
     "top3_contem": [
       "leptospirose",
-      "acidose",
-      "cetose"
+      "mastite",
+      "acidose"
     ],
     "percentuais": {
       "leptospirose": 67,
+      "mastite": 59,
       "acidose": 5,
       "cetose": 5,
       "deslocamento_abomaso_esquerda": 5,
@@ -5893,7 +5884,6 @@ Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposiçã
       "dermatite_digital": 0,
       "deslocamento_abomaso_direita": 0,
       "hipomagnesemia": 0,
-      "mastite": 0,
       "metrite": 0,
       "pneumonia": 0,
       "timpanismo_espumoso": 0,
@@ -5906,7 +5896,8 @@ Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposiçã
     "motivo_parada": "limite",
     "bandeiras": [],
     "inconclusivas": [
-      "leptospirose"
+      "leptospirose",
+      "mastite"
     ],
     "alerta": {
       "pausa": false
@@ -6168,7 +6159,6 @@ IBR: focinho vermelho, catarro e olhos lacrimejando Caso fictício de regressão
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "olhos_lacrimejando",
@@ -6634,7 +6624,6 @@ Tuberculose: emagrecimento, tosse e ínguas Caso fictício de regressão; suposi
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
@@ -6858,7 +6847,6 @@ Par excludente: deslocamento à direita vence e rebaixa o lado esquerdo Caso fic
     "apatia",
     "apetite",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
@@ -6872,16 +6860,17 @@ Par excludente: deslocamento à direita vence e rebaixa o lado esquerdo Caso fic
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
+    "respiracao_ofegante",
     "secrecao_nasal",
     "teste_caneca_grumos",
     "tosse",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -6992,6 +6981,7 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
+    "cmt_reagente",
     "corrimento_vaginal",
     "costas_arqueadas",
     "decubito",
@@ -6999,7 +6989,6 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "dias_em_lactacao",
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
-    "emagrecimento_progressivo",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "fezes_aquosas_espuma_graos",
@@ -7009,7 +6998,6 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
-    "leite_com_sangue",
     "lesao_erosiva_talao_morango",
     "linfonodos_aumentados",
     "magnesio_serico",
@@ -7027,7 +7015,8 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "teste_caneca_grumos",
     "tuberculina_reagente",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```

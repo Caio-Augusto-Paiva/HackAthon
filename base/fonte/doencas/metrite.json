@@ -129,6 +129,12 @@
           "op": "=",
           "valor": true,
           "negado": false
+        },
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
         }
       ],
       "entao": {
@@ -139,7 +145,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia."
+      "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia. Só vale com corrimento observado: sem corrimento, o cheiro da secreção não é perguntado."
     },
     {
       "id": "R-MET-04",

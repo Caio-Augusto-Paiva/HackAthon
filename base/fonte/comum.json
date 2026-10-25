@@ -40,8 +40,8 @@
           "temperatura_retal"
         ],
         "texto": {
-          "produtor": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
-          "veterinario": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C."
+          "produtor": "Como estão as extremidades da vaca (orelhas e patas): normais, quentes ou frias?",
+          "veterinario": "Qual é a temperatura retal, em °C?"
         },
         "opcoes": {},
         "simbolos_por_modo": {

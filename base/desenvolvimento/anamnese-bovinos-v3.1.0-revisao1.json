@@ -40,8 +40,8 @@
           "temperatura_retal"
         ],
         "texto": {
-          "produtor": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C.",
-          "veterinario": "Informe o estado térmico: extremidades normais, quentes ou frias; no modo veterinário, temperatura retal em °C."
+          "produtor": "Como estão as extremidades da vaca (orelhas e patas): normais, quentes ou frias?",
+          "veterinario": "Qual é a temperatura retal, em °C?"
         },
         "opcoes": {},
         "simbolos_por_modo": {
@@ -2341,6 +2341,12 @@
           "op": "=",
           "valor": true,
           "negado": false
+        },
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
         }
       ],
       "entao": {
@@ -2351,7 +2357,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia."
+      "nota": "Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia. Só vale com corrimento observado: sem corrimento, o cheiro da secreção não é perguntado."
     },
     {
       "id": "R-MET-04",
@@ -4048,6 +4054,12 @@
           "op": "=",
           "valor": true,
           "negado": false
+        },
+        {
+          "simbolo": "leite_alterado",
+          "op": "=",
+          "valor": true,
+          "negado": false
         }
       ],
       "entao": {
@@ -4058,7 +4070,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose."
+      "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose. Só vale com leite alterado: leite com sangue já é leite alterado, e a pergunta não contradiz a triagem."
     },
     {
       "id": "R-LEP-03",
@@ -4945,6 +4957,15 @@
           "op": "=",
           "valor": true,
           "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "normal",
+            "reduzido"
+          ],
+          "negado": false
         }
       ],
       "entao": {
@@ -4955,7 +4976,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Emagrecimento progressivo com tosse, em vaca com queda de produção, é compatível com tuberculose."
+      "nota": "Emagrecimento progressivo com tosse, em vaca com queda de produção, é compatível com tuberculose. Só vale quando a vaca ainda come: \"emagrece mesmo comendo\" não se aplica a apetite ausente."
     },
     {
       "id": "R-TUB-02",

@@ -11,6 +11,6 @@ tags:
 # Emagrecimento progressivo
 
 ## Connections
-- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite ENTÃO Tuberculose]] - `condicao_de` [EXTRACTED]
+- [[R-TUB-01 SE Emagrecimento progressivo E Tosse E Queda de produção de leite E Apetite ENTÃO Tuberculose]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Tuberculose

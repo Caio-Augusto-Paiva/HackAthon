@@ -64,13 +64,13 @@ SORT file.name ASC
 - 11 edges to [[_COMMUNITY_Hipocalcemia Puerperal]]
 - 10 edges to [[_COMMUNITY_Deslocamento de Abomaso à Direita]]
 - 10 edges to [[_COMMUNITY_Deslocamento de Abomaso à Esquerda]]
-- 9 edges to [[_COMMUNITY_Metrite Puerperal]]
+- 10 edges to [[_COMMUNITY_Metrite Puerperal]]
 - 8 edges to [[_COMMUNITY_Timpanismo Espumoso]]
+- 8 edges to [[_COMMUNITY_Tuberculose]]
 - 8 edges to [[_COMMUNITY_Retenção de Placenta]]
 - 7 edges to [[_COMMUNITY_Timpanismo Gasoso]]
 - 7 edges to [[_COMMUNITY_Cetose  Hipercetonemia]]
 - 7 edges to [[_COMMUNITY_Reticulopericardite Traumática]]
-- 7 edges to [[_COMMUNITY_Tuberculose]]
 - 7 edges to [[_COMMUNITY_Diarreia Viral Bovina (BVD)]]
 - 7 edges to [[_COMMUNITY_Leptospirose]]
 - 7 edges to [[_COMMUNITY_Rinotraqueíte Infecciosa Bovina (IBR)]]
@@ -83,7 +83,7 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[Atendimento Veterinário Imediato]] - degree 19, connects to 13 communities
-- [[Apetite]] - degree 25, connects to 10 communities
+- [[Apetite]] - degree 26, connects to 10 communities
 - [[Febre]] - degree 19, connects to 9 communities
 - [[Queda de produção de leite]] - degree 10, connects to 7 communities
 - [[Monitoramento Clínico Contínuo]] - degree 7, connects to 7 communities

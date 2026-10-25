@@ -1,11 +1,11 @@
-# Graph Report - fonte  (2026-10-24)
+# Graph Report - fonte  (2026-10-25)
 
 ## Corpus Check
 - 21 files · ~0 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 240 nodes · 351 edges · 21 communities
+- 240 nodes · 354 edges · 21 communities
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -33,7 +33,7 @@
 - Tuberculose
 
 ## God Nodes (most connected - your core abstractions)
-1. `Apetite` - 25 edges
+1. `Apetite` - 26 edges
 2. `Febre` - 19 edges
 3. `Atendimento Veterinário Imediato` - 19 edges
 4. `Queda de produção de leite` - 10 edges
@@ -51,10 +51,10 @@
   base/fonte/comum.json → base/fonte/doencas/cetose.json
 - `Apetite` --condicao_de--> `R-DAE-04: SE Apetite ENTÃO Deslocamento de Abomaso à Esquerda`  [EXTRACTED]
   base/fonte/comum.json → base/fonte/doencas/deslocamento_abomaso_esquerda.json
+- `Corrimento vaginal` --condicao_de--> `R-BRU-04: SE Corrimento vaginal ENTÃO Brucelose`  [EXTRACTED]
+  base/fonte/comum.json → base/fonte/doencas/brucelose.json
 - `Dias em lactação` --condicao_de--> `R-DER-01: SE Dias em lactação ENTÃO Periparto imediato`  [EXTRACTED]
   base/fonte/comum.json → base/fonte/doencas/hipocalcemia.json
-- `Dias em lactação` --condicao_de--> `R-RPL-06: SE Dias em lactação ENTÃO Retenção de Placenta`  [EXTRACTED]
-  base/fonte/comum.json → base/fonte/doencas/retencao_placenta.json
 
 ## Communities (21 total, 0 thin omitted)
 
@@ -104,7 +104,7 @@ Nodes (10): Focinho muito vermelho, Olhos lacrimejando, BoHV-1 detectado, Rinotr
 
 ### Community 11 - "Leptospirose"
 Cohesion: 0.22
-Nodes (9): Leite rosado ou com sangue, Sorologia para leptospirose reagente, Leptospirose, R-LEP-01: SE Aborto recente E Febre ENTÃO Leptospirose, R-LEP-02: SE Leite rosado ou com sangue E Queda de produção de leite ENTÃO Leptospirose, R-LEP-03: SE Sorologia para leptospirose reagente ENTÃO Leptospirose, R-LEP-04: SE Urina escura E Febre ENTÃO Leptospirose, R-LEP-05: SE Hemoparasitas no esfregaço ENTÃO Leptospirose (+1 more)
+Nodes (9): Leite rosado ou com sangue, Sorologia para leptospirose reagente, Leptospirose, R-LEP-01: SE Aborto recente E Febre ENTÃO Leptospirose, R-LEP-02: SE Leite rosado ou com sangue E Queda de produção de leite E Alteração visível do leite ENTÃO Leptospirose, R-LEP-03: SE Sorologia para leptospirose reagente ENTÃO Leptospirose, R-LEP-04: SE Urina escura E Febre ENTÃO Leptospirose, R-LEP-05: SE Hemoparasitas no esfregaço ENTÃO Leptospirose (+1 more)
 
 ### Community 12 - "Mastite"
 Cohesion: 0.17
@@ -112,7 +112,7 @@ Nodes (12): CMT reagente, Alteração visível do leite, Grumos na caneca, Infla
 
 ### Community 13 - "Metrite Puerperal"
 Cohesion: 0.25
-Nodes (8): Corrimento vaginal fétido, Aumento uterino à palpação, Metrite Puerperal, R-MET-02: SE Corrimento vaginal E Puerpério E Febre ENTÃO Metrite Puerperal, R-MET-03: SE Puerpério E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal, R-MET-01: SE Puerpério E Corrimento vaginal fétido ENTÃO Metrite Puerperal, R-MET-04: SE Histórico de retenção de placenta E Puerpério ENTÃO Metrite Puerperal, R-URG-04: SE Metrite Puerperal ENTÃO Atendimento Veterinário Imediato
+Nodes (8): Corrimento vaginal fétido, Aumento uterino à palpação, Metrite Puerperal, R-MET-02: SE Corrimento vaginal E Puerpério E Febre ENTÃO Metrite Puerperal, R-MET-03: SE Puerpério E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal, R-MET-01: SE Puerpério E Corrimento vaginal fétido E Corrimento vaginal ENTÃO Metrite Puerperal, R-MET-04: SE Histórico de retenção de placenta E Puerpério ENTÃO Metrite Puerperal, R-URG-04: SE Metrite Puerperal ENTÃO Atendimento Veterinário Imediato
 
 ### Community 14 - "Pneumonia"
 Cohesion: 0.22
@@ -140,8 +140,8 @@ Nodes (8): Exposição recente a carrapatos, Mucosas pálidas ou amareladas, Tri
 
 ### Community 20 - "Tuberculose"
 Cohesion: 0.20
-Nodes (10): Emagrecimento progressivo, Ínguas aumentadas, Tuberculinização reagente, Tuberculose, R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produção de leite ENTÃO Tuberculose, R-TUB-02: SE Ínguas aumentadas E Queda de produção de leite ENTÃO Tuberculose, R-TUB-03: SE Tuberculinização reagente ENTÃO Tuberculose, R-TUB-04: SE Apetite E Queda de produção de leite ENTÃO Tuberculose (+2 more)
+Nodes (10): Emagrecimento progressivo, Ínguas aumentadas, Tuberculinização reagente, Tuberculose, R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produção de leite E Apetite ENTÃO Tuberculose, R-TUB-02: SE Ínguas aumentadas E Queda de produção de leite ENTÃO Tuberculose, R-TUB-03: SE Tuberculinização reagente ENTÃO Tuberculose, R-TUB-04: SE Apetite E Queda de produção de leite ENTÃO Tuberculose (+2 more)
 
 ## Knowledge Gaps
-- **48 isolated node(s):** `BHB sanguíneo`, `Cálcio sérico total`, `Exposição recente a carrapatos`, `CMT reagente`, `Corrimento vaginal fétido` (+43 more)
-  These have ≤1 connection - possible missing edges. (Counts symbols only; 48 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **47 isolated node(s):** `BHB sanguíneo`, `Cálcio sérico total`, `Exposição recente a carrapatos`, `CMT reagente`, `Corrimento vaginal fétido` (+42 more)
+  These have ≤1 connection - possible missing edges. (Counts symbols only; 47 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)

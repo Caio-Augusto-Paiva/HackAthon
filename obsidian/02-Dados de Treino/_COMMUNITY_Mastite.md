@@ -32,7 +32,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
+- 1 edge to [[_COMMUNITY_Leptospirose]]
 
 ## Top bridge nodes
+- [[Alteração visível do leite]] - degree 2, connects to 1 community
 - [[Inflamação do úbere]] - degree 2, connects to 1 community
 - [[R-URG-05 SE Mastite ENTÃO Monitoramento Clínico Contínuo]] - degree 2, connects to 1 community

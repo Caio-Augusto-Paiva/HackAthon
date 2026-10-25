@@ -877,7 +877,7 @@
     },
     {
       "id": "regra:R-MET-01",
-      "label": "R-MET-01: SE Puerpério E Corrimento vaginal fétido ENTÃO Metrite Puerperal",
+      "label": "R-MET-01: SE Puerpério E Corrimento vaginal fétido E Corrimento vaginal ENTÃO Metrite Puerperal",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/metrite.json",
       "classe": "evidencia"
@@ -1388,7 +1388,7 @@
     },
     {
       "id": "regra:R-LEP-02",
-      "label": "R-LEP-02: SE Leite rosado ou com sangue E Queda de produção de leite ENTÃO Leptospirose",
+      "label": "R-LEP-02: SE Leite rosado ou com sangue E Queda de produção de leite E Alteração visível do leite ENTÃO Leptospirose",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/leptospirose.json",
       "classe": "evidencia"
@@ -1640,7 +1640,7 @@
     },
     {
       "id": "regra:R-TUB-01",
-      "label": "R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produção de leite ENTÃO Tuberculose",
+      "label": "R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produção de leite E Apetite ENTÃO Tuberculose",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/tuberculose.json",
       "classe": "evidencia"
@@ -2119,6 +2119,13 @@
     },
     {
       "source": "sim:corrimento_fetido",
+      "target": "regra:R-MET-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/metrite.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
       "target": "regra:R-MET-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -3458,6 +3465,13 @@
       "source_file": "base/fonte/doencas/leptospirose.json"
     },
     {
+      "source": "sim:leite_alterado",
+      "target": "regra:R-LEP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
       "source": "regra:R-LEP-02",
       "target": "sim:leptospirose",
       "relation": "conclui",
@@ -4160,6 +4174,13 @@
     },
     {
       "source": "sim:queda_producao",
+      "target": "regra:R-TUB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:apetite",
       "target": "regra:R-TUB-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",

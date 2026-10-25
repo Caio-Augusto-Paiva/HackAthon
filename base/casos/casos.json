@@ -1618,7 +1618,8 @@
       "atitude_locomocao": [],
       "apetite_ruminacao": "reduzido",
       "producao_leite": [
-        "queda_producao"
+        "queda_producao",
+        "leite_alterado"
       ],
       "excrecoes": []
     },
