@@ -55,9 +55,10 @@ describe('parecer do sistema', () => {
   });
   it('encerrado pelo usuário, lista as doenças que ainda podem subir com mais respostas', async () => {
     montar({ ...exemploParecer, final: true, motivo_parada: null });
-    const podemSubir = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual);
+    const podemSubir = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual).sort((a, b) => b.potencial - a.potencial);
     const aviso = await screen.findByText(/Você encerrou antes do fim/);
-    for (const item of podemSubir) expect(aviso).toHaveTextContent(`${item.nome} (até ${item.potencial}%)`);
+    for (const item of podemSubir.slice(0, 5)) expect(aviso).toHaveTextContent(`${item.nome} (até ${item.potencial}%)`);
+    expect(aviso).toHaveTextContent(`e mais ${podemSubir.length - 5} doenças.`);
   });
   it('não lista doenças que podem subir quando o motor terminou sozinho', async () => {
     montar();
@@ -94,6 +95,21 @@ describe('parecer do sistema', () => {
     expect(within(dialogo).getByText('70% → 88%')).toBeInTheDocument();
     expect(within(dialogo).getByRole('button', { name: 'Expandir painel' })).toBeInTheDocument();
     expect(fetch).toHaveBeenCalledWith('/api/sessoes/ses_0001/como/hipocalcemia', expect.objectContaining({ method: 'GET' }));
+  });
+  it('análise parcial tem título próprio e resume no máximo 5 doenças que podem subir', async () => {
+    const itens = Array.from({ length: 8 }, (_, n) => ({ ...exemploParecer.blocos[0].itens[0], doenca: `d${n}`, nome: `Doença ${n}`, percentual: 0, potencial: 10 + n * 10 }));
+    montar({ ...exemploParecer, final: false, blocos: [{ ...exemploParecer.blocos[0], itens }, ...exemploParecer.blocos.slice(1).map(b => ({ ...b, itens: [] }))] });
+    expect(await screen.findByRole('heading', { name: 'Esta é a minha análise até agora' })).toBeInTheDocument();
+    const aviso = screen.getByText(/ainda podem subir/);
+    expect(aviso).toHaveTextContent('Doença 7 (até 80%), Doença 6 (até 70%), Doença 5 (até 60%), Doença 4 (até 50%) e Doença 3 (até 40%), e mais 3 doenças.');
+  });
+  it('análise parcial explica que vale até a pergunta atual e volta à mesma pergunta', async () => {
+    montar({ ...exemploParecer, final: false });
+    expect(await screen.findByText('Análise parcial: calculada com as respostas dadas até agora. A verificação continua aberta.')).toBeInTheDocument();
+    const podemSubir = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual).sort((a, b) => b.potencial - a.potencial);
+    for (const item of podemSubir.slice(0, 5)) expect(screen.getByText(/ainda podem subir/)).toHaveTextContent(`${item.nome} (até ${item.potencial}%)`);
+    await userEvent.click(screen.getByRole('link', { name: 'Voltar à pergunta' }));
+    expect(await screen.findByRole('heading', { name: 'Pergunta retomada' })).toBeInTheDocument();
   });
   it('avisa que o parecer é parcial e permite nova verificação', async () => {
     montar({ ...exemploParecer, final: false });
@@ -170,11 +186,10 @@ describe('parecer do sistema', () => {
       await screen.findByRole('table');
       expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(2);
     });
-    it('não mostra a seção no parecer parcial', async () => {
+    it('mostra a seção também na análise parcial, com os dados daquele momento', async () => {
       montar({ ...exemploParecer, final: false });
       await screen.findByRole('table');
-      expect(screen.queryByRole('heading', { name: 'Como tratar' })).toBeNull();
-      expect(screen.queryByRole('link', { name: /^Como tratar/ })).toBeNull();
+      expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(2);
     });
     it('não oferece tratamento com exatamente 20%', async () => {
       montar(comPercentuais(20));

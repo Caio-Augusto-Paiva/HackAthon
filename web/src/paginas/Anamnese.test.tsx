@@ -351,12 +351,12 @@ describe('troca de modo sem reiniciar a anamnese', () => {
     expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
     expect(controle.mutacoes).toHaveLength(1);
   });
-  it('vai direto ao resultado quando o usuário não quer responder mais', async () => {
-    const controle = simular(perguntaDinamica, c => { c.estado = { ...perguntaDinamica, fase: 'encerrada', proxima: null }; return resposta(c.estado); });
+  it('vai à análise da pergunta atual sem encerrar a verificação (ida e volta)', async () => {
+    const controle = simular(perguntaDinamica);
     montar();
-    await userEvent.click(await screen.findByRole('button', { name: 'Ver resultado agora' }));
+    await userEvent.click(await screen.findByRole('link', { name: 'Ver análise agora' }));
     expect(await screen.findByText('Destino: /parecer/ses_0001')).toBeInTheDocument();
-    expect(controle.mutacoes).toEqual([{ caminho: '/api/sessoes/ses_0001/acoes/bandeira', metodo: 'POST', corpo: { acao: 'ver_parecer' } }]);
+    expect(controle.mutacoes).toEqual([]);  // nada é gravado: a sessão segue aberta na mesma pergunta
   });
   it('no modo especialista conta as perguntas sem prometer um total', async () => {
     simular({ ...perguntaDinamica, modo: 'veterinario', progresso: { ...perguntaDinamica.progresso, limite_dinamico: null } });

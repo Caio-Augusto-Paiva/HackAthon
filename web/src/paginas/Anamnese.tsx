@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ErroApi } from '../api/cliente';
-import { agirBandeira, obterSessao, responder, type EstadoSessao } from '../api/sessao';
+import { obterSessao, responder, type EstadoSessao } from '../api/sessao';
 import { BarraProgresso } from '../componentes/BarraProgresso';
 import { Balao } from '../componentes/Balao';
 import { Botao } from '../componentes/Botao';
@@ -86,13 +86,6 @@ export function Anamnese() {
       } else definirErro(e instanceof Error ? e.message : 'Não consegui enviar a resposta. Tente novamente.');
     } finally { trava.current = false; definirEnviando(false); }
   }
-  async function verResultado() {
-    if (trava.current) return;
-    trava.current = true; definirEnviando(true); definirErro(undefined);
-    try { definirEstado(await agirBandeira(sessaoId, 'ver_parecer')); }
-    catch (e) { definirErro(e instanceof Error ? e.message : 'Não consegui abrir o resultado. Tente novamente.'); }
-    finally { trava.current = false; definirEnviando(false); }
-  }
   if (!estado) return erro ? <main className={estilos.espera}><h1>Não consegui abrir a verificação</h1><p role="alert">{erro}</p>
     <Botao onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</Botao><Link to="/">Voltar ao início</Link></main> : <CarregandoPergunta />;
   const passo = passoAtual(visivel!.progresso);
@@ -103,7 +96,6 @@ export function Anamnese() {
   return <div className={`${estilos.pagina} fundoComBrilho`}><main className={estilos.principal}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link>
       <ControleModo modo={estado.modo} enviando={enviando} aoMudar={troca.solicitar} />
-      <button type="button" className={estilos.verResultado} disabled={enviando} onClick={verResultado}>Ver resultado agora</button>
       <span className={estilos.contador}>{total === undefined ? `Pergunta ${passo}` : `Pergunta ${passo} de até ${total}`}</span></header>
     {troca.erro && <p role="alert" className={estilos.erroModo}>{troca.erro}</p>}
     {erroCorrecao && <p role="alert" className={estilos.erroModo}>{erroCorrecao}</p>}
@@ -114,6 +106,8 @@ export function Anamnese() {
         <div className={estilos.resposta} key={`${chave}-${indiceCorrecao ?? 'atual'}`}>
           {anterior && <p className={estilos.correcao}>Corrigindo resposta anterior. <button onClick={() => { definirCorrecao(undefined); definirErro(undefined); }}>Retomar pergunta atual</button></p>}
           {tela.tipo === 'tela_triagem' ? <TelaTriagem tela={tela} {...propriedades} /> : <PerguntaDinamica pergunta={tela} {...propriedades} />}
+          {!anterior && <Link className={estilos.verAnalise} to={`/parecer/${encodeURIComponent(sessaoId)}`} aria-disabled={enviando}
+            onClick={e => { if (enviando) e.preventDefault(); }}>Ver análise agora</Link>}
         </div>
         {porqueAberto && <PorQue sessaoId={sessaoId} simbolos={tela.tipo === 'tela_triagem' ? tela.campos.map(c => c.simbolo) : [tela.simbolo]} aoFechar={() => definirPorque(false)} />}
       </> : <p role="status">{estado.alerta?.pausa ? estado.alerta.texto : 'Abrindo parecer…'}</p>}

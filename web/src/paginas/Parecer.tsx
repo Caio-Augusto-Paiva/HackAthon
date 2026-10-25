@@ -56,19 +56,22 @@ export function Parecer() {
   const nomes = new Map(blocos.flatMap(b => b.itens).map(i => [i.doenca, i.nome]));
   const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && /^https:\/\//i.test(i.tratamento?.url ?? ''));
   const encerradoCedo = dados.final && dados.motivo_parada === null;
-  const podemSubir = blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual);
+  const podemSubir = blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual).sort((a, b) => b.potencial - a.potencial);
+  const destaque = podemSubir.slice(0, 5);
+  const restantes = podemSubir.length - destaque.length;
   let posicao = 0;
   return <div className={estilos.pagina}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link><span>Modo {dados.modo === 'produtor' ? 'produtor' : 'especialista'}</span>
       <span>{dados.final ? 'Verificação concluída' : 'Verificação em andamento'}</span></header>
     <main className={estilos.conteudo}>
-      <div className={estilos.titulo}><Boi tamanho={96} /><div><h1 tabIndex={-1}>Pronto! Este é o meu parecer</h1><p>Doenças em ordem decrescente de confiança</p></div></div>
-      {!dados.final && <p className={estilos.parcial}>Parecer parcial</p>}
+      <div className={estilos.titulo}><Boi tamanho={96} /><div><h1 tabIndex={-1}>{dados.final ? 'Pronto! Este é o meu parecer' : 'Esta é a minha análise até agora'}</h1><p>Doenças em ordem decrescente de confiança</p></div></div>
+      {!dados.final && <><p className={estilos.parcial}>Parecer parcial</p>
+        <p className={estilos.parcialTexto}>Análise parcial: calculada com as respostas dadas até agora. A verificação continua aberta.</p></>}
       <section role="status" data-nivel={dados.urgencia.nivel} className={estilos.urgencia}>
         <img src={alerta} width={30} height={30} alt="" /><div><h2>{urgencias[dados.urgencia.nivel]}</h2><p>{dados.urgencia.texto}</p></div>
       </section>
-      {encerradoCedo && podemSubir.length > 0 && <section role="status" className={estilos.nadaFechou}>
-        <p>Você encerrou antes do fim, e este é o resultado calculado até aqui. Com mais respostas, estas doenças ainda podem subir: {listaPt.format(podemSubir.map(i => `${i.nome} (até ${i.potencial}%)`))}.</p>
+      {(encerradoCedo || !dados.final) && podemSubir.length > 0 && <section role="status" className={estilos.nadaFechou}>
+        <p>{encerradoCedo ? 'Você encerrou antes do fim, e este é o resultado calculado até aqui. ' : ''}Com mais respostas, estas doenças ainda podem subir: {listaPt.format(destaque.map(i => `${i.nome} (até ${i.potencial}%)`))}{restantes > 0 ? `, e mais ${restantes} ${restantes === 1 ? 'doença' : 'doenças'}` : ''}.</p>
       </section>}
       {nenhumaConfirmada && <section role="status" className={estilos.nadaFechou}>
         <p>Nenhuma doença foi confirmada com as respostas dadas. Responda mais perguntas para o sistema calcular as chances.</p>
@@ -92,7 +95,7 @@ export function Parecer() {
       {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {listaPt.format(dados.inconclusivas.map(id => nomes.get(id) ?? id))}.</p>}
       {dados.sinais_nao_verificados?.length ? <p className={estilos.aviso}>Sinais graves ainda não verificados: {listaPt.format(dados.sinais_nao_verificados)}.</p> : null}
       </div>
-      {dados.final && tratar.length > 0 && <section aria-labelledby="titulo-tratar" className={estilos.tratar}>
+      {tratar.length > 0 && <section aria-labelledby="titulo-tratar" className={estilos.tratar}>
         <h2 id="titulo-tratar">Como tratar</h2>
         <p className={estilos.tratarMotivo}>Sugerimos estas leituras porque o sistema tem mais de 20% de confiança de que a vaca tem estas doenças.</p>
         <ul className={estilos.tratarLista}>{tratar.map(i => <li key={i.doenca}>
@@ -109,7 +112,7 @@ export function Parecer() {
       </section>}
       <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link><Link className={estilos.privacidade} to="/privacidade">Política de privacidade</Link>
         <Botao variante="secundario" disabled={!primeira} onClick={() => definirComo(true)}>Como cheguei aqui?</Botao>
-        {!dados.final && <Link className={estilos.continuar} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Continuar respondendo</Link>}
+        {!dados.final && <Link className={estilos.continuar} to={`/anamnese/${encodeURIComponent(sessaoId)}`}>Voltar à pergunta</Link>}
         {!dados.final && <ControleModo modo={dados.modo} mostrarModo={false} enviando={retomando} aoMudar={troca.solicitar} />}
         {dados.final && dados.motivo_parada === null && <Botao variante="secundario" carregando={retomando} onClick={retomar}>Continuar respondendo</Botao>}
       </div>
