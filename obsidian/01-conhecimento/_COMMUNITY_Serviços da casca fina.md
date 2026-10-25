@@ -38,10 +38,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Bandeira vermelha e desvios]]
+- 12 edges to [[_COMMUNITY_Bandeira vermelha e desvios]]
 - 3 edges to [[_COMMUNITY_Configuração da API]]
 - 2 edges to [[_COMMUNITY_Barra de confiança e Boi]]
 - 1 edge to [[_COMMUNITY_Alerta de bandeira e SPA]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia (2)]]
 - 1 edge to [[_COMMUNITY_Contrato OpenAPI e exemplos]]
 
 ## Top bridge nodes

@@ -1,22 +1,22 @@
 ---
 type: community
-cohesion: 0.33
+cohesion: 0.29
 members: 7
 ---
 
 # READMEs e caso alerta
 
-**Cohesion:** 0.33 - loosely connected
+**Cohesion:** 0.29 - loosely connected
 **Members:** 7 nodes
 
 ## Members
-- [[Caso alerta-decubito (demo CLI)]] - concept - README.md
-- [[Comando unittest do motor]] - code - README.md
-- [[Python 3.12+ somente biblioteca padrão]] - concept - README.md
-- [[README da API]] - document - README.md
-- [[README de kb]] - document - README.md
-- [[Seção Executar a demonstração do motor]] - document - README.md
-- [[Suíte completa pytest]] - code - README.md
+- [[27 operacoes HTTP]] - concept - README.md
+- [[API FastAPI com SQLite]] - code - README.md
+- [[Branch codex-davi estado integrado]] - concept - README.md
+- [[Modulo kb]] - code - README.md
+- [[Suite completa com pytest no .venv]] - code - README.md
+- [[apiREADME_1]] - document - README.md
+- [[kbREADME]] - document - README.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,7 +26,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Decisões de seleção de perguntas]]
+- 7 edges to [[_COMMUNITY_Documentos de entrega]]
+- 2 edges to [[_COMMUNITY_Estrutura do repositório]]
+- 1 edge to [[_COMMUNITY_Execução local da web]]
+- 1 edge to [[_COMMUNITY_Demonstração do motor]]
 
 ## Top bridge nodes
-- [[Seção Executar a demonstração do motor]] - degree 7, connects to 1 community
+- [[API FastAPI com SQLite]] - degree 7, connects to 3 communities
+- [[Branch codex-davi estado integrado]] - degree 4, connects to 2 communities
+- [[Modulo kb]] - degree 4, connects to 2 communities
+- [[apiREADME_1]] - degree 2, connects to 1 community
+- [[kbREADME]] - degree 2, connects to 1 community

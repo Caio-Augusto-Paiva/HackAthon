@@ -1,18 +1,17 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
-type: "code"
-community: "Motor e API FastAPI"
-location: "Contratos Python"
+type: "concept"
+community: "API, explicação e camada web"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Motor_e_API_FastAPI
+  - community/API_explicação_e_camada_web
 ---
 
 # parecer, porque, como
 
 ## Connections
-- [[Seção Contratos Python disponíveis]] - `references` [EXTRACTED]
-- [[Traço de eventos]] - `calls` [INFERRED]
+- [[Contratos Python disponiveis]] - `references` [EXTRACTED]
+- [[Explicacao por que e como]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Motor_e_API_FastAPI
+#graphify/concept #graphify/EXTRACTED #community/API_explicação_e_camada_web

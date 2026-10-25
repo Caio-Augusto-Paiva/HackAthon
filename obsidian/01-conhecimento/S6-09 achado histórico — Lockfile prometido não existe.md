@@ -12,7 +12,7 @@ tags:
 # S6-09: achado histórico — Lockfile prometido não existe
 
 ## Connections
-- [[R22 Reprodutibilidade Python sem lockfile (média)]] - `references` [EXTRACTED]
+- [[R22 Reprodutibilidade Python sem lockfile]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Riscos_e_pendências_de_entrega

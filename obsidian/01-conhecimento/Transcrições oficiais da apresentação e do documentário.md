@@ -1,18 +1,17 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "document"
-community: "Exigências oficiais da entrega"
-location: "intro"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Exigências_oficiais_da_entrega
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Transcrições oficiais da apresentação e do documentário
 
 ## Connections
-- [[Entrega índice para a equipe e a banca]] - `references` [EXTRACTED]
-- [[Seção Atendimento às exigências oficiais]] - `rationale_for` [EXTRACTED]
+- [[Fontes oficiais A e D]] - `semantically_similar_to` [INFERRED]
+- [[Tema T1 Anamnese]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Exigências_oficiais_da_entrega
+#graphify/document #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação

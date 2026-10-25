@@ -1,18 +1,16 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "concept"
-community: "Combinação MYCIN e blocos"
-location: "Equipe"
+community: "Integrante C"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Combinação_MYCIN_e_blocos
+  - community/Integrante_C
 ---
 
 # Integrante C: Luis Henrique Poubel Buettel
 
 ## Connections
-- [[Componente base de conhecimento]] - `conceptually_related_to` [INFERRED]
-- [[Seção Equipe (A, B, C)]] - `references` [EXTRACTED]
+- [[Resp. C base de conhecimento JSON e banco de dados]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Combinação_MYCIN_e_blocos
+#graphify/concept #graphify/EXTRACTED #community/Integrante_C

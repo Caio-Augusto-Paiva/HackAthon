@@ -13,7 +13,6 @@ tags:
 ## Connections
 - [[Codigos do validador E00-E23 e W01-W03]] - `implements` [EXTRACTED]
 - [[D4 EdicaoBase frouxa (erros de estrutura viram E00)]] - `references` [EXTRACTED]
-- [[Guardas de execucao (CF positivo para urgencia e bandeira)]] - `references` [EXTRACTED]
 - [[Pacote kb README (base de conhecimento)]] - `references` [EXTRACTED]
 - [[Sementes de animais ficticios e reset seguro do banco]] - `conceptually_related_to` [INFERRED]
 - [[Task 4 Validador]] - `implements` [EXTRACTED]

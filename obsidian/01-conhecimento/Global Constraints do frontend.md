@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Cliente tipado e tipografia"
+community: "Cliente tipado e tipografia (2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cliente_tipado_e_tipografia
+  - community/Cliente_tipado_e_tipografia_2
 ---
 
 # Global Constraints do frontend
@@ -23,4 +23,4 @@ tags:
 - [[Tudo em localhost, sem nuvem e sem CDN; nenhuma LLM na decisão]] - `references` [EXTRACTED]
 - [[Vocabulário pt-BR verificação, modo especialista, modo produtor, parecer]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cliente_tipado_e_tipografia
+#graphify/concept #graphify/EXTRACTED #community/Cliente_tipado_e_tipografia_2

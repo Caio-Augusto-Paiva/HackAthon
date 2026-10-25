@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[Regra de urgência que cita duas doenças vai para comum.json]] - `references` [EXTRACTED]
-- [[testskbtest_fonte.py]] - `references` [EXTRACTED]
+- [[testskbtest_fonte.py_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Fonte_inválida_e_Review_Focus

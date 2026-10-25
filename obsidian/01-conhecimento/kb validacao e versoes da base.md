@@ -1,18 +1,18 @@
 ---
 source_file: "CLAUDE.md"
-type: "concept"
-community: "Aquisição de conhecimento"
+type: "code"
+community: "Estrutura do repositório"
 tags:
-  - graphify/concept
-  - graphify/EXTRACTED
-  - community/Aquisição_de_conhecimento
+  - graphify/code
+  - graphify/INFERRED
+  - community/Estrutura_do_repositório
 ---
 
-# kb/: validacao e versoes da base
+# kb/ validacao e versoes da base
 
 ## Connections
-- [[Base de conhecimento regras de producao, variaveis, pesos CF, versionada]] - `references` [EXTRACTED]
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
-- [[Pacote kb README (base de conhecimento)]] - `conceptually_related_to` [INFERRED]
+- [[Modulo kb]] - `semantically_similar_to` [INFERRED]
+- [[base versoes imutaveis, ativa em baseativa.json]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento
+#graphify/code #graphify/INFERRED #community/Estrutura_do_repositório

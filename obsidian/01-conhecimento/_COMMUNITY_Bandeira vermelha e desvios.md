@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.16
-members: 23
+cohesion: 0.18
+members: 21
 ---
 
 # Bandeira vermelha e desvios
 
-**Cohesion:** 0.16 - loosely connected
-**Members:** 23 nodes
+**Cohesion:** 0.18 - loosely connected
+**Members:** 21 nodes
 
 ## Members
 - [[Bandeira vermelha e pausa de alerta]] - concept - docs/superpowers/plans/2026-10-21-api-secao-4.md
@@ -17,10 +17,8 @@ members: 23
 - [[EstadoSessao]] - concept - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Motor sem estado entre requisições]] - rationale - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Pacote engine (motor)]] - concept - docs/superpowers/plans/2026-10-21-api-secao-4.md
-- [[Pacote kb (base de conhecimento)]] - concept - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Plano de implementação API (Seção 4)]] - document - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Revisão do motor 2026-10-21]] - document - docs/superpowers/plans/2026-10-21-api-secao-4.md
-- [[Schemas Pydantic (sessao, parecer, explicacao, animal, base)]] - code - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Spec 2026-10-20-anamnese-bovinos-design]] - document - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Task 5 Criar sessão e EstadoSessao]] - concept - docs/superpowers/plans/2026-10-21-api-secao-4.md
 - [[Task 6 Responder triagem e perguntas dinâmicas]] - concept - docs/superpowers/plans/2026-10-21-api-secao-4.md
@@ -42,17 +40,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Serviços da casca fina]]
-- 3 edges to [[_COMMUNITY_Contrato OpenAPI e exemplos]]
+- 12 edges to [[_COMMUNITY_Serviços da casca fina]]
+- 3 edges to [[_COMMUNITY_Cliente tipado e tipografia (2)]]
 - 3 edges to [[_COMMUNITY_Barra de confiança e Boi]]
 - 2 edges to [[_COMMUNITY_Configuração da API]]
-- 1 edge to [[_COMMUNITY_Cliente nunca envia CF]]
-- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia]]
+- 2 edges to [[_COMMUNITY_Contrato OpenAPI e exemplos]]
 - 1 edge to [[_COMMUNITY_Alerta de bandeira e SPA]]
 
 ## Top bridge nodes
 - [[Plano de implementação API (Seção 4)]] - degree 21, connects to 6 communities
 - [[Task 5 Criar sessão e EstadoSessao]] - degree 13, connects to 2 communities
+- [[sessao_motor.py (carregaraplicar)]] - degree 9, connects to 2 communities
 - [[Task 6 Responder triagem e perguntas dinâmicas]] - degree 6, connects to 2 communities
-- [[Schemas Pydantic (sessao, parecer, explicacao, animal, base)]] - degree 3, connects to 2 communities
-- [[sessao_motor.py (carregaraplicar)]] - degree 9, connects to 1 community
+- [[sessao_servico.py]] - degree 5, connects to 1 community

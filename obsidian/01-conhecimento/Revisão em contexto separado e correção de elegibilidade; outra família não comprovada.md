@@ -12,7 +12,7 @@ tags:
 # Revisão em contexto separado e correção de elegibilidade; outra família não comprovada
 
 ## Connections
-- [[R24 Elegibilidade e presença sem confirmação (alta)]] - `references` [EXTRACTED]
+- [[R24 Elegibilidade e presenca sem confirmacao]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Riscos_e_pendências_de_entrega

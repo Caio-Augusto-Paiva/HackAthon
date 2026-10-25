@@ -1,0 +1,82 @@
+---
+source_file: "README.md"
+type: "document"
+community: "Documentos de entrega"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Documentos_de_entrega
+---
+
+# README.md HackAthon anamnese explicavel
+
+## Connections
+- [[apidocs com limitacao de CDN]] - `references` [EXTRACTED]
+- [[01-processo]] - `references` [EXTRACTED]
+- [[02-arquitetura]] - `references` [EXTRACTED]
+- [[03-regras-de-producao.md (137 regras)]] - `references` [EXTRACTED]
+- [[04-casos-de-teste.md (34 casos)]] - `references` [EXTRACTED]
+- [[06-riscos-e-pendencias]] - `references` [EXTRACTED]
+- [[2 pares excludentes]] - `references` [EXTRACTED]
+- [[27 operacoes HTTP]] - `references` [EXTRACTED]
+- [[6 specs E2E nao rodados]] - `references` [EXTRACTED]
+- [[60 casos sinteticos versionados]] - `references` [EXTRACTED]
+- [[API FastAPI com SQLite]] - `references` [EXTRACTED]
+- [[Base ativa v0005 (20 doencas, 137 regras)]] - `references` [EXTRACTED]
+- [[Branch codex-davi estado integrado]] - `references` [EXTRACTED]
+- [[Build existente e preservado pelo inicializador]] - `references` [EXTRACTED]
+- [[CF, hipoteses, urgencia, perguntas e explicacoes decididos pelo backend]] - `references` [EXTRACTED]
+- [[Caso alerta-decubito.json]] - `references` [EXTRACTED]
+- [[Combinacao de fatores de certeza modelo MYCIN]] - `references` [EXTRACTED]
+- [[Conhecimento veterinario e CF como suposicao a validar]] - `references` [EXTRACTED]
+- [[Correcao de respostas da navegacao]] - `references` [EXTRACTED]
+- [[Decisao em execucao sai da base e do motor; IA so auxilia desenvolvimento]] - `references` [EXTRACTED]
+- [[Editor grafico pendente]] - `references` [EXTRACTED]
+- [[Equipe e licenca]] - `references` [EXTRACTED]
+- [[Erros 422 no campo]] - `references` [EXTRACTED]
+- [[Estado dos testes 1082 Python, 170 subtestes, 72 Vitest]] - `references` [EXTRACTED]
+- [[EstadoSessao.proxima renderizado pelo navegador]] - `references` [EXTRACTED]
+- [[Executar a demonstracao do motor]] - `references` [EXTRACTED]
+- [[Exigencia de codigo aberto]] - `references` [EXTRACTED]
+- [[Flag --verificar retorna 1 se divergir]] - `references` [EXTRACTED]
+- [[Grafo 2 dados de treino por doenca]] - `references` [EXTRACTED]
+- [[Historico de contagens de testes]] - `references` [EXTRACTED]
+- [[Interface web reproduz prototipo Figma]] - `references` [EXTRACTED]
+- [[Licenca LICENSE nao declarada, pendente]] - `references` [EXTRACTED]
+- [[Links de tratamento]] - `references` [EXTRACTED]
+- [[Manter tabelas sincronizadas]] - `references` [EXTRACTED]
+- [[Modulo kb]] - `references` [EXTRACTED]
+- [[Motor e utilitarios so com biblioteca padrao]] - `references` [EXTRACTED]
+- [[Node.js 24]] - `references` [EXTRACTED]
+- [[Pausa de bandeira]] - `references` [EXTRACTED]
+- [[Playwright com API propria e SQLite temporario]] - `references` [EXTRACTED]
+- [[PoC tema T1 Hackathon UFJF 2026]] - `references` [EXTRACTED]
+- [[Por que e parecer com evidencias]] - `references` [EXTRACTED]
+- [[Requisito Python 3.12 ou superior]] - `references` [EXTRACTED]
+- [[Resultado nao e diagnostico nem recomendacao terapeutica]] - `references` [EXTRACTED]
+- [[Revisao tecnica da Secao 6]] - `references` [EXTRACTED]
+- [[Secao Documentacao]] - `references` [EXTRACTED]
+- [[Spec do grafo 2]] - `references` [EXTRACTED]
+- [[Suite completa com pytest no .venv]] - `references` [EXTRACTED]
+- [[Teste de preparacao do frontend intermitente]] - `references` [EXTRACTED]
+- [[Triagem unicamultipla]] - `references` [EXTRACTED]
+- [[Versoes imutaveis alteracao exige nova versao e casos]] - `references` [EXTRACTED]
+- [[Vitest]] - `references` [EXTRACTED]
+- [[apiREADME_1]] - `references` [EXTRACTED]
+- [[baseativa.json]] - `references` [EXTRACTED]
+- [[basedesenvolvimentoLEIA-ME.txt exemplo mamario]] - `references` [EXTRACTED]
+- [[docsentrega05-apresentacao-e-demo]] - `references` [EXTRACTED]
+- [[docsentregaREADME.md indice e exigencias]] - `references` [EXTRACTED]
+- [[engineREADME.md contrato do motor]] - `references` [EXTRACTED]
+- [[evidencias-verificacao.json_3]] - `references` [EXTRACTED]
+- [[httplocalhost8000]] - `references` [EXTRACTED]
+- [[kbREADME]] - `references` [EXTRACTED]
+- [[npm ci e npm run build se dist ausente]] - `references` [EXTRACTED]
+- [[npm run dev Vite com proxy para 8000]] - `references` [EXTRACTED]
+- [[python -m engine baseversoesv0005.json caso]] - `references` [EXTRACTED]
+- [[python -m unittest discover -s testsengine]] - `references` [EXTRACTED]
+- [[scriptsgerar_doc_regras.py_2]] - `references` [EXTRACTED]
+- [[scriptsrodar.ps1 -SemNavegador]] - `references` [EXTRACTED]
+- [[webQUALIDADE_3]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Documentos_de_entrega

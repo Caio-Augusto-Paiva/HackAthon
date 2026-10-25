@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "concept"
-community: "Parecer e urgência na interface"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_e_urgência_na_interface
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Grafo exato (kb.grafo.Grafo): conversão base-grafo 1:1
@@ -17,4 +17,4 @@ tags:
 - [[Task 3 Conversão base-grafo]] - `references` [INFERRED]
 - [[grafo_exato.json = base_para_grafo(base)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface
+#graphify/concept #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

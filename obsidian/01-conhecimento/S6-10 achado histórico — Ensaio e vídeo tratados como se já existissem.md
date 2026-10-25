@@ -12,7 +12,7 @@ tags:
 # S6-10: achado histórico — Ensaio e vídeo tratados como se já existissem
 
 ## Connections
-- [[R23 Material editorial tratado como entrega concluída (alta)]] - `references` [EXTRACTED]
+- [[R23 Material editorial tratado como entrega concluida]] - `references` [EXTRACTED]
 - [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Duração_e_fechamento_da_seção

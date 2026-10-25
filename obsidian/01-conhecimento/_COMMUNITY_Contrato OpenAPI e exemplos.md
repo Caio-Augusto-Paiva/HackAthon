@@ -28,12 +28,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Bandeira vermelha e desvios]]
-- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia]]
+- 2 edges to [[_COMMUNITY_Bandeira vermelha e desvios]]
 - 1 edge to [[_COMMUNITY_Serviços da casca fina]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia (2)]]
 - 1 edge to [[_COMMUNITY_Configuração da API]]
 
 ## Top bridge nodes
-- [[Task 3 Schemas Pydantic e exemplos de contrato]] - degree 8, connects to 3 communities
+- [[Task 3 Schemas Pydantic e exemplos de contrato]] - degree 8, connects to 4 communities
 - [[Task 12 OpenAPI versionado e teste de contrato]] - degree 7, connects to 1 community
 - [[contratosopenapi.json versionado]] - degree 5, connects to 1 community

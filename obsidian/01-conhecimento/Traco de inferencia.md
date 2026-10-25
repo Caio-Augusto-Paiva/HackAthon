@@ -1,18 +1,18 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Decisão determinística auditável"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Decisão_determinística_auditável
+  - graphify/INFERRED
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Traco de inferencia
 
 ## Connections
-- [[Decisao deterministica e auditavel]] - `references` [EXTRACTED]
-- [[Modulo de explicacao por que e como]] - `references` [EXTRACTED]
+- [[Modulo de explicacao (por que  como)]] - `references` [EXTRACTED]
+- [[Restricao 2 decisao deterministica e auditavel]] - `conceptually_related_to` [INFERRED]
 - [[Traco da sessao reacumula eventos (parcial)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisão_determinística_auditável
+#graphify/concept #graphify/INFERRED #community/Desafio_entregas_e_avaliação

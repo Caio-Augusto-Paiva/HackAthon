@@ -1,20 +1,22 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Avaliação da organização"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Avaliação_da_organização
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Entregaveis e prazos
 
 ## Connections
-- [[Apresentacao obrigatoria do processo, do uso da IA ao resultado]] - `references` [EXTRACTED]
-- [[CLAUDE.md instrucoes do PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
-- [[Cronograma inicio 2010 9h, envio 2210 20h, apresentacao 2310 9h]] - `references` [EXTRACTED]
+- [[Apresentacao obrigatoria do uso da IA ao resultado]] - `references` [EXTRACTED]
+- [[Apresentacao sexta 2310 as 900]] - `references` [EXTRACTED]
 - [[Demonstracao em localhost]] - `references` [EXTRACTED]
-- [[Documentacao obrigatoria processo, arquitetura tecnologica, regras de producao]] - `references` [EXTRACTED]
+- [[Documentacao obrigatoria (processo, arquitetura, regras de producao)]] - `references` [EXTRACTED]
+- [[Inicio terca 2010 as 900]] - `references` [EXTRACTED]
+- [[O desafio]] - `references` [EXTRACTED]
+- [[Prazo de envio quinta 2210 as 2000]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Avaliação_da_organização
+#graphify/concept #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação

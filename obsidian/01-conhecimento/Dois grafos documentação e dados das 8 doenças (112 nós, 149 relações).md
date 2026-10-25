@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/notas-do-apresentador.md"
 type: "concept"
-community: "Critérios de parada"
+community: "Roteiro de apresentação"
 location: "Slide 9"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Critérios_de_parada
+  - community/Roteiro_de_apresentação
 ---
 
 # Dois grafos: documentação e dados das 8 doenças (112 nós, 149 relações)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Slide 9 Grafos (035)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Critérios_de_parada
+#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_apresentação

@@ -1,23 +1,22 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Decisão determinística auditável"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisão_determinística_auditável
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Restricoes obrigatorias
 
 ## Connections
-- [[CLAUDE.md instrucoes do PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
-- [[Decisao deterministica e auditavel]] - `references` [EXTRACTED]
-- [[Desenvolvimento apoiado por agente de IA]] - `references` [EXTRACTED]
-- [[Nao usar a LLM como sistema especialista; sem LLM no caminho da decisao]] - `references` [EXTRACTED]
-- [[O desafio aplicacao para usuario final com base explicita e motor de inferencia]] - `references` [EXTRACTED]
-- [[Open source; linguagem a escolha do grupo]] - `references` [EXTRACTED]
+- [[O desafio]] - `references` [EXTRACTED]
 - [[Respeitar restricoes obrigatorias e declarar conflitos]] - `references` [EXTRACTED]
-- [[Rodar por completo em localhost, sem nuvem obrigatoria]] - `references` [EXTRACTED]
+- [[Restricao 1 LLM nao e o sistema especialista]] - `references` [EXTRACTED]
+- [[Restricao 2 decisao deterministica e auditavel]] - `references` [EXTRACTED]
+- [[Restricao 3 open source, linguagem livre]] - `references` [EXTRACTED]
+- [[Restricao 4 rodar por completo em localhost]] - `references` [EXTRACTED]
+- [[Restricao 5 desenvolvimento apoiado por agente de IA]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisão_determinística_auditável
+#graphify/concept #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "concept"
-community: "Casos clínicos e fonte"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_clínicos_e_fonte
+  - community/Cliente_nunca_envia_CF
 ---
 
 # Objetivos: separar, editar em base/fonte/, grafo 2 sem IA, motor lê do grafo exato
@@ -17,4 +17,4 @@ tags:
 - [[Spec Grafo 2 — base separada por doença e grafo exato no Obsidian]] - `references` [EXTRACTED]
 - [[basefonte passa a ser o que a equipe edita; juntar gera próxima versão via salvar_nova]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_clínicos_e_fonte
+#graphify/concept #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

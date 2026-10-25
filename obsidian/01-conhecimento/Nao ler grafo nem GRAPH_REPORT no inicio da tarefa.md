@@ -1,17 +1,17 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Busca direta versus grafo"
+community: "Instruções dos agentes e graphify"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Busca_direta_versus_grafo
+  - community/Instruções_dos_agentes_e_graphify
 ---
 
 # Nao ler grafo nem GRAPH_REPORT no inicio da tarefa
 
 ## Connections
-- [[GRAPH_REPORT.md visao geral rara (~7 mil tokens)]] - `references` [INFERRED]
 - [[Grafo de conhecimento so quando precisar procurar]] - `references` [EXTRACTED]
+- [[Passo 3 GRAPH_REPORT.md (~7 mil tokens)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Busca_direta_versus_grafo
+#graphify/concept #graphify/EXTRACTED #community/Instruções_dos_agentes_e_graphify

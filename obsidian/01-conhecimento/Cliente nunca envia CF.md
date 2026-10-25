@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-21-api-secao-4.md"
 type: "rationale"
-community: "Cliente nunca envia CF"
+community: "Cliente tipado e tipografia (2)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Cliente_nunca_envia_CF
+  - community/Cliente_tipado_e_tipografia_2
 ---
 
 # Cliente nunca envia CF
@@ -14,4 +14,4 @@ tags:
 - [[Cliente nunca envia CF envia valor ou nao_sei]] - `semantically_similar_to` [INFERRED]
 - [[Schemas Pydantic (sessao, parecer, explicacao, animal, base)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Cliente_nunca_envia_CF
+#graphify/rationale #graphify/EXTRACTED #community/Cliente_tipado_e_tipografia_2

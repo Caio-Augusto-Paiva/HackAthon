@@ -1,16 +1,17 @@
 ---
-source_file: "docs/entrega/04-casos-de-teste.md"
-type: "concept"
-community: "Modos e exemplos de alerta"
+source_file: "docs/entrega/01-processo.md"
+type: "code"
+community: "Linha do tempo e decisões do processo"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/Modos_e_exemplos_de_alerta
+  - community/Linha_do_tempo_e_decisões_do_processo
 ---
 
 # scripts/gerar_doc_regras.py
 
 ## Connections
-- [[Casos de teste (documentação gerada)]] - `rationale_for` [EXTRACTED]
+- [[2110 pacote de entrega e scriptsgerar_doc_regras.py]] - `references` [EXTRACTED]
+- [[Decisão tabelas de regras geradas da base]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Modos_e_exemplos_de_alerta
+#graphify/code #graphify/EXTRACTED #community/Linha_do_tempo_e_decisões_do_processo

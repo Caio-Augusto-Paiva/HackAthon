@@ -1,17 +1,13 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Atualização do grafo"
+community: "Codigo, testes, web, docs/prompts e docs/rascunh"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Atualização_do_grafo
+  - community/Codigo_testes_web_docs/prompts_e_docs/rascunh
 ---
 
 # Codigo, testes, web, docs/prompts e docs/rascunhos nao pedem atualizacao
 
-## Connections
-- [[Atualizar o grafo uma vez por bloco de trabalho]] - `references` [EXTRACTED]
-- [[Mudancas so em codigo, testes, web, prompts e rascunhos nao pedem atualizacao]] - `semantically_similar_to` [INFERRED]
-
-#graphify/concept #graphify/EXTRACTED #community/Atualização_do_grafo
+#graphify/concept #graphify/EXTRACTED #community/Codigo_testes_web_docs/prompts_e_docs/rascunh

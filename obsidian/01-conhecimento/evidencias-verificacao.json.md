@@ -1,18 +1,16 @@
 ---
-source_file: "README.md"
-type: "document"
-community: "Decisões de seleção de perguntas"
-location: "Manter as tabelas sincronizadas"
+source_file: "docs/entrega/02-arquitetura.md"
+type: "concept"
+community: "Testes e evidências"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_de_seleção_de_perguntas
+  - community/Testes_e_evidências
 ---
 
 # evidencias-verificacao.json
 
 ## Connections
-- [[Seção Executar o checkpoint]] - `references` [EXTRACTED]
-- [[Seção Manter as tabelas sincronizadas]] - `references` [EXTRACTED]
+- [[Testes, execucao e limites]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Decisões_de_seleção_de_perguntas
+#graphify/concept #graphify/EXTRACTED #community/Testes_e_evidências

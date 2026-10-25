@@ -86,9 +86,16 @@
       "files": 13,
       "semantic_files": 9,
       "nota": "tokens = total dos subagentes (entrada+saída), sem divisão"
+    },
+    {
+      "date": "2026-10-25T13:36:07.380521+00:00",
+      "input_tokens": 1016694,
+      "output_tokens": 0,
+      "files": 17,
+      "nota": "update incremental; 311 mil da 1a tentativa rasa descartada"
     }
   ],
-  "total_input_tokens": 1697641,
+  "total_input_tokens": 2714335,
   "total_output_tokens": 0,
   "unmeasured_runs": 6
 }

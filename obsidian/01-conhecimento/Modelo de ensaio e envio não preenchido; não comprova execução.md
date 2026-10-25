@@ -18,7 +18,7 @@ tags:
 - [[Cronometragem humana pendente fala estimada em 1000 e demo em 400]] - `references` [EXTRACTED]
 - [[Preparar dois computadores, ambiente, banco fictício e consulta local]] - `references` [EXTRACTED]
 - [[Prova de entendimento de cada integrante ainda a registrar]] - `references` [EXTRACTED]
-- [[Registro de riscos (R01-R14)]] - `references` [EXTRACTED]
+- [[Registro de riscos R01-R14 (tabela)]] - `references` [EXTRACTED]
 - [[Registro real por computador versão, rede, consulta e resultado a preencher]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Riscos_e_pendências_de_entrega

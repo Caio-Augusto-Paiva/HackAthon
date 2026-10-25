@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
-type: "document"
-community: "Mastite"
+type: "concept"
+community: "Hipocalcemia e periparto"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Mastite
+  - community/Hipocalcemia_e_periparto
 ---
 
 # Seção Hipocalcemia Puerperal (gravidade alta)
 
 ## Connections
 - [[Hipocalcemia Puerperal (hipocalcemia)]] - `references` [EXTRACTED]
-- [[MSD Veterinary Manual (referência clínica contextual)]] - `cites` [EXTRACTED]
+- [[Regras de produção — documentação gerada]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Mastite
+#graphify/concept #graphify/EXTRACTED #community/Hipocalcemia_e_periparto

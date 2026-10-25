@@ -1,18 +1,17 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
-type: "document"
-community: "Demo cronometrada e avisos"
-location: "Demonstração principal"
+type: "concept"
+community: "Roteiro de reserva por CLI"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Demo_cronometrada_e_avisos
+  - community/Roteiro_de_reserva_por_CLI
 ---
 
 # Demo 0:00-0:30: abrir localhost e iniciar verificação
 
 ## Connections
-- [[Demo 030-100 entrada inválida 12,5 e erro 422]] - `references` [EXTRACTED]
+- [[Demo 030-100 erro 422 em 12,5 e correção para 90]] - `conceptually_related_to` [INFERRED]
 - [[Demonstração principal em localhost (4 min)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Demo_cronometrada_e_avisos
+#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_reserva_por_CLI

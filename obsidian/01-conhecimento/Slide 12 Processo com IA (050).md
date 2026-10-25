@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/notas-do-apresentador.md"
 type: "document"
-community: "Critérios de parada"
+community: "Roteiro de apresentação"
 location: "Tabela"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Critérios_de_parada
+  - community/Roteiro_de_apresentação
 ---
 
 # Slide 12: Processo com IA (0:50)
@@ -16,4 +16,4 @@ tags:
 - [[Slide 11 Tecnologias (030)]] - `references` [INFERRED]
 - [[Slide 13 Resultados verificados (055)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Critérios_de_parada
+#graphify/document #graphify/INFERRED #community/Roteiro_de_apresentação

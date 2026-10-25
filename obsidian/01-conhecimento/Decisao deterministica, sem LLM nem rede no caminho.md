@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - `rationale_for` [EXTRACTED]
-- [[Motor independente de web, banco, LLM e servicos externos]] - `semantically_similar_to` [INFERRED]
+- [[Implementacao independente de web, banco, LLM e servicos externos]] - `semantically_similar_to` [INFERRED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Documentação_e_backend_FastAPI

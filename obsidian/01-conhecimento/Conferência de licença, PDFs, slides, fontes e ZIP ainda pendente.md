@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - `references` [EXTRACTED]
-- [[R22 Reprodutibilidade Python sem lockfile (média)]] - `references` [EXTRACTED]
+- [[R22 Reprodutibilidade Python sem lockfile]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Riscos_e_pendências_de_entrega

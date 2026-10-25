@@ -72,16 +72,16 @@
     "semantic_hash": "1355d27bf0db4d5b684ac9208fce1a12"
   },
   "engine/README.md": {
-    "mtime": 1792631694.5765984,
-    "seen": 1792688150.1715782,
-    "ast_hash": "59e8ce2bb1188e155b06226f368066cc",
-    "semantic_hash": "59e8ce2bb1188e155b06226f368066cc"
+    "mtime": 1792709483.6857932,
+    "seen": 1792934962.1286154,
+    "ast_hash": "ac759b3c450ac32667484d5301ef272a",
+    "semantic_hash": "ac759b3c450ac32667484d5301ef272a"
   },
   "CLAUDE.md": {
-    "mtime": 1792686873.497447,
-    "seen": 1792690771.2509687,
-    "ast_hash": "781d55d08846ae35ca3a9aa88fc4cdb3",
-    "semantic_hash": "781d55d08846ae35ca3a9aa88fc4cdb3"
+    "mtime": 1792893309.5186417,
+    "seen": 1792934962.1286154,
+    "ast_hash": "d8abb9d53ff3de5f3f7e85231e57d1ce",
+    "semantic_hash": "d8abb9d53ff3de5f3f7e85231e57d1ce"
   },
   "docs/superpowers/plans/2026-10-21-kb-secao-2.md": {
     "mtime": 1792555078.5647488,
@@ -114,10 +114,10 @@
     "semantic_hash": "b1dd155151f4877010543d0b56422160"
   },
   "README.md": {
-    "mtime": 1792705665.4425569,
-    "seen": 1792706766.4864726,
-    "ast_hash": "122097e20b6e7a784cb616c76f460977",
-    "semantic_hash": "122097e20b6e7a784cb616c76f460977"
+    "mtime": 1792904222.7067661,
+    "seen": 1792934962.1286154,
+    "ast_hash": "0e79efe2bf4e630480291ade72e9ae60",
+    "semantic_hash": "0e79efe2bf4e630480291ade72e9ae60"
   },
   "base/desenvolvimento/LEIA-ME.txt": {
     "mtime": 1792664978.232654,
@@ -126,46 +126,46 @@
     "semantic_hash": "c4c7a0665980684f3228ca7c02be7de4"
   },
   "docs/entrega/01-processo.md": {
-    "mtime": 1792705684.0210435,
-    "seen": 1792706766.4864726,
-    "ast_hash": "c54856aa577d2ceb9d8a974c258a4ab8",
-    "semantic_hash": "c54856aa577d2ceb9d8a974c258a4ab8"
+    "mtime": 1792895572.6035757,
+    "seen": 1792934962.1286154,
+    "ast_hash": "94bd8bdbfc94591bd573ab917047e065",
+    "semantic_hash": "94bd8bdbfc94591bd573ab917047e065"
   },
   "docs/entrega/02-arquitetura.md": {
-    "mtime": 1792705696.6294477,
-    "seen": 1792706766.4864726,
-    "ast_hash": "7d418fa0a12e123b76334101948f6a85",
-    "semantic_hash": "7d418fa0a12e123b76334101948f6a85"
+    "mtime": 1792904222.9452908,
+    "seen": 1792934962.1286154,
+    "ast_hash": "42a58c320e956e0346c9930301288ec0",
+    "semantic_hash": "42a58c320e956e0346c9930301288ec0"
   },
   "docs/entrega/03-regras-de-producao.md": {
-    "mtime": 1792705244.1347167,
-    "seen": 1792706766.4864726,
-    "ast_hash": "9d4458a0cc8aa0c5c22c58a2ee1b4903",
-    "semantic_hash": "9d4458a0cc8aa0c5c22c58a2ee1b4903"
+    "mtime": 1792895515.4203057,
+    "seen": 1792934962.1286154,
+    "ast_hash": "9518289fdcff4d6c50f3a899d1ee3056",
+    "semantic_hash": "9518289fdcff4d6c50f3a899d1ee3056"
   },
   "docs/entrega/04-casos-de-teste.md": {
-    "mtime": 1792705244.1357255,
-    "seen": 1792706766.4864726,
-    "ast_hash": "2051522d98686be0df0144507da49551",
-    "semantic_hash": "2051522d98686be0df0144507da49551"
+    "mtime": 1792895515.4222932,
+    "seen": 1792934962.1286154,
+    "ast_hash": "59e3844e80de5d9d0d7430056ea10eb9",
+    "semantic_hash": "59e3844e80de5d9d0d7430056ea10eb9"
   },
   "docs/entrega/05-apresentacao-e-demo.md": {
-    "mtime": 1792705696.6294477,
-    "seen": 1792706766.4864726,
-    "ast_hash": "b79bf5021e031275d7a023d98a2d0948",
-    "semantic_hash": "b79bf5021e031275d7a023d98a2d0948"
+    "mtime": 1792895572.6086802,
+    "seen": 1792934962.1286154,
+    "ast_hash": "3207a7a76eb36108df706c19ba1283e9",
+    "semantic_hash": "3207a7a76eb36108df706c19ba1283e9"
   },
   "docs/entrega/06-riscos-e-pendencias.md": {
-    "mtime": 1792705696.630493,
-    "seen": 1792706766.4864726,
-    "ast_hash": "396a2a6d779f8153fa5706480b9acee6",
-    "semantic_hash": "396a2a6d779f8153fa5706480b9acee6"
+    "mtime": 1792893309.5166857,
+    "seen": 1792934962.1286154,
+    "ast_hash": "e49d139345bfe642d77dbed9b0148ce8",
+    "semantic_hash": "e49d139345bfe642d77dbed9b0148ce8"
   },
   "docs/entrega/README.md": {
-    "mtime": 1792705684.0210435,
-    "seen": 1792706766.4864726,
-    "ast_hash": "2ad50be21fbef56e36ec805307ba81ae",
-    "semantic_hash": "2ad50be21fbef56e36ec805307ba81ae"
+    "mtime": 1792904222.922255,
+    "seen": 1792934962.1286154,
+    "ast_hash": "decc618c6c83f1520e544331cb33af99",
+    "semantic_hash": "decc618c6c83f1520e544331cb33af99"
   },
   "docs/processo/A.md": {
     "mtime": 1792687103.508627,
@@ -198,22 +198,22 @@
     "semantic_hash": "bed0f13d16e78bb0f2e5b5a4e7b9d12c"
   },
   "base/ativa.json": {
-    "mtime": 1792705230.7094333,
-    "seen": 1792706766.4864726,
-    "ast_hash": "e75a428c37b8afa0dfa3530b63fd381a",
-    "semantic_hash": "e75a428c37b8afa0dfa3530b63fd381a"
+    "mtime": 1792895409.420345,
+    "seen": 1792934962.1286154,
+    "ast_hash": "037aa43ada50482b667008bfdf6a2727",
+    "semantic_hash": "037aa43ada50482b667008bfdf6a2727"
   },
   "base/casos/casos.json": {
-    "mtime": 1792648325.8879938,
-    "seen": 1792690771.2509687,
-    "ast_hash": "eb199cbe15b538e02e34a2f6fcf0b19f",
-    "semantic_hash": "eb199cbe15b538e02e34a2f6fcf0b19f"
+    "mtime": 1792895233.293567,
+    "seen": 1792934962.1286154,
+    "ast_hash": "1cd6ab94b47e4af2bf55b4a035d59751",
+    "semantic_hash": "1cd6ab94b47e4af2bf55b4a035d59751"
   },
   "base/desenvolvimento/anamnese-bovinos-v3.1.0-revisao1.json": {
-    "mtime": 1792705237.9084182,
-    "seen": 1792706766.4864726,
-    "ast_hash": "93883018cca92f91040e9541fb0114a3",
-    "semantic_hash": "93883018cca92f91040e9541fb0114a3"
+    "mtime": 1792895409.4587343,
+    "seen": 1792934962.1286154,
+    "ast_hash": "a95e6ba68c8e0be30b857f9c94ba8a32",
+    "semantic_hash": "a95e6ba68c8e0be30b857f9c94ba8a32"
   },
   "base/desenvolvimento/casos/alerta-decubito.json": {
     "mtime": 1792632303.3801956,
@@ -252,16 +252,16 @@
     "semantic_hash": "ec1de62e7e22ff5909eee2ecea7b6184"
   },
   "DESIGN.md": {
-    "mtime": 1792683451.8530903,
-    "seen": 1792688150.1715782,
-    "ast_hash": "eb4ea608d2864fcd42471c29f990be6b",
-    "semantic_hash": "eb4ea608d2864fcd42471c29f990be6b"
+    "mtime": 1792709483.6822677,
+    "seen": 1792934962.1286154,
+    "ast_hash": "96623ff14e49761d497c6e5dad9a0647",
+    "semantic_hash": "96623ff14e49761d497c6e5dad9a0647"
   },
   "PRODUCT.md": {
-    "mtime": 1792664978.2263157,
-    "seen": 1792688150.1715782,
-    "ast_hash": "9dd33b27c5979b17cd4c7352f4c816c6",
-    "semantic_hash": "9dd33b27c5979b17cd4c7352f4c816c6"
+    "mtime": 1792709483.6842668,
+    "seen": 1792934962.1286154,
+    "ast_hash": "db7f5d7f227a846349ef37720e1d65d3",
+    "semantic_hash": "db7f5d7f227a846349ef37720e1d65d3"
   },
   "AGENTS.md": {
     "mtime": 1792686874.4768703,
@@ -310,5 +310,17 @@
     "seen": 1792706766.4864726,
     "ast_hash": "65b6096f3ce2bf68a10c25b7923a0299",
     "semantic_hash": "65b6096f3ce2bf68a10c25b7923a0299"
+  },
+  "base/versoes/v0005.json": {
+    "mtime": 1792895396.4610007,
+    "seen": 1792934962.1286154,
+    "ast_hash": "f43a94088905961ce209848ea84438da",
+    "semantic_hash": "f43a94088905961ce209848ea84438da"
+  },
+  "docs/superpowers/plans/2026-10-24-tratamento-20-doencas-excludentes.md": {
+    "mtime": 1792881738.6167955,
+    "seen": 1792934962.1286154,
+    "ast_hash": "9f1058f0158ce3ba2e0447c21d5231b0",
+    "semantic_hash": "9f1058f0158ce3ba2e0447c21d5231b0"
   }
 }

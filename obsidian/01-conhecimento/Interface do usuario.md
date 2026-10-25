@@ -1,16 +1,18 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Aquisição de conhecimento"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Aquisição_de_conhecimento
+  - graphify/INFERRED
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Interface do usuario
 
 ## Connections
 - [[Componentes da arquitetura (Modelo Conceitual)]] - `references` [EXTRACTED]
+- [[Modulo de explicacao (por que  como)]] - `conceptually_related_to` [INFERRED]
+- [[Plataforma web]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento
+#graphify/concept #graphify/INFERRED #community/Desafio_entregas_e_avaliação

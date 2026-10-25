@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[A confirmar antes da apresentação]] - `references` [EXTRACTED]
-- [[Roteiro de apresentação e demonstração]] - `semantically_similar_to` [INFERRED]
 - [[Slide 13 Resultados verificados (055)]] - `references` [EXTRACTED]
 - [[Slide 15 Demonstração (400)]] - `references` [EXTRACTED]
 - [[Slide 1 Capa (020)]] - `references` [EXTRACTED]

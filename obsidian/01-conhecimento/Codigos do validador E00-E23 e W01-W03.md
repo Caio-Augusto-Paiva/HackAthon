@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[D4 EdicaoBase frouxa (erros de estrutura viram E00)]] - `references` [EXTRACTED]
-- [[Guardas de execucao (CF positivo para urgencia e bandeira)]] - `conceptually_related_to` [EXTRACTED]
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `conceptually_related_to` [INFERRED]
 - [[kbvalidador.py (validar, validar_dados, validar_edicao, Relatorio)]] - `implements` [EXTRACTED]
 

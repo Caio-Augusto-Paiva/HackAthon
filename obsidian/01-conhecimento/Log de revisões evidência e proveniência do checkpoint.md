@@ -1,12 +1,12 @@
 ---
 source_file: "docs/processo/revisoes-cruzadas.md"
 type: "document"
-community: "Base de desenvolvimento e sessões"
+community: "Base de desenvolvimento e sessões (2)"
 location: "L1-L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Base_de_desenvolvimento_e_sessões
+  - community/Base_de_desenvolvimento_e_sessões_2
 ---
 
 # Log de revisões: evidência e proveniência do checkpoint
@@ -20,4 +20,4 @@ tags:
 - [[Revisão da Seção 6 promessas e textos históricos corrigidos]] - `references` [EXTRACTED]
 - [[Revisões independentes exigem identidade e evidência; planejamento não comprova outra família]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões
+#graphify/document #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões_2

@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Estrutura de pastas"
+community: "Estrutura do repositório"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Estrutura_de_pastas
+  - community/Estrutura_do_repositório
 ---
 
 # Dados ficticios apenas
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Estrutura_de_pastas
+#graphify/concept #graphify/EXTRACTED #community/Estrutura_do_repositório

@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Papel B diário a preencher, sem interações ou resultados inventados]] - `references` [EXTRACTED]
-- [[Restauração direta por snapshot integral, sem repetir o diálogo]] - `semantically_similar_to` [INFERRED]
 - [[Sessões persistidas vinculadas à mesma versão da base]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

@@ -1,19 +1,19 @@
 ---
 source_file: "CLAUDE.md"
-type: "concept"
-community: "Estrutura de pastas"
+type: "code"
+community: "Estrutura do repositório"
 tags:
-  - graphify/concept
-  - graphify/EXTRACTED
-  - community/Estrutura_de_pastas
+  - graphify/code
+  - graphify/INFERRED
+  - community/Estrutura_do_repositório
 ---
 
-# api/: FastAPI + SQLite
+# api/ FastAPI + SQLite
 
 ## Connections
-- [[API README (api)]] - `conceptually_related_to` [INFERRED]
+- [[API FastAPI com SQLite]] - `semantically_similar_to` [INFERRED]
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
-- [[engine motor Python so com biblioteca padrao]] - `references` [EXTRACTED]
-- [[web React + TypeScript feito pelo Codex]] - `references` [EXTRACTED]
+- [[engine motor em Python so com biblioteca padrao]] - `calls` [INFERRED]
+- [[web React + TypeScript feito pelo Codex]] - `calls` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Estrutura_de_pastas
+#graphify/code #graphify/INFERRED #community/Estrutura_do_repositório

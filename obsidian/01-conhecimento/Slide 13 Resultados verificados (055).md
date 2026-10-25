@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/notas-do-apresentador.md"
 type: "document"
-community: "Demonstração principal local"
+community: "Roteiro de apresentação"
 location: "Tabela"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Demonstração_principal_local
+  - community/Roteiro_de_apresentação
 ---
 
 # Slide 13: Resultados verificados (0:55)
@@ -17,4 +17,4 @@ tags:
 - [[Slide 12 Processo com IA (050)]] - `references` [INFERRED]
 - [[Slide 14 Documentação (030)]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Demonstração_principal_local
+#graphify/document #graphify/EXTRACTED #community/Roteiro_de_apresentação

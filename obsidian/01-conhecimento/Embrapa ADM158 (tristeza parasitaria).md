@@ -1,13 +1,13 @@
 ---
 source_file: "docs/fontes/fontes.md"
 type: "document"
-community: "Embrapa tristeza parasitária"
+community: "Embrapa ADM158 (tristeza parasitaria)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Embrapa_tristeza_parasitária
+  - community/Embrapa_ADM158_tristeza_parasitaria
 ---
 
 # Embrapa ADM158 (tristeza parasitaria)
 
-#graphify/document #graphify/EXTRACTED #community/Embrapa_tristeza_parasitária
+#graphify/document #graphify/EXTRACTED #community/Embrapa_ADM158_tristeza_parasitaria

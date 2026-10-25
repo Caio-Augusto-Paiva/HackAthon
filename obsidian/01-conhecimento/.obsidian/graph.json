@@ -1,21 +1,21 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/Modos_e_exemplos_de_alerta",
+      "query": "tag:#community/Instru\u00e7\u00f5es_dos_agentes_e_graphify",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Parecer_e_urg\u00eancia_na_interface",
+      "query": "tag:#community/Documenta\u00e7\u00e3o_e_backend_FastAPI",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Documenta\u00e7\u00e3o_e_backend_FastAPI",
+      "query": "tag:#community/Plano_tratamento_e_exclus\u00f5es",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -29,161 +29,371 @@
       }
     },
     {
-      "query": "tag:#community/Identidade_visual_e_campos",
+      "query": "tag:#community/Regras_de_cetose_e_deslocamento",
       "color": {
         "a": 1,
         "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Desafio_entregas_e_avalia\u00e7\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Camada_2_regras_de_doen\u00e7a",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Regras_de_produ\u00e7\u00e3o_e_CF",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Base_de_desenvolvimento_e_sess\u00f5es",
+      "query": "tag:#community/Produto_e_decis\u00f5es_de_interface",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Agenda_e_propaga\u00e7\u00e3o_MYCIN",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Hipocalcemia_e_periparto",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/API_explica\u00e7\u00e3o_e_camada_web",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/N\u00facleo_inferir_e_analisar",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Casos_sint\u00e9ticos_de_bandeira_e_exclus\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Dura\u00e7\u00e3o_e_fechamento_da_se\u00e7\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Roteiro_de_reserva_por_CLI",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Riscos_e_pend\u00eancias_de_entrega",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Concorr\u00eancia_e_snapshot_de_sess\u00e3o",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Roteiro_de_apresenta\u00e7\u00e3o",
       "color": {
         "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Perguntas_da_banca_sobre_IA",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Bandeira_vermelha_e_desvios",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Cliente_tipado_e_tipografia",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Di\u00e1rio_de_bordo_22/10",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Motor_e_API_FastAPI",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Demo_cronometrada_e_avisos",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Servi\u00e7os_da_casca_fina",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Cliente_nunca_envia_CF",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Alerta_de_bandeira_e_SPA",
-      "color": {
-        "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Aquisi\u00e7\u00e3o_de_conhecimento",
+      "query": "tag:#community/Contratos_Python_e_restaura\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Di\u00e1rio_de_bordo_20-21/10",
+      "query": "tag:#community/Componentes_do_modelo_conceitual",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Perguntas_sobre_uso_offline",
+      "query": "tag:#community/Parecer_e_urg\u00eancia_na_interface",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Achados_de_base_inv\u00e1lida",
+      "query": "tag:#community/Parecer_e_urg\u00eancia_na_interface_2",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Barra_de_confian\u00e7a_e_Boi",
+      "query": "tag:#community/Fonte_inv\u00e1lida_e_Review_Focus",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Aloca\u00e7\u00e3o_de_agentes_de_IA",
+      "query": "tag:#community/API_da_sess\u00e3o_do_motor",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Combina\u00e7\u00e3o_MYCIN_e_blocos",
+      "query": "tag:#community/Regras_de_metrite_e_reten\u00e7\u00e3o",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Hipocalcemia_e_periparto",
+      "query": "tag:#community/Arruma\u00e7\u00e3o_e_r\u00f3tulos_do_grafo",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Base_v0005_e_valida\u00e7\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Regras_do_modo_bovino_urgente",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Documentos_de_entrega",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Decis\u00f5es_e_roteiro_da_apresenta\u00e7\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Linha_do_tempo_e_decis\u00f5es_do_processo",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Checklist_e_\u00edndice_de_entrega",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Alerta_de_bandeira_e_SPA",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Testes_e_evid\u00eancias",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Brucelose_PNCEBT_e_urg\u00eancias",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Perguntas_da_banca_sobre_IA",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Bandeira_vermelha_e_desvios",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Agentes_de_IA_e_passos_oficiais",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Regras_de_acidose_e_BVD",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Perguntas_prov\u00e1veis_da_banca",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Paleta_e_refer\u00eancia_Figma",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Servi\u00e7os_da_casca_fina",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Aloca\u00e7\u00e3o_de_agentes_de_IA",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Modos_e_exemplos_de_alerta",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Doen\u00e7as_e_acidose_ruminal",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Execu\u00e7\u00e3o_local_da_web",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Modos_e_exemplos_de_alerta_2",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Achados_de_base_inv\u00e1lida",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Barra_de_confian\u00e7a_e_Boi",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Modos_e_exemplos_de_alerta_3",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Componentes_visuais_acess\u00edveis",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Processo_e_propaga\u00e7\u00e3o_de_CF",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Di\u00e1logo_parada_e_bandeiras",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Demo_cronometrada_e_avisos",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Base_de_desenvolvimento_e_sess\u00f5es",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Regras_de_IBR_e_pneumonia",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -197,168 +407,168 @@
       }
     },
     {
-      "query": "tag:#community/AGENTSmd_e_Codex",
+      "query": "tag:#community/Cliente_tipado_e_tipografia",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Decis\u00f5es_de_sele\u00e7\u00e3o_de_perguntas",
+      "query": "tag:#community/API_p\u00fablica_da_base",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/TPB_e_derivado_febre",
+      "query": "tag:#community/Estrutura_do_reposit\u00f3rio",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Atualiza\u00e7\u00e3o_do_grafo",
+      "query": "tag:#community/Estilo_visual_claym\u00f3rfico",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Processo_de_desenvolvimento",
+      "query": "tag:#community/Aprendizados_das_revis\u00f5es",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Decis\u00f5es_de_reprocessamento",
+      "query": "tag:#community/Regras_de_aborto_e_leptospirose",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Cetose_e_deslocamento_de_abomaso",
+      "query": "tag:#community/Corre\u00e7\u00f5es_editoriais",
       "color": {
         "a": 1,
         "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Fonte_inv\u00e1lida_e_Review_Focus",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Doen\u00e7as_e_acidose_ruminal",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Regras_do_modo_bovino_urgente",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Demonstra\u00e7\u00e3o_principal_local",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Ambiente_venv_e_testes",
       "color": {
         "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Busca_direta_versus_grafo",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Decis\u00e3o_determin\u00edstica_audit\u00e1vel",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Fechamento_de_interface",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Decis\u00f5es_rejeitadas_e_passos",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Passo_a_passo_pedido",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Arruma\u00e7\u00e3o_e_r\u00f3tulos_do_grafo",
-      "color": {
-        "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/CLI_de_fonte_por_doen\u00e7a",
+      "query": "tag:#community/Base_de_desenvolvimento_e_sess\u00f5es_2",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Avalia\u00e7\u00e3o_da_organiza\u00e7\u00e3o",
+      "query": "tag:#community/Cliente_tipado_e_tipografia_2",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Dura\u00e7\u00e3o_e_fechamento_da_se\u00e7\u00e3o",
+      "query": "tag:#community/Demonstra\u00e7\u00e3o_do_motor",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Crit\u00e9rios_de_parada",
+      "query": "tag:#community/TPB_e_derivado_febre",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Exporta\u00e7\u00e3o_do_grafo_de_dados",
+      "query": "tag:#community/Layout_de_refer\u00eancia",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/API_p\u00fablica_da_base",
+      "query": "tag:#community/Ferramentas_de_IA_e_AGENTS",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Documenta\u00e7\u00e3o_e_backend_FastAPI_2",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Achados_do_carregador",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Achados_do_contrato_de_aresta",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Contrato_OpenAPI_e_exemplos",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Parecer_e_urg\u00eancia_na_interface_3",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Base_ausente_e_contrato",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Reticulopericardite_traum\u00e1tica",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Modos_e_exemplos_de_alerta_4",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Configura\u00e7\u00e3o_da_API",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Acessibilidade_e_Figma",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -372,182 +582,112 @@
       }
     },
     {
-      "query": "tag:#community/Camadas_de_infer\u00eancia",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Metrite_e_puerp\u00e9rio",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Dermatite_digital",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Mastite",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Ferramentas_de_IA_e_AGENTS",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Achados_do_carregador",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Achados_do_contrato_de_aresta",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Contrato_OpenAPI_e_exemplos",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Casos_cl\u00ednicos_e_fonte",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Base_ausente_e_contrato",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Aus\u00eancia_de_valida\u00e7\u00e3o_cl\u00ednica",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Configura\u00e7\u00e3o_da_API",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Acessibilidade_e_Figma",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Estrutura_de_pastas",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
       "query": "tag:#community/Caminho_do_ciclo",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/READMEs_e_caso_alerta",
       "color": {
         "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Fonte_do_grafo_2",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Casos_esperados_e_hackathon",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Acidose_ruminal_regras",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Achados_de_ativajson",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Valida\u00e7\u00e3o_de_Condicao",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/An\u00e1lise_e_carregador",
-      "color": {
-        "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Arquitetura_de_kb",
+      "query": "tag:#community/Entrada_num\u00e9rica_e_erros",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Falhas_de_API_na_interface",
+      "query": "tag:#community/Tipografia",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Derivado_max_negativo",
+      "query": "tag:#community/Achados_de_ativajson",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
+      "query": "tag:#community/Valida\u00e7\u00e3o_de_Condicao",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/An\u00e1lise_e_carregador",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Gerador_de_documentos_de_regras",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Concorr\u00eancia_e_snapshot_de_sess\u00e3o",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Derivado_max_negativo",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
       "query": "tag:#community/Erros_E02_e_E21",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Tema_T1_e_decis\u00e3o_expl\u00edcita",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Concorr\u00eancia_e_snapshot_de_sess\u00e3o_2",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Integrante_B",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Integrante_C",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Decis\u00e3o_determin\u00edstica_audit\u00e1vel",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -568,122 +708,199 @@
       }
     },
     {
-      "query": "tag:#community/Limiares_e_MYCIN",
+      "query": "tag:#community/Concorr\u00eancia_e_snapshot_de_sess\u00e3o_3",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Agentes_e_skills_por_prompt",
+      "query": "tag:#community/Limiares_e_MYCIN",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Skills_n\u00e3o_confirmadas",
+      "query": "tag:#community/md_em_docs/_CLAUDEmd_engine/READMEmd",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Embrapa_tristeza_parasit\u00e1ria",
+      "query": "tag:#community/Atualizacao_unica_ao_encerrar_bloco_documental",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Transcri\u00e7\u00e3o_RERUM_apresenta\u00e7\u00e3o",
+      "query": "tag:#community/Commit_separado_do_grafo",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Regulamento_e_cronograma",
+      "query": "tag:#community/Codigo_testes_web_docs/prompts_e_docs/rascunh",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Transcri\u00e7\u00e3o_do_document\u00e1rio",
+      "query": "tag:#community/Agentes_e_skills_por_prompt_decisao_de_20/10/20",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Adapta\u00e7\u00f5es_da_API",
+      "query": "tag:#community/Skills_nao_confirmadas_FastAPI_pytest_React_F",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Bandeiras_n\u00e3o_verificadas",
+      "query": "tag:#community/Decisao_CF_exibido_como_confianca_nao_probabil",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Prioridade_padr\u00e3o_por_classe",
+      "query": "tag:#community/Embrapa_ADM158_tristeza_parasitaria",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Executor_de_casos_incompleto",
+      "query": "tag:#community/Transcricao_da_apresentacao_RERUM_A",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Autoriza\u00e7\u00e3o_expl\u00edcita",
+      "query": "tag:#community/Dicas_do_hackathon_slide_13",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Doen\u00e7as_confirmadas",
+      "query": "tag:#community/Entrega_demonstracao_e_localhost_slides_10_e_1",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Resposta_n\u00e3o_sei",
+      "query": "tag:#community/Modelo_conceitual_de_sistema_especialista_slide",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Potencial_por_regra",
+      "query": "tag:#community/Diretrizes_passo_a_passo_slide_12",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Fraction_e_potencial",
+      "query": "tag:#community/Regulamento_pontuacao_e_cronograma_slide_3",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Sess\u00e3o_e_triagem",
+      "query": "tag:#community/Transcricao_do_documentario_RERUM_D",
       "color": {
         "a": 1,
         "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Adaptacoes_que_a_API_precisa_fazer_sobre_o_motor",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/bandeiras_nao_verificadas_restrito_a_regras_viav",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Prioridade_padrao_por_classe_100/50/10_e_demai",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Cortes_de_bloco_nao_lidos_de_metalimiares",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Executor_de_casos_incompleto_inconclusivas_e_pa",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Restauracao_da_sessao_a_partir_do_banco_ausente",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Autorizacao_explicita_supera_a_fase_de_planejame",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Doencas_confirmadas_nao_bloqueiam_umas_as_outras",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/nao_sei_e_registrado_e_nao_e_repetido_automatica",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Potencial_usa_cada_regra_uma_unica_vez",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Cinco_tarefas_TDD_do_motor_vermelho_antes_do_ve",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
       }
     }
   ]

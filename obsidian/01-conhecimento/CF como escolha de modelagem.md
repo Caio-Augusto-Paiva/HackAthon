@@ -1,9 +1,9 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
-type: "rationale"
+type: "concept"
 community: "Regras de produção e CF"
 tags:
-  - graphify/rationale
+  - graphify/concept
   - graphify/EXTRACTED
   - community/Regras_de_produção_e_CF
 ---
@@ -11,7 +11,6 @@ tags:
 # CF como escolha de modelagem
 
 ## Connections
-- [[MSD Veterinary Manual (referência clínica contextual)]] - `rationale_for` [EXTRACTED]
 - [[Regras de produção — documentação gerada]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Regras_de_produção_e_CF
+#graphify/concept #graphify/EXTRACTED #community/Regras_de_produção_e_CF

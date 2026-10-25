@@ -1,20 +1,19 @@
 ---
-source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
+source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "code"
-community: "Exportação do grafo de dados"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exportação_do_grafo_de_dados
+  - community/Cliente_nunca_envia_CF
 ---
 
 # carregar_do_grafo(caminho) -> Base
 
 ## Connections
-- [[Grafo bipartido símbolo-regra (conversão 11)]] - `references` [INFERRED]
-- [[Task 2 grafo exato e extração (kbexportar_grafo.py)]] - `implements` [EXTRACTED]
 - [[carregar_do_grafo(caminho) - Base_1]] - `implements` [INFERRED]
-- [[test_carregar_do_grafo_igual_v0002]] - `references` [EXTRACTED]
-- [[test_casos_iguais_lendo_do_grafo (34 casos)]] - `references` [EXTRACTED]
+- [[grafo_exato.json = base_para_grafo(base)]] - `references` [EXTRACTED]
+- [[kbexportar_grafo.py — grafo exato e entrada do graphify]] - `references` [EXTRACTED]
+- [[testskbtest_exportar_grafo.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exportação_do_grafo_de_dados
+#graphify/code #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "code"
-community: "Falhas de API na interface"
+community: "Alerta de bandeira e SPA"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Falhas_de_API_na_interface
+  - community/Alerta_de_bandeira_e_SPA
 ---
 
 # iniciarVerificacao(modo): POST /api/animais e /api/sessoes
@@ -14,4 +14,4 @@ tags:
 - [[Início cria animal anônimo ANON-… e sessão no modo escolhido]] - `implements` [EXTRACTED]
 - [[Task 3 Página Início () criar sessão]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Falhas_de_API_na_interface
+#graphify/code #graphify/EXTRACTED #community/Alerta_de_bandeira_e_SPA

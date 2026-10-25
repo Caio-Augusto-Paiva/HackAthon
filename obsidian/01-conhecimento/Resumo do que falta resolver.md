@@ -1,17 +1,19 @@
 ---
 source_file: "docs/entrega/06-riscos-e-pendencias.md"
-type: "document"
-community: "Perguntas sobre uso offline"
-location: "Resumo"
+type: "concept"
+community: "Duração e fechamento da seção"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Perguntas_sobre_uso_offline
+  - community/Duração_e_fechamento_da_seção
 ---
 
 # Resumo do que falta resolver
 
 ## Connections
+- [[R01 Conhecimento clinico e CF sem validacao especializada]] - `references` [EXTRACTED]
+- [[R07 Codigo entregue sem licenca declarada]] - `references` [EXTRACTED]
+- [[R15 Selecao e coleta de sinais com evidencia inicial fraca]] - `references` [EXTRACTED]
 - [[Riscos, lacunas e fechamento da entrega]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Perguntas_sobre_uso_offline
+#graphify/concept #graphify/EXTRACTED #community/Duração_e_fechamento_da_seção

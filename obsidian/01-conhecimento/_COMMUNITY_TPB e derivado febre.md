@@ -1,30 +1,25 @@
 ---
 type: community
-cohesion: 0.16
-members: 15
+cohesion: 0.22
+members: 10
 ---
 
 # TPB e derivado febre
 
-**Cohesion:** 0.16 - loosely connected
-**Members:** 15 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 10 nodes
 
 ## Members
-- [[Derivado febre]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-BV-05 úbere inflamado + febre + apatia → chamar_agora]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-DER-04 temp≥39,5 → febre]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-DER-07 extremidades quentes → febre]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-DER-08 temp39,5 → contra febre]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-DER-09 temp≥38 → contra hipotermia]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-DER-10 extremidades normais → contra febre]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-HIP-04 febre → contra hipocalcemia]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-TPB-01 febre + urina escura → tpb]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-TPB-02 mucosas pálidasictéricas → tpb]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-TPB-03 carrapatos + febre → tpb]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-TPB-04 hemoparasitas no esfregaço → tpb]] - concept - docs/entrega/03-regras-de-producao.md
-- [[R-URG-02 tpb CF≥0,5 → chamar_agora]] - concept - docs/entrega/03-regras-de-producao.md
-- [[Regras de evidência contrária (CF negativo)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[Exposição recente a carrapatos (carrapatos_historico_recente)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[Hemoparasitas no esfregaço (esfregaco_hemoparasitas)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[Mucosas pálidas ou amareladas (mucosas_palidas_ou_ictericas)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[Seção Tristeza Parasitária Bovina (gravidade alta)]] - concept - docs/entrega/03-regras-de-producao.md
 - [[Tristeza Parasitária Bovina (tpb)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[`R-LEP-05` esfregaco_hemoparasitas = sim - leptospirose (CF -0,5)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[`R-TPB-02` mucosas_palidas_ou_ictericas = sim - tpb (CF 0,6)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[`R-TPB-03` carrapatos_historico_recente = sim E febre = sim - tpb (CF 0,35)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[`R-TPB-04` esfregaco_hemoparasitas = sim - tpb (CF 0,9)]] - concept - docs/entrega/03-regras-de-producao.md
+- [[`R-URG-02` tpb = sim CF ≥ 0,5 - chamar_agora (CF 0,99)]] - concept - docs/entrega/03-regras-de-producao.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,14 +29,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Regras do modo bovino urgente]]
+- 5 edges to [[_COMMUNITY_Regras de produção e CF]]
+- 4 edges to [[_COMMUNITY_Camada 2 regras de doença]]
+- 4 edges to [[_COMMUNITY_Regras de cetose e deslocamento]]
 - 2 edges to [[_COMMUNITY_Hipocalcemia e periparto]]
-- 1 edge to [[_COMMUNITY_Metrite e puerpério]]
-- 1 edge to [[_COMMUNITY_Mastite]]
+- 1 edge to [[_COMMUNITY_Regras de aborto e leptospirose]]
+- 1 edge to [[_COMMUNITY_Regras do modo bovino urgente]]
+- 1 edge to [[_COMMUNITY_Brucelose, PNCEBT e urgências]]
 
 ## Top bridge nodes
-- [[Derivado febre]] - degree 10, connects to 2 communities
-- [[Tristeza Parasitária Bovina (tpb)]] - degree 6, connects to 1 community
-- [[R-HIP-04 febre → contra hipocalcemia]] - degree 3, connects to 1 community
-- [[R-BV-05 úbere inflamado + febre + apatia → chamar_agora]] - degree 2, connects to 1 community
-- [[R-DER-09 temp≥38 → contra hipotermia]] - degree 2, connects to 1 community
+- [[Tristeza Parasitária Bovina (tpb)]] - degree 9, connects to 3 communities
+- [[`R-LEP-05` esfregaco_hemoparasitas = sim - leptospirose (CF -0,5)]] - degree 4, connects to 2 communities
+- [[`R-TPB-03` carrapatos_historico_recente = sim E febre = sim - tpb (CF 0,35)]] - degree 4, connects to 2 communities
+- [[Hemoparasitas no esfregaço (esfregaco_hemoparasitas)]] - degree 4, connects to 2 communities
+- [[`R-URG-02` tpb = sim CF ≥ 0,5 - chamar_agora (CF 0,99)]] - degree 3, connects to 2 communities

@@ -1,24 +1,22 @@
 ---
 type: community
-cohesion: 0.33
-members: 9
+cohesion: 0.43
+members: 7
 ---
 
 # Fonte separada por doença
 
-**Cohesion:** 0.33 - loosely connected
-**Members:** 9 nodes
+**Cohesion:** 0.43 - moderately connected
+**Members:** 7 nodes
 
 ## Members
-- [[2210 Fonte separada por doença e grafo 2 (b08bb63..9a13eaa)]] - concept - docs/entrega/01-processo.md
-- [[Grafo 2 do Obsidian (112 nós, 149 arestas, 9 comunidades, custo zero)]] - concept - docs/entrega/02-arquitetura.md
-- [[Grafo 2 dados de treino por doença]] - concept - README.md
-- [[Motor não lê graph.json do graphify]] - rationale - docs/entrega/02-arquitetura.md
-- [[Repositorio.salvar_nova (nova versão com pai)]] - code - docs/entrega/02-arquitetura.md
-- [[Seção Base por doença e grafo 2]] - document - docs/entrega/02-arquitetura.md
-- [[basefontecomum.json e doencasdoença.json]] - concept - docs/entrega/02-arquitetura.md
-- [[kbexportar_grafo.py e grafo exato]] - code - docs/entrega/02-arquitetura.md
-- [[python -m kb.fonte juntar (--salvar)]] - code - docs/entrega/02-arquitetura.md
+- [[Base por doenca e grafo 2]] - concept - docs/entrega/02-arquitetura.md
+- [[Grafo 2 Obsidian (240 nos, 351 arestas, 21 comunidades, custo zero)]] - concept - docs/entrega/02-arquitetura.md
+- [[Graphify e exportacao Obsidian (ferramentas auxiliares)]] - concept - docs/entrega/02-arquitetura.md
+- [[Motor nao le graph.json do graphify (extracao IA nao deterministica)]] - concept - docs/entrega/02-arquitetura.md
+- [[carregar_do_grafo devolve a mesma base]] - concept - docs/entrega/02-arquitetura.md
+- [[kbexportar_grafo.py e kbgrafo.py (grafo exato)]] - concept - docs/entrega/02-arquitetura.md
+- [[scriptsgrafo_dados.py (sem IA)]] - concept - docs/entrega/02-arquitetura.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,13 +26,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Diário de bordo 20-2110]]
-- 2 edges to [[_COMMUNITY_Processo de desenvolvimento]]
-- 1 edge to [[_COMMUNITY_Exigências oficiais da entrega]]
-- 1 edge to [[_COMMUNITY_Decisões de seleção de perguntas]]
+- 2 edges to [[_COMMUNITY_Componentes do modelo conceitual]]
+- 2 edges to [[_COMMUNITY_Base v0005 e validação]]
 
 ## Top bridge nodes
-- [[Repositorio.salvar_nova (nova versão com pai)]] - degree 3, connects to 2 communities
-- [[Grafo 2 dados de treino por doença]] - degree 3, connects to 2 communities
-- [[Seção Base por doença e grafo 2]] - degree 7, connects to 1 community
-- [[2210 Fonte separada por doença e grafo 2 (b08bb63..9a13eaa)]] - degree 3, connects to 1 community
+- [[Base por doenca e grafo 2]] - degree 8, connects to 2 communities
+- [[Graphify e exportacao Obsidian (ferramentas auxiliares)]] - degree 3, connects to 1 community

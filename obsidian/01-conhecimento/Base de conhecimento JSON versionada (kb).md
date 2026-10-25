@@ -1,12 +1,12 @@
 ---
 source_file: "docs/superpowers/specs/2026-10-20-anamnese-bovinos-design.md"
 type: "concept"
-community: "Parecer e urgência na interface"
+community: "Parecer e urgência na interface (2)"
 location: "Seção 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_e_urgência_na_interface
+  - community/Parecer_e_urgência_na_interface_2
 ---
 
 # Base de conhecimento JSON versionada (kb/)
@@ -24,4 +24,4 @@ tags:
 - [[kbfonte.py — separar e juntar]] - `references` [INFERRED]
 - [[ler_fonte(pasta) - Base]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface
+#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface_2

@@ -1,24 +1,18 @@
 ---
-source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
+source_file: "docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md"
 type: "code"
-community: "Fonte inválida e Review Focus"
+community: "Cliente nunca envia CF"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fonte_inválida_e_Review_Focus
+  - community/Cliente_nunca_envia_CF
 ---
 
 # tests/kb/test_fonte.py
 
 ## Connections
-- [[Task 1 separar e juntar (kbfonte.py)]] - `references` [EXTRACTED]
-- [[test_doenca_sem_simbolo]] - `references` [EXTRACTED]
-- [[test_id_duplicado_entre_arquivos]] - `references` [EXTRACTED]
-- [[test_ida_e_volta_identica]] - `references` [EXTRACTED]
-- [[test_ids_unicos_entre_arquivos]] - `references` [EXTRACTED]
-- [[test_json_invalido]] - `references` [EXTRACTED]
-- [[test_oito_doencas_com_suas_regras]] - `references` [EXTRACTED]
-- [[test_regra_nova_entra_e_valida (R-MAS-99)]] - `references` [EXTRACTED]
+- [[Invariante juntar(separar(v0002)) == v0002]] - `references` [EXTRACTED]
+- [[Testes da spec]] - `references` [EXTRACTED]
 - [[testskbtest_fonte.py_1]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Fonte_inválida_e_Review_Focus
+#graphify/code #graphify/EXTRACTED #community/Cliente_nunca_envia_CF

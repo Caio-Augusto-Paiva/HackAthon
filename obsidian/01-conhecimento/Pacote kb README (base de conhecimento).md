@@ -14,7 +14,6 @@ tags:
 - [[Backend FastAPI + SQLite (casca fina sobre motor e kb)]] - `references` [EXTRACTED]
 - [[Dados ficticios e regras como suposicao a validar]] - `references` [EXTRACTED]
 - [[kb como pacote folha (nao importa engine)]] - `references` [EXTRACTED]
-- [[kb validacao e versoes da base]] - `conceptually_related_to` [INFERRED]
 - [[kbanalise.py (dependencias, ciclo, ordem topologica)]] - `references` [EXTRACTED]
 - [[kbcarregador.py Repositorio (versoes imutaveis, ativa.json, hash sha256)]] - `references` [EXTRACTED]
 - [[kbgrafo.py (conversao 11 Base - grafo bipartido)]] - `references` [EXTRACTED]

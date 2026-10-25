@@ -1,0 +1,17 @@
+---
+source_file: "docs/entrega/06-riscos-e-pendencias.md"
+type: "document"
+community: "Duração e fechamento da seção"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Duração_e_fechamento_da_seção
+---
+
+# Revisao formal 2026-10-22-revisao-secao-6.md
+
+## Connections
+- [[Fechamento da Secao 6 22102026]] - `references` [EXTRACTED]
+- [[Riscos, lacunas e fechamento da entrega]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Duração_e_fechamento_da_seção

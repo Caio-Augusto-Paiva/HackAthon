@@ -1,19 +1,20 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "AGENTS.md e Codex"
+community: "Instruções dos agentes e graphify"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/AGENTSmd_e_Codex
+  - community/Instruções_dos_agentes_e_graphify
 ---
 
 # Regras de conduta
 
 ## Connections
-- [[CLAUDE.md instrucoes do PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
-- [[Conhecimento veterinario sempre suposicao a validar, citando fonte]] - `references` [EXTRACTED]
-- [[Nao inventar requisitos dos organizadores; marcar (suposicao)]] - `references` [EXTRACTED]
+- [[CLAUDE.md instrucoes do projeto]] - `references` [EXTRACTED]
+- [[Conhecimento veterinario e suposicao a validar com fonte citada]] - `references` [EXTRACTED]
+- [[Marcador (suposicao)]] - `references` [EXTRACTED]
+- [[Nao inventar requisitos dos organizadores]] - `references` [EXTRACTED]
 - [[Respeitar restricoes obrigatorias e declarar conflitos]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/AGENTSmd_e_Codex
+#graphify/concept #graphify/EXTRACTED #community/Instruções_dos_agentes_e_graphify

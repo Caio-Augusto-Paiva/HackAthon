@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Atualização do grafo"
+community: "Instruções dos agentes e graphify"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Atualização_do_grafo
+  - community/Instruções_dos_agentes_e_graphify
 ---
 
 # Commit separado chore(grafo): atualiza grafo
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Atualizar o grafo uma vez por bloco de trabalho]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Atualização_do_grafo
+#graphify/concept #graphify/EXTRACTED #community/Instruções_dos_agentes_e_graphify

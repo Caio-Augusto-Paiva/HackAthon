@@ -1,17 +1,17 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Atualização do grafo"
+community: "Instruções dos agentes e graphify"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Atualização_do_grafo
+  - community/Instruções_dos_agentes_e_graphify
 ---
 
-# docs/prompts e docs/rascunhos: historico fora do grafo
+# docs/prompts e docs/rascunhos historico fora do grafo
 
 ## Connections
-- [[Grafo de conhecimento ferramenta de busca sob demanda]] - `references` [EXTRACTED]
-- [[Mudancas so em codigo, testes, web, prompts e rascunhos nao pedem atualizacao]] - `references` [EXTRACTED]
+- [[Quando nao usar o grafo (arquivo dado, info na conversa, codigo e testes)]] - `references` [EXTRACTED]
+- [[Spec canonica 2026-10-20-anamnese-bovinos-design]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Atualização_do_grafo
+#graphify/concept #graphify/EXTRACTED #community/Instruções_dos_agentes_e_graphify

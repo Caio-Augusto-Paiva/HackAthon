@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/01-processo.md"
-type: "rationale"
-community: "Diário de bordo 20-21/10"
-location: "Linha do tempo"
+type: "concept"
+community: "Processo e propagação de CF"
 tags:
-  - graphify/rationale
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Diário_de_bordo_20-21/10
+  - community/Processo_e_propagação_de_CF
 ---
 
 # Cronograma original é previsão, não registro
 
 ## Connections
-- [[Seção Linha do tempo comprovável]] - `references` [EXTRACTED]
+- [[Pendentes editor gráfico, material visual, licença, ensaio humano]] - `references` [EXTRACTED]
+- [[Processo de desenvolvimento (consolidado 2210)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Diário_de_bordo_20-21/10
+#graphify/concept #graphify/EXTRACTED #community/Processo_e_propagação_de_CF

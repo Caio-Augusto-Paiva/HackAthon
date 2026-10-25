@@ -1,17 +1,16 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Avaliação da organização"
+community: "Estrutura do repositório"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Avaliação_da_organização
+  - community/Estrutura_do_repositório
 ---
 
-# docs/entrega: documentacao de entrega
+# docs/entrega documentacao de entrega
 
 ## Connections
-- [[Documentacao obrigatoria processo, arquitetura tecnologica, regras de producao]] - `implements` [EXTRACTED]
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Avaliação_da_organização
+#graphify/concept #graphify/EXTRACTED #community/Estrutura_do_repositório

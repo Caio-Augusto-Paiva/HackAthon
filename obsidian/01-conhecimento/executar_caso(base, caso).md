@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
-type: "code"
-community: "Diário de bordo 20-21/10"
-location: "Contratos Python"
+type: "concept"
+community: "Testes e evidências"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Diário_de_bordo_20-21/10
+  - community/Testes_e_evidências
 ---
 
 # executar_caso(base, caso)
 
 ## Connections
-- [[34 casos modos, 8 doenças, 6 bandeiras, comorbidade, limite, troca de modo]] - `calls` [INFERRED]
-- [[Seção Contratos Python disponíveis]] - `references` [EXTRACTED]
+- [[34 casos em basecasoscasos.json]] - `references` [INFERRED]
+- [[Contratos Python disponiveis]] - `references` [EXTRACTED]
+- [[executar_caso(base, caso) em engine.casos]] - `semantically_similar_to` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Diário_de_bordo_20-21/10
+#graphify/concept #graphify/EXTRACTED #community/Testes_e_evidências

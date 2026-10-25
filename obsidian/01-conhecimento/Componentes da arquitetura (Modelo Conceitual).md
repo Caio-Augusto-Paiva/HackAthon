@@ -1,24 +1,24 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Aquisição de conhecimento"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Aquisição_de_conhecimento
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Componentes da arquitetura (Modelo Conceitual)
 
 ## Connections
-- [[Aquisicao de conhecimento por especialista e engenheiro]] - `references` [EXTRACTED]
-- [[Arquitetura comum aos tres temas base + motor + aplicacao]] - `references` [EXTRACTED]
-- [[Base de conhecimento regras de producao, variaveis, pesos CF, versionada]] - `references` [EXTRACTED]
-- [[CLAUDE.md instrucoes do PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
-- [[Fontes de dados externas prontuario, sensores, APIs]] - `references` [EXTRACTED]
+- [[Aquisicao de conhecimento]] - `references` [EXTRACTED]
+- [[Arquitetura comum aos tres temas]] - `conceptually_related_to` [EXTRACTED]
+- [[Base de conhecimento]] - `references` [EXTRACTED]
+- [[Fontes de dados externas]] - `references` [EXTRACTED]
 - [[Interface do usuario]] - `references` [EXTRACTED]
-- [[Memoria de trabalho respostas e conclusoes da sessao]] - `references` [EXTRACTED]
-- [[Modulo de explicacao por que e como]] - `references` [EXTRACTED]
-- [[Motor de inferencia casa regras, resolve conflito, dispara]] - `references` [EXTRACTED]
+- [[Memoria de trabalho]] - `references` [EXTRACTED]
+- [[Modulo de explicacao (por que  como)]] - `references` [EXTRACTED]
+- [[Motor de inferencia]] - `references` [EXTRACTED]
+- [[O desafio]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento
+#graphify/concept #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação

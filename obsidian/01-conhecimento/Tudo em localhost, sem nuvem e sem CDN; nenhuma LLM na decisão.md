@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Parecer e urgência na interface"
+community: "Cliente tipado e tipografia (2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Parecer_e_urgência_na_interface
+  - community/Cliente_tipado_e_tipografia_2
 ---
 
 # Tudo em localhost, sem nuvem e sem CDN; nenhuma LLM na decisão
@@ -14,4 +14,4 @@ tags:
 - [[Execução em localhost e offline (rodar.ps1)]] - `implements` [INFERRED]
 - [[Global Constraints do frontend]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Parecer_e_urgência_na_interface
+#graphify/concept #graphify/EXTRACTED #community/Cliente_tipado_e_tipografia_2

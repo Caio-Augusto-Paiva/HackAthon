@@ -1,19 +1,17 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Casos esperados e hackathon"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Casos_esperados_e_hackathon
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Casos de teste com resultado esperado por versao da base
 
 ## Connections
-- [[Base de conhecimento regras de producao, variaveis, pesos CF, versionada]] - `references` [EXTRACTED]
-- [[CLAUDE.md instrucoes do PoC Anamnese de Bovinos Leiteiros]] - `references` [EXTRACTED]
-- [[Cinco tarefas TDD do motor (vermelho antes do verde)]] - `semantically_similar_to` [INFERRED]
-- [[Dicas do hackathon (slide 13)]] - `references` [EXTRACTED]
+- [[Base de conhecimento]] - `conceptually_related_to` [EXTRACTED]
+- [[O desafio]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Casos_esperados_e_hackathon
+#graphify/concept #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação

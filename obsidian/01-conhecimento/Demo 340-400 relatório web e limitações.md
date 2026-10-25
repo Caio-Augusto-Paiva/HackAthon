@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
-type: "document"
-community: "Demo cronometrada e avisos"
-location: "Demonstração principal"
+type: "concept"
+community: "Roteiro de reserva por CLI"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Demo_cronometrada_e_avisos
+  - community/Roteiro_de_reserva_por_CLI
 ---
 
 # Demo 3:40-4:00: relatório web e limitações
 
 ## Connections
-- [[Demo 310-340 caso C-HIP-01 e alerta chamar_agora]] - `references` [EXTRACTED]
+- [[Demo 310-340 caso C-HIP-01, pausa e urgência chamar_agora]] - `conceptually_related_to` [INFERRED]
+- [[Demonstração principal em localhost (4 min)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Demo_cronometrada_e_avisos
+#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_reserva_por_CLI

@@ -1,18 +1,18 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Fonte do grafo 2"
+community: "Estrutura do repositório"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Fonte_do_grafo_2
+  - graphify/INFERRED
+  - community/Estrutura_do_repositório
 ---
 
-# base/: versoes imutaveis, ativa em base/ativa.json
+# base/ versoes imutaveis, ativa em base/ativa.json
 
 ## Connections
-- [[Base de conhecimento regras de producao, variaveis, pesos CF, versionada]] - `implements` [EXTRACTED]
+- [[Base ativa v0005 (20 doencas, 137 regras)]] - `conceptually_related_to` [INFERRED]
 - [[Estado atual fase de implementacao e entrega]] - `references` [EXTRACTED]
-- [[obsidian02-Dados de Treino grafo 2 dos dados das 8 doencas sem IA]] - `references` [EXTRACTED]
+- [[kb validacao e versoes da base]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fonte_do_grafo_2
+#graphify/concept #graphify/INFERRED #community/Estrutura_do_repositório

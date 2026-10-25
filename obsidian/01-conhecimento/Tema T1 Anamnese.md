@@ -1,17 +1,19 @@
 ---
-source_file: "docs/entrega/01-processo.md"
+source_file: "CLAUDE.md"
 type: "concept"
-community: "Ausência de validação clínica"
-location: "Problema e método"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ausência_de_validação_clínica
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Tema T1 Anamnese
 
 ## Connections
-- [[Seção Problema e método]] - `references` [EXTRACTED]
+- [[Arquitetura comum aos tres temas]] - `conceptually_related_to` [EXTRACTED]
+- [[Entrega índice para a equipe e a banca]] - `references` [EXTRACTED]
+- [[O desafio]] - `references` [EXTRACTED]
+- [[Transcrições oficiais da apresentação e do documentário]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ausência_de_validação_clínica
+#graphify/concept #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação

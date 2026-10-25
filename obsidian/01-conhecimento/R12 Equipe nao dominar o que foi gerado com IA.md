@@ -1,0 +1,19 @@
+---
+source_file: "docs/entrega/06-riscos-e-pendencias.md"
+type: "concept"
+community: "Perguntas da banca sobre IA"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Perguntas_da_banca_sobre_IA
+---
+
+# R12 Equipe nao dominar o que foi gerado com IA
+
+## Connections
+- [[Checklist   completar diarios pessoais e prova de entendimento]] - `conceptually_related_to` [INFERRED]
+- [[Perguntas de encerramento (revisao clinica, acoes, entendimento, maquina reserva)]] - `references` [EXTRACTED]
+- [[Registro de riscos R01-R14 (tabela)]] - `references` [EXTRACTED]
+- [[Riscos, lacunas e fechamento da entrega]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Perguntas_da_banca_sobre_IA

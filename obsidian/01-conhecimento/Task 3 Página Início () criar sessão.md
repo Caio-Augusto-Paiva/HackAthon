@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Falhas de API na interface"
+community: "Alerta de bandeira e SPA"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Falhas_de_API_na_interface
+  - community/Alerta_de_bandeira_e_SPA
 ---
 
 # Task 3: Página Início (/) criar sessão
@@ -17,4 +17,4 @@ tags:
 - [[Self-review requisito → tarefa]] - `references` [EXTRACTED]
 - [[iniciarVerificacao(modo) POST apianimais e apisessoes]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Falhas_de_API_na_interface
+#graphify/concept #graphify/EXTRACTED #community/Alerta_de_bandeira_e_SPA

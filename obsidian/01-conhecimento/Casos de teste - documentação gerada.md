@@ -1,0 +1,83 @@
+---
+source_file: "docs/entrega/04-casos-de-teste.md"
+type: "document"
+community: "Modos e exemplos de alerta"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Modos_e_exemplos_de_alerta
+---
+
+# Casos de teste - documentação gerada
+
+## Connections
+- [[Base de regras v0005]] - `references` [EXTRACTED]
+- [[C-ACI-01]] - `references` [EXTRACTED]
+- [[C-ACI-02]] - `references` [EXTRACTED]
+- [[C-ACI-03]] - `references` [EXTRACTED]
+- [[C-BV-01]] - `references` [EXTRACTED]
+- [[C-BV-02]] - `references` [EXTRACTED]
+- [[C-BV-03]] - `references` [EXTRACTED]
+- [[C-CET-01]] - `references` [EXTRACTED]
+- [[C-CET-02]] - `references` [EXTRACTED]
+- [[C-CET-03]] - `references` [EXTRACTED]
+- [[C-COM-01]] - `references` [EXTRACTED]
+- [[C-DAB-01]] - `references` [EXTRACTED]
+- [[C-DAB-02]] - `references` [EXTRACTED]
+- [[C-DAB-03]] - `references` [EXTRACTED]
+- [[C-DAB-DIALOGO]] - `references` [EXTRACTED]
+- [[C-DD-01]] - `references` [EXTRACTED]
+- [[C-DD-02]] - `references` [EXTRACTED]
+- [[C-DD-03]] - `references` [EXTRACTED]
+- [[C-EXC-DAB]] - `references` [EXTRACTED]
+- [[C-EXC-TIM]] - `references` [EXTRACTED]
+- [[C-HIP-01]] - `references` [EXTRACTED]
+- [[C-HIP-02]] - `references` [EXTRACTED]
+- [[C-HIP-03]] - `references` [EXTRACTED]
+- [[C-LIM-01]] - `references` [EXTRACTED]
+- [[C-MAS-01]] - `references` [EXTRACTED]
+- [[C-MAS-02]] - `references` [EXTRACTED]
+- [[C-MAS-03]] - `references` [EXTRACTED]
+- [[C-MET-01]] - `references` [EXTRACTED]
+- [[C-MET-02]] - `references` [EXTRACTED]
+- [[C-MET-03]] - `references` [EXTRACTED]
+- [[C-MODO-01]] - `references` [EXTRACTED]
+- [[C-N-BRU-01]] - `references` [EXTRACTED]
+- [[C-N-BRU-02]] - `references` [EXTRACTED]
+- [[C-N-BVD-01]] - `references` [EXTRACTED]
+- [[C-N-BVD-02]] - `references` [EXTRACTED]
+- [[C-N-DAD-01]] - `references` [EXTRACTED]
+- [[C-N-DAD-02]] - `references` [EXTRACTED]
+- [[C-N-HMG-01]] - `references` [EXTRACTED]
+- [[C-N-HMG-02]] - `references` [EXTRACTED]
+- [[C-N-IBR-01]] - `references` [EXTRACTED]
+- [[C-N-IBR-02]] - `references` [EXTRACTED]
+- [[C-N-LEP-01]] - `references` [EXTRACTED]
+- [[C-N-LEP-02]] - `references` [EXTRACTED]
+- [[C-N-PNE-01]] - `references` [EXTRACTED]
+- [[C-N-PNE-02]] - `references` [EXTRACTED]
+- [[C-N-RPL-01]] - `references` [EXTRACTED]
+- [[C-N-RPL-02]] - `references` [EXTRACTED]
+- [[C-N-RPT-01]] - `references` [EXTRACTED]
+- [[C-N-RPT-02]] - `references` [EXTRACTED]
+- [[C-N-TES-01]] - `references` [EXTRACTED]
+- [[C-N-TES-02]] - `references` [EXTRACTED]
+- [[C-N-TGA-01]] - `references` [EXTRACTED]
+- [[C-N-TGA-02]] - `references` [EXTRACTED]
+- [[C-N-TUB-01]] - `references` [EXTRACTED]
+- [[C-N-TUB-02]] - `references` [EXTRACTED]
+- [[C-SAD-01]] - `references` [EXTRACTED]
+- [[C-TPB-01]] - `references` [EXTRACTED]
+- [[C-TPB-02]] - `references` [EXTRACTED]
+- [[C-TPB-03]] - `references` [EXTRACTED]
+- [[Casos sintéticos de regressão (60 aprovados)]] - `references` [EXTRACTED]
+- [[DEV-BV-01]] - `references` [EXTRACTED]
+- [[DEV-MAS-01]] - `references` [EXTRACTED]
+- [[Pausa do diálogo (motivo_parada)]] - `references` [EXTRACTED]
+- [[Script scriptsgerar_doc_regras.py]] - `references` [EXTRACTED]
+- [[Urgência chamar_agora]] - `references` [EXTRACTED]
+- [[Urgência observar]] - `references` [EXTRACTED]
+- [[Urgência sem_problema]] - `references` [EXTRACTED]
+- [[engine.casos.executar_caso]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Modos_e_exemplos_de_alerta

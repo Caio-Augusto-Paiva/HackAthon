@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-frontend-web.md"
 type: "concept"
-community: "Cliente nunca envia CF"
+community: "Cliente tipado e tipografia (2)"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Cliente_nunca_envia_CF
+  - community/Cliente_tipado_e_tipografia_2
 ---
 
 # Cliente nunca envia CF: envia valor ou nao_sei
@@ -15,4 +15,4 @@ tags:
 - [[Fora do escopo motor ler basefonte, ativar versão, editor gráfico, IA nos dados]] - `conceptually_related_to` [INFERRED]
 - [[Global Constraints do frontend]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Cliente_nunca_envia_CF
+#graphify/concept #graphify/INFERRED #community/Cliente_tipado_e_tipografia_2

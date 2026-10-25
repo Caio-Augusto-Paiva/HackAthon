@@ -1,17 +1,16 @@
 ---
-source_file: "docs/entrega/06-riscos-e-pendencias.md"
+source_file: "docs/entrega/README.md"
 type: "document"
-community: "Perguntas sobre uso offline"
-location: "Ensaio HTTP"
+community: "Agentes de IA e passos oficiais"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Perguntas_sobre_uso_offline
+  - community/Agentes_de_IA_e_passos_oficiais
 ---
 
 # evidencias-verificacao.json
 
 ## Connections
-- [[Ensaio HTTP e dependências de rede]] - `references` [EXTRACTED]
+- [[Contagens históricas (1082, 1080, 1077, 1066; E2E 11)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Perguntas_sobre_uso_offline
+#graphify/document #graphify/EXTRACTED #community/Agentes_de_IA_e_passos_oficiais

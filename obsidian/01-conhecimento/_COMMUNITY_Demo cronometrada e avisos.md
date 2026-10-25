@@ -1,34 +1,31 @@
 ---
 type: community
-cohesion: 0.11
-members: 19
+cohesion: 0.15
+members: 16
 ---
 
 # Demo cronometrada e avisos
 
-**Cohesion:** 0.11 - loosely connected
-**Members:** 19 nodes
+**Cohesion:** 0.15 - loosely connected
+**Members:** 16 nodes
 
 ## Members
-- [[Aviso fixo 'Este parecer não é um laudo' e privacidade]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Comandos da CLI python -m engine]] - code - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 000-030 abrir localhost e iniciar verificação]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 030-100 entrada inválida 12,5 e erro 422]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 100-200 caso C-MAS-01 no produtor e por quê]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 200-240 mudar para modo especialista]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 240-310 parecer e Como cheguei aqui]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 310-340 caso C-HIP-01 e alerta chamar_agora]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Demo 340-400 relatório web e limitações]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Integração da interface — 22102026]] - document - docs/entrega/06-riscos-e-pendencias.md
-- [[R05 Regressão na restauração da sessão (alta)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[R18 Precisão não exposta na pergunta (baixa)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[R19 Histórico de correção desta navegação (baixa)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[R20 Cobertura de dispositivos (média)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[R21 Continuidade após parada automática (média)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[Reserva núcleo por terminal (4 min)]] - document - docs/entrega/05-apresentacao-e-demo.md
-- [[Snapshot e restauração de Sessao]] - concept - docs/entrega/05-apresentacao-e-demo.md
-- [[Teste E2E webe2etroca-modo.spec.ts]] - code - docs/entrega/05-apresentacao-e-demo.md
-- [[Troca de modo sem reiniciar a análise]] - concept - docs/entrega/05-apresentacao-e-demo.md
+- [[Checklist   ensaiar na maquina principal e reserva sem rede]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[Checklist x integrar consulta web e executar E2E com API real]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[Ensaio HTTP com rede bloqueada via rodar.ps1 -Reset -SemNavegador]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[Escopo nenhuma regra, versao imutavel ou contrato alterado para o frontend]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[Integracao da interface 22102026 (React 19, TS, Vite 8; 11 E2E, 60 Vitest)]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R05 Regressao na restauracao da sessao]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R10 Falha da maquina ou dependencia externa na demo]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R17 Swagger depende de recursos externos]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R18 Precisao nao exposta na pergunta]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R19 Historico de correcao desta navegacao]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R20 Cobertura de dispositivos]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R21 Continuidade apos parada automatica]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[Rede E2E das seis telas sem requisicoes externas]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[Restricao front so para desktop]] - concept - docs/superpowers/plans/2026-10-24-tratamento-20-doencas-excludentes.md
+- [[Swagger apidocs]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[evidencias-verificacao.json_2]] - document - docs/entrega/06-riscos-e-pendencias.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,14 +35,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Perguntas sobre uso offline]]
-- 2 edges to [[_COMMUNITY_Roteiro de apresentação]]
-- 1 edge to [[_COMMUNITY_Perguntas da banca sobre IA]]
-- 1 edge to [[_COMMUNITY_Demonstração principal local]]
+- 11 edges to [[_COMMUNITY_Duração e fechamento da seção]]
+- 2 edges to [[_COMMUNITY_Plano tratamento e exclusões]]
+- 2 edges to [[_COMMUNITY_Perguntas da banca sobre IA]]
+- 1 edge to [[_COMMUNITY_Riscos e pendências de entrega]]
 
 ## Top bridge nodes
-- [[Reserva núcleo por terminal (4 min)]] - degree 4, connects to 2 communities
-- [[Integração da interface — 22102026]] - degree 5, connects to 1 community
-- [[Troca de modo sem reiniciar a análise]] - degree 3, connects to 1 community
-- [[R05 Regressão na restauração da sessão (alta)]] - degree 3, connects to 1 community
-- [[Demo 000-030 abrir localhost e iniciar verificação]] - degree 2, connects to 1 community
+- [[R10 Falha da maquina ou dependencia externa na demo]] - degree 6, connects to 3 communities
+- [[R05 Regressao na restauracao da sessao]] - degree 5, connects to 3 communities
+- [[Integracao da interface 22102026 (React 19, TS, Vite 8; 11 E2E, 60 Vitest)]] - degree 8, connects to 1 community
+- [[R17 Swagger depende de recursos externos]] - degree 5, connects to 1 community
+- [[Ensaio HTTP com rede bloqueada via rodar.ps1 -Reset -SemNavegador]] - degree 4, connects to 1 community

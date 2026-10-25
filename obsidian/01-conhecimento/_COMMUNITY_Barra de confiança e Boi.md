@@ -36,17 +36,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Alerta de bandeira e SPA]]
+- 5 edges to [[_COMMUNITY_Alerta de bandeira e SPA]]
 - 3 edges to [[_COMMUNITY_Bandeira vermelha e desvios]]
 - 2 edges to [[_COMMUNITY_Parecer e urgência na interface]]
 - 2 edges to [[_COMMUNITY_Serviços da casca fina]]
-- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia]]
-- 1 edge to [[_COMMUNITY_Falhas de API na interface]]
 - 1 edge to [[_COMMUNITY_Acessibilidade e Figma]]
 - 1 edge to [[_COMMUNITY_Configuração da API]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia (2)]]
 
 ## Top bridge nodes
-- [[Review Focus (5 pontos de risco)]] - degree 11, connects to 5 communities
+- [[Review Focus (5 pontos de risco)]] - degree 11, connects to 4 communities
 - [[Task 4 Página Anamnese e barra lateral]] - degree 9, connects to 2 communities
 - [[Botao, OpcaoResposta, CampoNumerico, BarraConfianca, Boi, Balao, BarraProgresso, Modal]] - degree 7, connects to 2 communities
 - [[409 conflitoja_respondida por duplo clique botão desabilitado e recarrega sessão]] - degree 4, connects to 1 community

@@ -1,16 +1,13 @@
 ---
 source_file: "docs/revisoes/2026-10-21-revisao-motor.md"
 type: "concept"
-community: "Concorrência e snapshot de sessão"
+community: "Cortes de bloco nao lidos de meta.limiares"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Concorrência_e_snapshot_de_sessão
+  - community/Cortes_de_bloco_nao_lidos_de_metalimiares
 ---
 
 # Cortes de bloco nao lidos de meta.limiares
 
-## Connections
-- [[parecer() tres blocos, CF, percentuais, urgencia]] - `references` [EXTRACTED]
-
-#graphify/concept #graphify/EXTRACTED #community/Concorrência_e_snapshot_de_sessão
+#graphify/concept #graphify/EXTRACTED #community/Cortes_de_bloco_nao_lidos_de_metalimiares

@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.14
-members: 16
+cohesion: 0.12
+members: 18
 ---
 
 # Alocação de agentes de IA
 
-**Cohesion:** 0.14 - loosely connected
-**Members:** 16 nodes
+**Cohesion:** 0.12 - loosely connected
+**Members:** 18 nodes
 
 ## Members
 - [[Agentes de codificacao com IA (Codex, Claude Code, Copilot, Gemini Code Assist, Opencode)]] - concept - docs/fontes/transcricao-apresentacao-rerum.md
@@ -22,6 +22,8 @@ members: 16
 - [[Gemini Pro (Google AI Pro, app web)]] - concept - docs/agentes-e-skills.md
 - [[Implementacao por pessoa (A, B, C) com agente principal e reserva]] - concept - docs/agentes-e-skills.md
 - [[Licenca source-available das skills pptx e docx]] - rationale - docs/agentes-e-skills.md
+- [[Projeto proposto (slide 8)]] - concept - docs/fontes/transcricao-apresentacao-rerum.md
+- [[Projeto proposto Hackathon 2026 (documento D, paginas 2 e 3)]] - concept - docs/fontes/transcricao-documentario-rerum.md
 - [[Revisor de outra familia de modelo]] - rationale - docs/agentes-e-skills.md
 - [[Skills em formato aberto (.agentsskills, .claudeskills, AGENTS.md)]] - concept - docs/agentes-e-skills.md
 - [[anthropicsskills (pptx, docx, pdf, webapp-testing, frontend-design)]] - concept - docs/agentes-e-skills.md
@@ -33,9 +35,3 @@ members: 16
 TABLE source_file, type FROM #community/Alocação_de_agentes_de_IA
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Casos esperados e hackathon]]
-
-## Top bridge nodes
-- [[Desenvolvimento de Sistemas Especialistas com Vibe Coding]] - degree 2, connects to 1 community

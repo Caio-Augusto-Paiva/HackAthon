@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - `references` [EXTRACTED]
-- [[R24 Elegibilidade e presença sem confirmação (alta)]] - `references` [EXTRACTED]
+- [[R24 Elegibilidade e presenca sem confirmacao]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Riscos_e_pendências_de_entrega

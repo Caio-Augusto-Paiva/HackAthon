@@ -11,6 +11,6 @@ tags:
 # test_ida_e_volta_identica
 
 ## Connections
-- [[testskbtest_fonte.py]] - `references` [EXTRACTED]
+- [[testskbtest_fonte.py_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Fonte_inválida_e_Review_Focus

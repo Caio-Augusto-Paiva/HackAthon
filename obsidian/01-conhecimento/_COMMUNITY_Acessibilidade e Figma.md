@@ -27,9 +27,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Cliente tipado e tipografia]]
 - 1 edge to [[_COMMUNITY_Alerta de bandeira e SPA]]
 - 1 edge to [[_COMMUNITY_Barra de confiança e Boi]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia (2)]]
 
 ## Top bridge nodes
 - [[Acessibilidade contraste 4,51, foco visível, alvos 44 px, fieldsetlegend, reduced-motion, lang pt-BR]] - degree 4, connects to 1 community

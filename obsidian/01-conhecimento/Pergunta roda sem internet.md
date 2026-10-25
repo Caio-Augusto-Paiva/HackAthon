@@ -1,18 +1,17 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
 type: "concept"
-community: "Perguntas sobre uso offline"
-location: "Perguntas prováveis"
+community: "Perguntas prováveis da banca"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Perguntas_sobre_uso_offline
+  - community/Perguntas_prováveis_da_banca
 ---
 
 # Pergunta: roda sem internet?
 
 ## Connections
 - [[Perguntas prováveis da banca]] - `references` [EXTRACTED]
-- [[R10 Falha de máquina ou dependência externa na demo (alta)]] - `conceptually_related_to` [INFERRED]
+- [[Swagger apidocs usa CDN externa]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Perguntas_sobre_uso_offline
+#graphify/concept #graphify/EXTRACTED #community/Perguntas_prováveis_da_banca

@@ -1,17 +1,17 @@
 ---
-source_file: "README.md"
+source_file: "docs/entrega/01-processo.md"
 type: "document"
-community: "Diário de bordo 22/10"
-location: "Interface"
+community: "Linha do tempo e decisões do processo"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Diário_de_bordo_22/10
+  - community/Linha_do_tempo_e_decisões_do_processo
 ---
 
 # web/QUALIDADE.md
 
 ## Connections
-- [[Seção Interface]] - `references` [EXTRACTED]
+- [[2210 consulta React integrada, base v0002, acessibilidade, quatro larguras]] - `references` [EXTRACTED]
+- [[Codex, Figma, impeccable na interface]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Diário_de_bordo_22/10
+#graphify/document #graphify/EXTRACTED #community/Linha_do_tempo_e_decisões_do_processo

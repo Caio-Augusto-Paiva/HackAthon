@@ -1,18 +1,16 @@
 ---
 source_file: "docs/entrega/README.md"
 type: "concept"
-community: "Combinação MYCIN e blocos"
-location: "Equipe"
+community: "Integrante B"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Combinação_MYCIN_e_blocos
+  - community/Integrante_B
 ---
 
 # Integrante B: Davi Monção Fernandes
 
 ## Connections
-- [[Componente motor de inferência]] - `conceptually_related_to` [INFERRED]
-- [[Seção Equipe (A, B, C)]] - `references` [EXTRACTED]
+- [[Resp. B sistema especialista, motor, validação, casos, documentação]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Combinação_MYCIN_e_blocos
+#graphify/concept #graphify/EXTRACTED #community/Integrante_B

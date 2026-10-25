@@ -18,6 +18,6 @@ tags:
 - [[Papel C diário a preencher, sem interações ou aprendizado inventados]] - `references` [EXTRACTED]
 - [[Plano extração semântica, atualização Graphify e exportação Obsidian]] - `references` [EXTRACTED]
 - [[Plano gerar regrascasos dos executáveis com teste de sincronismo]] - `references` [EXTRACTED]
-- [[Registro de riscos (R01-R14)]] - `references` [EXTRACTED]
+- [[Registro de riscos R01-R14 (tabela)]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Base_de_desenvolvimento_e_sessões

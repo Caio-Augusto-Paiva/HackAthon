@@ -1,11 +1,11 @@
 ---
 source_file: "docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md"
 type: "concept"
-community: "CLI de fonte por doença"
+community: "Fonte inválida e Review Focus"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI_de_fonte_por_doença
+  - community/Fonte_inválida_e_Review_Focus
 ---
 
 # Junção: arquivos em ordem alfabética, ordena pelo índice, desconhecidos ao final
@@ -15,4 +15,4 @@ tags:
 - [[Task 1 separar e juntar (kbfonte.py)]] - `implements` [EXTRACTED]
 - [[ler_fonte(pasta) - Base]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI_de_fonte_por_doença
+#graphify/concept #graphify/EXTRACTED #community/Fonte_inválida_e_Review_Focus

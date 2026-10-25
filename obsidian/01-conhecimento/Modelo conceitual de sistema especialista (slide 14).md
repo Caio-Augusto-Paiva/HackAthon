@@ -1,16 +1,13 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "Aquisição de conhecimento"
+community: "Modelo conceitual de sistema especialista (slide"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Aquisição_de_conhecimento
+  - community/Modelo_conceitual_de_sistema_especialista_slide
 ---
 
 # Modelo conceitual de sistema especialista (slide 14)
 
-## Connections
-- [[Motor de inferencia casa regras, resolve conflito, dispara]] - `references` [EXTRACTED]
-
-#graphify/concept #graphify/EXTRACTED #community/Aquisição_de_conhecimento
+#graphify/concept #graphify/EXTRACTED #community/Modelo_conceitual_de_sistema_especialista_slide

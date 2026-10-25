@@ -1,17 +1,16 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Busca direta versus grafo"
+community: "Instruções dos agentes e graphify"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Busca_direta_versus_grafo
+  - community/Instruções_dos_agentes_e_graphify
 ---
 
 # Busca direta (rg) quando o arquivo ja e indicado ou e codigo e testes
 
 ## Connections
 - [[Grafo de conhecimento so quando precisar procurar]] - `references` [EXTRACTED]
-- [[Quando nao usar o grafo arquivo indicado, informacao ja conhecida, codigo e testes]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Busca_direta_versus_grafo
+#graphify/concept #graphify/EXTRACTED #community/Instruções_dos_agentes_e_graphify

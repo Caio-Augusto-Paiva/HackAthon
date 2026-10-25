@@ -1,18 +1,16 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Decisões de seleção de perguntas"
-location: "Problema e método"
+community: "Processo e propagação de CF"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_de_seleção_de_perguntas
+  - community/Processo_e_propagação_de_CF
 ---
 
 # Seleção de perguntas dirigida a hipóteses
 
 ## Connections
-- [[Fatores de certeza modelo MYCIN]] - `references` [EXTRACTED]
-- [[Seção Problema e método]] - `references` [EXTRACTED]
+- [[Sistema especialista base de regras + motor]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisões_de_seleção_de_perguntas
+#graphify/concept #graphify/EXTRACTED #community/Processo_e_propagação_de_CF

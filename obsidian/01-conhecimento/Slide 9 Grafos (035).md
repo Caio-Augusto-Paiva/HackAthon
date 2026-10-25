@@ -1,12 +1,12 @@
 ---
 source_file: "docs/entrega/notas-do-apresentador.md"
 type: "document"
-community: "Critérios de parada"
+community: "Roteiro de apresentação"
 location: "Tabela"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Critérios_de_parada
+  - community/Roteiro_de_apresentação
 ---
 
 # Slide 9: Grafos (0:35)
@@ -16,4 +16,4 @@ tags:
 - [[Slide 10 Arquitetura (045)]] - `references` [INFERRED]
 - [[Slide 8 Base de conhecimento (040)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Critérios_de_parada
+#graphify/document #graphify/INFERRED #community/Roteiro_de_apresentação

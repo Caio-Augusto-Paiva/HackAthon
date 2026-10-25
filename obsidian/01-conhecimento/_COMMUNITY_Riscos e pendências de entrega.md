@@ -15,6 +15,7 @@ members: 27
 - [[AD-03 achado histórico — Contagens e mapa do pacote desatualizados]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
 - [[AD-04 achado histórico — Matriz de pessoas difere da divisão ABC original]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
 - [[AD-05 achado histórico — Vídeo não resolve falha de todo meio de exibição]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
+- [[Checklist   confirmar inscricao dos tres alunos e presenca]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[Comprovante humano de envio e recebimento ainda não preenchido]] - rationale - docs/entrega/07-ensaio-e-envio.md
 - [[Conferência de licença, PDFs, slides, fontes e ZIP ainda pendente]] - rationale - docs/entrega/07-ensaio-e-envio.md
 - [[Correções apenas documentais; runtime, contratos, base e testes preservados]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
@@ -24,9 +25,8 @@ members: 27
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - document - docs/entrega/07-ensaio-e-envio.md
 - [[Preparar dois computadores, ambiente, banco fictício e consulta local]] - rationale - docs/entrega/07-ensaio-e-envio.md
 - [[Prova de entendimento de cada integrante ainda a registrar]] - rationale - docs/entrega/07-ensaio-e-envio.md
-- [[R08 Documentação manual divergir da implementação (média)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[R22 Reprodutibilidade Python sem lockfile (média)]] - concept - docs/entrega/06-riscos-e-pendencias.md
-- [[R24 Elegibilidade e presença sem confirmação (alta)]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R22 Reprodutibilidade Python sem lockfile]] - concept - docs/entrega/06-riscos-e-pendencias.md
+- [[R24 Elegibilidade e presenca sem confirmacao]] - concept - docs/entrega/06-riscos-e-pendencias.md
 - [[Registro real por computador versão, rede, consulta e resultado a preencher]] - rationale - docs/entrega/07-ensaio-e-envio.md
 - [[Revisão em contexto separado e correção de elegibilidade; outra família não comprovada]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
 - [[Revisão executou novamente Python 1066 aprovados, 1 ignorado, 170 subtestes]] - rationale - docs/revisoes/2026-10-22-revisao-secao-6.md
@@ -46,13 +46,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Perguntas da banca sobre IA]]
-- 5 edges to [[_COMMUNITY_Duração e fechamento da seção]]
-- 4 edges to [[_COMMUNITY_Base de desenvolvimento e sessões]]
+- 8 edges to [[_COMMUNITY_Duração e fechamento da seção]]
+- 2 edges to [[_COMMUNITY_Perguntas da banca sobre IA]]
+- 2 edges to [[_COMMUNITY_Base de desenvolvimento e sessões (2)]]
+- 2 edges to [[_COMMUNITY_Base de desenvolvimento e sessões]]
+- 1 edge to [[_COMMUNITY_Correções editoriais]]
+- 1 edge to [[_COMMUNITY_Demo cronometrada e avisos]]
 
 ## Top bridge nodes
-- [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - degree 25, connects to 3 communities
+- [[Revisão técnica documental da Seção 6, sem validação clínica ou ensaio humano]] - degree 25, connects to 5 communities
+- [[R22 Reprodutibilidade Python sem lockfile]] - degree 5, connects to 2 communities
 - [[Modelo de ensaio e envio não preenchido; não comprova execução]] - degree 8, connects to 1 community
-- [[R24 Elegibilidade e presença sem confirmação (alta)]] - degree 5, connects to 1 community
-- [[R22 Reprodutibilidade Python sem lockfile (média)]] - degree 4, connects to 1 community
-- [[R08 Documentação manual divergir da implementação (média)]] - degree 2, connects to 1 community
+- [[R24 Elegibilidade e presenca sem confirmacao]] - degree 6, connects to 1 community
+- [[Checklist   confirmar inscricao dos tres alunos e presenca]] - degree 2, connects to 1 community

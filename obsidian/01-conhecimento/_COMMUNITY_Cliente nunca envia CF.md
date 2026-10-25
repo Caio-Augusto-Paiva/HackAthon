@@ -1,25 +1,27 @@
 ---
 type: community
-cohesion: 0.13
-members: 19
+cohesion: 0.10
+members: 27
 ---
 
 # Cliente nunca envia CF
 
-**Cohesion:** 0.13 - loosely connected
-**Members:** 19 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 27 nodes
 
 ## Members
 - [['Dados de Treino' é só nome da pasta; sem aprendizado de máquina]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
+- [[34 casos clínicos com mesmo resultado lendo v0002 e grafo exato]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Aprovado pela equipe em 22102026 (fonte = arquivos por doença; abordagem A)]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
-- [[Cliente nunca envia CF]] - rationale - docs/superpowers/plans/2026-10-21-api-secao-4.md
-- [[Cliente nunca envia CF envia valor ou nao_sei]] - concept - docs/superpowers/plans/2026-10-22-frontend-web.md
 - [[Fora do escopo motor ler basefonte, ativar versão, editor gráfico, IA nos dados]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Global Constraints do grafo 2]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
 - [[Grafo 2 — base por doença plano de implementação]] - document - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
+- [[Grafo exato (kb.grafo.Grafo) conversão base-grafo 11]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
+- [[Invariante juntar(separar(v0002)) == v0002]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Motor, API, validador e casos não mudam; v0002 continua ativa]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
 - [[O que não muda engine, API, validador, casos, v0002 ativa, versões imutáveis]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Objetivo separar base por doença com junção exata, gerar grafo 2 sem IA, provar motor lê do grafo exato]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
+- [[Objetivos separar, editar em basefonte, grafo 2 sem IA, motor lê do grafo exato]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Pasta do cofre obsidian02-Dados de Treino e saída graphify-out-dados]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
 - [[Por que o motor não lê o graph.json do graphify]] - rationale - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Restrição de decisão determinística e auditável]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
@@ -27,8 +29,14 @@ members: 19
 - [[Spec do grafo 2 (design 2026-10-22)]] - document - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
 - [[Spec Grafo 2 — base separada por doença e grafo exato no Obsidian]] - document - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Stack Python 3.12, Pydantic, pytest; graphify só no script]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
+- [[Testes da spec]] - concept - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[Todas as arestas EXTRACTED; custo de tokens zero]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
+- [[carregar_do_grafo(caminho) - Base]] - code - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
+- [[grafo_exato.json = base_para_grafo(base)]] - code - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 - [[kb não importa graphify]] - concept - docs/superpowers/plans/2026-10-22-grafo-dados-por-doenca.md
+- [[kbexportar_grafo.py — grafo exato e entrada do graphify]] - code - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
+- [[testskbtest_exportar_grafo.py]] - code - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
+- [[testskbtest_fonte.py]] - code - docs/superpowers/specs/2026-10-22-grafo-dados-por-doenca-design.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,19 +46,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Parecer e urgência na interface]]
-- 2 edges to [[_COMMUNITY_Arquitetura de kb]]
-- 2 edges to [[_COMMUNITY_Arrumação e rótulos do grafo]]
-- 2 edges to [[_COMMUNITY_Casos clínicos e fonte]]
-- 1 edge to [[_COMMUNITY_Bandeira vermelha e desvios]]
-- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia]]
-- 1 edge to [[_COMMUNITY_Documentação e backend FastAPI]]
-- 1 edge to [[_COMMUNITY_Fonte inválida e Review Focus]]
-- 1 edge to [[_COMMUNITY_API pública da base]]
+- 7 edges to [[_COMMUNITY_Arrumação e rótulos do grafo]]
+- 3 edges to [[_COMMUNITY_API pública da base]]
+- 2 edges to [[_COMMUNITY_Documentação e backend FastAPI]]
+- 2 edges to [[_COMMUNITY_Fonte inválida e Review Focus]]
+- 2 edges to [[_COMMUNITY_Parecer e urgência na interface (2)]]
+- 1 edge to [[_COMMUNITY_Parecer e urgência na interface]]
+- 1 edge to [[_COMMUNITY_Cliente tipado e tipografia (2)]]
 
 ## Top bridge nodes
-- [[Spec Grafo 2 — base separada por doença e grafo exato no Obsidian]] - degree 12, connects to 4 communities
+- [[Spec Grafo 2 — base separada por doença e grafo exato no Obsidian]] - degree 12, connects to 2 communities
 - [[Grafo 2 — base por doença plano de implementação]] - degree 7, connects to 2 communities
-- [[Por que o motor não lê o graph.json do graphify]] - degree 4, connects to 1 community
-- [[Cliente nunca envia CF envia valor ou nao_sei]] - degree 3, connects to 1 community
-- [[Cliente nunca envia CF]] - degree 2, connects to 1 community
+- [[kbexportar_grafo.py — grafo exato e entrada do graphify]] - degree 6, connects to 2 communities
+- [[Grafo exato (kb.grafo.Grafo) conversão base-grafo 11]] - degree 5, connects to 2 communities
+- [[Objetivos separar, editar em basefonte, grafo 2 sem IA, motor lê do grafo exato]] - degree 5, connects to 1 community

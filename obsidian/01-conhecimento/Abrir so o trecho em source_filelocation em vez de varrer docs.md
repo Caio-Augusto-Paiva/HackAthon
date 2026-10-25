@@ -1,11 +1,11 @@
 ---
 source_file: "AGENTS.md"
 type: "concept"
-community: "Busca direta versus grafo"
+community: "Instruções dos agentes e graphify"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Busca_direta_versus_grafo
+  - community/Instruções_dos_agentes_e_graphify
 ---
 
 # Abrir so o trecho em source_file/location em vez de varrer docs/
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[graphify query para localizar decisao, regra, fonte ou requisito]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Busca_direta_versus_grafo
+#graphify/concept #graphify/EXTRACTED #community/Instruções_dos_agentes_e_graphify

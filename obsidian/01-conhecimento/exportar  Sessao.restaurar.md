@@ -1,18 +1,19 @@
 ---
 source_file: "docs/entrega/02-arquitetura.md"
-type: "code"
-community: "Decisões rejeitadas e passos"
-location: "Contratos Python"
+type: "concept"
+community: "Contratos Python e restauração"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisões_rejeitadas_e_passos
+  - community/Contratos_Python_e_restauração
 ---
 
 # exportar / Sessao.restaurar
 
 ## Connections
-- [[Seção Contratos Python disponíveis]] - `references` [EXTRACTED]
-- [[Snapshot JSON exportar e restaurar]] - `implements` [EXTRACTED]
+- [[Contratos Python disponiveis]] - `references` [EXTRACTED]
+- [[Restauracao exata snapshot completo com ordem_respostas]] - `references` [EXTRACTED]
+- [[Snapshot JSON (exportar e restaurar)]] - `implements` [EXTRACTED]
+- [[exportar() snapshot JSON aceito por restaurar]] - `shares_data_with` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Decisões_rejeitadas_e_passos
+#graphify/concept #graphify/EXTRACTED #community/Contratos_Python_e_restauração

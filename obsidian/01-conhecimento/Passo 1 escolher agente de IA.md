@@ -1,17 +1,18 @@
 ---
 source_file: "docs/entrega/01-processo.md"
 type: "concept"
-community: "Passo a passo pedido"
-location: "Passo a passo"
+community: "Agentes de IA e passos oficiais"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Passo_a_passo_pedido
+  - community/Agentes_de_IA_e_passos_oficiais
 ---
 
 # Passo 1: escolher agente de IA
 
 ## Connections
-- [[Seção Passo a passo pedido pelos organizadores]] - `references` [EXTRACTED]
+- [[Alocação de agentes (docsagentes-e-skills.md)]] - `references` [EXTRACTED]
+- [[Passo 2 entender sistema especialista e motor]] - `conceptually_related_to` [INFERRED]
+- [[Processo de desenvolvimento (consolidado 2210)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Passo_a_passo_pedido
+#graphify/concept #graphify/EXTRACTED #community/Agentes_de_IA_e_passos_oficiais

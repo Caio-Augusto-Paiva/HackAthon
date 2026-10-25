@@ -1,0 +1,17 @@
+---
+source_file: "docs/entrega/02-arquitetura.md"
+type: "concept"
+community: "Testes e evidências"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Testes_e_evidências
+---
+
+# web/QUALIDADE.md
+
+## Connections
+- [[Cenarios E2E com API real, SQLite temporario e casos sinteticos]] - `references` [INFERRED]
+- [[Testes, execucao e limites]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Testes_e_evidências

@@ -1,16 +1,13 @@
 ---
 source_file: "docs/fontes/transcricao-apresentacao-rerum.md"
 type: "concept"
-community: "AGENTS.md e Codex"
+community: "Diretrizes passo a passo (slide 12)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/AGENTSmd_e_Codex
+  - community/Diretrizes_passo_a_passo_slide_12
 ---
 
 # Diretrizes passo a passo (slide 12)
 
-## Connections
-- [[Sistema especialista para anamnese de bovinos leiteiros]] - `conceptually_related_to` [EXTRACTED]
-
-#graphify/concept #graphify/EXTRACTED #community/AGENTSmd_e_Codex
+#graphify/concept #graphify/EXTRACTED #community/Diretrizes_passo_a_passo_slide_12

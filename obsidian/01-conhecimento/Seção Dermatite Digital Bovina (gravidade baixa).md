@@ -1,17 +1,17 @@
 ---
 source_file: "docs/entrega/03-regras-de-producao.md"
-type: "document"
-community: "Dermatite digital"
+type: "concept"
+community: "Regras de produção e CF"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Dermatite_digital
+  - community/Regras_de_produção_e_CF
 ---
 
 # Seção Dermatite Digital Bovina (gravidade baixa)
 
 ## Connections
 - [[Dermatite Digital Bovina (dermatite_digital)]] - `references` [EXTRACTED]
-- [[MSD Veterinary Manual (referência clínica contextual)]] - `cites` [EXTRACTED]
+- [[Regras de produção — documentação gerada]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Dermatite_digital
+#graphify/concept #graphify/EXTRACTED #community/Regras_de_produção_e_CF

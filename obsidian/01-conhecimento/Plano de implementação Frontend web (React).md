@@ -17,7 +17,6 @@ tags:
 - [[Mapa de arquivos web]] - `references` [EXTRACTED]
 - [[Objetivo SPA React+TS que reproduz o protótipo do Figma e conversa com a API]] - `references` [EXTRACTED]
 - [[Pacote web (React + TypeScript)]] - `implements` [INFERRED]
-- [[Produto Anamnese Bovina explicável]] - `references` [EXTRACTED]
 - [[Review Focus (5 pontos de risco)]] - `references` [EXTRACTED]
 - [[Self-review requisito → tarefa]] - `references` [EXTRACTED]
 - [[Spec de referência anamnese-bovinos-design (4.4, 4.5, 4.7, 5.1, 5.2) + apiREADME]] - `references` [EXTRACTED]

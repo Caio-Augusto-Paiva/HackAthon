@@ -1,18 +1,18 @@
 ---
 source_file: "docs/entrega/05-apresentacao-e-demo.md"
 type: "concept"
-community: "Roteiro de apresentação"
-location: "Perguntas prováveis"
+community: "Aprendizados das revisões"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Roteiro_de_apresentação
+  - graphify/INFERRED
+  - community/Aprendizados_das_revisões
 ---
 
 # Pergunta: o que cada integrante aprendeu?
 
 ## Connections
+- [[Ensaio e reserva capturavídeo, explicar regra e parte alheia]] - `references` [INFERRED]
+- [[Ensaio cada integrante explica regra, CF, limite e parte alheia]] - `semantically_similar_to` [INFERRED]
 - [[Perguntas prováveis da banca]] - `references` [EXTRACTED]
-- [[R12 Equipe não dominar o que foi gerado com IA (alta)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Roteiro_de_apresentação
+#graphify/concept #graphify/INFERRED #community/Aprendizados_das_revisões

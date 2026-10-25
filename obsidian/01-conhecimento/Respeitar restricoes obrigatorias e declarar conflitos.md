@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "AGENTS.md e Codex"
+community: "Desafio, entregas e avaliação"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/AGENTSmd_e_Codex
+  - community/Desafio_entregas_e_avaliação
 ---
 
 # Respeitar restricoes obrigatorias e declarar conflitos
@@ -14,4 +14,4 @@ tags:
 - [[Regras de conduta]] - `references` [EXTRACTED]
 - [[Restricoes obrigatorias]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/AGENTSmd_e_Codex
+#graphify/concept #graphify/EXTRACTED #community/Desafio_entregas_e_avaliação
