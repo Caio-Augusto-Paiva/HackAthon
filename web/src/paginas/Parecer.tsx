@@ -52,7 +52,7 @@ export function Parecer() {
   const blocos = dados.blocos.map(b => ({ ...b, itens: [...b.itens].sort((a, b) => b.percentual - a.percentual) }));
   const primeira = blocos.flatMap(b => b.itens)[0];
   const nenhumaConfirmada = blocos.every(b => b.itens.every(i => i.percentual === 0));
-  const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && i.tratamento);
+  const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && i.tratamento?.url.startsWith('https://'));
   let posicao = 0;
   return <div className={estilos.pagina}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link><span>Modo {dados.modo === 'produtor' ? 'produtor' : 'especialista'}</span>
@@ -89,7 +89,7 @@ export function Parecer() {
         <h2 id="titulo-tratar">Como tratar</h2>
         <p>Informação geral de fonte pública. O tratamento deve ser indicado por um médico-veterinário.</p>
         <div className={estilos.tratarLinks}>{tratar.map(i => <a key={i.doenca} href={i.tratamento!.url} target="_blank" rel="noopener noreferrer"
-          aria-label={`Como tratar ${i.nome}`} title={i.tratamento!.titulo}>Como tratar {i.nome}</a>)}</div>
+          title={i.tratamento!.titulo}>Como tratar {i.nome}</a>)}</div>
       </section>}
       <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link><Link className={estilos.privacidade} to="/privacidade">Política de privacidade</Link>
         <Botao variante="secundario" disabled={!primeira} onClick={() => definirComo(true)}>Como cheguei aqui?</Botao>

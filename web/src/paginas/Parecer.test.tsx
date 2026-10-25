@@ -148,5 +148,12 @@ describe('parecer do sistema', () => {
       const secao = (await screen.findByRole('heading', { name: 'Como tratar' })).closest('section') as HTMLElement;
       expect(secao).toHaveTextContent('Informação geral de fonte pública. O tratamento deve ser indicado por um médico-veterinário.');
     });
+    it('não oferece link cuja url não começa com https://', async () => {
+      const inseguro = { ...exemploParecer, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => i.doenca === 'hipocalcemia' ? { ...i, tratamento: { titulo: 'x', url: 'javascript:alert(1)' } } : i) })) };
+      montar(inseguro);
+      await screen.findByRole('table');
+      expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(1);
+      expect(screen.queryByRole('link', { name: 'Como tratar Hipocalcemia' })).toBeNull();
+    });
   });
 });

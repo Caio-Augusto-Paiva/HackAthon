@@ -7,6 +7,7 @@ import estilos from './ComoChegou.module.css';
 type Como = components['schemas']['Como'];
 type Evidencia = components['schemas']['Evidencia'];
 type Entrada = components['schemas']['Entrada'];
+type Exclusao = components['schemas']['EtapaExclusao'];
 
 const porcento = (cf: number) => `${Math.round(Math.max(0, cf) * 100)}%`;
 const legivel = (e: Entrada) => e.nome ?? e.simbolo.replace(/_/g, ' ').replace(/^./, c => c.toUpperCase());
@@ -30,19 +31,32 @@ function Fato({ entrada }: { entrada: Entrada }) {
   </li>;
 }
 
+type Variacao = { antes: number; depois: number };
+
+function Subida({ passo }: { passo: Variacao }) {
+  return <div className={estilos.subida}>
+    <span className={estilos.trilho} aria-hidden="true">
+      <span style={{ width: porcento(Math.min(passo.antes, passo.depois)) }} />
+      <span className={estilos.ganho} style={{ left: porcento(Math.min(passo.antes, passo.depois)), width: `calc(${porcento(Math.max(passo.antes, passo.depois))} - ${porcento(Math.min(passo.antes, passo.depois))})` }} />
+    </span>
+    <span className={estilos.numeros}>{porcento(passo.antes)} → {porcento(passo.depois)}</span>
+  </div>;
+}
+
 function Passo({ evidencia, passo }: { evidencia: Evidencia; passo?: Como['combinacao'][number] }) {
   const diminui = evidencia.cf_regra < 0;
   return <li className={estilos.regra}>
-    {passo && <div className={estilos.subida}>
-      <span className={estilos.trilho} aria-hidden="true">
-        <span style={{ width: porcento(Math.min(passo.antes, passo.depois)) }} />
-        <span className={estilos.ganho} style={{ left: porcento(Math.min(passo.antes, passo.depois)), width: `calc(${porcento(Math.max(passo.antes, passo.depois))} - ${porcento(Math.min(passo.antes, passo.depois))})` }} />
-      </span>
-      <span className={estilos.numeros}>{porcento(passo.antes)} → {porcento(passo.depois)}</span>
-    </div>}
+    {passo && <Subida passo={passo} />}
     <p className={estilos.frase}>{diminui ? 'Isto diminuiu a chance' : 'Porque foi observado'}: {evidencia.frase || evidencia.texto}.</p>
     <ul className={estilos.fatos}>{evidencia.entradas.map((e, i) => <Fato key={`${e.simbolo}-${i}`} entrada={e} />)}</ul>
     <Fonte fonte={evidencia.fonte} />
+  </li>;
+}
+
+function PassoExclusao({ etapa }: { etapa: Exclusao }) {
+  return <li className={estilos.regra}>
+    <Subida passo={etapa} />
+    <p className={estilos.frase}>{etapa.frase}</p>
   </li>;
 }
 
@@ -60,9 +74,10 @@ export function ComoChegou({ sessaoId, simbolo, aoFechar }: { sessaoId: string; 
   return <Modal variante="folha" titulo="Como cheguei aqui?" resumo={resumo} aoFechar={aoFechar}>
     {erro ? <p role="alert">Não consegui carregar a explicação. <button onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</button></p>
       : !dados ? <p role="status">Carregando explicação…</p>
-      : dados.evidencias.length ? <>
+      : dados.evidencias.length || dados.exclusoes?.length ? <>
         <ol className={estilos.lista}>{dados.evidencias.map((e, i) =>
-          <Passo key={`${e.regra_id}-${i}`} evidencia={e} passo={dados.combinacao.find(c => c.apos_regra === e.regra_id)} />)}</ol>
+          <Passo key={`${e.regra_id}-${i}`} evidencia={e} passo={dados.combinacao.find(c => c.apos_regra === e.regra_id)} />)}
+          {dados.exclusoes?.map((x, i) => <PassoExclusao key={`${x.por}-${i}`} etapa={x} />)}</ol>
         <p className={estilos.nota}>Estas regras ainda são suposições: precisam ser conferidas por um médico-veterinário.</p>
       </>
       : <p>Nenhum sinal informado até agora aponta para esta doença.</p>}
