@@ -47,7 +47,7 @@ O navegador renderiza `EstadoSessao.proxima`, envia números como a string digit
 - [Índice da entrega e atendimento às exigências](docs/entrega/README.md).
 - [Processo de desenvolvimento](docs/entrega/01-processo.md).
 - [Arquitetura implementada](docs/entrega/02-arquitetura.md).
-- [61 regras de produção geradas da base](docs/entrega/03-regras-de-producao.md).
+- [137 regras de produção geradas da base](docs/entrega/03-regras-de-producao.md).
 - [Resultados dos 34 casos sintéticos](docs/entrega/04-casos-de-teste.md).
 - [Roteiro de apresentação, demonstração e perguntas](docs/entrega/05-apresentacao-e-demo.md).
 - [Riscos, pendências e checklist de envio](docs/entrega/06-riscos-e-pendencias.md).
