@@ -275,7 +275,10 @@
         "produtor": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades.",
         "veterinario": "Esclarecer as hipóteses relacionadas a temperatura ao toque das extremidades."
       },
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "dispensada_se": [
+        "temperatura_retal"
+      ]
     },
     {
       "id": "fezes_aquosas_espuma_graos",

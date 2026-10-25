@@ -616,6 +616,21 @@
           "title": "Combinacao",
           "type": "string"
         },
+        "dispensada_se": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dispensada Se"
+        },
         "nota": {
           "anyOf": [
             {

@@ -1,6 +1,6 @@
 # Roteiro de apresentação e demonstração — versão disponível
 
-Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0006`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
+Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0007`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
 
 A duração oficial não consta dos materiais fornecidos. A equipe confirmou nesta revisão **10 minutos de fala mais 4 de demonstração como estimativas**, sujeitas à confirmação com a organização. A alternativa de **5 minutos incluindo demo** permanece apenas como reserva. O conteúdo abaixo é um roteiro editorial; slides finais e PDFs ainda precisam ser produzidos e revisados. Nenhum tempo abaixo foi cronometrado em ensaio humano.
 

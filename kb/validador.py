@@ -1,7 +1,7 @@
 """Validação semântica da base de conhecimento (sem I/O, determinística).
 
 ``validar`` recebe uma ``Base`` já carregada e devolve um ``Relatorio`` com erros
-(E01-E28) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
+(E01-E29) e avisos (W01-W03). ``validar_dados`` aceita JSON cru e ``validar_edicao``,
 o payload do editor (grafo); ambas convertem falhas de estrutura em erros ``E00`` e
 nunca levantam. Cada código é uma função privada.
 """
@@ -41,7 +41,7 @@ CODIGOS: dict[str, str] = {
     "E23": "dominio_conceito_nao_booleano",
     "E24": "exclusao_doenca_inexistente", "E25": "exclusao_mesma_doenca",
     "E26": "exclusao_duplicada", "E27": "tratamento_url_invalida",
-    "E28": "tratamento_fora_de_doenca",
+    "E28": "tratamento_fora_de_doenca", "E29": "dispensada_se_invalida",
     "W01": "simbolo_nao_usado", "W02": "regras_contraditorias", "W03": "suposicoes_pendentes",
 }
 
@@ -544,6 +544,15 @@ def _e28_tratamento_fora_de_doenca(base: Base) -> list[Problema]:
     ]
 
 
+def _e29_dispensada_se_invalida(base: Base) -> list[Problema]:
+    perguntas = {s.id for s in base.simbolos if s.tipo in ("pergunta", "ficha")}
+    return [
+        _p("E29", _simb(s), f"'{s.id}' só pode ser dispensada por outra pergunta; '{alvo}' não é uma.")
+        for s in base.simbolos for alvo in (s.dispensada_se or ())
+        if alvo == s.id or alvo not in perguntas
+    ]
+
+
 # --- avisos ---------------------------------------------------------------
 
 def _w01_simbolo_nao_usado(base: Base) -> list[Problema]:
@@ -590,7 +599,7 @@ _VERIFICACOES = (
     _e19_classe_incompativel, _e20_id_invalido, _e21_tela_simbolo_invalido,
     _e22_cf_urgencia_nao_positivo, _e23_dominio_conceito_nao_booleano,
     _e24_exclusao_doenca_inexistente, _e25_exclusao_mesma_doenca, _e26_exclusao_duplicada,
-    _e27_tratamento_url_invalida, _e28_tratamento_fora_de_doenca,
+    _e27_tratamento_url_invalida, _e28_tratamento_fora_de_doenca, _e29_dispensada_se_invalida,
     _w01_simbolo_nao_usado, _w02_regras_contraditorias, _w03_suposicoes_pendentes,
 )
 

@@ -8,15 +8,17 @@ from threading import Lock
 from .avaliacao import avaliar_condicao
 from .cf import combinar, fracao
 from .inferencia import inferir, agenda
-from .modelos import Base, Fato, GRAVIDADES, MODOS
+from .modelos import Base, Fato, GRAVIDADES, MODOS, desconhecido
 
 
 _LIVRE=object()  # folha sem valor fixado na busca de consistência
 builtins_id=id  # o nome ``id`` é sombreado pelos parâmetros deste módulo
 
 
-def perguntavel(simbolo, modo):
-    return simbolo['tipo'] in ('pergunta','ficha') and bool(simbolo.get('pergunta',{}).get(modo))
+def perguntavel(simbolo, modo, fatos=None):
+    """Há pergunta neste modo e nenhum sinal de ``dispensada_se`` já tem valor conhecido."""
+    if simbolo['tipo'] not in ('pergunta','ficha') or not simbolo.get('pergunta',{}).get(modo): return False
+    return not any(id in (fatos or {}) and not desconhecido(fatos[id].valor) for id in simbolo.get('dispensada_se',()))
 
 
 def _valores_numericos(condicoes, dominio):
@@ -60,7 +62,7 @@ def _limites_grupo(id, condicoes, intervalos, resultado, modo, fixos=None):
 
 
 def _limites_folha(id,s,condicoes,resultado,modo,fixos):
-    if id in resultado.fatos or not perguntavel(s,modo):
+    if id in resultado.fatos or not perguntavel(s,modo,resultado.fatos):
         valor=min(avaliar_condicao(c,resultado.fatos,resultado.base.simbolos) for c in condicoes)
         return valor,valor
     dominio=s['dominio']
@@ -97,7 +99,7 @@ def _compartilhadas(regra,base,resultado,modo):
     # Repetição em caminhos diferentes exige o mesmo valor da observação.
     folhas=[id for c in regra['se'] for id in _fontes(c['simbolo'],base)]
     return sorted(id for id in set(folhas) if folhas.count(id)>1 and id not in resultado.fatos
-                  and perguntavel(base.simbolos[id],modo))
+                  and perguntavel(base.simbolos[id],modo,resultado.fatos))
 
 
 def _valores_folha(id,base):
@@ -218,7 +220,7 @@ def _analisar(base, fatos, modo):
     def folhas(id, fator):
         s=base.simbolos[id]
         if s['tipo'] in ('pergunta','ficha'):
-            return [(id,fator)] if id not in resultado.fatos and perguntavel(s,modo) else []
+            return [(id,fator)] if id not in resultado.fatos and perguntavel(s,modo,resultado.fatos) else []
         saida=[]
         if s['tipo']=='derivado':
             for r in base.regras_para(id):

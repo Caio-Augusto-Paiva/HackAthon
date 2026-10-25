@@ -2,7 +2,7 @@
 
 Prova de conceito do tema T1 do Hackathon UFJF 2026. O núcleo executa regras explícitas, combina fatores de certeza pelo modelo MYCIN e explica as conclusões. A IA auxilia o desenvolvimento; a decisão em execução sai da base e do motor.
 
-**Estado integrado, branch `codex-davi`:** interface React conectada ao motor local, base ativa `v0006` (20 doenças, 137 regras, 2 pares excludentes e links de tratamento), módulo `kb/` e API FastAPI com persistência SQLite. São 27 operações HTTP e 60 casos sintéticos versionados. O editor gráfico permanece pendente. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
+**Estado integrado, branch `codex-davi`:** interface React conectada ao motor local, base ativa `v0007` (20 doenças, 137 regras, 2 pares excludentes e links de tratamento), módulo `kb/` e API FastAPI com persistência SQLite. São 27 operações HTTP e 60 casos sintéticos versionados. O editor gráfico permanece pendente. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
 
 ## Executar a demonstração do motor
 
@@ -10,7 +10,7 @@ Requer Python 3.12 ou superior. Abra um terminal na raiz deste repositório. O m
 
 ```powershell
 python -m unittest discover -s tests/engine -t .
-python -m engine base/versoes/v0006.json base/desenvolvimento/casos/alerta-decubito.json
+python -m engine base/versoes/v0007.json base/desenvolvimento/casos/alerta-decubito.json
 ```
 
 O primeiro comando executa os testes do motor e da base de desenvolvimento. O segundo executa um caso sintético, imprime JSON com `status: "passou"` e código de saída 0. Veja o [exemplo mamário e o uso Python](base/desenvolvimento/LEIA-ME.txt).

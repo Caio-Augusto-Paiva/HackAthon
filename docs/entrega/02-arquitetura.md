@@ -7,7 +7,7 @@ O núcleo é um pacote Python independente de interface, banco e base clínica. 
 ```mermaid
 flowchart LR
     W[Navegador: React e TypeScript] <-->|HTTP JSON local| C
-    J[base/ativa.json: v0006 imutável] --> K[kb: validação, versões e adaptação]
+    J[base/ativa.json: v0007 imutável] --> K[kb: validação, versões e adaptação]
     K --> V[Base.de_dict e guardas]
     C[API FastAPI ou CLI/Python] --> S[Sessao e memória]
     V --> S
@@ -31,7 +31,7 @@ flowchart LR
 |---|---|---|
 | Interface com o usuário | React em `web/`, CLI `engine/__main__.py` e interface Python de `Sessao` | Editor gráfico |
 | Motor de inferência | `inferencia`, `avaliacao`, `cf`, `selecao` e `parada`, consumidos pela API | Revisão/calibração clínica |
-| Base de conhecimento | `kb/`, versões imutáveis, `base/ativa.json` e `base/versoes/v0006.json` | Edição no frontend e novas versões revisadas |
+| Base de conhecimento | `kb/`, versões imutáveis, `base/ativa.json` e `base/versoes/v0007.json` | Edição no frontend e novas versões revisadas |
 | Memória de trabalho | `memoria.py`, `Fato`, `sessao.py` e snapshot persistido pela API em SQLite | Ensaios em dispositivos físicos |
 | Módulo de explicação | `traco.py` e `explicacao.py`, chamados por `porque`/`como` e exibidos em diálogos na web | Revisão de compreensão com usuários |
 | Aquisição de conhecimento | Edição e revisão do JSON, com regras documentadas pelo gerador | Editor em grafo e revisão por especialista |
@@ -129,6 +129,6 @@ A equipe passa a editar `base/fonte/comum.json` e `base/fonte/doencas/<doença>.
 
 ## Testes, execução e limites
 
-O estado atual (v0006, 25/10) é de **1154 testes Python aprovados** e 260 subtestes, e **85 de 85 testes Vitest em 12 arquivos** (o teste de preparação do frontend, `inicializacao.test.ts`, às vezes estoura o tempo de 5 s; é conhecido e intermitente). Histórico: 1082 Python, 170 subtestes e 72 Vitest (após `0a76d75`); os 6 arquivos de spec E2E em `web/e2e/` não foram rodados e não se afirma um número novo. Histórico: 1080 Python e 71 Vitest (após `0300cdb`). Histórico: no fechamento de 22/10, após o merge `7587de4`, eram 1077 Python, 170 subtestes, 0 ignorados e 68 Vitest. Como histórico, no checkpoint da troca de modo (`09f5754`), a suíte registra **1066 testes Python aprovados, 1 ignorado e 170 subtestes aprovados**; a suíte `unittest` do motor/base registra **132 testes**, já incluídos na execução pytest, e não deve ser somada a ela. Os **60 casos sintéticos** (v0005) são uma categoria separada. A interface registra **60 testes Vitest** e **11 cenários Playwright**, descritos em [QUALIDADE.md](../../web/QUALIDADE.md); 39/8 são as contagens históricas da integração inicial. As evidências históricas anteriores constam de [evidencias-verificacao.json](evidencias-verificacao.json). Entre as verificações estão permutações MYCIN, desconhecimento, comorbidade, correção, restauração e isolamento do motor em relação à API, ao banco e a `kb`.
+O estado atual (v0007, 25/10) é de **1174 testes Python aprovados** e 260 subtestes, e **91 de 91 testes Vitest em 12 arquivos** (o teste de preparação do frontend, `inicializacao.test.ts`, às vezes estoura o tempo de 5 s; é conhecido e intermitente). Histórico: 1082 Python, 170 subtestes e 72 Vitest (após `0a76d75`); os 6 arquivos de spec E2E em `web/e2e/` não foram rodados e não se afirma um número novo. Histórico: 1080 Python e 71 Vitest (após `0300cdb`). Histórico: no fechamento de 22/10, após o merge `7587de4`, eram 1077 Python, 170 subtestes, 0 ignorados e 68 Vitest. Como histórico, no checkpoint da troca de modo (`09f5754`), a suíte registra **1066 testes Python aprovados, 1 ignorado e 170 subtestes aprovados**; a suíte `unittest` do motor/base registra **132 testes**, já incluídos na execução pytest, e não deve ser somada a ela. Os **60 casos sintéticos** (v0005) são uma categoria separada. A interface registra **60 testes Vitest** e **11 cenários Playwright**, descritos em [QUALIDADE.md](../../web/QUALIDADE.md); 39/8 são as contagens históricas da integração inicial. As evidências históricas anteriores constam de [evidencias-verificacao.json](evidencias-verificacao.json). Entre as verificações estão permutações MYCIN, desconhecimento, comorbidade, correção, restauração e isolamento do motor em relação à API, ao banco e a `kb`.
 
 O ensaio HTTP histórico da API é registrado separadamente dos testes atuais no navegador. Ensaio físico com Wi-Fi desligado, máquina reserva e apresentação ainda exigem confirmação da equipe. Não há validação clínica nem autenticação implementada neste recorte. A integração acrescentou `web/` e preparo do build nos scripts; API, motor, kb, contratos e versões imutáveis foram preservados.

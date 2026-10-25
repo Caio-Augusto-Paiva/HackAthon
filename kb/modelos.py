@@ -64,6 +64,8 @@ class Simbolo(_Modelo):
     fonte: str | None = None
     gravidade: Literal["alta", "media", "baixa"] | None = None
     combinacao: Literal["mycin", "max"] = "mycin"
+    # Perguntas que, já respondidas com valor conhecido, tornam esta desnecessária (ex.: extremidades e temperatura retal).
+    dispensada_se: list[str] | None = None
     nota: str | None = None
     tratamento: Tratamento | None = None  # só para tipo "doenca" (ver validador)
 

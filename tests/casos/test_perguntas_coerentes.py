@@ -13,9 +13,9 @@ def _base_ativa():
     return json.loads((RAIZ / f'base/versoes/{versao}.json').read_text(encoding='utf-8'))
 
 
-def _perguntas_feitas(triagem, sim=()):
+def _perguntas_feitas(triagem, sim=(), modo='produtor'):
     """Responde a triagem dada, "sim" às perguntas em ``sim`` e "não" (ou "não sei") às demais; devolve os ids perguntados."""
-    sessao = Sessao(_base_ativa(), 'produtor')
+    sessao = Sessao(_base_ativa(), modo)
     for tela, valores in triagem:
         if sessao.estado()['pausa']:
             sessao.acao_bandeira('continuar')
@@ -60,6 +60,11 @@ class TestPerguntasCoerentes(unittest.TestCase):
 
     def test_sem_apetite_nao_pergunta_emagrecimento_mesmo_comendo(self):
         self.assertNotIn('emagrecimento_progressivo', self.feitas)
+
+    def test_especialista_com_temperatura_nao_pergunta_as_extremidades(self):
+        triagem = [('estado_termico', {'temperatura_retal': '40'}) if tela == 'estado_termico' else (tela, valores)
+                   for tela, valores in TRIAGEM]
+        self.assertNotIn('extremidades', _perguntas_feitas(triagem, modo='veterinario'))
 
     def test_texto_da_triagem_do_produtor_nao_cita_o_modo_veterinario(self):
         for tela in _base_ativa()['meta']['triagem']:

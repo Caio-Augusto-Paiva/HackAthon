@@ -1550,6 +1550,8 @@ export interface components {
              * @enum {string}
              */
             combinacao: "mycin" | "max";
+            /** Dispensada Se */
+            dispensada_se?: string[] | null;
             /** Dominio */
             dominio: components["schemas"]["DominioBooleano"] | components["schemas"]["DominioCategorico"] | components["schemas"]["DominioNumerico"];
             /** Fonte */

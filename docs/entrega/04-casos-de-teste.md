@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0006`. Casos sintéticos executados: **60**. Aprovados: **60**.
+Base `v0007`. Casos sintéticos executados: **60**. Aprovados: **60**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -293,7 +293,6 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -647,7 +646,6 @@ Metrite: febre e achados uterinos Caso fictício de regressão; suposição a va
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fezes_escassas",
     "fita_urina_corpos_cetonicos",
@@ -1010,7 +1008,6 @@ TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição 
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -3233,7 +3230,6 @@ Bandeira de febre alta isolada Caso fictício de regressão; suposição a valid
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -5341,7 +5337,6 @@ Pneumonia: febre e crepitações à auscultação Caso fictício de regressão; 
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -5594,7 +5589,6 @@ Reticulopericardite: prova de dor reticular positiva Caso fictício de regressã
     "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -6344,7 +6338,6 @@ Leptospirose: sorologia reagente Caso fictício de regressão; suposição a val
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -6595,7 +6588,6 @@ IBR: BoHV-1 detectado Caso fictício de regressão; suposição a validar.
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
@@ -6848,7 +6840,6 @@ BVD: antígeno detectado Caso fictício de regressão; suposição a validar.
     "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
-    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",

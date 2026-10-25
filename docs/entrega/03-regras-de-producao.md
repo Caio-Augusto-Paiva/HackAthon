@@ -4,9 +4,9 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0006`. Pai declarado: `v0005`. Data declarada na base: `2026-10-25`.
+Versão: `v0007`. Pai declarado: `v0006`. Data declarada na base: `2026-10-25`.
 
-Arquivo: `base/versoes/v0006.json`. SHA-256 do JSON canônico: `3217aabb84eb756b14ef965b31dbaae24be58bb2fc70c504c45b338d96e18ee3`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0007.json`. SHA-256 do JSON canônico: `08babdf56093cfaf322eb16c387b337d75e4104923c200ab9b2f558390ac8297`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
 Regras: **137**. Símbolos: **103**. Doenças: **20**.
 
