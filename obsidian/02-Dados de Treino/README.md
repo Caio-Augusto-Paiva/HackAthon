@@ -1,6 +1,6 @@
-# Grafo 2 — Dados das 8 doenças
+# Grafo 2 — Dados das 20 doenças
 
-Este cofre do Obsidian mostra a base de conhecimento do sistema separada por doença: cada doença, as regras que a concluem e os sinais que essas regras usam.
+Este cofre do Obsidian mostra a base de conhecimento do sistema separada por doença: cada doença (20 na v0005), as regras que a concluem e os sinais que essas regras usam. Os 3 pares excludentes da base (`deslocamento_abomaso_esquerda` × `deslocamento_abomaso_direita`, `timpanismo_espumoso` × `timpanismo_gasoso` e `retencao_placenta` × `metrite`) aparecem como ligações `exclui` entre as doenças. Os links de tratamento ficam na base (`tratamento` de cada doença), não neste grafo.
 
 O grafo é **exato**: é gerado pelo conversor `kb/grafo.py` a partir dos arquivos em `base/fonte/`, sem inteligência artificial. Todas as ligações são EXTRACTED e o resultado é o mesmo a cada geração.
 
@@ -11,6 +11,6 @@ O grafo é **exato**: é gerado pelo conversor `kb/grafo.py` a partir dos arquiv
 
 ## O motor pode ler este grafo?
 
-Pode, pelo grafo exato: `kb.exportar_grafo.carregar_do_grafo("graphify-out-dados/grafo_exato.json")` devolve a mesma base, e os 34 casos clínicos dão o mesmo resultado. O motor **não** lê o `graph.json` de uma execução normal do graphify, porque aquele vem de extração por IA e pode variar — isso quebraria a decisão determinística e auditável.
+Pode, pelo grafo exato: `kb.exportar_grafo.carregar_do_grafo("graphify-out-dados/grafo_exato.json")` devolve a mesma base, e os 61 casos clínicos dão o mesmo resultado. O motor **não** lê o `graph.json` de uma execução normal do graphify, porque aquele vem de extração por IA e pode variar — isso quebraria a decisão determinística e auditável.
 
 “Dados de Treino” é só o nome da pasta: o sistema não usa aprendizado de máquina.

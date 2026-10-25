@@ -21,6 +21,7 @@ def _origens(origem: Path) -> dict[str, str]:
         dados = json.loads((origem / relativo).read_text(encoding="utf-8"))
         for item in [*dados.get("simbolos", []), *dados.get("regras", [])]:
             achados[item["id"]] = f"{origem.as_posix()}/{relativo}"
+    achados["__comum__"] = f"{origem.as_posix()}/{COMUM}"
     return achados
 
 
@@ -43,6 +44,11 @@ def extracao(base: Base, origem_por_id: dict[str, str]) -> dict:
                           "confidence": "EXTRACTED", "source_file": arquivo})
         edges.append({"source": f"regra:{r.id}", "target": f"sim:{r.entao.simbolo}", "relation": "conclui",
                       "confidence": "EXTRACTED", "source_file": arquivo, "cf": r.entao.cf})
+    comum = f"{origem_por_id['__comum__']}"
+    for e in base.meta.exclusoes:
+        a, b = e.doencas
+        edges.append({"source": f"sim:{a}", "target": f"sim:{b}", "relation": "exclui",
+                      "confidence": "EXTRACTED", "source_file": comum})
     return {"nodes": nodes, "edges": edges, "hyperedges": [], "input_tokens": 0, "output_tokens": 0}
 
 

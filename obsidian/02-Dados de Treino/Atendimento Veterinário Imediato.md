@@ -19,7 +19,16 @@ tags:
 - [[R-BV-06 SE Temperatura retal ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 - [[R-URG-01 SE Hipocalcemia Puerperal ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 - [[R-URG-02 SE Tristeza Parasitária Bovina ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
-- [[R-URG-03 SE Deslocamento de Abomaso ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-03 SE Deslocamento de Abomaso à Esquerda ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 - [[R-URG-04 SE Metrite Puerperal ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-09 SE Deslocamento de Abomaso à Direita ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-10 SE Timpanismo Espumoso ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-11 SE Timpanismo Gasoso ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-14 SE Reticulopericardite Traumática ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-15 SE Hipomagnesemia ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-16 SE Brucelose ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-17 SE Leptospirose ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-19 SE Diarreia Viral Bovina (BVD) ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-20 SE Tuberculose ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

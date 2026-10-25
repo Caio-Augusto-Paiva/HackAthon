@@ -1,17 +1,16 @@
 ---
 type: community
 cohesion: 0.14
-members: 17
+members: 16
 ---
 
 # Hipocalcemia Puerperal
 
 **Cohesion:** 0.14 - loosely connected
-**Members:** 17 nodes
+**Members:** 16 nodes
 
 ## Members
 - [[Cálcio sérico total]] - concept - base/fonte/doencas/hipocalcemia.json
-- [[Decúbito]] - concept - base/fonte/doencas/hipocalcemia.json
 - [[Desvio cervical em S]] - concept - base/fonte/doencas/hipocalcemia.json
 - [[Hipocalcemia Puerperal]] - concept - base/fonte/doencas/hipocalcemia.json
 - [[Hipotermia]] - concept - base/fonte/doencas/hipocalcemia.json
@@ -36,11 +35,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
+- 11 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
 
 ## Top bridge nodes
 - [[Hipotermia]] - degree 6, connects to 1 community
-- [[Decúbito]] - degree 3, connects to 1 community
+- [[R-HIP-01 SE Decúbito E Periparto imediato ENTÃO Hipocalcemia Puerperal]] - degree 3, connects to 1 community
 - [[R-HIP-05 SE Decúbito E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - degree 3, connects to 1 community
 - [[R-HIP-06 SE Hipotermia E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - degree 3, connects to 1 community
 - [[R-DER-01 SE Dias em lactação ENTÃO Periparto imediato]] - degree 2, connects to 1 community

@@ -1,16 +1,17 @@
 ---
-source_file: "base/fonte/doencas/tpb.json"
+source_file: "base/fonte/comum.json"
 type: "concept"
-community: "Tristeza Parasitária Bovina"
+community: "Comum: bandeiras, triagem e sinais compartilhados"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Tristeza_Parasitária_Bovina
+  - community/Comum_bandeiras_triagem_e_sinais_compartilhados
 ---
 
 # Hemoparasitas no esfregaço
 
 ## Connections
+- [[R-LEP-05 SE Hemoparasitas no esfregaço ENTÃO Leptospirose]] - `condicao_de` [EXTRACTED]
 - [[R-TPB-04 SE Hemoparasitas no esfregaço ENTÃO Tristeza Parasitária Bovina]] - `condicao_de` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Tristeza_Parasitária_Bovina
+#graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

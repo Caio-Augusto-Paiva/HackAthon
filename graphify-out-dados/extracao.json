@@ -60,21 +60,21 @@
       "id": "sim:corrimento_vaginal",
       "label": "Corrimento vaginal",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/metrite.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
       "id": "sim:decubito",
       "label": "Decúbito",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
       "id": "sim:diarreia",
       "label": "Diarreia",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/acidose.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -95,7 +95,7 @@
       "id": "sim:esfregaco_hemoparasitas",
       "label": "Hemoparasitas no esfregaço",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/tpb.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -109,7 +109,7 @@
       "id": "sim:fezes_aquosas_espuma_graos",
       "label": "Fezes com espuma e grãos",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/acidose.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -123,7 +123,7 @@
       "id": "sim:flanco_esquerdo_afundado",
       "label": "Flanco esquerdo afundado",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
       "tipo": "pergunta"
     },
     {
@@ -179,7 +179,7 @@
       "id": "sim:ping_metalico_flanco_esquerdo",
       "label": "Ping no flanco esquerdo",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -197,10 +197,10 @@
       "tipo": "pergunta"
     },
     {
-      "id": "sim:retencao_placenta",
+      "id": "sim:historico_retencao_placenta",
       "label": "Histórico de retenção de placenta",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/metrite.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "ficha"
     },
     {
@@ -228,7 +228,7 @@
       "id": "sim:urina_escura",
       "label": "Urina escura",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/tpb.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -277,7 +277,7 @@
       "id": "sim:puerperio",
       "label": "Puerpério",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/metrite.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "derivado"
     },
     {
@@ -299,13 +299,6 @@
       "label": "Dermatite Digital Bovina",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/dermatite_digital.json",
-      "tipo": "doenca"
-    },
-    {
-      "id": "sim:deslocamento_abomaso",
-      "label": "Deslocamento de Abomaso",
-      "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
       "tipo": "doenca"
     },
     {
@@ -358,6 +351,377 @@
       "tipo": "urgencia"
     },
     {
+      "id": "sim:higroma",
+      "label": "Inchaço nos joelhos",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:vacinada_brucelose",
+      "label": "Vacinada contra brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:sorologia_brucelose_reagente",
+      "label": "Sorologia para brucelose reagente",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:brucelose",
+      "label": "Brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:feridas_boca",
+      "label": "Feridas na boca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:falhas_reprodutivas_lote",
+      "label": "Falhas reprodutivas no lote",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:antigeno_bvdv",
+      "label": "BVDV detectado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:bvd",
+      "label": "Diarreia Viral Bovina (BVD)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:distensao_flanco_direito",
+      "label": "Barriga estufada do lado direito",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:desidratacao",
+      "label": "Desidratação",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:deslocamento_abomaso_direita",
+      "label": "Deslocamento de Abomaso à Direita",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:tosse",
+      "label": "Tosse",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:secrecao_nasal",
+      "label": "Secreção nasal",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:aborto_recente",
+      "label": "Aborto recente",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:distensao_flanco_esquerdo",
+      "label": "Barriga estufada do lado esquerdo",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ping_flanco_direito",
+      "label": "Ping no flanco direito",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:tremores",
+      "label": "Tremores musculares",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:fezes_escassas",
+      "label": "Pouco esterco",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pasto_leguminosa_recente",
+      "label": "Pasto de leguminosa recente",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:espuma_sonda",
+      "label": "Conteúdo espumoso na sonda",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:gas_livre_sonda",
+      "label": "Gás livre na sonda",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ausculta_crepitacoes",
+      "label": "Crepitações à auscultação pulmonar",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:deslocamento_abomaso_esquerda",
+      "label": "Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:agitacao",
+      "label": "Agitação ou reação exagerada",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pasto_novo_adubado",
+      "label": "Pasto novo e adubado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:magnesio_serico",
+      "label": "Magnésio sérico",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:hipomagnesemia",
+      "label": "Hipomagnesemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:focinho_avermelhado",
+      "label": "Focinho muito vermelho",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:olhos_lacrimejando",
+      "label": "Olhos lacrimejando",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pcr_bohv1",
+      "label": "BoHV-1 detectado",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ibr",
+      "label": "Rinotraqueíte Infecciosa Bovina (IBR)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:leite_com_sangue",
+      "label": "Leite rosado ou com sangue",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:sorologia_leptospirose_reagente",
+      "label": "Sorologia para leptospirose reagente",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:leptospirose",
+      "label": "Leptospirose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:respiracao_ofegante",
+      "label": "Respiração com esforço",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pneumonia",
+      "label": "Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:membranas_expostas_vulva",
+      "label": "Restos de placenta na vulva",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:placenta_nao_expulsa_24h",
+      "label": "Placenta não saiu em 24 horas",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:palpacao_membranas_retidas",
+      "label": "Membranas retidas ao exame",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:retencao_placenta",
+      "label": "Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:costas_arqueadas",
+      "label": "Costas arqueadas",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:gemido",
+      "label": "Gemido",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:prova_dor_reticular",
+      "label": "Prova de dor reticular",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:edema_barbela",
+      "label": "Edema de barbela ou peito",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:reticulopericardite_traumatica",
+      "label": "Reticulopericardite Traumática",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:outros_animais_estufados",
+      "label": "Outros animais estufados",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:timpanismo_espumoso",
+      "label": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:engasgo",
+      "label": "Engasgo ou dificuldade de engolir",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:timpanismo_gasoso",
+      "label": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:emagrecimento_progressivo",
+      "label": "Emagrecimento progressivo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:linfonodos_aumentados",
+      "label": "Ínguas aumentadas",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:tuberculina_reagente",
+      "label": "Tuberculinização reagente",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:tuberculose",
+      "label": "Tuberculose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "tipo": "doenca"
+    },
+    {
       "id": "regra:R-DER-01",
       "label": "R-DER-01: SE Dias em lactação ENTÃO Periparto imediato",
       "file_type": "concept",
@@ -368,7 +732,7 @@
       "id": "regra:R-DER-02",
       "label": "R-DER-02: SE Dias em lactação ENTÃO Puerpério",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/metrite.json",
+      "source_file": "base/fonte/comum.json",
       "classe": "evidencia"
     },
     {
@@ -449,13 +813,6 @@
       "classe": "evidencia"
     },
     {
-      "id": "regra:R-DAB-01",
-      "label": "R-DAB-01: SE Início da lactação E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso",
-      "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
-      "classe": "evidencia"
-    },
-    {
       "id": "regra:R-HIP-02",
       "label": "R-HIP-02: SE Periparto imediato E Desvio cervical em S E Hipotermia ENTÃO Hipocalcemia Puerperal",
       "file_type": "concept",
@@ -502,13 +859,6 @@
       "label": "R-CET-03: SE Início da lactação E Recusa seletiva de concentrado ENTÃO Cetose / Hipercetonemia",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/cetose.json",
-      "classe": "evidencia"
-    },
-    {
-      "id": "regra:R-DAB-02",
-      "label": "R-DAB-02: SE Início da lactação E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso",
-      "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
       "classe": "evidencia"
     },
     {
@@ -579,13 +929,6 @@
       "label": "R-CET-05: SE Corpos cetônicos na urina ENTÃO Cetose / Hipercetonemia",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/cetose.json",
-      "classe": "evidencia"
-    },
-    {
-      "id": "regra:R-DAB-03",
-      "label": "R-DAB-03: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso",
-      "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
       "classe": "evidencia"
     },
     {
@@ -709,9 +1052,9 @@
     },
     {
       "id": "regra:R-URG-03",
-      "label": "R-URG-03: SE Deslocamento de Abomaso ENTÃO Atendimento Veterinário Imediato",
+      "label": "R-URG-03: SE Deslocamento de Abomaso à Esquerda ENTÃO Atendimento Veterinário Imediato",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
       "classe": "urgencia"
     },
     {
@@ -757,6 +1100,90 @@
       "classe": "evidencia"
     },
     {
+      "id": "regra:R-BRU-01",
+      "label": "R-BRU-01: SE Aborto recente E Histórico de retenção de placenta ENTÃO Brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BRU-02",
+      "label": "R-BRU-02: SE Inchaço nos joelhos ENTÃO Brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BRU-03",
+      "label": "R-BRU-03: SE Sorologia para brucelose reagente ENTÃO Brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BRU-04",
+      "label": "R-BRU-04: SE Corrimento vaginal ENTÃO Brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BRU-05",
+      "label": "R-BRU-05: SE Vacinada contra brucelose ENTÃO Brucelose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-16",
+      "label": "R-URG-16: SE Brucelose ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-BVD-01",
+      "label": "R-BVD-01: SE Diarreia E Feridas na boca ENTÃO Diarreia Viral Bovina (BVD)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BVD-02",
+      "label": "R-BVD-02: SE Aborto recente E Falhas reprodutivas no lote E Febre ENTÃO Diarreia Viral Bovina (BVD)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BVD-03",
+      "label": "R-BVD-03: SE BVDV detectado ENTÃO Diarreia Viral Bovina (BVD)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BVD-04",
+      "label": "R-BVD-04: SE Diarreia E Febre ENTÃO Diarreia Viral Bovina (BVD)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-BVD-05",
+      "label": "R-BVD-05: SE Fezes com espuma e grãos E Mudança abrupta de concentrado ENTÃO Diarreia Viral Bovina (BVD)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-19",
+      "label": "R-URG-19: SE Diarreia Viral Bovina (BVD) ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "classe": "urgencia"
+    },
+    {
       "id": "regra:R-CET-06",
       "label": "R-CET-06: SE Apetite ENTÃO Cetose / Hipercetonemia",
       "file_type": "concept",
@@ -764,10 +1191,94 @@
       "classe": "evidencia"
     },
     {
-      "id": "regra:R-DAB-04",
-      "label": "R-DAB-04: SE Apetite ENTÃO Deslocamento de Abomaso",
+      "id": "regra:R-DAD-01",
+      "label": "R-DAD-01: SE Início da lactação E Apetite E Pouco esterco ENTÃO Deslocamento de Abomaso à Direita",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAD-02",
+      "label": "R-DAD-02: SE Barriga estufada do lado direito E Apetite ENTÃO Deslocamento de Abomaso à Direita",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAD-03",
+      "label": "R-DAD-03: SE Ping no flanco direito ENTÃO Deslocamento de Abomaso à Direita",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAD-04",
+      "label": "R-DAD-04: SE Desidratação E Apetite ENTÃO Deslocamento de Abomaso à Direita",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAD-05",
+      "label": "R-DAD-05: SE Apetite E Apatia ENTÃO Deslocamento de Abomaso à Direita",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAD-06",
+      "label": "R-DAD-06: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso à Direita",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-09",
+      "label": "R-URG-09: SE Deslocamento de Abomaso à Direita ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-DAE-01",
+      "label": "R-DAE-01: SE Início da lactação E Apetite E Queda de produção de leite ENTÃO Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAE-02",
+      "label": "R-DAE-02: SE Início da lactação E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAE-03",
+      "label": "R-DAE-03: SE Ping no flanco esquerdo ENTÃO Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAE-04",
+      "label": "R-DAE-04: SE Apetite ENTÃO Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAE-05",
+      "label": "R-DAE-05: SE Início da lactação E Pouco esterco ENTÃO Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DAE-06",
+      "label": "R-DAE-06: SE Ping no flanco direito ENTÃO Deslocamento de Abomaso à Esquerda",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
       "classe": "evidencia"
     },
     {
@@ -783,6 +1294,391 @@
       "file_type": "concept",
       "source_file": "base/fonte/doencas/hipocalcemia.json",
       "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HMG-01",
+      "label": "R-HMG-01: SE Tremores musculares E Agitação ou reação exagerada E Apetite ENTÃO Hipomagnesemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HMG-02",
+      "label": "R-HMG-02: SE Pasto novo e adubado E Apetite ENTÃO Hipomagnesemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HMG-03",
+      "label": "R-HMG-03: SE Magnésio sérico ENTÃO Hipomagnesemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HMG-04",
+      "label": "R-HMG-04: SE Decúbito E Temperatura ao toque das extremidades ENTÃO Hipomagnesemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-HMG-05",
+      "label": "R-HMG-05: SE Magnésio sérico ENTÃO Hipomagnesemia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-15",
+      "label": "R-URG-15: SE Hipomagnesemia ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-IBR-01",
+      "label": "R-IBR-01: SE Focinho muito vermelho E Secreção nasal E Queda de produção de leite ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-IBR-02",
+      "label": "R-IBR-02: SE Olhos lacrimejando E Febre ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-IBR-03",
+      "label": "R-IBR-03: SE BoHV-1 detectado ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-IBR-04",
+      "label": "R-IBR-04: SE Febre E Queda de produção de leite ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-IBR-05",
+      "label": "R-IBR-05: SE Crepitações à auscultação pulmonar ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-18",
+      "label": "R-URG-18: SE Rinotraqueíte Infecciosa Bovina (IBR) ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-LEP-01",
+      "label": "R-LEP-01: SE Aborto recente E Febre ENTÃO Leptospirose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LEP-02",
+      "label": "R-LEP-02: SE Leite rosado ou com sangue E Queda de produção de leite ENTÃO Leptospirose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LEP-03",
+      "label": "R-LEP-03: SE Sorologia para leptospirose reagente ENTÃO Leptospirose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LEP-04",
+      "label": "R-LEP-04: SE Urina escura E Febre ENTÃO Leptospirose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LEP-05",
+      "label": "R-LEP-05: SE Hemoparasitas no esfregaço ENTÃO Leptospirose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-17",
+      "label": "R-URG-17: SE Leptospirose ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-PNE-01",
+      "label": "R-PNE-01: SE Tosse E Apetite ENTÃO Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-PNE-02",
+      "label": "R-PNE-02: SE Respiração com esforço E Apetite ENTÃO Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-PNE-03",
+      "label": "R-PNE-03: SE Crepitações à auscultação pulmonar ENTÃO Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-PNE-04",
+      "label": "R-PNE-04: SE Secreção nasal E Apetite ENTÃO Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-PNE-05",
+      "label": "R-PNE-05: SE Febre E Apatia ENTÃO Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-PNE-06",
+      "label": "R-PNE-06: SE Barriga estufada do lado esquerdo E Apetite ENTÃO Pneumonia",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-13",
+      "label": "R-URG-13: SE Pneumonia ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-RPL-01",
+      "label": "R-RPL-01: SE Puerpério E Restos de placenta na vulva ENTÃO Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPL-02",
+      "label": "R-RPL-02: SE Puerpério E Placenta não saiu em 24 horas ENTÃO Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPL-03",
+      "label": "R-RPL-03: SE Membranas retidas ao exame ENTÃO Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPL-04",
+      "label": "R-RPL-04: SE Histórico de retenção de placenta E Puerpério ENTÃO Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPL-05",
+      "label": "R-RPL-05: SE Corrimento vaginal E Puerpério ENTÃO Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPL-06",
+      "label": "R-RPL-06: SE Dias em lactação ENTÃO Retenção de Placenta",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-12",
+      "label": "R-URG-12: SE Retenção de Placenta ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-RPT-01",
+      "label": "R-RPT-01: SE Costas arqueadas E Gemido E Apetite ENTÃO Reticulopericardite Traumática",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPT-03",
+      "label": "R-RPT-03: SE Prova de dor reticular ENTÃO Reticulopericardite Traumática",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPT-04",
+      "label": "R-RPT-04: SE Edema de barbela ou peito E Febre ENTÃO Reticulopericardite Traumática",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPT-05",
+      "label": "R-RPT-05: SE Apetite E Queda de produção de leite E Febre ENTÃO Reticulopericardite Traumática",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-RPT-06",
+      "label": "R-RPT-06: SE Ping no flanco esquerdo ENTÃO Reticulopericardite Traumática",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-14",
+      "label": "R-URG-14: SE Reticulopericardite Traumática ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-TES-01",
+      "label": "R-TES-01: SE Barriga estufada do lado esquerdo E Pasto de leguminosa recente E Apetite ENTÃO Timpanismo Espumoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TES-02",
+      "label": "R-TES-02: SE Outros animais estufados E Apetite ENTÃO Timpanismo Espumoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TES-03",
+      "label": "R-TES-03: SE Conteúdo espumoso na sonda ENTÃO Timpanismo Espumoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TES-04",
+      "label": "R-TES-04: SE Apetite E Queda de produção de leite ENTÃO Timpanismo Espumoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TES-05",
+      "label": "R-TES-05: SE Gás livre na sonda ENTÃO Timpanismo Espumoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-10",
+      "label": "R-URG-10: SE Timpanismo Espumoso ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-TGA-01",
+      "label": "R-TGA-01: SE Barriga estufada do lado esquerdo E Engasgo ou dificuldade de engolir E Apetite ENTÃO Timpanismo Gasoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TGA-03",
+      "label": "R-TGA-03: SE Gás livre na sonda ENTÃO Timpanismo Gasoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TGA-04",
+      "label": "R-TGA-04: SE Apetite E Apatia ENTÃO Timpanismo Gasoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TGA-05",
+      "label": "R-TGA-05: SE Conteúdo espumoso na sonda ENTÃO Timpanismo Gasoso",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-11",
+      "label": "R-URG-11: SE Timpanismo Gasoso ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-TUB-01",
+      "label": "R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produção de leite ENTÃO Tuberculose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TUB-02",
+      "label": "R-TUB-02: SE Ínguas aumentadas E Queda de produção de leite ENTÃO Tuberculose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TUB-03",
+      "label": "R-TUB-03: SE Tuberculinização reagente ENTÃO Tuberculose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TUB-04",
+      "label": "R-TUB-04: SE Apetite E Queda de produção de leite ENTÃO Tuberculose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-TUB-05",
+      "label": "R-TUB-05: SE Febre ENTÃO Tuberculose",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-20",
+      "label": "R-URG-20: SE Tuberculose ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "classe": "urgencia"
     }
   ],
   "edges": [
@@ -806,14 +1702,14 @@
       "target": "regra:R-DER-02",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/metrite.json"
+      "source_file": "base/fonte/comum.json"
     },
     {
       "source": "regra:R-DER-02",
       "target": "sim:puerperio",
       "relation": "conclui",
       "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/metrite.json",
+      "source_file": "base/fonte/comum.json",
       "cf": 0.99
     },
     {
@@ -996,35 +1892,6 @@
       "cf": 0.4
     },
     {
-      "source": "sim:inicio_lactacao",
-      "target": "regra:R-DAB-01",
-      "relation": "condicao_de",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
-    },
-    {
-      "source": "sim:apetite",
-      "target": "regra:R-DAB-01",
-      "relation": "condicao_de",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
-    },
-    {
-      "source": "sim:queda_producao",
-      "target": "regra:R-DAB-01",
-      "relation": "condicao_de",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
-    },
-    {
-      "source": "regra:R-DAB-01",
-      "target": "sim:deslocamento_abomaso",
-      "relation": "conclui",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
-      "cf": 0.3
-    },
-    {
       "source": "sim:periparto_imediato",
       "target": "regra:R-HIP-02",
       "relation": "condicao_de",
@@ -1200,28 +2067,6 @@
       "cf": 0.45
     },
     {
-      "source": "sim:inicio_lactacao",
-      "target": "regra:R-DAB-02",
-      "relation": "condicao_de",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
-    },
-    {
-      "source": "sim:flanco_esquerdo_afundado",
-      "target": "regra:R-DAB-02",
-      "relation": "condicao_de",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
-    },
-    {
-      "source": "regra:R-DAB-02",
-      "target": "sim:deslocamento_abomaso",
-      "relation": "conclui",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
-      "cf": 0.4
-    },
-    {
       "source": "sim:claudicacao",
       "target": "regra:R-DD-02",
       "relation": "condicao_de",
@@ -1288,7 +2133,7 @@
       "cf": 0.75
     },
     {
-      "source": "sim:retencao_placenta",
+      "source": "sim:historico_retencao_placenta",
       "target": "regra:R-MET-04",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -1412,21 +2257,6 @@
       "confidence": "EXTRACTED",
       "source_file": "base/fonte/doencas/cetose.json",
       "cf": 0.7
-    },
-    {
-      "source": "sim:ping_metalico_flanco_esquerdo",
-      "target": "regra:R-DAB-03",
-      "relation": "condicao_de",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
-    },
-    {
-      "source": "regra:R-DAB-03",
-      "target": "sim:deslocamento_abomaso",
-      "relation": "conclui",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
-      "cf": 0.9
     },
     {
       "source": "sim:claudicacao",
@@ -1712,18 +2542,18 @@
       "cf": 0.99
     },
     {
-      "source": "sim:deslocamento_abomaso",
+      "source": "sim:deslocamento_abomaso_esquerda",
       "target": "regra:R-URG-03",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
     },
     {
       "source": "regra:R-URG-03",
       "target": "sim:chamar_agora",
       "relation": "conclui",
       "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
       "cf": 0.99
     },
     {
@@ -1817,6 +2647,228 @@
       "cf": 0.05
     },
     {
+      "source": "sim:aborto_recente",
+      "target": "regra:R-BRU-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "sim:historico_retencao_placenta",
+      "target": "regra:R-BRU-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "regra:R-BRU-01",
+      "target": "sim:brucelose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:higroma",
+      "target": "regra:R-BRU-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "regra:R-BRU-02",
+      "target": "sim:brucelose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:sorologia_brucelose_reagente",
+      "target": "regra:R-BRU-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "regra:R-BRU-03",
+      "target": "sim:brucelose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-BRU-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "regra:R-BRU-04",
+      "target": "sim:brucelose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:vacinada_brucelose",
+      "target": "regra:R-BRU-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "regra:R-BRU-05",
+      "target": "sim:brucelose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:brucelose",
+      "target": "regra:R-URG-16",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "regra:R-URG-16",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/brucelose.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:diarreia",
+      "target": "regra:R-BVD-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "sim:feridas_boca",
+      "target": "regra:R-BVD-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-BVD-01",
+      "target": "sim:bvd",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:aborto_recente",
+      "target": "regra:R-BVD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "sim:falhas_reprodutivas_lote",
+      "target": "regra:R-BVD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-BVD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-BVD-02",
+      "target": "sim:bvd",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:antigeno_bvdv",
+      "target": "regra:R-BVD-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-BVD-03",
+      "target": "sim:bvd",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:diarreia",
+      "target": "regra:R-BVD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-BVD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-BVD-04",
+      "target": "sim:bvd",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "cf": 0.1
+    },
+    {
+      "source": "sim:fezes_aquosas_espuma_graos",
+      "target": "regra:R-BVD-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "sim:mudanca_abrupta_concentrado",
+      "target": "regra:R-BVD-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-BVD-05",
+      "target": "sim:bvd",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:bvd",
+      "target": "regra:R-URG-19",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-URG-19",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/bvd.json",
+      "cf": 0.99
+    },
+    {
       "source": "sim:apetite",
       "target": "regra:R-CET-06",
       "relation": "condicao_de",
@@ -1832,19 +2884,262 @@
       "cf": 0.05
     },
     {
-      "source": "sim:apetite",
-      "target": "regra:R-DAB-04",
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-DAD-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json"
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
     },
     {
-      "source": "regra:R-DAB-04",
-      "target": "sim:deslocamento_abomaso",
+      "source": "sim:apetite",
+      "target": "regra:R-DAD-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "sim:fezes_escassas",
+      "target": "regra:R-DAD-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-DAD-01",
+      "target": "sim:deslocamento_abomaso_direita",
       "relation": "conclui",
       "confidence": "EXTRACTED",
-      "source_file": "base/fonte/doencas/deslocamento_abomaso.json",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:distensao_flanco_direito",
+      "target": "regra:R-DAD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAD-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-DAD-02",
+      "target": "sim:deslocamento_abomaso_direita",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "cf": 0.75
+    },
+    {
+      "source": "sim:ping_flanco_direito",
+      "target": "regra:R-DAD-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-DAD-03",
+      "target": "sim:deslocamento_abomaso_direita",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:desidratacao",
+      "target": "regra:R-DAD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-DAD-04",
+      "target": "sim:deslocamento_abomaso_direita",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAD-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "sim:apatia",
+      "target": "regra:R-DAD-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-DAD-05",
+      "target": "sim:deslocamento_abomaso_direita",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
       "cf": 0.05
+    },
+    {
+      "source": "sim:ping_metalico_flanco_esquerdo",
+      "target": "regra:R-DAD-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-DAD-06",
+      "target": "sim:deslocamento_abomaso_direita",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "cf": -0.6
+    },
+    {
+      "source": "sim:deslocamento_abomaso_direita",
+      "target": "regra:R-URG-09",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json"
+    },
+    {
+      "source": "regra:R-URG-09",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_direita.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-DAE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-DAE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-DAE-01",
+      "target": "sim:deslocamento_abomaso_esquerda",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-DAE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "sim:flanco_esquerdo_afundado",
+      "target": "regra:R-DAE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-DAE-02",
+      "target": "sim:deslocamento_abomaso_esquerda",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:ping_metalico_flanco_esquerdo",
+      "target": "regra:R-DAE-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-DAE-03",
+      "target": "sim:deslocamento_abomaso_esquerda",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-DAE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-DAE-04",
+      "target": "sim:deslocamento_abomaso_esquerda",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-DAE-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "sim:fezes_escassas",
+      "target": "regra:R-DAE-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-DAE-05",
+      "target": "sim:deslocamento_abomaso_esquerda",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "cf": 0.2
+    },
+    {
+      "source": "sim:ping_flanco_direito",
+      "target": "regra:R-DAE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-DAE-06",
+      "target": "sim:deslocamento_abomaso_esquerda",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json",
+      "cf": -0.6
     },
     {
       "source": "sim:decubito",
@@ -1889,6 +3184,1104 @@
       "confidence": "EXTRACTED",
       "source_file": "base/fonte/doencas/hipocalcemia.json",
       "cf": 0.15
+    },
+    {
+      "source": "sim:tremores",
+      "target": "regra:R-HMG-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "sim:agitacao",
+      "target": "regra:R-HMG-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-HMG-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "regra:R-HMG-01",
+      "target": "sim:hipomagnesemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:pasto_novo_adubado",
+      "target": "regra:R-HMG-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-HMG-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "regra:R-HMG-02",
+      "target": "sim:hipomagnesemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:magnesio_serico",
+      "target": "regra:R-HMG-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "regra:R-HMG-03",
+      "target": "sim:hipomagnesemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:decubito",
+      "target": "regra:R-HMG-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "sim:extremidades",
+      "target": "regra:R-HMG-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "regra:R-HMG-04",
+      "target": "sim:hipomagnesemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:magnesio_serico",
+      "target": "regra:R-HMG-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "regra:R-HMG-05",
+      "target": "sim:hipomagnesemia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "cf": -0.7
+    },
+    {
+      "source": "sim:hipomagnesemia",
+      "target": "regra:R-URG-15",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "regra:R-URG-15",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:focinho_avermelhado",
+      "target": "regra:R-IBR-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "sim:secrecao_nasal",
+      "target": "regra:R-IBR-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-IBR-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-IBR-01",
+      "target": "sim:ibr",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:olhos_lacrimejando",
+      "target": "regra:R-IBR-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-IBR-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-IBR-02",
+      "target": "sim:ibr",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:pcr_bohv1",
+      "target": "regra:R-IBR-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-IBR-03",
+      "target": "sim:ibr",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-IBR-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-IBR-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-IBR-04",
+      "target": "sim:ibr",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:ausculta_crepitacoes",
+      "target": "regra:R-IBR-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-IBR-05",
+      "target": "sim:ibr",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "cf": -0.3
+    },
+    {
+      "source": "sim:ibr",
+      "target": "regra:R-URG-18",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-URG-18",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ibr.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:aborto_recente",
+      "target": "regra:R-LEP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-LEP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "regra:R-LEP-01",
+      "target": "sim:leptospirose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:leite_com_sangue",
+      "target": "regra:R-LEP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-LEP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "regra:R-LEP-02",
+      "target": "sim:leptospirose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:sorologia_leptospirose_reagente",
+      "target": "regra:R-LEP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "regra:R-LEP-03",
+      "target": "sim:leptospirose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:urina_escura",
+      "target": "regra:R-LEP-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-LEP-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "regra:R-LEP-04",
+      "target": "sim:leptospirose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "cf": 0.1
+    },
+    {
+      "source": "sim:esfregaco_hemoparasitas",
+      "target": "regra:R-LEP-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "regra:R-LEP-05",
+      "target": "sim:leptospirose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "cf": -0.5
+    },
+    {
+      "source": "sim:leptospirose",
+      "target": "regra:R-URG-17",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json"
+    },
+    {
+      "source": "regra:R-URG-17",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/leptospirose.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:tosse",
+      "target": "regra:R-PNE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-PNE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-PNE-01",
+      "target": "sim:pneumonia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": 0.45
+    },
+    {
+      "source": "sim:respiracao_ofegante",
+      "target": "regra:R-PNE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-PNE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-PNE-02",
+      "target": "sim:pneumonia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:ausculta_crepitacoes",
+      "target": "regra:R-PNE-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-PNE-03",
+      "target": "sim:pneumonia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:secrecao_nasal",
+      "target": "regra:R-PNE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-PNE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-PNE-04",
+      "target": "sim:pneumonia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-PNE-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "sim:apatia",
+      "target": "regra:R-PNE-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-PNE-05",
+      "target": "sim:pneumonia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": 0.1
+    },
+    {
+      "source": "sim:distensao_flanco_esquerdo",
+      "target": "regra:R-PNE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-PNE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-PNE-06",
+      "target": "sim:pneumonia",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": -0.3
+    },
+    {
+      "source": "sim:pneumonia",
+      "target": "regra:R-URG-13",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json"
+    },
+    {
+      "source": "regra:R-URG-13",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/pneumonia.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-RPL-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "sim:membranas_expostas_vulva",
+      "target": "regra:R-RPL-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-RPL-01",
+      "target": "sim:retencao_placenta",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-RPL-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "sim:placenta_nao_expulsa_24h",
+      "target": "regra:R-RPL-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-RPL-02",
+      "target": "sim:retencao_placenta",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:palpacao_membranas_retidas",
+      "target": "regra:R-RPL-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-RPL-03",
+      "target": "sim:retencao_placenta",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:historico_retencao_placenta",
+      "target": "regra:R-RPL-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-RPL-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-RPL-04",
+      "target": "sim:retencao_placenta",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": 0.35
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-RPL-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "sim:puerperio",
+      "target": "regra:R-RPL-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-RPL-05",
+      "target": "sim:retencao_placenta",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": 0.1
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-RPL-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-RPL-06",
+      "target": "sim:retencao_placenta",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": -0.5
+    },
+    {
+      "source": "sim:retencao_placenta",
+      "target": "regra:R-URG-12",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "regra:R-URG-12",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/retencao_placenta.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:costas_arqueadas",
+      "target": "regra:R-RPT-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "sim:gemido",
+      "target": "regra:R-RPT-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-RPT-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-RPT-01",
+      "target": "sim:reticulopericardite_traumatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:prova_dor_reticular",
+      "target": "regra:R-RPT-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-RPT-03",
+      "target": "sim:reticulopericardite_traumatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:edema_barbela",
+      "target": "regra:R-RPT-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-RPT-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-RPT-04",
+      "target": "sim:reticulopericardite_traumatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-RPT-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-RPT-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-RPT-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-RPT-05",
+      "target": "sim:reticulopericardite_traumatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "cf": 0.1
+    },
+    {
+      "source": "sim:ping_metalico_flanco_esquerdo",
+      "target": "regra:R-RPT-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-RPT-06",
+      "target": "sim:reticulopericardite_traumatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:reticulopericardite_traumatica",
+      "target": "regra:R-URG-14",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-URG-14",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:distensao_flanco_esquerdo",
+      "target": "regra:R-TES-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "sim:pasto_leguminosa_recente",
+      "target": "regra:R-TES-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-TES-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "regra:R-TES-01",
+      "target": "sim:timpanismo_espumoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:outros_animais_estufados",
+      "target": "regra:R-TES-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-TES-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "regra:R-TES-02",
+      "target": "sim:timpanismo_espumoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "cf": 0.3
+    },
+    {
+      "source": "sim:espuma_sonda",
+      "target": "regra:R-TES-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "regra:R-TES-03",
+      "target": "sim:timpanismo_espumoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-TES-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-TES-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "regra:R-TES-04",
+      "target": "sim:timpanismo_espumoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:gas_livre_sonda",
+      "target": "regra:R-TES-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "regra:R-TES-05",
+      "target": "sim:timpanismo_espumoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "cf": -0.7
+    },
+    {
+      "source": "sim:timpanismo_espumoso",
+      "target": "regra:R-URG-10",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "source": "regra:R-URG-10",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:distensao_flanco_esquerdo",
+      "target": "regra:R-TGA-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "sim:engasgo",
+      "target": "regra:R-TGA-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-TGA-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "regra:R-TGA-01",
+      "target": "sim:timpanismo_gasoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:gas_livre_sonda",
+      "target": "regra:R-TGA-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "regra:R-TGA-03",
+      "target": "sim:timpanismo_gasoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-TGA-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "sim:apatia",
+      "target": "regra:R-TGA-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "regra:R-TGA-04",
+      "target": "sim:timpanismo_gasoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:espuma_sonda",
+      "target": "regra:R-TGA-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "regra:R-TGA-05",
+      "target": "sim:timpanismo_gasoso",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "cf": -0.7
+    },
+    {
+      "source": "sim:timpanismo_gasoso",
+      "target": "regra:R-URG-11",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "regra:R-URG-11",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:emagrecimento_progressivo",
+      "target": "regra:R-TUB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:tosse",
+      "target": "regra:R-TUB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-TUB-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-TUB-01",
+      "target": "sim:tuberculose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "cf": 0.5
+    },
+    {
+      "source": "sim:linfonodos_aumentados",
+      "target": "regra:R-TUB-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-TUB-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-TUB-02",
+      "target": "sim:tuberculose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "cf": 0.4
+    },
+    {
+      "source": "sim:tuberculina_reagente",
+      "target": "regra:R-TUB-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-TUB-03",
+      "target": "sim:tuberculose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "cf": 0.9
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-TUB-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:queda_producao",
+      "target": "regra:R-TUB-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-TUB-04",
+      "target": "sim:tuberculose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-TUB-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-TUB-05",
+      "target": "sim:tuberculose",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "cf": -0.3
+    },
+    {
+      "source": "sim:tuberculose",
+      "target": "regra:R-URG-20",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-URG-20",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/tuberculose.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:deslocamento_abomaso_esquerda",
+      "target": "sim:deslocamento_abomaso_direita",
+      "relation": "exclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:timpanismo_espumoso",
+      "target": "sim:timpanismo_gasoso",
+      "relation": "exclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:retencao_placenta",
+      "target": "sim:metrite",
+      "relation": "exclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
     }
   ],
   "hyperedges": [],

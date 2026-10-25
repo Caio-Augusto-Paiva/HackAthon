@@ -16,5 +16,6 @@ tags:
 - [[R-DER-03 SE Dias em lactação ENTÃO Início da lactação]] - `condicao_de` [EXTRACTED]
 - [[R-HIP-05 SE Decúbito E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - `condicao_de` [EXTRACTED]
 - [[R-HIP-06 SE Hipotermia E Dias em lactação ENTÃO Hipocalcemia Puerperal]] - `condicao_de` [EXTRACTED]
+- [[R-RPL-06 SE Dias em lactação ENTÃO Retenção de Placenta]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

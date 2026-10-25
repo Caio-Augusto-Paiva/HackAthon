@@ -15,52 +15,136 @@
       }
     },
     {
-      "query": "tag:#community/Cetose_/_Hipercetonemia",
+      "query": "tag:#community/Brucelose",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Dermatite_Digital_Bovina",
+      "query": "tag:#community/Diarreia_Viral_Bovina_BVD",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Deslocamento_de_Abomaso",
+      "query": "tag:#community/Cetose_/_Hipercetonemia",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Hipocalcemia_Puerperal",
+      "query": "tag:#community/Dermatite_Digital_Bovina",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Mastite",
+      "query": "tag:#community/Deslocamento_de_Abomaso_\u00e0_Direita",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Metrite_Puerperal",
+      "query": "tag:#community/Deslocamento_de_Abomaso_\u00e0_Esquerda",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Tristeza_Parasit\u00e1ria_Bovina",
+      "query": "tag:#community/Hipocalcemia_Puerperal",
       "color": {
         "a": 1,
         "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Hipomagnesemia",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Rinotraque\u00edte_Infecciosa_Bovina_IBR",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Leptospirose",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Mastite",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Metrite_Puerperal",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Pneumonia",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Reten\u00e7\u00e3o_de_Placenta",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Reticulopericardite_Traum\u00e1tica",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Timpanismo_Espumoso",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Timpanismo_Gasoso",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Tristeza_Parasit\u00e1ria_Bovina",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Tuberculose",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
       }
     }
   ]

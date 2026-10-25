@@ -50,3 +50,15 @@ def test_extracao_no_esquema_do_graphify(saida):
         assert a["confidence"] == "EXTRACTED"
     assert sum(i.startswith("sim:") for i in ids) == 51
     assert sum(i.startswith("regra:") for i in ids) == 56
+
+
+def test_exportar_aresta_exclui(tmp_path):
+    v0005 = carregar_base(RAIZ / "base/versoes/v0005.json")
+    gravar_fonte(v0005, tmp_path / "fonte")
+    _, ext = exportar(tmp_path / "fonte", tmp_path / "saida")
+    dados = json.loads(ext.read_text(encoding="utf-8"))
+    exclui = [a for a in dados["edges"] if a["relation"] == "exclui"]
+    assert len(exclui) == 3
+    pares = {frozenset((a["source"], a["target"])) for a in exclui}
+    assert frozenset(("sim:retencao_placenta", "sim:metrite")) in pares
+    assert all(a["source_file"].endswith("comum.json") for a in exclui)

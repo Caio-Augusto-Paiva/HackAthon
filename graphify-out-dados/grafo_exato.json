@@ -17,8 +17,8 @@
       "bloco_diferencial": 0.2
     },
     "limite_dinamico": {
-      "produtor": 12,
-      "veterinario": 25
+      "produtor": 15,
+      "veterinario": 30
     },
     "triagem": [
       {
@@ -108,6 +108,32 @@
         },
         "opcoes": {}
       }
+    ],
+    "exclusoes": [
+      {
+        "doencas": [
+          "deslocamento_abomaso_esquerda",
+          "deslocamento_abomaso_direita"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "O abomaso desloca para um lado só."
+      },
+      {
+        "doencas": [
+          "timpanismo_espumoso",
+          "timpanismo_gasoso"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "O gás fica preso em espuma ou livre, não os dois ao mesmo tempo."
+      },
+      {
+        "doencas": [
+          "retencao_placenta",
+          "metrite"
+        ],
+        "fonte": "Embrapa Gado de Leite; suposição do projeto a validar",
+        "nota": "No mesmo quadro puerperal, a retenção precede a metrite; o par deixa a hipótese mais forte se destacar."
+      }
     ]
   },
   "nos": [
@@ -134,7 +160,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -165,7 +192,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -193,7 +221,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -221,7 +250,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -247,7 +277,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -273,7 +304,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -297,7 +329,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -323,7 +356,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -349,7 +383,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -375,7 +410,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -401,7 +437,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -431,7 +468,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -457,7 +495,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -481,7 +520,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -512,7 +552,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -538,7 +579,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -562,7 +604,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -588,7 +631,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -614,7 +658,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -640,7 +685,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -664,7 +710,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -690,7 +737,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -716,7 +764,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -742,7 +791,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -770,7 +820,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -794,7 +845,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -820,7 +872,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -846,15 +899,16 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
-      "id": "retencao_placenta",
+      "id": "historico_retencao_placenta",
       "tipo_no": "simbolo",
       "triagem": false,
       "dados": {
-        "id": "retencao_placenta",
+        "id": "historico_retencao_placenta",
         "tipo": "ficha",
         "nome": "Histórico de retenção de placenta",
         "dominio": {
@@ -868,11 +922,12 @@
           "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
           "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
         },
-        "campo_ficha": "retencao_placenta",
+        "campo_ficha": "historico_retencao_placenta",
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -900,7 +955,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -926,7 +982,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -952,7 +1009,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -978,7 +1036,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1002,7 +1061,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1022,7 +1082,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "max",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1042,7 +1103,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1062,7 +1124,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1082,7 +1145,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1102,7 +1166,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1122,7 +1187,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1142,7 +1208,11 @@
         "fonte": null,
         "gravidade": "media",
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Acidose ruminal subaguda em bovinos e ovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/acidose-ruminal-subaguda-em-bovinos-e-ovinos"
+        }
       }
     },
     {
@@ -1162,7 +1232,11 @@
         "fonte": null,
         "gravidade": "media",
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Hipercetonemia em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/hipercetonemia-em-bovinos/hipercetonemia-em-bovinos"
+        }
       }
     },
     {
@@ -1182,27 +1256,11 @@
         "fonte": null,
         "gravidade": "baixa",
         "combinacao": "mycin",
-        "nota": null
-      }
-    },
-    {
-      "id": "deslocamento_abomaso",
-      "tipo_no": "simbolo",
-      "triagem": false,
-      "dados": {
-        "id": "deslocamento_abomaso",
-        "tipo": "doenca",
-        "nome": "Deslocamento de Abomaso",
-        "dominio": {
-          "tipo": "booleano"
-        },
-        "pergunta": {},
-        "por_que": {},
-        "campo_ficha": null,
-        "fonte": null,
-        "gravidade": "alta",
-        "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+        }
       }
     },
     {
@@ -1222,7 +1280,11 @@
         "fonte": null,
         "gravidade": "alta",
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Paresia puerperal em vacas (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/paresia-puerperal-em-ruminantes/paresia-puerperal-em-vacas"
+        }
       }
     },
     {
@@ -1242,7 +1304,11 @@
         "fonte": null,
         "gravidade": "media",
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Mastite em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/reproductive-system/mastite-em-animais-de-grande-porte/mastite-em-bovinos"
+        }
       }
     },
     {
@@ -1262,7 +1328,11 @@
         "fonte": null,
         "gravidade": "alta",
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Metrite em animais de produção (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/metrite-em-animais-de-produ%C3%A7%C3%A3o"
+        }
       }
     },
     {
@@ -1282,7 +1352,11 @@
         "fonte": null,
         "gravidade": "alta",
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": {
+          "titulo": "Babesiose em animais (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/circulatory-system/parasitas-do-sangue/babesiose-em-animais"
+        }
       }
     },
     {
@@ -1302,7 +1376,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1322,7 +1397,8 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
       }
     },
     {
@@ -1342,7 +1418,1378 @@
         "fonte": null,
         "gravidade": null,
         "combinacao": "mycin",
-        "nota": null
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "higroma",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "higroma",
+        "tipo": "pergunta",
+        "nome": "Inchaço nos joelhos",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca tem inchaço nos joelhos (higroma)?",
+          "veterinario": "Higroma carpal?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a inchaço nos joelhos.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a inchaço nos joelhos."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "vacinada_brucelose",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "vacinada_brucelose",
+        "tipo": "pergunta",
+        "nome": "Vacinada contra brucelose",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca foi vacinada contra brucelose quando bezerra (3 a 8 meses)?",
+          "veterinario": "Vacinação B19 ou RB51 comprovada?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a vacinada contra brucelose.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a vacinada contra brucelose."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "sorologia_brucelose_reagente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "sorologia_brucelose_reagente",
+        "tipo": "pergunta",
+        "nome": "Sorologia para brucelose reagente",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Teste sorológico para brucelose (AAT, 2-ME ou FPA) reagente?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a sorologia para brucelose reagente."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "brucelose",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "brucelose",
+        "tipo": "doenca",
+        "nome": "Brucelose",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Brucelose em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "feridas_boca",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "feridas_boca",
+        "tipo": "pergunta",
+        "nome": "Feridas na boca",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Há feridas na boca, na gengiva ou na língua, com baba?",
+          "veterinario": "Erosões ou úlceras na mucosa oral?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a feridas na boca.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a feridas na boca."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "falhas_reprodutivas_lote",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "falhas_reprodutivas_lote",
+        "tipo": "pergunta",
+        "nome": "Falhas reprodutivas no lote",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Várias vacas do lote estão repetindo cio ou abortando?",
+          "veterinario": "Aumento de repetição de cio, abortos ou bezerros fracos no rebanho?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a falhas reprodutivas no lote.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a falhas reprodutivas no lote."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "antigeno_bvdv",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "antigeno_bvdv",
+        "tipo": "pergunta",
+        "nome": "BVDV detectado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "ELISA de antígeno ou PCR para BVDV positivo?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a BVDV detectado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "bvd",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "bvd",
+        "tipo": "doenca",
+        "nome": "Diarreia Viral Bovina (BVD)",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Diarreia viral bovina e complexo da doença das mucosas (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas"
+        }
+      }
+    },
+    {
+      "id": "distensao_flanco_direito",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "distensao_flanco_direito",
+        "tipo": "pergunta",
+        "nome": "Barriga estufada do lado direito",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A barriga está estufada do lado direito?",
+          "veterinario": "Distensão do flanco direito, na região das últimas costelas?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a barriga estufada do lado direito.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a barriga estufada do lado direito."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "desidratacao",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "desidratacao",
+        "tipo": "pergunta",
+        "nome": "Desidratação",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Os olhos estão fundos ou a pele demora a voltar quando beliscada?",
+          "veterinario": "Desidratação evidente (enoftalmia, turgor cutâneo reduzido)?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a desidratação.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a desidratação."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "deslocamento_abomaso_direita",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "deslocamento_abomaso_direita",
+        "tipo": "doenca",
+        "nome": "Deslocamento de Abomaso à Direita",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Deslocamento do abomaso para a esquerda ou direita e vólvulo abomasal em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "tosse",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "tosse",
+        "tipo": "pergunta",
+        "nome": "Tosse",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está tossindo?",
+          "veterinario": "Tosse espontânea ou provocada presente?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a tosse.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a tosse."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "secrecao_nasal",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "secrecao_nasal",
+        "tipo": "pergunta",
+        "nome": "Secreção nasal",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Está escorrendo catarro ou secreção pelo nariz?",
+          "veterinario": "Secreção nasal mucosa ou mucopurulenta?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a secreção nasal.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a secreção nasal."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "aborto_recente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "aborto_recente",
+        "tipo": "pergunta",
+        "nome": "Aborto recente",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca abortou nesta gestação ou nos últimos meses?",
+          "veterinario": "Aborto recente, sobretudo no terço final da gestação?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a aborto recente.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a aborto recente."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "distensao_flanco_esquerdo",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "distensao_flanco_esquerdo",
+        "tipo": "pergunta",
+        "nome": "Barriga estufada do lado esquerdo",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A barriga está estufada do lado esquerdo, alta como um balão?",
+          "veterinario": "Distensão do flanco esquerdo (fossa paralombar abaulada)?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a barriga estufada do lado esquerdo.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a barriga estufada do lado esquerdo."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "ping_flanco_direito",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "ping_flanco_direito",
+        "tipo": "pergunta",
+        "nome": "Ping no flanco direito",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Ping metálico no flanco direito à percussão e auscultação simultâneas?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco direito."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "tremores",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "tremores",
+        "tipo": "pergunta",
+        "nome": "Tremores musculares",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está com tremores ou espasmos nos músculos?",
+          "veterinario": "Fasciculações ou tremores musculares?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a tremores musculares.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a tremores musculares."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "fezes_escassas",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "fezes_escassas",
+        "tipo": "pergunta",
+        "nome": "Pouco esterco",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está fazendo pouco esterco, menos que o normal?",
+          "veterinario": "Fezes escassas ou ausentes nas últimas horas?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a pouco esterco.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a pouco esterco."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "pasto_leguminosa_recente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "pasto_leguminosa_recente",
+        "tipo": "pergunta",
+        "nome": "Pasto de leguminosa recente",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca comeu nas últimas horas pasto de leguminosa (alfafa, trevo) ou capim muito novo e molhado?",
+          "veterinario": "Ingestão recente de leguminosa ou pastagem muito tenra?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a pasto de leguminosa recente.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a pasto de leguminosa recente."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "espuma_sonda",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "espuma_sonda",
+        "tipo": "pergunta",
+        "nome": "Conteúdo espumoso na sonda",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Sonda orogástrica traz conteúdo espumoso sem aliviar a distensão?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a conteúdo espumoso na sonda."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "gas_livre_sonda",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "gas_livre_sonda",
+        "tipo": "pergunta",
+        "nome": "Gás livre na sonda",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Sonda orogástrica libera gás livre e alivia a distensão?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a gás livre na sonda."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "ausculta_crepitacoes",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "ausculta_crepitacoes",
+        "tipo": "pergunta",
+        "nome": "Crepitações à auscultação pulmonar",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Crepitações ou sibilos à auscultação pulmonar, sobretudo na região cranioventral?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a crepitações à auscultação pulmonar."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "deslocamento_abomaso_esquerda",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "deslocamento_abomaso_esquerda",
+        "tipo": "doenca",
+        "nome": "Deslocamento de Abomaso à Esquerda",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Deslocamento do abomaso para a esquerda ou direita e vólvulo abomasal em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "agitacao",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "agitacao",
+        "tipo": "pergunta",
+        "nome": "Agitação ou reação exagerada",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está agitada, cambaleando ou se assusta demais com barulho e toque?",
+          "veterinario": "Hiperexcitabilidade, ataxia ou hiperestesia?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a agitação ou reação exagerada.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a agitação ou reação exagerada."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "pasto_novo_adubado",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "pasto_novo_adubado",
+        "tipo": "pergunta",
+        "nome": "Pasto novo e adubado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca foi solta há pouco tempo em pasto novo, muito verde ou adubado?",
+          "veterinario": "Mudança recente para pastagem tenra ou adubada com potássio e nitrogênio?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a pasto novo e adubado.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a pasto novo e adubado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "magnesio_serico",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "magnesio_serico",
+        "tipo": "pergunta",
+        "nome": "Magnésio sérico",
+        "dominio": {
+          "tipo": "numerico",
+          "min": 0.0,
+          "max": 10.0,
+          "unidade": "mg/dL",
+          "casas_decimais": 1
+        },
+        "pergunta": {
+          "veterinario": "Qual é o magnésio sérico, em mg/dL?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a magnésio sérico."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "hipomagnesemia",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "hipomagnesemia",
+        "tipo": "doenca",
+        "nome": "Hipomagnesemia",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Tetania hipomagnesêmica em bovinos e ovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos"
+        }
+      }
+    },
+    {
+      "id": "focinho_avermelhado",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "focinho_avermelhado",
+        "tipo": "pergunta",
+        "nome": "Focinho muito vermelho",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O focinho está muito vermelho, com feridas ou crostas?",
+          "veterinario": "Hiperemia ou lesões no plano nasal (focinho vermelho)?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a focinho muito vermelho.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a focinho muito vermelho."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "olhos_lacrimejando",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "olhos_lacrimejando",
+        "tipo": "pergunta",
+        "nome": "Olhos lacrimejando",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Os olhos estão vermelhos ou lacrimejando muito?",
+          "veterinario": "Conjuntivite com lacrimejamento?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a olhos lacrimejando.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a olhos lacrimejando."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "pcr_bohv1",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "pcr_bohv1",
+        "tipo": "pergunta",
+        "nome": "BoHV-1 detectado",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "PCR ou isolamento de BoHV-1 positivo em secreção nasal ou ocular?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a BoHV-1 detectado."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "ibr",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "ibr",
+        "tipo": "doenca",
+        "nome": "Rinotraqueíte Infecciosa Bovina (IBR)",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Infecções virais associadas ao complexo das doenças respiratórias dos bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "leite_com_sangue",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "leite_com_sangue",
+        "tipo": "pergunta",
+        "nome": "Leite rosado ou com sangue",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O leite saiu rosado ou com sangue?",
+          "veterinario": "Leite sanguinolento com úbere flácido (agalaxia)?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a leite rosado ou com sangue.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a leite rosado ou com sangue."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "sorologia_leptospirose_reagente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "sorologia_leptospirose_reagente",
+        "tipo": "pergunta",
+        "nome": "Sorologia para leptospirose reagente",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Soroaglutinação microscópica para leptospirose com título significativo?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a sorologia para leptospirose reagente."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "leptospirose",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "leptospirose",
+        "tipo": "doenca",
+        "nome": "Leptospirose",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Leptospirose em ruminantes (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes"
+        }
+      }
+    },
+    {
+      "id": "respiracao_ofegante",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "respiracao_ofegante",
+        "tipo": "pergunta",
+        "nome": "Respiração com esforço",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca respira com esforço, rápido ou de boca aberta?",
+          "veterinario": "Taquipneia ou dispneia evidente?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a respiração com esforço.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a respiração com esforço."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "pneumonia",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "pneumonia",
+        "tipo": "doenca",
+        "nome": "Pneumonia",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Visão geral sobre o complexo das doenças respiratórias dos bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos"
+        }
+      }
+    },
+    {
+      "id": "membranas_expostas_vulva",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "membranas_expostas_vulva",
+        "tipo": "pergunta",
+        "nome": "Restos de placenta na vulva",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Há restos de placenta pendurados para fora da vulva?",
+          "veterinario": "Membranas fetais expostas pela vulva?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a restos de placenta na vulva.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a restos de placenta na vulva."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "placenta_nao_expulsa_24h",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "placenta_nao_expulsa_24h",
+        "tipo": "pergunta",
+        "nome": "Placenta não saiu em 24 horas",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A placenta continuou presa por mais de um dia após o parto?",
+          "veterinario": "Membranas fetais não expulsas em até 24 horas após o parto?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a placenta não saiu em 24 horas.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a placenta não saiu em 24 horas."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "palpacao_membranas_retidas",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "palpacao_membranas_retidas",
+        "tipo": "pergunta",
+        "nome": "Membranas retidas ao exame",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Membranas fetais retidas no útero ao exame vaginal ou retal, mais de 24 horas após o parto?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a membranas retidas ao exame."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "retencao_placenta",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "retencao_placenta",
+        "tipo": "doenca",
+        "nome": "Retenção de Placenta",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Retenção de membranas fetais em vacas (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas"
+        }
+      }
+    },
+    {
+      "id": "costas_arqueadas",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "costas_arqueadas",
+        "tipo": "pergunta",
+        "nome": "Costas arqueadas",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca fica com as costas arqueadas e evita deitar ou descer rampas?",
+          "veterinario": "Postura antiálgica com dorso arqueado?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a costas arqueadas.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a costas arqueadas."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "gemido",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "gemido",
+        "tipo": "pergunta",
+        "nome": "Gemido",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca geme quando respira, se deita ou se levanta?",
+          "veterinario": "Gemido expiratório espontâneo?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a gemido.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a gemido."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "prova_dor_reticular",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "prova_dor_reticular",
+        "tipo": "pergunta",
+        "nome": "Prova de dor reticular",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Prova de dor reticular positiva (bastão ou pinçamento da cernelha) com gemido?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a prova de dor reticular."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "edema_barbela",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "edema_barbela",
+        "tipo": "pergunta",
+        "nome": "Edema de barbela ou peito",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Edema de barbela, jugulares ingurgitadas ou bulhas cardíacas abafadas?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a edema de barbela ou peito."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "reticulopericardite_traumatica",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "reticulopericardite_traumatica",
+        "tipo": "doenca",
+        "nome": "Reticulopericardite Traumática",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Reticuloperitonite traumática em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "outros_animais_estufados",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "outros_animais_estufados",
+        "tipo": "pergunta",
+        "nome": "Outros animais estufados",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Outras vacas do mesmo lote também estão estufadas?",
+          "veterinario": "Outros animais do lote com distensão abdominal?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a outros animais estufados.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a outros animais estufados."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "timpanismo_espumoso",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "timpanismo_espumoso",
+        "tipo": "doenca",
+        "nome": "Timpanismo Espumoso",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Timpanismo em ruminantes (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes"
+        }
+      }
+    },
+    {
+      "id": "engasgo",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "engasgo",
+        "tipo": "pergunta",
+        "nome": "Engasgo ou dificuldade de engolir",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca parece engasgada, babando ou com esforço para engolir?",
+          "veterinario": "Sinais de obstrução esofágica (sialorreia, esforço de deglutição)?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a engasgo ou dificuldade de engolir.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a engasgo ou dificuldade de engolir."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "timpanismo_gasoso",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "timpanismo_gasoso",
+        "tipo": "doenca",
+        "nome": "Timpanismo Gasoso",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Timpanismo em ruminantes (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes"
+        }
+      }
+    },
+    {
+      "id": "emagrecimento_progressivo",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "emagrecimento_progressivo",
+        "tipo": "pergunta",
+        "nome": "Emagrecimento progressivo",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca vem emagrecendo aos poucos, mesmo comendo?",
+          "veterinario": "Perda progressiva de condição corporal?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a emagrecimento progressivo.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a emagrecimento progressivo."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "linfonodos_aumentados",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "linfonodos_aumentados",
+        "tipo": "pergunta",
+        "nome": "Ínguas aumentadas",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "Há caroços (ínguas) aumentados no pescoço, na frente da paleta ou na virilha?",
+          "veterinario": "Linfonodos superficiais aumentados?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a ínguas aumentadas.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a ínguas aumentadas."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "tuberculina_reagente",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "tuberculina_reagente",
+        "tipo": "pergunta",
+        "nome": "Tuberculinização reagente",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Teste tuberculínico (cervical comparativo) reagente?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a tuberculinização reagente."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "tuberculose",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "tuberculose",
+        "tipo": "doenca",
+        "nome": "Tuberculose",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "nota": null,
+        "tratamento": {
+          "titulo": "Visão geral da tuberculose em animais (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais"
+        }
       }
     },
     {
@@ -1515,19 +2962,6 @@
       }
     },
     {
-      "id": "R-DAB-01",
-      "tipo_no": "regra",
-      "triagem": false,
-      "dados": {
-        "id": "R-DAB-01",
-        "classe": "evidencia",
-        "prioridade": 10,
-        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
-        "status": "suposicao_a_validar",
-        "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
-      }
-    },
-    {
       "id": "R-HIP-02",
       "tipo_no": "regra",
       "triagem": false,
@@ -1616,19 +3050,6 @@
         "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
         "status": "suposicao_a_validar",
         "nota": "Recusa seletiva de concentrado é um achado inespecífico e não confirma cetose isoladamente."
-      }
-    },
-    {
-      "id": "R-DAB-02",
-      "tipo_no": "regra",
-      "triagem": false,
-      "dados": {
-        "id": "R-DAB-02",
-        "classe": "evidencia",
-        "prioridade": 10,
-        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
-        "status": "suposicao_a_validar",
-        "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
       }
     },
     {
@@ -1759,19 +3180,6 @@
         "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
         "status": "suposicao_a_validar",
         "nota": "Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica."
-      }
-    },
-    {
-      "id": "R-DAB-03",
-      "tipo_no": "regra",
-      "triagem": false,
-      "dados": {
-        "id": "R-DAB-03",
-        "classe": "evidencia",
-        "prioridade": 10,
-        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
-        "status": "suposicao_a_validar",
-        "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo."
       }
     },
     {
@@ -2005,7 +3413,7 @@
         "prioridade": 50,
         "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
         "status": "suposicao_a_validar",
-        "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+        "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_esquerda é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
       }
     },
     {
@@ -2087,6 +3495,162 @@
       }
     },
     {
+      "id": "R-BRU-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BRU-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aborto no terço final seguido de retenção de placenta é o quadro clássico da brucelose."
+      }
+    },
+    {
+      "id": "R-BRU-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BRU-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Higroma carpal é achado sugestivo de brucelose crônica no rebanho."
+      }
+    },
+    {
+      "id": "R-BRU-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BRU-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Sorologia reagente apoia brucelose; a confirmação segue o regulamento do PNCEBT."
+      }
+    },
+    {
+      "id": "R-BRU-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BRU-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Corrimento vaginal, sozinho, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-BRU-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BRU-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: vacinação na idade correta reduz, mas não exclui, a brucelose."
+      }
+    },
+    {
+      "id": "R-URG-16",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-16",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de brucelose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-BVD-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BVD-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diarreia com erosões orais é o quadro típico da BVD."
+      }
+    },
+    {
+      "id": "R-BVD-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BVD-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aborto com falhas reprodutivas no lote é compatível com BVD."
+      }
+    },
+    {
+      "id": "R-BVD-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BVD-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Detecção de BVDV apoia a doença."
+      }
+    },
+    {
+      "id": "R-BVD-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BVD-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diarreia com febre, sozinha, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-BVD-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-BVD-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: fezes aquosas com grãos e espuma após mudança brusca para concentrado apontam para acidose, não para BVD."
+      }
+    },
+    {
+      "id": "R-URG-19",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-19",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de bvd é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
       "id": "R-CET-06",
       "tipo_no": "regra",
       "triagem": false,
@@ -2100,16 +3664,172 @@
       }
     },
     {
-      "id": "R-DAB-04",
+      "id": "R-DAD-01",
       "tipo_no": "regra",
       "triagem": false,
       "dados": {
-        "id": "R-DAB-04",
+        "id": "R-DAD-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Redução da ingestão e de fezes no pós-parto é compatível com deslocamento; não indica o lado."
+      }
+    },
+    {
+      "id": "R-DAD-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAD-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-DAD-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAD-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Ping no flanco direito apoia deslocamento à direita ou vólvulo; exige diferenciação de ceco e cólon com gás."
+      }
+    },
+    {
+      "id": "R-DAD-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAD-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Desidratação acompanha o quadro obstrutivo do deslocamento à direita. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-DAD-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAD-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite reduzido com abatimento, sozinho, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-DAD-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAD-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: ping no flanco esquerdo aponta para deslocamento à esquerda, não à direita."
+      }
+    },
+    {
+      "id": "R-URG-09",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-09",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_direita é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-DAE-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAE-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
+      }
+    },
+    {
+      "id": "R-DAE-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAE-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
+      }
+    },
+    {
+      "id": "R-DAE-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAE-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás."
+      }
+    },
+    {
+      "id": "R-DAE-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAE-04",
         "classe": "evidencia",
         "prioridade": 10,
         "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
         "status": "suposicao_a_validar",
         "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso."
+      }
+    },
+    {
+      "id": "R-DAE-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAE-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Pouco esterco no início da lactação é compatível com deslocamento de abomaso."
+      }
+    },
+    {
+      "id": "R-DAE-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DAE-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: ping no flanco direito aponta para deslocamento à direita, não à esquerda."
       }
     },
     {
@@ -2136,6 +3856,721 @@
         "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
         "status": "suposicao_a_validar",
         "nota": "Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia."
+      }
+    },
+    {
+      "id": "R-HMG-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HMG-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Tremores com agitação são o quadro nervoso típico da tetania hipomagnesêmica. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-HMG-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HMG-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Mudança recente para pasto tenro ou adubado é fator de risco de falta de magnésio. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-HMG-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HMG-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Magnésio abaixo de 1,2 mg/dL é compatível com tetania."
+      }
+    },
+    {
+      "id": "R-HMG-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HMG-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Decúbito sem extremidades frias, sozinho, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-HMG-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-HMG-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: magnésio sérico normal torna a hipomagnesemia improvável."
+      }
+    },
+    {
+      "id": "R-URG-15",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-15",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de hipomagnesemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-IBR-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-IBR-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Focinho vermelho com secreção nasal é o quadro típico da rinotraqueíte."
+      }
+    },
+    {
+      "id": "R-IBR-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-IBR-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Conjuntivite com febre é compatível com BoHV-1."
+      }
+    },
+    {
+      "id": "R-IBR-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-IBR-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Detecção de BoHV-1 apoia IBR."
+      }
+    },
+    {
+      "id": "R-IBR-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-IBR-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Febre com queda de produção, sozinhas, são sinais inespecíficos."
+      }
+    },
+    {
+      "id": "R-IBR-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-IBR-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: crepitações pulmonares apontam para pneumonia bacteriana mais do que para IBR."
+      }
+    },
+    {
+      "id": "R-URG-18",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-18",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de ibr é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-LEP-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LEP-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aborto com febre é compatível com leptospirose aguda."
+      }
+    },
+    {
+      "id": "R-LEP-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LEP-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose."
+      }
+    },
+    {
+      "id": "R-LEP-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LEP-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Título significativo na soroaglutinação apoia leptospirose."
+      }
+    },
+    {
+      "id": "R-LEP-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LEP-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Urina escura com febre, sozinha, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-LEP-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LEP-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: hemoparasitas no esfregaço explicam a hemólise por tristeza parasitária."
+      }
+    },
+    {
+      "id": "R-URG-17",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-17",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de leptospirose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-PNE-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-PNE-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Tosse com queda de apetite sugere doença respiratória com comprometimento geral. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-PNE-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-PNE-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Respiração com esforço apoia doença respiratória do trato inferior. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-PNE-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-PNE-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Crepitações cranioventrais à auscultação apoiam broncopneumonia."
+      }
+    },
+    {
+      "id": "R-PNE-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-PNE-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-PNE-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-PNE-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Febre com abatimento, sozinha, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-PNE-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-PNE-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-URG-13",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-13",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de pneumonia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-RPL-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPL-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Restos de placenta visíveis na vulva no pós-parto indicam retenção de membranas fetais."
+      }
+    },
+    {
+      "id": "R-RPL-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPL-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Falha na expulsão da placenta em até 24 horas define a retenção de membranas fetais."
+      }
+    },
+    {
+      "id": "R-RPL-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPL-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Membranas retidas ao exame confirmam a suspeita de retenção."
+      }
+    },
+    {
+      "id": "R-RPL-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPL-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério. Peso reduzido para 0,35 (concessão): com 0,5 a retenção chegava ao limiar de exclusão antes de se perguntar o corrimento fétido e a metrite era descartada cedo demais."
+      }
+    },
+    {
+      "id": "R-RPL-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPL-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Corrimento vaginal no puerpério, sozinho, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-RPL-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPL-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: depois da primeira semana pós-parto, o quadro uterino tende a ser metrite, não retenção recente."
+      }
+    },
+    {
+      "id": "R-URG-12",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-12",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de retencao_placenta é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-RPT-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPT-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-RPT-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPT-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Prova de dor reticular positiva apoia reticuloperitonite traumática."
+      }
+    },
+    {
+      "id": "R-RPT-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPT-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Edema de barbela com febre sugere extensão ao pericárdio."
+      }
+    },
+    {
+      "id": "R-RPT-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPT-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite e produção em queda com febre, sozinhos, são sinais inespecíficos."
+      }
+    },
+    {
+      "id": "R-RPT-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-RPT-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: ping no flanco esquerdo aponta para deslocamento de abomaso como causa da dor."
+      }
+    },
+    {
+      "id": "R-URG-14",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-14",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de reticulopericardite_traumatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-TES-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TES-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-TES-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TES-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-TES-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TES-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Conteúdo espumoso pela sonda sem alívio caracteriza o gás preso em espuma."
+      }
+    },
+    {
+      "id": "R-TES-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TES-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite ausente com queda de produção, sozinho, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-TES-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TES-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: gás livre que sai pela sonda indica timpanismo gasoso, não espumoso."
+      }
+    },
+    {
+      "id": "R-URG-10",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-10",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de timpanismo_espumoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-TGA-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TGA-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Distensão esquerda com sinais de engasgo sugere gás livre retido por obstrução esofágica. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
+      }
+    },
+    {
+      "id": "R-TGA-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TGA-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Gás livre pela sonda com alívio da distensão caracteriza o timpanismo gasoso."
+      }
+    },
+    {
+      "id": "R-TGA-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TGA-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite ausente com abatimento, sozinho, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-TGA-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TGA-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: conteúdo espumoso pela sonda indica timpanismo espumoso, não gasoso."
+      }
+    },
+    {
+      "id": "R-URG-11",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-11",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de timpanismo_gasoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-TUB-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TUB-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Emagrecimento progressivo com tosse, em vaca com queda de produção, é compatível com tuberculose."
+      }
+    },
+    {
+      "id": "R-TUB-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TUB-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Linfonodos superficiais aumentados apoiam tuberculose."
+      }
+    },
+    {
+      "id": "R-TUB-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TUB-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Tuberculinização reagente apoia tuberculose; a confirmação segue o regulamento do PNCEBT."
+      }
+    },
+    {
+      "id": "R-TUB-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TUB-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Queda de produção com apetite normal, sozinha, é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-TUB-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-TUB-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: febre aguda sugere outra causa; a tuberculose costuma ser crônica e sem febre alta."
+      }
+    },
+    {
+      "id": "R-URG-20",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-20",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
       }
     }
   ],
@@ -2385,46 +4820,6 @@
       "cf": 0.4
     },
     {
-      "id": "R-DAB-01:se:0",
-      "papel": "condicao",
-      "origem": "inicio_lactacao",
-      "destino": "R-DAB-01",
-      "ordem": 0,
-      "op": "=",
-      "valor": true,
-      "negado": false
-    },
-    {
-      "id": "R-DAB-01:se:1",
-      "papel": "condicao",
-      "origem": "apetite",
-      "destino": "R-DAB-01",
-      "ordem": 1,
-      "op": "em",
-      "valor": [
-        "reduzido",
-        "ausente"
-      ],
-      "negado": false
-    },
-    {
-      "id": "R-DAB-01:se:2",
-      "papel": "condicao",
-      "origem": "queda_producao",
-      "destino": "R-DAB-01",
-      "ordem": 2,
-      "op": "=",
-      "valor": true,
-      "negado": false
-    },
-    {
-      "id": "R-DAB-01:entao",
-      "papel": "conclusao",
-      "origem": "R-DAB-01",
-      "destino": "deslocamento_abomaso",
-      "cf": 0.3
-    },
-    {
       "id": "R-HIP-02:se:0",
       "papel": "condicao",
       "origem": "periparto_imediato",
@@ -2647,33 +5042,6 @@
       "cf": 0.45
     },
     {
-      "id": "R-DAB-02:se:0",
-      "papel": "condicao",
-      "origem": "inicio_lactacao",
-      "destino": "R-DAB-02",
-      "ordem": 0,
-      "op": "=",
-      "valor": true,
-      "negado": false
-    },
-    {
-      "id": "R-DAB-02:se:1",
-      "papel": "condicao",
-      "origem": "flanco_esquerdo_afundado",
-      "destino": "R-DAB-02",
-      "ordem": 1,
-      "op": "=",
-      "valor": true,
-      "negado": false
-    },
-    {
-      "id": "R-DAB-02:entao",
-      "papel": "conclusao",
-      "origem": "R-DAB-02",
-      "destino": "deslocamento_abomaso",
-      "cf": 0.4
-    },
-    {
       "id": "R-DD-02:se:0",
       "papel": "condicao",
       "origem": "claudicacao",
@@ -2757,7 +5125,7 @@
     {
       "id": "R-MET-04:se:0",
       "papel": "condicao",
-      "origem": "retencao_placenta",
+      "origem": "historico_retencao_placenta",
       "destino": "R-MET-04",
       "ordem": 0,
       "op": "=",
@@ -2902,23 +5270,6 @@
       "origem": "R-CET-05",
       "destino": "cetose",
       "cf": 0.7
-    },
-    {
-      "id": "R-DAB-03:se:0",
-      "papel": "condicao",
-      "origem": "ping_metalico_flanco_esquerdo",
-      "destino": "R-DAB-03",
-      "ordem": 0,
-      "op": "=",
-      "valor": true,
-      "negado": false
-    },
-    {
-      "id": "R-DAB-03:entao",
-      "papel": "conclusao",
-      "origem": "R-DAB-03",
-      "destino": "deslocamento_abomaso",
-      "cf": 0.9
     },
     {
       "id": "R-DD-01:se:0",
@@ -3254,7 +5605,7 @@
     {
       "id": "R-URG-03:se:0",
       "papel": "condicao",
-      "origem": "deslocamento_abomaso",
+      "origem": "deslocamento_abomaso_esquerda",
       "destino": "R-URG-03",
       "ordem": 0,
       "op": "=",
@@ -3380,6 +5731,272 @@
       "cf": 0.05
     },
     {
+      "id": "R-BRU-01:se:0",
+      "papel": "condicao",
+      "origem": "aborto_recente",
+      "destino": "R-BRU-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BRU-01:se:1",
+      "papel": "condicao",
+      "origem": "historico_retencao_placenta",
+      "destino": "R-BRU-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BRU-01:entao",
+      "papel": "conclusao",
+      "origem": "R-BRU-01",
+      "destino": "brucelose",
+      "cf": 0.4
+    },
+    {
+      "id": "R-BRU-02:se:0",
+      "papel": "condicao",
+      "origem": "higroma",
+      "destino": "R-BRU-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BRU-02:entao",
+      "papel": "conclusao",
+      "origem": "R-BRU-02",
+      "destino": "brucelose",
+      "cf": 0.4
+    },
+    {
+      "id": "R-BRU-03:se:0",
+      "papel": "condicao",
+      "origem": "sorologia_brucelose_reagente",
+      "destino": "R-BRU-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BRU-03:entao",
+      "papel": "conclusao",
+      "origem": "R-BRU-03",
+      "destino": "brucelose",
+      "cf": 0.9
+    },
+    {
+      "id": "R-BRU-04:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-BRU-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BRU-04:entao",
+      "papel": "conclusao",
+      "origem": "R-BRU-04",
+      "destino": "brucelose",
+      "cf": 0.05
+    },
+    {
+      "id": "R-BRU-05:se:0",
+      "papel": "condicao",
+      "origem": "vacinada_brucelose",
+      "destino": "R-BRU-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BRU-05:entao",
+      "papel": "conclusao",
+      "origem": "R-BRU-05",
+      "destino": "brucelose",
+      "cf": -0.4
+    },
+    {
+      "id": "R-URG-16:se:0",
+      "papel": "condicao",
+      "origem": "brucelose",
+      "destino": "R-URG-16",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-16:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-16",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-BVD-01:se:0",
+      "papel": "condicao",
+      "origem": "diarreia",
+      "destino": "R-BVD-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-01:se:1",
+      "papel": "condicao",
+      "origem": "feridas_boca",
+      "destino": "R-BVD-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-01:entao",
+      "papel": "conclusao",
+      "origem": "R-BVD-01",
+      "destino": "bvd",
+      "cf": 0.6
+    },
+    {
+      "id": "R-BVD-02:se:0",
+      "papel": "condicao",
+      "origem": "aborto_recente",
+      "destino": "R-BVD-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-02:se:1",
+      "papel": "condicao",
+      "origem": "falhas_reprodutivas_lote",
+      "destino": "R-BVD-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-02:se:2",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-BVD-02",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-02:entao",
+      "papel": "conclusao",
+      "origem": "R-BVD-02",
+      "destino": "bvd",
+      "cf": 0.4
+    },
+    {
+      "id": "R-BVD-03:se:0",
+      "papel": "condicao",
+      "origem": "antigeno_bvdv",
+      "destino": "R-BVD-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-03:entao",
+      "papel": "conclusao",
+      "origem": "R-BVD-03",
+      "destino": "bvd",
+      "cf": 0.9
+    },
+    {
+      "id": "R-BVD-04:se:0",
+      "papel": "condicao",
+      "origem": "diarreia",
+      "destino": "R-BVD-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-04:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-BVD-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-04:entao",
+      "papel": "conclusao",
+      "origem": "R-BVD-04",
+      "destino": "bvd",
+      "cf": 0.1
+    },
+    {
+      "id": "R-BVD-05:se:0",
+      "papel": "condicao",
+      "origem": "fezes_aquosas_espuma_graos",
+      "destino": "R-BVD-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-05:se:1",
+      "papel": "condicao",
+      "origem": "mudanca_abrupta_concentrado",
+      "destino": "R-BVD-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-BVD-05:entao",
+      "papel": "conclusao",
+      "origem": "R-BVD-05",
+      "destino": "bvd",
+      "cf": -0.4
+    },
+    {
+      "id": "R-URG-19:se:0",
+      "papel": "condicao",
+      "origem": "bvd",
+      "destino": "R-URG-19",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-19:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-19",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
       "id": "R-CET-06:se:0",
       "papel": "condicao",
       "origem": "apetite",
@@ -3400,10 +6017,127 @@
       "cf": 0.05
     },
     {
-      "id": "R-DAB-04:se:0",
+      "id": "R-DAD-01:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-DAD-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-01:se:1",
       "papel": "condicao",
       "origem": "apetite",
-      "destino": "R-DAB-04",
+      "destino": "R-DAD-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAD-01:se:2",
+      "papel": "condicao",
+      "origem": "fezes_escassas",
+      "destino": "R-DAD-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-01:entao",
+      "papel": "conclusao",
+      "origem": "R-DAD-01",
+      "destino": "deslocamento_abomaso_direita",
+      "cf": 0.3
+    },
+    {
+      "id": "R-DAD-02:se:0",
+      "papel": "condicao",
+      "origem": "distensao_flanco_direito",
+      "destino": "R-DAD-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-02:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAD-02",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAD-02:entao",
+      "papel": "conclusao",
+      "origem": "R-DAD-02",
+      "destino": "deslocamento_abomaso_direita",
+      "cf": 0.75
+    },
+    {
+      "id": "R-DAD-03:se:0",
+      "papel": "condicao",
+      "origem": "ping_flanco_direito",
+      "destino": "R-DAD-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-03:entao",
+      "papel": "conclusao",
+      "origem": "R-DAD-03",
+      "destino": "deslocamento_abomaso_direita",
+      "cf": 0.9
+    },
+    {
+      "id": "R-DAD-04:se:0",
+      "papel": "condicao",
+      "origem": "desidratacao",
+      "destino": "R-DAD-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-04:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAD-04",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAD-04:entao",
+      "papel": "conclusao",
+      "origem": "R-DAD-04",
+      "destino": "deslocamento_abomaso_direita",
+      "cf": 0.3
+    },
+    {
+      "id": "R-DAD-05:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAD-05",
       "ordem": 0,
       "op": "em",
       "valor": [
@@ -3413,11 +6147,204 @@
       "negado": false
     },
     {
-      "id": "R-DAB-04:entao",
+      "id": "R-DAD-05:se:1",
+      "papel": "condicao",
+      "origem": "apatia",
+      "destino": "R-DAD-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-05:entao",
       "papel": "conclusao",
-      "origem": "R-DAB-04",
-      "destino": "deslocamento_abomaso",
+      "origem": "R-DAD-05",
+      "destino": "deslocamento_abomaso_direita",
       "cf": 0.05
+    },
+    {
+      "id": "R-DAD-06:se:0",
+      "papel": "condicao",
+      "origem": "ping_metalico_flanco_esquerdo",
+      "destino": "R-DAD-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAD-06:entao",
+      "papel": "conclusao",
+      "origem": "R-DAD-06",
+      "destino": "deslocamento_abomaso_direita",
+      "cf": -0.6
+    },
+    {
+      "id": "R-URG-09:se:0",
+      "papel": "condicao",
+      "origem": "deslocamento_abomaso_direita",
+      "destino": "R-URG-09",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-09:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-09",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-DAE-01:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-DAE-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAE-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAE-01:se:2",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-DAE-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-01:entao",
+      "papel": "conclusao",
+      "origem": "R-DAE-01",
+      "destino": "deslocamento_abomaso_esquerda",
+      "cf": 0.3
+    },
+    {
+      "id": "R-DAE-02:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-DAE-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-02:se:1",
+      "papel": "condicao",
+      "origem": "flanco_esquerdo_afundado",
+      "destino": "R-DAE-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-02:entao",
+      "papel": "conclusao",
+      "origem": "R-DAE-02",
+      "destino": "deslocamento_abomaso_esquerda",
+      "cf": 0.4
+    },
+    {
+      "id": "R-DAE-03:se:0",
+      "papel": "condicao",
+      "origem": "ping_metalico_flanco_esquerdo",
+      "destino": "R-DAE-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-03:entao",
+      "papel": "conclusao",
+      "origem": "R-DAE-03",
+      "destino": "deslocamento_abomaso_esquerda",
+      "cf": 0.9
+    },
+    {
+      "id": "R-DAE-04:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-DAE-04",
+      "ordem": 0,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-DAE-04:entao",
+      "papel": "conclusao",
+      "origem": "R-DAE-04",
+      "destino": "deslocamento_abomaso_esquerda",
+      "cf": 0.05
+    },
+    {
+      "id": "R-DAE-05:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-DAE-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-05:se:1",
+      "papel": "condicao",
+      "origem": "fezes_escassas",
+      "destino": "R-DAE-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-05:entao",
+      "papel": "conclusao",
+      "origem": "R-DAE-05",
+      "destino": "deslocamento_abomaso_esquerda",
+      "cf": 0.2
+    },
+    {
+      "id": "R-DAE-06:se:0",
+      "papel": "condicao",
+      "origem": "ping_flanco_direito",
+      "destino": "R-DAE-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DAE-06:entao",
+      "papel": "conclusao",
+      "origem": "R-DAE-06",
+      "destino": "deslocamento_abomaso_esquerda",
+      "cf": -0.6
     },
     {
       "id": "R-HIP-05:se:0",
@@ -3472,6 +6399,1343 @@
       "origem": "R-HIP-06",
       "destino": "hipocalcemia",
       "cf": 0.15
+    },
+    {
+      "id": "R-HMG-01:se:0",
+      "papel": "condicao",
+      "origem": "tremores",
+      "destino": "R-HMG-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HMG-01:se:1",
+      "papel": "condicao",
+      "origem": "agitacao",
+      "destino": "R-HMG-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HMG-01:se:2",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-HMG-01",
+      "ordem": 2,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-HMG-01:entao",
+      "papel": "conclusao",
+      "origem": "R-HMG-01",
+      "destino": "hipomagnesemia",
+      "cf": 0.6
+    },
+    {
+      "id": "R-HMG-02:se:0",
+      "papel": "condicao",
+      "origem": "pasto_novo_adubado",
+      "destino": "R-HMG-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HMG-02:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-HMG-02",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-HMG-02:entao",
+      "papel": "conclusao",
+      "origem": "R-HMG-02",
+      "destino": "hipomagnesemia",
+      "cf": 0.3
+    },
+    {
+      "id": "R-HMG-03:se:0",
+      "papel": "condicao",
+      "origem": "magnesio_serico",
+      "destino": "R-HMG-03",
+      "ordem": 0,
+      "op": "<",
+      "valor": 1.2,
+      "negado": false
+    },
+    {
+      "id": "R-HMG-03:entao",
+      "papel": "conclusao",
+      "origem": "R-HMG-03",
+      "destino": "hipomagnesemia",
+      "cf": 0.9
+    },
+    {
+      "id": "R-HMG-04:se:0",
+      "papel": "condicao",
+      "origem": "decubito",
+      "destino": "R-HMG-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-HMG-04:se:1",
+      "papel": "condicao",
+      "origem": "extremidades",
+      "destino": "R-HMG-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": "normal",
+      "negado": false
+    },
+    {
+      "id": "R-HMG-04:entao",
+      "papel": "conclusao",
+      "origem": "R-HMG-04",
+      "destino": "hipomagnesemia",
+      "cf": 0.05
+    },
+    {
+      "id": "R-HMG-05:se:0",
+      "papel": "condicao",
+      "origem": "magnesio_serico",
+      "destino": "R-HMG-05",
+      "ordem": 0,
+      "op": "≥",
+      "valor": 1.8,
+      "negado": false
+    },
+    {
+      "id": "R-HMG-05:entao",
+      "papel": "conclusao",
+      "origem": "R-HMG-05",
+      "destino": "hipomagnesemia",
+      "cf": -0.7
+    },
+    {
+      "id": "R-URG-15:se:0",
+      "papel": "condicao",
+      "origem": "hipomagnesemia",
+      "destino": "R-URG-15",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-15:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-15",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-IBR-01:se:0",
+      "papel": "condicao",
+      "origem": "focinho_avermelhado",
+      "destino": "R-IBR-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-01:se:1",
+      "papel": "condicao",
+      "origem": "secrecao_nasal",
+      "destino": "R-IBR-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-01:se:2",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-IBR-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-01:entao",
+      "papel": "conclusao",
+      "origem": "R-IBR-01",
+      "destino": "ibr",
+      "cf": 0.6
+    },
+    {
+      "id": "R-IBR-02:se:0",
+      "papel": "condicao",
+      "origem": "olhos_lacrimejando",
+      "destino": "R-IBR-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-02:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-IBR-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-02:entao",
+      "papel": "conclusao",
+      "origem": "R-IBR-02",
+      "destino": "ibr",
+      "cf": 0.4
+    },
+    {
+      "id": "R-IBR-03:se:0",
+      "papel": "condicao",
+      "origem": "pcr_bohv1",
+      "destino": "R-IBR-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-03:entao",
+      "papel": "conclusao",
+      "origem": "R-IBR-03",
+      "destino": "ibr",
+      "cf": 0.9
+    },
+    {
+      "id": "R-IBR-04:se:0",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-IBR-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-04:se:1",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-IBR-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-04:entao",
+      "papel": "conclusao",
+      "origem": "R-IBR-04",
+      "destino": "ibr",
+      "cf": 0.05
+    },
+    {
+      "id": "R-IBR-05:se:0",
+      "papel": "condicao",
+      "origem": "ausculta_crepitacoes",
+      "destino": "R-IBR-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-IBR-05:entao",
+      "papel": "conclusao",
+      "origem": "R-IBR-05",
+      "destino": "ibr",
+      "cf": -0.3
+    },
+    {
+      "id": "R-URG-18:se:0",
+      "papel": "condicao",
+      "origem": "ibr",
+      "destino": "R-URG-18",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-18:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-18",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-LEP-01:se:0",
+      "papel": "condicao",
+      "origem": "aborto_recente",
+      "destino": "R-LEP-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-01:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-LEP-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-01:entao",
+      "papel": "conclusao",
+      "origem": "R-LEP-01",
+      "destino": "leptospirose",
+      "cf": 0.4
+    },
+    {
+      "id": "R-LEP-02:se:0",
+      "papel": "condicao",
+      "origem": "leite_com_sangue",
+      "destino": "R-LEP-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-02:se:1",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-LEP-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-02:entao",
+      "papel": "conclusao",
+      "origem": "R-LEP-02",
+      "destino": "leptospirose",
+      "cf": 0.6
+    },
+    {
+      "id": "R-LEP-03:se:0",
+      "papel": "condicao",
+      "origem": "sorologia_leptospirose_reagente",
+      "destino": "R-LEP-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-03:entao",
+      "papel": "conclusao",
+      "origem": "R-LEP-03",
+      "destino": "leptospirose",
+      "cf": 0.85
+    },
+    {
+      "id": "R-LEP-04:se:0",
+      "papel": "condicao",
+      "origem": "urina_escura",
+      "destino": "R-LEP-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-04:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-LEP-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-04:entao",
+      "papel": "conclusao",
+      "origem": "R-LEP-04",
+      "destino": "leptospirose",
+      "cf": 0.1
+    },
+    {
+      "id": "R-LEP-05:se:0",
+      "papel": "condicao",
+      "origem": "esfregaco_hemoparasitas",
+      "destino": "R-LEP-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LEP-05:entao",
+      "papel": "conclusao",
+      "origem": "R-LEP-05",
+      "destino": "leptospirose",
+      "cf": -0.5
+    },
+    {
+      "id": "R-URG-17:se:0",
+      "papel": "condicao",
+      "origem": "leptospirose",
+      "destino": "R-URG-17",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-17:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-17",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-PNE-01:se:0",
+      "papel": "condicao",
+      "origem": "tosse",
+      "destino": "R-PNE-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-PNE-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-PNE-01:entao",
+      "papel": "conclusao",
+      "origem": "R-PNE-01",
+      "destino": "pneumonia",
+      "cf": 0.45
+    },
+    {
+      "id": "R-PNE-02:se:0",
+      "papel": "condicao",
+      "origem": "respiracao_ofegante",
+      "destino": "R-PNE-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-02:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-PNE-02",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-PNE-02:entao",
+      "papel": "conclusao",
+      "origem": "R-PNE-02",
+      "destino": "pneumonia",
+      "cf": 0.4
+    },
+    {
+      "id": "R-PNE-03:se:0",
+      "papel": "condicao",
+      "origem": "ausculta_crepitacoes",
+      "destino": "R-PNE-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-03:entao",
+      "papel": "conclusao",
+      "origem": "R-PNE-03",
+      "destino": "pneumonia",
+      "cf": 0.8
+    },
+    {
+      "id": "R-PNE-04:se:0",
+      "papel": "condicao",
+      "origem": "secrecao_nasal",
+      "destino": "R-PNE-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-04:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-PNE-04",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-PNE-04:entao",
+      "papel": "conclusao",
+      "origem": "R-PNE-04",
+      "destino": "pneumonia",
+      "cf": 0.3
+    },
+    {
+      "id": "R-PNE-05:se:0",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-PNE-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-05:se:1",
+      "papel": "condicao",
+      "origem": "apatia",
+      "destino": "R-PNE-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-05:entao",
+      "papel": "conclusao",
+      "origem": "R-PNE-05",
+      "destino": "pneumonia",
+      "cf": 0.1
+    },
+    {
+      "id": "R-PNE-06:se:0",
+      "papel": "condicao",
+      "origem": "distensao_flanco_esquerdo",
+      "destino": "R-PNE-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-PNE-06:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-PNE-06",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-PNE-06:entao",
+      "papel": "conclusao",
+      "origem": "R-PNE-06",
+      "destino": "pneumonia",
+      "cf": -0.3
+    },
+    {
+      "id": "R-URG-13:se:0",
+      "papel": "condicao",
+      "origem": "pneumonia",
+      "destino": "R-URG-13",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-13:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-13",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-RPL-01:se:0",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-RPL-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-01:se:1",
+      "papel": "condicao",
+      "origem": "membranas_expostas_vulva",
+      "destino": "R-RPL-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-01:entao",
+      "papel": "conclusao",
+      "origem": "R-RPL-01",
+      "destino": "retencao_placenta",
+      "cf": 0.8
+    },
+    {
+      "id": "R-RPL-02:se:0",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-RPL-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-02:se:1",
+      "papel": "condicao",
+      "origem": "placenta_nao_expulsa_24h",
+      "destino": "R-RPL-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-02:entao",
+      "papel": "conclusao",
+      "origem": "R-RPL-02",
+      "destino": "retencao_placenta",
+      "cf": 0.7
+    },
+    {
+      "id": "R-RPL-03:se:0",
+      "papel": "condicao",
+      "origem": "palpacao_membranas_retidas",
+      "destino": "R-RPL-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-03:entao",
+      "papel": "conclusao",
+      "origem": "R-RPL-03",
+      "destino": "retencao_placenta",
+      "cf": 0.9
+    },
+    {
+      "id": "R-RPL-04:se:0",
+      "papel": "condicao",
+      "origem": "historico_retencao_placenta",
+      "destino": "R-RPL-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-04:se:1",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-RPL-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-04:entao",
+      "papel": "conclusao",
+      "origem": "R-RPL-04",
+      "destino": "retencao_placenta",
+      "cf": 0.35
+    },
+    {
+      "id": "R-RPL-05:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-RPL-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-05:se:1",
+      "papel": "condicao",
+      "origem": "puerperio",
+      "destino": "R-RPL-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-05:entao",
+      "papel": "conclusao",
+      "origem": "R-RPL-05",
+      "destino": "retencao_placenta",
+      "cf": 0.1
+    },
+    {
+      "id": "R-RPL-06:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-RPL-06",
+      "ordem": 0,
+      "op": ">",
+      "valor": 7.0,
+      "negado": false
+    },
+    {
+      "id": "R-RPL-06:entao",
+      "papel": "conclusao",
+      "origem": "R-RPL-06",
+      "destino": "retencao_placenta",
+      "cf": -0.5
+    },
+    {
+      "id": "R-URG-12:se:0",
+      "papel": "condicao",
+      "origem": "retencao_placenta",
+      "destino": "R-URG-12",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-12:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-12",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-RPT-01:se:0",
+      "papel": "condicao",
+      "origem": "costas_arqueadas",
+      "destino": "R-RPT-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-01:se:1",
+      "papel": "condicao",
+      "origem": "gemido",
+      "destino": "R-RPT-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-01:se:2",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-RPT-01",
+      "ordem": 2,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-RPT-01:entao",
+      "papel": "conclusao",
+      "origem": "R-RPT-01",
+      "destino": "reticulopericardite_traumatica",
+      "cf": 0.7
+    },
+    {
+      "id": "R-RPT-03:se:0",
+      "papel": "condicao",
+      "origem": "prova_dor_reticular",
+      "destino": "R-RPT-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-03:entao",
+      "papel": "conclusao",
+      "origem": "R-RPT-03",
+      "destino": "reticulopericardite_traumatica",
+      "cf": 0.85
+    },
+    {
+      "id": "R-RPT-04:se:0",
+      "papel": "condicao",
+      "origem": "edema_barbela",
+      "destino": "R-RPT-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-04:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-RPT-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-04:entao",
+      "papel": "conclusao",
+      "origem": "R-RPT-04",
+      "destino": "reticulopericardite_traumatica",
+      "cf": 0.6
+    },
+    {
+      "id": "R-RPT-05:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-RPT-05",
+      "ordem": 0,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-RPT-05:se:1",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-RPT-05",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-05:se:2",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-RPT-05",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-05:entao",
+      "papel": "conclusao",
+      "origem": "R-RPT-05",
+      "destino": "reticulopericardite_traumatica",
+      "cf": 0.1
+    },
+    {
+      "id": "R-RPT-06:se:0",
+      "papel": "condicao",
+      "origem": "ping_metalico_flanco_esquerdo",
+      "destino": "R-RPT-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-RPT-06:entao",
+      "papel": "conclusao",
+      "origem": "R-RPT-06",
+      "destino": "reticulopericardite_traumatica",
+      "cf": -0.4
+    },
+    {
+      "id": "R-URG-14:se:0",
+      "papel": "condicao",
+      "origem": "reticulopericardite_traumatica",
+      "destino": "R-URG-14",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-14:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-14",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-TES-01:se:0",
+      "papel": "condicao",
+      "origem": "distensao_flanco_esquerdo",
+      "destino": "R-TES-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TES-01:se:1",
+      "papel": "condicao",
+      "origem": "pasto_leguminosa_recente",
+      "destino": "R-TES-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TES-01:se:2",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-TES-01",
+      "ordem": 2,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-TES-01:entao",
+      "papel": "conclusao",
+      "origem": "R-TES-01",
+      "destino": "timpanismo_espumoso",
+      "cf": 0.7
+    },
+    {
+      "id": "R-TES-02:se:0",
+      "papel": "condicao",
+      "origem": "outros_animais_estufados",
+      "destino": "R-TES-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TES-02:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-TES-02",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-TES-02:entao",
+      "papel": "conclusao",
+      "origem": "R-TES-02",
+      "destino": "timpanismo_espumoso",
+      "cf": 0.3
+    },
+    {
+      "id": "R-TES-03:se:0",
+      "papel": "condicao",
+      "origem": "espuma_sonda",
+      "destino": "R-TES-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TES-03:entao",
+      "papel": "conclusao",
+      "origem": "R-TES-03",
+      "destino": "timpanismo_espumoso",
+      "cf": 0.9
+    },
+    {
+      "id": "R-TES-04:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-TES-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": "ausente",
+      "negado": false
+    },
+    {
+      "id": "R-TES-04:se:1",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-TES-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TES-04:entao",
+      "papel": "conclusao",
+      "origem": "R-TES-04",
+      "destino": "timpanismo_espumoso",
+      "cf": 0.05
+    },
+    {
+      "id": "R-TES-05:se:0",
+      "papel": "condicao",
+      "origem": "gas_livre_sonda",
+      "destino": "R-TES-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TES-05:entao",
+      "papel": "conclusao",
+      "origem": "R-TES-05",
+      "destino": "timpanismo_espumoso",
+      "cf": -0.7
+    },
+    {
+      "id": "R-URG-10:se:0",
+      "papel": "condicao",
+      "origem": "timpanismo_espumoso",
+      "destino": "R-URG-10",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-10:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-10",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-TGA-01:se:0",
+      "papel": "condicao",
+      "origem": "distensao_flanco_esquerdo",
+      "destino": "R-TGA-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TGA-01:se:1",
+      "papel": "condicao",
+      "origem": "engasgo",
+      "destino": "R-TGA-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TGA-01:se:2",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-TGA-01",
+      "ordem": 2,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-TGA-01:entao",
+      "papel": "conclusao",
+      "origem": "R-TGA-01",
+      "destino": "timpanismo_gasoso",
+      "cf": 0.6
+    },
+    {
+      "id": "R-TGA-03:se:0",
+      "papel": "condicao",
+      "origem": "gas_livre_sonda",
+      "destino": "R-TGA-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TGA-03:entao",
+      "papel": "conclusao",
+      "origem": "R-TGA-03",
+      "destino": "timpanismo_gasoso",
+      "cf": 0.9
+    },
+    {
+      "id": "R-TGA-04:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-TGA-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": "ausente",
+      "negado": false
+    },
+    {
+      "id": "R-TGA-04:se:1",
+      "papel": "condicao",
+      "origem": "apatia",
+      "destino": "R-TGA-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TGA-04:entao",
+      "papel": "conclusao",
+      "origem": "R-TGA-04",
+      "destino": "timpanismo_gasoso",
+      "cf": 0.05
+    },
+    {
+      "id": "R-TGA-05:se:0",
+      "papel": "condicao",
+      "origem": "espuma_sonda",
+      "destino": "R-TGA-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TGA-05:entao",
+      "papel": "conclusao",
+      "origem": "R-TGA-05",
+      "destino": "timpanismo_gasoso",
+      "cf": -0.7
+    },
+    {
+      "id": "R-URG-11:se:0",
+      "papel": "condicao",
+      "origem": "timpanismo_gasoso",
+      "destino": "R-URG-11",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-11:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-11",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-TUB-01:se:0",
+      "papel": "condicao",
+      "origem": "emagrecimento_progressivo",
+      "destino": "R-TUB-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-01:se:1",
+      "papel": "condicao",
+      "origem": "tosse",
+      "destino": "R-TUB-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-01:se:2",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-TUB-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-01:entao",
+      "papel": "conclusao",
+      "origem": "R-TUB-01",
+      "destino": "tuberculose",
+      "cf": 0.5
+    },
+    {
+      "id": "R-TUB-02:se:0",
+      "papel": "condicao",
+      "origem": "linfonodos_aumentados",
+      "destino": "R-TUB-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-02:se:1",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-TUB-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-02:entao",
+      "papel": "conclusao",
+      "origem": "R-TUB-02",
+      "destino": "tuberculose",
+      "cf": 0.4
+    },
+    {
+      "id": "R-TUB-03:se:0",
+      "papel": "condicao",
+      "origem": "tuberculina_reagente",
+      "destino": "R-TUB-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-03:entao",
+      "papel": "conclusao",
+      "origem": "R-TUB-03",
+      "destino": "tuberculose",
+      "cf": 0.9
+    },
+    {
+      "id": "R-TUB-04:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-TUB-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": "normal",
+      "negado": false
+    },
+    {
+      "id": "R-TUB-04:se:1",
+      "papel": "condicao",
+      "origem": "queda_producao",
+      "destino": "R-TUB-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-04:entao",
+      "papel": "conclusao",
+      "origem": "R-TUB-04",
+      "destino": "tuberculose",
+      "cf": 0.05
+    },
+    {
+      "id": "R-TUB-05:se:0",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-TUB-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-TUB-05:entao",
+      "papel": "conclusao",
+      "origem": "R-TUB-05",
+      "destino": "tuberculose",
+      "cf": -0.3
+    },
+    {
+      "id": "R-URG-20:se:0",
+      "papel": "condicao",
+      "origem": "tuberculose",
+      "destino": "R-URG-20",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-20:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-20",
+      "destino": "chamar_agora",
+      "cf": 0.99
     }
   ],
   "layout": {}
