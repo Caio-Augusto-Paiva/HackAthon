@@ -1,0 +1,244 @@
+{
+  "doenca": "reticulopericardite_traumatica",
+  "simbolos": [
+    {
+      "id": "costas_arqueadas",
+      "tipo": "pergunta",
+      "nome": "Costas arqueadas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca fica com as costas arqueadas e evita deitar ou descer rampas?",
+        "veterinario": "Postura antiálgica com dorso arqueado?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a costas arqueadas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a costas arqueadas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "gemido",
+      "tipo": "pergunta",
+      "nome": "Gemido",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca geme quando respira, se deita ou se levanta?",
+        "veterinario": "Gemido expiratório espontâneo?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a gemido.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a gemido."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "prova_dor_reticular",
+      "tipo": "pergunta",
+      "nome": "Prova de dor reticular",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Prova de dor reticular positiva (bastão ou pinçamento da cernelha) com gemido?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a prova de dor reticular."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "edema_barbela",
+      "tipo": "pergunta",
+      "nome": "Edema de barbela ou peito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Edema de barbela, jugulares ingurgitadas ou bulhas cardíacas abafadas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a edema de barbela ou peito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "reticulopericardite_traumatica",
+      "tipo": "doenca",
+      "nome": "Reticulopericardite Traumática",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Reticuloperitonite traumática em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-RPT-01",
+      "se": [
+        {
+          "simbolo": "costas_arqueadas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "gemido",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho."
+    },
+    {
+      "id": "R-RPT-03",
+      "se": [
+        {
+          "simbolo": "prova_dor_reticular",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Prova de dor reticular positiva apoia reticuloperitonite traumática."
+    },
+    {
+      "id": "R-RPT-04",
+      "se": [
+        {
+          "simbolo": "edema_barbela",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Edema de barbela com febre sugere extensão ao pericárdio."
+    },
+    {
+      "id": "R-RPT-05",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite e produção em queda com febre, sozinhos, são sinais inespecíficos."
+    },
+    {
+      "id": "R-RPT-06",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: ping no flanco esquerdo aponta para deslocamento de abomaso como causa da dor."
+    },
+    {
+      "id": "R-URG-14",
+      "se": [
+        {
+          "simbolo": "reticulopericardite_traumatica",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de reticulopericardite_traumatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

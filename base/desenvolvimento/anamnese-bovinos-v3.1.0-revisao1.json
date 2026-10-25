@@ -16,8 +16,8 @@
       "bloco_diferencial": 0.2
     },
     "limite_dinamico": {
-      "produtor": 12,
-      "veterinario": 25
+      "produtor": 15,
+      "veterinario": 30
     },
     "triagem": [
       {
@@ -106,6 +106,32 @@
           "veterinario": "Marque as alterações: diarreia, corrimento vaginal anormal ou urina escura. Sem alteração: nenhuma opção."
         },
         "opcoes": {}
+      }
+    ],
+    "exclusoes": [
+      {
+        "doencas": [
+          "deslocamento_abomaso_esquerda",
+          "deslocamento_abomaso_direita"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "O abomaso desloca para um lado só."
+      },
+      {
+        "doencas": [
+          "timpanismo_espumoso",
+          "timpanismo_gasoso"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "O gás fica preso em espuma ou livre, não os dois ao mesmo tempo."
+      },
+      {
+        "doencas": [
+          "retencao_placenta",
+          "metrite"
+        ],
+        "fonte": "Embrapa Gado de Leite; suposição do projeto a validar",
+        "nota": "No mesmo quadro puerperal, a retenção precede a metrite; o par deixa a hipótese mais forte se destacar."
       }
     ]
   },
@@ -598,7 +624,7 @@
       "combinacao": "mycin"
     },
     {
-      "id": "retencao_placenta",
+      "id": "historico_retencao_placenta",
       "tipo": "ficha",
       "nome": "Histórico de retenção de placenta",
       "dominio": {
@@ -612,7 +638,7 @@
         "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
         "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
       },
-      "campo_ficha": "retencao_placenta",
+      "campo_ficha": "historico_retencao_placenta",
       "combinacao": "mycin"
     },
     {
@@ -776,7 +802,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "media",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Acidose ruminal subaguda em bovinos e ovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/acidose-ruminal-subaguda-em-bovinos-e-ovinos"
+      }
     },
     {
       "id": "cetose",
@@ -788,7 +818,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "media",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Hipercetonemia em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/hipercetonemia-em-bovinos/hipercetonemia-em-bovinos"
+      }
     },
     {
       "id": "dermatite_digital",
@@ -800,19 +834,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "baixa",
-      "combinacao": "mycin"
-    },
-    {
-      "id": "deslocamento_abomaso",
-      "tipo": "doenca",
-      "nome": "Deslocamento de Abomaso",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {},
-      "por_que": {},
-      "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+      }
     },
     {
       "id": "hipocalcemia",
@@ -824,7 +850,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Paresia puerperal em vacas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/paresia-puerperal-em-ruminantes/paresia-puerperal-em-vacas"
+      }
     },
     {
       "id": "mastite",
@@ -836,7 +866,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "media",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Mastite em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/mastite-em-animais-de-grande-porte/mastite-em-bovinos"
+      }
     },
     {
       "id": "metrite",
@@ -848,7 +882,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Metrite em animais de produção (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/metrite-em-animais-de-produ%C3%A7%C3%A3o"
+      }
     },
     {
       "id": "tpb",
@@ -860,7 +898,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Babesiose em animais (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/circulatory-system/parasitas-do-sangue/babesiose-em-animais"
+      }
     },
     {
       "id": "chamar_agora",
@@ -894,6 +936,872 @@
       "pergunta": {},
       "por_que": {},
       "combinacao": "mycin"
+    },
+    {
+      "id": "higroma",
+      "tipo": "pergunta",
+      "nome": "Inchaço nos joelhos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca tem inchaço nos joelhos (higroma)?",
+        "veterinario": "Higroma carpal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a inchaço nos joelhos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a inchaço nos joelhos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "vacinada_brucelose",
+      "tipo": "pergunta",
+      "nome": "Vacinada contra brucelose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca foi vacinada contra brucelose quando bezerra (3 a 8 meses)?",
+        "veterinario": "Vacinação B19 ou RB51 comprovada?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a vacinada contra brucelose.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a vacinada contra brucelose."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "sorologia_brucelose_reagente",
+      "tipo": "pergunta",
+      "nome": "Sorologia para brucelose reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Teste sorológico para brucelose (AAT, 2-ME ou FPA) reagente?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a sorologia para brucelose reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "brucelose",
+      "tipo": "doenca",
+      "nome": "Brucelose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Brucelose em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos"
+      }
+    },
+    {
+      "id": "feridas_boca",
+      "tipo": "pergunta",
+      "nome": "Feridas na boca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há feridas na boca, na gengiva ou na língua, com baba?",
+        "veterinario": "Erosões ou úlceras na mucosa oral?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a feridas na boca.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a feridas na boca."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "falhas_reprodutivas_lote",
+      "tipo": "pergunta",
+      "nome": "Falhas reprodutivas no lote",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Várias vacas do lote estão repetindo cio ou abortando?",
+        "veterinario": "Aumento de repetição de cio, abortos ou bezerros fracos no rebanho?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a falhas reprodutivas no lote.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a falhas reprodutivas no lote."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "antigeno_bvdv",
+      "tipo": "pergunta",
+      "nome": "BVDV detectado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "ELISA de antígeno ou PCR para BVDV positivo?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a bVDV detectado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "bvd",
+      "tipo": "doenca",
+      "nome": "Diarreia Viral Bovina (BVD)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Diarreia viral bovina e complexo da doença das mucosas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas"
+      }
+    },
+    {
+      "id": "distensao_flanco_direito",
+      "tipo": "pergunta",
+      "nome": "Barriga estufada do lado direito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A barriga está estufada do lado direito?",
+        "veterinario": "Distensão do flanco direito, na região das últimas costelas?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a barriga estufada do lado direito.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a barriga estufada do lado direito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "desidratacao",
+      "tipo": "pergunta",
+      "nome": "Desidratação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Os olhos estão fundos ou a pele demora a voltar quando beliscada?",
+        "veterinario": "Desidratação evidente (enoftalmia, turgor cutâneo reduzido)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a desidratação.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a desidratação."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "deslocamento_abomaso_direita",
+      "tipo": "doenca",
+      "nome": "Deslocamento de Abomaso à Direita",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Deslocamento do abomaso para a esquerda ou direita e vólvulo abomasal em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos"
+      }
+    },
+    {
+      "id": "tosse",
+      "tipo": "pergunta",
+      "nome": "Tosse",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está tossindo?",
+        "veterinario": "Tosse espontânea ou provocada presente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a tosse.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a tosse."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "secrecao_nasal",
+      "tipo": "pergunta",
+      "nome": "Secreção nasal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Está escorrendo catarro ou secreção pelo nariz?",
+        "veterinario": "Secreção nasal mucosa ou mucopurulenta?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a secreção nasal.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a secreção nasal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "aborto_recente",
+      "tipo": "pergunta",
+      "nome": "Aborto recente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca abortou nesta gestação ou nos últimos meses?",
+        "veterinario": "Aborto recente, sobretudo no terço final da gestação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a aborto recente.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a aborto recente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "distensao_flanco_esquerdo",
+      "tipo": "pergunta",
+      "nome": "Barriga estufada do lado esquerdo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A barriga está estufada do lado esquerdo, alta como um balão?",
+        "veterinario": "Distensão do flanco esquerdo (fossa paralombar abaulada)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a barriga estufada do lado esquerdo.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a barriga estufada do lado esquerdo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ping_flanco_direito",
+      "tipo": "pergunta",
+      "nome": "Ping no flanco direito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Ping metálico no flanco direito à percussão e auscultação simultâneas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco direito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tremores",
+      "tipo": "pergunta",
+      "nome": "Tremores musculares",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com tremores ou espasmos nos músculos?",
+        "veterinario": "Fasciculações ou tremores musculares?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a tremores musculares.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a tremores musculares."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fezes_escassas",
+      "tipo": "pergunta",
+      "nome": "Pouco esterco",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está fazendo pouco esterco, menos que o normal?",
+        "veterinario": "Fezes escassas ou ausentes nas últimas horas?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a pouco esterco.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a pouco esterco."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pasto_leguminosa_recente",
+      "tipo": "pergunta",
+      "nome": "Pasto de leguminosa recente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca comeu nas últimas horas pasto de leguminosa (alfafa, trevo) ou capim muito novo e molhado?",
+        "veterinario": "Ingestão recente de leguminosa ou pastagem muito tenra?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a pasto de leguminosa recente.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a pasto de leguminosa recente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "espuma_sonda",
+      "tipo": "pergunta",
+      "nome": "Conteúdo espumoso na sonda",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Sonda orogástrica traz conteúdo espumoso sem aliviar a distensão?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a conteúdo espumoso na sonda."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "gas_livre_sonda",
+      "tipo": "pergunta",
+      "nome": "Gás livre na sonda",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Sonda orogástrica libera gás livre e alivia a distensão?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a gás livre na sonda."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ausculta_crepitacoes",
+      "tipo": "pergunta",
+      "nome": "Crepitações à auscultação pulmonar",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Crepitações ou sibilos à auscultação pulmonar, sobretudo na região cranioventral?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a crepitações à auscultação pulmonar."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "deslocamento_abomaso_esquerda",
+      "tipo": "doenca",
+      "nome": "Deslocamento de Abomaso à Esquerda",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Deslocamento do abomaso para a esquerda ou direita e vólvulo abomasal em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos"
+      }
+    },
+    {
+      "id": "agitacao",
+      "tipo": "pergunta",
+      "nome": "Agitação ou reação exagerada",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está agitada, cambaleando ou se assusta demais com barulho e toque?",
+        "veterinario": "Hiperexcitabilidade, ataxia ou hiperestesia?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a agitação ou reação exagerada.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a agitação ou reação exagerada."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pasto_novo_adubado",
+      "tipo": "pergunta",
+      "nome": "Pasto novo e adubado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca foi solta há pouco tempo em pasto novo, muito verde ou adubado?",
+        "veterinario": "Mudança recente para pastagem tenra ou adubada com potássio e nitrogênio?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a pasto novo e adubado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a pasto novo e adubado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "magnesio_serico",
+      "tipo": "pergunta",
+      "nome": "Magnésio sérico",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 10.0,
+        "unidade": "mg/dL",
+        "casas_decimais": 1
+      },
+      "pergunta": {
+        "veterinario": "Qual é o magnésio sérico, em mg/dL?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a magnésio sérico."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "hipomagnesemia",
+      "tipo": "doenca",
+      "nome": "Hipomagnesemia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Tetania hipomagnesêmica em bovinos e ovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos"
+      }
+    },
+    {
+      "id": "focinho_avermelhado",
+      "tipo": "pergunta",
+      "nome": "Focinho muito vermelho",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O focinho está muito vermelho, com feridas ou crostas?",
+        "veterinario": "Hiperemia ou lesões no plano nasal (focinho vermelho)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a focinho muito vermelho.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a focinho muito vermelho."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "olhos_lacrimejando",
+      "tipo": "pergunta",
+      "nome": "Olhos lacrimejando",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Os olhos estão vermelhos ou lacrimejando muito?",
+        "veterinario": "Conjuntivite com lacrimejamento?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a olhos lacrimejando.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a olhos lacrimejando."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pcr_bohv1",
+      "tipo": "pergunta",
+      "nome": "BoHV-1 detectado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "PCR ou isolamento de BoHV-1 positivo em secreção nasal ou ocular?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a boHV-1 detectado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ibr",
+      "tipo": "doenca",
+      "nome": "Rinotraqueíte Infecciosa Bovina (IBR)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Infecções virais associadas ao complexo das doenças respiratórias dos bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos"
+      }
+    },
+    {
+      "id": "leite_com_sangue",
+      "tipo": "pergunta",
+      "nome": "Leite rosado ou com sangue",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O leite saiu rosado ou com sangue, com o úbere mole e sem inflamação?",
+        "veterinario": "Leite sanguinolento com úbere flácido (agalaxia)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a leite rosado ou com sangue.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a leite rosado ou com sangue."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "sorologia_leptospirose_reagente",
+      "tipo": "pergunta",
+      "nome": "Sorologia para leptospirose reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Soroaglutinação microscópica para leptospirose com título significativo?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a sorologia para leptospirose reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "leptospirose",
+      "tipo": "doenca",
+      "nome": "Leptospirose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Leptospirose em ruminantes (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes"
+      }
+    },
+    {
+      "id": "respiracao_ofegante",
+      "tipo": "pergunta",
+      "nome": "Respiração com esforço",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca respira com esforço, rápido ou de boca aberta?",
+        "veterinario": "Taquipneia ou dispneia evidente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a respiração com esforço.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a respiração com esforço."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pneumonia",
+      "tipo": "doenca",
+      "nome": "Pneumonia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Visão geral sobre o complexo das doenças respiratórias dos bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos"
+      }
+    },
+    {
+      "id": "membranas_expostas_vulva",
+      "tipo": "pergunta",
+      "nome": "Restos de placenta na vulva",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há restos de placenta pendurados para fora da vulva?",
+        "veterinario": "Membranas fetais expostas pela vulva?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a restos de placenta na vulva.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a restos de placenta na vulva."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "placenta_nao_expulsa_24h",
+      "tipo": "pergunta",
+      "nome": "Placenta não saiu em 24 horas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A placenta ainda não tinha saído um dia depois do parto?",
+        "veterinario": "Membranas fetais não expulsas em até 24 horas após o parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a placenta não saiu em 24 horas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a placenta não saiu em 24 horas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "palpacao_membranas_retidas",
+      "tipo": "pergunta",
+      "nome": "Membranas retidas ao exame",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Membranas fetais retidas no útero ao exame vaginal ou retal, mais de 24 horas após o parto?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a membranas retidas ao exame."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "retencao_placenta",
+      "tipo": "doenca",
+      "nome": "Retenção de Placenta",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Retenção de membranas fetais em vacas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas"
+      }
+    },
+    {
+      "id": "costas_arqueadas",
+      "tipo": "pergunta",
+      "nome": "Costas arqueadas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca fica com as costas arqueadas e evita deitar ou descer rampas?",
+        "veterinario": "Postura antiálgica com dorso arqueado?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a costas arqueadas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a costas arqueadas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "gemido",
+      "tipo": "pergunta",
+      "nome": "Gemido",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca geme quando respira, se deita ou se levanta?",
+        "veterinario": "Gemido expiratório espontâneo?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a gemido.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a gemido."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "prova_dor_reticular",
+      "tipo": "pergunta",
+      "nome": "Prova de dor reticular",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Prova de dor reticular positiva (bastão ou pinçamento da cernelha) com gemido?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a prova de dor reticular."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "edema_barbela",
+      "tipo": "pergunta",
+      "nome": "Edema de barbela ou peito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Edema de barbela, jugulares ingurgitadas ou bulhas cardíacas abafadas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a edema de barbela ou peito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "reticulopericardite_traumatica",
+      "tipo": "doenca",
+      "nome": "Reticulopericardite Traumática",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Reticuloperitonite traumática em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos"
+      }
+    },
+    {
+      "id": "outros_animais_estufados",
+      "tipo": "pergunta",
+      "nome": "Outros animais estufados",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Outras vacas do mesmo lote também estão estufadas?",
+        "veterinario": "Outros animais do lote com distensão abdominal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a outros animais estufados.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a outros animais estufados."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "timpanismo_espumoso",
+      "tipo": "doenca",
+      "nome": "Timpanismo Espumoso",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Timpanismo em ruminantes (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes"
+      }
+    },
+    {
+      "id": "engasgo",
+      "tipo": "pergunta",
+      "nome": "Engasgo ou dificuldade de engolir",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca parece engasgada, babando ou com esforço para engolir?",
+        "veterinario": "Sinais de obstrução esofágica (sialorreia, esforço de deglutição)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a engasgo ou dificuldade de engolir.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a engasgo ou dificuldade de engolir."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "timpanismo_gasoso",
+      "tipo": "doenca",
+      "nome": "Timpanismo Gasoso",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Timpanismo em ruminantes (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes"
+      }
+    },
+    {
+      "id": "emagrecimento_progressivo",
+      "tipo": "pergunta",
+      "nome": "Emagrecimento progressivo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca vem emagrecendo aos poucos, mesmo comendo?",
+        "veterinario": "Perda progressiva de condição corporal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a emagrecimento progressivo.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a emagrecimento progressivo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "linfonodos_aumentados",
+      "tipo": "pergunta",
+      "nome": "Ínguas aumentadas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há caroços (ínguas) aumentados no pescoço, na frente da paleta ou na virilha?",
+        "veterinario": "Linfonodos superficiais aumentados?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a ínguas aumentadas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a ínguas aumentadas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tuberculina_reagente",
+      "tipo": "pergunta",
+      "nome": "Tuberculinização reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Teste tuberculínico (cervical comparativo) reagente?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a tuberculinização reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tuberculose",
+      "tipo": "doenca",
+      "nome": "Tuberculose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Visão geral da tuberculose em animais (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais"
+      }
     }
   ],
   "regras": [
@@ -1173,41 +2081,6 @@
       "nota": "Hiporexia e queda de produção no início da lactação são sinais inespecíficos; outras doenças podem coexistir."
     },
     {
-      "id": "R-DAB-01",
-      "se": [
-        {
-          "simbolo": "inicio_lactacao",
-          "op": "=",
-          "valor": true,
-          "negado": false
-        },
-        {
-          "simbolo": "apetite",
-          "op": "em",
-          "valor": [
-            "reduzido",
-            "ausente"
-          ],
-          "negado": false
-        },
-        {
-          "simbolo": "queda_producao",
-          "op": "=",
-          "valor": true,
-          "negado": false
-        }
-      ],
-      "entao": {
-        "simbolo": "deslocamento_abomaso",
-        "cf": 0.3
-      },
-      "classe": "evidencia",
-      "prioridade": 10,
-      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
-      "status": "suposicao_a_validar",
-      "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
-    },
-    {
       "id": "R-HIP-02",
       "se": [
         {
@@ -1411,32 +2284,6 @@
       "nota": "Recusa seletiva de concentrado é um achado inespecífico e não confirma cetose isoladamente."
     },
     {
-      "id": "R-DAB-02",
-      "se": [
-        {
-          "simbolo": "inicio_lactacao",
-          "op": "=",
-          "valor": true,
-          "negado": false
-        },
-        {
-          "simbolo": "flanco_esquerdo_afundado",
-          "op": "=",
-          "valor": true,
-          "negado": false
-        }
-      ],
-      "entao": {
-        "simbolo": "deslocamento_abomaso",
-        "cf": 0.4
-      },
-      "classe": "evidencia",
-      "prioridade": 10,
-      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
-      "status": "suposicao_a_validar",
-      "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
-    },
-    {
       "id": "R-DD-02",
       "se": [
         {
@@ -1518,7 +2365,7 @@
       "id": "R-MET-04",
       "se": [
         {
-          "simbolo": "retencao_placenta",
+          "simbolo": "historico_retencao_placenta",
           "op": "=",
           "valor": true,
           "negado": false
@@ -1671,26 +2518,6 @@
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
       "nota": "Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica."
-    },
-    {
-      "id": "R-DAB-03",
-      "se": [
-        {
-          "simbolo": "ping_metalico_flanco_esquerdo",
-          "op": "=",
-          "valor": true,
-          "negado": false
-        }
-      ],
-      "entao": {
-        "simbolo": "deslocamento_abomaso",
-        "cf": 0.9
-      },
-      "classe": "evidencia",
-      "prioridade": 10,
-      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle; CF e tradução para regra: suposição do projeto a validar",
-      "status": "suposicao_a_validar",
-      "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo."
     },
     {
       "id": "R-DD-01",
@@ -2062,7 +2889,7 @@
       "id": "R-URG-03",
       "se": [
         {
-          "simbolo": "deslocamento_abomaso",
+          "simbolo": "deslocamento_abomaso_esquerda",
           "op": "=",
           "valor": true,
           "negado": false,
@@ -2077,7 +2904,7 @@
       "prioridade": 50,
       "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
       "status": "suposicao_a_validar",
-      "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_esquerda é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
     },
     {
       "id": "R-URG-04",
@@ -2208,6 +3035,284 @@
       "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de acidose ruminal."
     },
     {
+      "id": "R-BRU-01",
+      "se": [
+        {
+          "simbolo": "aborto_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "historico_retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aborto no terço final seguido de retenção de placenta é o quadro clássico da brucelose."
+    },
+    {
+      "id": "R-BRU-02",
+      "se": [
+        {
+          "simbolo": "higroma",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Higroma carpal é achado sugestivo de brucelose crônica no rebanho."
+    },
+    {
+      "id": "R-BRU-03",
+      "se": [
+        {
+          "simbolo": "sorologia_brucelose_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sorologia reagente apoia brucelose; a confirmação segue o regulamento do PNCEBT."
+    },
+    {
+      "id": "R-BRU-04",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento vaginal, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-BRU-05",
+      "se": [
+        {
+          "simbolo": "vacinada_brucelose",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: vacinação na idade correta reduz, mas não exclui, a brucelose."
+    },
+    {
+      "id": "R-URG-16",
+      "se": [
+        {
+          "simbolo": "brucelose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de brucelose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-BVD-01",
+      "se": [
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "feridas_boca",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diarreia com erosões orais é o quadro típico da BVD."
+    },
+    {
+      "id": "R-BVD-02",
+      "se": [
+        {
+          "simbolo": "aborto_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "falhas_reprodutivas_lote",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aborto com falhas reprodutivas no lote é compatível com BVD."
+    },
+    {
+      "id": "R-BVD-03",
+      "se": [
+        {
+          "simbolo": "antigeno_bvdv",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Detecção de BVDV apoia a doença."
+    },
+    {
+      "id": "R-BVD-04",
+      "se": [
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diarreia com febre, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-BVD-05",
+      "se": [
+        {
+          "simbolo": "fezes_aquosas_espuma_graos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: fezes aquosas com grãos e espuma apontam para acidose."
+    },
+    {
+      "id": "R-URG-19",
+      "se": [
+        {
+          "simbolo": "bvd",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de bvd é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
       "id": "R-CET-06",
       "se": [
         {
@@ -2231,7 +3336,271 @@
       "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de cetose."
     },
     {
-      "id": "R-DAB-04",
+      "id": "R-DAD-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "fezes_escassas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_direita",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Redução da ingestão e de fezes no pós-parto é compatível com deslocamento; não indica o lado."
+    },
+    {
+      "id": "R-DAD-02",
+      "se": [
+        {
+          "simbolo": "distensao_flanco_direito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_direita",
+        "cf": 0.75
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita."
+    },
+    {
+      "id": "R-DAD-03",
+      "se": [
+        {
+          "simbolo": "ping_flanco_direito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_direita",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ping no flanco direito apoia deslocamento à direita ou vólvulo; exige diferenciação de ceco e cólon com gás."
+    },
+    {
+      "id": "R-DAD-04",
+      "se": [
+        {
+          "simbolo": "desidratacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_direita",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Desidratação acompanha o quadro obstrutivo do deslocamento à direita."
+    },
+    {
+      "id": "R-DAD-05",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_direita",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido com abatimento, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-DAD-06",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_direita",
+        "cf": -0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: ping no flanco esquerdo aponta para deslocamento à esquerda, não à direita."
+    },
+    {
+      "id": "R-URG-09",
+      "se": [
+        {
+          "simbolo": "deslocamento_abomaso_direita",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_direita é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-DAE-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
+    },
+    {
+      "id": "R-DAE-02",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "flanco_esquerdo_afundado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAE-03",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás."
+    },
+    {
+      "id": "R-DAE-04",
       "se": [
         {
           "simbolo": "apetite",
@@ -2244,7 +3613,7 @@
         }
       ],
       "entao": {
-        "simbolo": "deslocamento_abomaso",
+        "simbolo": "deslocamento_abomaso_esquerda",
         "cf": 0.05
       },
       "classe": "evidencia",
@@ -2252,6 +3621,52 @@
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
       "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAE-05",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "fezes_escassas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Pouco esterco no início da lactação é compatível com deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAE-06",
+      "se": [
+        {
+          "simbolo": "ping_flanco_direito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": -0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: ping no flanco direito aponta para deslocamento à direita, não à esquerda."
     },
     {
       "id": "R-HIP-05",
@@ -2304,6 +3719,1364 @@
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
       "nota": "Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia."
+    },
+    {
+      "id": "R-HMG-01",
+      "se": [
+        {
+          "simbolo": "tremores",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "agitacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Tremores com agitação são o quadro nervoso típico da tetania hipomagnesêmica."
+    },
+    {
+      "id": "R-HMG-02",
+      "se": [
+        {
+          "simbolo": "pasto_novo_adubado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Mudança recente para pasto tenro ou adubado é fator de risco de falta de magnésio."
+    },
+    {
+      "id": "R-HMG-03",
+      "se": [
+        {
+          "simbolo": "magnesio_serico",
+          "op": "<",
+          "valor": 1.2,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Magnésio abaixo de 1,2 mg/dL é compatível com tetania."
+    },
+    {
+      "id": "R-HMG-04",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Decúbito sem extremidades frias, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-HMG-05",
+      "se": [
+        {
+          "simbolo": "magnesio_serico",
+          "op": "≥",
+          "valor": 1.8,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": -0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: magnésio sérico normal torna a hipomagnesemia improvável."
+    },
+    {
+      "id": "R-URG-15",
+      "se": [
+        {
+          "simbolo": "hipomagnesemia",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de hipomagnesemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-IBR-01",
+      "se": [
+        {
+          "simbolo": "focinho_avermelhado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "secrecao_nasal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Focinho vermelho com secreção nasal é o quadro típico da rinotraqueíte."
+    },
+    {
+      "id": "R-IBR-02",
+      "se": [
+        {
+          "simbolo": "olhos_lacrimejando",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Conjuntivite com febre é compatível com BoHV-1."
+    },
+    {
+      "id": "R-IBR-03",
+      "se": [
+        {
+          "simbolo": "pcr_bohv1",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Detecção de BoHV-1 apoia IBR."
+    },
+    {
+      "id": "R-IBR-04",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Febre com queda de produção, sozinhas, são sinais inespecíficos."
+    },
+    {
+      "id": "R-IBR-05",
+      "se": [
+        {
+          "simbolo": "ausculta_crepitacoes",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: crepitações pulmonares apontam para pneumonia bacteriana mais do que para IBR."
+    },
+    {
+      "id": "R-URG-18",
+      "se": [
+        {
+          "simbolo": "ibr",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de ibr é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-LEP-01",
+      "se": [
+        {
+          "simbolo": "aborto_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aborto com febre é compatível com leptospirose aguda."
+    },
+    {
+      "id": "R-LEP-02",
+      "se": [
+        {
+          "simbolo": "leite_com_sangue",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose."
+    },
+    {
+      "id": "R-LEP-03",
+      "se": [
+        {
+          "simbolo": "sorologia_leptospirose_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Título significativo na soroaglutinação apoia leptospirose."
+    },
+    {
+      "id": "R-LEP-04",
+      "se": [
+        {
+          "simbolo": "urina_escura",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Urina escura com febre, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-LEP-05",
+      "se": [
+        {
+          "simbolo": "esfregaco_hemoparasitas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": -0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: hemoparasitas no esfregaço explicam a hemólise por tristeza parasitária."
+    },
+    {
+      "id": "R-URG-17",
+      "se": [
+        {
+          "simbolo": "leptospirose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de leptospirose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-PNE-01",
+      "se": [
+        {
+          "simbolo": "tosse",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "pneumonia",
+        "cf": 0.45
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Tosse com queda de apetite sugere doença respiratória com comprometimento geral."
+    },
+    {
+      "id": "R-PNE-02",
+      "se": [
+        {
+          "simbolo": "respiracao_ofegante",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "pneumonia",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Respiração com esforço apoia doença respiratória do trato inferior."
+    },
+    {
+      "id": "R-PNE-03",
+      "se": [
+        {
+          "simbolo": "ausculta_crepitacoes",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "pneumonia",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Crepitações cranioventrais à auscultação apoiam broncopneumonia."
+    },
+    {
+      "id": "R-PNE-04",
+      "se": [
+        {
+          "simbolo": "secrecao_nasal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "pneumonia",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão."
+    },
+    {
+      "id": "R-PNE-05",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "pneumonia",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Febre com abatimento, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-PNE-06",
+      "se": [
+        {
+          "simbolo": "distensao_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "pneumonia",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão."
+    },
+    {
+      "id": "R-URG-13",
+      "se": [
+        {
+          "simbolo": "pneumonia",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de pneumonia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-RPL-01",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "membranas_expostas_vulva",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Restos de placenta visíveis na vulva no pós-parto indicam retenção de membranas fetais."
+    },
+    {
+      "id": "R-RPL-02",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "placenta_nao_expulsa_24h",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Falha na expulsão da placenta em até 24 horas define a retenção de membranas fetais."
+    },
+    {
+      "id": "R-RPL-03",
+      "se": [
+        {
+          "simbolo": "palpacao_membranas_retidas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Membranas retidas ao exame confirmam a suspeita de retenção."
+    },
+    {
+      "id": "R-RPL-04",
+      "se": [
+        {
+          "simbolo": "historico_retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério."
+    },
+    {
+      "id": "R-RPL-05",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento vaginal no puerpério, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-RPL-06",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 7.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": -0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: depois da primeira semana pós-parto, o quadro uterino tende a ser metrite, não retenção recente."
+    },
+    {
+      "id": "R-URG-12",
+      "se": [
+        {
+          "simbolo": "retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de retencao_placenta é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-RPT-01",
+      "se": [
+        {
+          "simbolo": "costas_arqueadas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "gemido",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho."
+    },
+    {
+      "id": "R-RPT-03",
+      "se": [
+        {
+          "simbolo": "prova_dor_reticular",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Prova de dor reticular positiva apoia reticuloperitonite traumática."
+    },
+    {
+      "id": "R-RPT-04",
+      "se": [
+        {
+          "simbolo": "edema_barbela",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Edema de barbela com febre sugere extensão ao pericárdio."
+    },
+    {
+      "id": "R-RPT-05",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite e produção em queda com febre, sozinhos, são sinais inespecíficos."
+    },
+    {
+      "id": "R-RPT-06",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "reticulopericardite_traumatica",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: ping no flanco esquerdo aponta para deslocamento de abomaso como causa da dor."
+    },
+    {
+      "id": "R-URG-14",
+      "se": [
+        {
+          "simbolo": "reticulopericardite_traumatica",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de reticulopericardite_traumatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-TES-01",
+      "se": [
+        {
+          "simbolo": "distensao_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "pasto_leguminosa_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso."
+    },
+    {
+      "id": "R-TES-02",
+      "se": [
+        {
+          "simbolo": "outros_animais_estufados",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum."
+    },
+    {
+      "id": "R-TES-03",
+      "se": [
+        {
+          "simbolo": "espuma_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Conteúdo espumoso pela sonda sem alívio caracteriza o gás preso em espuma."
+    },
+    {
+      "id": "R-TES-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "ausente",
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite ausente com queda de produção, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-TES-05",
+      "se": [
+        {
+          "simbolo": "gas_livre_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": -0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: gás livre que sai pela sonda indica timpanismo gasoso, não espumoso."
+    },
+    {
+      "id": "R-URG-10",
+      "se": [
+        {
+          "simbolo": "timpanismo_espumoso",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de timpanismo_espumoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-TGA-01",
+      "se": [
+        {
+          "simbolo": "distensao_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "engasgo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Distensão esquerda com sinais de engasgo sugere gás livre retido por obstrução esofágica."
+    },
+    {
+      "id": "R-TGA-03",
+      "se": [
+        {
+          "simbolo": "gas_livre_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Gás livre pela sonda com alívio da distensão caracteriza o timpanismo gasoso."
+    },
+    {
+      "id": "R-TGA-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "ausente",
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite ausente com abatimento, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-TGA-05",
+      "se": [
+        {
+          "simbolo": "espuma_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": -0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: conteúdo espumoso pela sonda indica timpanismo espumoso, não gasoso."
+    },
+    {
+      "id": "R-URG-11",
+      "se": [
+        {
+          "simbolo": "timpanismo_gasoso",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de timpanismo_gasoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-TUB-01",
+      "se": [
+        {
+          "simbolo": "emagrecimento_progressivo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "tosse",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Emagrecimento com tosse crônica é compatível com tuberculose."
+    },
+    {
+      "id": "R-TUB-02",
+      "se": [
+        {
+          "simbolo": "linfonodos_aumentados",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Linfonodos superficiais aumentados apoiam tuberculose."
+    },
+    {
+      "id": "R-TUB-03",
+      "se": [
+        {
+          "simbolo": "tuberculina_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Tuberculinização reagente apoia tuberculose; a confirmação segue o regulamento do PNCEBT."
+    },
+    {
+      "id": "R-TUB-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Queda de produção com apetite normal, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-TUB-05",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: febre aguda sugere outra causa; a tuberculose costuma ser crônica e sem febre alta."
+    },
+    {
+      "id": "R-URG-20",
+      "se": [
+        {
+          "simbolo": "tuberculose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
     }
   ],
   "layout": {}

@@ -4,15 +4,15 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0004`. Pai declarado: `v0003`. Data declarada na base: `2026-10-22`.
+Versão: `v0005`. Pai declarado: `v0004`. Data declarada na base: `2026-10-24`.
 
-Arquivo: `base/versoes/v0004.json`. SHA-256 do JSON canônico: `80d59492ba7c70ee15011e737572ab9dfc2212ac5be2c1ce76d0b4e781fdb19d`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0005.json`. SHA-256 do JSON canônico: `202be1e9a36a28273cdf000374156c601956cbfa57f920ebc58c0eadacd0932e`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
-Regras: **61**. Símbolos: **51**. Doenças: **8**.
+Regras: **137**. Símbolos: **103**. Doenças: **20**.
 
 | Estado | Quantidade |
 | --- | --- |
-| suposicao_a_validar | 61 |
+| suposicao_a_validar | 137 |
 
 As fontes descrevem o contexto clínico. Os números de CF são escolhas de modelagem do projeto; não são probabilidades nem valores publicados nessas referências.
 
@@ -32,8 +32,8 @@ As fontes descrevem o contexto clínico. Os números de CF são escolhas de mode
 
 | Modo | Limite de perguntas dinâmicas |
 | --- | --- |
-| produtor | 12 |
-| veterinario | 25 |
+| produtor | 15 |
+| veterinario | 30 |
 
 A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior que 0,20. `sem_problema` é um resultado calculado pelo motor, sem regra de produção própria.
 
@@ -64,6 +64,26 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-ACI-04` | ph_ruminal < 5,5 | acidose | 0,88 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-ruminant-forestomach/grain-overload-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | pH ruminal abaixo de 5,5 apoia acidificação ruminal conforme método, horário da coleta e quadro clínico; não confirma sozinho acidose sistêmica nem distingue apresentação aguda de subaguda. |
 | `R-ACI-05` | apetite em {reduzido, ausente} | acidose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de acidose ruminal. |
 
+## Brucelose — brucelose (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-BRU-01` | aborto_recente = sim E historico_retencao_placenta = sim | brucelose | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Aborto no terço final seguido de retenção de placenta é o quadro clássico da brucelose. |
+| `R-BRU-02` | higroma = sim | brucelose | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Higroma carpal é achado sugestivo de brucelose crônica no rebanho. |
+| `R-BRU-03` | sorologia_brucelose_reagente = sim | brucelose | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Sorologia reagente apoia brucelose; a confirmação segue o regulamento do PNCEBT. |
+| `R-BRU-04` | corrimento_vaginal = sim | brucelose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Corrimento vaginal, sozinho, é sinal inespecífico. |
+| `R-BRU-05` | vacinada_brucelose = sim | brucelose | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: vacinação na idade correta reduz, mas não exclui, a brucelose. |
+
+## Diarreia Viral Bovina (BVD) — bvd (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-BVD-01` | diarreia = sim E feridas_boca = sim | bvd | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diarreia com erosões orais é o quadro típico da BVD. |
+| `R-BVD-02` | aborto_recente = sim E falhas_reprodutivas_lote = sim E febre = sim | bvd | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Aborto com falhas reprodutivas no lote é compatível com BVD. |
+| `R-BVD-03` | antigeno_bvdv = sim | bvd | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Detecção de BVDV apoia a doença. |
+| `R-BVD-04` | diarreia = sim E febre = sim | bvd | 0,1 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Diarreia com febre, sozinha, é sinal inespecífico. |
+| `R-BVD-05` | fezes_aquosas_espuma_graos = sim E febre = sim | bvd | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: fezes aquosas com grãos e espuma apontam para acidose. |
+
 ## Cetose / Hipercetonemia — cetose (gravidade media)
 
 | ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
@@ -83,14 +103,27 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-DD-02` | claudicacao = sim E dor_flexao_talao = sim | dermatite_digital | 0,5 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Dor no talão com claudicação localiza o problema, mas não substitui inspeção de lesão característica. |
 | `R-DD-03` | lesao_erosiva_talao_morango = sim | dermatite_digital | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Lesão ulcerativa circunscrita e granulomatosa no espaço interdigital/talão com aspecto de framboesa/morango. |
 
-## Deslocamento de Abomaso — deslocamento_abomaso (gravidade alta)
+## Deslocamento de Abomaso à Direita — deslocamento_abomaso_direita (gravidade alta)
 
 | ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `R-DAB-01` | inicio_lactacao = sim E apetite em {reduzido, ausente} E queda_producao = sim | deslocamento_abomaso | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção. |
-| `R-DAB-02` | inicio_lactacao = sim E flanco_esquerdo_afundado = sim | deslocamento_abomaso | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso. |
-| `R-DAB-03` | ping_metalico_flanco_esquerdo = sim | deslocamento_abomaso | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/digestive-system/diseases-of-the-abomasum-in-cattle/abomasal-displacement-and-volvulus-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás e não cobre deslocamento à direita ou vólvulo. |
-| `R-DAB-04` | apetite em {reduzido, ausente} | deslocamento_abomaso | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso. |
+| `R-DAD-01` | inicio_lactacao = sim E apetite em {reduzido, ausente} E fezes_escassas = sim | deslocamento_abomaso_direita | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Redução da ingestão e de fezes no pós-parto é compatível com deslocamento; não indica o lado. |
+| `R-DAD-02` | distensao_flanco_direito = sim E apetite em {reduzido, ausente} | deslocamento_abomaso_direita | 0,75 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita. |
+| `R-DAD-03` | ping_flanco_direito = sim | deslocamento_abomaso_direita | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Ping no flanco direito apoia deslocamento à direita ou vólvulo; exige diferenciação de ceco e cólon com gás. |
+| `R-DAD-04` | desidratacao = sim E apetite em {reduzido, ausente} | deslocamento_abomaso_direita | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Desidratação acompanha o quadro obstrutivo do deslocamento à direita. |
+| `R-DAD-05` | apetite em {reduzido, ausente} E apatia = sim | deslocamento_abomaso_direita | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido com abatimento, sozinho, é sinal inespecífico. |
+| `R-DAD-06` | ping_metalico_flanco_esquerdo = sim | deslocamento_abomaso_direita | -0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: ping no flanco esquerdo aponta para deslocamento à esquerda, não à direita. |
+
+## Deslocamento de Abomaso à Esquerda — deslocamento_abomaso_esquerda (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-DAE-01` | inicio_lactacao = sim E apetite em {reduzido, ausente} E queda_producao = sim | deslocamento_abomaso_esquerda | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção. |
+| `R-DAE-02` | inicio_lactacao = sim E flanco_esquerdo_afundado = sim | deslocamento_abomaso_esquerda | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso. |
+| `R-DAE-03` | ping_metalico_flanco_esquerdo = sim | deslocamento_abomaso_esquerda | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás. |
+| `R-DAE-04` | apetite em {reduzido, ausente} | deslocamento_abomaso_esquerda | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso. |
+| `R-DAE-05` | inicio_lactacao = sim E fezes_escassas = sim | deslocamento_abomaso_esquerda | 0,2 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Pouco esterco no início da lactação é compatível com deslocamento de abomaso. |
+| `R-DAE-06` | ping_flanco_direito = sim | deslocamento_abomaso_esquerda | -0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: ping no flanco direito aponta para deslocamento à direita, não à esquerda. |
 
 ## Hipocalcemia Puerperal — hipocalcemia (gravidade alta)
 
@@ -102,6 +135,36 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-HIP-04` | febre = sim | hipocalcemia | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Paresia puerperal clássica é afebril; presença de pirexia enfraquece a hipótese primária. |
 | `R-HIP-05` | decubito = sim E dias_em_lactacao > 3 | hipocalcemia | 0,2 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Vaca caída fora do periparto imediato ainda sugere, com peso baixo, hipocalcemia. |
 | `R-HIP-06` | hipotermia = sim E dias_em_lactacao > 3 | hipocalcemia | 0,15 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Temperatura abaixo de 38 °C, fora do periparto imediato, é sinal fraco de hipocalcemia. |
+
+## Hipomagnesemia — hipomagnesemia (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-HMG-01` | tremores = sim E agitacao = sim E apetite em {reduzido, ausente} | hipomagnesemia | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Tremores com agitação são o quadro nervoso típico da tetania hipomagnesêmica. |
+| `R-HMG-02` | pasto_novo_adubado = sim E apetite em {reduzido, ausente} | hipomagnesemia | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Mudança recente para pasto tenro ou adubado é fator de risco de falta de magnésio. |
+| `R-HMG-03` | magnesio_serico < 1,2 | hipomagnesemia | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Magnésio abaixo de 1,2 mg/dL é compatível com tetania. |
+| `R-HMG-04` | decubito = sim E extremidades = normal | hipomagnesemia | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Decúbito sem extremidades frias, sozinho, é sinal inespecífico. |
+| `R-HMG-05` | magnesio_serico ≥ 1,8 | hipomagnesemia | -0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: magnésio sérico normal torna a hipomagnesemia improvável. |
+
+## Rinotraqueíte Infecciosa Bovina (IBR) — ibr (gravidade media)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-IBR-01` | focinho_avermelhado = sim E secrecao_nasal = sim E queda_producao = sim | ibr | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Focinho vermelho com secreção nasal é o quadro típico da rinotraqueíte. |
+| `R-IBR-02` | olhos_lacrimejando = sim E febre = sim | ibr | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Conjuntivite com febre é compatível com BoHV-1. |
+| `R-IBR-03` | pcr_bohv1 = sim | ibr | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Detecção de BoHV-1 apoia IBR. |
+| `R-IBR-04` | febre = sim E queda_producao = sim | ibr | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Febre com queda de produção, sozinhas, são sinais inespecíficos. |
+| `R-IBR-05` | ausculta_crepitacoes = sim | ibr | -0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: crepitações pulmonares apontam para pneumonia bacteriana mais do que para IBR. |
+
+## Leptospirose — leptospirose (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-LEP-01` | aborto_recente = sim E febre = sim | leptospirose | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Aborto com febre é compatível com leptospirose aguda. |
+| `R-LEP-02` | leite_com_sangue = sim E queda_producao = sim | leptospirose | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Leite sanguinolento com queda brusca de produção sugere leptospirose. |
+| `R-LEP-03` | sorologia_leptospirose_reagente = sim | leptospirose | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Título significativo na soroaglutinação apoia leptospirose. |
+| `R-LEP-04` | urina_escura = sim E febre = sim | leptospirose | 0,1 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Urina escura com febre, sozinha, é sinal inespecífico. |
+| `R-LEP-05` | esfregaco_hemoparasitas = sim | leptospirose | -0,5 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: hemoparasitas no esfregaço explicam a hemólise por tristeza parasitária. |
 
 ## Mastite — mastite (gravidade media)
 
@@ -118,7 +181,58 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-MET-01` | puerperio = sim E corrimento_fetido = sim | metrite | 0,75 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Corrimento fétido no puerpério sustenta a hipótese de metrite; não estabelece sozinho toxemia. |
 | `R-MET-02` | corrimento_vaginal = sim E puerperio = sim E febre = sim | metrite | 0,45 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Corrimento inespecífico somado a febre no puerpério sugere complicação infecciosa uterina. |
 | `R-MET-03` | puerperio = sim E utero_aumentado_palpacao = sim E corrimento_vaginal = sim | metrite | 0,35 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Aumento uterino no puerpério recebe apoio apenas quando há corrimento vaginal anormal; tamanho isolado não confirma infecção. |
-| `R-MET-04` | retencao_placenta = sim E puerperio = sim | metrite | 0,25 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Retenção de membranas fetais é fator de risco epidemiológico para infecção ascendente. |
+| `R-MET-04` | historico_retencao_placenta = sim E puerperio = sim | metrite | 0,25 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/reproductive-system/uterine-diseases-in-production-animals/metritis-in-production-animals); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Retenção de membranas fetais é fator de risco epidemiológico para infecção ascendente. |
+
+## Pneumonia — pneumonia (gravidade media)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-PNE-01` | tosse = sim E apetite em {reduzido, ausente} | pneumonia | 0,45 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Tosse com queda de apetite sugere doença respiratória com comprometimento geral. |
+| `R-PNE-02` | respiracao_ofegante = sim E apetite em {reduzido, ausente} | pneumonia | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Respiração com esforço apoia doença respiratória do trato inferior. |
+| `R-PNE-03` | ausculta_crepitacoes = sim | pneumonia | 0,8 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Crepitações cranioventrais à auscultação apoiam broncopneumonia. |
+| `R-PNE-04` | secrecao_nasal = sim E apetite em {reduzido, ausente} | pneumonia | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão. |
+| `R-PNE-05` | febre = sim E apatia = sim | pneumonia | 0,1 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Febre com abatimento, sozinha, é sinal inespecífico. |
+| `R-PNE-06` | distensao_flanco_esquerdo = sim E apetite em {reduzido, ausente} | pneumonia | -0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão. |
+
+## Retenção de Placenta — retencao_placenta (gravidade media)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-RPL-01` | puerperio = sim E membranas_expostas_vulva = sim | retencao_placenta | 0,8 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Restos de placenta visíveis na vulva no pós-parto indicam retenção de membranas fetais. |
+| `R-RPL-02` | puerperio = sim E placenta_nao_expulsa_24h = sim | retencao_placenta | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Falha na expulsão da placenta em até 24 horas define a retenção de membranas fetais. |
+| `R-RPL-03` | palpacao_membranas_retidas = sim | retencao_placenta | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Membranas retidas ao exame confirmam a suspeita de retenção. |
+| `R-RPL-04` | historico_retencao_placenta = sim E puerperio = sim | retencao_placenta | 0,35 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Retenção registrada na ficha neste parto apoia a hipótese no puerpério. |
+| `R-RPL-05` | corrimento_vaginal = sim E puerperio = sim | retencao_placenta | 0,1 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Corrimento vaginal no puerpério, sozinho, é sinal inespecífico. |
+| `R-RPL-06` | dias_em_lactacao > 7 | retencao_placenta | -0,5 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: depois da primeira semana pós-parto, o quadro uterino tende a ser metrite, não retenção recente. |
+
+## Reticulopericardite Traumática — reticulopericardite_traumatica (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-RPT-01` | costas_arqueadas = sim E gemido = sim E apetite em {reduzido, ausente} | reticulopericardite_traumatica | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho. |
+| `R-RPT-03` | prova_dor_reticular = sim | reticulopericardite_traumatica | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Prova de dor reticular positiva apoia reticuloperitonite traumática. |
+| `R-RPT-04` | edema_barbela = sim E febre = sim | reticulopericardite_traumatica | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Edema de barbela com febre sugere extensão ao pericárdio. |
+| `R-RPT-05` | apetite em {reduzido, ausente} E queda_producao = sim E febre = sim | reticulopericardite_traumatica | 0,1 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite e produção em queda com febre, sozinhos, são sinais inespecíficos. |
+| `R-RPT-06` | ping_metalico_flanco_esquerdo = sim | reticulopericardite_traumatica | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: ping no flanco esquerdo aponta para deslocamento de abomaso como causa da dor. |
+
+## Timpanismo Espumoso — timpanismo_espumoso (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-TES-01` | distensao_flanco_esquerdo = sim E pasto_leguminosa_recente = sim E apetite em {reduzido, ausente} | timpanismo_espumoso | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso. |
+| `R-TES-02` | outros_animais_estufados = sim E apetite em {reduzido, ausente} | timpanismo_espumoso | 0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Vários animais estufados ao mesmo tempo sugerem causa alimentar comum. |
+| `R-TES-03` | espuma_sonda = sim | timpanismo_espumoso | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Conteúdo espumoso pela sonda sem alívio caracteriza o gás preso em espuma. |
+| `R-TES-04` | apetite = ausente E queda_producao = sim | timpanismo_espumoso | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite ausente com queda de produção, sozinho, é sinal inespecífico. |
+| `R-TES-05` | gas_livre_sonda = sim | timpanismo_espumoso | -0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: gás livre que sai pela sonda indica timpanismo gasoso, não espumoso. |
+
+## Timpanismo Gasoso — timpanismo_gasoso (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-TGA-01` | distensao_flanco_esquerdo = sim E engasgo = sim E apetite em {reduzido, ausente} | timpanismo_gasoso | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Distensão esquerda com sinais de engasgo sugere gás livre retido por obstrução esofágica. |
+| `R-TGA-03` | gas_livre_sonda = sim | timpanismo_gasoso | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Gás livre pela sonda com alívio da distensão caracteriza o timpanismo gasoso. |
+| `R-TGA-04` | apetite = ausente E apatia = sim | timpanismo_gasoso | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite ausente com abatimento, sozinho, é sinal inespecífico. |
+| `R-TGA-05` | espuma_sonda = sim | timpanismo_gasoso | -0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: conteúdo espumoso pela sonda indica timpanismo espumoso, não gasoso. |
 
 ## Tristeza Parasitária Bovina — tpb (gravidade alta)
 
@@ -128,6 +242,16 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-TPB-02` | mucosas_palidas_ou_ictericas = sim | tpb | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Palidez ou icterícia mantêm TPB entre as hipóteses mesmo sem febre na medição atual; não identificam a causa da anemia ou icterícia. |
 | `R-TPB-03` | carrapatos_historico_recente = sim E febre = sim | tpb | 0,35 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar; [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals) | suposicao_a_validar | Exposição ao vetor carrapato combinada com febre é indicativo epidemiológico inicial. |
 | `R-TPB-04` | esfregaco_hemoparasitas = sim | tpb | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/anaplasmosis-in-ruminants); CF e tradução para regra: suposição do projeto a validar; [referência](https://www.msdvetmanual.com/circulatory-system/blood-parasites/babesiosis-in-animals) | suposicao_a_validar | Esfregaço compatível sustenta infecção por hemoparasitas, mesmo sem febre atual; não distingue sozinho doença ativa de estado de portador. |
+
+## Tuberculose — tuberculose (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-TUB-01` | emagrecimento_progressivo = sim E tosse = sim E queda_producao = sim | tuberculose | 0,5 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Emagrecimento com tosse crônica é compatível com tuberculose. |
+| `R-TUB-02` | linfonodos_aumentados = sim E queda_producao = sim | tuberculose | 0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Linfonodos superficiais aumentados apoiam tuberculose. |
+| `R-TUB-03` | tuberculina_reagente = sim | tuberculose | 0,9 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Tuberculinização reagente apoia tuberculose; a confirmação segue o regulamento do PNCEBT. |
+| `R-TUB-04` | apetite = normal E queda_producao = sim | tuberculose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Queda de produção com apetite normal, sozinha, é sinal inespecífico. |
+| `R-TUB-05` | febre = sim | tuberculose | -0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: febre aguda sugere outra causa; a tuberculose costuma ser crônica e sem febre alta. |
 
 ## Bandeiras vermelhas — camada 3
 
@@ -146,21 +270,39 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `R-URG-01` | hipocalcemia = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de hipocalcemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-02` | tpb = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de tpb é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
-| `R-URG-03` | deslocamento_abomaso = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-03` | deslocamento_abomaso_esquerda = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_esquerda é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-04` | metrite = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de metrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-05` | mastite = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de mastite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-06` | cetose = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de cetose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-07` | acidose = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de acidose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-08` | dermatite_digital = sim [CF ≥ 0,5] | observar | 0,7 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de dermatite_digital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-09` | deslocamento_abomaso_direita = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_direita é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-10` | timpanismo_espumoso = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de timpanismo_espumoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-11` | timpanismo_gasoso = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de timpanismo_gasoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-12` | retencao_placenta = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de retencao_placenta é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-13` | pneumonia = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de pneumonia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-14` | reticulopericardite_traumatica = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de reticulopericardite_traumatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-15` | hipomagnesemia = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de hipomagnesemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-16` | brucelose = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de brucelose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-17` | leptospirose = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de leptospirose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-18` | ibr = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de ibr é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-19` | bvd = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de bvd é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-20` | tuberculose = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 
 ## Símbolos
 
 | ID | Nome | Tipo | Domínio | Pergunta: produtor | Pergunta: veterinário | Gravidade | Combinação |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| aborto_recente | Aborto recente | pergunta | tipo: booleano | A vaca abortou nesta gestação ou nos últimos meses? | Aborto recente, sobretudo no terço final da gestação? | — | mycin |
 | acidose | Acidose Ruminal | doenca | tipo: booleano | — | — | media | mycin |
+| agitacao | Agitação ou reação exagerada | pergunta | tipo: booleano | A vaca está agitada, cambaleando ou se assusta demais com barulho e toque? | Hiperexcitabilidade, ataxia ou hiperestesia? | — | mycin |
+| antigeno_bvdv | BVDV detectado | pergunta | tipo: booleano | — | ELISA de antígeno ou PCR para BVDV positivo? | — | mycin |
 | apatia | Apatia | pergunta | tipo: booleano | A vaca está abatida ou pouco responsiva? | Animal apático ou com resposta reduzida ao ambiente? | — | mycin |
 | apetite | Apetite | pergunta | tipo: categorico, valores: {normal, reduzido, ausente} | Como está o apetite: normal, reduzido ou ausente? | Apetite normal, reduzido ou ausente? | — | mycin |
+| ausculta_crepitacoes | Crepitações à auscultação pulmonar | pergunta | tipo: booleano | — | Crepitações ou sibilos à auscultação pulmonar, sobretudo na região cranioventral? | — | mycin |
 | bhb_sanguineo | BHB sanguíneo | pergunta | casas_decimais: 2, max: 20, min: 0, tipo: numerico, unidade: mmol/L | — | Qual é a concentração sanguínea de BHB, em mmol/L? | — | mycin |
+| brucelose | Brucelose | doenca | tipo: booleano | — | — | alta | mycin |
+| bvd | Diarreia Viral Bovina (BVD) | doenca | tipo: booleano | — | — | alta | mycin |
 | calcio_serico | Cálcio sérico total | pergunta | casas_decimais: 2, max: 20, min: 0, tipo: numerico, unidade: mmol/L | — | Qual é o cálcio sérico total, em mmol/L? | — | mycin |
 | carrapatos_historico_recente | Exposição recente a carrapatos | pergunta | tipo: booleano | Foram vistos carrapatos na vaca recentemente? | Histórico recente de exposição a carrapatos? | — | mycin |
 | cetose | Cetose / Hipercetonemia | doenca | tipo: booleano | — | — | media | mycin |
@@ -169,45 +311,91 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | cmt_reagente | CMT reagente | pergunta | tipo: booleano | — | O CMT foi reagente conforme a leitura do teste? | — | mycin |
 | corrimento_fetido | Corrimento vaginal fétido | pergunta | tipo: booleano | A secreção da vulva tem cheiro forte e desagradável? | Corrimento vaginal fétido observado? | — | mycin |
 | corrimento_vaginal | Corrimento vaginal | pergunta | tipo: booleano | Há saída de secreção anormal pela vulva? | Presença de corrimento vaginal anormal? | — | mycin |
+| costas_arqueadas | Costas arqueadas | pergunta | tipo: booleano | A vaca fica com as costas arqueadas e evita deitar ou descer rampas? | Postura antiálgica com dorso arqueado? | — | mycin |
 | decubito | Decúbito | pergunta | tipo: booleano | A vaca está caída e não consegue se levantar? | Animal em decúbito, incapaz de se levantar? | — | mycin |
 | dermatite_digital | Dermatite Digital Bovina | doenca | tipo: booleano | — | — | baixa | mycin |
-| deslocamento_abomaso | Deslocamento de Abomaso | doenca | tipo: booleano | — | — | alta | mycin |
+| desidratacao | Desidratação | pergunta | tipo: booleano | Os olhos estão fundos ou a pele demora a voltar quando beliscada? | Desidratação evidente (enoftalmia, turgor cutâneo reduzido)? | — | mycin |
+| deslocamento_abomaso_direita | Deslocamento de Abomaso à Direita | doenca | tipo: booleano | — | — | alta | mycin |
+| deslocamento_abomaso_esquerda | Deslocamento de Abomaso à Esquerda | doenca | tipo: booleano | — | — | alta | mycin |
 | diarreia | Diarreia | pergunta | tipo: booleano | A vaca está com diarreia? | Presença de diarreia? | — | mycin |
 | dias_em_lactacao | Dias em lactação | ficha | casas_decimais: 0, max: 1000, min: 0, tipo: numerico, unidade: dias | Há quantos dias a vaca pariu? | Dias transcorridos desde o último parto? | — | mycin |
+| distensao_flanco_direito | Barriga estufada do lado direito | pergunta | tipo: booleano | A barriga está estufada do lado direito? | Distensão do flanco direito, na região das últimas costelas? | — | mycin |
+| distensao_flanco_esquerdo | Barriga estufada do lado esquerdo | pergunta | tipo: booleano | A barriga está estufada do lado esquerdo, alta como um balão? | Distensão do flanco esquerdo (fossa paralombar abaulada)? | — | mycin |
 | dor_flexao_talao | Dor na região do talão | pergunta | tipo: booleano | A vaca demonstra dor na região do talão ao se movimentar? | Dor localizada na região dos bulbos do talão? | — | mycin |
+| edema_barbela | Edema de barbela ou peito | pergunta | tipo: booleano | — | Edema de barbela, jugulares ingurgitadas ou bulhas cardíacas abafadas? | — | mycin |
+| emagrecimento_progressivo | Emagrecimento progressivo | pergunta | tipo: booleano | A vaca vem emagrecendo aos poucos, mesmo comendo? | Perda progressiva de condição corporal? | — | mycin |
+| engasgo | Engasgo ou dificuldade de engolir | pergunta | tipo: booleano | A vaca parece engasgada, babando ou com esforço para engolir? | Sinais de obstrução esofágica (sialorreia, esforço de deglutição)? | — | mycin |
 | esfregaco_hemoparasitas | Hemoparasitas no esfregaço | pergunta | tipo: booleano | — | Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma? | — | mycin |
+| espuma_sonda | Conteúdo espumoso na sonda | pergunta | tipo: booleano | — | Sonda orogástrica traz conteúdo espumoso sem aliviar a distensão? | — | mycin |
 | evidencia_alteracao_leite | Evidência agrupada de alteração do leite | derivado | tipo: booleano | — | — | — | max |
 | extremidades | Temperatura ao toque das extremidades | pergunta | tipo: categorico, valores: {normal, quente, fria} | As orelhas e as patas parecem normais, quentes ou frias ao toque? | Extremidades normais, quentes ou frias à palpação? | — | mycin |
+| falhas_reprodutivas_lote | Falhas reprodutivas no lote | pergunta | tipo: booleano | Várias vacas do lote estão repetindo cio ou abortando? | Aumento de repetição de cio, abortos ou bezerros fracos no rebanho? | — | mycin |
 | febre | Febre | derivado | tipo: booleano | — | — | — | mycin |
+| feridas_boca | Feridas na boca | pergunta | tipo: booleano | Há feridas na boca, na gengiva ou na língua, com baba? | Erosões ou úlceras na mucosa oral? | — | mycin |
 | fezes_aquosas_espuma_graos | Fezes com espuma e grãos | pergunta | tipo: booleano | As fezes estão muito líquidas, com espuma ou grãos inteiros? | Fezes aquosas, com espuma ou grãos não digeridos? | — | mycin |
+| fezes_escassas | Pouco esterco | pergunta | tipo: booleano | A vaca está fazendo pouco esterco, menos que o normal? | Fezes escassas ou ausentes nas últimas horas? | — | mycin |
 | fita_urina_corpos_cetonicos | Corpos cetônicos na urina | pergunta | tipo: booleano | — | Teste urinário para corpos cetônicos positivo, lido no tempo indicado pelo fabricante? | — | mycin |
 | flanco_esquerdo_afundado | Flanco esquerdo afundado | pergunta | tipo: booleano | A região do flanco esquerdo parece mais afundada que o habitual? | Fossa paralombar esquerda retraída? | — | mycin |
+| focinho_avermelhado | Focinho muito vermelho | pergunta | tipo: booleano | O focinho está muito vermelho, com feridas ou crostas? | Hiperemia ou lesões no plano nasal (focinho vermelho)? | — | mycin |
+| gas_livre_sonda | Gás livre na sonda | pergunta | tipo: booleano | — | Sonda orogástrica libera gás livre e alivia a distensão? | — | mycin |
+| gemido | Gemido | pergunta | tipo: booleano | A vaca geme quando respira, se deita ou se levanta? | Gemido expiratório espontâneo? | — | mycin |
 | halito_adocicado_acetona | Hálito adocicado | pergunta | tipo: booleano | O hálito da vaca tem cheiro adocicado, semelhante à acetona? | Odor adocicado ou de acetona no hálito? | — | mycin |
+| higroma | Inchaço nos joelhos | pergunta | tipo: booleano | A vaca tem inchaço nos joelhos (higroma)? | Higroma carpal? | — | mycin |
 | hipocalcemia | Hipocalcemia Puerperal | doenca | tipo: booleano | — | — | alta | mycin |
+| hipomagnesemia | Hipomagnesemia | doenca | tipo: booleano | — | — | alta | mycin |
 | hipotermia | Hipotermia | derivado | tipo: booleano | — | — | — | mycin |
+| historico_retencao_placenta | Histórico de retenção de placenta | ficha | tipo: booleano | Houve retenção de placenta neste parto? | Retenção de membranas fetais após o último parto? | — | mycin |
+| ibr | Rinotraqueíte Infecciosa Bovina (IBR) | doenca | tipo: booleano | — | — | media | mycin |
 | inicio_lactacao | Início da lactação | derivado | tipo: booleano | — | — | — | mycin |
 | leite_alterado | Alteração visível do leite | pergunta | tipo: booleano | O leite apresenta grumos, sangue ou aspecto aguado? | Alteração macroscópica do leite? | — | mycin |
+| leite_com_sangue | Leite rosado ou com sangue | pergunta | tipo: booleano | O leite saiu rosado ou com sangue, com o úbere mole e sem inflamação? | Leite sanguinolento com úbere flácido (agalaxia)? | — | mycin |
+| leptospirose | Leptospirose | doenca | tipo: booleano | — | — | alta | mycin |
 | lesao_erosiva_talao_morango | Lesão característica no talão | pergunta | tipo: booleano | — | Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital? | — | mycin |
+| linfonodos_aumentados | Ínguas aumentadas | pergunta | tipo: booleano | Há caroços (ínguas) aumentados no pescoço, na frente da paleta ou na virilha? | Linfonodos superficiais aumentados? | — | mycin |
+| magnesio_serico | Magnésio sérico | pergunta | casas_decimais: 1, max: 10, min: 0, tipo: numerico, unidade: mg/dL | — | Qual é o magnésio sérico, em mg/dL? | — | mycin |
 | mastite | Mastite | doenca | tipo: booleano | — | — | media | mycin |
+| membranas_expostas_vulva | Restos de placenta na vulva | pergunta | tipo: booleano | Há restos de placenta pendurados para fora da vulva? | Membranas fetais expostas pela vulva? | — | mycin |
 | metrite | Metrite Puerperal | doenca | tipo: booleano | — | — | alta | mycin |
 | mucosas_palidas_ou_ictericas | Mucosas pálidas ou amareladas | pergunta | tipo: booleano | A parte interna da pálpebra ou da vulva está muito pálida ou amarelada? | Mucosas pálidas ou ictéricas à inspeção? | — | mycin |
 | mudanca_abrupta_concentrado | Mudança abrupta de concentrado | pergunta | tipo: booleano | Houve aumento brusco de ração ou acesso excessivo a grãos? | Mudança abrupta de concentrado ou acesso excessivo a grãos? | — | mycin |
 | observar | Monitoramento Clínico Contínuo | urgencia | tipo: booleano | — | — | — | mycin |
+| olhos_lacrimejando | Olhos lacrimejando | pergunta | tipo: booleano | Os olhos estão vermelhos ou lacrimejando muito? | Conjuntivite com lacrimejamento? | — | mycin |
+| outros_animais_estufados | Outros animais estufados | pergunta | tipo: booleano | Outras vacas do mesmo lote também estão estufadas? | Outros animais do lote com distensão abdominal? | — | mycin |
+| palpacao_membranas_retidas | Membranas retidas ao exame | pergunta | tipo: booleano | — | Membranas fetais retidas no útero ao exame vaginal ou retal, mais de 24 horas após o parto? | — | mycin |
+| pasto_leguminosa_recente | Pasto de leguminosa recente | pergunta | tipo: booleano | A vaca comeu nas últimas horas pasto de leguminosa (alfafa, trevo) ou capim muito novo e molhado? | Ingestão recente de leguminosa ou pastagem muito tenra? | — | mycin |
+| pasto_novo_adubado | Pasto novo e adubado | pergunta | tipo: booleano | A vaca foi solta há pouco tempo em pasto novo, muito verde ou adubado? | Mudança recente para pastagem tenra ou adubada com potássio e nitrogênio? | — | mycin |
+| pcr_bohv1 | BoHV-1 detectado | pergunta | tipo: booleano | — | PCR ou isolamento de BoHV-1 positivo em secreção nasal ou ocular? | — | mycin |
 | periparto_imediato | Periparto imediato | derivado | tipo: booleano | — | — | — | mycin |
 | pescoco_em_s | Desvio cervical em S | pergunta | tipo: booleano | A vaca mantém o pescoço curvado em forma de S? | Desvio cervical em S observado? | — | mycin |
 | ph_ruminal | pH ruminal | pergunta | casas_decimais: 1, max: 14, min: 0, tipo: numerico, unidade: pH | — | Qual é o pH ruminal medido, considerando método e momento da coleta? | — | mycin |
+| ping_flanco_direito | Ping no flanco direito | pergunta | tipo: booleano | — | Ping metálico no flanco direito à percussão e auscultação simultâneas? | — | mycin |
 | ping_metalico_flanco_esquerdo | Ping no flanco esquerdo | pergunta | tipo: booleano | — | Ping metálico no flanco esquerdo à percussão e auscultação simultâneas? | — | mycin |
+| placenta_nao_expulsa_24h | Placenta não saiu em 24 horas | pergunta | tipo: booleano | A placenta ainda não tinha saído um dia depois do parto? | Membranas fetais não expulsas em até 24 horas após o parto? | — | mycin |
+| pneumonia | Pneumonia | doenca | tipo: booleano | — | — | media | mycin |
+| prova_dor_reticular | Prova de dor reticular | pergunta | tipo: booleano | — | Prova de dor reticular positiva (bastão ou pinçamento da cernelha) com gemido? | — | mycin |
 | puerperio | Puerpério | derivado | tipo: booleano | — | — | — | mycin |
 | queda_producao | Queda de produção de leite | pergunta | tipo: booleano | A produção de leite caiu em relação ao habitual? | Queda da produção em relação ao padrão individual? | — | mycin |
 | recusa_concentrado_come_volumoso | Recusa seletiva de concentrado | pergunta | tipo: booleano | A vaca recusa a ração, mas ainda come capim ou feno? | Recusa de concentrado com manutenção da ingestão de volumoso? | — | mycin |
-| retencao_placenta | Histórico de retenção de placenta | ficha | tipo: booleano | Houve retenção de placenta neste parto? | Retenção de membranas fetais após o último parto? | — | mycin |
+| respiracao_ofegante | Respiração com esforço | pergunta | tipo: booleano | A vaca respira com esforço, rápido ou de boca aberta? | Taquipneia ou dispneia evidente? | — | mycin |
+| retencao_placenta | Retenção de Placenta | doenca | tipo: booleano | — | — | media | mycin |
+| reticulopericardite_traumatica | Reticulopericardite Traumática | doenca | tipo: booleano | — | — | alta | mycin |
+| secrecao_nasal | Secreção nasal | pergunta | tipo: booleano | Está escorrendo catarro ou secreção pelo nariz? | Secreção nasal mucosa ou mucopurulenta? | — | mycin |
 | sem_problema | Sem evidência de urgência pelos critérios da base | urgencia | tipo: booleano | — | — | — | mycin |
+| sorologia_brucelose_reagente | Sorologia para brucelose reagente | pergunta | tipo: booleano | — | Teste sorológico para brucelose (AAT, 2-ME ou FPA) reagente? | — | mycin |
+| sorologia_leptospirose_reagente | Sorologia para leptospirose reagente | pergunta | tipo: booleano | — | Soroaglutinação microscópica para leptospirose com título significativo? | — | mycin |
 | temperatura_retal | Temperatura retal | pergunta | casas_decimais: 1, max: 45, min: 30, tipo: numerico, unidade: °C | — | Qual é a temperatura retal medida em °C? | — | mycin |
 | teste_caneca_grumos | Grumos na caneca | pergunta | tipo: booleano | O teste da caneca mostrou grumos no leite? | Grumos detectados no teste da caneca? | — | mycin |
+| timpanismo_espumoso | Timpanismo Espumoso | doenca | tipo: booleano | — | — | alta | mycin |
+| timpanismo_gasoso | Timpanismo Gasoso | doenca | tipo: booleano | — | — | alta | mycin |
+| tosse | Tosse | pergunta | tipo: booleano | A vaca está tossindo? | Tosse espontânea ou provocada presente? | — | mycin |
 | tpb | Tristeza Parasitária Bovina | doenca | tipo: booleano | — | — | alta | mycin |
+| tremores | Tremores musculares | pergunta | tipo: booleano | A vaca está com tremores ou espasmos nos músculos? | Fasciculações ou tremores musculares? | — | mycin |
+| tuberculina_reagente | Tuberculinização reagente | pergunta | tipo: booleano | — | Teste tuberculínico (cervical comparativo) reagente? | — | mycin |
+| tuberculose | Tuberculose | doenca | tipo: booleano | — | — | alta | mycin |
 | ubere_inflamado | Inflamação do úbere | pergunta | tipo: booleano | O úbere está inchado, quente ou dolorido? | Há edema, calor ou dor no úbere? | — | mycin |
 | urina_escura | Urina escura | pergunta | tipo: booleano | A urina está avermelhada ou escura como café? | Urina avermelhada ou castanha observada? | — | mycin |
 | utero_aumentado_palpacao | Aumento uterino à palpação | pergunta | tipo: booleano | — | Útero aumentado à palpação retal, considerado o período após o parto? | — | mycin |
+| vacinada_brucelose | Vacinada contra brucelose | pergunta | tipo: booleano | A vaca foi vacinada contra brucelose quando bezerra (3 a 8 meses)? | Vacinação B19 ou RB51 comprovada? | — | mycin |
 
 ## Telas de triagem
 

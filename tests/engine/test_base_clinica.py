@@ -23,7 +23,10 @@ class ContratoDaBase(unittest.TestCase):
             base = Base.de_dict(carregar())
         except (OSError, KeyError, TypeError, ValueError) as erro:
             self.fail(f'A base precisa carregar sem adaptação: {erro!r}')
-        self.assertEqual(sum(s['tipo'] == 'doenca' for s in base.simbolos.values()), 8)
+        ativa = json.loads((PROJETO / 'base/ativa.json').read_text(encoding='utf-8'))['versao']
+        dados_ativa = json.loads((PROJETO / 'base/versoes' / f'{ativa}.json').read_text(encoding='utf-8'))
+        esperadas = sum(s['tipo'] == 'doenca' for s in dados_ativa['simbolos'])
+        self.assertEqual(sum(s['tipo'] == 'doenca' for s in base.simbolos.values()), esperadas)
 
     def test_triagem_tem_seis_telas_e_textos_nos_dois_modos(self):
         telas = carregar()['meta'].get('triagem', [])
@@ -174,7 +177,7 @@ class RegrasDaBase(unittest.TestCase):
         self.assertLessEqual(resultado.cfs['febre'], 0)
 
     def test_metrite_nao_vira_urgencia_apenas_por_risco_e_tamanho_uterino(self):
-        resultado = self.calcular(dias_em_lactacao=8, retencao_placenta=True,
+        resultado = self.calcular(dias_em_lactacao=8, historico_retencao_placenta=True,
                                   utero_aumentado_palpacao=True, corrimento_vaginal=False,
                                   corrimento_fetido=False, temperatura_retal=38.5)
         self.assertLess(resultado.cfs['metrite'], 0.5)

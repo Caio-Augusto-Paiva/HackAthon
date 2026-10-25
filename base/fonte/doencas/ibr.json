@@ -1,0 +1,217 @@
+{
+  "doenca": "ibr",
+  "simbolos": [
+    {
+      "id": "focinho_avermelhado",
+      "tipo": "pergunta",
+      "nome": "Focinho muito vermelho",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O focinho está muito vermelho, com feridas ou crostas?",
+        "veterinario": "Hiperemia ou lesões no plano nasal (focinho vermelho)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a focinho muito vermelho.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a focinho muito vermelho."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "olhos_lacrimejando",
+      "tipo": "pergunta",
+      "nome": "Olhos lacrimejando",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Os olhos estão vermelhos ou lacrimejando muito?",
+        "veterinario": "Conjuntivite com lacrimejamento?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a olhos lacrimejando.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a olhos lacrimejando."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pcr_bohv1",
+      "tipo": "pergunta",
+      "nome": "BoHV-1 detectado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "PCR ou isolamento de BoHV-1 positivo em secreção nasal ou ocular?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a boHV-1 detectado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ibr",
+      "tipo": "doenca",
+      "nome": "Rinotraqueíte Infecciosa Bovina (IBR)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Infecções virais associadas ao complexo das doenças respiratórias dos bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-IBR-01",
+      "se": [
+        {
+          "simbolo": "focinho_avermelhado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "secrecao_nasal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Focinho vermelho com secreção nasal é o quadro típico da rinotraqueíte."
+    },
+    {
+      "id": "R-IBR-02",
+      "se": [
+        {
+          "simbolo": "olhos_lacrimejando",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Conjuntivite com febre é compatível com BoHV-1."
+    },
+    {
+      "id": "R-IBR-03",
+      "se": [
+        {
+          "simbolo": "pcr_bohv1",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Detecção de BoHV-1 apoia IBR."
+    },
+    {
+      "id": "R-IBR-04",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Febre com queda de produção, sozinhas, são sinais inespecíficos."
+    },
+    {
+      "id": "R-IBR-05",
+      "se": [
+        {
+          "simbolo": "ausculta_crepitacoes",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ibr",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/infec%C3%A7%C3%B5es-virais-associadas-ao-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: crepitações pulmonares apontam para pneumonia bacteriana mais do que para IBR."
+    },
+    {
+      "id": "R-URG-18",
+      "se": [
+        {
+          "simbolo": "ibr",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de ibr é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

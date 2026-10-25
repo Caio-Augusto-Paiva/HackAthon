@@ -1,0 +1,237 @@
+{
+  "doenca": "retencao_placenta",
+  "simbolos": [
+    {
+      "id": "membranas_expostas_vulva",
+      "tipo": "pergunta",
+      "nome": "Restos de placenta na vulva",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há restos de placenta pendurados para fora da vulva?",
+        "veterinario": "Membranas fetais expostas pela vulva?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a restos de placenta na vulva.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a restos de placenta na vulva."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "placenta_nao_expulsa_24h",
+      "tipo": "pergunta",
+      "nome": "Placenta não saiu em 24 horas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A placenta ainda não tinha saído um dia depois do parto?",
+        "veterinario": "Membranas fetais não expulsas em até 24 horas após o parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a placenta não saiu em 24 horas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a placenta não saiu em 24 horas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "palpacao_membranas_retidas",
+      "tipo": "pergunta",
+      "nome": "Membranas retidas ao exame",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Membranas fetais retidas no útero ao exame vaginal ou retal, mais de 24 horas após o parto?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a membranas retidas ao exame."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "retencao_placenta",
+      "tipo": "doenca",
+      "nome": "Retenção de Placenta",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Retenção de membranas fetais em vacas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-RPL-01",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "membranas_expostas_vulva",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Restos de placenta visíveis na vulva no pós-parto indicam retenção de membranas fetais."
+    },
+    {
+      "id": "R-RPL-02",
+      "se": [
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "placenta_nao_expulsa_24h",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Falha na expulsão da placenta em até 24 horas define a retenção de membranas fetais."
+    },
+    {
+      "id": "R-RPL-03",
+      "se": [
+        {
+          "simbolo": "palpacao_membranas_retidas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Membranas retidas ao exame confirmam a suspeita de retenção."
+    },
+    {
+      "id": "R-RPL-04",
+      "se": [
+        {
+          "simbolo": "historico_retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério."
+    },
+    {
+      "id": "R-RPL-05",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "puerperio",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento vaginal no puerpério, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-RPL-06",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 7.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "retencao_placenta",
+        "cf": -0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: depois da primeira semana pós-parto, o quadro uterino tende a ser metrite, não retenção recente."
+    },
+    {
+      "id": "R-URG-12",
+      "se": [
+        {
+          "simbolo": "retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de retencao_placenta é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

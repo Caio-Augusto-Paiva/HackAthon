@@ -1,0 +1,244 @@
+{
+  "doenca": "hipomagnesemia",
+  "simbolos": [
+    {
+      "id": "tremores",
+      "tipo": "pergunta",
+      "nome": "Tremores musculares",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com tremores ou espasmos nos músculos?",
+        "veterinario": "Fasciculações ou tremores musculares?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a tremores musculares.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a tremores musculares."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "agitacao",
+      "tipo": "pergunta",
+      "nome": "Agitação ou reação exagerada",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está agitada, cambaleando ou se assusta demais com barulho e toque?",
+        "veterinario": "Hiperexcitabilidade, ataxia ou hiperestesia?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a agitação ou reação exagerada.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a agitação ou reação exagerada."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "pasto_novo_adubado",
+      "tipo": "pergunta",
+      "nome": "Pasto novo e adubado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca foi solta há pouco tempo em pasto novo, muito verde ou adubado?",
+        "veterinario": "Mudança recente para pastagem tenra ou adubada com potássio e nitrogênio?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a pasto novo e adubado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a pasto novo e adubado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "magnesio_serico",
+      "tipo": "pergunta",
+      "nome": "Magnésio sérico",
+      "dominio": {
+        "tipo": "numerico",
+        "min": 0.0,
+        "max": 10.0,
+        "unidade": "mg/dL",
+        "casas_decimais": 1
+      },
+      "pergunta": {
+        "veterinario": "Qual é o magnésio sérico, em mg/dL?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a magnésio sérico."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "hipomagnesemia",
+      "tipo": "doenca",
+      "nome": "Hipomagnesemia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Tetania hipomagnesêmica em bovinos e ovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-HMG-01",
+      "se": [
+        {
+          "simbolo": "tremores",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "agitacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Tremores com agitação são o quadro nervoso típico da tetania hipomagnesêmica."
+    },
+    {
+      "id": "R-HMG-02",
+      "se": [
+        {
+          "simbolo": "pasto_novo_adubado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Mudança recente para pasto tenro ou adubado é fator de risco de falta de magnésio."
+    },
+    {
+      "id": "R-HMG-03",
+      "se": [
+        {
+          "simbolo": "magnesio_serico",
+          "op": "<",
+          "valor": 1.2,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Magnésio abaixo de 1,2 mg/dL é compatível com tetania."
+    },
+    {
+      "id": "R-HMG-04",
+      "se": [
+        {
+          "simbolo": "decubito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "extremidades",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Decúbito sem extremidades frias, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-HMG-05",
+      "se": [
+        {
+          "simbolo": "magnesio_serico",
+          "op": "≥",
+          "valor": 1.8,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "hipomagnesemia",
+        "cf": -0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: magnésio sérico normal torna a hipomagnesemia improvável."
+    },
+    {
+      "id": "R-URG-15",
+      "se": [
+        {
+          "simbolo": "hipomagnesemia",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de hipomagnesemia é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

@@ -19,21 +19,6 @@
       "combinacao": "mycin"
     },
     {
-      "id": "esfregaco_hemoparasitas",
-      "tipo": "pergunta",
-      "nome": "Hemoparasitas no esfregaço",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "veterinario": "Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma?"
-      },
-      "por_que": {
-        "veterinario": "Esclarecer as hipóteses relacionadas a hemoparasitas no esfregaço."
-      },
-      "combinacao": "mycin"
-    },
-    {
       "id": "mucosas_palidas_ou_ictericas",
       "tipo": "pergunta",
       "nome": "Mucosas pálidas ou amareladas",
@@ -51,23 +36,6 @@
       "combinacao": "mycin"
     },
     {
-      "id": "urina_escura",
-      "tipo": "pergunta",
-      "nome": "Urina escura",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "produtor": "A urina está avermelhada ou escura como café?",
-        "veterinario": "Urina avermelhada ou castanha observada?"
-      },
-      "por_que": {
-        "produtor": "Esclarecer as hipóteses relacionadas a urina escura.",
-        "veterinario": "Esclarecer as hipóteses relacionadas a urina escura."
-      },
-      "combinacao": "mycin"
-    },
-    {
       "id": "tpb",
       "tipo": "doenca",
       "nome": "Tristeza Parasitária Bovina",
@@ -77,7 +45,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Babesiose em animais (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/circulatory-system/parasitas-do-sangue/babesiose-em-animais"
+      }
     }
   ],
   "regras": [

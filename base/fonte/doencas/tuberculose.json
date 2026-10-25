@@ -1,0 +1,217 @@
+{
+  "doenca": "tuberculose",
+  "simbolos": [
+    {
+      "id": "emagrecimento_progressivo",
+      "tipo": "pergunta",
+      "nome": "Emagrecimento progressivo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca vem emagrecendo aos poucos, mesmo comendo?",
+        "veterinario": "Perda progressiva de condição corporal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a emagrecimento progressivo.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a emagrecimento progressivo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "linfonodos_aumentados",
+      "tipo": "pergunta",
+      "nome": "Ínguas aumentadas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há caroços (ínguas) aumentados no pescoço, na frente da paleta ou na virilha?",
+        "veterinario": "Linfonodos superficiais aumentados?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a ínguas aumentadas.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a ínguas aumentadas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tuberculina_reagente",
+      "tipo": "pergunta",
+      "nome": "Tuberculinização reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Teste tuberculínico (cervical comparativo) reagente?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a tuberculinização reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "tuberculose",
+      "tipo": "doenca",
+      "nome": "Tuberculose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Visão geral da tuberculose em animais (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-TUB-01",
+      "se": [
+        {
+          "simbolo": "emagrecimento_progressivo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "tosse",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Emagrecimento com tosse crônica é compatível com tuberculose."
+    },
+    {
+      "id": "R-TUB-02",
+      "se": [
+        {
+          "simbolo": "linfonodos_aumentados",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Linfonodos superficiais aumentados apoiam tuberculose."
+    },
+    {
+      "id": "R-TUB-03",
+      "se": [
+        {
+          "simbolo": "tuberculina_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Tuberculinização reagente apoia tuberculose; a confirmação segue o regulamento do PNCEBT."
+    },
+    {
+      "id": "R-TUB-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Queda de produção com apetite normal, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-TUB-05",
+      "se": [
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "tuberculose",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: febre aguda sugere outra causa; a tuberculose costuma ser crônica e sem febre alta."
+    },
+    {
+      "id": "R-URG-20",
+      "se": [
+        {
+          "simbolo": "tuberculose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

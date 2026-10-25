@@ -1,0 +1,208 @@
+{
+  "doenca": "timpanismo_espumoso",
+  "simbolos": [
+    {
+      "id": "pasto_leguminosa_recente",
+      "tipo": "pergunta",
+      "nome": "Pasto de leguminosa recente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca comeu nas últimas horas pasto de leguminosa (alfafa, trevo) ou capim muito novo e molhado?",
+        "veterinario": "Ingestão recente de leguminosa ou pastagem muito tenra?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a pasto de leguminosa recente.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a pasto de leguminosa recente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "outros_animais_estufados",
+      "tipo": "pergunta",
+      "nome": "Outros animais estufados",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Outras vacas do mesmo lote também estão estufadas?",
+        "veterinario": "Outros animais do lote com distensão abdominal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a outros animais estufados.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a outros animais estufados."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "timpanismo_espumoso",
+      "tipo": "doenca",
+      "nome": "Timpanismo Espumoso",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Timpanismo em ruminantes (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-TES-01",
+      "se": [
+        {
+          "simbolo": "distensao_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "pasto_leguminosa_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso."
+    },
+    {
+      "id": "R-TES-02",
+      "se": [
+        {
+          "simbolo": "outros_animais_estufados",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum."
+    },
+    {
+      "id": "R-TES-03",
+      "se": [
+        {
+          "simbolo": "espuma_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Conteúdo espumoso pela sonda sem alívio caracteriza o gás preso em espuma."
+    },
+    {
+      "id": "R-TES-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "ausente",
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite ausente com queda de produção, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-TES-05",
+      "se": [
+        {
+          "simbolo": "gas_livre_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_espumoso",
+        "cf": -0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: gás livre que sai pela sonda indica timpanismo gasoso, não espumoso."
+    },
+    {
+      "id": "R-URG-10",
+      "se": [
+        {
+          "simbolo": "timpanismo_espumoso",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de timpanismo_espumoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

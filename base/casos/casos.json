@@ -5,7 +5,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 90,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -37,7 +37,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 150,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 40.2,
@@ -72,7 +72,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 90,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -101,7 +101,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 6,
-      "retencao_placenta": true
+      "historico_retencao_placenta": true
     },
     "triagem": {
       "estado_termico": "quente",
@@ -132,7 +132,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 8,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 39.9,
@@ -164,7 +164,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 12,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -192,7 +192,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 100,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "quente",
@@ -227,7 +227,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 200,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 40.1,
@@ -262,7 +262,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 100,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "quente",
@@ -292,7 +292,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 25,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -324,7 +324,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 30,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 38.6,
@@ -357,7 +357,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 20,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -373,7 +373,7 @@
       "urgencia": "observar",
       "top3_contem": [
         "cetose",
-        "deslocamento_abomaso"
+        "deslocamento_abomaso_esquerda"
       ],
       "faixas": {
         "cetose": [
@@ -389,7 +389,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 1,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "fria",
@@ -419,7 +419,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 2,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 37.2,
@@ -451,7 +451,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 2,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "fria",
@@ -477,7 +477,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 35,
-      "retencao_placenta": false,
+      "historico_retencao_placenta": false,
       "flanco_esquerdo_afundado": true
     },
     "triagem": {
@@ -491,10 +491,10 @@
     },
     "respostas": {},
     "esperado": {
-      "top1": "deslocamento_abomaso",
+      "top1": "deslocamento_abomaso_esquerda",
       "urgencia": "chamar_agora",
       "faixas": {
-        "deslocamento_abomaso": [
+        "deslocamento_abomaso_esquerda": [
           50,
           75
         ]
@@ -507,7 +507,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 20,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 38.5,
@@ -522,10 +522,10 @@
       "ping_metalico_flanco_esquerdo": true
     },
     "esperado": {
-      "top1": "deslocamento_abomaso",
+      "top1": "deslocamento_abomaso_esquerda",
       "urgencia": "chamar_agora",
       "faixas": {
-        "deslocamento_abomaso": [
+        "deslocamento_abomaso_esquerda": [
           85,
           100
         ]
@@ -538,7 +538,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 35,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -553,7 +553,7 @@
     "esperado": {
       "urgencia": "sem_problema",
       "faixas": {
-        "deslocamento_abomaso": [
+        "deslocamento_abomaso_esquerda": [
           0,
           5
         ]
@@ -566,7 +566,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 80,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -598,7 +598,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 60,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 38.7,
@@ -631,7 +631,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 80,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -661,7 +661,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 150,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -692,7 +692,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 150,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 38.5,
@@ -723,7 +723,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 150,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -751,7 +751,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 200,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -778,7 +778,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 100,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -804,7 +804,7 @@
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 100,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": 41.3,
@@ -828,7 +828,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 5,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -869,7 +869,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 40,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -884,10 +884,10 @@
       "flanco_esquerdo_afundado": true
     },
     "esperado": {
-      "top1": "deslocamento_abomaso",
+      "top1": "deslocamento_abomaso_esquerda",
       "urgencia": "chamar_agora",
       "faixas": {
-        "deslocamento_abomaso": [
+        "deslocamento_abomaso_esquerda": [
           85,
           100
         ]
@@ -909,7 +909,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 10,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -946,7 +946,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 120,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -979,7 +979,7 @@
           0,
           20
         ],
-        "deslocamento_abomaso": [
+        "deslocamento_abomaso_esquerda": [
           0,
           20
         ],
@@ -1066,7 +1066,7 @@
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 35,
-      "retencao_placenta": false
+      "historico_retencao_placenta": false
     },
     "triagem": {
       "estado_termico": "normal",
@@ -1084,13 +1084,888 @@
       "urgencia": "observar",
       "top1": "cetose",
       "faixas": {
-        "deslocamento_abomaso": [
+        "deslocamento_abomaso_esquerda": [
           25,
           35
         ],
         "cetose": [
           35,
           45
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-DAD-01",
+    "descricao": "Deslocamento à direita: barriga estufada à direita, pouco esterco e desidratação Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 20,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "distensao_flanco_direito": true,
+      "fezes_escassas": true,
+      "desidratacao": true
+    },
+    "esperado": {
+      "top1": "deslocamento_abomaso_direita",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "deslocamento_abomaso_direita": [
+          70,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-DAD-02",
+    "descricao": "Deslocamento à direita: ping no flanco direito Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 15,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.5,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "ping_flanco_direito": true,
+      "ping_metalico_flanco_esquerdo": false
+    },
+    "esperado": {
+      "top1": "deslocamento_abomaso_direita",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "deslocamento_abomaso_direita": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-TES-01",
+    "descricao": "Timpanismo espumoso: barriga estufada após leguminosa, outras vacas estufadas Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 120,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "distensao_flanco_esquerdo": true,
+      "pasto_leguminosa_recente": true,
+      "outros_animais_estufados": true
+    },
+    "esperado": {
+      "top1": "timpanismo_espumoso",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "timpanismo_espumoso": [
+          70,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-TES-02",
+    "descricao": "Timpanismo espumoso: espuma pela sonda Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 110,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "espuma_sonda": true,
+      "distensao_flanco_esquerdo": true
+    },
+    "esperado": {
+      "top1": "timpanismo_espumoso",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "timpanismo_espumoso": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-TGA-01",
+    "descricao": "Timpanismo gasoso: barriga estufada com engasgo, sem leguminosa Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 130,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "distensao_flanco_esquerdo": true,
+      "engasgo": true,
+      "pasto_leguminosa_recente": false
+    },
+    "esperado": {
+      "top1": "timpanismo_gasoso",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "timpanismo_gasoso": [
+          55,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-TGA-02",
+    "descricao": "Timpanismo gasoso: gás livre pela sonda Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 140,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.7,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "gas_livre_sonda": true,
+      "espuma_sonda": false,
+      "distensao_flanco_esquerdo": true
+    },
+    "esperado": {
+      "top1": "timpanismo_gasoso",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "timpanismo_gasoso": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-RPL-01",
+    "descricao": "Retenção de placenta: restos de placenta na vulva no segundo dia Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 2,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": [
+        "corrimento_vaginal"
+      ]
+    },
+    "respostas": {
+      "membranas_expostas_vulva": true,
+      "placenta_nao_expulsa_24h": true
+    },
+    "esperado": {
+      "top1": "retencao_placenta",
+      "urgencia": "observar",
+      "faixas": {
+        "retencao_placenta": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-RPL-02",
+    "descricao": "Retenção de placenta: membranas retidas ao exame Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 3,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.8,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "palpacao_membranas_retidas": true
+    },
+    "esperado": {
+      "top1": "retencao_placenta",
+      "urgencia": "observar",
+      "faixas": {
+        "retencao_placenta": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-PNE-01",
+    "descricao": "Pneumonia: tosse, respiração com esforço e catarro Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 150,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "quente",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "tosse": true,
+      "respiracao_ofegante": true,
+      "secrecao_nasal": true,
+      "distensao_flanco_esquerdo": false
+    },
+    "esperado": {
+      "top1": "pneumonia",
+      "urgencia": "observar",
+      "faixas": {
+        "pneumonia": [
+          55,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-PNE-02",
+    "descricao": "Pneumonia: febre e crepitações à auscultação Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 160,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 40.0,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "ausculta_crepitacoes": true,
+      "tosse": true
+    },
+    "esperado": {
+      "top1": "pneumonia",
+      "urgencia": "observar",
+      "faixas": {
+        "pneumonia": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-RPT-01",
+    "descricao": "Reticulopericardite: costas arqueadas e gemido Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "costas_arqueadas": true,
+      "gemido": true
+    },
+    "esperado": {
+      "top1": "reticulopericardite_traumatica",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "reticulopericardite_traumatica": [
+          65,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-RPT-02",
+    "descricao": "Reticulopericardite: prova de dor reticular positiva Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 39.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "prova_dor_reticular": true,
+      "ping_metalico_flanco_esquerdo": false
+    },
+    "esperado": {
+      "top1": "reticulopericardite_traumatica",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "reticulopericardite_traumatica": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-HMG-01",
+    "descricao": "Hipomagnesemia: tremores e agitação após pasto novo Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 60,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "tremores": true,
+      "agitacao": true,
+      "pasto_novo_adubado": true
+    },
+    "esperado": {
+      "top1": "hipomagnesemia",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "hipomagnesemia": [
+          65,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-HMG-02",
+    "descricao": "Hipomagnesemia: magnésio sérico baixo Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 60,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.5,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "magnesio_serico": 0.8,
+      "tremores": true
+    },
+    "esperado": {
+      "top1": "hipomagnesemia",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "hipomagnesemia": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-BRU-01",
+    "descricao": "Brucelose: aborto, retenção de placenta e higroma Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 40,
+      "historico_retencao_placenta": true
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": [
+        "corrimento_vaginal"
+      ]
+    },
+    "respostas": {
+      "aborto_recente": true,
+      "higroma": true,
+      "vacinada_brucelose": false
+    },
+    "esperado": {
+      "top1": "brucelose",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "brucelose": [
+          60,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-BRU-02",
+    "descricao": "Brucelose: sorologia reagente Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 80,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "sorologia_brucelose_reagente": true
+    },
+    "esperado": {
+      "top1": "brucelose",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "brucelose": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-LEP-01",
+    "descricao": "Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 90,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "quente",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "leite_com_sangue": true,
+      "aborto_recente": true
+    },
+    "esperado": {
+      "top1": "leptospirose",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "leptospirose": [
+          60,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-LEP-02",
+    "descricao": "Leptospirose: sorologia reagente Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 90,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 39.8,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "sorologia_leptospirose_reagente": true,
+      "esfregaco_hemoparasitas": false
+    },
+    "esperado": {
+      "top1": "leptospirose",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "leptospirose": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-IBR-01",
+    "descricao": "IBR: focinho vermelho, catarro e olhos lacrimejando Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "quente",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "focinho_avermelhado": true,
+      "secrecao_nasal": true,
+      "olhos_lacrimejando": true
+    },
+    "esperado": {
+      "top1": "ibr",
+      "urgencia": "observar",
+      "faixas": {
+        "ibr": [
+          60,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-IBR-02",
+    "descricao": "IBR: BoHV-1 detectado Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 40.0,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "pcr_bohv1": true,
+      "ausculta_crepitacoes": false
+    },
+    "esperado": {
+      "top1": "ibr",
+      "urgencia": "observar",
+      "faixas": {
+        "ibr": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-BVD-01",
+    "descricao": "BVD: diarreia e feridas na boca Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "quente",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": [
+        "diarreia"
+      ]
+    },
+    "respostas": {
+      "feridas_boca": true
+    },
+    "esperado": {
+      "top1": "bvd",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "bvd": [
+          55,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-BVD-02",
+    "descricao": "BVD: antígeno detectado Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 39.7,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": [
+        "diarreia"
+      ]
+    },
+    "respostas": {
+      "antigeno_bvdv": true
+    },
+    "esperado": {
+      "top1": "bvd",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "bvd": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-TUB-01",
+    "descricao": "Tuberculose: emagrecimento, tosse e ínguas Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 200,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "emagrecimento_progressivo": true,
+      "tosse": true,
+      "linfonodos_aumentados": true
+    },
+    "esperado": {
+      "top1": "tuberculose",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "tuberculose": [
+          65,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-TUB-02",
+    "descricao": "Tuberculose: tuberculinização reagente Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 200,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "tuberculina_reagente": true
+    },
+    "esperado": {
+      "top1": "tuberculose",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "tuberculose": [
+          85,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-EXC-DAB",
+    "descricao": "Par excludente: deslocamento à direita vence e rebaixa o lado esquerdo Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 20,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "distensao_flanco_direito": true,
+      "fezes_escassas": true,
+      "desidratacao": true,
+      "flanco_esquerdo_afundado": false
+    },
+    "esperado": {
+      "top1": "deslocamento_abomaso_direita",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "deslocamento_abomaso_direita": [
+          70,
+          100
+        ],
+        "deslocamento_abomaso_esquerda": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-EXC-TIM",
+    "descricao": "Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 110,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [
+        "queda_producao"
+      ],
+      "excrecoes": []
+    },
+    "respostas": {
+      "espuma_sonda": true,
+      "gas_livre_sonda": false,
+      "distensao_flanco_esquerdo": true,
+      "pasto_leguminosa_recente": false
+    },
+    "esperado": {
+      "top1": "timpanismo_espumoso",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "timpanismo_espumoso": [
+          85,
+          100
+        ],
+        "timpanismo_gasoso": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-EXC-RPL",
+    "descricao": "Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpério Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 2,
+      "historico_retencao_placenta": true
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": [
+        "corrimento_vaginal"
+      ]
+    },
+    "respostas": {
+      "membranas_expostas_vulva": true,
+      "corrimento_fetido": false
+    },
+    "esperado": {
+      "top1": "retencao_placenta",
+      "urgencia": "observar",
+      "faixas": {
+        "retencao_placenta": [
+          85,
+          100
+        ],
+        "metrite": [
+          0,
+          0
         ]
       }
     }

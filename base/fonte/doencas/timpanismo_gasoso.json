@@ -1,0 +1,162 @@
+{
+  "doenca": "timpanismo_gasoso",
+  "simbolos": [
+    {
+      "id": "engasgo",
+      "tipo": "pergunta",
+      "nome": "Engasgo ou dificuldade de engolir",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca parece engasgada, babando ou com esforço para engolir?",
+        "veterinario": "Sinais de obstrução esofágica (sialorreia, esforço de deglutição)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a engasgo ou dificuldade de engolir.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a engasgo ou dificuldade de engolir."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "timpanismo_gasoso",
+      "tipo": "doenca",
+      "nome": "Timpanismo Gasoso",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Timpanismo em ruminantes (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-TGA-01",
+      "se": [
+        {
+          "simbolo": "distensao_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "engasgo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Distensão esquerda com sinais de engasgo sugere gás livre retido por obstrução esofágica."
+    },
+    {
+      "id": "R-TGA-03",
+      "se": [
+        {
+          "simbolo": "gas_livre_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Gás livre pela sonda com alívio da distensão caracteriza o timpanismo gasoso."
+    },
+    {
+      "id": "R-TGA-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "ausente",
+          "negado": false
+        },
+        {
+          "simbolo": "apatia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite ausente com abatimento, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-TGA-05",
+      "se": [
+        {
+          "simbolo": "espuma_sonda",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "timpanismo_gasoso",
+        "cf": -0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: conteúdo espumoso pela sonda indica timpanismo espumoso, não gasoso."
+    },
+    {
+      "id": "R-URG-11",
+      "se": [
+        {
+          "simbolo": "timpanismo_gasoso",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de timpanismo_gasoso é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

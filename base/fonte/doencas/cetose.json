@@ -79,7 +79,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "media",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Hipercetonemia em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/hipercetonemia-em-bovinos/hipercetonemia-em-bovinos"
+      }
     }
   ],
   "regras": [

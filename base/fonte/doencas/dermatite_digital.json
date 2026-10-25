@@ -60,7 +60,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "baixa",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+      }
     }
   ],
   "regras": [

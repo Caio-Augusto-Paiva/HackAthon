@@ -19,41 +19,6 @@
       "combinacao": "mycin"
     },
     {
-      "id": "corrimento_vaginal",
-      "tipo": "pergunta",
-      "nome": "Corrimento vaginal",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "produtor": "Há saída de secreção anormal pela vulva?",
-        "veterinario": "Presença de corrimento vaginal anormal?"
-      },
-      "por_que": {
-        "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal.",
-        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal."
-      },
-      "combinacao": "mycin"
-    },
-    {
-      "id": "retencao_placenta",
-      "tipo": "ficha",
-      "nome": "Histórico de retenção de placenta",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "produtor": "Houve retenção de placenta neste parto?",
-        "veterinario": "Retenção de membranas fetais após o último parto?"
-      },
-      "por_que": {
-        "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
-        "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
-      },
-      "campo_ficha": "retencao_placenta",
-      "combinacao": "mycin"
-    },
-    {
       "id": "utero_aumentado_palpacao",
       "tipo": "pergunta",
       "nome": "Aumento uterino à palpação",
@@ -69,17 +34,6 @@
       "combinacao": "mycin"
     },
     {
-      "id": "puerperio",
-      "tipo": "derivado",
-      "nome": "Puerpério",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {},
-      "por_que": {},
-      "combinacao": "mycin"
-    },
-    {
       "id": "metrite",
       "tipo": "doenca",
       "nome": "Metrite Puerperal",
@@ -89,30 +43,14 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Metrite em animais de produção (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/metrite-em-animais-de-produ%C3%A7%C3%A3o"
+      }
     }
   ],
   "regras": [
-    {
-      "id": "R-DER-02",
-      "se": [
-        {
-          "simbolo": "dias_em_lactacao",
-          "op": "≤",
-          "valor": 21.0,
-          "negado": false
-        }
-      ],
-      "entao": {
-        "simbolo": "puerperio",
-        "cf": 0.99
-      },
-      "classe": "evidencia",
-      "prioridade": 10,
-      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
-      "status": "suposicao_a_validar",
-      "nota": "Janela clínica padronizada de puerpério e involução uterina primária."
-    },
     {
       "id": "R-MET-02",
       "se": [
@@ -207,7 +145,7 @@
       "id": "R-MET-04",
       "se": [
         {
-          "simbolo": "retencao_placenta",
+          "simbolo": "historico_retencao_placenta",
           "op": "=",
           "valor": true,
           "negado": false

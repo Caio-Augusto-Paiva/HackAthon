@@ -1,0 +1,211 @@
+{
+  "doenca": "deslocamento_abomaso_esquerda",
+  "simbolos": [
+    {
+      "id": "flanco_esquerdo_afundado",
+      "tipo": "pergunta",
+      "nome": "Flanco esquerdo afundado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A região do flanco esquerdo parece mais afundada que o habitual?",
+        "veterinario": "Fossa paralombar esquerda retraída?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a flanco esquerdo afundado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "deslocamento_abomaso_esquerda",
+      "tipo": "doenca",
+      "nome": "Deslocamento de Abomaso à Esquerda",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Deslocamento do abomaso para a esquerda ou direita e vólvulo abomasal em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-URG-03",
+      "se": [
+        {
+          "simbolo": "deslocamento_abomaso_esquerda",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de deslocamento_abomaso_esquerda é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-DAE-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sinais inespecíficos de redução de ingestão e lactação no pós-parto de vacas de alta produção."
+    },
+    {
+      "id": "R-DAE-02",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "flanco_esquerdo_afundado",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Retração do flanco pode acompanhar redução da ingestão; é inespecífica para deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAE-03",
+      "se": [
+        {
+          "simbolo": "ping_metalico_flanco_esquerdo",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Ping à esquerda em localização compatível apoia deslocamento à esquerda; exige diferenciação de outras estruturas com gás."
+    },
+    {
+      "id": "R-DAE-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAE-05",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "fezes_escassas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": 0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Pouco esterco no início da lactação é compatível com deslocamento de abomaso."
+    },
+    {
+      "id": "R-DAE-06",
+      "se": [
+        {
+          "simbolo": "ping_flanco_direito",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "deslocamento_abomaso_esquerda",
+        "cf": -0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: ping no flanco direito aponta para deslocamento à direita, não à esquerda."
+    }
+  ]
+}

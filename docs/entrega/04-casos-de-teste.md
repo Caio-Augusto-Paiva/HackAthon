@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0004`. Casos sintéticos executados: **34**. Aprovados: **34**.
+Base `v0005`. Casos sintéticos executados: **61**. Aprovados: **61**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -13,18 +13,18 @@ Os casos demonstram integração e comportamento determinístico. Não medem acu
 | C-MAS-03 | passou | observar | mastite | não |
 | C-MET-01 | passou | chamar_agora | metrite | não |
 | C-MET-02 | passou | chamar_agora | metrite | não |
-| C-MET-03 | passou | sem_problema | acidose | não |
+| C-MET-03 | passou | sem_problema | brucelose | não |
 | C-TPB-01 | passou | chamar_agora | tpb | sim |
 | C-TPB-02 | passou | chamar_agora | tpb | não |
-| C-TPB-03 | passou | sem_problema | acidose | não |
+| C-TPB-03 | passou | sem_problema | pneumonia | não |
 | C-CET-01 | passou | observar | cetose | não |
 | C-CET-02 | passou | observar | cetose | não |
 | C-CET-03 | passou | observar | cetose | não |
 | C-HIP-01 | passou | chamar_agora | hipocalcemia | sim |
 | C-HIP-02 | passou | chamar_agora | hipocalcemia | não |
 | C-HIP-03 | passou | sem_problema | acidose | não |
-| C-DAB-01 | passou | chamar_agora | deslocamento_abomaso | não |
-| C-DAB-02 | passou | chamar_agora | deslocamento_abomaso | não |
+| C-DAB-01 | passou | chamar_agora | deslocamento_abomaso_esquerda | não |
+| C-DAB-02 | passou | chamar_agora | deslocamento_abomaso_esquerda | não |
 | C-DAB-03 | passou | sem_problema | acidose | não |
 | C-ACI-01 | passou | observar | acidose | não |
 | C-ACI-02 | passou | observar | acidose | não |
@@ -36,12 +36,39 @@ Os casos demonstram integração e comportamento determinístico. Não medem acu
 | C-BV-02 | passou | chamar_agora | acidose | sim |
 | C-BV-03 | passou | chamar_agora | acidose | não |
 | C-COM-01 | passou | chamar_agora | mastite | não |
-| C-MODO-01 | passou | chamar_agora | deslocamento_abomaso | não |
+| C-MODO-01 | passou | chamar_agora | deslocamento_abomaso_esquerda | não |
 | C-LIM-01 | passou | observar | cetose | não |
 | C-SAD-01 | passou | sem_problema | acidose | não |
 | DEV-BV-01 | passou | chamar_agora | hipocalcemia | sim |
 | DEV-MAS-01 | passou | observar | mastite | não |
 | C-DAB-DIALOGO | passou | observar | cetose | não |
+| C-N-DAD-01 | passou | chamar_agora | deslocamento_abomaso_direita | não |
+| C-N-DAD-02 | passou | chamar_agora | deslocamento_abomaso_direita | não |
+| C-N-TES-01 | passou | chamar_agora | timpanismo_espumoso | não |
+| C-N-TES-02 | passou | chamar_agora | timpanismo_espumoso | não |
+| C-N-TGA-01 | passou | chamar_agora | timpanismo_gasoso | não |
+| C-N-TGA-02 | passou | chamar_agora | timpanismo_gasoso | não |
+| C-N-RPL-01 | passou | observar | retencao_placenta | não |
+| C-N-RPL-02 | passou | observar | retencao_placenta | não |
+| C-N-PNE-01 | passou | observar | pneumonia | não |
+| C-N-PNE-02 | passou | observar | pneumonia | não |
+| C-N-RPT-01 | passou | chamar_agora | reticulopericardite_traumatica | não |
+| C-N-RPT-02 | passou | chamar_agora | reticulopericardite_traumatica | não |
+| C-N-HMG-01 | passou | chamar_agora | hipomagnesemia | não |
+| C-N-HMG-02 | passou | chamar_agora | hipomagnesemia | não |
+| C-N-BRU-01 | passou | chamar_agora | brucelose | não |
+| C-N-BRU-02 | passou | chamar_agora | brucelose | não |
+| C-N-LEP-01 | passou | chamar_agora | leptospirose | não |
+| C-N-LEP-02 | passou | chamar_agora | leptospirose | não |
+| C-N-IBR-01 | passou | observar | ibr | não |
+| C-N-IBR-02 | passou | observar | ibr | não |
+| C-N-BVD-01 | passou | chamar_agora | bvd | não |
+| C-N-BVD-02 | passou | chamar_agora | bvd | não |
+| C-N-TUB-01 | passou | chamar_agora | tuberculose | não |
+| C-N-TUB-02 | passou | chamar_agora | tuberculose | não |
+| C-EXC-DAB | passou | chamar_agora | deslocamento_abomaso_direita | não |
+| C-EXC-TIM | passou | chamar_agora | timpanismo_espumoso | não |
+| C-EXC-RPL | passou | observar | retencao_placenta | não |
 
 ## C-MAS-01
 
@@ -56,7 +83,7 @@ Mastite: leite alterado e úbere inflamado Caso fictício de regressão; suposi�
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 90,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -96,18 +123,30 @@ Mastite: leite alterado e úbere inflamado Caso fictício de regressão; suposi�
     "top1": "mastite",
     "top3_contem": [
       "mastite",
-      "acidose",
-      "cetose"
+      "tuberculose",
+      "acidose"
     ],
     "percentuais": {
       "mastite": 80,
+      "tuberculose": 5,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [],
@@ -124,15 +163,21 @@ Mastite: leite alterado e úbere inflamado Caso fictício de regressão; suposi�
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "emagrecimento_progressivo",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "focinho_avermelhado",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -150,7 +195,7 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 150,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 40.2,
@@ -193,18 +238,30 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
     "top1": "mastite",
     "top3_contem": [
       "mastite",
-      "acidose",
-      "cetose"
+      "pneumonia",
+      "acidose"
     ],
     "percentuais": {
       "mastite": 88,
+      "pneumonia": 10,
       "acidose": 5,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_direita": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
       "tpb": 0,
-      "hipocalcemia": 0
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [
@@ -216,29 +273,49 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
     }
   },
   "respondidas": [
+    "aborto_recente",
+    "agitacao",
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "claudicacao",
     "cmt_reagente",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "edema_barbela",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
     "lesao_erosiva_talao_morango",
+    "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
     "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
     "queda_producao",
-    "retencao_placenta",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
     "teste_caneca_grumos",
+    "tosse",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -256,7 +333,7 @@ Mastite ambígua: só úbere inflamado Caso fictício de regressão; suposição
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 90,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -294,17 +371,29 @@ Mastite ambígua: só úbere inflamado Caso fictício de regressão; suposição
     "top3_contem": [
       "mastite",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "mastite": 50,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -322,10 +411,10 @@ Mastite ambígua: só úbere inflamado Caso fictício de regressão; suposição
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -346,7 +435,7 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 6,
-    "retencao_placenta": true
+    "historico_retencao_placenta": true
   },
   "triagem": {
     "estado_termico": "quente",
@@ -386,17 +475,29 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
     "top3_contem": [
       "metrite",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "metrite": 85,
       "acidose": 5,
+      "brucelose": 5,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
       "tpb": 0,
-      "hipocalcemia": 0
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -406,6 +507,7 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
     }
   },
   "respondidas": [
+    "aborto_recente",
     "apatia",
     "apetite",
     "claudicacao",
@@ -414,10 +516,13 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "membranas_expostas_vulva",
     "queda_producao",
-    "retencao_placenta",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -437,7 +542,7 @@ Metrite: febre e achados uterinos Caso fictício de regressão; suposição a va
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 8,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 39.9,
@@ -478,17 +583,29 @@ Metrite: febre e achados uterinos Caso fictício de regressão; suposição a va
     "top3_contem": [
       "metrite",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "metrite": 85,
       "acidose": 5,
+      "brucelose": 5,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
       "tpb": 0,
-      "hipocalcemia": 0
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -498,8 +615,11 @@ Metrite: febre e achados uterinos Caso fictício de regressão; suposição a va
     }
   },
   "respondidas": [
+    "aborto_recente",
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "claudicacao",
     "corrimento_fetido",
@@ -507,13 +627,24 @@ Metrite: febre e achados uterinos Caso fictício de regressão; suposição a va
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
     "lesao_erosiva_talao_morango",
+    "magnesio_serico",
+    "pcr_bohv1",
     "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
     "queda_producao",
-    "retencao_placenta",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
     "ubere_inflamado",
     "urina_escura"
@@ -534,7 +665,7 @@ Metrite ambígua: corrimento sem confirmação de odor Caso fictício de regress
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 12,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -567,21 +698,33 @@ Metrite ambígua: corrimento sem confirmação de odor Caso fictício de regress
   "falhas": [],
   "obtido": {
     "urgencia": "sem_problema",
-    "top1": "acidose",
+    "top1": "brucelose",
     "top3_contem": [
+      "brucelose",
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "bvd"
     ],
     "percentuais": {
+      "brucelose": 5,
       "acidose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -602,10 +745,10 @@ Metrite ambígua: corrimento sem confirmação de odor Caso fictício de regress
     "extremidades",
     "fezes_aquosas_espuma_graos",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -626,7 +769,7 @@ TPB: urina escura, mucosas e carrapatos Caso fictício de regressão; suposiçã
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 100,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "quente",
@@ -669,18 +812,30 @@ TPB: urina escura, mucosas e carrapatos Caso fictício de regressão; suposiçã
     "top1": "tpb",
     "top3_contem": [
       "tpb",
-      "acidose",
-      "cetose"
+      "leptospirose",
+      "pneumonia"
     ],
     "percentuais": {
       "tpb": 77,
+      "leptospirose": 5,
+      "pneumonia": 5,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
       "mastite": 0,
       "metrite": 0,
-      "hipocalcemia": 0
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [
@@ -692,6 +847,7 @@ TPB: urina escura, mucosas e carrapatos Caso fictício de regressão; suposiçã
     }
   },
   "respondidas": [
+    "aborto_recente",
     "apatia",
     "apetite",
     "carrapatos_historico_recente",
@@ -702,13 +858,16 @@ TPB: urina escura, mucosas e carrapatos Caso fictício de regressão; suposiçã
     "dias_em_lactacao",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
+    "olhos_lacrimejando",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -726,7 +885,7 @@ TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição 
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 200,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 40.1,
@@ -769,18 +928,30 @@ TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição 
     "top1": "tpb",
     "top3_contem": [
       "tpb",
-      "acidose",
-      "cetose"
+      "pneumonia",
+      "acidose"
     ],
     "percentuais": {
       "tpb": 97,
+      "pneumonia": 10,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
       "mastite": 0,
       "metrite": 0,
-      "hipocalcemia": 0
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "leptospirose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [
@@ -800,9 +971,15 @@ TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição 
     "diarreia",
     "dias_em_lactacao",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "magnesio_serico",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
     "queda_producao",
-    "retencao_placenta",
     "temperatura_retal",
     "ubere_inflamado",
     "urina_escura"
@@ -823,7 +1000,7 @@ TPB ambígua: calor e carrapatos sem mucosas informadas Caso fictício de regres
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 100,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "quente",
@@ -858,21 +1035,33 @@ TPB ambígua: calor e carrapatos sem mucosas informadas Caso fictício de regres
   "falhas": [],
   "obtido": {
     "urgencia": "sem_problema",
-    "top1": "acidose",
+    "top1": "pneumonia",
     "top3_contem": [
+      "pneumonia",
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "brucelose"
     ],
     "percentuais": {
+      "pneumonia": 5,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
       "tpb": 0,
-      "hipocalcemia": 0
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -882,6 +1071,7 @@ TPB ambígua: calor e carrapatos sem mucosas informadas Caso fictício de regres
     }
   },
   "respondidas": [
+    "aborto_recente",
     "apatia",
     "apetite",
     "claudicacao",
@@ -890,10 +1080,11 @@ TPB ambígua: calor e carrapatos sem mucosas informadas Caso fictício de regres
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -914,7 +1105,7 @@ Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de 
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 25,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -954,18 +1145,30 @@ Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de 
     "top1": "cetose",
     "top3_contem": [
       "cetose",
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "acidose"
     ],
     "percentuais": {
       "cetose": 84,
-      "deslocamento_abomaso": 33,
+      "deslocamento_abomaso_esquerda": 33,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -975,22 +1178,30 @@ Cetose: redução do apetite, acetona e recusa de concentrado Caso fictício de 
     }
   },
   "respondidas": [
+    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
+    "secrecao_nasal",
     "teste_caneca_grumos",
+    "tosse",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -1010,7 +1221,7 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 30,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 38.6,
@@ -1051,18 +1262,30 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
     "top1": "cetose",
     "top3_contem": [
       "cetose",
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "acidose"
     ],
     "percentuais": {
       "cetose": 91,
-      "deslocamento_abomaso": 33,
+      "deslocamento_abomaso_esquerda": 33,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -1072,8 +1295,10 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
     }
   },
   "respondidas": [
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
@@ -1081,13 +1306,25 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "magnesio_serico",
+    "pcr_bohv1",
     "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
     "queda_producao",
-    "retencao_placenta",
+    "secrecao_nasal",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
+    "tosse",
+    "tuberculina_reagente",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -1107,7 +1344,7 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 20,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -1123,7 +1360,7 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
     "urgencia": "observar",
     "top3_contem": [
       "cetose",
-      "deslocamento_abomaso"
+      "deslocamento_abomaso_esquerda"
     ],
     "faixas": {
       "cetose": [
@@ -1147,18 +1384,30 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
     "top1": "cetose",
     "top3_contem": [
       "cetose",
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "acidose"
     ],
     "percentuais": {
       "cetose": 43,
-      "deslocamento_abomaso": 33,
+      "deslocamento_abomaso_esquerda": 33,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -1168,23 +1417,31 @@ Cetose ambígua: só apetite e produção Caso fictício de regressão; suposiç
     }
   },
   "respondidas": [
+    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_fetido",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
+    "secrecao_nasal",
     "teste_caneca_grumos",
+    "tosse",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -1204,7 +1461,7 @@ Hipocalcemia: decúbito no periparto Caso fictício de regressão; suposição a
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 1,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "fria",
@@ -1243,17 +1500,29 @@ Hipocalcemia: decúbito no periparto Caso fictício de regressão; suposição a
     "top3_contem": [
       "hipocalcemia",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "hipocalcemia": 64,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [
@@ -1275,17 +1544,22 @@ Hipocalcemia: decúbito no periparto Caso fictício de regressão; suposição a
     "dias_em_lactacao",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
     "flanco_esquerdo_afundado",
     "halito_adocicado_acetona",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "membranas_expostas_vulva",
     "mucosas_palidas_ou_ictericas",
     "pescoco_em_s",
+    "placenta_nao_expulsa_24h",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -1303,7 +1577,7 @@ Hipocalcemia: hipotermia, apatia e cálcio baixo Caso fictício de regressão; s
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 2,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 37.2,
@@ -1350,11 +1624,23 @@ Hipocalcemia: hipotermia, apatia e cálcio baixo Caso fictício de regressão; s
       "hipocalcemia": 90,
       "acidose": 5,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_direita": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [
@@ -1366,17 +1652,26 @@ Hipocalcemia: hipotermia, apatia e cálcio baixo Caso fictício de regressão; s
     }
   },
   "respondidas": [
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "calcio_serico",
     "claudicacao",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "magnesio_serico",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
     "queda_producao",
-    "retencao_placenta",
     "temperatura_retal",
     "ubere_inflamado",
     "urina_escura"
@@ -1397,7 +1692,7 @@ Hipocalcemia ambígua: frio sem decúbito Caso fictício de regressão; suposiç
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 2,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "fria",
@@ -1431,18 +1726,30 @@ Hipocalcemia ambígua: frio sem decúbito Caso fictício de regressão; suposiç
     "top1": "acidose",
     "top3_contem": [
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "brucelose",
+      "bvd"
     ],
     "percentuais": {
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -1463,11 +1770,13 @@ Hipocalcemia ambígua: frio sem decúbito Caso fictício de regressão; suposiç
     "extremidades",
     "fezes_aquosas_espuma_graos",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "membranas_expostas_vulva",
     "mucosas_palidas_ou_ictericas",
     "pescoco_em_s",
+    "placenta_nao_expulsa_24h",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -1488,7 +1797,7 @@ Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 35,
-    "retencao_placenta": false,
+    "historico_retencao_placenta": false,
     "flanco_esquerdo_afundado": true
   },
   "triagem": {
@@ -1502,10 +1811,10 @@ Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício
   },
   "respostas": {},
   "esperado": {
-    "top1": "deslocamento_abomaso",
+    "top1": "deslocamento_abomaso_esquerda",
     "urgencia": "chamar_agora",
     "faixas": {
-      "deslocamento_abomaso": [
+      "deslocamento_abomaso_esquerda": [
         50,
         75
       ]
@@ -1523,49 +1832,74 @@ Deslocamento de abomaso: redução de ingestão e flanco afundado Caso fictício
   "falhas": [],
   "obtido": {
     "urgencia": "chamar_agora",
-    "top1": "deslocamento_abomaso",
+    "top1": "deslocamento_abomaso_esquerda",
     "top3_contem": [
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "cetose",
       "acidose"
     ],
     "percentuais": {
-      "deslocamento_abomaso": 60,
+      "deslocamento_abomaso_esquerda": 60,
       "cetose": 43,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0,
+      "deslocamento_abomaso_direita": 0
     },
-    "motivo_parada": "sem_perguntas",
+    "motivo_parada": "limite",
     "bandeiras": [],
-    "inconclusivas": [],
+    "inconclusivas": [
+      "deslocamento_abomaso_esquerda",
+      "cetose"
+    ],
     "alerta": {
       "pausa": false
     }
   },
   "respondidas": [
+    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "extremidades",
     "fezes_aquosas_espuma_graos",
     "flanco_esquerdo_afundado",
     "halito_adocicado_acetona",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
+    "respiracao_ofegante",
+    "secrecao_nasal",
     "teste_caneca_grumos",
+    "tosse",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -1583,7 +1917,7 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 20,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 38.5,
@@ -1598,10 +1932,10 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
     "ping_metalico_flanco_esquerdo": true
   },
   "esperado": {
-    "top1": "deslocamento_abomaso",
+    "top1": "deslocamento_abomaso_esquerda",
     "urgencia": "chamar_agora",
     "faixas": {
-      "deslocamento_abomaso": [
+      "deslocamento_abomaso_esquerda": [
         85,
         100
       ]
@@ -1619,21 +1953,33 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
   "falhas": [],
   "obtido": {
     "urgencia": "chamar_agora",
-    "top1": "deslocamento_abomaso",
+    "top1": "deslocamento_abomaso_esquerda",
     "top3_contem": [
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "cetose",
       "acidose"
     ],
     "percentuais": {
-      "deslocamento_abomaso": 93,
+      "deslocamento_abomaso_esquerda": 93,
       "cetose": 43,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "reticulopericardite_traumatica": 0,
+      "retencao_placenta": 0,
+      "deslocamento_abomaso_direita": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -1643,8 +1989,11 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
     }
   },
   "respondidas": [
+    "agitacao",
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
@@ -1653,19 +2002,30 @@ Deslocamento de abomaso: ping metálico Caso fictício de regressão; suposiçã
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
     "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
     "lesao_erosiva_talao_morango",
+    "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
     "ph_ruminal",
     "ping_metalico_flanco_esquerdo",
     "queda_producao",
-    "retencao_placenta",
+    "secrecao_nasal",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
     "teste_caneca_grumos",
+    "tosse",
+    "tuberculina_reagente",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -1685,7 +2045,7 @@ Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão;
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 35,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -1700,7 +2060,7 @@ Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão;
   "esperado": {
     "urgencia": "sem_problema",
     "faixas": {
-      "deslocamento_abomaso": [
+      "deslocamento_abomaso_esquerda": [
         0,
         5
       ]
@@ -1722,17 +2082,29 @@ Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão;
     "top3_contem": [
       "acidose",
       "cetose",
-      "deslocamento_abomaso"
+      "deslocamento_abomaso_esquerda"
     ],
     "percentuais": {
       "acidose": 5,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -1742,21 +2114,28 @@ Deslocamento de abomaso ambíguo: apetite e flanco Caso fictício de regressão;
     }
   },
   "respondidas": [
+    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
+    "recusa_concentrado_come_volumoso",
     "teste_caneca_grumos",
+    "tosse",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -1776,7 +2155,7 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 80,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -1817,17 +2196,29 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
     "top3_contem": [
       "acidose",
       "cetose",
-      "deslocamento_abomaso"
+      "deslocamento_abomaso_esquerda"
     ],
     "percentuais": {
       "acidose": 86,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -1837,20 +2228,25 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
     }
   },
   "respondidas": [
+    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
     "extremidades",
+    "feridas_boca",
     "fezes_aquosas_espuma_graos",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "mudanca_abrupta_concentrado",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -1871,7 +2267,7 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 60,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 38.7,
@@ -1913,17 +2309,29 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
     "top3_contem": [
       "acidose",
       "cetose",
-      "deslocamento_abomaso"
+      "deslocamento_abomaso_direita"
     ],
     "percentuais": {
       "acidose": 93,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_direita": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -1933,21 +2341,31 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
     }
   },
   "respondidas": [
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "calcio_serico",
     "claudicacao",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "magnesio_serico",
+    "pcr_bohv1",
     "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
     "queda_producao",
-    "retencao_placenta",
+    "sorologia_brucelose_reagente",
     "temperatura_retal",
+    "tuberculina_reagente",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -1967,7 +2385,7 @@ Acidose ambígua: diarreia e fezes com grãos Caso fictício de regressão; supo
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 80,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2005,18 +2423,30 @@ Acidose ambígua: diarreia e fezes com grãos Caso fictício de regressão; supo
     "top1": "acidose",
     "top3_contem": [
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "brucelose",
+      "bvd"
     ],
     "percentuais": {
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -2034,11 +2464,12 @@ Acidose ambígua: diarreia e fezes com grãos Caso fictício de regressão; supo
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "feridas_boca",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "mudanca_abrupta_concentrado",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -2059,7 +2490,7 @@ Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de r
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 150,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2099,17 +2530,29 @@ Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de r
     "top3_contem": [
       "dermatite_digital",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "dermatite_digital": 65,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [],
@@ -2129,13 +2572,15 @@ Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de r
     "dor_flexao_talao",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -2153,7 +2598,7 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 150,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 38.5,
@@ -2193,17 +2638,29 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "top3_contem": [
       "dermatite_digital",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "dermatite_digital": 90,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -2213,8 +2670,10 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     }
   },
   "respondidas": [
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
@@ -2223,13 +2682,22 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "diarreia",
     "dias_em_lactacao",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
     "lesao_erosiva_talao_morango",
+    "magnesio_serico",
+    "pcr_bohv1",
     "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
     "queda_producao",
-    "retencao_placenta",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
+    "tuberculina_reagente",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -2249,7 +2717,7 @@ Dermatite digital ambígua: claudicação sem inspeção de lesão Caso fictíci
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 150,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2286,19 +2754,31 @@ Dermatite digital ambígua: claudicação sem inspeção de lesão Caso fictíci
     "top3_contem": [
       "dermatite_digital",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "dermatite_digital": 30,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
-    "motivo_parada": "sem_perguntas",
+    "motivo_parada": "sem_potencial",
     "bandeiras": [],
     "inconclusivas": [],
     "alerta": {
@@ -2316,10 +2796,10 @@ Dermatite digital ambígua: claudicação sem inspeção de lesão Caso fictíci
     "dor_flexao_talao",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -2340,7 +2820,7 @@ Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; s
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 200,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2375,18 +2855,30 @@ Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; s
     "top1": "hipocalcemia",
     "top3_contem": [
       "hipocalcemia",
-      "acidose",
-      "cetose"
+      "hipomagnesemia",
+      "acidose"
     ],
     "percentuais": {
       "hipocalcemia": 20,
+      "hipomagnesemia": 5,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [
@@ -2406,10 +2898,10 @@ Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; s
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -2430,7 +2922,7 @@ Bandeira de apetite ausente com apatia Caso fictício de regressão; suposição
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 100,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2465,17 +2957,29 @@ Bandeira de apetite ausente com apatia Caso fictício de regressão; suposição
     "top3_contem": [
       "acidose",
       "cetose",
-      "deslocamento_abomaso"
+      "deslocamento_abomaso_direita"
     ],
     "percentuais": {
       "acidose": 5,
       "cetose": 5,
-      "deslocamento_abomaso": 5,
+      "deslocamento_abomaso_direita": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "timpanismo_gasoso": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [
@@ -2487,19 +2991,25 @@ Bandeira de apetite ausente com apatia Caso fictício de regressão; suposição
     }
   },
   "respondidas": [
+    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
+    "tosse",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -2519,7 +3029,7 @@ Bandeira de febre alta isolada Caso fictício de regressão; suposição a valid
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 100,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": 41.3,
@@ -2551,18 +3061,30 @@ Bandeira de febre alta isolada Caso fictício de regressão; suposição a valid
     "top1": "acidose",
     "top3_contem": [
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "brucelose",
+      "bvd"
     ],
     "percentuais": {
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
       "tpb": 0,
-      "hipocalcemia": 0
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [
@@ -2574,23 +3096,37 @@ Bandeira de febre alta isolada Caso fictício de regressão; suposição a valid
     }
   },
   "respondidas": [
+    "aborto_recente",
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "claudicacao",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "edema_barbela",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
     "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
     "leite_alterado",
     "lesao_erosiva_talao_morango",
+    "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
     "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
     "queda_producao",
-    "retencao_placenta",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
     "teste_caneca_grumos",
     "ubere_inflamado",
@@ -2612,7 +3148,7 @@ Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; supos
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 5,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2662,17 +3198,29 @@ Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; supos
     "top3_contem": [
       "mastite",
       "metrite",
-      "acidose"
+      "brucelose"
     ],
     "percentuais": {
       "mastite": 80,
       "metrite": 74,
+      "brucelose": 5,
       "acidose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
-      "tpb": 0
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [],
@@ -2692,16 +3240,20 @@ Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; supos
     "dias_em_lactacao",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
     "flanco_esquerdo_afundado",
     "halito_adocicado_acetona",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "membranas_expostas_vulva",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
-    "urina_escura"
+    "urina_escura",
+    "vacinada_brucelose"
   ]
 }
 ```
@@ -2719,7 +3271,7 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 40,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2734,10 +3286,10 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
     "flanco_esquerdo_afundado": true
   },
   "esperado": {
-    "top1": "deslocamento_abomaso",
+    "top1": "deslocamento_abomaso_esquerda",
     "urgencia": "chamar_agora",
     "faixas": {
-      "deslocamento_abomaso": [
+      "deslocamento_abomaso_esquerda": [
         85,
         100
       ]
@@ -2764,21 +3316,33 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
   "falhas": [],
   "obtido": {
     "urgencia": "chamar_agora",
-    "top1": "deslocamento_abomaso",
+    "top1": "deslocamento_abomaso_esquerda",
     "top3_contem": [
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "cetose",
       "acidose"
     ],
     "percentuais": {
-      "deslocamento_abomaso": 93,
+      "deslocamento_abomaso_esquerda": 93,
       "cetose": 43,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "reticulopericardite_traumatica": 0,
+      "retencao_placenta": 0,
+      "deslocamento_abomaso_direita": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -2788,30 +3352,47 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
     }
   },
   "respondidas": [
+    "agitacao",
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "ausculta_crepitacoes",
     "bhb_sanguineo",
     "calcio_serico",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
+    "espuma_sonda",
     "extremidades",
     "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
     "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
     "halito_adocicado_acetona",
+    "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
     "lesao_erosiva_talao_morango",
+    "magnesio_serico",
     "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
     "ph_ruminal",
     "ping_metalico_flanco_esquerdo",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
+    "secrecao_nasal",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
     "teste_caneca_grumos",
+    "tosse",
+    "tuberculina_reagente",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -2831,7 +3412,7 @@ Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de r
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 10,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2877,17 +3458,29 @@ Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de r
     "top3_contem": [
       "cetose",
       "acidose",
-      "deslocamento_abomaso"
+      "deslocamento_abomaso_esquerda"
     ],
     "percentuais": {
       "cetose": 43,
       "acidose": 38,
-      "deslocamento_abomaso": 33,
+      "deslocamento_abomaso_esquerda": 33,
       "dermatite_digital": 30,
+      "brucelose": 0,
+      "bvd": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "limite",
     "bandeiras": [],
@@ -2903,17 +3496,17 @@ Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de r
     "apatia",
     "apetite",
     "claudicacao",
-    "corrimento_fetido",
     "corrimento_vaginal",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
     "extremidades",
+    "historico_retencao_placenta",
     "leite_alterado",
-    "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
-    "teste_caneca_grumos",
+    "secrecao_nasal",
+    "tosse",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -2933,7 +3526,7 @@ Triagem sem alterações Caso fictício de regressão; suposição a validar.
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 120,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -2966,7 +3559,7 @@ Triagem sem alterações Caso fictício de regressão; suposição a validar.
         0,
         20
       ],
-      "deslocamento_abomaso": [
+      "deslocamento_abomaso_esquerda": [
         0,
         20
       ],
@@ -2995,18 +3588,30 @@ Triagem sem alterações Caso fictício de regressão; suposição a validar.
     "top1": "acidose",
     "top3_contem": [
       "acidose",
-      "cetose",
-      "dermatite_digital"
+      "brucelose",
+      "bvd"
     ],
     "percentuais": {
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
     "bandeiras": [],
@@ -3024,10 +3629,10 @@ Triagem sem alterações Caso fictício de regressão; suposição a validar.
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
-    "retencao_placenta",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -3089,18 +3694,30 @@ Demonstração sintética de alerta por incapacidade de se levantar. Suposição
     "top1": "hipocalcemia",
     "top3_contem": [
       "hipocalcemia",
-      "acidose",
-      "cetose"
+      "hipomagnesemia",
+      "acidose"
     ],
     "percentuais": {
       "hipocalcemia": 64,
+      "hipomagnesemia": 5,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0
     },
     "motivo_parada": "limite",
     "bandeiras": [
@@ -3185,17 +3802,29 @@ Demonstração sintética de leite alterado e úbere inflamado durante a triagem
     "top3_contem": [
       "mastite",
       "acidose",
-      "cetose"
+      "brucelose"
     ],
     "percentuais": {
       "mastite": 80,
       "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
       "cetose": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "limite",
     "bandeiras": [],
@@ -3236,7 +3865,7 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 35,
-    "retencao_placenta": false
+    "historico_retencao_placenta": false
   },
   "triagem": {
     "estado_termico": "normal",
@@ -3254,7 +3883,7 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
     "urgencia": "observar",
     "top1": "cetose",
     "faixas": {
-      "deslocamento_abomaso": [
+      "deslocamento_abomaso_esquerda": [
         25,
         35
       ],
@@ -3279,20 +3908,858 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
     "top1": "cetose",
     "top3_contem": [
       "cetose",
-      "deslocamento_abomaso",
+      "deslocamento_abomaso_esquerda",
       "acidose"
     ],
     "percentuais": {
       "cetose": 43,
-      "deslocamento_abomaso": 33,
+      "deslocamento_abomaso_esquerda": 33,
       "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
       "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
       "mastite": 0,
       "metrite": 0,
-      "tpb": 0
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
     },
     "motivo_parada": "sem_potencial",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
+    "halito_adocicado_acetona",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "recusa_concentrado_come_volumoso",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-DAD-01
+
+Deslocamento à direita: barriga estufada à direita, pouco esterco e desidratação Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-DAD-01",
+  "descricao": "Deslocamento à direita: barriga estufada à direita, pouco esterco e desidratação Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 20,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "distensao_flanco_direito": true,
+    "fezes_escassas": true,
+    "desidratacao": true
+  },
+  "esperado": {
+    "top1": "deslocamento_abomaso_direita",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "deslocamento_abomaso_direita": [
+        70,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-DAD-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "deslocamento_abomaso_direita",
+    "top3_contem": [
+      "deslocamento_abomaso_direita",
+      "cetose",
+      "acidose"
+    ],
+    "percentuais": {
+      "deslocamento_abomaso_direita": 75,
+      "cetose": 43,
+      "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0,
+      "deslocamento_abomaso_esquerda": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "deslocamento_abomaso_direita",
+      "cetose"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_fetido",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "halito_adocicado_acetona",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "recusa_concentrado_come_volumoso",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-DAD-02
+
+Deslocamento à direita: ping no flanco direito Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-DAD-02",
+  "descricao": "Deslocamento à direita: ping no flanco direito Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 15,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.5,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "ping_flanco_direito": true,
+    "ping_metalico_flanco_esquerdo": false
+  },
+  "esperado": {
+    "top1": "deslocamento_abomaso_direita",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "deslocamento_abomaso_direita": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-DAD-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "deslocamento_abomaso_direita",
+    "top3_contem": [
+      "deslocamento_abomaso_direita",
+      "cetose",
+      "acidose"
+    ],
+    "percentuais": {
+      "deslocamento_abomaso_direita": 90,
+      "cetose": 43,
+      "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0,
+      "deslocamento_abomaso_esquerda": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "bhb_sanguineo",
+    "calcio_serico",
+    "claudicacao",
+    "corrimento_fetido",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
+    "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
+    "halito_adocicado_acetona",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "lesao_erosiva_talao_morango",
+    "magnesio_serico",
+    "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
+    "queda_producao",
+    "secrecao_nasal",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
+    "temperatura_retal",
+    "teste_caneca_grumos",
+    "tosse",
+    "tuberculina_reagente",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-TES-01
+
+Timpanismo espumoso: barriga estufada após leguminosa, outras vacas estufadas Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-TES-01",
+  "descricao": "Timpanismo espumoso: barriga estufada após leguminosa, outras vacas estufadas Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 120,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "distensao_flanco_esquerdo": true,
+    "pasto_leguminosa_recente": true,
+    "outros_animais_estufados": true
+  },
+  "esperado": {
+    "top1": "timpanismo_espumoso",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "timpanismo_espumoso": [
+        70,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-TES-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "timpanismo_espumoso",
+    "top3_contem": [
+      "timpanismo_espumoso",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "timpanismo_espumoso": 70,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "timpanismo_gasoso": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "timpanismo_espumoso"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "desidratacao",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "emagrecimento_progressivo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "focinho_avermelhado",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "pasto_leguminosa_recente",
+    "queda_producao",
+    "teste_caneca_grumos",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-TES-02
+
+Timpanismo espumoso: espuma pela sonda Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-TES-02",
+  "descricao": "Timpanismo espumoso: espuma pela sonda Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 110,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.6,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "espuma_sonda": true,
+    "distensao_flanco_esquerdo": true
+  },
+  "esperado": {
+    "top1": "timpanismo_espumoso",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "timpanismo_espumoso": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-TES-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "timpanismo_espumoso",
+    "top3_contem": [
+      "timpanismo_espumoso",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "timpanismo_espumoso": 90,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "timpanismo_gasoso": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "espuma_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-TGA-01
+
+Timpanismo gasoso: barriga estufada com engasgo, sem leguminosa Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-TGA-01",
+  "descricao": "Timpanismo gasoso: barriga estufada com engasgo, sem leguminosa Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 130,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "distensao_flanco_esquerdo": true,
+    "engasgo": true,
+    "pasto_leguminosa_recente": false
+  },
+  "esperado": {
+    "top1": "timpanismo_gasoso",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "timpanismo_gasoso": [
+        55,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-TGA-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "timpanismo_gasoso",
+    "top3_contem": [
+      "timpanismo_gasoso",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "timpanismo_gasoso": 60,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "timpanismo_espumoso": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "timpanismo_gasoso"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "emagrecimento_progressivo",
+    "engasgo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "focinho_avermelhado",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "pasto_leguminosa_recente",
+    "queda_producao",
+    "teste_caneca_grumos",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-TGA-02
+
+Timpanismo gasoso: gás livre pela sonda Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-TGA-02",
+  "descricao": "Timpanismo gasoso: gás livre pela sonda Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 140,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.7,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "gas_livre_sonda": true,
+    "espuma_sonda": false,
+    "distensao_flanco_esquerdo": true
+  },
+  "esperado": {
+    "top1": "timpanismo_gasoso",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "timpanismo_gasoso": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-TGA-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "timpanismo_gasoso",
+    "top3_contem": [
+      "timpanismo_gasoso",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "timpanismo_gasoso": 90,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "timpanismo_espumoso": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-RPL-01
+
+Retenção de placenta: restos de placenta na vulva no segundo dia Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-RPL-01",
+  "descricao": "Retenção de placenta: restos de placenta na vulva no segundo dia Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 2,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": [
+      "corrimento_vaginal"
+    ]
+  },
+  "respostas": {
+    "membranas_expostas_vulva": true,
+    "placenta_nao_expulsa_24h": true
+  },
+  "esperado": {
+    "top1": "retencao_placenta",
+    "urgencia": "observar",
+    "faixas": {
+      "retencao_placenta": [
+        80,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-RPL-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "retencao_placenta",
+    "top3_contem": [
+      "retencao_placenta",
+      "brucelose",
+      "acidose"
+    ],
+    "percentuais": {
+      "retencao_placenta": 81,
+      "brucelose": 5,
+      "acidose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "metrite": 0
+    },
+    "motivo_parada": "confirmacao",
     "bandeiras": [],
     "inconclusivas": [],
     "alerta": {
@@ -3308,13 +4775,1762 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "membranas_expostas_vulva",
+    "queda_producao",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-RPL-02
+
+Retenção de placenta: membranas retidas ao exame Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-RPL-02",
+  "descricao": "Retenção de placenta: membranas retidas ao exame Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 3,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.8,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "palpacao_membranas_retidas": true
+  },
+  "esperado": {
+    "top1": "retencao_placenta",
+    "urgencia": "observar",
+    "faixas": {
+      "retencao_placenta": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-RPL-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "retencao_placenta",
+    "top3_contem": [
+      "retencao_placenta",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "retencao_placenta": 90,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "metrite": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "calcio_serico",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "palpacao_membranas_retidas",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "sorologia_brucelose_reagente",
+    "temperatura_retal",
+    "tuberculina_reagente",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-PNE-01
+
+Pneumonia: tosse, respiração com esforço e catarro Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-PNE-01",
+  "descricao": "Pneumonia: tosse, respiração com esforço e catarro Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 150,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "quente",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "tosse": true,
+    "respiracao_ofegante": true,
+    "secrecao_nasal": true,
+    "distensao_flanco_esquerdo": false
+  },
+  "esperado": {
+    "top1": "pneumonia",
+    "urgencia": "observar",
+    "faixas": {
+      "pneumonia": [
+        55,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-PNE-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "pneumonia",
+    "top3_contem": [
+      "pneumonia",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "pneumonia": 62,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "reticulopericardite_traumatica": 5,
+      "ibr": 2,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "pneumonia"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "aborto_recente",
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "emagrecimento_progressivo",
+    "extremidades",
     "fezes_aquosas_espuma_graos",
+    "focinho_avermelhado",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-PNE-02
+
+Pneumonia: febre e crepitações à auscultação Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-PNE-02",
+  "descricao": "Pneumonia: febre e crepitações à auscultação Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 160,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 40.0,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "ausculta_crepitacoes": true,
+    "tosse": true
+  },
+  "esperado": {
+    "top1": "pneumonia",
+    "urgencia": "observar",
+    "faixas": {
+      "pneumonia": [
+        80,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-PNE-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "pneumonia",
+    "top3_contem": [
+      "pneumonia",
+      "reticulopericardite_traumatica",
+      "acidose"
+    ],
+    "percentuais": {
+      "pneumonia": 80,
+      "reticulopericardite_traumatica": 10,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "ibr": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-RPT-01
+
+Reticulopericardite: costas arqueadas e gemido Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-RPT-01",
+  "descricao": "Reticulopericardite: costas arqueadas e gemido Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 100,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "costas_arqueadas": true,
+    "gemido": true
+  },
+  "esperado": {
+    "top1": "reticulopericardite_traumatica",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "reticulopericardite_traumatica": [
+        65,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-RPT-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "reticulopericardite_traumatica",
+    "top3_contem": [
+      "reticulopericardite_traumatica",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "reticulopericardite_traumatica": 70,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "reticulopericardite_traumatica"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "gemido",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "respiracao_ofegante",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-RPT-02
+
+Reticulopericardite: prova de dor reticular positiva Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-RPT-02",
+  "descricao": "Reticulopericardite: prova de dor reticular positiva Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 100,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 39.6,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "prova_dor_reticular": true,
+    "ping_metalico_flanco_esquerdo": false
+  },
+  "esperado": {
+    "top1": "reticulopericardite_traumatica",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "reticulopericardite_traumatica": [
+        80,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-RPT-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "reticulopericardite_traumatica",
+    "top3_contem": [
+      "reticulopericardite_traumatica",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "reticulopericardite_traumatica": 86,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "ibr": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
+    "queda_producao",
+    "secrecao_nasal",
+    "sorologia_brucelose_reagente",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-HMG-01
+
+Hipomagnesemia: tremores e agitação após pasto novo Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-HMG-01",
+  "descricao": "Hipomagnesemia: tremores e agitação após pasto novo Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 60,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "tremores": true,
+    "agitacao": true,
+    "pasto_novo_adubado": true
+  },
+  "esperado": {
+    "top1": "hipomagnesemia",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "hipomagnesemia": [
+        65,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-HMG-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "hipomagnesemia",
+    "top3_contem": [
+      "hipomagnesemia",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "hipomagnesemia": 72,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "hipomagnesemia"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "desidratacao",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "mucosas_palidas_ou_ictericas",
+    "outros_animais_estufados",
+    "pasto_novo_adubado",
+    "queda_producao",
+    "respiracao_ofegante",
+    "teste_caneca_grumos",
+    "tosse",
+    "tremores",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-HMG-02
+
+Hipomagnesemia: magnésio sérico baixo Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-HMG-02",
+  "descricao": "Hipomagnesemia: magnésio sérico baixo Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 60,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.5,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "magnesio_serico": 0.8,
+    "tremores": true
+  },
+  "esperado": {
+    "top1": "hipomagnesemia",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "hipomagnesemia": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-HMG-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "hipomagnesemia",
+    "top3_contem": [
+      "hipomagnesemia",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "hipomagnesemia": 90,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-BRU-01
+
+Brucelose: aborto, retenção de placenta e higroma Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-BRU-01",
+  "descricao": "Brucelose: aborto, retenção de placenta e higroma Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 40,
+    "historico_retencao_placenta": true
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": [
+      "corrimento_vaginal"
+    ]
+  },
+  "respostas": {
+    "aborto_recente": true,
+    "higroma": true,
+    "vacinada_brucelose": false
+  },
+  "esperado": {
+    "top1": "brucelose",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "brucelose": [
+        60,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-BRU-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "brucelose",
+    "top3_contem": [
+      "brucelose",
+      "acidose",
+      "bvd"
+    ],
+    "percentuais": {
+      "brucelose": 66,
+      "acidose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "sem_perguntas",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "aborto_recente",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "fezes_escassas",
+    "flanco_esquerdo_afundado",
     "halito_adocicado_acetona",
+    "higroma",
+    "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
-    "retencao_placenta",
+    "teste_caneca_grumos",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-BRU-02
+
+Brucelose: sorologia reagente Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-BRU-02",
+  "descricao": "Brucelose: sorologia reagente Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 80,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.6,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "sorologia_brucelose_reagente": true
+  },
+  "esperado": {
+    "top1": "brucelose",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "brucelose": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-BRU-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "brucelose",
+    "top3_contem": [
+      "brucelose",
+      "acidose",
+      "bvd"
+    ],
+    "percentuais": {
+      "brucelose": 90,
+      "acidose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "calcio_serico",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "sorologia_brucelose_reagente",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-LEP-01
+
+Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-LEP-01",
+  "descricao": "Leptospirose: leite com sangue e aborto Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 90,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "quente",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "leite_com_sangue": true,
+    "aborto_recente": true
+  },
+  "esperado": {
+    "top1": "leptospirose",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "leptospirose": [
+        60,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-LEP-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "leptospirose",
+    "top3_contem": [
+      "leptospirose",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "leptospirose": 67,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "reticulopericardite_traumatica": 5,
+      "ibr": 2,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "leptospirose"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "aborto_recente",
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "falhas_reprodutivas_lote",
+    "fezes_aquosas_espuma_graos",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-LEP-02
+
+Leptospirose: sorologia reagente Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-LEP-02",
+  "descricao": "Leptospirose: sorologia reagente Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 90,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 39.8,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "sorologia_leptospirose_reagente": true,
+    "esfregaco_hemoparasitas": false
+  },
+  "esperado": {
+    "top1": "leptospirose",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "leptospirose": [
+        80,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-LEP-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "leptospirose",
+    "top3_contem": [
+      "leptospirose",
+      "reticulopericardite_traumatica",
+      "acidose"
+    ],
+    "percentuais": {
+      "leptospirose": 85,
+      "reticulopericardite_traumatica": 10,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "ibr": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
+    "queda_producao",
+    "secrecao_nasal",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-IBR-01
+
+IBR: focinho vermelho, catarro e olhos lacrimejando Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-IBR-01",
+  "descricao": "IBR: focinho vermelho, catarro e olhos lacrimejando Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 100,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "quente",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "focinho_avermelhado": true,
+    "secrecao_nasal": true,
+    "olhos_lacrimejando": true
+  },
+  "esperado": {
+    "top1": "ibr",
+    "urgencia": "observar",
+    "faixas": {
+      "ibr": [
+        60,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-IBR-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "ibr",
+    "top3_contem": [
+      "ibr",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "ibr": 68,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "sem_perguntas",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "aborto_recente",
+    "apatia",
+    "apetite",
+    "carrapatos_historico_recente",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "emagrecimento_progressivo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "focinho_avermelhado",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "olhos_lacrimejando",
+    "queda_producao",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-IBR-02
+
+IBR: BoHV-1 detectado Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-IBR-02",
+  "descricao": "IBR: BoHV-1 detectado Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 100,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 40.0,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "pcr_bohv1": true,
+    "ausculta_crepitacoes": false
+  },
+  "esperado": {
+    "top1": "ibr",
+    "urgencia": "observar",
+    "faixas": {
+      "ibr": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-IBR-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "ibr",
+    "top3_contem": [
+      "ibr",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "ibr": 90,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipomagnesemia": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "pcr_bohv1",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "sorologia_brucelose_reagente",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-N-BVD-01
+
+BVD: diarreia e feridas na boca Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-BVD-01",
+  "descricao": "BVD: diarreia e feridas na boca Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 100,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "quente",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [],
+    "excrecoes": [
+      "diarreia"
+    ]
+  },
+  "respostas": {
+    "feridas_boca": true
+  },
+  "esperado": {
+    "top1": "bvd",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "bvd": [
+        55,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-BVD-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "bvd",
+    "top3_contem": [
+      "bvd",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "bvd": 62,
+      "acidose": 38,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "bvd",
+      "acidose"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "aborto_recente",
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "feridas_boca",
+    "fezes_aquosas_espuma_graos",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "mucosas_palidas_ou_ictericas",
+    "mudanca_abrupta_concentrado",
+    "olhos_lacrimejando",
+    "queda_producao",
+    "respiracao_ofegante",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-BVD-02
+
+BVD: antígeno detectado Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-BVD-02",
+  "descricao": "BVD: antígeno detectado Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 100,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 39.7,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [],
+    "excrecoes": [
+      "diarreia"
+    ]
+  },
+  "respostas": {
+    "antigeno_bvdv": true
+  },
+  "esperado": {
+    "top1": "bvd",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "bvd": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-BVD-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "bvd",
+    "top3_contem": [
+      "bvd",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "bvd": 91,
+      "acidose": 38,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "hipocalcemia": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "bhb_sanguineo",
+    "claudicacao",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "edema_barbela",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "extremidades",
+    "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "lesao_erosiva_talao_morango",
+    "magnesio_serico",
+    "mucosas_palidas_ou_ictericas",
+    "mudanca_abrupta_concentrado",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
+    "queda_producao",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
+    "temperatura_retal",
     "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
@@ -3322,4 +6538,576 @@ Regressão da limitação R15: sem observação prévia do flanco, o diálogo n�
 }
 ```
 
-Este documento executa 34 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 12/25.
+## C-N-TUB-01
+
+Tuberculose: emagrecimento, tosse e ínguas Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-TUB-01",
+  "descricao": "Tuberculose: emagrecimento, tosse e ínguas Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 200,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "emagrecimento_progressivo": true,
+    "tosse": true,
+    "linfonodos_aumentados": true
+  },
+  "esperado": {
+    "top1": "tuberculose",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "tuberculose": [
+        65,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-TUB-01",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "tuberculose",
+    "top3_contem": [
+      "tuberculose",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "tuberculose": 72,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "sem_perguntas",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "emagrecimento_progressivo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "focinho_avermelhado",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-TUB-02
+
+Tuberculose: tuberculinização reagente Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-TUB-02",
+  "descricao": "Tuberculose: tuberculinização reagente Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 200,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.6,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "tuberculina_reagente": true
+  },
+  "esperado": {
+    "top1": "tuberculose",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "tuberculose": [
+        85,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-TUB-02",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "tuberculose",
+    "top3_contem": [
+      "tuberculose",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "tuberculose": 90,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "calcio_serico",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "gas_livre_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "magnesio_serico",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "sorologia_brucelose_reagente",
+    "temperatura_retal",
+    "tuberculina_reagente",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-EXC-DAB
+
+Par excludente: deslocamento à direita vence e rebaixa o lado esquerdo Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-EXC-DAB",
+  "descricao": "Par excludente: deslocamento à direita vence e rebaixa o lado esquerdo Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 20,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "distensao_flanco_direito": true,
+    "fezes_escassas": true,
+    "desidratacao": true,
+    "flanco_esquerdo_afundado": false
+  },
+  "esperado": {
+    "top1": "deslocamento_abomaso_direita",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "deslocamento_abomaso_direita": [
+        70,
+        100
+      ],
+      "deslocamento_abomaso_esquerda": [
+        0,
+        0
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-EXC-DAB",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "deslocamento_abomaso_direita",
+    "top3_contem": [
+      "deslocamento_abomaso_direita",
+      "cetose",
+      "acidose"
+    ],
+    "percentuais": {
+      "deslocamento_abomaso_direita": 75,
+      "cetose": 43,
+      "acidose": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "retencao_placenta": 0,
+      "deslocamento_abomaso_esquerda": 0
+    },
+    "motivo_parada": "limite",
+    "bandeiras": [],
+    "inconclusivas": [
+      "deslocamento_abomaso_direita",
+      "cetose"
+    ],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "agitacao",
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_fetido",
+    "corrimento_vaginal",
+    "costas_arqueadas",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_direito",
+    "distensao_flanco_esquerdo",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "halito_adocicado_acetona",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "leite_com_sangue",
+    "linfonodos_aumentados",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "recusa_concentrado_come_volumoso",
+    "secrecao_nasal",
+    "teste_caneca_grumos",
+    "tosse",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-EXC-TIM
+
+Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-EXC-TIM",
+  "descricao": "Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 110,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.6,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "reduzido",
+    "producao_leite": [
+      "queda_producao"
+    ],
+    "excrecoes": []
+  },
+  "respostas": {
+    "espuma_sonda": true,
+    "gas_livre_sonda": false,
+    "distensao_flanco_esquerdo": true,
+    "pasto_leguminosa_recente": false
+  },
+  "esperado": {
+    "top1": "timpanismo_espumoso",
+    "urgencia": "chamar_agora",
+    "faixas": {
+      "timpanismo_espumoso": [
+        85,
+        100
+      ],
+      "timpanismo_gasoso": [
+        0,
+        0
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-EXC-TIM",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "chamar_agora",
+    "top1": "timpanismo_espumoso",
+    "top3_contem": [
+      "timpanismo_espumoso",
+      "acidose",
+      "cetose"
+    ],
+    "percentuais": {
+      "timpanismo_espumoso": 90,
+      "acidose": 5,
+      "cetose": 5,
+      "deslocamento_abomaso_esquerda": 5,
+      "brucelose": 0,
+      "bvd": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "reticulopericardite_traumatica": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "pneumonia": 0,
+      "retencao_placenta": 0,
+      "timpanismo_gasoso": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "distensao_flanco_esquerdo",
+    "espuma_sonda",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "ping_metalico_flanco_esquerdo",
+    "queda_producao",
+    "temperatura_retal",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+## C-EXC-RPL
+
+Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpério Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-EXC-RPL",
+  "descricao": "Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpério Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 2,
+    "historico_retencao_placenta": true
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": [
+      "corrimento_vaginal"
+    ]
+  },
+  "respostas": {
+    "membranas_expostas_vulva": true,
+    "corrimento_fetido": false
+  },
+  "esperado": {
+    "top1": "retencao_placenta",
+    "urgencia": "observar",
+    "faixas": {
+      "retencao_placenta": [
+        85,
+        100
+      ],
+      "metrite": [
+        0,
+        0
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-EXC-RPL",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "retencao_placenta",
+    "top3_contem": [
+      "retencao_placenta",
+      "brucelose",
+      "acidose"
+    ],
+    "percentuais": {
+      "retencao_placenta": 88,
+      "brucelose": 5,
+      "acidose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "mastite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "metrite": 0
+    },
+    "motivo_parada": "confirmacao",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "extremidades",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "membranas_expostas_vulva",
+    "queda_producao",
+    "ubere_inflamado",
+    "urina_escura"
+  ]
+}
+```
+
+Este documento executa 61 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.

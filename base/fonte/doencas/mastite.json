@@ -88,7 +88,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "media",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Mastite em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/mastite-em-animais-de-grande-porte/mastite-em-bovinos"
+      }
     }
   ],
   "regras": [

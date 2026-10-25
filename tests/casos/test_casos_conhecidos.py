@@ -22,7 +22,7 @@ def casos():
     return json.loads(ARQUIVO.read_text(encoding='utf-8'))
 
 
-def test_conjunto_conhecido_existe_e_tem_cobertura_das_oito_doencas_nos_dois_modos():
+def test_conjunto_conhecido_existe_e_cobre_todas_as_doencas_da_ativa_nos_dois_modos():
     assert ARQUIVO.is_file(), 'Falta publicar a Camada 3 em base/casos/casos.json'
     conjunto = casos()
     assert len({c['id'] for c in conjunto}) == len(conjunto) >= 31

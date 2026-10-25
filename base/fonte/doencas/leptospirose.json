@@ -1,0 +1,194 @@
+{
+  "doenca": "leptospirose",
+  "simbolos": [
+    {
+      "id": "leite_com_sangue",
+      "tipo": "pergunta",
+      "nome": "Leite rosado ou com sangue",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O leite saiu rosado ou com sangue, com o úbere mole e sem inflamação?",
+        "veterinario": "Leite sanguinolento com úbere flácido (agalaxia)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a leite rosado ou com sangue.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a leite rosado ou com sangue."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "sorologia_leptospirose_reagente",
+      "tipo": "pergunta",
+      "nome": "Sorologia para leptospirose reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Soroaglutinação microscópica para leptospirose com título significativo?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a sorologia para leptospirose reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "leptospirose",
+      "tipo": "doenca",
+      "nome": "Leptospirose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Leptospirose em ruminantes (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-LEP-01",
+      "se": [
+        {
+          "simbolo": "aborto_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aborto com febre é compatível com leptospirose aguda."
+    },
+    {
+      "id": "R-LEP-02",
+      "se": [
+        {
+          "simbolo": "leite_com_sangue",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "queda_producao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Leite sanguinolento com queda brusca de produção sugere leptospirose."
+    },
+    {
+      "id": "R-LEP-03",
+      "se": [
+        {
+          "simbolo": "sorologia_leptospirose_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Título significativo na soroaglutinação apoia leptospirose."
+    },
+    {
+      "id": "R-LEP-04",
+      "se": [
+        {
+          "simbolo": "urina_escura",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Urina escura com febre, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-LEP-05",
+      "se": [
+        {
+          "simbolo": "esfregaco_hemoparasitas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "leptospirose",
+        "cf": -0.5
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: hemoparasitas no esfregaço explicam a hemólise por tristeza parasitária."
+    },
+    {
+      "id": "R-URG-17",
+      "se": [
+        {
+          "simbolo": "leptospirose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de leptospirose é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

@@ -16,8 +16,8 @@
       "bloco_diferencial": 0.2
     },
     "limite_dinamico": {
-      "produtor": 12,
-      "veterinario": 25
+      "produtor": 15,
+      "veterinario": 30
     },
     "triagem": [
       {
@@ -107,6 +107,32 @@
         },
         "opcoes": {}
       }
+    ],
+    "exclusoes": [
+      {
+        "doencas": [
+          "deslocamento_abomaso_esquerda",
+          "deslocamento_abomaso_direita"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "O abomaso desloca para um lado só."
+      },
+      {
+        "doencas": [
+          "timpanismo_espumoso",
+          "timpanismo_gasoso"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "O gás fica preso em espuma ou livre, não os dois ao mesmo tempo."
+      },
+      {
+        "doencas": [
+          "retencao_placenta",
+          "metrite"
+        ],
+        "fonte": "Embrapa Gado de Leite; suposição do projeto a validar",
+        "nota": "No mesmo quadro puerperal, a retenção precede a metrite; o par deixa a hipótese mais forte se destacar."
+      }
     ]
   },
   "simbolos": [
@@ -150,6 +176,57 @@
       "combinacao": "mycin"
     },
     {
+      "id": "corrimento_vaginal",
+      "tipo": "pergunta",
+      "nome": "Corrimento vaginal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há saída de secreção anormal pela vulva?",
+        "veterinario": "Presença de corrimento vaginal anormal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento vaginal.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento vaginal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "decubito",
+      "tipo": "pergunta",
+      "nome": "Decúbito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está caída e não consegue se levantar?",
+        "veterinario": "Animal em decúbito, incapaz de se levantar?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a decúbito.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a decúbito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "diarreia",
+      "tipo": "pergunta",
+      "nome": "Diarreia",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com diarreia?",
+        "veterinario": "Presença de diarreia?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a diarreia.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a diarreia."
+      },
+      "combinacao": "mycin"
+    },
+    {
       "id": "dias_em_lactacao",
       "tipo": "ficha",
       "nome": "Dias em lactação",
@@ -169,6 +246,21 @@
         "veterinario": "Esclarecer as hipóteses relacionadas a dias em lactação."
       },
       "campo_ficha": "dias_em_lactacao",
+      "combinacao": "mycin"
+    },
+    {
+      "id": "esfregaco_hemoparasitas",
+      "tipo": "pergunta",
+      "nome": "Hemoparasitas no esfregaço",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a hemoparasitas no esfregaço."
+      },
       "combinacao": "mycin"
     },
     {
@@ -194,6 +286,38 @@
       "combinacao": "mycin"
     },
     {
+      "id": "fezes_aquosas_espuma_graos",
+      "tipo": "pergunta",
+      "nome": "Fezes com espuma e grãos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "As fezes estão muito líquidas, com espuma ou grãos inteiros?",
+        "veterinario": "Fezes aquosas, com espuma ou grãos não digeridos?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ping_metalico_flanco_esquerdo",
+      "tipo": "pergunta",
+      "nome": "Ping no flanco esquerdo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Ping metálico no flanco esquerdo à percussão e auscultação simultâneas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco esquerdo."
+      },
+      "combinacao": "mycin"
+    },
+    {
       "id": "queda_producao",
       "tipo": "pergunta",
       "nome": "Queda de produção de leite",
@@ -208,6 +332,24 @@
         "produtor": "Esclarecer as hipóteses relacionadas a queda de produção de leite.",
         "veterinario": "Esclarecer as hipóteses relacionadas a queda de produção de leite."
       },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "historico_retencao_placenta",
+      "tipo": "ficha",
+      "nome": "Histórico de retenção de placenta",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Houve retenção de placenta neste parto?",
+        "veterinario": "Retenção de membranas fetais após o último parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a histórico de retenção de placenta."
+      },
+      "campo_ficha": "historico_retencao_placenta",
       "combinacao": "mycin"
     },
     {
@@ -230,6 +372,23 @@
       "combinacao": "mycin"
     },
     {
+      "id": "urina_escura",
+      "tipo": "pergunta",
+      "nome": "Urina escura",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A urina está avermelhada ou escura como café?",
+        "veterinario": "Urina avermelhada ou castanha observada?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a urina escura.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a urina escura."
+      },
+      "combinacao": "mycin"
+    },
+    {
       "id": "febre",
       "tipo": "derivado",
       "nome": "Febre",
@@ -244,6 +403,17 @@
       "id": "inicio_lactacao",
       "tipo": "derivado",
       "nome": "Início da lactação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "combinacao": "mycin"
+    },
+    {
+      "id": "puerperio",
+      "tipo": "derivado",
+      "nome": "Puerpério",
       "dominio": {
         "tipo": "booleano"
       },
@@ -283,9 +453,174 @@
       "pergunta": {},
       "por_que": {},
       "combinacao": "mycin"
+    },
+    {
+      "id": "tosse",
+      "tipo": "pergunta",
+      "nome": "Tosse",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está tossindo?",
+        "veterinario": "Tosse espontânea ou provocada presente?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a tosse.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a tosse."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "secrecao_nasal",
+      "tipo": "pergunta",
+      "nome": "Secreção nasal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Está escorrendo catarro ou secreção pelo nariz?",
+        "veterinario": "Secreção nasal mucosa ou mucopurulenta?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a secreção nasal.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a secreção nasal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "aborto_recente",
+      "tipo": "pergunta",
+      "nome": "Aborto recente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca abortou nesta gestação ou nos últimos meses?",
+        "veterinario": "Aborto recente, sobretudo no terço final da gestação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a aborto recente.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a aborto recente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "distensao_flanco_esquerdo",
+      "tipo": "pergunta",
+      "nome": "Barriga estufada do lado esquerdo",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A barriga está estufada do lado esquerdo, alta como um balão?",
+        "veterinario": "Distensão do flanco esquerdo (fossa paralombar abaulada)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a barriga estufada do lado esquerdo.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a barriga estufada do lado esquerdo."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ping_flanco_direito",
+      "tipo": "pergunta",
+      "nome": "Ping no flanco direito",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Ping metálico no flanco direito à percussão e auscultação simultâneas?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a ping no flanco direito."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fezes_escassas",
+      "tipo": "pergunta",
+      "nome": "Pouco esterco",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está fazendo pouco esterco, menos que o normal?",
+        "veterinario": "Fezes escassas ou ausentes nas últimas horas?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a pouco esterco.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a pouco esterco."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "espuma_sonda",
+      "tipo": "pergunta",
+      "nome": "Conteúdo espumoso na sonda",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Sonda orogástrica traz conteúdo espumoso sem aliviar a distensão?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a conteúdo espumoso na sonda."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "gas_livre_sonda",
+      "tipo": "pergunta",
+      "nome": "Gás livre na sonda",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Sonda orogástrica libera gás livre e alivia a distensão?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a gás livre na sonda."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ausculta_crepitacoes",
+      "tipo": "pergunta",
+      "nome": "Crepitações à auscultação pulmonar",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Crepitações ou sibilos à auscultação pulmonar, sobretudo na região cranioventral?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a crepitações à auscultação pulmonar."
+      },
+      "combinacao": "mycin"
     }
   ],
   "regras": [
+    {
+      "id": "R-DER-02",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": "≤",
+          "valor": 21.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "puerperio",
+        "cf": 0.99
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Janela clínica padronizada de puerpério e involução uterina primária."
+    },
     {
       "id": "R-DER-03",
       "se": [

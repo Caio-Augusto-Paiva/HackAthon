@@ -1,0 +1,223 @@
+{
+  "doenca": "bvd",
+  "simbolos": [
+    {
+      "id": "feridas_boca",
+      "tipo": "pergunta",
+      "nome": "Feridas na boca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Há feridas na boca, na gengiva ou na língua, com baba?",
+        "veterinario": "Erosões ou úlceras na mucosa oral?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a feridas na boca.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a feridas na boca."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "falhas_reprodutivas_lote",
+      "tipo": "pergunta",
+      "nome": "Falhas reprodutivas no lote",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "Várias vacas do lote estão repetindo cio ou abortando?",
+        "veterinario": "Aumento de repetição de cio, abortos ou bezerros fracos no rebanho?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a falhas reprodutivas no lote.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a falhas reprodutivas no lote."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "antigeno_bvdv",
+      "tipo": "pergunta",
+      "nome": "BVDV detectado",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "ELISA de antígeno ou PCR para BVDV positivo?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a bVDV detectado."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "bvd",
+      "tipo": "doenca",
+      "nome": "Diarreia Viral Bovina (BVD)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Diarreia viral bovina e complexo da doença das mucosas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-BVD-01",
+      "se": [
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "feridas_boca",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diarreia com erosões orais é o quadro típico da BVD."
+    },
+    {
+      "id": "R-BVD-02",
+      "se": [
+        {
+          "simbolo": "aborto_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "falhas_reprodutivas_lote",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aborto com falhas reprodutivas no lote é compatível com BVD."
+    },
+    {
+      "id": "R-BVD-03",
+      "se": [
+        {
+          "simbolo": "antigeno_bvdv",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Detecção de BVDV apoia a doença."
+    },
+    {
+      "id": "R-BVD-04",
+      "se": [
+        {
+          "simbolo": "diarreia",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": 0.1
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diarreia com febre, sozinha, é sinal inespecífico."
+    },
+    {
+      "id": "R-BVD-05",
+      "se": [
+        {
+          "simbolo": "fezes_aquosas_espuma_graos",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "bvd",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: fezes aquosas com grãos e espuma apontam para acidose."
+    },
+    {
+      "id": "R-URG-19",
+      "se": [
+        {
+          "simbolo": "bvd",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de bvd é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

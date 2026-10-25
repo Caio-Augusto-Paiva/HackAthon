@@ -21,23 +21,6 @@
       "combinacao": "mycin"
     },
     {
-      "id": "decubito",
-      "tipo": "pergunta",
-      "nome": "Decúbito",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "produtor": "A vaca está caída e não consegue se levantar?",
-        "veterinario": "Animal em decúbito, incapaz de se levantar?"
-      },
-      "por_que": {
-        "produtor": "Esclarecer as hipóteses relacionadas a decúbito.",
-        "veterinario": "Esclarecer as hipóteses relacionadas a decúbito."
-      },
-      "combinacao": "mycin"
-    },
-    {
       "id": "pescoco_em_s",
       "tipo": "pergunta",
       "nome": "Desvio cervical em S",
@@ -86,7 +69,11 @@
       "pergunta": {},
       "por_que": {},
       "gravidade": "alta",
-      "combinacao": "mycin"
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Paresia puerperal em vacas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/paresia-puerperal-em-ruminantes/paresia-puerperal-em-vacas"
+      }
     }
   ],
   "regras": [
@@ -301,7 +288,7 @@
         {
           "simbolo": "dias_em_lactacao",
           "op": ">",
-          "valor": 3,
+          "valor": 3.0,
           "negado": false
         }
       ],
@@ -327,7 +314,7 @@
         {
           "simbolo": "dias_em_lactacao",
           "op": ">",
-          "valor": 3,
+          "valor": 3.0,
           "negado": false
         }
       ],

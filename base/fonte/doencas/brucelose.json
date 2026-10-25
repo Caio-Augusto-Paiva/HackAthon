@@ -1,0 +1,199 @@
+{
+  "doenca": "brucelose",
+  "simbolos": [
+    {
+      "id": "higroma",
+      "tipo": "pergunta",
+      "nome": "Inchaço nos joelhos",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca tem inchaço nos joelhos (higroma)?",
+        "veterinario": "Higroma carpal?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a inchaço nos joelhos.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a inchaço nos joelhos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "vacinada_brucelose",
+      "tipo": "pergunta",
+      "nome": "Vacinada contra brucelose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca foi vacinada contra brucelose quando bezerra (3 a 8 meses)?",
+        "veterinario": "Vacinação B19 ou RB51 comprovada?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a vacinada contra brucelose.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a vacinada contra brucelose."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "sorologia_brucelose_reagente",
+      "tipo": "pergunta",
+      "nome": "Sorologia para brucelose reagente",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Teste sorológico para brucelose (AAT, 2-ME ou FPA) reagente?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a sorologia para brucelose reagente."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "brucelose",
+      "tipo": "doenca",
+      "nome": "Brucelose",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Brucelose em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-BRU-01",
+      "se": [
+        {
+          "simbolo": "aborto_recente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "historico_retencao_placenta",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aborto no terço final seguido de retenção de placenta é o quadro clássico da brucelose."
+    },
+    {
+      "id": "R-BRU-02",
+      "se": [
+        {
+          "simbolo": "higroma",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Higroma carpal é achado sugestivo de brucelose crônica no rebanho."
+    },
+    {
+      "id": "R-BRU-03",
+      "se": [
+        {
+          "simbolo": "sorologia_brucelose_reagente",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.9
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Sorologia reagente apoia brucelose; a confirmação segue o regulamento do PNCEBT."
+    },
+    {
+      "id": "R-BRU-04",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento vaginal, sozinho, é sinal inespecífico."
+    },
+    {
+      "id": "R-BRU-05",
+      "se": [
+        {
+          "simbolo": "vacinada_brucelose",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "brucelose",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/brucelose-em-animais-de-grande-porte/brucelose-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: vacinação na idade correta reduz, mas não exclui, a brucelose."
+    },
+    {
+      "id": "R-URG-16",
+      "se": [
+        {
+          "simbolo": "brucelose",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de brucelose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}
