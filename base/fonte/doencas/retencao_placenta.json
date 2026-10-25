@@ -26,7 +26,7 @@
         "tipo": "booleano"
       },
       "pergunta": {
-        "produtor": "A placenta ainda não tinha saído um dia depois do parto?",
+        "produtor": "A placenta continuou presa por mais de um dia após o parto?",
         "veterinario": "Membranas fetais não expulsas em até 24 horas após o parto?"
       },
       "por_que": {
@@ -164,7 +164,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério."
+      "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério. Peso reduzido para 0,35 (concessão): com 0,5 a retenção chegava ao limiar de exclusão antes de se perguntar o corrimento fétido e a metrite era descartada cedo demais."
     },
     {
       "id": "R-RPL-05",

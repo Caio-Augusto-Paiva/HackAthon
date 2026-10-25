@@ -1047,7 +1047,7 @@
         "veterinario": "ELISA de antígeno ou PCR para BVDV positivo?"
       },
       "por_que": {
-        "veterinario": "Esclarecer as hipóteses relacionadas a bVDV detectado."
+        "veterinario": "Esclarecer as hipóteses relacionadas a BVDV detectado."
       },
       "combinacao": "mycin"
     },
@@ -1426,7 +1426,7 @@
         "veterinario": "PCR ou isolamento de BoHV-1 positivo em secreção nasal ou ocular?"
       },
       "por_que": {
-        "veterinario": "Esclarecer as hipóteses relacionadas a boHV-1 detectado."
+        "veterinario": "Esclarecer as hipóteses relacionadas a BoHV-1 detectado."
       },
       "combinacao": "mycin"
     },
@@ -1454,7 +1454,7 @@
         "tipo": "booleano"
       },
       "pergunta": {
-        "produtor": "O leite saiu rosado ou com sangue, com o úbere mole e sem inflamação?",
+        "produtor": "O leite saiu rosado ou com sangue?",
         "veterinario": "Leite sanguinolento com úbere flácido (agalaxia)?"
       },
       "por_que": {
@@ -1552,7 +1552,7 @@
         "tipo": "booleano"
       },
       "pergunta": {
-        "produtor": "A placenta ainda não tinha saído um dia depois do parto?",
+        "produtor": "A placenta continuou presa por mais de um dia após o parto?",
         "veterinario": "Membranas fetais não expulsas em até 24 horas após o parto?"
       },
       "por_que": {
@@ -3275,7 +3275,7 @@
           "negado": false
         },
         {
-          "simbolo": "febre",
+          "simbolo": "mudanca_abrupta_concentrado",
           "op": "=",
           "valor": true,
           "negado": false
@@ -3289,7 +3289,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Diferencial: fezes aquosas com grãos e espuma apontam para acidose."
+      "nota": "Diferencial: fezes aquosas com grãos e espuma após mudança brusca para concentrado apontam para acidose, não para BVD."
     },
     {
       "id": "R-URG-19",
@@ -3397,7 +3397,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita."
+      "nota": "Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-DAD-03",
@@ -3446,7 +3446,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Desidratação acompanha o quadro obstrutivo do deslocamento à direita."
+      "nota": "Desidratação acompanha o quadro obstrutivo do deslocamento à direita. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-DAD-05",
@@ -3753,7 +3753,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Tremores com agitação são o quadro nervoso típico da tetania hipomagnesêmica."
+      "nota": "Tremores com agitação são o quadro nervoso típico da tetania hipomagnesêmica. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-HMG-02",
@@ -3782,7 +3782,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/dist%C3%BArbios-do-metabolismo-do-magn%C3%A9sio/tetania-hipomagnes%C3%AAmica-em-bovinos-e-ovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Mudança recente para pasto tenro ou adubado é fator de risco de falta de magnésio."
+      "nota": "Mudança recente para pasto tenro ou adubado é fator de risco de falta de magnésio. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-HMG-03",
@@ -4182,7 +4182,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Tosse com queda de apetite sugere doença respiratória com comprometimento geral."
+      "nota": "Tosse com queda de apetite sugere doença respiratória com comprometimento geral. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-PNE-02",
@@ -4211,7 +4211,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Respiração com esforço apoia doença respiratória do trato inferior."
+      "nota": "Respiração com esforço apoia doença respiratória do trato inferior. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-PNE-03",
@@ -4260,7 +4260,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão."
+      "nota": "Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-PNE-05",
@@ -4315,7 +4315,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão."
+      "nota": "Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-URG-13",
@@ -4434,7 +4434,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/reten%C3%A7%C3%A3o-de-membranas-fetais-em-animais-de-grande-porte-placenta-retida/reten%C3%A7%C3%A3o-de-membranas-fetais-em-vacas; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério."
+      "nota": "Retenção registrada na ficha neste parto apoia a hipótese no puerpério. Peso reduzido para 0,35 (concessão): com 0,5 a retenção chegava ao limiar de exclusão antes de se perguntar o corrimento fétido e a metrite era descartada cedo demais."
     },
     {
       "id": "R-RPL-05",
@@ -4536,7 +4536,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho."
+      "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-RPT-03",
@@ -4693,7 +4693,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso."
+      "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-TES-02",
@@ -4722,7 +4722,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum."
+      "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-TES-03",
@@ -4844,7 +4844,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Distensão esquerda com sinais de engasgo sugere gás livre retido por obstrução esofágica."
+      "nota": "Distensão esquerda com sinais de engasgo sugere gás livre retido por obstrução esofágica. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-TGA-03",
@@ -4963,7 +4963,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Emagrecimento com tosse crônica é compatível com tuberculose."
+      "nota": "Emagrecimento progressivo com tosse, em vaca com queda de produção, é compatível com tuberculose."
     },
     {
       "id": "R-TUB-02",

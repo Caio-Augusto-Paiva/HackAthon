@@ -63,7 +63,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Tosse com queda de apetite sugere doença respiratória com comprometimento geral."
+      "nota": "Tosse com queda de apetite sugere doença respiratória com comprometimento geral. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-PNE-02",
@@ -92,7 +92,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Respiração com esforço apoia doença respiratória do trato inferior."
+      "nota": "Respiração com esforço apoia doença respiratória do trato inferior. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-PNE-03",
@@ -141,7 +141,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão."
+      "nota": "Secreção nasal é compatível com doença respiratória bovina, mas não localiza o pulmão. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-PNE-05",
@@ -196,7 +196,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/respiratory-system/complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos/vis%C3%A3o-geral-sobre-o-complexo-das-doen%C3%A7as-respirat%C3%B3rias-dos-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão."
+      "nota": "Diferencial: barriga estufada sugere que a dificuldade respiratória vem da compressão pelo rúmen, não do pulmão. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-URG-13",

@@ -115,7 +115,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita."
+      "nota": "Distensão do flanco direito sugere acúmulo no abomaso deslocado à direita. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-DAD-03",
@@ -164,7 +164,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Desidratação acompanha o quadro obstrutivo do deslocamento à direita."
+      "nota": "Desidratação acompanha o quadro obstrutivo do deslocamento à direita. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-DAD-05",

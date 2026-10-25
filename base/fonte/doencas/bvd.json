@@ -46,7 +46,7 @@
         "veterinario": "ELISA de antígeno ou PCR para BVDV positivo?"
       },
       "por_que": {
-        "veterinario": "Esclarecer as hipóteses relacionadas a bVDV detectado."
+        "veterinario": "Esclarecer as hipóteses relacionadas a BVDV detectado."
       },
       "combinacao": "mycin"
     },
@@ -182,7 +182,7 @@
           "negado": false
         },
         {
-          "simbolo": "febre",
+          "simbolo": "mudanca_abrupta_concentrado",
           "op": "=",
           "valor": true,
           "negado": false
@@ -196,7 +196,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/infectious-diseases/diarreia-viral-bovina/diarreia-viral-bovina-e-complexo-da-doen%C3%A7a-das-mucosas; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Diferencial: fezes aquosas com grãos e espuma apontam para acidose."
+      "nota": "Diferencial: fezes aquosas com grãos e espuma após mudança brusca para concentrado apontam para acidose, não para BVD."
     },
     {
       "id": "R-URG-19",

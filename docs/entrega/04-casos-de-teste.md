@@ -411,6 +411,7 @@ Mastite ambígua: só úbere inflamado Caso fictício de regressão; suposição
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
@@ -1309,6 +1310,7 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
     "distensao_flanco_esquerdo",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
     "gas_livre_sonda",
     "historico_retencao_placenta",
     "leite_alterado",
@@ -2203,7 +2205,6 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
       "cetose": 5,
       "deslocamento_abomaso_esquerda": 5,
       "brucelose": 0,
-      "bvd": 0,
       "dermatite_digital": 0,
       "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
@@ -2218,6 +2219,7 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
       "timpanismo_gasoso": 0,
       "tpb": 0,
       "tuberculose": 0,
+      "bvd": 0,
       "retencao_placenta": 0
     },
     "motivo_parada": "confirmacao",
@@ -2228,26 +2230,20 @@ Acidose: diarreia após mudança de concentrado Caso fictício de regressão; su
     }
   },
   "respondidas": [
-    "agitacao",
     "apatia",
     "apetite",
     "claudicacao",
     "corrimento_vaginal",
-    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
-    "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "extremidades",
-    "feridas_boca",
     "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
-    "mucosas_palidas_ou_ictericas",
     "mudanca_abrupta_concentrado",
     "queda_producao",
-    "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -2358,6 +2354,7 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
     "historico_retencao_placenta",
     "leite_alterado",
     "magnesio_serico",
+    "mudanca_abrupta_concentrado",
     "pcr_bohv1",
     "ph_ruminal",
     "ping_flanco_direito",
@@ -2683,6 +2680,7 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "dias_em_lactacao",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
     "gas_livre_sonda",
     "historico_retencao_placenta",
     "leite_alterado",
@@ -2898,6 +2896,7 @@ Bandeira de decúbito isolado, fora do periparto Caso fictício de regressão; s
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
@@ -3504,8 +3503,8 @@ Limite de três perguntas dinâmicas em quadro inespecífico Caso fictício de r
     "extremidades",
     "historico_retencao_placenta",
     "leite_alterado",
+    "mudanca_abrupta_concentrado",
     "queda_producao",
-    "secrecao_nasal",
     "tosse",
     "ubere_inflamado",
     "urina_escura"
@@ -3629,6 +3628,7 @@ Triagem sem alterações Caso fictício de regressão; suposição a validar.
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
     "mucosas_palidas_ou_ictericas",
@@ -4775,6 +4775,7 @@ Retenção de placenta: restos de placenta na vulva no segundo dia Caso fictíci
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
     "membranas_expostas_vulva",
@@ -4880,6 +4881,7 @@ Retenção de placenta: membranas retidas ao exame Caso fictício de regressão;
     "dias_em_lactacao",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
     "gas_livre_sonda",
     "historico_retencao_placenta",
     "leite_alterado",
@@ -5804,6 +5806,7 @@ Brucelose: sorologia reagente Caso fictício de regressão; suposição a valida
     "dias_em_lactacao",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
     "gas_livre_sonda",
     "historico_retencao_placenta",
     "leite_alterado",
@@ -6496,42 +6499,31 @@ BVD: antígeno detectado Caso fictício de regressão; suposição a validar.
     }
   },
   "respondidas": [
-    "agitacao",
     "antigeno_bvdv",
     "apatia",
     "apetite",
     "ausculta_crepitacoes",
-    "bhb_sanguineo",
     "claudicacao",
     "corrimento_vaginal",
-    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
-    "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
-    "edema_barbela",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "extremidades",
-    "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
     "historico_retencao_placenta",
     "leite_alterado",
-    "lesao_erosiva_talao_morango",
     "magnesio_serico",
-    "mucosas_palidas_ou_ictericas",
     "mudanca_abrupta_concentrado",
     "pcr_bohv1",
     "ph_ruminal",
     "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
-    "prova_dor_reticular",
     "queda_producao",
     "sorologia_brucelose_reagente",
-    "sorologia_leptospirose_reagente",
     "temperatura_retal",
-    "teste_caneca_grumos",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -6747,6 +6739,7 @@ Tuberculose: tuberculinização reagente Caso fictício de regressão; suposiç�
     "dias_em_lactacao",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
     "gas_livre_sonda",
     "historico_retencao_placenta",
     "leite_alterado",
@@ -6892,14 +6885,14 @@ Par excludente: deslocamento à direita vence e rebaixa o lado esquerdo Caso fic
 
 ## C-EXC-TIM
 
-Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de regressão; suposição a validar.
+Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evidência positiva fraca (apetite ausente com abatimento). Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-EXC-TIM",
-  "descricao": "Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de regressão; suposição a validar.",
+  "descricao": "Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evidência positiva fraca (apetite ausente com abatimento). Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 110,
@@ -6907,25 +6900,28 @@ Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de 
   },
   "triagem": {
     "estado_termico": 38.6,
-    "atitude_locomocao": [],
-    "apetite_ruminacao": "reduzido",
+    "atitude_locomocao": [
+      "apatia"
+    ],
+    "apetite_ruminacao": "ausente",
     "producao_leite": [
       "queda_producao"
     ],
     "excrecoes": []
   },
   "respostas": {
-    "espuma_sonda": true,
-    "gas_livre_sonda": false,
     "distensao_flanco_esquerdo": true,
-    "pasto_leguminosa_recente": false
+    "pasto_leguminosa_recente": true,
+    "outros_animais_estufados": true,
+    "engasgo": true,
+    "gas_livre_sonda": false
   },
   "esperado": {
     "top1": "timpanismo_espumoso",
     "urgencia": "chamar_agora",
     "faixas": {
       "timpanismo_espumoso": [
-        85,
+        65,
         100
       ],
       "timpanismo_gasoso": [
@@ -6953,14 +6949,14 @@ Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de 
       "cetose"
     ],
     "percentuais": {
-      "timpanismo_espumoso": 90,
+      "timpanismo_espumoso": 72,
       "acidose": 5,
       "cetose": 5,
+      "deslocamento_abomaso_direita": 5,
       "deslocamento_abomaso_esquerda": 5,
       "brucelose": 0,
       "bvd": 0,
       "dermatite_digital": 0,
-      "deslocamento_abomaso_direita": 0,
       "hipocalcemia": 0,
       "hipomagnesemia": 0,
       "ibr": 0,
@@ -6974,28 +6970,59 @@ Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de 
       "retencao_placenta": 0,
       "timpanismo_gasoso": 0
     },
-    "motivo_parada": "confirmacao",
-    "bandeiras": [],
-    "inconclusivas": [],
+    "motivo_parada": "limite",
+    "bandeiras": [
+      "R-BV-03"
+    ],
+    "inconclusivas": [
+      "timpanismo_espumoso"
+    ],
     "alerta": {
       "pausa": false
     }
   },
   "respondidas": [
+    "agitacao",
+    "antigeno_bvdv",
     "apatia",
     "apetite",
+    "bhb_sanguineo",
+    "calcio_serico",
     "claudicacao",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
+    "emagrecimento_progressivo",
+    "esfregaco_hemoparasitas",
     "espuma_sonda",
+    "fezes_aquosas_espuma_graos",
+    "fita_urina_corpos_cetonicos",
+    "focinho_avermelhado",
+    "gas_livre_sonda",
+    "higroma",
     "historico_retencao_placenta",
     "leite_alterado",
+    "leite_com_sangue",
+    "lesao_erosiva_talao_morango",
+    "linfonodos_aumentados",
+    "magnesio_serico",
+    "mucosas_palidas_ou_ictericas",
+    "pasto_leguminosa_recente",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
     "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
     "queda_producao",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
     "temperatura_retal",
+    "teste_caneca_grumos",
+    "tuberculina_reagente",
     "ubere_inflamado",
     "urina_escura"
   ]
@@ -7100,6 +7127,7 @@ Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpér
     "diarreia",
     "dias_em_lactacao",
     "extremidades",
+    "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
     "membranas_expostas_vulva",

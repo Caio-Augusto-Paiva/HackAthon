@@ -1898,7 +1898,7 @@
   },
   {
     "id": "C-EXC-TIM",
-    "descricao": "Par excludente: espuma pela sonda rebaixa o timpanismo gasoso Caso fictício de regressão; suposição a validar.",
+    "descricao": "Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evidência positiva fraca (apetite ausente com abatimento). Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 110,
@@ -1906,25 +1906,28 @@
     },
     "triagem": {
       "estado_termico": 38.6,
-      "atitude_locomocao": [],
-      "apetite_ruminacao": "reduzido",
+      "atitude_locomocao": [
+        "apatia"
+      ],
+      "apetite_ruminacao": "ausente",
       "producao_leite": [
         "queda_producao"
       ],
       "excrecoes": []
     },
     "respostas": {
-      "espuma_sonda": true,
-      "gas_livre_sonda": false,
       "distensao_flanco_esquerdo": true,
-      "pasto_leguminosa_recente": false
+      "pasto_leguminosa_recente": true,
+      "outros_animais_estufados": true,
+      "engasgo": true,
+      "gas_livre_sonda": false
     },
     "esperado": {
       "top1": "timpanismo_espumoso",
       "urgencia": "chamar_agora",
       "faixas": {
         "timpanismo_espumoso": [
-          85,
+          65,
           100
         ],
         "timpanismo_gasoso": [

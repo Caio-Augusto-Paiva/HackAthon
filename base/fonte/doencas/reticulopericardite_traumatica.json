@@ -116,7 +116,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/reticuloperitonite-traum%C3%A1tica-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho."
+      "nota": "Dorso arqueado com gemido sugere dor cranial do abdome por corpo estranho. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-RPT-03",

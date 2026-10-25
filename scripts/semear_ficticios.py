@@ -29,22 +29,22 @@ from kb.modelos import Base  # noqa: E402
 ANIMAIS: tuple[tuple[str, str, int, dict], ...] = (
     (
         "BR-0001", "Mimosa", 6,
-        {"numero_lactacoes": 3, "raca_grupo": "cruzada", "retencao_placenta": False, "parto_distocico": False,
+        {"numero_lactacoes": 3, "raca_grupo": "cruzada", "historico_retencao_placenta": False, "parto_distocico": False,
          "historico_mastite_12m": True, "mudanca_dieta_recente": False, "casos_podais_no_rebanho": False},
     ),
     (
         "BR-0002", "Estrela", 1,
-        {"numero_lactacoes": 4, "raca_grupo": "europeia", "retencao_placenta": False, "parto_distocico": False,
+        {"numero_lactacoes": 4, "raca_grupo": "europeia", "historico_retencao_placenta": False, "parto_distocico": False,
          "historico_mastite_12m": False},
     ),
     (
         "BR-0003", "Jurema", 100,
-        {"numero_lactacoes": 2, "raca_grupo": "europeia", "retencao_placenta": False, "parto_distocico": False,
+        {"numero_lactacoes": 2, "raca_grupo": "europeia", "historico_retencao_placenta": False, "parto_distocico": False,
          "historico_mastite_12m": False, "casos_podais_no_rebanho": False},
     ),
     (
         "BR-0004", "Boneca", 45,
-        {"numero_lactacoes": 1, "raca_grupo": "zebuina", "retencao_placenta": True, "parto_distocico": True,
+        {"numero_lactacoes": 1, "raca_grupo": "zebuina", "historico_retencao_placenta": True, "parto_distocico": True,
          "historico_mastite_12m": False, "mudanca_dieta_recente": True},
     ),
 )

@@ -22,7 +22,7 @@ def _base_ativa():
 
 
 def _parecer(base, caso):
-    """Repete o diálogo do executor de casos para ler o parecer completo."""
+    """Repete o diálogo do executor de casos e devolve a sessão encerrada."""
     sessao = Sessao(base, caso['modo'], caso.get('ficha'), caso.get('limite_dinamico'))
     for _ in range(500):
         estado = sessao.estado()
@@ -30,7 +30,7 @@ def _parecer(base, caso):
             sessao.acao_bandeira('continuar')
             continue
         if estado['fase'] == 'encerrada':
-            return sessao.parecer()
+            return sessao
         proxima = estado['proxima']
         if proxima['tipo'] == 'tela_triagem':
             sessao.responder_triagem(proxima['id'], caso['triagem'].get(proxima['id'], 'nao_sei'))
@@ -45,7 +45,13 @@ def test_perdedora_do_par_fica_descartada(caso_id, perdedora):
     caso = casos[caso_id]
     base = _base_ativa()
     assert executar_caso(base, caso)['status'] == 'passou'
-    parecer = _parecer(base, caso)
+    sessao = _parecer(base, caso)
+    # a perdedora foi rebaixada pela exclusão, e não só por um diferencial negativo
+    assert perdedora in sessao.resultado.excluidas
+    eventos = [e for e in sessao.resultado.traco if e['tipo'] == 'exclusao_aplicada' and e['simbolo'] == perdedora]
+    assert eventos, sessao.resultado.traco
+    assert all(e['antes'] > 0 for e in eventos), eventos  # tinha evidência positiva antes da exclusão
+    parecer = sessao.parecer()
     bloco = next(b for b in parecer['blocos'] if b['id'] == 'pouco_provavel')
     item = next((x for x in bloco['itens'] if x['doenca'] == perdedora), None)
     assert item is not None, (perdedora, parecer['blocos'])

@@ -35,7 +35,7 @@ def _ajustar(dados: dict) -> None:
     campos = {
         "numero_lactacoes": {"tipo": "numerico", "min": 0, "max": 20},
         "raca_grupo": {"tipo": "categorico", "valores": ["europeia", "zebuina", "cruzada"]},
-        "retencao_placenta": booleano,
+        "historico_retencao_placenta": booleano,
         "parto_distocico": booleano,
         "historico_mastite_12m": booleano,
         "mudanca_dieta_recente": booleano,

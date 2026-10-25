@@ -86,7 +86,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso."
+      "nota": "Distensão esquerda após leguminosa ou pasto tenro é o quadro típico do timpanismo espumoso. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-TES-02",
@@ -115,7 +115,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum."
+      "nota": "Vários animais estufados ao mesmo tempo sugerem causa alimentar comum. Exige apetite reduzido ou ausente na triagem para a pergunta só ser feita quando há sinal compatível, poupando o limite de perguntas do produtor (concessão de seleção; suposição a validar)."
     },
     {
       "id": "R-TES-03",

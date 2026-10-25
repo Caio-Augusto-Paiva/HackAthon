@@ -9,7 +9,7 @@
         "tipo": "booleano"
       },
       "pergunta": {
-        "produtor": "O leite saiu rosado ou com sangue, com o úbere mole e sem inflamação?",
+        "produtor": "O leite saiu rosado ou com sangue?",
         "veterinario": "Leite sanguinolento com úbere flácido (agalaxia)?"
       },
       "por_que": {
