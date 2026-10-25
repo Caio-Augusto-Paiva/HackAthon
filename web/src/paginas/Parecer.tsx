@@ -14,6 +14,7 @@ import estilos from './Parecer.module.css';
 
 const gravidades = { alta: 'Alta', media: 'Média', baixa: 'Baixa' };
 const urgencias = { chamar_agora: 'Chamar agora', observar: 'Observar de perto', sem_problema: 'Sem problema identificado' };
+const listaPt = new Intl.ListFormat('pt-BR', { type: 'conjunction' });
 export function Parecer() {
   const { sessaoId = '' } = useParams();
   const navegar = useNavigate();
@@ -52,6 +53,7 @@ export function Parecer() {
   const blocos = dados.blocos.map(b => ({ ...b, itens: [...b.itens].sort((a, b) => b.percentual - a.percentual) }));
   const primeira = blocos.flatMap(b => b.itens)[0];
   const nenhumaConfirmada = blocos.every(b => b.itens.every(i => i.percentual === 0));
+  const nomes = new Map(blocos.flatMap(b => b.itens).map(i => [i.doenca, i.nome]));
   const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && /^https:\/\//i.test(i.tratamento?.url ?? ''));
   let posicao = 0;
   return <div className={estilos.pagina}>
@@ -82,7 +84,7 @@ export function Parecer() {
           </tr>; }) : <tr><td colSpan={4} className={estilos.vazio}>Nenhuma hipótese neste grupo.</td></tr>}
         </tbody>)}
       </table><p className={estilos.aviso}>{dados.aviso}</p>
-      {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {dados.inconclusivas.join(', ')}.</p>}
+      {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {listaPt.format(dados.inconclusivas.map(id => nomes.get(id) ?? id))}.</p>}
       {dados.bandeiras_nao_verificadas.length > 0 && <p className={estilos.aviso}>Bandeiras ainda não verificadas: {dados.bandeiras_nao_verificadas.join(', ')}.</p>}
       </div>
       {dados.final && tratar.length > 0 && <section aria-labelledby="titulo-tratar" className={estilos.tratar}>

@@ -30,6 +30,15 @@ describe('interrupção por bandeira vermelha', () => {
     expect(dialogo).toBeInTheDocument();
     expect(dialogo).toHaveTextContent(estadoPausado.alerta!.texto);
   });
+  it('mostra os sinais da bandeira em linguagem simples, sem o código da regra', async () => {
+    const fetch = vi.fn(async (caminho: string) => resposta(caminho.endsWith('/parecer') ? exemploParecer
+      : { ...estadoPausado, alerta: { ...estadoPausado.alerta!, sinais: ['decúbito', 'apetite ausente'] } }));
+    vi.stubGlobal('fetch', fetch);
+    render(<MemoryRouter initialEntries={['/anamnese/ses_0001']}><Routes><Route path="/anamnese/:sessaoId" element={<Anamnese />} /></Routes></MemoryRouter>);
+    const dialogo = await screen.findByRole('alertdialog');
+    expect(dialogo).toHaveTextContent('Sinais que acenderam o alerta: decúbito e apetite ausente.');
+    for (const regra of estadoPausado.alerta!.regras) expect(dialogo).not.toHaveTextContent(regra);
+  });
   it('envia ver_parecer e abre o parecer', async () => {
     const fetch = montar();
     await userEvent.click(await screen.findByRole('button', { name: 'Ver parecer' }));

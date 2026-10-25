@@ -486,7 +486,7 @@ def test_bandeira_pausa_no_produtor_e_encerra_sem_potencial(cliente, config, bas
     assert corpo["urgencia"] == {"nivel": "chamar_agora", "provisoria": False, "origem": "bandeira_vermelha", "regras": ["R-BV-01"]}
     assert corpo["alerta"] == {
         "nivel": "chamar_agora", "regras": ["R-BV-01"], "pausa": True, "acoes": ["ver_parecer"],  # não há o que continuar
-        "texto": "Sintoma grave: chame um veterinário o mais rápido possível.",
+        "texto": "Sintoma grave: chame um veterinário o mais rápido possível.", "sinais": ["sinal B"],
     }
 
 

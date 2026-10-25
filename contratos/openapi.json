@@ -51,6 +51,14 @@
             "title": "Regras",
             "type": "array"
           },
+          "sinais": {
+            "description": "Condições das bandeiras em linguagem simples (sem repetir), na ordem de `regras`.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Sinais",
+            "type": "array"
+          },
           "texto": {
             "title": "Texto",
             "type": "string"

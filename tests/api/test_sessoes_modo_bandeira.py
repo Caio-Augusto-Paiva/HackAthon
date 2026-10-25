@@ -162,6 +162,11 @@ def test_bandeira_pausa_so_no_produtor(pausada):
     assert veterinario["proxima"]["tela_id"] == "extra"
 
 
+def test_alerta_traz_os_sinais_da_bandeira_em_linguagem_simples(pausada):
+    _, _, produtor = pausada
+    assert produtor["alerta"]["sinais"] == ["sinal B"]
+
+
 def test_bandeira_com_a_sessao_encerrada_oferece_so_ver_parecer(cliente):
     """Na base mínima não há o que continuar: a bandeira encerra a sessão e a única ação é ver o parecer."""
     animal = criar_animal_teste(cliente)

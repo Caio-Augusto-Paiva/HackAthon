@@ -43,6 +43,11 @@ describe('parecer do sistema', () => {
     expect(screen.getAllByRole('button', { name: 'Continuar respondendo' })).toHaveLength(1);
     expect(screen.queryAllByRole('link', { name: 'Continuar respondendo' })).toHaveLength(0);
   });
+  it('lista as hipóteses inconclusivas pelo nome, não pelo identificador', async () => {
+    const [primeiro, segundo] = exemploParecer.blocos.flatMap(b => b.itens);
+    montar({ ...exemploParecer, inconclusivas: [primeiro.doenca, segundo.doenca] });
+    expect(await screen.findByText(`Hipóteses inconclusivas: ${primeiro.nome} e ${segundo.nome}.`)).toBeInTheDocument();
+  });
   it('não mostra o aviso de nada confirmado quando alguma doença tem percentual', async () => {
     montar();
     await screen.findByRole('table', { name: 'Hipóteses e confiança do sistema' });

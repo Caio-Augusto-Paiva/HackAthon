@@ -451,6 +451,11 @@ export interface components {
             pausa: boolean;
             /** Regras */
             regras: string[];
+            /**
+             * Sinais
+             * @description Condições das bandeiras em linguagem simples (sem repetir), na ordem de `regras`.
+             */
+            sinais?: string[];
             /** Texto */
             texto: string;
         };

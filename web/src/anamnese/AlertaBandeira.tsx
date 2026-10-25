@@ -7,6 +7,8 @@ import { Botao } from '../componentes/Botao';
 import icone from '../assets/alerta-modal.svg';
 import estilos from './AlertaBandeira.module.css';
 
+const listaPt = new Intl.ListFormat('pt-BR', { type: 'conjunction' });
+
 export function AlertaBandeira({ alerta, sessaoId, aoAtualizar, complemento, erroExterno }: {
   alerta: components['schemas']['Alerta']; sessaoId: string; aoAtualizar: (estado: EstadoSessao) => void;
   complemento?: ReactNode; erroExterno?: string;
@@ -28,7 +30,7 @@ export function AlertaBandeira({ alerta, sessaoId, aoAtualizar, complemento, err
   return <Modal titulo="Atenção: sintoma grave" seguranca>
     <img src={icone} width={32} height={32} alt="" className={estilos.icone} />
     <p className={estilos.texto}>{alerta.texto}</p>
-    <p className={estilos.regras}>Bandeira(s) identificada(s): {alerta.regras.join(', ')}</p>
+    {alerta.sinais?.length ? <p className={estilos.regras}>Sinais que acenderam o alerta: {listaPt.format(alerta.sinais)}.</p> : null}
     {erro && <p role="alert" className={estilos.erro}>{erro}</p>}
     {erroExterno && <p role="alert" className={estilos.erro}>{erroExterno}</p>}
     <div className={estilos.acoes}>

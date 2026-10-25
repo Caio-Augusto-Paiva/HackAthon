@@ -109,9 +109,13 @@ class Alerta(BaseModel):
         "`ver_parecer`, ou no modo veterinário): `[]`."
     )
     texto: str
+    sinais: list[str] = Field(
+        default_factory=list,
+        description="Condições das bandeiras em linguagem simples (sem repetir), na ordem de `regras`.",
+    )
 
 
-Proxima = Annotated[TelaTriagem | PerguntaDinamica, Field(discriminator="tipo")]
+Proxima =Annotated[TelaTriagem | PerguntaDinamica, Field(discriminator="tipo")]
 
 
 class EstadoSessao(BaseModel):
