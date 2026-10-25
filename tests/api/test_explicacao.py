@@ -128,8 +128,11 @@ def test_parecer_final_com_confirmacao_no_modo_veterinario(cliente):
     criar_sessao_teste(cliente, animal["id"], "veterinario")
     assert _triagem(cliente, "sinais", SINAIS).status_code == 200
     assert _pergunta(cliente, "exame_v", True).status_code == 200  # R-D1-03: 0,8 combinado com 0,6 = 0,92
+    # O especialista não para na confirmação: segue enquanto alguma doença continua aberta e com pergunta.
+    while (proxima := cliente.get("/api/sessoes/ses_0001").json()["proxima"]) is not None:
+        assert _pergunta(cliente, proxima["simbolo"], False).status_code == 200
     corpo = _corpo(cliente, "parecer", "obter_parecer")
-    assert (corpo["modo"], corpo["final"], corpo["motivo_parada"]) == ("veterinario", True, "confirmacao")
+    assert (corpo["modo"], corpo["final"], corpo["motivo_parada"]) == ("veterinario", True, "sem_potencial")  # nenhuma doença aberta sobrou
     d1 = corpo["blocos"][0]["itens"][0]
     assert (d1["doenca"], d1["percentual"], d1["situacao"]) == ("d1", 92, "com_evidencia")
 

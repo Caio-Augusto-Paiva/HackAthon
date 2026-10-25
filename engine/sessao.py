@@ -6,7 +6,7 @@ from .modelos import Base, MODOS
 from .memoria import Memoria
 from .selecao import analisar, _fontes
 from .inferencia import inferir
-from .parada import motivo_parada
+from .parada import limite_efetivo, motivo_parada
 from .parecer import montar_parecer
 from .explicacao import como
 from .traco import evento, para_json, dados_fato
@@ -92,7 +92,7 @@ class Sessao:
         sessao._ordem=sessao._validar_ordem(ordem_respostas) if ordem_respostas is not None else sessao._ordem_derivada()
         sessao.reconhecidas=set(bandeiras_reconhecidas)
         sessao._calcular(reprocessar=True)
-        if type(finalizada_por_alerta) is not bool or (finalizada_por_alerta and not sessao.bandeiras_historicas):
+        if type(finalizada_por_alerta) is not bool:  # também vale para "ver resultado agora", sem bandeira
             raise ValueError('Encerramento por alerta inválido')
         sessao.finalizada_por_alerta=finalizada_por_alerta
         return sessao
@@ -297,8 +297,14 @@ class Sessao:
         self._calcular()
         return self.estado()
 
+    def limite_efetivo(self):
+        return limite_efetivo(self.base,self.modo,self.limite_dinamico)
+
     def acao_bandeira(self,acao):
-        if not self.bandeiras_historicas or acao not in ('continuar','ver_parecer'):
+        """``ver_parecer`` encerra a qualquer momento (com ou sem bandeira) e guarda o cálculo daquela hora;
+        ``continuar`` reconhece a bandeira ou retoma uma sessão encerrada pelo usuário."""
+        if acao not in ('continuar','ver_parecer') or (acao=='continuar' and not self.bandeiras_historicas
+                                                         and not self.finalizada_por_alerta):
             raise ValueError('Ação de bandeira inválida')
         self.reconhecidas.update(self.bandeiras_historicas)
         self.finalizada_por_alerta=acao=='ver_parecer'

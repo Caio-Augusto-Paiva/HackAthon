@@ -88,11 +88,11 @@ def test_criar_sessao_201_com_tela_dias_ja_respondida(cliente):
     assert [(c["entrada"], c["rotulo"]) for c in proxima["campos"]] == [("booleano", "Sinal A"), ("booleano", "Sinal B")]
 
 
-def test_criar_sessao_veterinario_limite_25(cliente):
+def test_criar_sessao_veterinario_sem_limite(cliente):
     animal = criar_animal_teste(cliente)
     corpo = _criar(cliente, animal["id"], "veterinario").json()
     assert corpo["modo"] == "veterinario"
-    assert corpo["progresso"]["limite_dinamico"] == 25
+    assert corpo["progresso"]["limite_dinamico"] is None  # o especialista pergunta até esgotar
     assert corpo["proxima"]["titulo"] == "Sinais presentes ao exame."  # o texto do modo
     assert [c["rotulo"] for c in corpo["proxima"]["campos"]] == ["Sinal A (exame)", "Sinal B (exame)"]
 
@@ -205,12 +205,12 @@ def test_cada_sessao_guarda_a_versao_em_que_nasceu(cliente, base_dir, hoje):
     assert nova["versao_base"] == "v0002"
     assert nova["proxima"]["titulo"] == "Marque os sinais (segunda versão)."
     assert nova["progresso"]["limite_dinamico"] == 7
-    assert _criar(cliente, animal["id"], "veterinario").json()["progresso"]["limite_dinamico"] == 9
+    assert _criar(cliente, animal["id"], "veterinario").json()["progresso"]["limite_dinamico"] is None
 
     explicita = _criar(cliente, animal["id"], "veterinario", versao_base="v0001").json()  # pede a v0001 com a v0002 ativa
     assert explicita["versao_base"] == "v0001"
     assert explicita["proxima"]["titulo"] == "Sinais presentes ao exame."
-    assert explicita["progresso"]["limite_dinamico"] == 25
+    assert explicita["progresso"]["limite_dinamico"] is None
     assert cliente.get("/api/sessoes/ses_0001").json() == antiga  # e a primeira continua igual
 
 

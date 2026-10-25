@@ -1329,8 +1329,11 @@ export interface components {
         Progresso: {
             /** Dinamicas Feitas */
             dinamicas_feitas: number;
-            /** Limite Dinamico */
-            limite_dinamico: number;
+            /**
+             * Limite Dinamico
+             * @description Máximo de perguntas dinâmicas; null no modo especialista, que pergunta até esgotar.
+             */
+            limite_dinamico: number | null;
             /** Triagem Respondidas */
             triagem_respondidas: number;
             /** Triagem Total */

@@ -53,6 +53,17 @@ describe('parecer do sistema', () => {
     expect(await screen.findByText('Sinais graves ainda não verificados: febre e apatia.')).toBeInTheDocument();
     expect(screen.queryByText(/R-BV-05/)).toBeNull();
   });
+  it('encerrado pelo usuário, lista as doenças que ainda podem subir com mais respostas', async () => {
+    montar({ ...exemploParecer, final: true, motivo_parada: null });
+    const podemSubir = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual);
+    const aviso = await screen.findByText(/Você encerrou antes do fim/);
+    for (const item of podemSubir) expect(aviso).toHaveTextContent(`${item.nome} (até ${item.potencial}%)`);
+  });
+  it('não lista doenças que podem subir quando o motor terminou sozinho', async () => {
+    montar();
+    await screen.findByRole('table');
+    expect(screen.queryByText(/Você encerrou antes do fim/)).toBeNull();
+  });
   it('não mostra o aviso de nada confirmado quando alguma doença tem percentual', async () => {
     montar();
     await screen.findByRole('table', { name: 'Hipóteses e confiança do sistema' });

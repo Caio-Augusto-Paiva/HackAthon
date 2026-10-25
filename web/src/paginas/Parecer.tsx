@@ -55,6 +55,8 @@ export function Parecer() {
   const nenhumaConfirmada = blocos.every(b => b.itens.every(i => i.percentual === 0));
   const nomes = new Map(blocos.flatMap(b => b.itens).map(i => [i.doenca, i.nome]));
   const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && /^https:\/\//i.test(i.tratamento?.url ?? ''));
+  const encerradoCedo = dados.final && dados.motivo_parada === null;
+  const podemSubir = blocos.flatMap(b => b.itens).filter(i => i.potencial > i.percentual);
   let posicao = 0;
   return <div className={estilos.pagina}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link><span>Modo {dados.modo === 'produtor' ? 'produtor' : 'especialista'}</span>
@@ -65,6 +67,9 @@ export function Parecer() {
       <section role="status" data-nivel={dados.urgencia.nivel} className={estilos.urgencia}>
         <img src={alerta} width={30} height={30} alt="" /><div><h2>{urgencias[dados.urgencia.nivel]}</h2><p>{dados.urgencia.texto}</p></div>
       </section>
+      {encerradoCedo && podemSubir.length > 0 && <section role="status" className={estilos.nadaFechou}>
+        <p>Você encerrou antes do fim, e este é o resultado calculado até aqui. Com mais respostas, estas doenças ainda podem subir: {listaPt.format(podemSubir.map(i => `${i.nome} (até ${i.potencial}%)`))}.</p>
+      </section>}
       {nenhumaConfirmada && <section role="status" className={estilos.nadaFechou}>
         <p>Nenhuma doença foi confirmada com as respostas dadas. Responda mais perguntas para o sistema calcular as chances.</p>
       </section>}

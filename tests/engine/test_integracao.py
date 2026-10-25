@@ -47,12 +47,17 @@ class IntegracaoTests(unittest.TestCase):
         # Muitas evidências fracas mantêm hipótese aberta após responder não sei.
         ss=[simbolo(f'x{i:02d}') for i in range(50)]+[doenca()]
         rs=[regra(f'r{i}','d',0.1,condicao(f'x{i:02d}')) for i in range(50)]
-        for modo,limite in [('produtor',12),('veterinario',25)]:
-            s=modulo('sessao').Sessao(base(ss,rs),modo)
-            for i in range(limite):
-                estado=s.estado()
-                if estado['fase']=='encerrada': break
-                s.responder(estado['proxima']['id'],'nao_sei')
-            self.assertEqual(s.estado()['motivo_parada'],'limite')
-            self.assertEqual(s.estado()['progresso']['dinamicas_respondidas'],limite)
+        s=modulo('sessao').Sessao(base(ss,rs),'produtor')
+        for i in range(12):
+            estado=s.estado()
+            if estado['fase']=='encerrada': break
+            s.responder(estado['proxima']['id'],'nao_sei')
+        self.assertEqual(s.estado()['motivo_parada'],'limite')
+        self.assertEqual(s.estado()['progresso']['dinamicas_respondidas'],12)
+        # O especialista não tem limite: pergunta até não restar o que mudar na hipótese.
+        s=modulo('sessao').Sessao(base(ss,rs),'veterinario')
+        while s.estado()['fase']!='encerrada':
+            s.responder(s.estado()['proxima']['id'],'nao_sei')
+        self.assertEqual(s.estado()['motivo_parada'],'sem_perguntas')
+        self.assertEqual(s.estado()['progresso']['dinamicas_respondidas'],50)
 

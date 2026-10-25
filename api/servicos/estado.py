@@ -106,7 +106,7 @@ def montar_estado(carregada: SessaoCarregada, revisao: int) -> EstadoSessao:
         tela_ou_pergunta = _pergunta(carregada, proxima, modo)
 
     progresso = estado["progresso"]
-    limite = motor.limite_dinamico if motor.limite_dinamico is not None else getattr(base.meta.limite_dinamico, modo)
+    limite = motor.limite_efetivo()
     origem, regras = origem_urgencia(motor, estado)
     alerta = None
     if estado["bandeiras"]:

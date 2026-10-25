@@ -351,4 +351,17 @@ describe('troca de modo sem reiniciar a anamnese', () => {
     expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
     expect(controle.mutacoes).toHaveLength(1);
   });
+  it('vai direto ao resultado quando o usuário não quer responder mais', async () => {
+    const controle = simular(perguntaDinamica, c => { c.estado = { ...perguntaDinamica, fase: 'encerrada', proxima: null }; return resposta(c.estado); });
+    montar();
+    await userEvent.click(await screen.findByRole('button', { name: 'Ver resultado agora' }));
+    expect(await screen.findByText('Destino: /parecer/ses_0001')).toBeInTheDocument();
+    expect(controle.mutacoes).toEqual([{ caminho: '/api/sessoes/ses_0001/acoes/bandeira', metodo: 'POST', corpo: { acao: 'ver_parecer' } }]);
+  });
+  it('no modo especialista conta as perguntas sem prometer um total', async () => {
+    simular({ ...perguntaDinamica, modo: 'veterinario', progresso: { ...perguntaDinamica.progresso, limite_dinamico: null } });
+    montar();
+    expect(await screen.findByText(/^Pergunta \d+$/)).toBeInTheDocument();
+    expect(screen.queryByText(/de até/)).toBeNull();
+  });
 });

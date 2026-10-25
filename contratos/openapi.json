@@ -2420,8 +2420,16 @@
             "type": "integer"
           },
           "limite_dinamico": {
-            "title": "Limite Dinamico",
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Máximo de perguntas dinâmicas; null no modo especialista, que pergunta até esgotar.",
+            "title": "Limite Dinamico"
           },
           "triagem_respondidas": {
             "title": "Triagem Respondidas",

@@ -82,7 +82,9 @@ class Progresso(BaseModel):
     triagem_respondidas: int
     triagem_total: int
     dinamicas_feitas: int
-    limite_dinamico: int
+    limite_dinamico: int | None = Field(
+        description="Máximo de perguntas dinâmicas; null no modo especialista, que pergunta até esgotar."
+    )
 
 
 class UrgenciaEstado(BaseModel):

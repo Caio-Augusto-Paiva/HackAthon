@@ -98,7 +98,7 @@ def test_patch_modo_preserva_respostas_e_muda_limite(cliente, config, sessao_din
     validar_contrato("trocar_modo", corpo)
     assert corpo["modo"] == "veterinario"
     assert corpo["revisao"] == 4  # a troca é uma mudança do usuário: sobe a revisão
-    assert corpo["progresso"]["limite_dinamico"] == 25
+    assert corpo["progresso"]["limite_dinamico"] is None  # o especialista não tem limite
     assert corpo["progresso"]["dinamicas_feitas"] == 1  # a pergunta_x já respondida continua contando
     assert corpo["proxima"]["tipo"] == "pergunta"
     assert corpo["proxima"]["simbolo"] == "exame_v"  # a pergunta que só existe no modo veterinário
@@ -224,15 +224,27 @@ def test_ver_parecer_encerra(pausada):
     assert cliente.get("/api/sessoes/ses_0001").json() == corpo
 
 
-def test_acao_sem_bandeira_422(cliente, config):
+def test_continuar_sem_bandeira_e_sem_encerrar_422(cliente, config):
     animal = criar_animal_teste(cliente)
     criar_sessao_teste(cliente, animal["id"])
     antes = cliente.get("/api/sessoes/ses_0001").json()
     assert antes["alerta"] is None
-    for acao in ("continuar", "ver_parecer"):
-        _erro(_bandeira(cliente, acao), 422, "resposta_invalida")  # o motor recusa: não há bandeira registrada
+    _erro(_bandeira(cliente, "continuar"), 422, "resposta_invalida")  # nada a reconhecer nem a retomar
     assert cliente.get("/api/sessoes/ses_0001").json() == antes  # nada foi gravado, a revisão não subiu
     assert _consultar(config, "SELECT revisao FROM sessoes") == [(1,)]
+
+
+def test_ver_resultado_agora_sem_bandeira_encerra_e_continuar_retoma(cliente):
+    animal = criar_animal_teste(cliente)
+    criar_sessao_teste(cliente, animal["id"])
+    encerrada = _bandeira(cliente, "ver_parecer")
+    assert encerrada.status_code == 200, encerrada.text
+    assert (encerrada.json()["fase"], encerrada.json()["proxima"], encerrada.json()["alerta"]) == ("encerrada", None, None)
+    parecer = cliente.get("/api/sessoes/ses_0001/parecer").json()
+    assert parecer["final"] is True and parecer["motivo_parada"] is None
+    retomada = _bandeira(cliente, "continuar")
+    assert retomada.status_code == 200, retomada.text
+    assert retomada.json()["fase"] != "encerrada" and retomada.json()["proxima"] is not None
 
 
 @pytest.mark.parametrize("corpo", [{"acao": "x"}, {"acao": None}, {}, {"acao": "continuar", "extra": 1}])

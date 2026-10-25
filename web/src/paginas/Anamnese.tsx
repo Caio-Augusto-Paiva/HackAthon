@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ErroApi } from '../api/cliente';
-import { obterSessao, responder, type EstadoSessao } from '../api/sessao';
+import { agirBandeira, obterSessao, responder, type EstadoSessao } from '../api/sessao';
 import { BarraProgresso } from '../componentes/BarraProgresso';
 import { Balao } from '../componentes/Balao';
 import { Botao } from '../componentes/Botao';
@@ -86,20 +86,29 @@ export function Anamnese() {
       } else definirErro(e instanceof Error ? e.message : 'Não consegui enviar a resposta. Tente novamente.');
     } finally { trava.current = false; definirEnviando(false); }
   }
+  async function verResultado() {
+    if (trava.current) return;
+    trava.current = true; definirEnviando(true); definirErro(undefined);
+    try { definirEstado(await agirBandeira(sessaoId, 'ver_parecer')); }
+    catch (e) { definirErro(e instanceof Error ? e.message : 'Não consegui abrir o resultado. Tente novamente.'); }
+    finally { trava.current = false; definirEnviando(false); }
+  }
   if (!estado) return erro ? <main className={estilos.espera}><h1>Não consegui abrir a verificação</h1><p role="alert">{erro}</p>
     <Botao onClick={() => definirTentativa(t => t + 1)}>Tentar novamente</Botao><Link to="/">Voltar ao início</Link></main> : <CarregandoPergunta />;
   const passo = passoAtual(visivel!.progresso);
-  const total = estado.progresso.triagem_total + estado.progresso.limite_dinamico;
+  const limite = estado.progresso.limite_dinamico;
+  const total = limite === null || limite === undefined ? undefined : estado.progresso.triagem_total + limite;
   const propriedades = { inicial: anterior?.escolha, erro, carregando: enviando, aoEnviar: enviar, aoEditar: () => definirErro(undefined),
     aoVoltar: historico.length && indiceCorrecao !== 0 ? () => definirCorrecao(indiceCorrecao === undefined ? historico.length - 1 : indiceCorrecao - 1) : undefined };
   return <div className={`${estilos.pagina} fundoComBrilho`}><main className={estilos.principal}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link>
       <ControleModo modo={estado.modo} enviando={enviando} aoMudar={troca.solicitar} />
-      <span className={estilos.contador}>Pergunta {passo} de até {total}</span></header>
+      <button type="button" className={estilos.verResultado} disabled={enviando} onClick={verResultado}>Ver resultado agora</button>
+      <span className={estilos.contador}>{total === undefined ? `Pergunta ${passo}` : `Pergunta ${passo} de até ${total}`}</span></header>
     {troca.erro && <p role="alert" className={estilos.erroModo}>{troca.erro}</p>}
     {erroCorrecao && <p role="alert" className={estilos.erroModo}>{erroCorrecao}</p>}
     {(troca.anuncio || typeof anuncioRota === 'string') && <p role="status" className="somenteLeitor">{troca.anuncio || String(anuncioRota)}</p>}
-    <BarraProgresso atual={passo - 1} total={total} />
+    {total !== undefined && <BarraProgresso atual={passo - 1} total={total} />}
     <div className={estilos.dialogo} key={`${estado.modo}-${chave}-${indiceCorrecao ?? 'atual'}`}>
       {tela ? <><Balao texto={tela.tipo === 'tela_triagem' ? tela.titulo : tela.texto} aoPorque={() => definirPorque(true)} />
         <div className={estilos.resposta} key={`${chave}-${indiceCorrecao ?? 'atual'}`}>
