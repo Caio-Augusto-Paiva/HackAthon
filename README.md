@@ -2,7 +2,7 @@
 
 Prova de conceito do tema T1 do Hackathon UFJF 2026. O núcleo executa regras explícitas, combina fatores de certeza pelo modelo MYCIN e explica as conclusões. A IA auxilia o desenvolvimento; a decisão em execução sai da base e do motor.
 
-**Estado integrado, branch `codex-davi`:** interface React conectada ao motor local, base ativa `v0005` (20 doenças, 137 regras, 3 pares excludentes e links de tratamento), módulo `kb/` e API FastAPI com persistência SQLite. São 27 operações HTTP e 61 casos sintéticos versionados. O editor gráfico permanece pendente. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
+**Estado integrado, branch `codex-davi`:** interface React conectada ao motor local, base ativa `v0005` (20 doenças, 137 regras, 2 pares excludentes e links de tratamento), módulo `kb/` e API FastAPI com persistência SQLite. São 27 operações HTTP e 60 casos sintéticos versionados. O editor gráfico permanece pendente. Todo conhecimento veterinário e todo CF permanecem como suposição a validar. O resultado não constitui diagnóstico nem recomendação terapêutica.
 
 ## Executar a demonstração do motor
 
@@ -63,7 +63,7 @@ python scripts/gerar_doc_regras.py --casos base/casos/casos.json
 python scripts/gerar_doc_regras.py --casos base/casos/casos.json --verificar
 ```
 
-O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado. A suíte também verifica esse sincronismo. Sem `--base`, o gerador segue `base/ativa.json`, atualmente `v0005` (pai `v0004`; a `v0005` amplia a base de 8 para 20 doenças, com 3 pares excludentes e links de tratamento). As versões são imutáveis: alteração de regra exige nova versão e execução dos casos antes de ativar. A ativação é operacional e não representa aprovação clínica. As contagens e os resultados reais ficam em [evidências de verificação](docs/entrega/evidencias-verificacao.json).
+O segundo comando retorna 1 se o conteúdo gerado divergir do arquivo versionado. A suíte também verifica esse sincronismo. Sem `--base`, o gerador segue `base/ativa.json`, atualmente `v0005` (pai `v0004`; a `v0005` amplia a base de 8 para 20 doenças, com 2 pares excludentes e links de tratamento). As versões são imutáveis: alteração de regra exige nova versão e execução dos casos antes de ativar. A ativação é operacional e não representa aprovação clínica. As contagens e os resultados reais ficam em [evidências de verificação](docs/entrega/evidencias-verificacao.json).
 
 ## Equipe e licença
 

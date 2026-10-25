@@ -12,7 +12,7 @@ A duração oficial não consta dos materiais fornecidos. A equipe confirmou nes
 | 2. O que é sistema especialista | Mostrar fato → regra → conclusão; IA auxiliou a construção, motor faz a consulta | A | 1:00 |
 | 3. Arquitetura disponível | Diagrama do documento 02: React, API FastAPI, SQLite, `kb`, versão ativa, motor e explicação; editor pendente | B | 1:15 |
 | 4. Raciocínio e segurança | Três camadas, premissa mínima, combinação MYCIN, seis telas e bandeiras; um único exemplo numérico | A | 1:45 |
-| 5. Base e limites clínicos | 20 doenças, 137 regras, 3 pares excludentes e links de tratamento, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
+| 5. Base e limites clínicos | 20 doenças, 137 regras, 2 pares excludentes e links de tratamento, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
 | 6. Evidência de funcionamento | Estado atual: 1082 testes Python aprovados, 170 subtestes, 72 Vitest e 34 casos sintéticos (E2E: 6 specs, não rodados; um teste Vitest de preparação é intermitente por tempo; histórico: 1080 Python e 71 Vitest; fechamento de 22/10: 1077 Python e 68 Vitest; histórico `09f5754`: 1066 Python, 60 Vitest, 11 E2E); não confundir com validação clínica | B | 1:00 |
 | 7. IA e julgamento da equipe | Três exemplos comprovados: restauração direta, regra de TPB sem febre e rejeição de aprovação clínica automática; 40 s por papel | A/B/C | 2:00 |
 | 8. Riscos e próximos passos | Revisão especializada, licença, editor, limitações de coleta R15/R16, Swagger offline e ensaio físico sem rede | A | 0:45 |

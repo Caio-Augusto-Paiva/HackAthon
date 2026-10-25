@@ -1936,41 +1936,5 @@
         ]
       }
     }
-  },
-  {
-    "id": "C-EXC-RPL",
-    "descricao": "Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpério Caso fictício de regressão; suposição a validar.",
-    "modo": "produtor",
-    "ficha": {
-      "dias_em_lactacao": 2,
-      "historico_retencao_placenta": true
-    },
-    "triagem": {
-      "estado_termico": "normal",
-      "atitude_locomocao": [],
-      "apetite_ruminacao": "normal",
-      "producao_leite": [],
-      "excrecoes": [
-        "corrimento_vaginal"
-      ]
-    },
-    "respostas": {
-      "membranas_expostas_vulva": true,
-      "corrimento_fetido": false
-    },
-    "esperado": {
-      "top1": "retencao_placenta",
-      "urgencia": "observar",
-      "faixas": {
-        "retencao_placenta": [
-          85,
-          100
-        ],
-        "metrite": [
-          0,
-          0
-        ]
-      }
-    }
   }
 ]

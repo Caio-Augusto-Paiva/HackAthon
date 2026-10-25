@@ -11,7 +11,6 @@ tags:
 # Retenção de Placenta
 
 ## Connections
-- [[Metrite Puerperal]] - `exclui` [EXTRACTED]
 - [[R-RPL-01 SE Puerpério E Restos de placenta na vulva ENTÃO Retenção de Placenta]] - `conclui` [EXTRACTED]
 - [[R-RPL-02 SE Puerpério E Placenta não saiu em 24 horas ENTÃO Retenção de Placenta]] - `conclui` [EXTRACTED]
 - [[R-RPL-03 SE Membranas retidas ao exame ENTÃO Retenção de Placenta]] - `conclui` [EXTRACTED]

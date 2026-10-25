@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0005`. Casos sintéticos executados: **61**. Aprovados: **61**.
+Base `v0005`. Casos sintéticos executados: **60**. Aprovados: **60**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -68,7 +68,6 @@ Os casos demonstram integração e comportamento determinístico. Não medem acu
 | C-N-TUB-02 | passou | chamar_agora | tuberculose | não |
 | C-EXC-DAB | passou | chamar_agora | deslocamento_abomaso_direita | não |
 | C-EXC-TIM | passou | chamar_agora | timpanismo_espumoso | não |
-| C-EXC-RPL | passou | observar | retencao_placenta | não |
 
 ## C-MAS-01
 
@@ -475,11 +474,12 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
     "top1": "metrite",
     "top3_contem": [
       "metrite",
-      "acidose",
-      "brucelose"
+      "retencao_placenta",
+      "acidose"
     ],
     "percentuais": {
       "metrite": 85,
+      "retencao_placenta": 41,
       "acidose": 5,
       "brucelose": 5,
       "cetose": 5,
@@ -497,8 +497,7 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
       "timpanismo_gasoso": 0,
       "tpb": 0,
       "tuberculose": 0,
-      "hipocalcemia": 0,
-      "retencao_placenta": 0
+      "hipocalcemia": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -514,15 +513,18 @@ Metrite no puerpério com corrimento fétido Caso fictício de regressão; supos
     "claudicacao",
     "corrimento_fetido",
     "corrimento_vaginal",
+    "costas_arqueadas",
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "extremidades",
     "fezes_aquosas_espuma_graos",
     "historico_retencao_placenta",
     "leite_alterado",
     "membranas_expostas_vulva",
+    "placenta_nao_expulsa_24h",
     "queda_producao",
     "ubere_inflamado",
     "urina_escura"
@@ -3197,11 +3199,12 @@ Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; supos
     "top3_contem": [
       "mastite",
       "metrite",
-      "brucelose"
+      "retencao_placenta"
     ],
     "percentuais": {
       "mastite": 80,
       "metrite": 74,
+      "retencao_placenta": 10,
       "brucelose": 5,
       "acidose": 0,
       "bvd": 0,
@@ -3218,8 +3221,7 @@ Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; supos
       "timpanismo_espumoso": 0,
       "timpanismo_gasoso": 0,
       "tpb": 0,
-      "tuberculose": 0,
-      "retencao_placenta": 0
+      "tuberculose": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [],
@@ -3247,6 +3249,7 @@ Comorbidade: mastite e metrite no puerpério Caso fictício de regressão; supos
     "leite_alterado",
     "membranas_expostas_vulva",
     "mucosas_palidas_ou_ictericas",
+    "placenta_nao_expulsa_24h",
     "queda_producao",
     "recusa_concentrado_come_volumoso",
     "teste_caneca_grumos",
@@ -4751,13 +4754,13 @@ Retenção de placenta: restos de placenta na vulva no segundo dia Caso fictíci
       "ibr": 0,
       "leptospirose": 0,
       "mastite": 0,
+      "metrite": 0,
       "pneumonia": 0,
       "reticulopericardite_traumatica": 0,
       "timpanismo_espumoso": 0,
       "timpanismo_gasoso": 0,
       "tpb": 0,
-      "tuberculose": 0,
-      "metrite": 0
+      "tuberculose": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -4853,13 +4856,13 @@ Retenção de placenta: membranas retidas ao exame Caso fictício de regressão;
       "ibr": 0,
       "leptospirose": 0,
       "mastite": 0,
+      "metrite": 0,
       "pneumonia": 0,
       "reticulopericardite_traumatica": 0,
       "timpanismo_espumoso": 0,
       "timpanismo_gasoso": 0,
       "tpb": 0,
-      "tuberculose": 0,
-      "metrite": 0
+      "tuberculose": 0
     },
     "motivo_parada": "confirmacao",
     "bandeiras": [],
@@ -7029,113 +7032,4 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
 }
 ```
 
-## C-EXC-RPL
-
-Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpério Caso fictício de regressão; suposição a validar.
-
-### Entrada e resultado esperado
-
-```json
-{
-  "id": "C-EXC-RPL",
-  "descricao": "Par excludente: retenção de placenta forte rebaixa a metrite no mesmo puerpério Caso fictício de regressão; suposição a validar.",
-  "modo": "produtor",
-  "ficha": {
-    "dias_em_lactacao": 2,
-    "historico_retencao_placenta": true
-  },
-  "triagem": {
-    "estado_termico": "normal",
-    "atitude_locomocao": [],
-    "apetite_ruminacao": "normal",
-    "producao_leite": [],
-    "excrecoes": [
-      "corrimento_vaginal"
-    ]
-  },
-  "respostas": {
-    "membranas_expostas_vulva": true,
-    "corrimento_fetido": false
-  },
-  "esperado": {
-    "top1": "retencao_placenta",
-    "urgencia": "observar",
-    "faixas": {
-      "retencao_placenta": [
-        85,
-        100
-      ],
-      "metrite": [
-        0,
-        0
-      ]
-    }
-  }
-}
-```
-
-### Resultado observado
-
-```json
-{
-  "caso_id": "C-EXC-RPL",
-  "status": "passou",
-  "falhas": [],
-  "obtido": {
-    "urgencia": "observar",
-    "top1": "retencao_placenta",
-    "top3_contem": [
-      "retencao_placenta",
-      "brucelose",
-      "acidose"
-    ],
-    "percentuais": {
-      "retencao_placenta": 88,
-      "brucelose": 5,
-      "acidose": 0,
-      "bvd": 0,
-      "cetose": 0,
-      "dermatite_digital": 0,
-      "deslocamento_abomaso_direita": 0,
-      "deslocamento_abomaso_esquerda": 0,
-      "hipocalcemia": 0,
-      "hipomagnesemia": 0,
-      "ibr": 0,
-      "leptospirose": 0,
-      "mastite": 0,
-      "pneumonia": 0,
-      "reticulopericardite_traumatica": 0,
-      "timpanismo_espumoso": 0,
-      "timpanismo_gasoso": 0,
-      "tpb": 0,
-      "tuberculose": 0,
-      "metrite": 0
-    },
-    "motivo_parada": "confirmacao",
-    "bandeiras": [],
-    "inconclusivas": [],
-    "alerta": {
-      "pausa": false
-    }
-  },
-  "respondidas": [
-    "apatia",
-    "apetite",
-    "claudicacao",
-    "corrimento_vaginal",
-    "decubito",
-    "diarreia",
-    "dias_em_lactacao",
-    "extremidades",
-    "fezes_aquosas_espuma_graos",
-    "historico_retencao_placenta",
-    "leite_alterado",
-    "membranas_expostas_vulva",
-    "queda_producao",
-    "ubere_inflamado",
-    "urina_escura"
-  ]
-}
-```
-
-Este documento executa 61 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.
+Este documento executa 60 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.

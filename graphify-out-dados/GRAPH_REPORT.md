@@ -5,7 +5,7 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 240 nodes · 352 edges · 21 communities
+- 240 nodes · 351 edges · 21 communities
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -41,8 +41,8 @@
 6. `Início da lactação` - 8 edges
 7. `Deslocamento de Abomaso à Direita` - 8 edges
 8. `Deslocamento de Abomaso à Esquerda` - 8 edges
-9. `Retenção de Placenta` - 8 edges
-10. `Cetose / Hipercetonemia` - 7 edges
+9. `Cetose / Hipercetonemia` - 7 edges
+10. `Hipocalcemia Puerperal` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Apetite` --condicao_de--> `R-ACI-05: SE Apetite ENTÃO Acidose Ruminal`  [EXTRACTED]

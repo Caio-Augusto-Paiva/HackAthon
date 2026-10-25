@@ -6,7 +6,7 @@ Base indicada pelo ponteiro ativo; ativação operacional não é validação cl
 
 Versão: `v0005`. Pai declarado: `v0004`. Data declarada na base: `2026-10-24`.
 
-Arquivo: `base/versoes/v0005.json`. SHA-256 do JSON canônico: `7bfad43e7c729f050f1286711215db07f47816a3752efee405ec673189eb5db2`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0005.json`. SHA-256 do JSON canônico: `a05b88102d1beb762149f15820202dbb36952da97e2e514357000daf9a8d783d`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
 Regras: **137**. Símbolos: **103**. Doenças: **20**.
 

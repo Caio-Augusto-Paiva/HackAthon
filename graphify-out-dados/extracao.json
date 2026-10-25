@@ -4275,13 +4275,6 @@
       "relation": "exclui",
       "confidence": "EXTRACTED",
       "source_file": "base/fonte/comum.json"
-    },
-    {
-      "source": "sim:retencao_placenta",
-      "target": "sim:metrite",
-      "relation": "exclui",
-      "confidence": "EXTRACTED",
-      "source_file": "base/fonte/comum.json"
     }
   ],
   "hyperedges": [],

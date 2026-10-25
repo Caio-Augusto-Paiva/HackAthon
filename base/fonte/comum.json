@@ -124,14 +124,6 @@
         ],
         "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
         "nota": "O gás fica preso em espuma ou livre, não os dois ao mesmo tempo."
-      },
-      {
-        "doencas": [
-          "retencao_placenta",
-          "metrite"
-        ],
-        "fonte": "Embrapa Gado de Leite; suposição do projeto a validar",
-        "nota": "No mesmo quadro puerperal, a retenção precede a metrite; o par deixa a hipótese mais forte se destacar."
       }
     ]
   },
