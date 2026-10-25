@@ -11,13 +11,13 @@
       { "linha": 2, "brinco": "BR-0007" }
     ],
     "atualizados": [
-      { "linha": 3, "brinco": "BR-0001", "campos": ["historico_mastite_12m"] }
+      { "linha": 3, "brinco": "BR-0001", "campos": ["historico_retencao_placenta"] }
     ],
     "rejeitados": [
       {
         "linha": 4,
         "erros": [
-          { "campo": "raca_grupo", "mensagem": "Valor 'nelore' fora de europeia/zebuina/cruzada." }
+          { "campo": "historico_retencao_placenta", "mensagem": "Valor 'talvez' deve ser verdadeiro ou falso." }
         ]
       }
     ]

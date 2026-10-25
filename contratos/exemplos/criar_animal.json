@@ -8,11 +8,7 @@
     "nome": "Mimosa",
     "ficha": {
       "data_ultimo_parto": "2026-10-14",
-      "raca_grupo": "cruzada",
-      "numero_lactacoes": 3,
-      "historico_retencao_placenta": false,
-      "parto_distocico": false,
-      "historico_mastite_12m": true
+      "historico_retencao_placenta": false
     }
   },
   "resposta": {
@@ -22,13 +18,7 @@
     "dias_em_lactacao": 6,
     "ficha": {
       "data_ultimo_parto": "2026-10-14",
-      "raca_grupo": "cruzada",
-      "numero_lactacoes": 3,
-      "historico_retencao_placenta": false,
-      "parto_distocico": false,
-      "historico_mastite_12m": true,
-      "mudanca_dieta_recente": null,
-      "casos_podais_no_rebanho": null
+      "historico_retencao_placenta": false
     },
     "origens": {}
   }
