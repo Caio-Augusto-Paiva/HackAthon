@@ -13,7 +13,7 @@
       "data_ultimo_parto": "2026-10-14",
       "raca_grupo": "cruzada",
       "numero_lactacoes": 3,
-      "retencao_placenta": false,
+      "historico_retencao_placenta": false,
       "parto_distocico": false,
       "historico_mastite_12m": true,
       "mudanca_dieta_recente": null,

@@ -94,6 +94,6 @@ class Como(BaseModel):
 
 
 class Traco(BaseModel):
-    """Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado`` e ``pergunta_feita``."""
+    """Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado``, ``exclusao_aplicada`` e ``pergunta_feita``."""
 
     eventos: list[dict[str, Any]]

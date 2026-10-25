@@ -58,7 +58,8 @@ def test_exportar_aresta_exclui(tmp_path):
     _, ext = exportar(tmp_path / "fonte", tmp_path / "saida")
     dados = json.loads(ext.read_text(encoding="utf-8"))
     exclui = [a for a in dados["edges"] if a["relation"] == "exclui"]
-    assert len(exclui) == 3
+    assert len(exclui) == 2
     pares = {frozenset((a["source"], a["target"])) for a in exclui}
-    assert frozenset(("sim:retencao_placenta", "sim:metrite")) in pares
+    assert frozenset(("sim:timpanismo_espumoso", "sim:timpanismo_gasoso")) in pares
+    assert frozenset(("sim:retencao_placenta", "sim:metrite")) not in pares
     assert all(a["source_file"].endswith("comum.json") for a in exclui)

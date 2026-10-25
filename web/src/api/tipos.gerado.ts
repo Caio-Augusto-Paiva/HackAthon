@@ -1613,7 +1613,7 @@ export interface components {
         };
         /**
          * Traco
-         * @description Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado`` e ``pergunta_feita``.
+         * @description Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado``, ``exclusao_aplicada`` e ``pergunta_feita``.
          */
         Traco: {
             /** Eventos */

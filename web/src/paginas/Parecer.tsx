@@ -52,7 +52,7 @@ export function Parecer() {
   const blocos = dados.blocos.map(b => ({ ...b, itens: [...b.itens].sort((a, b) => b.percentual - a.percentual) }));
   const primeira = blocos.flatMap(b => b.itens)[0];
   const nenhumaConfirmada = blocos.every(b => b.itens.every(i => i.percentual === 0));
-  const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && i.tratamento?.url.startsWith('https://'));
+  const tratar = blocos.flatMap(b => b.itens).filter(i => i.percentual > 20 && /^https:\/\//i.test(i.tratamento?.url ?? ''));
   let posicao = 0;
   return <div className={estilos.pagina}>
     <header className={estilos.cabecalho}><Link to="/">Anamnese Bovina</Link><span>Modo {dados.modo === 'produtor' ? 'produtor' : 'especialista'}</span>
@@ -85,11 +85,11 @@ export function Parecer() {
       {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {dados.inconclusivas.join(', ')}.</p>}
       {dados.bandeiras_nao_verificadas.length > 0 && <p className={estilos.aviso}>Bandeiras ainda não verificadas: {dados.bandeiras_nao_verificadas.join(', ')}.</p>}
       </div>
-      {tratar.length > 0 && <section aria-labelledby="titulo-tratar" className={estilos.tratar}>
+      {dados.final && tratar.length > 0 && <section aria-labelledby="titulo-tratar" className={estilos.tratar}>
         <h2 id="titulo-tratar">Como tratar</h2>
         <p>Informação geral de fonte pública. O tratamento deve ser indicado por um médico-veterinário.</p>
-        <div className={estilos.tratarLinks}>{tratar.map(i => <a key={i.doenca} href={i.tratamento!.url} target="_blank" rel="noopener noreferrer"
-          title={i.tratamento!.titulo}>Como tratar {i.nome}</a>)}</div>
+        <div className={estilos.tratarLinks}>{tratar.map(i => <a key={i.doenca} href={i.tratamento!.url} target="_blank" rel="noopener noreferrer">
+          <span>Como tratar {i.nome}</span><span className={estilos.tratarFonte}>{i.tratamento!.titulo}</span></a>)}</div>
       </section>}
       <div className={estilos.acoes}><Link className={estilos.nova} to="/">Nova verificação</Link><Link className={estilos.privacidade} to="/privacidade">Política de privacidade</Link>
         <Botao variante="secundario" disabled={!primeira} onClick={() => definirComo(true)}>Como cheguei aqui?</Botao>

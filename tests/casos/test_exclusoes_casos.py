@@ -12,7 +12,6 @@ RAIZ = Path(__file__).resolve().parents[2]
 PERDEDORAS = {
     'C-EXC-DAB': 'deslocamento_abomaso_esquerda',
     'C-EXC-TIM': 'timpanismo_gasoso',
-    'C-EXC-RPL': 'metrite',
 }
 
 

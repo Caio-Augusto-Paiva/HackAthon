@@ -59,7 +59,12 @@ def inferir(base, fatos):
         evento(traco,'fato_adicionado',**dados_fato(fato))
     disparadas=[]
     urgencias=[]
+    excluidas=None
     for r in agenda(base):
+        # a exclusão roda uma vez, na passagem da camada doenca para urgencia,
+        # para que as regras de urgência leiam o CF já rebaixado
+        if excluidas is None and base.simbolos[r['entao']['simbolo']]['tipo']=='urgencia':
+            excluidas=aplicar_exclusoes(base,cfs,memoria,traco)
         condicoes=[avaliar_condicao(c,memoria,base.simbolos) for c in r['se']]
         premissa=min(condicoes)
         if premissa<=base.meta['limiares']['premissa']:
@@ -80,7 +85,8 @@ def inferir(base, fatos):
         evento(traco,'fato_adicionado',**dados_fato(memoria[id]),regra_id=r['id'])
         disparadas.append(r)
         if r.get('classe') in ('urgencia','bandeira_vermelha'): urgencias.append(id)
-    excluidas=aplicar_exclusoes(base,cfs,memoria,traco)
+    if excluidas is None:
+        excluidas=aplicar_exclusoes(base,cfs,memoria,traco)
     bandeiras=[r['id'] for r in disparadas if r.get('classe')=='bandeira_vermelha'
                and cfs[r['entao']['simbolo']]>0]
     urgencias={id for id in urgencias if cfs[id]>0}

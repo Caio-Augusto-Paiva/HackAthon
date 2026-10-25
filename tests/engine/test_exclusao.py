@@ -109,6 +109,25 @@ class Exclusao(unittest.TestCase):
         self.assertAlmostEqual(etapas[0]['depois'], -2 / 3)
         self.assertEqual((etapas[0]['fonte'], etapas[0]['nota']), ('Teste sintético', 'nota'))
 
+    def test_urgencia_ve_cf_depois_da_exclusao(self):
+        b = montar()
+        b['simbolos'].append(simbolo('chamar_agora', 'urgencia'))
+        b['regras'].append(regra('rurg', 'chamar_agora', '0.9', condicao('y', cf_minimo='0.5'), classe='urgencia'))
+        # y chega a 0.6 (>= cf_minimo), mas perde para x e cai para negativo antes da urgência
+        r = inferir(b, fatos(x='0.9', y='0.6'))
+        self.assertEqual(r.excluidas, frozenset({'y'}))
+        self.assertNotIn('rurg', [d['id'] for d in r.disparadas])
+        self.assertNotEqual(r.urgencia, 'chamar_agora')
+
+    def test_exclusao_aplicada_uma_vez(self):
+        b = montar()
+        b['simbolos'].append(simbolo('chamar_agora', 'urgencia'))
+        b['regras'].append(regra('rurg', 'chamar_agora', '0.9', condicao('x', cf_minimo='0.5'), classe='urgencia'))
+        r = inferir(b, fatos(x='0.9', y='0.6'))
+        self.assertEqual(len([e for e in r.traco if e['tipo'] == 'exclusao_aplicada']), 1)
+        self.assertIn('rurg', [d['id'] for d in r.disparadas])
+        self.assertEqual(r.urgencia, 'chamar_agora')
+
 
 if __name__ == '__main__':
     unittest.main()

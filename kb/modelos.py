@@ -125,7 +125,7 @@ class Limiares(_Modelo):
     confirmacao: float = 0.80
     bloco_principal: float = 0.50
     bloco_diferencial: float = 0.20
-    exclusao: float = 0.5
+    exclusao: float = Field(default=0.5, gt=0, le=1)
 
     @model_serializer(mode="wrap")
     def _omite_exclusao_padrao(self, proximo):

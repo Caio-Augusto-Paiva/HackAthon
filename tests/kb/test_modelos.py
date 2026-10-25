@@ -158,3 +158,16 @@ def test_caso_minimo_e_extra_proibido():
     with pytest.raises(ValidationError):
         Caso.model_validate({"id": "C", "descricao": "d", "modo": "produtor",
                              "esperado": {"faixas": {"d1": [1, 2, 3]}}})
+
+
+@pytest.mark.parametrize("valor", [0, -0.1, 1.01])
+def test_limiar_exclusao_fora_de_0_1_rejeitado(valor):
+    from kb.modelos import Limiares
+    with pytest.raises(ValidationError):
+        Limiares(exclusao=valor)
+
+
+@pytest.mark.parametrize("valor", [0.01, 0.5, 1])
+def test_limiar_exclusao_dentro_de_0_1_aceito(valor):
+    from kb.modelos import Limiares
+    assert Limiares(exclusao=valor).exclusao == valor

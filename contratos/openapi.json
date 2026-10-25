@@ -1685,6 +1685,8 @@
           },
           "exclusao": {
             "default": 0.5,
+            "exclusiveMinimum": 0.0,
+            "maximum": 1.0,
             "title": "Exclusao",
             "type": "number"
           },
@@ -3234,7 +3236,7 @@
         "type": "object"
       },
       "Traco": {
-        "description": "Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado`` e ``pergunta_feita``.",
+        "description": "Eventos em ordem: ``fato_adicionado``, ``regra_disparada``, ``cf_combinado``, ``exclusao_aplicada`` e ``pergunta_feita``.",
         "properties": {
           "eventos": {
             "items": {

@@ -280,6 +280,8 @@
         },
         "exclusao": {
           "default": 0.5,
+          "exclusiveMinimum": 0,
+          "maximum": 1,
           "title": "Exclusao",
           "type": "number"
         }

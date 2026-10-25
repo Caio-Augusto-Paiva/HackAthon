@@ -52,6 +52,7 @@
 .tratar p { margin: 0; font-size: 15px; line-height: 1.5; }
 .tratarLinks { display: flex; flex-wrap: wrap; gap: 14px; }
 .tratarLinks a { display: grid; place-items: center; min-height: 52px; padding: 10px 24px; color: var(--cor-texto); background: var(--cor-acento); border: 3px solid var(--cor-acento-escuro); border-radius: var(--raio-botao); box-shadow: var(--sombra-clay); text-decoration: none; font-weight: 800; font-size: 18px; }
+.tratarFonte { display: block; font-weight: 600; font-size: 14px; }
 .tratarLinks a:hover { background: color-mix(in srgb, var(--cor-acento) 90%, white); }
 /* "Nova verificação", "Como tratar" e "Como cheguei aqui?": faixa de luz diagonal lenta e em repetição sob o mouse. */
 .nova, .tratarLinks a, .acoes > button { position: relative; overflow: hidden; isolation: isolate; }

@@ -125,8 +125,21 @@ describe('parecer do sistema', () => {
         expect(link).toHaveAttribute('href', comTratamento[i].tratamento!.url);
         expect(link).toHaveAttribute('target', '_blank');
         expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-        expect(link).toHaveAccessibleName(`Como tratar ${comTratamento[i].nome}`);
+        expect(link).toHaveAccessibleName(new RegExp(`^Como tratar ${comTratamento[i].nome}`));
+        expect(within(link).getByText(comTratamento[i].tratamento!.titulo)).toBeVisible();
       });
+    });
+    it('aceita prefixo HTTPS:// em maiúsculas', async () => {
+      const maiusculo = { ...exemploParecer, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => i.doenca === 'hipocalcemia' ? { ...i, tratamento: { titulo: 'Fonte', url: 'HTTPS://www.embrapa.br/x' } } : i) })) };
+      montar(maiusculo);
+      await screen.findByRole('table');
+      expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(2);
+    });
+    it('não mostra a seção no parecer parcial', async () => {
+      montar({ ...exemploParecer, final: false });
+      await screen.findByRole('table');
+      expect(screen.queryByRole('heading', { name: 'Como tratar' })).toBeNull();
+      expect(screen.queryByRole('link', { name: /^Como tratar/ })).toBeNull();
     });
     it('não oferece tratamento com exatamente 20%', async () => {
       montar(comPercentuais(20));
@@ -136,7 +149,9 @@ describe('parecer do sistema', () => {
     it('oferece tratamento com 21%', async () => {
       montar(comPercentuais(21));
       await screen.findByRole('table');
-      expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(8);
+      const total = exemploParecer.blocos.flatMap(b => b.itens).length;
+      expect(total).toBeGreaterThan(0);
+      expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(total);
     });
     it('esconde a seção quando nenhuma doença passa de 20%', async () => {
       montar(comPercentuais(0));
