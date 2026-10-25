@@ -1,10 +1,18 @@
 """Busca dirigida a objetivos e limites conservadores de potencial."""
+import hashlib
+import json
+from collections import OrderedDict
 from dataclasses import dataclass
 from fractions import Fraction
+from threading import Lock
 from .avaliacao import avaliar_condicao
 from .cf import combinar, fracao
 from .inferencia import inferir, agenda
-from .modelos import Fato, GRAVIDADES, MODOS
+from .modelos import Base, Fato, GRAVIDADES, MODOS
+
+
+_LIVRE=object()  # folha sem valor fixado na busca de consistência
+builtins_id=id  # o nome ``id`` é sombreado pelos parâmetros deste módulo
 
 
 def perguntavel(simbolo, modo):
@@ -30,37 +38,46 @@ def _limites_grupo(id, condicoes, intervalos, resultado, modo, fixos=None):
     """Condições da mesma variável compartilham um valor possível."""
     s=resultado.base.simbolos[id]
     if s['tipo'] in ('pergunta','ficha'):
-        if id in resultado.fatos or not perguntavel(s,modo):
-            valor=min(avaliar_condicao(c,resultado.fatos,resultado.base.simbolos) for c in condicoes)
-            return valor,valor
-        dominio=s['dominio']
-        if dominio['tipo']=='booleano': valores=[False,True]
-        elif dominio['tipo']=='numerico': valores=_valores_numericos(condicoes,dominio)
-        else:
-            valores=dominio.get('valores')
-            if valores is None:
-                valores=['__outro__']
-                for c in condicoes:
-                    valores.extend(c.get('valor',[]) if c.get('op')=='em' else [c.get('valor')])
-        if fixos is not None and id in fixos: valores=[fixos[id]]
-        possiveis=[Fraction(0)]  # responder não sei também é possível
-        for valor in valores:
-            cf=-Fraction(1) if valor is False else Fraction(1)
-            memoria={id:Fato(id,valor,cf)}
-            possiveis.append(min(avaliar_condicao(c,memoria,resultado.base.simbolos) for c in condicoes))
+        # Folha não depende dos intervalos: o mesmo grupo de condições dá o mesmo limite na análise.
+        memoria=resultado.__dict__.setdefault('_limites_folhas',{})
+        chave=(modo,id,tuple(map(builtins_id,condicoes)),fixos[id] if fixos and id in fixos else _LIVRE)
+        if chave not in memoria:
+            memoria[chave]=_limites_folha(id,s,condicoes,resultado,modo,fixos)
+        return memoria[chave]
+    baixo,alto=intervalos[id]
+    pontos={baixo,alto}
+    if baixo<=0<=alto: pontos.add(Fraction(0))
+    for c in condicoes:
+        for k in ('cf_minimo','cf_maximo'):
+            if k in c:
+                valor=fracao(c[k])
+                if baixo<=valor<=alto: pontos.add(valor)
+    pontos=sorted(pontos)
+    pontos+= [(a+b)/2 for a,b in zip(pontos,pontos[1:])]
+    possiveis=[min(avaliar_condicao(c,{id:Fato(id,True,x,'regra')},resultado.base.simbolos)
+                   for c in condicoes) for x in pontos]
+    return min(possiveis),max(possiveis)
+
+
+def _limites_folha(id,s,condicoes,resultado,modo,fixos):
+    if id in resultado.fatos or not perguntavel(s,modo):
+        valor=min(avaliar_condicao(c,resultado.fatos,resultado.base.simbolos) for c in condicoes)
+        return valor,valor
+    dominio=s['dominio']
+    if dominio['tipo']=='booleano': valores=[False,True]
+    elif dominio['tipo']=='numerico': valores=_valores_numericos(condicoes,dominio)
     else:
-        baixo,alto=intervalos[id]
-        pontos={baixo,alto}
-        if baixo<=0<=alto: pontos.add(Fraction(0))
-        for c in condicoes:
-            for k in ('cf_minimo','cf_maximo'):
-                if k in c:
-                    valor=fracao(c[k])
-                    if baixo<=valor<=alto: pontos.add(valor)
-        pontos=sorted(pontos)
-        pontos+= [(a+b)/2 for a,b in zip(pontos,pontos[1:])]
-        possiveis=[min(avaliar_condicao(c,{id:Fato(id,True,x,'regra')},resultado.base.simbolos)
-                       for c in condicoes) for x in pontos]
+        valores=dominio.get('valores')
+        if valores is None:
+            valores=['__outro__']
+            for c in condicoes:
+                valores.extend(c.get('valor',[]) if c.get('op')=='em' else [c.get('valor')])
+    if fixos is not None and id in fixos: valores=[fixos[id]]
+    possiveis=[Fraction(0)]  # responder não sei também é possível
+    for valor in valores:
+        cf=-Fraction(1) if valor is False else Fraction(1)
+        memoria={id:Fato(id,valor,cf)}
+        possiveis.append(min(avaliar_condicao(c,memoria,resultado.base.simbolos) for c in condicoes))
     return min(possiveis),max(possiveis)
 
 
@@ -94,12 +111,16 @@ def _valores_folha(id,base):
     return list(dict.fromkeys(valores))
 
 
-def _consistente(regra,resultado,modo,excluidas):
+def _consistente(regra,resultado,modo,excluidas,memoria):
     ids=_compartilhadas(regra,resultado.base,resultado,modo)
     if not ids: return True
 
     def buscar(indice,fixos):
-        intervalos,_=_calcular_intervalos(resultado,modo,fixos,excluidas,verificar=False)
+        # Mesmas entradas, mesmos intervalos: a memória vale só durante uma análise.
+        chave=(frozenset(fixos.items()),frozenset(excluidas))
+        if chave not in memoria:
+            memoria[chave]=_calcular_intervalos(resultado,modo,fixos,excluidas,verificar=False)[0]
+        intervalos=memoria[chave]
         if _premissa(regra,intervalos,resultado,modo,fixos)[1]<=resultado.base.meta['limiares']['premissa']:
             return False
         if indice==len(ids): return True
@@ -117,11 +138,12 @@ def _calcular_intervalos(resultado,modo,fixos=None,excluidas=None,verificar=True
     intervalos={id:(resultado.cfs[id],resultado.cfs[id]) if s['tipo'] in ('pergunta','ficha') else (Fraction(0),Fraction(0))
                 for id,s in base.simbolos.items()}
     viaveis={}
+    memoria={}
     for r in agenda(base):
         if r['id'] in excluidas: continue
         baixo,alto=_premissa(r,intervalos,resultado,modo,fixos)
         if alto<=base.meta['limiares']['premissa']: continue
-        if verificar and not _consistente(r,resultado,modo,excluidas):
+        if verificar and not _consistente(r,resultado,modo,excluidas,memoria):
             excluidas.add(r['id'])
             continue
         viaveis[r['id']]=r
@@ -149,8 +171,42 @@ class Analise:
     bandeiras_pendentes: tuple
 
 
+_MEMORIA=OrderedDict()
+_MEMORIA_MAX=256
+_TRAVA=Lock()
+
+
+def limpar_memoria():
+    with _TRAVA: _MEMORIA.clear()
+
+
+def _impressao_base(base):
+    # A API reconstrói a base a cada requisição; a chave é o conteúdo, não a identidade do objeto.
+    impressao=getattr(base,'_impressao',None)
+    if impressao is None:
+        texto=json.dumps({'s':base.simbolos,'r':base.regras,'m':base.meta},sort_keys=True,default=str)
+        impressao=hashlib.sha256(texto.encode()).hexdigest()
+        object.__setattr__(base,'_impressao',impressao)
+    return impressao
+
+
 def analisar(base, fatos, modo):
+    """Função pura de (base, fatos, modo); o resultado é reaproveitado, nunca alterado depois."""
     if modo not in MODOS: raise ValueError('Modo inválido')
+    base=Base.de_dict(base)
+    chave=(_impressao_base(base),modo,tuple(sorted((id,repr(f)) for id,f in fatos.items())))
+    with _TRAVA:
+        if chave in _MEMORIA:
+            _MEMORIA.move_to_end(chave)
+            return _MEMORIA[chave]
+    analise=_analisar(base,fatos,modo)
+    with _TRAVA:
+        _MEMORIA[chave]=analise
+        while len(_MEMORIA)>_MEMORIA_MAX: _MEMORIA.popitem(last=False)
+    return analise
+
+
+def _analisar(base, fatos, modo):
     resultado=inferir(base,fatos)
     base=resultado.base
     lim=base.meta['limiares']
