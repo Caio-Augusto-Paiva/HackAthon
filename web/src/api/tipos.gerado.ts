@@ -1239,6 +1239,11 @@ export interface components {
             motivo_parada: ("confirmacao" | "sem_perguntas" | "limite" | "sem_potencial") | null;
             /** Sessao Id */
             sessao_id: string;
+            /**
+             * Sinais Nao Verificados
+             * @description Sinais das `bandeiras_nao_verificadas` que ainda faltam responder, em linguagem simples.
+             */
+            sinais_nao_verificados?: string[];
             urgencia: components["schemas"]["UrgenciaParecer"];
             /** Versao Base */
             versao_base: string;

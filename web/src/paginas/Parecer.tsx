@@ -85,7 +85,7 @@ export function Parecer() {
         </tbody>)}
       </table><p className={estilos.aviso}>{dados.aviso}</p>
       {dados.inconclusivas.length > 0 && <p className={estilos.aviso}>Hipóteses inconclusivas: {listaPt.format(dados.inconclusivas.map(id => nomes.get(id) ?? id))}.</p>}
-      {dados.bandeiras_nao_verificadas.length > 0 && <p className={estilos.aviso}>Bandeiras ainda não verificadas: {dados.bandeiras_nao_verificadas.join(', ')}.</p>}
+      {dados.sinais_nao_verificados?.length ? <p className={estilos.aviso}>Sinais graves ainda não verificados: {listaPt.format(dados.sinais_nao_verificados)}.</p> : null}
       </div>
       {dados.final && tratar.length > 0 && <section aria-labelledby="titulo-tratar" className={estilos.tratar}>
         <h2 id="titulo-tratar">Como tratar</h2>

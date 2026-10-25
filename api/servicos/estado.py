@@ -17,7 +17,7 @@ from api.schemas.sessao import (
     TelaTriagem,
     UrgenciaEstado,
 )
-from api.servicos.textos import TEXTO_ALERTA, sinal_legivel
+from api.servicos.textos import TEXTO_ALERTA, sinais_das_regras
 from kb.modelos import DominioCategorico, DominioNumerico, Simbolo, Tela
 
 if TYPE_CHECKING:  # só anotação (e, para SessaoCarregada, um import real seria circular)
@@ -92,19 +92,6 @@ def origem_urgencia(motor: Sessao, estado: dict) -> tuple[str, list[str]]:
     return ("regra_urgencia" if regras else "padrao"), regras
 
 
-def _sinais_das_bandeiras(base, regras: list[str]) -> list[str]:
-    """As condições das bandeiras acesas, legíveis para o produtor, sem repetir."""
-    simbolos = {s.id: s for s in base.simbolos}
-    por_id = {r.id: r for r in base.regras}
-    sinais: list[str] = []
-    for regra_id in regras:
-        for condicao in por_id[regra_id].se if regra_id in por_id else ():
-            texto = sinal_legivel(condicao, simbolos)
-            if texto not in sinais:
-                sinais.append(texto)
-    return sinais
-
-
 def montar_estado(carregada: SessaoCarregada, revisao: int) -> EstadoSessao:
     """O ``EstadoSessao`` da sessão carregada, com a ``revisao`` que o chamador gravou ou leu."""
     motor, base = carregada.motor, carregada.base
@@ -132,7 +119,7 @@ def montar_estado(carregada: SessaoCarregada, revisao: int) -> EstadoSessao:
             pausa=pausa,
             acoes=acoes,
             texto=TEXTO_ALERTA[modo],
-            sinais=_sinais_das_bandeiras(base, estado["bandeiras"]),
+            sinais=sinais_das_regras(base, estado["bandeiras"]),
         )
     return EstadoSessao(
         sessao_id=carregada.linha["id"],

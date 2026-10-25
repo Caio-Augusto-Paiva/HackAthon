@@ -2173,6 +2173,14 @@
             "title": "Sessao Id",
             "type": "string"
           },
+          "sinais_nao_verificados": {
+            "description": "Sinais das `bandeiras_nao_verificadas` que ainda faltam responder, em linguagem simples.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Sinais Nao Verificados",
+            "type": "array"
+          },
           "urgencia": {
             "$ref": "#/components/schemas/UrgenciaParecer"
           },

@@ -48,6 +48,11 @@ describe('parecer do sistema', () => {
     montar({ ...exemploParecer, inconclusivas: [primeiro.doenca, segundo.doenca] });
     expect(await screen.findByText(`Hipóteses inconclusivas: ${primeiro.nome} e ${segundo.nome}.`)).toBeInTheDocument();
   });
+  it('mostra as bandeiras não verificadas pelos sinais que faltam, sem o código da regra', async () => {
+    montar({ ...exemploParecer, bandeiras_nao_verificadas: ['R-BV-05'], sinais_nao_verificados: ['febre', 'apatia'] });
+    expect(await screen.findByText('Sinais graves ainda não verificados: febre e apatia.')).toBeInTheDocument();
+    expect(screen.queryByText(/R-BV-05/)).toBeNull();
+  });
   it('não mostra o aviso de nada confirmado quando alguma doença tem percentual', async () => {
     montar();
     await screen.findByRole('table', { name: 'Hipóteses e confiança do sistema' });

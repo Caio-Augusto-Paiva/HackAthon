@@ -58,3 +58,7 @@ class Parecer(BaseModel):
     blocos: list[Bloco]
     inconclusivas: list[str]
     bandeiras_nao_verificadas: list[str]
+    sinais_nao_verificados: list[str] = Field(
+        default_factory=list,
+        description="Sinais das `bandeiras_nao_verificadas` que ainda faltam responder, em linguagem simples.",
+    )

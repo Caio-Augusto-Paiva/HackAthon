@@ -5,11 +5,11 @@ equipe revisar a redação sem mexer na lógica.
 """
 from __future__ import annotations
 
-from collections.abc import Mapping
+from collections.abc import Collection, Iterable, Mapping
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # só anotação
-    from kb.modelos import Condicao, Regra, Simbolo
+    from kb.modelos import Base, Condicao, Regra, Simbolo
 
 # (nível de urgência, modo) -> texto da urgência no parecer
 TEXTO_URGENCIA: dict[tuple[str, str], str] = {
@@ -112,3 +112,16 @@ def sinal_legivel(condicao: Condicao, simbolos: Mapping[str, Simbolo]) -> str:
     else:
         texto = f"{nome} {_valor_legivel(valor)}"
     return f"sem {texto}" if condicao.negado else texto
+
+
+def sinais_das_regras(base: Base, regras: Iterable[str], conhecidos: Collection[str] = ()) -> list[str]:
+    """As condições das ``regras``, legíveis e sem repetir; ``conhecidos`` (já respondidos) ficam de fora."""
+    simbolos = {s.id: s for s in base.simbolos}
+    por_id = {r.id: r for r in base.regras}
+    sinais: list[str] = []
+    for regra_id in regras:
+        for condicao in por_id[regra_id].se if regra_id in por_id else ():
+            texto = sinal_legivel(condicao, simbolos)
+            if condicao.simbolo not in conhecidos and texto not in sinais:
+                sinais.append(texto)
+    return sinais
