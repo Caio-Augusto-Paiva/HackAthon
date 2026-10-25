@@ -112,4 +112,41 @@ describe('parecer do sistema', () => {
     expect(screen.getByRole('table')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Mudar para modo produtor' })).toBeEnabled();
   });
+  describe('como tratar', () => {
+    const comTratamento = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.tratamento);
+    const comPercentuais = (percentual: number) => ({ ...exemploParecer, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => ({ ...i, percentual, potencial: Math.max(i.potencial, percentual), tratamento: { titulo: 'Fonte', url: 'https://www.embrapa.br/x' } })) })) });
+    it('oferece um link de tratamento por doença acima de 20%', async () => {
+      montar();
+      const secao = (await screen.findByRole('heading', { name: 'Como tratar' })).closest('section') as HTMLElement;
+      const links = within(secao).getAllByRole('link');
+      expect(comTratamento.map(i => i.percentual)).toEqual([87, 32]);
+      expect(links).toHaveLength(2);
+      links.forEach((link, i) => {
+        expect(link).toHaveAttribute('href', comTratamento[i].tratamento!.url);
+        expect(link).toHaveAttribute('target', '_blank');
+        expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+        expect(link).toHaveAccessibleName(`Como tratar ${comTratamento[i].nome}`);
+      });
+    });
+    it('não oferece tratamento com exatamente 20%', async () => {
+      montar(comPercentuais(20));
+      await screen.findByRole('table');
+      expect(screen.queryByRole('link', { name: /^Como tratar/ })).toBeNull();
+    });
+    it('oferece tratamento com 21%', async () => {
+      montar(comPercentuais(21));
+      await screen.findByRole('table');
+      expect(screen.getAllByRole('link', { name: /^Como tratar/ })).toHaveLength(8);
+    });
+    it('esconde a seção quando nenhuma doença passa de 20%', async () => {
+      montar(comPercentuais(0));
+      await screen.findByRole('table');
+      expect(screen.queryByRole('heading', { name: 'Como tratar' })).toBeNull();
+    });
+    it('mostra o aviso de que o tratamento é indicado pelo veterinário', async () => {
+      montar();
+      const secao = (await screen.findByRole('heading', { name: 'Como tratar' })).closest('section') as HTMLElement;
+      expect(secao).toHaveTextContent('Informação geral de fonte pública. O tratamento deve ser indicado por um médico-veterinário.');
+    });
+  });
 });

@@ -624,6 +624,8 @@ export interface components {
             combinacao: components["schemas"]["Combinacao"][];
             /** Evidencias */
             evidencias: components["schemas"]["Evidencia"][];
+            /** Exclusoes */
+            exclusoes?: components["schemas"]["EtapaExclusao"][];
             /** Nome */
             nome: string;
             /** Percentual */
@@ -820,6 +822,35 @@ export interface components {
             /** Versao Base */
             versao_base: string;
         };
+        /**
+         * EtapaExclusao
+         * @description A doença perdeu força porque outra do mesmo par excludente ficou mais forte (``por``).
+         */
+        EtapaExclusao: {
+            /** Antes */
+            antes: number;
+            /** Depois */
+            depois: number;
+            /** Fonte */
+            fonte?: string | null;
+            /** Frase */
+            frase: string;
+            /** Nota */
+            nota?: string | null;
+            /**
+             * Por
+             * @description Id da doença vencedora do par.
+             */
+            por: string;
+            /** Por Nome */
+            por_nome: string;
+            /**
+             * Tipo
+             * @default exclusao
+             * @constant
+             */
+            tipo: "exclusao";
+        };
         /** Evidencia */
         Evidencia: {
             /** Cf Regra */
@@ -847,6 +878,18 @@ export interface components {
             status: "suposicao_a_validar" | "validada";
             /** Texto */
             texto: string;
+        };
+        /** Exclusao */
+        Exclusao: {
+            /** Doencas */
+            doencas: [
+                string,
+                string
+            ];
+            /** Fonte */
+            fonte: string;
+            /** Nota */
+            nota: string;
         };
         /** Execucao */
         Execucao: {
@@ -967,6 +1010,8 @@ export interface components {
              * @enum {string}
              */
             situacao: "com_evidencia" | "sem_evidencia" | "descartada";
+            /** @description Link de fonte pública sobre a doença (título e URL), quando a base o traz; senão null. */
+            tratamento?: components["schemas"]["Tratamento"] | null;
         };
         /** Limiares */
         Limiares: {
@@ -995,6 +1040,11 @@ export interface components {
              * @default 0.6
              */
             exaustao: number;
+            /**
+             * Exclusao
+             * @default 0.5
+             */
+            exclusao: number;
             /**
              * Hipotese Relevante
              * @default 0.35
@@ -1077,6 +1127,8 @@ export interface components {
             autor?: string | null;
             /** Data */
             data?: string | null;
+            /** Exclusoes */
+            exclusoes?: components["schemas"]["Exclusao"][];
             limiares?: components["schemas"]["Limiares"];
             limite_dinamico?: components["schemas"]["LimiteDinamico"];
             /** Nota */
@@ -1510,6 +1562,7 @@ export interface components {
              * @enum {string}
              */
             tipo: "pergunta" | "ficha" | "derivado" | "doenca" | "urgencia";
+            tratamento?: components["schemas"]["Tratamento"] | null;
         };
         /** Tela */
         Tela: {
@@ -1567,6 +1620,13 @@ export interface components {
             eventos: {
                 [key: string]: unknown;
             }[];
+        };
+        /** Tratamento */
+        Tratamento: {
+            /** Titulo */
+            titulo: string;
+            /** Url */
+            url: string;
         };
         /** TrocaModo */
         TrocaModo: {

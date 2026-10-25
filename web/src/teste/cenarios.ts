@@ -23,7 +23,10 @@ export const multipla: Estado = {
 };
 export const perguntaDinamica = dinamica.resposta as Estado;
 export const estadoPausado = pausa.resposta as Estado;
-export const exemploParecer = parecer.resposta as components['schemas']['Parecer'];
+const parecerBase = parecer.resposta as components['schemas']['Parecer'];
+// O exemplo do contrato traz tratamento só na hipocalcemia; a cetose (32%) ganha um para cobrir mais de um link.
+export const exemploParecer: components['schemas']['Parecer'] = { ...parecerBase, blocos: parecerBase.blocos.map(b => ({ ...b,
+  itens: b.itens.map(i => i.doenca === 'cetose' ? { ...i, tratamento: { titulo: 'Cetose em vacas leiteiras', url: 'https://www.embrapa.br/busca-de-publicacoes/-/publicacao/cetose' } } : i) })) };
 export const exemploPorque = porque.resposta;
 export const exemploComo = como.resposta;
 

@@ -47,9 +47,15 @@
 .espera a { color: var(--cor-creme); }
 @media(max-width: 800px) { .cabecalho { padding: 24px; } .titulo h1 { font-size: 28px; } .titulo img { width: 72px; height: 72px; } .quadro { padding: 14px; } .linha td, .linha th { padding: 12px 8px; } .prefixo { display: none; } .gravidade { min-width: 70px; } .doenca { font-size: 16px; } .confianca { gap: 8px; } .confianca > div { min-width: 50px; } .confianca strong { font-size: 20px; min-width: 48px; } }
 @media(max-width: 520px) { .conteudo { width: calc(100% - 32px); } .cabecalho a { width: 100%; } .titulo { align-items: flex-start; gap: 12px; } .titulo h1 { font-size: 24px; } .titulo p { font-size: 16px; } .urgencia { padding: 18px; align-items: flex-start; } .urgencia h2 { font-size: 20px; } .urgencia img { width: 24px; height: 24px; } .quadro { padding: 12px; } .posicao { font-size: 15px; } .doenca { font-size: 14px; width: 38%; overflow-wrap: anywhere; } .linha td, .linha th { padding: 10px 5px; } .gravidade { min-width: 0; padding: 4px 6px; font-size: 12px; } .confianca { flex-direction: column-reverse; align-items: stretch; gap: 5px; } .confianca strong { font-size: 18px; text-align: center; } .confianca > div { min-width: 40px; flex: none; } .acoes { flex-direction: column; align-items: stretch; } .nova { font-size: 20px; } }
-/* "Nova verificação" e "Como cheguei aqui?": faixa de luz diagonal lenta e em repetição sob o mouse. */
-.nova, .acoes > button { position: relative; overflow: hidden; isolation: isolate; }
-.nova::after, .acoes > button::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
+/* "Nova verificação", "Como tratar" e "Como cheguei aqui?": faixa de luz diagonal lenta e em repetição sob o mouse. */
+.tratar { display: grid; gap: 10px; margin-top: 24px; padding: 16px 22px; border-radius: 20px; background: rgb(246 241 228 / 10%); border: 2px solid var(--cor-acento); color: var(--cor-texto-claro); }
+.tratar h2 { font: 800 17px/1.3 var(--fonte-corpo); color: var(--cor-acento); margin: 0; }
+.tratar p { margin: 0; font-size: 15px; line-height: 1.5; }
+.tratarLinks { display: flex; flex-wrap: wrap; gap: 14px; }
+.tratarLinks a { display: grid; place-items: center; min-height: 52px; padding: 10px 24px; color: var(--cor-texto); background: var(--cor-acento); border: 3px solid var(--cor-acento-escuro); border-radius: var(--raio-botao); box-shadow: var(--sombra-clay); text-decoration: none; font-weight: 800; font-size: 18px; }
+.tratarLinks a:hover { background: color-mix(in srgb, var(--cor-acento) 90%, white); }
+.nova, .tratarLinks a, .acoes > button { position: relative; overflow: hidden; isolation: isolate; }
+.nova::after, .tratarLinks a::after, .acoes > button::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
   background: linear-gradient(105deg, transparent, rgb(255 255 255 / 75%), transparent); transform: translateX(0) skewX(-18deg); opacity: 0; }
-.nova:hover::after, .acoes > button:hover:not(:disabled)::after { animation: brilho 2.4s ease-in-out infinite; }
+.nova:hover::after, .tratarLinks a:hover::after, .acoes > button:hover:not(:disabled)::after { animation: brilho 2.4s ease-in-out infinite; }
 @keyframes brilho { 0% { opacity: 1; transform: translateX(0) skewX(-18deg); } 70%, 100% { opacity: 1; transform: translateX(420%) skewX(-18deg); } }
