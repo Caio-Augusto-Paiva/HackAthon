@@ -47,16 +47,25 @@
 .espera a { color: var(--cor-creme); }
 @media(max-width: 800px) { .cabecalho { padding: 24px; } .titulo h1 { font-size: 28px; } .titulo img { width: 72px; height: 72px; } .quadro { padding: 14px; } .linha td, .linha th { padding: 12px 8px; } .prefixo { display: none; } .gravidade { min-width: 70px; } .doenca { font-size: 16px; } .confianca { gap: 8px; } .confianca > div { min-width: 50px; } .confianca strong { font-size: 20px; min-width: 48px; } }
 @media(max-width: 520px) { .conteudo { width: calc(100% - 32px); } .cabecalho a { width: 100%; } .titulo { align-items: flex-start; gap: 12px; } .titulo h1 { font-size: 24px; } .titulo p { font-size: 16px; } .urgencia { padding: 18px; align-items: flex-start; } .urgencia h2 { font-size: 20px; } .urgencia img { width: 24px; height: 24px; } .quadro { padding: 12px; } .posicao { font-size: 15px; } .doenca { font-size: 14px; width: 38%; overflow-wrap: anywhere; } .linha td, .linha th { padding: 10px 5px; } .gravidade { min-width: 0; padding: 4px 6px; font-size: 12px; } .confianca { flex-direction: column-reverse; align-items: stretch; gap: 5px; } .confianca strong { font-size: 18px; text-align: center; } .confianca > div { min-width: 40px; flex: none; } .acoes { flex-direction: column; align-items: stretch; } .nova { font-size: 20px; } }
-.tratar { display: grid; gap: 10px; margin-top: 24px; padding: 16px 22px; border-radius: 20px; background: rgb(246 241 228 / 10%); border: 2px solid var(--cor-acento); color: var(--cor-texto-claro); }
-.tratar h2 { font: 800 17px/1.3 var(--fonte-corpo); color: var(--cor-acento); margin: 0; }
-.tratar p { margin: 0; font-size: 15px; line-height: 1.5; }
-.tratarLinks { display: flex; flex-wrap: wrap; gap: 14px; }
-.tratarLinks a { display: grid; place-items: center; min-height: 52px; padding: 10px 24px; color: var(--cor-texto); background: var(--cor-acento); border: 3px solid var(--cor-acento-escuro); border-radius: var(--raio-botao); box-shadow: var(--sombra-clay); text-decoration: none; font-weight: 800; font-size: 18px; }
-.tratarFonte { display: block; font-weight: 600; font-size: 14px; }
-.tratarLinks a:hover { background: color-mix(in srgb, var(--cor-acento) 90%, white); }
+.tratar { display: grid; gap: 14px; margin-top: 24px; padding: 22px 24px; border-radius: 22px; background: rgb(246 241 228 / 8%); border: 2px solid rgb(244 166 166 / 55%); color: var(--cor-texto-claro); }
+.tratar h2 { font: 400 26px/1.2 var(--fonte-titulo); color: var(--cor-creme); margin: 0; text-wrap: balance; }
+.tratarMotivo { margin: -6px 0 4px; font-size: 16px; line-height: 1.5; max-width: 62ch; color: rgb(246 241 228 / 88%); }
+.tratarAviso { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: var(--cor-acento); font-weight: 700; }
+.tratarLista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.tratarLista a { display: grid; grid-template-columns: 1fr auto 24px; grid-template-areas: "nome confianca icone" "fonte confianca icone"; align-items: center; column-gap: 18px; row-gap: 2px;
+  min-height: 64px; padding: 12px 20px 12px 22px; border-radius: 18px; background: var(--cor-creme); color: var(--cor-texto); text-decoration: none;
+  box-shadow: 0 4px 12px rgb(9 30 16 / 28%); transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s cubic-bezier(.16,1,.3,1); }
+.tratarLista a:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgb(9 30 16 / 34%); }
+.tratarLista a:focus-visible { outline: 3px solid var(--cor-acento); outline-offset: 3px; }
+.tratarNome { grid-area: nome; font-weight: 800; font-size: 18px; line-height: 1.3; }
+.tratarFonte { grid-area: fonte; font-size: 14px; line-height: 1.4; color: var(--cor-texto-suave); }
+.tratarConfianca { grid-area: confianca; padding: 6px 12px; border-radius: 99px; background: var(--cor-acento); color: var(--cor-texto); font: 800 14px/1 var(--fonte-corpo); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tratarIcone { grid-area: icone; color: var(--cor-acento-escuro); transition: transform .25s cubic-bezier(.16,1,.3,1); }
+.tratarLista a:hover .tratarIcone { transform: translate(2px, -2px); }
+@media (prefers-reduced-motion: reduce) { .tratarLista a, .tratarIcone { transition: none; } .tratarLista a:hover, .tratarLista a:hover .tratarIcone { transform: none; } }
 /* "Nova verificação", "Como tratar" e "Como cheguei aqui?": faixa de luz diagonal lenta e em repetição sob o mouse. */
-.nova, .tratarLinks a, .acoes > button { position: relative; overflow: hidden; isolation: isolate; }
-.nova::after, .tratarLinks a::after, .acoes > button::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
+.nova, .tratarLista a, .acoes > button { position: relative; overflow: hidden; isolation: isolate; }
+.nova::after, .tratarLista a::after, .acoes > button::after { content: ''; position: absolute; inset: -20% auto -20% -60%; width: 45%; z-index: 1; pointer-events: none;
   background: linear-gradient(105deg, transparent, rgb(255 255 255 / 75%), transparent); transform: translateX(0) skewX(-18deg); opacity: 0; }
-.nova:hover::after, .tratarLinks a:hover::after, .acoes > button:hover:not(:disabled)::after { animation: brilho 2.4s ease-in-out infinite; }
+.nova:hover::after, .tratarLista a:hover::after, .acoes > button:hover:not(:disabled)::after { animation: brilho 2.4s ease-in-out infinite; }
 @keyframes brilho { 0% { opacity: 1; transform: translateX(0) skewX(-18deg); } 70%, 100% { opacity: 1; transform: translateX(420%) skewX(-18deg); } }

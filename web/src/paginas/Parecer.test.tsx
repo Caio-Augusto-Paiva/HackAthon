@@ -136,6 +136,20 @@ describe('parecer do sistema', () => {
   describe('como tratar', () => {
     const comTratamento = exemploParecer.blocos.flatMap(b => b.itens).filter(i => i.tratamento);
     const comPercentuais = (percentual: number) => ({ ...exemploParecer, blocos: exemploParecer.blocos.map(b => ({ ...b, itens: b.itens.map(i => ({ ...i, percentual, potencial: Math.max(i.potencial, percentual), tratamento: { titulo: 'Fonte', url: 'https://www.embrapa.br/x' } })) })) });
+    it('explica sob o título que sugere por passar de 20% de confiança', async () => {
+      montar();
+      const secao = (await screen.findByRole('heading', { name: 'Como tratar' })).closest('section') as HTMLElement;
+      expect(secao).toHaveTextContent('Sugerimos estas leituras porque o sistema tem mais de 20% de confiança de que a vaca tem estas doenças.');
+    });
+    it('cada linha mostra só o nome da doença, sem repetir "Como tratar"', async () => {
+      montar();
+      const secao = (await screen.findByRole('heading', { name: 'Como tratar' })).closest('section') as HTMLElement;
+      for (const [i, link] of within(secao).getAllByRole('link').entries()) {
+        expect(within(link).getByText(comTratamento[i].nome)).toBeVisible();
+        expect(within(link).getByText(`${comTratamento[i].percentual}% de confiança`)).toBeVisible();
+        expect(within(link).queryByText(/^Como tratar/, { ignore: '.somenteLeitor' })).toBeNull();
+      }
+    });
     it('oferece um link de tratamento por doença acima de 20%', async () => {
       montar();
       const secao = (await screen.findByRole('heading', { name: 'Como tratar' })).closest('section') as HTMLElement;
