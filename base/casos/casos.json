@@ -1937,5 +1937,391 @@
         ]
       }
     }
+  },
+  {
+    "id": "C-ULC-01",
+    "descricao": "Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 120,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [
+        "claudicacao"
+      ],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "mancar_pata_traseira_sem_inchaco": true,
+      "dor_flexao_talao": false,
+      "inchaco_entre_unhas_mau_cheiro": false
+    },
+    "esperado": {
+      "top1": "ulcera_sola",
+      "urgencia": "observar",
+      "faixas": {
+        "ulcera_sola": [
+          50,
+          75
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-ULC-02",
+    "descricao": "Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 140,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [
+        "claudicacao"
+      ],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "lesao_sola_pinca_dor": true,
+      "lesao_erosiva_talao_morango": false,
+      "fissura_interdigital_necrotica": false
+    },
+    "esperado": {
+      "top1": "ulcera_sola",
+      "urgencia": "observar",
+      "faixas": {
+        "ulcera_sola": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-FLE-01",
+    "descricao": "Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 90,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "quente",
+      "atitude_locomocao": [
+        "claudicacao"
+      ],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "inchaco_entre_unhas_mau_cheiro": true,
+      "mancar_pata_traseira_sem_inchaco": false
+    },
+    "esperado": {
+      "top1": "flegmao_interdigital",
+      "urgencia": "observar",
+      "faixas": {
+        "flegmao_interdigital": [
+          60,
+          85
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-FLE-02",
+    "descricao": "Flegmão interdigital: febre e fissura interdigital necrótica Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 39.8,
+      "atitude_locomocao": [
+        "claudicacao"
+      ],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "fissura_interdigital_necrotica": true,
+      "lesao_erosiva_talao_morango": false
+    },
+    "esperado": {
+      "top1": "flegmao_interdigital",
+      "urgencia": "observar",
+      "faixas": {
+        "flegmao_interdigital": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-END-01",
+    "descricao": "Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 40,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": [
+        "corrimento_vaginal"
+      ]
+    },
+    "respostas": {
+      "corrimento_com_pus_apos_21_dias": true
+    },
+    "esperado": {
+      "top1": "endometrite",
+      "urgencia": "observar",
+      "faixas": {
+        "endometrite": [
+          60,
+          85
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-END-02",
+    "descricao": "Endometrite clínica: Metricheck purulento aos 60 dias, sem febre Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 60,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.7,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": [
+        "corrimento_vaginal"
+      ]
+    },
+    "respostas": {
+      "metricheck_purulento": true
+    },
+    "esperado": {
+      "top1": "endometrite",
+      "urgencia": "observar",
+      "faixas": {
+        "endometrite": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-CIS-01",
+    "descricao": "Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 100,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "cio_irregular_ou_constante": true
+    },
+    "esperado": {
+      "top1": "cisto_ovariano",
+      "urgencia": "observar",
+      "faixas": {
+        "cisto_ovariano": [
+          55,
+          75
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-CIS-02",
+    "descricao": "Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 75,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.5,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "estrutura_ovariana_maior_25mm": true
+    },
+    "esperado": {
+      "top1": "cisto_ovariano",
+      "urgencia": "observar",
+      "faixas": {
+        "cisto_ovariano": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-LIP-01",
+    "descricao": "Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 7,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "vaca_gorda_no_parto": true,
+      "halito_adocicado_acetona": false,
+      "recusa_concentrado_come_volumoso": false
+    },
+    "esperado": {
+      "top1": "lipidose_hepatica",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "lipidose_hepatica": [
+          50,
+          75
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-LIP-01",
+    "descricao": "Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 10,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "reduzido",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "bhb_sanguineo": 1.8,
+      "vaca_gorda_no_parto": true,
+      "enzimas_hepaticas_elevadas": true
+    },
+    "esperado": {
+      "top1": "lipidose_hepatica",
+      "urgencia": "chamar_agora",
+      "faixas": {
+        "lipidose_hepatica": [
+          85,
+          100
+        ],
+        "cetose": [
+          80,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-EXC-MET-END",
+    "descricao": "Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 35,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": [
+        "corrimento_vaginal"
+      ]
+    },
+    "respostas": {
+      "corrimento_com_pus_apos_21_dias": true
+    },
+    "esperado": {
+      "top1": "endometrite",
+      "urgencia": "observar",
+      "faixas": {
+        "endometrite": [
+          60,
+          100
+        ],
+        "metrite": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-DD-PODAL-DIF",
+    "descricao": "Diferencial podal: manqueira com lesão em morango no talão; a dermatite digital continua à frente da úlcera de sola Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 150,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [
+        "claudicacao"
+      ],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "lesao_erosiva_talao_morango": true
+    },
+    "esperado": {
+      "top1": "dermatite_digital",
+      "urgencia": "observar",
+      "faixas": {
+        "dermatite_digital": [
+          85,
+          100
+        ],
+        "ulcera_sola": [
+          0,
+          10
+        ]
+      }
+    }
   }
 ]
