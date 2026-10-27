@@ -3,7 +3,7 @@
     "versao": "v0008",
     "pai": "v0007",
     "autor": "equipe",
-    "data": "2026-10-26",
+    "data": "2026-10-27",
     "nota": "25 doenças: casco, reprodução e lipidose",
     "limiares": {
       "descarte": -0.2,
@@ -2809,6 +2809,32 @@
       "nota": "Lesão ulcerativa circunscrita e granulomatosa no espaço interdigital/talão com aspecto de framboesa/morango."
     },
     {
+      "id": "R-DD-04",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "inchaco_entre_unhas_mau_cheiro",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "dermatite_digital",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: inchaço entre as unhas com mau cheiro aponta para flegmão interdigital; não exclui dermatite digital em outra unha."
+    },
+    {
       "id": "R-HIP-03",
       "se": [
         {
@@ -5436,6 +5462,15 @@
           "negado": false
         },
         {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
           "simbolo": "cio_irregular_ou_constante",
           "op": "=",
           "valor": true,
@@ -5450,7 +5485,7 @@
       "prioridade": 10,
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Cio irregular ou constante depois de 40 dias do parto, sem o contexto de apetite normal, é sinal inespecífico de cisto ovariano."
+      "nota": "Cio irregular ou constante depois de 40 dias do parto em vaca com apetite reduzido ou ausente é sinal inespecífico de cisto ovariano; com apetite normal vale a R-CIS-01."
     },
     {
       "id": "R-URG-24",
@@ -5741,6 +5776,32 @@
       "nota": "Claudicação, sozinha, é sinal inespecífico de flegmão interdigital."
     },
     {
+      "id": "R-FLE-06",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "lesao_erosiva_talao_morango",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: lesão em morango no talão, sem inchaço, aponta para dermatite digital."
+    },
+    {
       "id": "R-URG-22",
       "se": [
         {
@@ -5800,6 +5861,12 @@
       "id": "R-LIP-02",
       "se": [
         {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
           "simbolo": "apetite",
           "op": "em",
           "valor": [
@@ -5823,7 +5890,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Enzimas hepáticas elevadas com apetite reduzido apoiam lipidose hepática; a confirmação é a biópsia hepática."
+      "nota": "Enzimas hepáticas elevadas com apetite reduzido no início da lactação apoiam lipidose hepática; a confirmação é a biópsia hepática."
     },
     {
       "id": "R-LIP-03",
@@ -5974,13 +6041,13 @@
       ],
       "entao": {
         "simbolo": "ulcera_sola",
-        "cf": -0.3
+        "cf": -0.2
       },
       "classe": "evidencia",
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha."
+      "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha. Peso −0,2 (e não −0,3): com −0,3 a úlcera caía abaixo do limiar de descarte antes de se perguntar a manqueira sem inchaço."
     },
     {
       "id": "R-ULC-04",
@@ -6027,6 +6094,32 @@
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
       "nota": "Claudicação, sozinha, é sinal inespecífico de úlcera de sola."
+    },
+    {
+      "id": "R-ULC-06",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dor_flexao_talao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial no modo produtor: dor na região do talão aponta para dermatite digital, não para lesão da sola."
     },
     {
       "id": "R-URG-21",

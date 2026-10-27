@@ -57,7 +57,19 @@ class TestPerguntasCoerentes(unittest.TestCase):
 
     def test_sem_claudicacao_nao_pergunta_o_casco(self):
         casco = {'mancar_pata_traseira_sem_inchaco', 'inchaco_entre_unhas_mau_cheiro'}
-        self.assertFalse(casco & set(_perguntas_feitas(TRIAGEM)))
+
+        def quadro(claudicacao):
+            return [
+                ('dias_em_lactacao', {'dias_em_lactacao': '120'}),
+                ('estado_termico', {'extremidades': 'normal'}),
+                ('atitude_locomocao', {'apatia': False, 'claudicacao': claudicacao, 'decubito': False}),
+                ('apetite_ruminacao', {'apetite': 'normal'}),
+                ('producao_leite', {'queda_producao': False, 'leite_alterado': False, 'ubere_inflamado': False}),
+                ('excrecoes', {'diarreia': False, 'corrimento_vaginal': False, 'urina_escura': False}),
+            ]
+
+        self.assertFalse(casco & set(_perguntas_feitas(quadro(False))))
+        self.assertTrue(casco & set(_perguntas_feitas(quadro(True))))  # o teste não passa em vazio
 
     def test_leite_sem_alteracao_nao_pergunta_sangue_no_leite(self):
         self.assertNotIn('leite_com_sangue', self.feitas)

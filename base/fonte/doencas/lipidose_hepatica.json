@@ -90,6 +90,12 @@
       "id": "R-LIP-02",
       "se": [
         {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
           "simbolo": "apetite",
           "op": "em",
           "valor": [
@@ -113,7 +119,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Enzimas hepáticas elevadas com apetite reduzido apoiam lipidose hepática; a confirmação é a biópsia hepática."
+      "nota": "Enzimas hepáticas elevadas com apetite reduzido no início da lactação apoiam lipidose hepática; a confirmação é a biópsia hepática."
     },
     {
       "id": "R-LIP-03",

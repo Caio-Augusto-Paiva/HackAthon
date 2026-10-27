@@ -104,13 +104,13 @@
       ],
       "entao": {
         "simbolo": "ulcera_sola",
-        "cf": -0.3
+        "cf": -0.2
       },
       "classe": "evidencia",
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha."
+      "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha. Peso −0,2 (e não −0,3): com −0,3 a úlcera caía abaixo do limiar de descarte antes de se perguntar a manqueira sem inchaço."
     },
     {
       "id": "R-ULC-04",
@@ -157,6 +157,32 @@
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
       "nota": "Claudicação, sozinha, é sinal inespecífico de úlcera de sola."
+    },
+    {
+      "id": "R-ULC-06",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dor_flexao_talao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial no modo produtor: dor na região do talão aponta para dermatite digital, não para lesão da sola."
     },
     {
       "id": "R-URG-21",

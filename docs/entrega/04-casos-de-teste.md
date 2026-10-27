@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0008`. Casos sintéticos executados: **72**. Aprovados: **72**.
+Base `v0008`. Casos sintéticos executados: **73**. Aprovados: **73**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -80,6 +80,7 @@ Os casos demonstram integração e comportamento determinístico. Não medem acu
 | C-N-LIP-01 | passou | chamar_agora | lipidose_hepatica | não |
 | C-EXC-MET-END | passou | observar | endometrite | não |
 | C-DD-PODAL-DIF | passou | observar | dermatite_digital | não |
+| C-DD-PODAL-PROD | passou | observar | dermatite_digital | não |
 
 ## C-MAS-01
 
@@ -315,7 +316,6 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "edema_barbela",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -2581,7 +2581,6 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
     "dias_em_lactacao",
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -2782,12 +2781,11 @@ Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de r
     "top3_contem": [
       "dermatite_digital",
       "flegmao_interdigital",
-      "ulcera_sola"
+      "acidose"
     ],
     "percentuais": {
       "dermatite_digital": 65,
       "flegmao_interdigital": 5,
-      "ulcera_sola": 5,
       "acidose": 0,
       "brucelose": 0,
       "bvd": 0,
@@ -2809,6 +2807,7 @@ Dermatite digital: claudicação e dor ao flexionar o talão Caso fictício de r
       "timpanismo_gasoso": 0,
       "tpb": 0,
       "tuberculose": 0,
+      "ulcera_sola": 0,
       "retencao_placenta": 0
     },
     "motivo_parada": "sem_perguntas",
@@ -2897,12 +2896,11 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "top1": "dermatite_digital",
     "top3_contem": [
       "dermatite_digital",
-      "flegmao_interdigital",
-      "acidose"
+      "acidose",
+      "brucelose"
     ],
     "percentuais": {
       "dermatite_digital": 90,
-      "flegmao_interdigital": 5,
       "acidose": 0,
       "brucelose": 0,
       "bvd": 0,
@@ -2925,6 +2923,7 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
       "tpb": 0,
       "tuberculose": 0,
       "ulcera_sola": 0,
+      "flegmao_interdigital": 0,
       "retencao_placenta": 0
     },
     "motivo_parada": "sem_perguntas",
@@ -2948,11 +2947,11 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "dor_flexao_talao",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
     "fezes_aquosas_espuma_graos",
-    "fissura_interdigital_necrotica",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
     "higroma",
@@ -2960,6 +2959,7 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "inchaco_entre_unhas_mau_cheiro",
     "leite_alterado",
     "lesao_erosiva_talao_morango",
+    "lesao_sola_pinca_dor",
     "magnesio_serico",
     "mancar_pata_traseira_sem_inchaco",
     "mucosas_palidas_ou_ictericas",
@@ -4833,7 +4833,6 @@ Timpanismo espumoso: espuma pela sonda Caso fictício de regressão; suposição
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "emagrecimento_progressivo",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -5103,7 +5102,6 @@ Timpanismo gasoso: gás livre pela sonda Caso fictício de regressão; suposiç�
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "emagrecimento_progressivo",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -5619,7 +5617,6 @@ Pneumonia: febre e crepitações à auscultação Caso fictício de regressão; 
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "edema_barbela",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -5884,7 +5881,6 @@ Reticulopericardite: prova de dor reticular positiva Caso fictício de regressã
     "dias_em_lactacao",
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -6150,7 +6146,6 @@ Hipomagnesemia: magnésio sérico baixo Caso fictício de regressão; suposiçã
     "dias_em_lactacao",
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -6672,7 +6667,6 @@ Leptospirose: sorologia reagente Caso fictício de regressão; suposição a val
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "edema_barbela",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -7200,7 +7194,6 @@ BVD: antígeno detectado Caso fictício de regressão; suposição a validar.
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
     "edema_barbela",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -7739,7 +7732,6 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "dias_em_lactacao",
     "distensao_flanco_direito",
     "distensao_flanco_esquerdo",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -7777,14 +7769,14 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
 
 ## C-ULC-01
 
-Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas Caso fictício de regressão; suposição a validar.
+Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-ULC-01",
-  "descricao": "Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas Caso fictício de regressão; suposição a validar.",
+  "descricao": "Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas. Caso fictício de regressão; suposição a validar.",
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 120,
@@ -7893,14 +7885,14 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
 
 ## C-N-ULC-02
 
-Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão Caso fictício de regressão; suposição a validar.
+Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-N-ULC-02",
-  "descricao": "Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão Caso fictício de regressão; suposição a validar.",
+  "descricao": "Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 140,
@@ -8033,14 +8025,14 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
 
 ## C-FLE-01
 
-Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes Caso fictício de regressão; suposição a validar.
+Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-FLE-01",
-  "descricao": "Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes Caso fictício de regressão; suposição a validar.",
+  "descricao": "Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes. Caso fictício de regressão; suposição a validar.",
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 90,
@@ -8084,12 +8076,11 @@ Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e
     "top1": "flegmao_interdigital",
     "top3_contem": [
       "flegmao_interdigital",
-      "dermatite_digital",
-      "acidose"
+      "acidose",
+      "cetose"
     ],
     "percentuais": {
       "flegmao_interdigital": 70,
-      "dermatite_digital": 30,
       "acidose": 5,
       "cetose": 5,
       "deslocamento_abomaso_esquerda": 5,
@@ -8097,6 +8088,7 @@ Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e
       "brucelose": 0,
       "bvd": 0,
       "cisto_ovariano": 0,
+      "dermatite_digital": 0,
       "deslocamento_abomaso_direita": 0,
       "endometrite": 0,
       "hipomagnesemia": 0,
@@ -8158,14 +8150,14 @@ Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e
 
 ## C-N-FLE-02
 
-Flegmão interdigital: febre e fissura interdigital necrótica Caso fictício de regressão; suposição a validar.
+Flegmão interdigital: febre e fissura interdigital necrótica. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-N-FLE-02",
-  "descricao": "Flegmão interdigital: febre e fissura interdigital necrótica Caso fictício de regressão; suposição a validar.",
+  "descricao": "Flegmão interdigital: febre e fissura interdigital necrótica. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 100,
@@ -8268,7 +8260,6 @@ Flegmão interdigital: febre e fissura interdigital necrótica Caso fictício de
     "distensao_flanco_esquerdo",
     "dor_flexao_talao",
     "edema_barbela",
-    "enzimas_hepaticas_elevadas",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
@@ -8310,14 +8301,14 @@ Flegmão interdigital: febre e fissura interdigital necrótica Caso fictício de
 
 ## C-END-01
 
-Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre Caso fictício de regressão; suposição a validar.
+Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-END-01",
-  "descricao": "Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre Caso fictício de regressão; suposição a validar.",
+  "descricao": "Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre. Caso fictício de regressão; suposição a validar.",
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 40,
@@ -8427,14 +8418,14 @@ Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre Caso f
 
 ## C-N-END-02
 
-Endometrite clínica: Metricheck purulento aos 60 dias, sem febre Caso fictício de regressão; suposição a validar.
+Endometrite clínica: Metricheck purulento aos 60 dias, sem febre. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-N-END-02",
-  "descricao": "Endometrite clínica: Metricheck purulento aos 60 dias, sem febre Caso fictício de regressão; suposição a validar.",
+  "descricao": "Endometrite clínica: Metricheck purulento aos 60 dias, sem febre. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 60,
@@ -8559,14 +8550,14 @@ Endometrite clínica: Metricheck purulento aos 60 dias, sem febre Caso fictício
 
 ## C-CIS-01
 
-Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações Caso fictício de regressão; suposição a validar.
+Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-CIS-01",
-  "descricao": "Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações Caso fictício de regressão; suposição a validar.",
+  "descricao": "Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações. Caso fictício de regressão; suposição a validar.",
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 100,
@@ -8611,7 +8602,7 @@ Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações
       "brucelose"
     ],
     "percentuais": {
-      "cisto_ovariano": 62,
+      "cisto_ovariano": 60,
       "acidose": 0,
       "brucelose": 0,
       "bvd": 0,
@@ -8670,14 +8661,14 @@ Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações
 
 ## C-N-CIS-02
 
-Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom Caso fictício de regressão; suposição a validar.
+Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-N-CIS-02",
-  "descricao": "Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom Caso fictício de regressão; suposição a validar.",
+  "descricao": "Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 75,
@@ -8800,14 +8791,14 @@ Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom Caso fictício d
 
 ## C-LIP-01
 
-Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana Caso fictício de regressão; suposição a validar.
+Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-LIP-01",
-  "descricao": "Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana Caso fictício de regressão; suposição a validar.",
+  "descricao": "Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana. Caso fictício de regressão; suposição a validar.",
   "modo": "produtor",
   "ficha": {
     "dias_em_lactacao": 7,
@@ -8921,14 +8912,14 @@ Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana Cas
 
 ## C-N-LIP-01
 
-Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas Caso fictício de regressão; suposição a validar.
+Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-N-LIP-01",
-  "descricao": "Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas Caso fictício de regressão; suposição a validar.",
+  "descricao": "Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 10,
@@ -9069,14 +9060,14 @@ Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzima
 
 ## C-EXC-MET-END
 
-Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada Caso fictício de regressão; suposição a validar.
+Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-EXC-MET-END",
-  "descricao": "Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada Caso fictício de regressão; suposição a validar.",
+  "descricao": "Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 35,
@@ -9210,14 +9201,14 @@ Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e
 
 ## C-DD-PODAL-DIF
 
-Diferencial podal: manqueira com lesão em morango no talão; a dermatite digital continua à frente da úlcera de sola Caso fictício de regressão; suposição a validar.
+Diferencial podal: manqueira de trás sem inchaço e lesão em morango no talão; a dermatite digital vence a úlcera de sola, que tinha evidência positiva. Caso fictício de regressão; suposição a validar.
 
 ### Entrada e resultado esperado
 
 ```json
 {
   "id": "C-DD-PODAL-DIF",
-  "descricao": "Diferencial podal: manqueira com lesão em morango no talão; a dermatite digital continua à frente da úlcera de sola Caso fictício de regressão; suposição a validar.",
+  "descricao": "Diferencial podal: manqueira de trás sem inchaço e lesão em morango no talão; a dermatite digital vence a úlcera de sola, que tinha evidência positiva. Caso fictício de regressão; suposição a validar.",
   "modo": "veterinario",
   "ficha": {
     "dias_em_lactacao": 150,
@@ -9233,7 +9224,8 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
     "excrecoes": []
   },
   "respostas": {
-    "lesao_erosiva_talao_morango": true
+    "lesao_erosiva_talao_morango": true,
+    "mancar_pata_traseira_sem_inchaco": true
   },
   "esperado": {
     "top1": "dermatite_digital",
@@ -9244,8 +9236,8 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
         100
       ],
       "ulcera_sola": [
-        0,
-        10
+        20,
+        50
       ]
     }
   }
@@ -9264,12 +9256,12 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
     "top1": "dermatite_digital",
     "top3_contem": [
       "dermatite_digital",
-      "flegmao_interdigital",
+      "ulcera_sola",
       "acidose"
     ],
     "percentuais": {
       "dermatite_digital": 90,
-      "flegmao_interdigital": 5,
+      "ulcera_sola": 47,
       "acidose": 0,
       "brucelose": 0,
       "bvd": 0,
@@ -9291,8 +9283,8 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
       "timpanismo_gasoso": 0,
       "tpb": 0,
       "tuberculose": 0,
-      "ulcera_sola": 0,
-      "retencao_placenta": 0
+      "retencao_placenta": 0,
+      "flegmao_interdigital": 0
     },
     "motivo_parada": "sem_perguntas",
     "bandeiras": [],
@@ -9315,11 +9307,11 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
     "decubito",
     "diarreia",
     "dias_em_lactacao",
+    "dor_flexao_talao",
     "esfregaco_hemoparasitas",
     "espuma_sonda",
     "estrutura_ovariana_maior_25mm",
     "fezes_aquosas_espuma_graos",
-    "fissura_interdigital_necrotica",
     "fita_urina_corpos_cetonicos",
     "gas_livre_sonda",
     "higroma",
@@ -9327,6 +9319,7 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
     "inchaco_entre_unhas_mau_cheiro",
     "leite_alterado",
     "lesao_erosiva_talao_morango",
+    "lesao_sola_pinca_dor",
     "magnesio_serico",
     "mancar_pata_traseira_sem_inchaco",
     "mucosas_palidas_ou_ictericas",
@@ -9348,4 +9341,126 @@ Diferencial podal: manqueira com lesão em morango no talão; a dermatite digita
 }
 ```
 
-Este documento executa 72 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.
+## C-DD-PODAL-PROD
+
+Diferencial podal no modo produtor: manca de trás, sem inchaço, com dor no talão; a dermatite digital vence a úlcera de sola. Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-DD-PODAL-PROD",
+  "descricao": "Diferencial podal no modo produtor: manca de trás, sem inchaço, com dor no talão; a dermatite digital vence a úlcera de sola. Caso fictício de regressão; suposição a validar.",
+  "modo": "produtor",
+  "ficha": {
+    "dias_em_lactacao": 130,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": "normal",
+    "atitude_locomocao": [
+      "claudicacao"
+    ],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "mancar_pata_traseira_sem_inchaco": true,
+    "dor_flexao_talao": true,
+    "inchaco_entre_unhas_mau_cheiro": false
+  },
+  "esperado": {
+    "top1": "dermatite_digital",
+    "urgencia": "observar",
+    "faixas": {
+      "dermatite_digital": [
+        60,
+        75
+      ],
+      "ulcera_sola": [
+        20,
+        50
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-DD-PODAL-PROD",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "dermatite_digital",
+    "top3_contem": [
+      "dermatite_digital",
+      "ulcera_sola",
+      "acidose"
+    ],
+    "percentuais": {
+      "dermatite_digital": 65,
+      "ulcera_sola": 39,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "cisto_ovariano": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "endometrite": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "lipidose_hepatica": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "flegmao_interdigital": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "sem_perguntas",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "apatia",
+    "apetite",
+    "cio_irregular_ou_constante",
+    "claudicacao",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "dor_flexao_talao",
+    "extremidades",
+    "fezes_aquosas_espuma_graos",
+    "higroma",
+    "historico_retencao_placenta",
+    "inchaco_entre_unhas_mau_cheiro",
+    "leite_alterado",
+    "mancar_pata_traseira_sem_inchaco",
+    "mucosas_palidas_ou_ictericas",
+    "queda_producao",
+    "teste_caneca_grumos",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+Este documento executa 73 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.

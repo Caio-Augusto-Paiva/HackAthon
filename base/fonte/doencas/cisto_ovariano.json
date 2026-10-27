@@ -145,6 +145,15 @@
           "negado": false
         },
         {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
           "simbolo": "cio_irregular_ou_constante",
           "op": "=",
           "valor": true,
@@ -159,7 +168,7 @@
       "prioridade": 10,
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Cio irregular ou constante depois de 40 dias do parto, sem o contexto de apetite normal, é sinal inespecífico de cisto ovariano."
+      "nota": "Cio irregular ou constante depois de 40 dias do parto em vaca com apetite reduzido ou ausente é sinal inespecífico de cisto ovariano; com apetite normal vale a R-CIS-01."
     },
     {
       "id": "R-URG-24",

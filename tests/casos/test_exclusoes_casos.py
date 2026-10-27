@@ -12,7 +12,10 @@ RAIZ = Path(__file__).resolve().parents[2]
 PERDEDORAS = {
     'C-EXC-DAB': 'deslocamento_abomaso_esquerda',
     'C-EXC-TIM': 'timpanismo_gasoso',
+    'C-EXC-MET-END': 'metrite',
 }
+# Pares em que a perdedora não precisa ter evidência positiva antes: o par serve ao rótulo.
+SEM_EVIDENCIA_ANTES = {'C-EXC-MET-END'}
 
 
 def _base_ativa():
@@ -49,7 +52,8 @@ def test_perdedora_do_par_fica_descartada(caso_id, perdedora):
     assert perdedora in sessao.resultado.excluidas
     eventos = [e for e in sessao.resultado.traco if e['tipo'] == 'exclusao_aplicada' and e['simbolo'] == perdedora]
     assert eventos, sessao.resultado.traco
-    assert all(e['antes'] > 0 for e in eventos), eventos  # tinha evidência positiva antes da exclusão
+    if caso_id not in SEM_EVIDENCIA_ANTES:
+        assert all(e['antes'] > 0 for e in eventos), eventos  # tinha evidência positiva antes da exclusão
     parecer = sessao.parecer()
     bloco = next(b for b in parecer['blocos'] if b['id'] == 'pouco_provavel')
     item = next((x for x in bloco['itens'] if x['doenca'] == perdedora), None)

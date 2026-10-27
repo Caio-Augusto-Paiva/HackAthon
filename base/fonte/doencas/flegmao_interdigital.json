@@ -159,6 +159,32 @@
       "nota": "Claudicação, sozinha, é sinal inespecífico de flegmão interdigital."
     },
     {
+      "id": "R-FLE-06",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "lesao_erosiva_talao_morango",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: lesão em morango no talão, sem inchaço, aponta para dermatite digital."
+    },
+    {
       "id": "R-URG-22",
       "se": [
         {

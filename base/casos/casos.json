@@ -1940,7 +1940,7 @@
   },
   {
     "id": "C-ULC-01",
-    "descricao": "Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas Caso fictício de regressão; suposição a validar.",
+    "descricao": "Úlcera de sola: manqueira de pata traseira sem inchaço, sem dor no talão nem inchaço entre as unhas. Caso fictício de regressão; suposição a validar.",
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 120,
@@ -1973,7 +1973,7 @@
   },
   {
     "id": "C-N-ULC-02",
-    "descricao": "Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão Caso fictício de regressão; suposição a validar.",
+    "descricao": "Úlcera de sola: dor à pinça na sola, sem lesão em morango no talão. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 140,
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "C-FLE-01",
-    "descricao": "Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes Caso fictício de regressão; suposição a validar.",
+    "descricao": "Flegmão interdigital: manqueira aguda com inchaço entre as unhas, mau cheiro e patas quentes. Caso fictício de regressão; suposição a validar.",
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 90,
@@ -2038,7 +2038,7 @@
   },
   {
     "id": "C-N-FLE-02",
-    "descricao": "Flegmão interdigital: febre e fissura interdigital necrótica Caso fictício de regressão; suposição a validar.",
+    "descricao": "Flegmão interdigital: febre e fissura interdigital necrótica. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 100,
@@ -2070,7 +2070,7 @@
   },
   {
     "id": "C-END-01",
-    "descricao": "Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre Caso fictício de regressão; suposição a validar.",
+    "descricao": "Endometrite clínica: corrimento com pus 40 dias após o parto, sem febre. Caso fictício de regressão; suposição a validar.",
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 40,
@@ -2101,7 +2101,7 @@
   },
   {
     "id": "C-N-END-02",
-    "descricao": "Endometrite clínica: Metricheck purulento aos 60 dias, sem febre Caso fictício de regressão; suposição a validar.",
+    "descricao": "Endometrite clínica: Metricheck purulento aos 60 dias, sem febre. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 60,
@@ -2132,7 +2132,7 @@
   },
   {
     "id": "C-CIS-01",
-    "descricao": "Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações Caso fictício de regressão; suposição a validar.",
+    "descricao": "Cisto ovariano: cio irregular ou constante aos 100 dias, sem outras alterações. Caso fictício de regressão; suposição a validar.",
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 100,
@@ -2161,7 +2161,7 @@
   },
   {
     "id": "C-N-CIS-02",
-    "descricao": "Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom Caso fictício de regressão; suposição a validar.",
+    "descricao": "Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 75,
@@ -2190,7 +2190,7 @@
   },
   {
     "id": "C-LIP-01",
-    "descricao": "Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana Caso fictício de regressão; suposição a validar.",
+    "descricao": "Lipidose hepática: vaca gorda no parto, apetite reduzido na primeira semana. Caso fictício de regressão; suposição a validar.",
     "modo": "produtor",
     "ficha": {
       "dias_em_lactacao": 7,
@@ -2221,7 +2221,7 @@
   },
   {
     "id": "C-N-LIP-01",
-    "descricao": "Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas Caso fictício de regressão; suposição a validar.",
+    "descricao": "Lipidose hepática com cetose confirmada: vaca gorda no parto, BHB alto e enzimas hepáticas elevadas; as duas sobem juntas. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 10,
@@ -2256,7 +2256,7 @@
   },
   {
     "id": "C-EXC-MET-END",
-    "descricao": "Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada Caso fictício de regressão; suposição a validar.",
+    "descricao": "Par excludente: corrimento com pus aos 35 dias, sem febre; a endometrite vence e a metrite (do puerpério) fica descartada. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 35,
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "C-DD-PODAL-DIF",
-    "descricao": "Diferencial podal: manqueira com lesão em morango no talão; a dermatite digital continua à frente da úlcera de sola Caso fictício de regressão; suposição a validar.",
+    "descricao": "Diferencial podal: manqueira de trás sem inchaço e lesão em morango no talão; a dermatite digital vence a úlcera de sola, que tinha evidência positiva. Caso fictício de regressão; suposição a validar.",
     "modo": "veterinario",
     "ficha": {
       "dias_em_lactacao": 150,
@@ -2307,7 +2307,8 @@
       "excrecoes": []
     },
     "respostas": {
-      "lesao_erosiva_talao_morango": true
+      "lesao_erosiva_talao_morango": true,
+      "mancar_pata_traseira_sem_inchaco": true
     },
     "esperado": {
       "top1": "dermatite_digital",
@@ -2318,8 +2319,45 @@
           100
         ],
         "ulcera_sola": [
-          0,
-          10
+          20,
+          50
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-DD-PODAL-PROD",
+    "descricao": "Diferencial podal no modo produtor: manca de trás, sem inchaço, com dor no talão; a dermatite digital vence a úlcera de sola. Caso fictício de regressão; suposição a validar.",
+    "modo": "produtor",
+    "ficha": {
+      "dias_em_lactacao": 130,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": "normal",
+      "atitude_locomocao": [
+        "claudicacao"
+      ],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "mancar_pata_traseira_sem_inchaco": true,
+      "dor_flexao_talao": true,
+      "inchaco_entre_unhas_mau_cheiro": false
+    },
+    "esperado": {
+      "top1": "dermatite_digital",
+      "urgencia": "observar",
+      "faixas": {
+        "dermatite_digital": [
+          60,
+          75
+        ],
+        "ulcera_sola": [
+          20,
+          50
         ]
       }
     }
