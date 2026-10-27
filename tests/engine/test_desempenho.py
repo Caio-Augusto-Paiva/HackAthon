@@ -1,6 +1,7 @@
 """Desempenho da seleção: a mesma busca de consistência não é recalculada na mesma análise."""
 import collections
 import json
+import time
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -48,8 +49,8 @@ class TestDesempenhoSelecao(unittest.TestCase):
         selecao.limpar_memoria()
         with mock.patch.object(selecao, 'avaliar_condicao', wraps=selecao.avaliar_condicao) as contador:
             sessao.responder_triagem('dias_em_lactacao', {'dias_em_lactacao': '15'})
-        # Sem a memória das folhas são ~8,6 mil avaliações nesta resposta; com ela, ~4 mil.
-        self.assertLess(contador.call_count, 6000)
+        # Base com 25 doenças (v0008): sem a memória das folhas são ~14 mil avaliações nesta resposta; com ela, ~6,3 mil.
+        self.assertLess(contador.call_count, 8000)
 
     def test_intervalos_sem_verificacao_calculados_uma_vez_por_entrada(self):
         sessao = Sessao(_base_ativa(), 'produtor')
@@ -66,6 +67,15 @@ class TestDesempenhoSelecao(unittest.TestCase):
         self.assertTrue(chamadas)
         self.assertEqual(max(chamadas.values()), 1, 'busca de consistência repetida com as mesmas entradas')
 
+
+    def test_primeira_analise_rapida_com_25_doencas(self):
+        base = _base_ativa()
+        self.assertEqual(sum(1 for s in base['simbolos'] if s['tipo'] == 'doenca'), 25)
+        sessao = Sessao(base, 'produtor')
+        selecao.limpar_memoria()
+        inicio = time.perf_counter()
+        sessao.responder_triagem('dias_em_lactacao', {'dias_em_lactacao': '15'})
+        self.assertLess(time.perf_counter() - inicio, 0.5)
 
 if __name__ == '__main__':
     unittest.main()

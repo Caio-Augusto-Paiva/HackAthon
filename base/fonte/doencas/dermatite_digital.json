@@ -2,23 +2,6 @@
   "doenca": "dermatite_digital",
   "simbolos": [
     {
-      "id": "claudicacao",
-      "tipo": "pergunta",
-      "nome": "Claudicação",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "produtor": "A vaca está mancando ou poupando uma pata?",
-        "veterinario": "Presença de claudicação?"
-      },
-      "por_que": {
-        "produtor": "Esclarecer as hipóteses relacionadas a claudicação.",
-        "veterinario": "Esclarecer as hipóteses relacionadas a claudicação."
-      },
-      "combinacao": "mycin"
-    },
-    {
       "id": "dor_flexao_talao",
       "tipo": "pergunta",
       "nome": "Dor na região do talão",
@@ -32,21 +15,6 @@
       "por_que": {
         "produtor": "Esclarecer as hipóteses relacionadas a dor na região do talão.",
         "veterinario": "Esclarecer as hipóteses relacionadas a dor na região do talão."
-      },
-      "combinacao": "mycin"
-    },
-    {
-      "id": "lesao_erosiva_talao_morango",
-      "tipo": "pergunta",
-      "nome": "Lesão característica no talão",
-      "dominio": {
-        "tipo": "booleano"
-      },
-      "pergunta": {
-        "veterinario": "Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital?"
-      },
-      "por_que": {
-        "veterinario": "Esclarecer as hipóteses relacionadas a lesão característica no talão."
       },
       "combinacao": "mycin"
     },

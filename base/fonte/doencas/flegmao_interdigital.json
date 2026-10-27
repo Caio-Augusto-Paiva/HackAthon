@@ -1,0 +1,183 @@
+{
+  "doenca": "flegmao_interdigital",
+  "simbolos": [
+    {
+      "id": "fissura_interdigital_necrotica",
+      "tipo": "pergunta",
+      "nome": "Fissura interdigital necrótica",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Fissura na pele interdigital com tecido necrótico e odor fétido?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a fissura interdigital necrótica."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "flegmao_interdigital",
+      "tipo": "doenca",
+      "nome": "Flegmão Interdigital (Podridão do Casco)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-FLE-01",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "inchaco_entre_unhas_mau_cheiro",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.65
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Manqueira aguda com inchaço entre as unhas e mau cheiro é o quadro típico da podridão do casco."
+    },
+    {
+      "id": "R-FLE-02",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "fissura_interdigital_necrotica",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Fissura interdigital com necrose e odor fétido sustenta flegmão interdigital."
+    },
+    {
+      "id": "R-FLE-03",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Febre com manqueira apoia infecção de tecidos moles do pé; é sinal inespecífico."
+    },
+    {
+      "id": "R-FLE-04",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "mancar_pata_traseira_sem_inchaco",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: manqueira sem inchaço do pé contraria flegmão interdigital, que incha o espaço entre as unhas."
+    },
+    {
+      "id": "R-FLE-05",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Claudicação, sozinha, é sinal inespecífico de flegmão interdigital."
+    },
+    {
+      "id": "R-URG-22",
+      "se": [
+        {
+          "simbolo": "flegmao_interdigital",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de flegmao_interdigital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

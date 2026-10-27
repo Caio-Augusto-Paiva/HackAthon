@@ -1,0 +1,183 @@
+{
+  "doenca": "ulcera_sola",
+  "simbolos": [
+    {
+      "id": "lesao_sola_pinca_dor",
+      "tipo": "pergunta",
+      "nome": "Dor à pinça na sola ou na linha branca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Dor à pinça de casco na sola ou na linha branca, com lesão visível após o casqueamento?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a dor à pinça na sola ou na linha branca."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ulcera_sola",
+      "tipo": "doenca",
+      "nome": "Úlcera de Sola / Doença da Linha Branca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-ULC-01",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "mancar_pata_traseira_sem_inchaco",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": 0.55
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Manqueira de pata traseira sem inchaço do pé é o quadro típico de lesão de sola ou da linha branca; não substitui o exame do casco."
+    },
+    {
+      "id": "R-ULC-02",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "lesao_sola_pinca_dor",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Dor à pinça localizada na sola ou na linha branca, com lesão após o casqueamento, sustenta úlcera de sola ou doença da linha branca."
+    },
+    {
+      "id": "R-ULC-03",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "lesao_erosiva_talao_morango",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha."
+    },
+    {
+      "id": "R-ULC-04",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "inchaco_entre_unhas_mau_cheiro",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: inchaço entre as unhas com mau cheiro aponta para flegmão interdigital, não para lesão de sola."
+    },
+    {
+      "id": "R-ULC-05",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Claudicação, sozinha, é sinal inespecífico de úlcera de sola."
+    },
+    {
+      "id": "R-URG-21",
+      "se": [
+        {
+          "simbolo": "ulcera_sola",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.7
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de ulcera_sola é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

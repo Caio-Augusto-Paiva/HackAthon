@@ -124,6 +124,14 @@
         ],
         "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
         "nota": "O gás fica preso em espuma ou livre, não os dois ao mesmo tempo."
+      },
+      {
+        "doencas": [
+          "metrite",
+          "endometrite"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "Metrite é do puerpério (até 21 dias); endometrite clínica, depois disso."
       }
     ]
   },
@@ -164,6 +172,23 @@
       "por_que": {
         "produtor": "Esclarecer as hipóteses relacionadas a apetite.",
         "veterinario": "Esclarecer as hipóteses relacionadas a apetite."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "claudicacao",
+      "tipo": "pergunta",
+      "nome": "Claudicação",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está mancando ou poupando uma pata?",
+        "veterinario": "Presença de claudicação?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a claudicação.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a claudicação."
       },
       "combinacao": "mycin"
     },
@@ -294,6 +319,21 @@
       "por_que": {
         "produtor": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos.",
         "veterinario": "Esclarecer as hipóteses relacionadas a fezes com espuma e grãos."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "lesao_erosiva_talao_morango",
+      "tipo": "pergunta",
+      "nome": "Lesão característica no talão",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a lesão característica no talão."
       },
       "combinacao": "mycin"
     },
@@ -591,6 +631,40 @@
       },
       "por_que": {
         "veterinario": "Esclarecer as hipóteses relacionadas a crepitações à auscultação pulmonar."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "inchaco_entre_unhas_mau_cheiro",
+      "tipo": "pergunta",
+      "nome": "Inchaço entre as unhas com mau cheiro",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O pé está inchado entre as unhas, com cheiro ruim?",
+        "veterinario": "Aumento de volume interdigital, simétrico, com odor fétido?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a inchaço entre as unhas com mau cheiro.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a inchaço entre as unhas com mau cheiro."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "mancar_pata_traseira_sem_inchaco",
+      "tipo": "pergunta",
+      "nome": "Manqueira de pata traseira sem inchaço",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca manca de uma pata de trás, sem inchaço visível no pé?",
+        "veterinario": "Claudicação de membro pélvico sem aumento de volume digital ou interdigital?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a manqueira de pata traseira sem inchaço.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a manqueira de pata traseira sem inchaço."
       },
       "combinacao": "mycin"
     }

@@ -4,15 +4,15 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0007`. Pai declarado: `v0006`. Data declarada na base: `2026-10-25`.
+Versão: `v0008`. Pai declarado: `v0007`. Data declarada na base: `2026-10-26`.
 
-Arquivo: `base/versoes/v0007.json`. SHA-256 do JSON canônico: `08babdf56093cfaf322eb16c387b337d75e4104923c200ab9b2f558390ac8297`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0008.json`. SHA-256 do JSON canônico: `f39c076b99df20e8eb492be0df4f073e0dff2d216a22789c5b8a54bb102bf1a6`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
-Regras: **137**. Símbolos: **103**. Doenças: **20**.
+Regras: **164**. Símbolos: **118**. Doenças: **25**.
 
 | Estado | Quantidade |
 | --- | --- |
-| suposicao_a_validar | 137 |
+| suposicao_a_validar | 164 |
 
 As fontes descrevem o contexto clínico. Os números de CF são escolhas de modelagem do projeto; não são probabilidades nem valores publicados nessas referências.
 
@@ -95,6 +95,15 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-CET-05` | fita_urina_corpos_cetonicos = sim | cetose | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/metabolic-disorders/hyperketonemia-in-cattle/hyperketonemia-in-cattle); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Teste urinário positivo sustenta cetonúria; depende da técnica e do tempo de leitura e não confirma sozinho cetose clínica. |
 | `R-CET-06` | apetite em {reduzido, ausente} | cetose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de cetose. |
 
+## Cisto Ovariano — cisto_ovariano (gravidade baixa)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-CIS-01` | dias_em_lactacao > 40 E apetite = normal E cio_irregular_ou_constante = sim | cisto_ovariano | 0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Cio irregular ou constante depois de 40 dias do parto, em vaca que come normalmente, é a queixa típica do cisto folicular; anestro também ocorre. Só se pergunta à vaca sem perda de apetite: com apetite reduzido, outras hipóteses vêm antes no limite de perguntas do produtor. |
+| `R-CIS-02` | dias_em_lactacao > 40 E estrutura_ovariana_maior_25mm = sim | cisto_ovariano | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Estrutura ovariana com líquido maior que 25 mm, persistente e sem corpo lúteo, caracteriza a doença do ovário cístico. |
+| `R-CIS-03` | dias_em_lactacao > 40 E corrimento_vaginal = sim | cisto_ovariano | -0,2 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: corrimento vaginal anormal aponta para o útero (endometrite), não para o ovário. |
+| `R-CIS-04` | dias_em_lactacao > 40 E cio_irregular_ou_constante = sim | cisto_ovariano | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Cio irregular ou constante depois de 40 dias do parto, sem o contexto de apetite normal, é sinal inespecífico de cisto ovariano. |
+
 ## Dermatite Digital Bovina — dermatite_digital (gravidade baixa)
 
 | ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
@@ -124,6 +133,25 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-DAE-04` | apetite em {reduzido, ausente} | deslocamento_abomaso_esquerda | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de deslocamento de abomaso. |
 | `R-DAE-05` | inicio_lactacao = sim E fezes_escassas = sim | deslocamento_abomaso_esquerda | 0,2 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Pouco esterco no início da lactação é compatível com deslocamento de abomaso. |
 | `R-DAE-06` | ping_flanco_direito = sim | deslocamento_abomaso_esquerda | -0,6 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-abomaso/deslocamento-do-abomaso-para-a-esquerda-ou-direita-e-v%C3%B3lvulo-abomasal-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: ping no flanco direito aponta para deslocamento à direita, não à esquerda. |
+
+## Endometrite Clínica — endometrite (gravidade media)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-END-01` | corrimento_vaginal = sim E dias_em_lactacao > 21 E corrimento_com_pus_apos_21_dias = sim | endometrite | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Corrimento com pus depois de 21 dias do parto, sem sinais sistêmicos, define endometrite clínica. Só vale com corrimento observado na triagem. |
+| `R-END-02` | corrimento_vaginal = sim E dias_em_lactacao > 21 E metricheck_purulento = sim | endometrite | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica. |
+| `R-END-03` | corrimento_vaginal = sim E dias_em_lactacao > 21 E febre = sim | endometrite | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: a endometrite clínica não tem sinais sistêmicos; febre aponta para outro quadro infeccioso. |
+| `R-END-04` | corrimento_vaginal = sim E dias_em_lactacao > 21 | endometrite | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Corrimento vaginal depois de 21 dias do parto, sozinho, é sinal inespecífico de endometrite. |
+
+## Flegmão Interdigital (Podridão do Casco) — flegmao_interdigital (gravidade media)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-FLE-01` | claudicacao = sim E inchaco_entre_unhas_mau_cheiro = sim | flegmao_interdigital | 0,65 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Manqueira aguda com inchaço entre as unhas e mau cheiro é o quadro típico da podridão do casco. |
+| `R-FLE-02` | claudicacao = sim E fissura_interdigital_necrotica = sim | flegmao_interdigital | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Fissura interdigital com necrose e odor fétido sustenta flegmão interdigital. |
+| `R-FLE-03` | claudicacao = sim E febre = sim | flegmao_interdigital | 0,2 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Febre com manqueira apoia infecção de tecidos moles do pé; é sinal inespecífico. |
+| `R-FLE-04` | claudicacao = sim E mancar_pata_traseira_sem_inchaco = sim | flegmao_interdigital | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: manqueira sem inchaço do pé contraria flegmão interdigital, que incha o espaço entre as unhas. |
+| `R-FLE-05` | claudicacao = sim | flegmao_interdigital | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Claudicação, sozinha, é sinal inespecífico de flegmão interdigital. |
 
 ## Hipocalcemia Puerperal — hipocalcemia (gravidade alta)
 
@@ -165,6 +193,15 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-LEP-03` | sorologia_leptospirose_reagente = sim | leptospirose | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Título significativo na soroaglutinação apoia leptospirose. |
 | `R-LEP-04` | urina_escura = sim E febre = sim | leptospirose | 0,1 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Urina escura com febre, sozinha, é sinal inespecífico. |
 | `R-LEP-05` | esfregaco_hemoparasitas = sim | leptospirose | -0,5 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/infectious-diseases/leptospirose/leptospirose-em-ruminantes); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: hemoparasitas no esfregaço explicam a hemólise por tristeza parasitária. |
+
+## Lipidose Hepática (Fígado Gorduroso) — lipidose_hepatica (gravidade alta)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-LIP-01` | inicio_lactacao = sim E apetite em {reduzido, ausente} E vaca_gorda_no_parto = sim | lipidose_hepatica | 0,55 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Vaca gorda no parto que perde o apetite no início da lactação tem risco alto de fígado gorduroso; costuma vir junto com cetose. |
+| `R-LIP-02` | apetite em {reduzido, ausente} E enzimas_hepaticas_elevadas = sim | lipidose_hepatica | 0,8 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Enzimas hepáticas elevadas com apetite reduzido apoiam lipidose hepática; a confirmação é a biópsia hepática. |
+| `R-LIP-03` | inicio_lactacao = sim E apetite em {reduzido, ausente} E NÃO (vaca_gorda_no_parto = sim) | lipidose_hepatica | -0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: vaca sem excesso de condição corporal no parto tem risco menor de fígado gorduroso. |
+| `R-LIP-04` | apetite em {reduzido, ausente} | lipidose_hepatica | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Apetite reduzido ou ausente, sozinho, é sinal inespecífico de lipidose hepática. |
 
 ## Mastite — mastite (gravidade media)
 
@@ -253,6 +290,16 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-TUB-04` | apetite = normal E queda_producao = sim | tuberculose | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Queda de produção com apetite normal, sozinha, é sinal inespecífico. |
 | `R-TUB-05` | febre = sim | tuberculose | -0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/generalized-conditions/vis%C3%A3o-geral-da-tuberculose-em-animais/vis%C3%A3o-geral-da-tuberculose-em-animais); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: febre aguda sugere outra causa; a tuberculose costuma ser crônica e sem febre alta. |
 
+## Úlcera de Sola / Doença da Linha Branca — ulcera_sola (gravidade media)
+
+| ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `R-ULC-01` | claudicacao = sim E mancar_pata_traseira_sem_inchaco = sim | ulcera_sola | 0,55 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Manqueira de pata traseira sem inchaço do pé é o quadro típico de lesão de sola ou da linha branca; não substitui o exame do casco. |
+| `R-ULC-02` | claudicacao = sim E lesao_sola_pinca_dor = sim | ulcera_sola | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Dor à pinça localizada na sola ou na linha branca, com lesão após o casqueamento, sustenta úlcera de sola ou doença da linha branca. |
+| `R-ULC-03` | claudicacao = sim E lesao_erosiva_talao_morango = sim | ulcera_sola | -0,3 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha. |
+| `R-ULC-04` | claudicacao = sim E inchaco_entre_unhas_mau_cheiro = sim | ulcera_sola | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: inchaço entre as unhas com mau cheiro aponta para flegmão interdigital, não para lesão de sola. |
+| `R-ULC-05` | claudicacao = sim | ulcera_sola | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Claudicação, sozinha, é sinal inespecífico de úlcera de sola. |
+
 ## Bandeiras vermelhas — camada 3
 
 | ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
@@ -288,6 +335,11 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-URG-18` | ibr = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de ibr é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-19` | bvd = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de bvd é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 | `R-URG-20` | tuberculose = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-21` | ulcera_sola = sim [CF ≥ 0,5] | observar | 0,7 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de ulcera_sola é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-22` | flegmao_interdigital = sim [CF ≥ 0,5] | observar | 0,8 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de flegmao_interdigital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-23` | endometrite = sim [CF ≥ 0,5] | observar | 0,7 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de endometrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-24` | cisto_ovariano = sim [CF ≥ 0,5] | observar | 0,6 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de cisto_ovariano é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
+| `R-URG-25` | lipidose_hepatica = sim [CF ≥ 0,5] | chamar_agora | 0,99 | 50 | Política de triagem do projeto, Seções 1 e 3; suposição a validar | suposicao_a_validar | Aplica a política de gravidade do projeto quando o CF de lipidose_hepatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo. |
 
 ## Símbolos
 
@@ -307,8 +359,11 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | carrapatos_historico_recente | Exposição recente a carrapatos | pergunta | tipo: booleano | Foram vistos carrapatos na vaca recentemente? | Histórico recente de exposição a carrapatos? | — | mycin |
 | cetose | Cetose / Hipercetonemia | doenca | tipo: booleano | — | — | media | mycin |
 | chamar_agora | Atendimento Veterinário Imediato | urgencia | tipo: booleano | — | — | — | mycin |
+| cio_irregular_ou_constante | Cio irregular ou constante | pergunta | tipo: booleano | A vaca está com cio irregular ou quase constante desde o parto? | Cios frequentes, irregulares ou comportamento de ninfomania após o período voluntário de espera? | — | mycin |
+| cisto_ovariano | Cisto Ovariano | doenca | tipo: booleano | — | — | baixa | mycin |
 | claudicacao | Claudicação | pergunta | tipo: booleano | A vaca está mancando ou poupando uma pata? | Presença de claudicação? | — | mycin |
 | cmt_reagente | CMT reagente | pergunta | tipo: booleano | — | O CMT foi reagente conforme a leitura do teste? | — | mycin |
+| corrimento_com_pus_apos_21_dias | Corrimento com pus após 21 dias do parto | pergunta | tipo: booleano | A secreção da vulva tem pus (grossa, amarelada ou esbranquiçada)? | Corrimento vaginal purulento ou mucopurulento após 21 dias do parto? | — | mycin |
 | corrimento_fetido | Corrimento vaginal fétido | pergunta | tipo: booleano | A secreção da vulva tem cheiro forte e desagradável? | Corrimento vaginal fétido observado? | — | mycin |
 | corrimento_vaginal | Corrimento vaginal | pergunta | tipo: booleano | Há saída de secreção anormal pela vulva? | Presença de corrimento vaginal anormal? | — | mycin |
 | costas_arqueadas | Costas arqueadas | pergunta | tipo: booleano | A vaca fica com as costas arqueadas e evita deitar ou descer rampas? | Postura antiálgica com dorso arqueado? | — | mycin |
@@ -324,9 +379,12 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | dor_flexao_talao | Dor na região do talão | pergunta | tipo: booleano | A vaca demonstra dor na região do talão ao se movimentar? | Dor localizada na região dos bulbos do talão? | — | mycin |
 | edema_barbela | Edema de barbela ou peito | pergunta | tipo: booleano | — | Edema de barbela, jugulares ingurgitadas ou bulhas cardíacas abafadas? | — | mycin |
 | emagrecimento_progressivo | Emagrecimento progressivo | pergunta | tipo: booleano | A vaca vem emagrecendo aos poucos, mesmo comendo? | Perda progressiva de condição corporal? | — | mycin |
+| endometrite | Endometrite Clínica | doenca | tipo: booleano | — | — | media | mycin |
 | engasgo | Engasgo ou dificuldade de engolir | pergunta | tipo: booleano | A vaca parece engasgada, babando ou com esforço para engolir? | Sinais de obstrução esofágica (sialorreia, esforço de deglutição)? | — | mycin |
+| enzimas_hepaticas_elevadas | Enzimas hepáticas elevadas | pergunta | tipo: booleano | — | Enzimas hepáticas elevadas no sangue (AST ou GGT acima da referência)? | — | mycin |
 | esfregaco_hemoparasitas | Hemoparasitas no esfregaço | pergunta | tipo: booleano | — | Esfregaço sanguíneo com estruturas compatíveis com Babesia ou Anaplasma? | — | mycin |
 | espuma_sonda | Conteúdo espumoso na sonda | pergunta | tipo: booleano | — | Sonda orogástrica traz conteúdo espumoso sem aliviar a distensão? | — | mycin |
+| estrutura_ovariana_maior_25mm | Estrutura ovariana maior que 25 mm | pergunta | tipo: booleano | — | Estrutura ovariana com líquido maior que 25 mm, à palpação retal ou ao ultrassom, persistente e sem corpo lúteo? | — | mycin |
 | evidencia_alteracao_leite | Evidência agrupada de alteração do leite | derivado | tipo: booleano | — | — | — | max |
 | extremidades | Temperatura ao toque das extremidades | pergunta | tipo: categorico, valores: {normal, quente, fria} | As orelhas e as patas parecem normais, quentes ou frias ao toque? | Extremidades normais, quentes ou frias à palpação? | — | mycin |
 | falhas_reprodutivas_lote | Falhas reprodutivas no lote | pergunta | tipo: booleano | Várias vacas do lote estão repetindo cio ou abortando? | Aumento de repetição de cio, abortos ou bezerros fracos no rebanho? | — | mycin |
@@ -334,8 +392,10 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | feridas_boca | Feridas na boca | pergunta | tipo: booleano | Há feridas na boca, na gengiva ou na língua, com baba? | Erosões ou úlceras na mucosa oral? | — | mycin |
 | fezes_aquosas_espuma_graos | Fezes com espuma e grãos | pergunta | tipo: booleano | As fezes estão muito líquidas, com espuma ou grãos inteiros? | Fezes aquosas, com espuma ou grãos não digeridos? | — | mycin |
 | fezes_escassas | Pouco esterco | pergunta | tipo: booleano | A vaca está fazendo pouco esterco, menos que o normal? | Fezes escassas ou ausentes nas últimas horas? | — | mycin |
+| fissura_interdigital_necrotica | Fissura interdigital necrótica | pergunta | tipo: booleano | — | Fissura na pele interdigital com tecido necrótico e odor fétido? | — | mycin |
 | fita_urina_corpos_cetonicos | Corpos cetônicos na urina | pergunta | tipo: booleano | — | Teste urinário para corpos cetônicos positivo, lido no tempo indicado pelo fabricante? | — | mycin |
 | flanco_esquerdo_afundado | Flanco esquerdo afundado | pergunta | tipo: booleano | A região do flanco esquerdo parece mais afundada que o habitual? | Fossa paralombar esquerda retraída? | — | mycin |
+| flegmao_interdigital | Flegmão Interdigital (Podridão do Casco) | doenca | tipo: booleano | — | — | media | mycin |
 | focinho_avermelhado | Focinho muito vermelho | pergunta | tipo: booleano | O focinho está muito vermelho, com feridas ou crostas? | Hiperemia ou lesões no plano nasal (focinho vermelho)? | — | mycin |
 | gas_livre_sonda | Gás livre na sonda | pergunta | tipo: booleano | — | Sonda orogástrica libera gás livre e alivia a distensão? | — | mycin |
 | gemido | Gemido | pergunta | tipo: booleano | A vaca geme quando respira, se deita ou se levanta? | Gemido expiratório espontâneo? | — | mycin |
@@ -346,15 +406,20 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | hipotermia | Hipotermia | derivado | tipo: booleano | — | — | — | mycin |
 | historico_retencao_placenta | Histórico de retenção de placenta | ficha | tipo: booleano | Houve retenção de placenta neste parto? | Retenção de membranas fetais após o último parto? | — | mycin |
 | ibr | Rinotraqueíte Infecciosa Bovina (IBR) | doenca | tipo: booleano | — | — | media | mycin |
+| inchaco_entre_unhas_mau_cheiro | Inchaço entre as unhas com mau cheiro | pergunta | tipo: booleano | O pé está inchado entre as unhas, com cheiro ruim? | Aumento de volume interdigital, simétrico, com odor fétido? | — | mycin |
 | inicio_lactacao | Início da lactação | derivado | tipo: booleano | — | — | — | mycin |
 | leite_alterado | Alteração visível do leite | pergunta | tipo: booleano | O leite apresenta grumos, sangue ou aspecto aguado? | Alteração macroscópica do leite? | — | mycin |
 | leite_com_sangue | Leite rosado ou com sangue | pergunta | tipo: booleano | O leite saiu rosado ou com sangue? | Leite sanguinolento com úbere flácido (agalaxia)? | — | mycin |
 | leptospirose | Leptospirose | doenca | tipo: booleano | — | — | alta | mycin |
 | lesao_erosiva_talao_morango | Lesão característica no talão | pergunta | tipo: booleano | — | Lesão erosiva ou ulcerativa, avermelhada e dolorosa no talão ou espaço interdigital? | — | mycin |
+| lesao_sola_pinca_dor | Dor à pinça na sola ou na linha branca | pergunta | tipo: booleano | — | Dor à pinça de casco na sola ou na linha branca, com lesão visível após o casqueamento? | — | mycin |
 | linfonodos_aumentados | Ínguas aumentadas | pergunta | tipo: booleano | Há caroços (ínguas) aumentados no pescoço, na frente da paleta ou na virilha? | Linfonodos superficiais aumentados? | — | mycin |
+| lipidose_hepatica | Lipidose Hepática (Fígado Gorduroso) | doenca | tipo: booleano | — | — | alta | mycin |
 | magnesio_serico | Magnésio sérico | pergunta | casas_decimais: 1, max: 10, min: 0, tipo: numerico, unidade: mg/dL | — | Qual é o magnésio sérico, em mg/dL? | — | mycin |
+| mancar_pata_traseira_sem_inchaco | Manqueira de pata traseira sem inchaço | pergunta | tipo: booleano | A vaca manca de uma pata de trás, sem inchaço visível no pé? | Claudicação de membro pélvico sem aumento de volume digital ou interdigital? | — | mycin |
 | mastite | Mastite | doenca | tipo: booleano | — | — | media | mycin |
 | membranas_expostas_vulva | Restos de placenta na vulva | pergunta | tipo: booleano | Há restos de placenta pendurados para fora da vulva? | Membranas fetais expostas pela vulva? | — | mycin |
+| metricheck_purulento | Conteúdo purulento ao exame vaginal | pergunta | tipo: booleano | — | Exame vaginal (Metricheck ou espéculo) com conteúdo purulento ou mucopurulento? | — | mycin |
 | metrite | Metrite Puerperal | doenca | tipo: booleano | — | — | alta | mycin |
 | mucosas_palidas_ou_ictericas | Mucosas pálidas ou amareladas | pergunta | tipo: booleano | A parte interna da pálpebra ou da vulva está muito pálida ou amarelada? | Mucosas pálidas ou ictéricas à inspeção? | — | mycin |
 | mudanca_abrupta_concentrado | Mudança abrupta de concentrado | pergunta | tipo: booleano | Houve aumento brusco de ração ou acesso excessivo a grãos? | Mudança abrupta de concentrado ou acesso excessivo a grãos? | — | mycin |
@@ -393,8 +458,10 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | tuberculina_reagente | Tuberculinização reagente | pergunta | tipo: booleano | — | Teste tuberculínico (cervical comparativo) reagente? | — | mycin |
 | tuberculose | Tuberculose | doenca | tipo: booleano | — | — | alta | mycin |
 | ubere_inflamado | Inflamação do úbere | pergunta | tipo: booleano | O úbere está inchado, quente ou dolorido? | Há edema, calor ou dor no úbere? | — | mycin |
+| ulcera_sola | Úlcera de Sola / Doença da Linha Branca | doenca | tipo: booleano | — | — | media | mycin |
 | urina_escura | Urina escura | pergunta | tipo: booleano | A urina está avermelhada ou escura como café? | Urina avermelhada ou castanha observada? | — | mycin |
 | utero_aumentado_palpacao | Aumento uterino à palpação | pergunta | tipo: booleano | — | Útero aumentado à palpação retal, considerado o período após o parto? | — | mycin |
+| vaca_gorda_no_parto | Vaca gorda no parto | pergunta | tipo: booleano | A vaca estava muito gorda quando pariu? | Escore de condição corporal elevado no parto (3,75 ou mais, em 5)? | — | mycin |
 | vacinada_brucelose | Vacinada contra brucelose | pergunta | tipo: booleano | A vaca foi vacinada contra brucelose quando bezerra (3 a 8 meses)? | Vacinação B19 ou RB51 comprovada? | — | mycin |
 
 ## Telas de triagem

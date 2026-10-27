@@ -55,6 +55,10 @@ class TestPerguntasCoerentes(unittest.TestCase):
     def test_sem_corrimento_nao_pergunta_o_cheiro_da_secrecao(self):
         self.assertNotIn('corrimento_fetido', self.feitas)
 
+    def test_sem_claudicacao_nao_pergunta_o_casco(self):
+        casco = {'mancar_pata_traseira_sem_inchaco', 'inchaco_entre_unhas_mau_cheiro'}
+        self.assertFalse(casco & set(_perguntas_feitas(TRIAGEM)))
+
     def test_leite_sem_alteracao_nao_pergunta_sangue_no_leite(self):
         self.assertNotIn('leite_com_sangue', self.feitas)
 

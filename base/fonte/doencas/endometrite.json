@@ -1,0 +1,198 @@
+{
+  "doenca": "endometrite",
+  "simbolos": [
+    {
+      "id": "corrimento_com_pus_apos_21_dias",
+      "tipo": "pergunta",
+      "nome": "Corrimento com pus após 21 dias do parto",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A secreção da vulva tem pus (grossa, amarelada ou esbranquiçada)?",
+        "veterinario": "Corrimento vaginal purulento ou mucopurulento após 21 dias do parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento com pus após 21 dias do parto.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento com pus após 21 dias do parto."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "metricheck_purulento",
+      "tipo": "pergunta",
+      "nome": "Conteúdo purulento ao exame vaginal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Exame vaginal (Metricheck ou espéculo) com conteúdo purulento ou mucopurulento?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a conteúdo purulento ao exame vaginal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "endometrite",
+      "tipo": "doenca",
+      "nome": "Endometrite Clínica",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Endometrite em animais de produção (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-END-01",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_com_pus_apos_21_dias",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento com pus depois de 21 dias do parto, sem sinais sistêmicos, define endometrite clínica. Só vale com corrimento observado na triagem."
+    },
+    {
+      "id": "R-END-02",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        },
+        {
+          "simbolo": "metricheck_purulento",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica."
+    },
+    {
+      "id": "R-END-03",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: a endometrite clínica não tem sinais sistêmicos; febre aponta para outro quadro infeccioso."
+    },
+    {
+      "id": "R-END-04",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento vaginal depois de 21 dias do parto, sozinho, é sinal inespecífico de endometrite."
+    },
+    {
+      "id": "R-URG-23",
+      "se": [
+        {
+          "simbolo": "endometrite",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.7
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de endometrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

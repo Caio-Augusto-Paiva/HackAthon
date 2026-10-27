@@ -1,0 +1,186 @@
+{
+  "doenca": "cisto_ovariano",
+  "simbolos": [
+    {
+      "id": "cio_irregular_ou_constante",
+      "tipo": "pergunta",
+      "nome": "Cio irregular ou constante",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com cio irregular ou quase constante desde o parto?",
+        "veterinario": "Cios frequentes, irregulares ou comportamento de ninfomania após o período voluntário de espera?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a cio irregular ou constante.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a cio irregular ou constante."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "estrutura_ovariana_maior_25mm",
+      "tipo": "pergunta",
+      "nome": "Estrutura ovariana maior que 25 mm",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Estrutura ovariana com líquido maior que 25 mm, à palpação retal ou ao ultrassom, persistente e sem corpo lúteo?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a estrutura ovariana maior que 25 mm."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "cisto_ovariano",
+      "tipo": "doenca",
+      "nome": "Cisto Ovariano",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "baixa",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Doença do ovário cístico folicular em vacas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-CIS-01",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        },
+        {
+          "simbolo": "cio_irregular_ou_constante",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Cio irregular ou constante depois de 40 dias do parto, em vaca que come normalmente, é a queixa típica do cisto folicular; anestro também ocorre. Só se pergunta à vaca sem perda de apetite: com apetite reduzido, outras hipóteses vêm antes no limite de perguntas do produtor."
+    },
+    {
+      "id": "R-CIS-02",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "estrutura_ovariana_maior_25mm",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Estrutura ovariana com líquido maior que 25 mm, persistente e sem corpo lúteo, caracteriza a doença do ovário cístico."
+    },
+    {
+      "id": "R-CIS-03",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": -0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: corrimento vaginal anormal aponta para o útero (endometrite), não para o ovário."
+    },
+    {
+      "id": "R-CIS-04",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "cio_irregular_ou_constante",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Cio irregular ou constante depois de 40 dias do parto, sem o contexto de apetite normal, é sinal inespecífico de cisto ovariano."
+    },
+    {
+      "id": "R-URG-24",
+      "se": [
+        {
+          "simbolo": "cisto_ovariano",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.6
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de cisto_ovariano é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}

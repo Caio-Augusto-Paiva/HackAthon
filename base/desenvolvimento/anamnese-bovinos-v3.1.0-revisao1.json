@@ -1797,6 +1797,246 @@
         "titulo": "Notificação obrigatória: o que fazer",
         "url": "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/programas-de-saude-animal/pncebt"
       }
+    },
+    {
+      "id": "cio_irregular_ou_constante",
+      "tipo": "pergunta",
+      "nome": "Cio irregular ou constante",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca está com cio irregular ou quase constante desde o parto?",
+        "veterinario": "Cios frequentes, irregulares ou comportamento de ninfomania após o período voluntário de espera?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a cio irregular ou constante.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a cio irregular ou constante."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "estrutura_ovariana_maior_25mm",
+      "tipo": "pergunta",
+      "nome": "Estrutura ovariana maior que 25 mm",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Estrutura ovariana com líquido maior que 25 mm, à palpação retal ou ao ultrassom, persistente e sem corpo lúteo?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a estrutura ovariana maior que 25 mm."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "cisto_ovariano",
+      "tipo": "doenca",
+      "nome": "Cisto Ovariano",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "baixa",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Doença do ovário cístico folicular em vacas (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas"
+      }
+    },
+    {
+      "id": "corrimento_com_pus_apos_21_dias",
+      "tipo": "pergunta",
+      "nome": "Corrimento com pus após 21 dias do parto",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A secreção da vulva tem pus (grossa, amarelada ou esbranquiçada)?",
+        "veterinario": "Corrimento vaginal purulento ou mucopurulento após 21 dias do parto?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a corrimento com pus após 21 dias do parto.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a corrimento com pus após 21 dias do parto."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "metricheck_purulento",
+      "tipo": "pergunta",
+      "nome": "Conteúdo purulento ao exame vaginal",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Exame vaginal (Metricheck ou espéculo) com conteúdo purulento ou mucopurulento?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a conteúdo purulento ao exame vaginal."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "endometrite",
+      "tipo": "doenca",
+      "nome": "Endometrite Clínica",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Endometrite em animais de produção (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o"
+      }
+    },
+    {
+      "id": "inchaco_entre_unhas_mau_cheiro",
+      "tipo": "pergunta",
+      "nome": "Inchaço entre as unhas com mau cheiro",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "O pé está inchado entre as unhas, com cheiro ruim?",
+        "veterinario": "Aumento de volume interdigital, simétrico, com odor fétido?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a inchaço entre as unhas com mau cheiro.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a inchaço entre as unhas com mau cheiro."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "fissura_interdigital_necrotica",
+      "tipo": "pergunta",
+      "nome": "Fissura interdigital necrótica",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Fissura na pele interdigital com tecido necrótico e odor fétido?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a fissura interdigital necrótica."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "flegmao_interdigital",
+      "tipo": "doenca",
+      "nome": "Flegmão Interdigital (Podridão do Casco)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+      }
+    },
+    {
+      "id": "vaca_gorda_no_parto",
+      "tipo": "pergunta",
+      "nome": "Vaca gorda no parto",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca estava muito gorda quando pariu?",
+        "veterinario": "Escore de condição corporal elevado no parto (3,75 ou mais, em 5)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a vaca gorda no parto.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a vaca gorda no parto."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "enzimas_hepaticas_elevadas",
+      "tipo": "pergunta",
+      "nome": "Enzimas hepáticas elevadas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Enzimas hepáticas elevadas no sangue (AST ou GGT acima da referência)?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a enzimas hepáticas elevadas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "lipidose_hepatica",
+      "tipo": "doenca",
+      "nome": "Lipidose Hepática (Fígado Gorduroso)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Doença do fígado gorduroso em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos"
+      }
+    },
+    {
+      "id": "mancar_pata_traseira_sem_inchaco",
+      "tipo": "pergunta",
+      "nome": "Manqueira de pata traseira sem inchaço",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca manca de uma pata de trás, sem inchaço visível no pé?",
+        "veterinario": "Claudicação de membro pélvico sem aumento de volume digital ou interdigital?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a manqueira de pata traseira sem inchaço.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a manqueira de pata traseira sem inchaço."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "lesao_sola_pinca_dor",
+      "tipo": "pergunta",
+      "nome": "Dor à pinça na sola ou na linha branca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Dor à pinça de casco na sola ou na linha branca, com lesão visível após o casqueamento?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a dor à pinça na sola ou na linha branca."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "ulcera_sola",
+      "tipo": "doenca",
+      "nome": "Úlcera de Sola / Doença da Linha Branca",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "media",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+      }
     }
   ],
   "regras": [
@@ -5093,6 +5333,713 @@
       "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
       "status": "suposicao_a_validar",
       "nota": "Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-CIS-01",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        },
+        {
+          "simbolo": "cio_irregular_ou_constante",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.6
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Cio irregular ou constante depois de 40 dias do parto, em vaca que come normalmente, é a queixa típica do cisto folicular; anestro também ocorre. Só se pergunta à vaca sem perda de apetite: com apetite reduzido, outras hipóteses vêm antes no limite de perguntas do produtor."
+    },
+    {
+      "id": "R-CIS-02",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "estrutura_ovariana_maior_25mm",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Estrutura ovariana com líquido maior que 25 mm, persistente e sem corpo lúteo, caracteriza a doença do ovário cístico."
+    },
+    {
+      "id": "R-CIS-03",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": -0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: corrimento vaginal anormal aponta para o útero (endometrite), não para o ovário."
+    },
+    {
+      "id": "R-CIS-04",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 40.0,
+          "negado": false
+        },
+        {
+          "simbolo": "cio_irregular_ou_constante",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Cio irregular ou constante depois de 40 dias do parto, sem o contexto de apetite normal, é sinal inespecífico de cisto ovariano."
+    },
+    {
+      "id": "R-URG-24",
+      "se": [
+        {
+          "simbolo": "cisto_ovariano",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.6
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de cisto_ovariano é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-END-01",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        },
+        {
+          "simbolo": "corrimento_com_pus_apos_21_dias",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": 0.7
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento com pus depois de 21 dias do parto, sem sinais sistêmicos, define endometrite clínica. Só vale com corrimento observado na triagem."
+    },
+    {
+      "id": "R-END-02",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        },
+        {
+          "simbolo": "metricheck_purulento",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica."
+    },
+    {
+      "id": "R-END-03",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: a endometrite clínica não tem sinais sistêmicos; febre aponta para outro quadro infeccioso."
+    },
+    {
+      "id": "R-END-04",
+      "se": [
+        {
+          "simbolo": "corrimento_vaginal",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 21.0,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "endometrite",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Corrimento vaginal depois de 21 dias do parto, sozinho, é sinal inespecífico de endometrite."
+    },
+    {
+      "id": "R-URG-23",
+      "se": [
+        {
+          "simbolo": "endometrite",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.7
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de endometrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-FLE-01",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "inchaco_entre_unhas_mau_cheiro",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.65
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Manqueira aguda com inchaço entre as unhas e mau cheiro é o quadro típico da podridão do casco."
+    },
+    {
+      "id": "R-FLE-02",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "fissura_interdigital_necrotica",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Fissura interdigital com necrose e odor fétido sustenta flegmão interdigital."
+    },
+    {
+      "id": "R-FLE-03",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "febre",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.2
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Febre com manqueira apoia infecção de tecidos moles do pé; é sinal inespecífico."
+    },
+    {
+      "id": "R-FLE-04",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "mancar_pata_traseira_sem_inchaco",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: manqueira sem inchaço do pé contraria flegmão interdigital, que incha o espaço entre as unhas."
+    },
+    {
+      "id": "R-FLE-05",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "flegmao_interdigital",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Claudicação, sozinha, é sinal inespecífico de flegmão interdigital."
+    },
+    {
+      "id": "R-URG-22",
+      "se": [
+        {
+          "simbolo": "flegmao_interdigital",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.8
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de flegmao_interdigital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-LIP-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "vaca_gorda_no_parto",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": 0.55
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vaca gorda no parto que perde o apetite no início da lactação tem risco alto de fígado gorduroso; costuma vir junto com cetose."
+    },
+    {
+      "id": "R-LIP-02",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "enzimas_hepaticas_elevadas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Enzimas hepáticas elevadas com apetite reduzido apoiam lipidose hepática; a confirmação é a biópsia hepática."
+    },
+    {
+      "id": "R-LIP-03",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "vaca_gorda_no_parto",
+          "op": "=",
+          "valor": true,
+          "negado": true
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: vaca sem excesso de condição corporal no parto tem risco menor de fígado gorduroso."
+    },
+    {
+      "id": "R-LIP-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de lipidose hepática."
+    },
+    {
+      "id": "R-URG-25",
+      "se": [
+        {
+          "simbolo": "lipidose_hepatica",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de lipidose_hepatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    },
+    {
+      "id": "R-ULC-01",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "mancar_pata_traseira_sem_inchaco",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": 0.55
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Manqueira de pata traseira sem inchaço do pé é o quadro típico de lesão de sola ou da linha branca; não substitui o exame do casco."
+    },
+    {
+      "id": "R-ULC-02",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "lesao_sola_pinca_dor",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": 0.85
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Dor à pinça localizada na sola ou na linha branca, com lesão após o casqueamento, sustenta úlcera de sola ou doença da linha branca."
+    },
+    {
+      "id": "R-ULC-03",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "lesao_erosiva_talao_morango",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha."
+    },
+    {
+      "id": "R-ULC-04",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "inchaco_entre_unhas_mau_cheiro",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": -0.4
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: inchaço entre as unhas com mau cheiro aponta para flegmão interdigital, não para lesão de sola."
+    },
+    {
+      "id": "R-ULC-05",
+      "se": [
+        {
+          "simbolo": "claudicacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "ulcera_sola",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Claudicação, sozinha, é sinal inespecífico de úlcera de sola."
+    },
+    {
+      "id": "R-URG-21",
+      "se": [
+        {
+          "simbolo": "ulcera_sola",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "observar",
+        "cf": 0.7
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de ulcera_sola é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
     }
   ],
   "layout": {}

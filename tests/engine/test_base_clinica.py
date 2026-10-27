@@ -54,8 +54,11 @@ class ContratoDaBase(unittest.TestCase):
             regras = regras_por_alvo.get(id, [])
             return bool(regras) and all(so_triagem(c['simbolo']) for r in regras for c in r['se'])
 
+        # Cisto ovariano não tem sinal de triagem (depende do cio, perguntado na fase dinâmica); uma regra só de
+        # triagem o poria em 1º lugar em toda vaca sadia com mais de 40 dias.
+        sem_sinal_de_triagem = {'cisto_ovariano'}
         for id, simbolo in simbolos.items():
-            if simbolo['tipo'] == 'doenca':
+            if simbolo['tipo'] == 'doenca' and id not in sem_sinal_de_triagem:
                 with self.subTest(doenca=id):
                     self.assertTrue(any(r['entao']['cf'] > 0 and all(so_triagem(c['simbolo']) for c in r['se'])
                                         for r in regras_por_alvo[id]))

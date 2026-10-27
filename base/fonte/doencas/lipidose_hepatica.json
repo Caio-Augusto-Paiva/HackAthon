@@ -1,0 +1,198 @@
+{
+  "doenca": "lipidose_hepatica",
+  "simbolos": [
+    {
+      "id": "vaca_gorda_no_parto",
+      "tipo": "pergunta",
+      "nome": "Vaca gorda no parto",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca estava muito gorda quando pariu?",
+        "veterinario": "Escore de condição corporal elevado no parto (3,75 ou mais, em 5)?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a vaca gorda no parto.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a vaca gorda no parto."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "enzimas_hepaticas_elevadas",
+      "tipo": "pergunta",
+      "nome": "Enzimas hepáticas elevadas",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "veterinario": "Enzimas hepáticas elevadas no sangue (AST ou GGT acima da referência)?"
+      },
+      "por_que": {
+        "veterinario": "Esclarecer as hipóteses relacionadas a enzimas hepáticas elevadas."
+      },
+      "combinacao": "mycin"
+    },
+    {
+      "id": "lipidose_hepatica",
+      "tipo": "doenca",
+      "nome": "Lipidose Hepática (Fígado Gorduroso)",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {},
+      "por_que": {},
+      "gravidade": "alta",
+      "combinacao": "mycin",
+      "tratamento": {
+        "titulo": "Doença do fígado gorduroso em bovinos (Manual MSD de Veterinária)",
+        "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos"
+      }
+    }
+  ],
+  "regras": [
+    {
+      "id": "R-LIP-01",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "vaca_gorda_no_parto",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": 0.55
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Vaca gorda no parto que perde o apetite no início da lactação tem risco alto de fígado gorduroso; costuma vir junto com cetose."
+    },
+    {
+      "id": "R-LIP-02",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "enzimas_hepaticas_elevadas",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": 0.8
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Enzimas hepáticas elevadas com apetite reduzido apoiam lipidose hepática; a confirmação é a biópsia hepática."
+    },
+    {
+      "id": "R-LIP-03",
+      "se": [
+        {
+          "simbolo": "inicio_lactacao",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        },
+        {
+          "simbolo": "vaca_gorda_no_parto",
+          "op": "=",
+          "valor": true,
+          "negado": true
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": -0.3
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Diferencial: vaca sem excesso de condição corporal no parto tem risco menor de fígado gorduroso."
+    },
+    {
+      "id": "R-LIP-04",
+      "se": [
+        {
+          "simbolo": "apetite",
+          "op": "em",
+          "valor": [
+            "reduzido",
+            "ausente"
+          ],
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "lipidose_hepatica",
+        "cf": 0.05
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de lipidose hepática."
+    },
+    {
+      "id": "R-URG-25",
+      "se": [
+        {
+          "simbolo": "lipidose_hepatica",
+          "op": "=",
+          "valor": true,
+          "negado": false,
+          "cf_minimo": 0.5
+        }
+      ],
+      "entao": {
+        "simbolo": "chamar_agora",
+        "cf": 0.99
+      },
+      "classe": "urgencia",
+      "prioridade": 50,
+      "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Aplica a política de gravidade do projeto quando o CF de lipidose_hepatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+    }
+  ]
+}
