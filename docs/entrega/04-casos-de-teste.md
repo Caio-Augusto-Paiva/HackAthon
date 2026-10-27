@@ -2,7 +2,7 @@
 
 > GERADO por `scripts/gerar_doc_regras.py`; resultados obtidos com `engine.casos.executar_caso`.
 
-Base `v0008`. Casos sintéticos executados: **73**. Aprovados: **73**.
+Base `v0009`. Casos sintéticos executados: **75**. Aprovados: **75**.
 
 Os casos demonstram integração e comportamento determinístico. Não medem acurácia, sensibilidade ou especificidade clínicas. Os testes unitários são contabilizados separadamente.
 
@@ -81,6 +81,8 @@ Os casos demonstram integração e comportamento determinístico. Não medem acu
 | C-EXC-MET-END | passou | observar | endometrite | não |
 | C-DD-PODAL-DIF | passou | observar | dermatite_digital | não |
 | C-DD-PODAL-PROD | passou | observar | dermatite_digital | não |
+| C-CIS-ANESTRO | passou | sem_problema | cisto_ovariano | não |
+| C-N-END-SEMCORR | passou | observar | endometrite | não |
 
 ## C-MAS-01
 
@@ -327,6 +329,7 @@ Mastite com sinais sistêmicos Caso fictício de regressão; suposição a valid
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "olhos_lacrimejando",
     "outros_animais_estufados",
@@ -1079,6 +1082,7 @@ TPB: febre, urina escura e esfregaço Caso fictício de regressão; suposição 
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "olhos_lacrimejando",
     "pcr_bohv1",
     "ph_ruminal",
@@ -1450,6 +1454,7 @@ Cetose: BHB acima do limiar Caso fictício de regressão; suposição a validar.
     "lesao_erosiva_talao_morango",
     "linfonodos_aumentados",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "outros_animais_estufados",
     "pasto_novo_adubado",
@@ -2592,6 +2597,7 @@ Acidose: pH ruminal baixo Caso fictício de regressão; suposição a validar.
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "mudanca_abrupta_concentrado",
     "outros_animais_estufados",
@@ -2962,6 +2968,7 @@ Dermatite digital: lesão erosiva no talão Caso fictício de regressão; suposi
     "lesao_sola_pinca_dor",
     "magnesio_serico",
     "mancar_pata_traseira_sem_inchaco",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -3424,6 +3431,7 @@ Bandeira de febre alta isolada Caso fictício de regressão; suposição a valid
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "olhos_lacrimejando",
     "pcr_bohv1",
@@ -3702,6 +3710,7 @@ Troca produtor para veterinário preserva evidência e acrescenta ping Caso fict
     "lesao_erosiva_talao_morango",
     "linfonodos_aumentados",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "outros_animais_estufados",
     "pasto_novo_adubado",
@@ -4845,6 +4854,7 @@ Timpanismo espumoso: espuma pela sonda Caso fictício de regressão; suposição
     "lesao_erosiva_talao_morango",
     "linfonodos_aumentados",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pasto_novo_adubado",
     "pcr_bohv1",
@@ -5115,6 +5125,7 @@ Timpanismo gasoso: gás livre pela sonda Caso fictício de regressão; suposiç�
     "lesao_erosiva_talao_morango",
     "linfonodos_aumentados",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pasto_novo_adubado",
     "pcr_bohv1",
@@ -5628,6 +5639,7 @@ Pneumonia: febre e crepitações à auscultação Caso fictício de regressão; 
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "outros_animais_estufados",
     "pasto_novo_adubado",
@@ -5892,6 +5904,7 @@ Reticulopericardite: prova de dor reticular positiva Caso fictício de regressã
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "olhos_lacrimejando",
     "outros_animais_estufados",
@@ -6157,6 +6170,7 @@ Hipomagnesemia: magnésio sérico baixo Caso fictício de regressão; suposiçã
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "outros_animais_estufados",
     "pcr_bohv1",
@@ -6411,6 +6425,7 @@ Brucelose: sorologia reagente Caso fictício de regressão; suposição a valida
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -6678,6 +6693,7 @@ Leptospirose: sorologia reagente Caso fictício de regressão; suposição a val
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "olhos_lacrimejando",
     "outros_animais_estufados",
@@ -6941,6 +6957,7 @@ IBR: BoHV-1 detectado Caso fictício de regressão; suposição a validar.
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -7205,6 +7222,7 @@ BVD: antígeno detectado Caso fictício de regressão; suposição a validar.
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "mudanca_abrupta_concentrado",
     "olhos_lacrimejando",
@@ -7461,6 +7479,7 @@ Tuberculose: tuberculinização reagente Caso fictício de regressão; suposiç�
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -7745,6 +7764,7 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "lesao_erosiva_talao_morango",
     "linfonodos_aumentados",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "outros_animais_estufados",
     "pasto_leguminosa_recente",
@@ -8004,6 +8024,7 @@ Par excludente: timpanismo espumoso por leguminosa vence o gasoso, que tinha evi
     "lesao_sola_pinca_dor",
     "magnesio_serico",
     "mancar_pata_traseira_sem_inchaco",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -8275,6 +8296,7 @@ Flegmão interdigital: febre e fissura interdigital necrótica. Caso fictício d
     "lesao_sola_pinca_dor",
     "magnesio_serico",
     "mancar_pata_traseira_sem_inchaco",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "olhos_lacrimejando",
     "outros_animais_estufados",
@@ -8753,6 +8775,7 @@ Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom. Caso fictício 
     "ausculta_crepitacoes",
     "bhb_sanguineo",
     "calcio_serico",
+    "cio_irregular_ou_constante",
     "claudicacao",
     "cmt_reagente",
     "corrimento_vaginal",
@@ -8770,6 +8793,7 @@ Cisto ovariano: estrutura ovariana maior que 25 mm ao ultrassom. Caso fictício 
     "leite_alterado",
     "lesao_erosiva_talao_morango",
     "magnesio_serico",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -9322,6 +9346,7 @@ Diferencial podal: manqueira de trás sem inchaço e lesão em morango no talão
     "lesao_sola_pinca_dor",
     "magnesio_serico",
     "mancar_pata_traseira_sem_inchaco",
+    "metricheck_purulento",
     "mucosas_palidas_ou_ictericas",
     "pcr_bohv1",
     "ph_ruminal",
@@ -9463,4 +9488,269 @@ Diferencial podal no modo produtor: manca de trás, sem inchaço, com dor no tal
 }
 ```
 
-Este documento executa 73 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.
+## C-CIS-ANESTRO
+
+Cisto ovariano: vaca sem cio desde o parto aos 90 dias, comendo normalmente (modo especialista; no produtor o anestro sozinho não alcança o potencial de 70%). Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-CIS-ANESTRO",
+  "descricao": "Cisto ovariano: vaca sem cio desde o parto aos 90 dias, comendo normalmente (modo especialista; no produtor o anestro sozinho não alcança o potencial de 70%). Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 90,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.5,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "cio_irregular_ou_constante": false,
+    "sem_cio_desde_parto": true
+  },
+  "esperado": {
+    "top1": "cisto_ovariano",
+    "faixas": {
+      "cisto_ovariano": [
+        25,
+        45
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-CIS-ANESTRO",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "sem_problema",
+    "top1": "cisto_ovariano",
+    "top3_contem": [
+      "cisto_ovariano",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "cisto_ovariano": 35,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "endometrite": 0,
+      "flegmao_interdigital": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "lipidose_hepatica": 0,
+      "mastite": 0,
+      "metrite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "ulcera_sola": 0,
+      "retencao_placenta": 0
+    },
+    "motivo_parada": "sem_perguntas",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "bhb_sanguineo",
+    "calcio_serico",
+    "cio_irregular_ou_constante",
+    "claudicacao",
+    "cmt_reagente",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "estrutura_ovariana_maior_25mm",
+    "fezes_aquosas_espuma_graos",
+    "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "lesao_erosiva_talao_morango",
+    "magnesio_serico",
+    "metricheck_purulento",
+    "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
+    "queda_producao",
+    "sem_cio_desde_parto",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
+    "temperatura_retal",
+    "teste_caneca_grumos",
+    "tuberculina_reagente",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+## C-N-END-SEMCORR
+
+Endometrite subclínica ao olho: sem corrimento visível, mas Metricheck purulento aos 45 dias. Caso fictício de regressão; suposição a validar.
+
+### Entrada e resultado esperado
+
+```json
+{
+  "id": "C-N-END-SEMCORR",
+  "descricao": "Endometrite subclínica ao olho: sem corrimento visível, mas Metricheck purulento aos 45 dias. Caso fictício de regressão; suposição a validar.",
+  "modo": "veterinario",
+  "ficha": {
+    "dias_em_lactacao": 45,
+    "historico_retencao_placenta": false
+  },
+  "triagem": {
+    "estado_termico": 38.6,
+    "atitude_locomocao": [],
+    "apetite_ruminacao": "normal",
+    "producao_leite": [],
+    "excrecoes": []
+  },
+  "respostas": {
+    "metricheck_purulento": true
+  },
+  "esperado": {
+    "top1": "endometrite",
+    "urgencia": "observar",
+    "faixas": {
+      "endometrite": [
+        80,
+        100
+      ]
+    }
+  }
+}
+```
+
+### Resultado observado
+
+```json
+{
+  "caso_id": "C-N-END-SEMCORR",
+  "status": "passou",
+  "falhas": [],
+  "obtido": {
+    "urgencia": "observar",
+    "top1": "endometrite",
+    "top3_contem": [
+      "endometrite",
+      "acidose",
+      "brucelose"
+    ],
+    "percentuais": {
+      "endometrite": 85,
+      "acidose": 0,
+      "brucelose": 0,
+      "bvd": 0,
+      "cetose": 0,
+      "cisto_ovariano": 0,
+      "dermatite_digital": 0,
+      "deslocamento_abomaso_direita": 0,
+      "deslocamento_abomaso_esquerda": 0,
+      "flegmao_interdigital": 0,
+      "hipocalcemia": 0,
+      "hipomagnesemia": 0,
+      "ibr": 0,
+      "leptospirose": 0,
+      "lipidose_hepatica": 0,
+      "mastite": 0,
+      "pneumonia": 0,
+      "reticulopericardite_traumatica": 0,
+      "timpanismo_espumoso": 0,
+      "timpanismo_gasoso": 0,
+      "tpb": 0,
+      "tuberculose": 0,
+      "ulcera_sola": 0,
+      "retencao_placenta": 0,
+      "metrite": 0
+    },
+    "motivo_parada": "sem_perguntas",
+    "bandeiras": [],
+    "inconclusivas": [],
+    "alerta": {
+      "pausa": false
+    }
+  },
+  "respondidas": [
+    "antigeno_bvdv",
+    "apatia",
+    "apetite",
+    "ausculta_crepitacoes",
+    "bhb_sanguineo",
+    "calcio_serico",
+    "cio_irregular_ou_constante",
+    "claudicacao",
+    "cmt_reagente",
+    "corrimento_vaginal",
+    "decubito",
+    "diarreia",
+    "dias_em_lactacao",
+    "esfregaco_hemoparasitas",
+    "espuma_sonda",
+    "estrutura_ovariana_maior_25mm",
+    "fezes_aquosas_espuma_graos",
+    "fita_urina_corpos_cetonicos",
+    "gas_livre_sonda",
+    "higroma",
+    "historico_retencao_placenta",
+    "leite_alterado",
+    "lesao_erosiva_talao_morango",
+    "magnesio_serico",
+    "metricheck_purulento",
+    "mucosas_palidas_ou_ictericas",
+    "pcr_bohv1",
+    "ph_ruminal",
+    "ping_flanco_direito",
+    "ping_metalico_flanco_esquerdo",
+    "prova_dor_reticular",
+    "queda_producao",
+    "sorologia_brucelose_reagente",
+    "sorologia_leptospirose_reagente",
+    "temperatura_retal",
+    "teste_caneca_grumos",
+    "tuberculina_reagente",
+    "ubere_inflamado",
+    "urina_escura",
+    "vacinada_brucelose"
+  ]
+}
+```
+
+Este documento executa 75 cenário(s) sintético(s); não substitui validação especializada. Os desvios em relação à especificação e os limites da coleta estão no registro de riscos. `limite_dinamico: 0`, quando presente no caso, encerra após a triagem; os limites normais da base são 15/30.

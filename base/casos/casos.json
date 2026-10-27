@@ -2361,5 +2361,63 @@
         ]
       }
     }
+  },
+  {
+    "id": "C-CIS-ANESTRO",
+    "descricao": "Cisto ovariano: vaca sem cio desde o parto aos 90 dias, comendo normalmente (modo especialista; no produtor o anestro sozinho não alcança o potencial de 70%). Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 90,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.5,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "cio_irregular_ou_constante": false,
+      "sem_cio_desde_parto": true
+    },
+    "esperado": {
+      "top1": "cisto_ovariano",
+      "faixas": {
+        "cisto_ovariano": [
+          25,
+          45
+        ]
+      }
+    }
+  },
+  {
+    "id": "C-N-END-SEMCORR",
+    "descricao": "Endometrite subclínica ao olho: sem corrimento visível, mas Metricheck purulento aos 45 dias. Caso fictício de regressão; suposição a validar.",
+    "modo": "veterinario",
+    "ficha": {
+      "dias_em_lactacao": 45,
+      "historico_retencao_placenta": false
+    },
+    "triagem": {
+      "estado_termico": 38.6,
+      "atitude_locomocao": [],
+      "apetite_ruminacao": "normal",
+      "producao_leite": [],
+      "excrecoes": []
+    },
+    "respostas": {
+      "metricheck_purulento": true
+    },
+    "esperado": {
+      "top1": "endometrite",
+      "urgencia": "observar",
+      "faixas": {
+        "endometrite": [
+          80,
+          100
+        ]
+      }
+    }
   }
 ]

@@ -4,15 +4,15 @@
 
 Base indicada pelo ponteiro ativo; ativação operacional não é validação clínica.
 
-Versão: `v0008`. Pai declarado: `v0007`. Data declarada na base: `2026-10-27`.
+Versão: `v0009`. Pai declarado: `v0008`. Data declarada na base: `2026-10-27`.
 
-Arquivo: `base/versoes/v0008.json`. SHA-256 do JSON canônico: `b20c5afa1474cacedc0adb0d2329dcebbe71d70265dc2b2c11fd6edc28b8e989`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
+Arquivo: `base/versoes/v0009.json`. SHA-256 do JSON canônico: `7163c49cdc2d24d255b320d9ab974fd9b1d9b10daf10157d11c93d1ae1e3fcfd`. O hash usa UTF-8, chaves ordenadas e ausência de espaços, independente das quebras de linha do checkout.
 
-Regras: **167**. Símbolos: **118**. Doenças: **25**.
+Regras: **168**. Símbolos: **119**. Doenças: **25**.
 
 | Estado | Quantidade |
 | --- | --- |
-| suposicao_a_validar | 167 |
+| suposicao_a_validar | 168 |
 
 As fontes descrevem o contexto clínico. Os números de CF são escolhas de modelagem do projeto; não são probabilidades nem valores publicados nessas referências.
 
@@ -103,6 +103,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | `R-CIS-02` | dias_em_lactacao > 40 E estrutura_ovariana_maior_25mm = sim | cisto_ovariano | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Estrutura ovariana com líquido maior que 25 mm, persistente e sem corpo lúteo, caracteriza a doença do ovário cístico. |
 | `R-CIS-03` | dias_em_lactacao > 40 E corrimento_vaginal = sim | cisto_ovariano | -0,2 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: corrimento vaginal anormal aponta para o útero (endometrite), não para o ovário. |
 | `R-CIS-04` | dias_em_lactacao > 40 E apetite em {reduzido, ausente} E cio_irregular_ou_constante = sim | cisto_ovariano | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Cio irregular ou constante depois de 40 dias do parto em vaca com apetite reduzido ou ausente é sinal inespecífico de cisto ovariano; com apetite normal vale a R-CIS-01. |
+| `R-CIS-05` | dias_em_lactacao > 60 E apetite = normal E NÃO (cio_irregular_ou_constante = sim) E sem_cio_desde_parto = sim | cisto_ovariano | 0,35 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Anestro depois de 60 dias do parto, em vaca que come normalmente, também é apresentação do cisto ovariano (sobretudo luteínico); peso menor que o do cio irregular porque o anestro tem outras causas. |
 
 ## Dermatite Digital Bovina — dermatite_digital (gravidade baixa)
 
@@ -140,7 +141,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | ID | Condições | Conclusão | CF | Prioridade | Fonte | Estado | Nota |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `R-END-01` | corrimento_vaginal = sim E dias_em_lactacao > 21 E corrimento_com_pus_apos_21_dias = sim | endometrite | 0,7 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Corrimento com pus depois de 21 dias do parto, sem sinais sistêmicos, define endometrite clínica. Só vale com corrimento observado na triagem. |
-| `R-END-02` | corrimento_vaginal = sim E dias_em_lactacao > 21 E metricheck_purulento = sim | endometrite | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica. |
+| `R-END-02` | dias_em_lactacao > 21 E metricheck_purulento = sim | endometrite | 0,85 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica. Não exige corrimento visto na triagem: o exame serve justamente para achar pus que não aparece por fora. |
 | `R-END-03` | corrimento_vaginal = sim E dias_em_lactacao > 21 E febre = sim | endometrite | -0,4 | 10 | Referência clínica contextual: [referência](https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o); CF e tradução para regra: suposição do projeto a validar | suposicao_a_validar | Diferencial: a endometrite clínica não tem sinais sistêmicos; febre aponta para outro quadro infeccioso. |
 | `R-END-04` | corrimento_vaginal = sim E dias_em_lactacao > 21 | endometrite | 0,05 | 10 | Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar | suposicao_a_validar | Corrimento vaginal depois de 21 dias do parto, sozinho, é sinal inespecífico de endometrite. |
 
@@ -448,6 +449,7 @@ A triagem não consome o limite dinâmico. Premissa exige CF estritamente maior 
 | retencao_placenta | Retenção de Placenta | doenca | tipo: booleano | — | — | media | mycin |
 | reticulopericardite_traumatica | Reticulopericardite Traumática | doenca | tipo: booleano | — | — | alta | mycin |
 | secrecao_nasal | Secreção nasal | pergunta | tipo: booleano | Está escorrendo catarro ou secreção pelo nariz? | Secreção nasal mucosa ou mucopurulenta? | — | mycin |
+| sem_cio_desde_parto | Sem cio desde o parto | pergunta | tipo: booleano | A vaca não entrou no cio nenhuma vez desde o parto? | Anestro (nenhum cio observado) após o período voluntário de espera? | — | mycin |
 | sem_problema | Sem evidência de urgência pelos critérios da base | urgencia | tipo: booleano | — | — | — | mycin |
 | sorologia_brucelose_reagente | Sorologia para brucelose reagente | pergunta | tipo: booleano | — | Teste sorológico para brucelose (AAT, 2-ME ou FPA) reagente? | — | mycin |
 | sorologia_leptospirose_reagente | Sorologia para leptospirose reagente | pergunta | tipo: booleano | — | Soroaglutinação microscópica para leptospirose com título significativo? | — | mycin |

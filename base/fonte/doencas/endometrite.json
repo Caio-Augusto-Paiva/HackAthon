@@ -87,12 +87,6 @@
       "id": "R-END-02",
       "se": [
         {
-          "simbolo": "corrimento_vaginal",
-          "op": "=",
-          "valor": true,
-          "negado": false
-        },
-        {
           "simbolo": "dias_em_lactacao",
           "op": ">",
           "valor": 21.0,
@@ -113,7 +107,7 @@
       "prioridade": 10,
       "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
-      "nota": "Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica."
+      "nota": "Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica. Não exige corrimento visto na triagem: o exame serve justamente para achar pus que não aparece por fora."
     },
     {
       "id": "R-END-03",

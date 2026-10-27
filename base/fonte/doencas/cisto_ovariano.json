@@ -19,6 +19,23 @@
       "combinacao": "mycin"
     },
     {
+      "id": "sem_cio_desde_parto",
+      "tipo": "pergunta",
+      "nome": "Sem cio desde o parto",
+      "dominio": {
+        "tipo": "booleano"
+      },
+      "pergunta": {
+        "produtor": "A vaca não entrou no cio nenhuma vez desde o parto?",
+        "veterinario": "Anestro (nenhum cio observado) após o período voluntário de espera?"
+      },
+      "por_que": {
+        "produtor": "Esclarecer as hipóteses relacionadas a ausência de cio desde o parto.",
+        "veterinario": "Esclarecer as hipóteses relacionadas a anestro pós-parto."
+      },
+      "combinacao": "mycin"
+    },
+    {
       "id": "estrutura_ovariana_maior_25mm",
       "tipo": "pergunta",
       "nome": "Estrutura ovariana maior que 25 mm",
@@ -169,6 +186,44 @@
       "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
       "status": "suposicao_a_validar",
       "nota": "Cio irregular ou constante depois de 40 dias do parto em vaca com apetite reduzido ou ausente é sinal inespecífico de cisto ovariano; com apetite normal vale a R-CIS-01."
+    },
+    {
+      "id": "R-CIS-05",
+      "se": [
+        {
+          "simbolo": "dias_em_lactacao",
+          "op": ">",
+          "valor": 60.0,
+          "negado": false
+        },
+        {
+          "simbolo": "apetite",
+          "op": "=",
+          "valor": "normal",
+          "negado": false
+        },
+        {
+          "simbolo": "cio_irregular_ou_constante",
+          "op": "=",
+          "valor": true,
+          "negado": true
+        },
+        {
+          "simbolo": "sem_cio_desde_parto",
+          "op": "=",
+          "valor": true,
+          "negado": false
+        }
+      ],
+      "entao": {
+        "simbolo": "cisto_ovariano",
+        "cf": 0.35
+      },
+      "classe": "evidencia",
+      "prioridade": 10,
+      "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+      "status": "suposicao_a_validar",
+      "nota": "Anestro depois de 60 dias do parto, em vaca que come normalmente, também é apresentação do cisto ovariano (sobretudo luteínico); peso menor que o do cio irregular porque o anestro tem outras causas."
     },
     {
       "id": "R-URG-24",
