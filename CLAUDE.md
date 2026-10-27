@@ -29,7 +29,7 @@ Atualizar o grafo reextrai os documentos com subagentes (a primeira extração c
 
 Mudanças só em código, testes, `web/`, `docs/prompts/` ou `docs/rascunhos/` **não** pedem atualização do grafo.
 
-Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1: documentação, abrir como cofre no Obsidian) e `obsidian/02-Dados de Treino/` (grafo 2: dados das 20 doenças, gerado sem IA a partir de `base/fonte/`; ver o README da pasta).
+Pastas do Obsidian: `obsidian/01-conhecimento/` (grafo 1: documentação, abrir como cofre no Obsidian) e `obsidian/02-Dados de Treino/` (grafo 2: dados das 25 doenças, gerado sem IA a partir de `base/fonte/`; ver o README da pasta).
 
 ## O desafio
 

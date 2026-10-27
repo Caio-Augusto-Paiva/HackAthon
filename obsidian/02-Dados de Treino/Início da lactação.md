@@ -19,5 +19,8 @@ tags:
 - [[R-DAE-02 SE Início da lactação E Flanco esquerdo afundado ENTÃO Deslocamento de Abomaso à Esquerda]] - `condicao_de` [EXTRACTED]
 - [[R-DAE-05 SE Início da lactação E Pouco esterco ENTÃO Deslocamento de Abomaso à Esquerda]] - `condicao_de` [EXTRACTED]
 - [[R-DER-03 SE Dias em lactação ENTÃO Início da lactação]] - `conclui` [EXTRACTED]
+- [[R-LIP-01 SE Início da lactação E Apetite E Vaca gorda no parto ENTÃO Lipidose Hepática (Fígado Gorduroso)]] - `condicao_de` [EXTRACTED]
+- [[R-LIP-02 SE Início da lactação E Apetite E Enzimas hepáticas elevadas ENTÃO Lipidose Hepática (Fígado Gorduroso)]] - `condicao_de` [EXTRACTED]
+- [[R-LIP-03 SE Início da lactação E Apetite E Vaca gorda no parto ENTÃO Lipidose Hepática (Fígado Gorduroso)]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

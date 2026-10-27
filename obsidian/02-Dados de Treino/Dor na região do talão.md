@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[R-DD-02 SE Claudicação E Dor na região do talão ENTÃO Dermatite Digital Bovina]] - `condicao_de` [EXTRACTED]
+- [[R-ULC-06 SE Claudicação E Dor na região do talão ENTÃO Úlcera de Sola  Doença da Linha Branca]] - `condicao_de` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Dermatite_Digital_Bovina

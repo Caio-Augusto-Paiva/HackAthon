@@ -1,6 +1,6 @@
 # Roteiro de apresentação e demonstração — versão disponível
 
-Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0007`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
+Este roteiro acompanha a integração em `codex-davi`: interface React, motor, `kb/`, base ativa `v0008`, API FastAPI com 27 operações e persistência SQLite. Há testes de navegador com API real; o editor gráfico permanece pendente. Nomes e responsabilidades informados pela equipe estão no [índice](README.md); as transições e a participação humana precisam de ensaio.
 
 A duração oficial não consta dos materiais fornecidos. A equipe confirmou nesta revisão **10 minutos de fala mais 4 de demonstração como estimativas**, sujeitas à confirmação com a organização. A alternativa de **5 minutos incluindo demo** permanece apenas como reserva. O conteúdo abaixo é um roteiro editorial; slides finais e PDFs ainda precisam ser produzidos e revisados. Nenhum tempo abaixo foi cronometrado em ensaio humano.
 
@@ -12,7 +12,7 @@ A duração oficial não consta dos materiais fornecidos. A equipe confirmou nes
 | 2. O que é sistema especialista | Mostrar fato → regra → conclusão; IA auxiliou a construção, motor faz a consulta | A | 1:00 |
 | 3. Arquitetura disponível | Diagrama do documento 02: React, API FastAPI, SQLite, `kb`, versão ativa, motor e explicação; editor pendente | B | 1:15 |
 | 4. Raciocínio e segurança | Três camadas, premissa mínima, combinação MYCIN, seis telas e bandeiras; um único exemplo numérico | A | 1:45 |
-| 5. Base e limites clínicos | 20 doenças, 137 regras, 2 pares excludentes e links de tratamento, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
+| 5. Base e limites clínicos | 25 doenças, 167 regras, 3 pares excludentes e links de tratamento, todas como suposição; fontes contextuais não calibram CF | C | 1:00 |
 | 6. Evidência de funcionamento | Estado atual: 1082 testes Python aprovados, 170 subtestes, 72 Vitest e 34 casos sintéticos (E2E: 6 specs, não rodados; um teste Vitest de preparação é intermitente por tempo; histórico: 1080 Python e 71 Vitest; fechamento de 22/10: 1077 Python e 68 Vitest; histórico `09f5754`: 1066 Python, 60 Vitest, 11 E2E); não confundir com validação clínica | B | 1:00 |
 | 7. IA e julgamento da equipe | Três exemplos comprovados: restauração direta, regra de TPB sem febre e rejeição de aprovação clínica automática; 40 s por papel | A/B/C | 2:00 |
 | 8. Riscos e próximos passos | Revisão especializada, licença, editor, limitações de coleta R15/R16, Swagger offline e ensaio físico sem rede | A | 0:45 |
@@ -133,7 +133,7 @@ Total: **300 segundos (5:00)**. A troca de modo e a restauração ficam como apo
 | A ordem importa? | O cálculo de CF é testado com permutações; a memória de alertas da sessão também depende da ordem de chegada, que é persistida no snapshot. |
 | O sistema roda sem internet? | Motor, base, API, fontes e imagens da interface executam localmente após instalar e compilar. E2E não emitem chamadas externas; Wi-Fi fisicamente desligado e máquina reserva ainda exigem ensaio da equipe. Swagger usa CDN. |
 | Onde está o editor? | Fora do escopo desta consulta entregue. JSON, validador, conversão de grafo e rotas de versões estão disponíveis; não se afirma conclusão nem andamento da edição visual sem evidência. |
-| Por que essas vinte doenças? | São o recorte definido pela equipe na especificação. Não representam todos os diagnósticos diferenciais da clínica bovina. |
+| Por que essas vinte e cinco doenças? | São o recorte definido pela equipe na especificação. Não representam todos os diagnósticos diferenciais da clínica bovina. |
 | O que significa `sem_problema`? | Ausência de um gatilho de urgência pelos critérios atuais; não é comprovação de saúde ou segurança clínica. |
 | Como mudam a base sem perder rastreabilidade? | `kb.Repositorio` grava versões imutáveis; a API executa casos, controla a ativação e prende a sessão à versão. Alteração de regra exige nova versão; `v0001`, `v0002` e `v0003` foram preservadas e `v0004` foram preservadas e a `v0005` é a ativa. |
 | O projeto atende integralmente a open source? | O código está disponível; falta registrar a licença do projeto e revisar o pacote final. Não declarar essa pendência resolvida. |

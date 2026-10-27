@@ -30,5 +30,6 @@ tags:
 - [[R-URG-17 SE Leptospirose ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 - [[R-URG-19 SE Diarreia Viral Bovina (BVD) ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 - [[R-URG-20 SE Tuberculose ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
+- [[R-URG-25 SE Lipidose Hepática (Fígado Gorduroso) ENTÃO Atendimento Veterinário Imediato]] - `conclui` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

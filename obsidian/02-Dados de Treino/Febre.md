@@ -18,6 +18,8 @@ tags:
 - [[R-DER-07 SE Temperatura ao toque das extremidades ENTÃO Febre]] - `conclui` [EXTRACTED]
 - [[R-DER-08 SE Temperatura retal ENTÃO Febre]] - `conclui` [EXTRACTED]
 - [[R-DER-10 SE Temperatura ao toque das extremidades ENTÃO Febre]] - `conclui` [EXTRACTED]
+- [[R-END-03 SE Corrimento vaginal E Dias em lactação E Febre ENTÃO Endometrite Clínica]] - `condicao_de` [EXTRACTED]
+- [[R-FLE-03 SE Claudicação E Febre ENTÃO Flegmão Interdigital (Podridão do Casco)]] - `condicao_de` [EXTRACTED]
 - [[R-HIP-04 SE Febre ENTÃO Hipocalcemia Puerperal]] - `condicao_de` [EXTRACTED]
 - [[R-IBR-02 SE Olhos lacrimejando E Febre ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)]] - `condicao_de` [EXTRACTED]
 - [[R-IBR-04 SE Febre E Queda de produção de leite ENTÃO Rinotraqueíte Infecciosa Bovina (IBR)]] - `condicao_de` [EXTRACTED]

@@ -39,7 +39,7 @@
       "id": "sim:claudicacao",
       "label": "Claudicação",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -144,7 +144,7 @@
       "id": "sim:lesao_erosiva_talao_morango",
       "label": "Lesão característica no talão",
       "file_type": "concept",
-      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "source_file": "base/fonte/comum.json",
       "tipo": "pergunta"
     },
     {
@@ -722,6 +722,111 @@
       "tipo": "doenca"
     },
     {
+      "id": "sim:cio_irregular_ou_constante",
+      "label": "Cio irregular ou constante",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:estrutura_ovariana_maior_25mm",
+      "label": "Estrutura ovariana maior que 25 mm",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:cisto_ovariano",
+      "label": "Cisto Ovariano",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:corrimento_com_pus_apos_21_dias",
+      "label": "Corrimento com pus após 21 dias do parto",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:metricheck_purulento",
+      "label": "Conteúdo purulento ao exame vaginal",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:endometrite",
+      "label": "Endometrite Clínica",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:inchaco_entre_unhas_mau_cheiro",
+      "label": "Inchaço entre as unhas com mau cheiro",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:fissura_interdigital_necrotica",
+      "label": "Fissura interdigital necrótica",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:flegmao_interdigital",
+      "label": "Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:vaca_gorda_no_parto",
+      "label": "Vaca gorda no parto",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:enzimas_hepaticas_elevadas",
+      "label": "Enzimas hepáticas elevadas",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:lipidose_hepatica",
+      "label": "Lipidose Hepática (Fígado Gorduroso)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:mancar_pata_traseira_sem_inchaco",
+      "label": "Manqueira de pata traseira sem inchaço",
+      "file_type": "concept",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:lesao_sola_pinca_dor",
+      "label": "Dor à pinça na sola ou na linha branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ulcera_sola",
+      "label": "Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "tipo": "doenca"
+    },
+    {
       "id": "regra:R-DER-01",
       "label": "R-DER-01: SE Dias em lactação ENTÃO Periparto imediato",
       "file_type": "concept",
@@ -941,6 +1046,13 @@
     {
       "id": "regra:R-DD-03",
       "label": "R-DD-03: SE Lesão característica no talão ENTÃO Dermatite Digital Bovina",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-DD-04",
+      "label": "R-DD-04: SE Claudicação E Inchaço entre as unhas com mau cheiro ENTÃO Dermatite Digital Bovina",
       "file_type": "concept",
       "source_file": "base/fonte/doencas/dermatite_digital.json",
       "classe": "evidencia"
@@ -1679,6 +1791,209 @@
       "file_type": "concept",
       "source_file": "base/fonte/doencas/tuberculose.json",
       "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-CIS-01",
+      "label": "R-CIS-01: SE Dias em lactação E Apetite E Cio irregular ou constante ENTÃO Cisto Ovariano",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CIS-02",
+      "label": "R-CIS-02: SE Dias em lactação E Estrutura ovariana maior que 25 mm ENTÃO Cisto Ovariano",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CIS-03",
+      "label": "R-CIS-03: SE Dias em lactação E Corrimento vaginal ENTÃO Cisto Ovariano",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-CIS-04",
+      "label": "R-CIS-04: SE Dias em lactação E Apetite E Cio irregular ou constante ENTÃO Cisto Ovariano",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-24",
+      "label": "R-URG-24: SE Cisto Ovariano ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-END-01",
+      "label": "R-END-01: SE Corrimento vaginal E Dias em lactação E Corrimento com pus após 21 dias do parto ENTÃO Endometrite Clínica",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-END-02",
+      "label": "R-END-02: SE Corrimento vaginal E Dias em lactação E Conteúdo purulento ao exame vaginal ENTÃO Endometrite Clínica",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-END-03",
+      "label": "R-END-03: SE Corrimento vaginal E Dias em lactação E Febre ENTÃO Endometrite Clínica",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-END-04",
+      "label": "R-END-04: SE Corrimento vaginal E Dias em lactação ENTÃO Endometrite Clínica",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-23",
+      "label": "R-URG-23: SE Endometrite Clínica ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-FLE-01",
+      "label": "R-FLE-01: SE Claudicação E Inchaço entre as unhas com mau cheiro ENTÃO Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-FLE-02",
+      "label": "R-FLE-02: SE Claudicação E Fissura interdigital necrótica ENTÃO Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-FLE-03",
+      "label": "R-FLE-03: SE Claudicação E Febre ENTÃO Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-FLE-04",
+      "label": "R-FLE-04: SE Claudicação E Manqueira de pata traseira sem inchaço ENTÃO Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-FLE-05",
+      "label": "R-FLE-05: SE Claudicação ENTÃO Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-FLE-06",
+      "label": "R-FLE-06: SE Claudicação E Lesão característica no talão ENTÃO Flegmão Interdigital (Podridão do Casco)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-22",
+      "label": "R-URG-22: SE Flegmão Interdigital (Podridão do Casco) ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-LIP-01",
+      "label": "R-LIP-01: SE Início da lactação E Apetite E Vaca gorda no parto ENTÃO Lipidose Hepática (Fígado Gorduroso)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LIP-02",
+      "label": "R-LIP-02: SE Início da lactação E Apetite E Enzimas hepáticas elevadas ENTÃO Lipidose Hepática (Fígado Gorduroso)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LIP-03",
+      "label": "R-LIP-03: SE Início da lactação E Apetite E Vaca gorda no parto ENTÃO Lipidose Hepática (Fígado Gorduroso)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-LIP-04",
+      "label": "R-LIP-04: SE Apetite ENTÃO Lipidose Hepática (Fígado Gorduroso)",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-25",
+      "label": "R-URG-25: SE Lipidose Hepática (Fígado Gorduroso) ENTÃO Atendimento Veterinário Imediato",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "classe": "urgencia"
+    },
+    {
+      "id": "regra:R-ULC-01",
+      "label": "R-ULC-01: SE Claudicação E Manqueira de pata traseira sem inchaço ENTÃO Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ULC-02",
+      "label": "R-ULC-02: SE Claudicação E Dor à pinça na sola ou na linha branca ENTÃO Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ULC-03",
+      "label": "R-ULC-03: SE Claudicação E Lesão característica no talão ENTÃO Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ULC-04",
+      "label": "R-ULC-04: SE Claudicação E Inchaço entre as unhas com mau cheiro ENTÃO Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ULC-05",
+      "label": "R-ULC-05: SE Claudicação ENTÃO Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-ULC-06",
+      "label": "R-ULC-06: SE Claudicação E Dor na região do talão ENTÃO Úlcera de Sola / Doença da Linha Branca",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "evidencia"
+    },
+    {
+      "id": "regra:R-URG-21",
+      "label": "R-URG-21: SE Úlcera de Sola / Doença da Linha Branca ENTÃO Monitoramento Clínico Contínuo",
+      "file_type": "concept",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "classe": "urgencia"
     }
   ],
   "edges": [
@@ -2294,6 +2609,28 @@
       "confidence": "EXTRACTED",
       "source_file": "base/fonte/doencas/dermatite_digital.json",
       "cf": 0.85
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-DD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "sim:inchaco_entre_unhas_mau_cheiro",
+      "target": "regra:R-DD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "regra:R-DD-04",
+      "target": "sim:dermatite_digital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "cf": -0.3
     },
     {
       "source": "sim:calcio_serico",
@@ -4284,6 +4621,644 @@
       "cf": 0.99
     },
     {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-CIS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:cio_irregular_ou_constante",
+      "target": "regra:R-CIS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-CIS-01",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:estrutura_ovariana_maior_25mm",
+      "target": "regra:R-CIS-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-CIS-02",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-CIS-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-CIS-03",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "cf": -0.2
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-CIS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:cio_irregular_ou_constante",
+      "target": "regra:R-CIS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-CIS-04",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:cisto_ovariano",
+      "target": "regra:R-URG-24",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-URG-24",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "cf": 0.6
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:corrimento_com_pus_apos_21_dias",
+      "target": "regra:R-END-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-END-01",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:metricheck_purulento",
+      "target": "regra:R-END-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-END-02",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-END-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-END-03",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-END-04",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:endometrite",
+      "target": "regra:R-URG-23",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-URG-23",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/endometrite.json",
+      "cf": 0.7
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:inchaco_entre_unhas_mau_cheiro",
+      "target": "regra:R-FLE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-FLE-01",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": 0.65
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:fissura_interdigital_necrotica",
+      "target": "regra:R-FLE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-FLE-02",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-FLE-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-FLE-03",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": 0.2
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:mancar_pata_traseira_sem_inchaco",
+      "target": "regra:R-FLE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-FLE-04",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-FLE-05",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:lesao_erosiva_talao_morango",
+      "target": "regra:R-FLE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-FLE-06",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": -0.3
+    },
+    {
+      "source": "sim:flegmao_interdigital",
+      "target": "regra:R-URG-22",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "regra:R-URG-22",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-LIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:vaca_gorda_no_parto",
+      "target": "regra:R-LIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "regra:R-LIP-01",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "cf": 0.55
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-LIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:enzimas_hepaticas_elevadas",
+      "target": "regra:R-LIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "regra:R-LIP-02",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "cf": 0.8
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-LIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:vaca_gorda_no_parto",
+      "target": "regra:R-LIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "regra:R-LIP-03",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "cf": -0.3
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "regra:R-LIP-04",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:lipidose_hepatica",
+      "target": "regra:R-URG-25",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "regra:R-URG-25",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "cf": 0.99
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:mancar_pata_traseira_sem_inchaco",
+      "target": "regra:R-ULC-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-ULC-01",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": 0.55
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:lesao_sola_pinca_dor",
+      "target": "regra:R-ULC-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-ULC-02",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": 0.85
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:lesao_erosiva_talao_morango",
+      "target": "regra:R-ULC-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-ULC-03",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": -0.2
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:inchaco_entre_unhas_mau_cheiro",
+      "target": "regra:R-ULC-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-ULC-04",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": -0.4
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-ULC-05",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": 0.05
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:dor_flexao_talao",
+      "target": "regra:R-ULC-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-ULC-06",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": -0.3
+    },
+    {
+      "source": "sim:ulcera_sola",
+      "target": "regra:R-URG-21",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-URG-21",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "cf": 0.7
+    },
+    {
       "source": "sim:deslocamento_abomaso_esquerda",
       "target": "sim:deslocamento_abomaso_direita",
       "relation": "exclui",
@@ -4293,6 +5268,13 @@
     {
       "source": "sim:timpanismo_espumoso",
       "target": "sim:timpanismo_gasoso",
+      "relation": "exclui",
+      "confidence": "EXTRACTED",
+      "source_file": "base/fonte/comum.json"
+    },
+    {
+      "source": "sim:metrite",
+      "target": "sim:endometrite",
       "relation": "exclui",
       "confidence": "EXTRACTED",
       "source_file": "base/fonte/comum.json"

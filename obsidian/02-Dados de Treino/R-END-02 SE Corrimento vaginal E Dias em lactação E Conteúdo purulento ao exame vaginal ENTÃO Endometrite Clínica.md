@@ -1,0 +1,19 @@
+---
+source_file: "base/fonte/doencas/endometrite.json"
+type: "concept"
+community: "Endometrite Clínica"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Endometrite_Clínica
+---
+
+# R-END-02: SE Corrimento vaginal E Dias em lactação E Conteúdo purulento ao exame vaginal ENTÃO Endometrite Clínica
+
+## Connections
+- [[Conteúdo purulento ao exame vaginal]] - `condicao_de` [EXTRACTED]
+- [[Corrimento vaginal]] - `condicao_de` [EXTRACTED]
+- [[Dias em lactação]] - `condicao_de` [EXTRACTED]
+- [[Endometrite Clínica]] - `conclui` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Endometrite_Clínica

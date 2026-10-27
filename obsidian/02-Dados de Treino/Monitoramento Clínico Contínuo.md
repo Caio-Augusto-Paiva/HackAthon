@@ -18,5 +18,9 @@ tags:
 - [[R-URG-12 SE Retenção de Placenta ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
 - [[R-URG-13 SE Pneumonia ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
 - [[R-URG-18 SE Rinotraqueíte Infecciosa Bovina (IBR) ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
+- [[R-URG-21 SE Úlcera de Sola  Doença da Linha Branca ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
+- [[R-URG-22 SE Flegmão Interdigital (Podridão do Casco) ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
+- [[R-URG-23 SE Endometrite Clínica ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
+- [[R-URG-24 SE Cisto Ovariano ENTÃO Monitoramento Clínico Contínuo]] - `conclui` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Comum_bandeiras_triagem_e_sinais_compartilhados

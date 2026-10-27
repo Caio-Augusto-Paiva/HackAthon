@@ -177,10 +177,220 @@
       "source_file": "base/fonte/doencas/acidose.json"
     },
     {
+      "id": "regra:R-FLE-01",
+      "label": "R-FLE-01: SE Claudica\u00e7\u00e3o E Incha\u00e7o entre as unhas com mau cheiro ENT\u00c3O Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "classe": "evidencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-fle-01: se claudicacao e inchaco entre as unhas com mau cheiro entao flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-FLE-02",
+      "label": "R-FLE-02: SE Claudica\u00e7\u00e3o E Fissura interdigital necr\u00f3tica ENT\u00c3O Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "classe": "evidencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-fle-02: se claudicacao e fissura interdigital necrotica entao flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-FLE-03",
+      "label": "R-FLE-03: SE Claudica\u00e7\u00e3o E Febre ENT\u00c3O Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "classe": "evidencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-fle-03: se claudicacao e febre entao flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-FLE-04",
+      "label": "R-FLE-04: SE Claudica\u00e7\u00e3o E Manqueira de pata traseira sem incha\u00e7o ENT\u00c3O Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "classe": "evidencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-fle-04: se claudicacao e manqueira de pata traseira sem inchaco entao flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-FLE-05",
+      "label": "R-FLE-05: SE Claudica\u00e7\u00e3o ENT\u00c3O Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "classe": "evidencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-fle-05: se claudicacao entao flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-FLE-06",
+      "label": "R-FLE-06: SE Claudica\u00e7\u00e3o E Les\u00e3o caracter\u00edstica no tal\u00e3o ENT\u00c3O Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "classe": "evidencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-fle-06: se claudicacao e lesao caracteristica no talao entao flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-DER-01",
+      "label": "R-DER-01: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O Periparto imediato",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-der-01: se dias em lactacao entao periparto imediato",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-DER-05",
+      "label": "R-DER-05: SE Temperatura retal ENT\u00c3O Hipotermia",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-der-05: se temperatura retal entao hipotermia",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-DER-06",
+      "label": "R-DER-06: SE Temperatura ao toque das extremidades ENT\u00c3O Hipotermia",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-der-06: se temperatura ao toque das extremidades entao hipotermia",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-DER-09",
+      "label": "R-DER-09: SE Temperatura retal ENT\u00c3O Hipotermia",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-der-09: se temperatura retal entao hipotermia",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-01",
+      "label": "R-HIP-01: SE Dec\u00fabito E Periparto imediato ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-01: se decubito e periparto imediato entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-02",
+      "label": "R-HIP-02: SE Periparto imediato E Desvio cervical em S E Hipotermia ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-02: se periparto imediato e desvio cervical em s e hipotermia entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-03",
+      "label": "R-HIP-03: SE C\u00e1lcio s\u00e9rico total ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-03: se calcio serico total entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-04",
+      "label": "R-HIP-04: SE Febre ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-04: se febre entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-05",
+      "label": "R-HIP-05: SE Dec\u00fabito E Dias em lacta\u00e7\u00e3o ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-05: se decubito e dias em lactacao entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HIP-06",
+      "label": "R-HIP-06: SE Hipotermia E Dias em lacta\u00e7\u00e3o ENT\u00c3O Hipocalcemia Puerperal",
+      "classe": "evidencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-hip-06: se hipotermia e dias em lactacao entao hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-HMG-01",
+      "label": "R-HMG-01: SE Tremores musculares E Agita\u00e7\u00e3o ou rea\u00e7\u00e3o exagerada E Apetite ENT\u00c3O Hipomagnesemia",
+      "classe": "evidencia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "r-hmg-01: se tremores musculares e agitacao ou reacao exagerada e apetite entao hipomagnesemia",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "id": "regra:R-HMG-02",
+      "label": "R-HMG-02: SE Pasto novo e adubado E Apetite ENT\u00c3O Hipomagnesemia",
+      "classe": "evidencia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "r-hmg-02: se pasto novo e adubado e apetite entao hipomagnesemia",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "id": "regra:R-HMG-03",
+      "label": "R-HMG-03: SE Magn\u00e9sio s\u00e9rico ENT\u00c3O Hipomagnesemia",
+      "classe": "evidencia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "r-hmg-03: se magnesio serico entao hipomagnesemia",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "id": "regra:R-HMG-04",
+      "label": "R-HMG-04: SE Dec\u00fabito E Temperatura ao toque das extremidades ENT\u00c3O Hipomagnesemia",
+      "classe": "evidencia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "r-hmg-04: se decubito e temperatura ao toque das extremidades entao hipomagnesemia",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "id": "regra:R-HMG-05",
+      "label": "R-HMG-05: SE Magn\u00e9sio s\u00e9rico ENT\u00c3O Hipomagnesemia",
+      "classe": "evidencia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "r-hmg-05: se magnesio serico entao hipomagnesemia",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
       "id": "regra:R-IBR-01",
       "label": "R-IBR-01: SE Focinho muito vermelho E Secre\u00e7\u00e3o nasal E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "classe": "evidencia",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "r-ibr-01: se focinho muito vermelho e secrecao nasal e queda de producao de leite entao rinotraqueite infecciosa bovina (ibr)",
@@ -190,7 +400,7 @@
       "id": "regra:R-IBR-02",
       "label": "R-IBR-02: SE Olhos lacrimejando E Febre ENT\u00c3O Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "classe": "evidencia",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "r-ibr-02: se olhos lacrimejando e febre entao rinotraqueite infecciosa bovina (ibr)",
@@ -200,7 +410,7 @@
       "id": "regra:R-IBR-03",
       "label": "R-IBR-03: SE BoHV-1 detectado ENT\u00c3O Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "classe": "evidencia",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "r-ibr-03: se bohv-1 detectado entao rinotraqueite infecciosa bovina (ibr)",
@@ -210,7 +420,7 @@
       "id": "regra:R-IBR-04",
       "label": "R-IBR-04: SE Febre E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "classe": "evidencia",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "r-ibr-04: se febre e queda de producao de leite entao rinotraqueite infecciosa bovina (ibr)",
@@ -220,7 +430,7 @@
       "id": "regra:R-IBR-05",
       "label": "R-IBR-05: SE Crepita\u00e7\u00f5es \u00e0 ausculta\u00e7\u00e3o pulmonar ENT\u00c3O Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "classe": "evidencia",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "r-ibr-05: se crepitacoes a auscultacao pulmonar entao rinotraqueite infecciosa bovina (ibr)",
@@ -230,7 +440,7 @@
       "id": "regra:R-LEP-01",
       "label": "R-LEP-01: SE Aborto recente E Febre ENT\u00c3O Leptospirose",
       "classe": "evidencia",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "r-lep-01: se aborto recente e febre entao leptospirose",
@@ -240,7 +450,7 @@
       "id": "regra:R-LEP-02",
       "label": "R-LEP-02: SE Leite rosado ou com sangue E Queda de produ\u00e7\u00e3o de leite E Altera\u00e7\u00e3o vis\u00edvel do leite ENT\u00c3O Leptospirose",
       "classe": "evidencia",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "r-lep-02: se leite rosado ou com sangue e queda de producao de leite e alteracao visivel do leite entao leptospirose",
@@ -250,7 +460,7 @@
       "id": "regra:R-LEP-03",
       "label": "R-LEP-03: SE Sorologia para leptospirose reagente ENT\u00c3O Leptospirose",
       "classe": "evidencia",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "r-lep-03: se sorologia para leptospirose reagente entao leptospirose",
@@ -260,7 +470,7 @@
       "id": "regra:R-LEP-04",
       "label": "R-LEP-04: SE Urina escura E Febre ENT\u00c3O Leptospirose",
       "classe": "evidencia",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "r-lep-04: se urina escura e febre entao leptospirose",
@@ -270,17 +480,57 @@
       "id": "regra:R-LEP-05",
       "label": "R-LEP-05: SE Hemoparasitas no esfrega\u00e7o ENT\u00c3O Leptospirose",
       "classe": "evidencia",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "r-lep-05: se hemoparasitas no esfregaco entao leptospirose",
       "source_file": "base/fonte/doencas/leptospirose.json"
     },
     {
+      "id": "regra:R-LIP-01",
+      "label": "R-LIP-01: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Vaca gorda no parto ENT\u00c3O Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "classe": "evidencia",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "r-lip-01: se inicio da lactacao e apetite e vaca gorda no parto entao lipidose hepatica (figado gorduroso)",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "id": "regra:R-LIP-02",
+      "label": "R-LIP-02: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Enzimas hep\u00e1ticas elevadas ENT\u00c3O Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "classe": "evidencia",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "r-lip-02: se inicio da lactacao e apetite e enzimas hepaticas elevadas entao lipidose hepatica (figado gorduroso)",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "id": "regra:R-LIP-03",
+      "label": "R-LIP-03: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Vaca gorda no parto ENT\u00c3O Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "classe": "evidencia",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "r-lip-03: se inicio da lactacao e apetite e vaca gorda no parto entao lipidose hepatica (figado gorduroso)",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "id": "regra:R-LIP-04",
+      "label": "R-LIP-04: SE Apetite ENT\u00c3O Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "classe": "evidencia",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "r-lip-04: se apetite entao lipidose hepatica (figado gorduroso)",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
       "id": "regra:R-MAS-01",
       "label": "R-MAS-01: SE Altera\u00e7\u00e3o vis\u00edvel do leite ENT\u00c3O Evid\u00eancia agrupada de altera\u00e7\u00e3o do leite",
       "classe": "evidencia",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "r-mas-01: se alteracao visivel do leite entao evidencia agrupada de alteracao do leite",
@@ -290,7 +540,7 @@
       "id": "regra:R-MAS-02",
       "label": "R-MAS-02: SE Inflama\u00e7\u00e3o do \u00fabere ENT\u00c3O Mastite",
       "classe": "evidencia",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "r-mas-02: se inflamacao do ubere entao mastite",
@@ -300,7 +550,7 @@
       "id": "regra:R-MAS-03",
       "label": "R-MAS-03: SE Grumos na caneca ENT\u00c3O Evid\u00eancia agrupada de altera\u00e7\u00e3o do leite",
       "classe": "evidencia",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "r-mas-03: se grumos na caneca entao evidencia agrupada de alteracao do leite",
@@ -310,7 +560,7 @@
       "id": "regra:R-MAS-04",
       "label": "R-MAS-04: SE CMT reagente ENT\u00c3O Mastite",
       "classe": "evidencia",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "r-mas-04: se cmt reagente entao mastite",
@@ -320,7 +570,7 @@
       "id": "regra:R-MAS-05",
       "label": "R-MAS-05: SE Evid\u00eancia agrupada de altera\u00e7\u00e3o do leite ENT\u00c3O Mastite",
       "classe": "evidencia",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "r-mas-05: se evidencia agrupada de alteracao do leite entao mastite",
@@ -330,7 +580,7 @@
       "id": "regra:R-MET-01",
       "label": "R-MET-01: SE Puerp\u00e9rio E Corrimento vaginal f\u00e9tido E Corrimento vaginal ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "r-met-01: se puerperio e corrimento vaginal fetido e corrimento vaginal entao metrite puerperal",
@@ -340,7 +590,7 @@
       "id": "regra:R-MET-02",
       "label": "R-MET-02: SE Corrimento vaginal E Puerp\u00e9rio E Febre ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "r-met-02: se corrimento vaginal e puerperio e febre entao metrite puerperal",
@@ -350,7 +600,7 @@
       "id": "regra:R-MET-03",
       "label": "R-MET-03: SE Puerp\u00e9rio E Aumento uterino \u00e0 palpa\u00e7\u00e3o E Corrimento vaginal ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "r-met-03: se puerperio e aumento uterino a palpacao e corrimento vaginal entao metrite puerperal",
@@ -360,7 +610,7 @@
       "id": "regra:R-MET-04",
       "label": "R-MET-04: SE Hist\u00f3rico de reten\u00e7\u00e3o de placenta E Puerp\u00e9rio ENT\u00c3O Metrite Puerperal",
       "classe": "evidencia",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "r-met-04: se historico de retencao de placenta e puerperio entao metrite puerperal",
@@ -370,7 +620,7 @@
       "id": "regra:R-PNE-01",
       "label": "R-PNE-01: SE Tosse E Apetite ENT\u00c3O Pneumonia",
       "classe": "evidencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-pne-01: se tosse e apetite entao pneumonia",
@@ -380,7 +630,7 @@
       "id": "regra:R-PNE-02",
       "label": "R-PNE-02: SE Respira\u00e7\u00e3o com esfor\u00e7o E Apetite ENT\u00c3O Pneumonia",
       "classe": "evidencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-pne-02: se respiracao com esforco e apetite entao pneumonia",
@@ -390,7 +640,7 @@
       "id": "regra:R-PNE-03",
       "label": "R-PNE-03: SE Crepita\u00e7\u00f5es \u00e0 ausculta\u00e7\u00e3o pulmonar ENT\u00c3O Pneumonia",
       "classe": "evidencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-pne-03: se crepitacoes a auscultacao pulmonar entao pneumonia",
@@ -400,7 +650,7 @@
       "id": "regra:R-PNE-04",
       "label": "R-PNE-04: SE Secre\u00e7\u00e3o nasal E Apetite ENT\u00c3O Pneumonia",
       "classe": "evidencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-pne-04: se secrecao nasal e apetite entao pneumonia",
@@ -410,7 +660,7 @@
       "id": "regra:R-PNE-05",
       "label": "R-PNE-05: SE Febre E Apatia ENT\u00c3O Pneumonia",
       "classe": "evidencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-pne-05: se febre e apatia entao pneumonia",
@@ -420,7 +670,7 @@
       "id": "regra:R-PNE-06",
       "label": "R-PNE-06: SE Barriga estufada do lado esquerdo E Apetite ENT\u00c3O Pneumonia",
       "classe": "evidencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-pne-06: se barriga estufada do lado esquerdo e apetite entao pneumonia",
@@ -430,7 +680,7 @@
       "id": "regra:R-RPL-01",
       "label": "R-RPL-01: SE Puerp\u00e9rio E Restos de placenta na vulva ENT\u00c3O Reten\u00e7\u00e3o de Placenta",
       "classe": "evidencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-rpl-01: se puerperio e restos de placenta na vulva entao retencao de placenta",
@@ -440,7 +690,7 @@
       "id": "regra:R-RPL-02",
       "label": "R-RPL-02: SE Puerp\u00e9rio E Placenta n\u00e3o saiu em 24 horas ENT\u00c3O Reten\u00e7\u00e3o de Placenta",
       "classe": "evidencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-rpl-02: se puerperio e placenta nao saiu em 24 horas entao retencao de placenta",
@@ -450,7 +700,7 @@
       "id": "regra:R-RPL-03",
       "label": "R-RPL-03: SE Membranas retidas ao exame ENT\u00c3O Reten\u00e7\u00e3o de Placenta",
       "classe": "evidencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-rpl-03: se membranas retidas ao exame entao retencao de placenta",
@@ -460,7 +710,7 @@
       "id": "regra:R-RPL-04",
       "label": "R-RPL-04: SE Hist\u00f3rico de reten\u00e7\u00e3o de placenta E Puerp\u00e9rio ENT\u00c3O Reten\u00e7\u00e3o de Placenta",
       "classe": "evidencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-rpl-04: se historico de retencao de placenta e puerperio entao retencao de placenta",
@@ -470,7 +720,7 @@
       "id": "regra:R-RPL-05",
       "label": "R-RPL-05: SE Corrimento vaginal E Puerp\u00e9rio ENT\u00c3O Reten\u00e7\u00e3o de Placenta",
       "classe": "evidencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-rpl-05: se corrimento vaginal e puerperio entao retencao de placenta",
@@ -480,191 +730,11 @@
       "id": "regra:R-RPL-06",
       "label": "R-RPL-06: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O Reten\u00e7\u00e3o de Placenta",
       "classe": "evidencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-rpl-06: se dias em lactacao entao retencao de placenta",
       "source_file": "base/fonte/doencas/retencao_placenta.json"
-    },
-    {
-      "id": "regra:R-RPT-01",
-      "label": "R-RPT-01: SE Costas arqueadas E Gemido E Apetite ENT\u00c3O Reticulopericardite Traum\u00e1tica",
-      "classe": "evidencia",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "r-rpt-01: se costas arqueadas e gemido e apetite entao reticulopericardite traumatica",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
-    },
-    {
-      "id": "regra:R-RPT-03",
-      "label": "R-RPT-03: SE Prova de dor reticular ENT\u00c3O Reticulopericardite Traum\u00e1tica",
-      "classe": "evidencia",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "r-rpt-03: se prova de dor reticular entao reticulopericardite traumatica",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
-    },
-    {
-      "id": "regra:R-RPT-04",
-      "label": "R-RPT-04: SE Edema de barbela ou peito E Febre ENT\u00c3O Reticulopericardite Traum\u00e1tica",
-      "classe": "evidencia",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "r-rpt-04: se edema de barbela ou peito e febre entao reticulopericardite traumatica",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
-    },
-    {
-      "id": "regra:R-RPT-05",
-      "label": "R-RPT-05: SE Apetite E Queda de produ\u00e7\u00e3o de leite E Febre ENT\u00c3O Reticulopericardite Traum\u00e1tica",
-      "classe": "evidencia",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "r-rpt-05: se apetite e queda de producao de leite e febre entao reticulopericardite traumatica",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
-    },
-    {
-      "id": "regra:R-RPT-06",
-      "label": "R-RPT-06: SE Ping no flanco esquerdo ENT\u00c3O Reticulopericardite Traum\u00e1tica",
-      "classe": "evidencia",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "r-rpt-06: se ping no flanco esquerdo entao reticulopericardite traumatica",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
-    },
-    {
-      "id": "regra:R-TES-01",
-      "label": "R-TES-01: SE Barriga estufada do lado esquerdo E Pasto de leguminosa recente E Apetite ENT\u00c3O Timpanismo Espumoso",
-      "classe": "evidencia",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "r-tes-01: se barriga estufada do lado esquerdo e pasto de leguminosa recente e apetite entao timpanismo espumoso",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
-    },
-    {
-      "id": "regra:R-TES-02",
-      "label": "R-TES-02: SE Outros animais estufados E Apetite ENT\u00c3O Timpanismo Espumoso",
-      "classe": "evidencia",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "r-tes-02: se outros animais estufados e apetite entao timpanismo espumoso",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
-    },
-    {
-      "id": "regra:R-TES-03",
-      "label": "R-TES-03: SE Conte\u00fado espumoso na sonda ENT\u00c3O Timpanismo Espumoso",
-      "classe": "evidencia",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "r-tes-03: se conteudo espumoso na sonda entao timpanismo espumoso",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
-    },
-    {
-      "id": "regra:R-TES-04",
-      "label": "R-TES-04: SE Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Timpanismo Espumoso",
-      "classe": "evidencia",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "r-tes-04: se apetite e queda de producao de leite entao timpanismo espumoso",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
-    },
-    {
-      "id": "regra:R-TES-05",
-      "label": "R-TES-05: SE G\u00e1s livre na sonda ENT\u00c3O Timpanismo Espumoso",
-      "classe": "evidencia",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "r-tes-05: se gas livre na sonda entao timpanismo espumoso",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
-    },
-    {
-      "id": "regra:R-TGA-01",
-      "label": "R-TGA-01: SE Barriga estufada do lado esquerdo E Engasgo ou dificuldade de engolir E Apetite ENT\u00c3O Timpanismo Gasoso",
-      "classe": "evidencia",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "r-tga-01: se barriga estufada do lado esquerdo e engasgo ou dificuldade de engolir e apetite entao timpanismo gasoso",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
-    },
-    {
-      "id": "regra:R-TGA-03",
-      "label": "R-TGA-03: SE G\u00e1s livre na sonda ENT\u00c3O Timpanismo Gasoso",
-      "classe": "evidencia",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "r-tga-03: se gas livre na sonda entao timpanismo gasoso",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
-    },
-    {
-      "id": "regra:R-TGA-04",
-      "label": "R-TGA-04: SE Apetite E Apatia ENT\u00c3O Timpanismo Gasoso",
-      "classe": "evidencia",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "r-tga-04: se apetite e apatia entao timpanismo gasoso",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
-    },
-    {
-      "id": "regra:R-TGA-05",
-      "label": "R-TGA-05: SE Conte\u00fado espumoso na sonda ENT\u00c3O Timpanismo Gasoso",
-      "classe": "evidencia",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "r-tga-05: se conteudo espumoso na sonda entao timpanismo gasoso",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
-    },
-    {
-      "id": "regra:R-TPB-01",
-      "label": "R-TPB-01: SE Febre E Urina escura ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
-      "classe": "evidencia",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "r-tpb-01: se febre e urina escura entao tristeza parasitaria bovina",
-      "source_file": "base/fonte/doencas/tpb.json"
-    },
-    {
-      "id": "regra:R-TPB-02",
-      "label": "R-TPB-02: SE Mucosas p\u00e1lidas ou amareladas ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
-      "classe": "evidencia",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "r-tpb-02: se mucosas palidas ou amareladas entao tristeza parasitaria bovina",
-      "source_file": "base/fonte/doencas/tpb.json"
-    },
-    {
-      "id": "regra:R-TPB-03",
-      "label": "R-TPB-03: SE Exposi\u00e7\u00e3o recente a carrapatos E Febre ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
-      "classe": "evidencia",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "r-tpb-03: se exposicao recente a carrapatos e febre entao tristeza parasitaria bovina",
-      "source_file": "base/fonte/doencas/tpb.json"
-    },
-    {
-      "id": "regra:R-TPB-04",
-      "label": "R-TPB-04: SE Hemoparasitas no esfrega\u00e7o ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
-      "classe": "evidencia",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "r-tpb-04: se hemoparasitas no esfregaco entao tristeza parasitaria bovina",
-      "source_file": "base/fonte/doencas/tpb.json"
     },
     {
       "id": "regra:R-BRU-01",
@@ -717,10 +787,190 @@
       "source_file": "base/fonte/doencas/brucelose.json"
     },
     {
+      "id": "regra:R-RPT-01",
+      "label": "R-RPT-01: SE Costas arqueadas E Gemido E Apetite ENT\u00c3O Reticulopericardite Traum\u00e1tica",
+      "classe": "evidencia",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "r-rpt-01: se costas arqueadas e gemido e apetite entao reticulopericardite traumatica",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "id": "regra:R-RPT-03",
+      "label": "R-RPT-03: SE Prova de dor reticular ENT\u00c3O Reticulopericardite Traum\u00e1tica",
+      "classe": "evidencia",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "r-rpt-03: se prova de dor reticular entao reticulopericardite traumatica",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "id": "regra:R-RPT-04",
+      "label": "R-RPT-04: SE Edema de barbela ou peito E Febre ENT\u00c3O Reticulopericardite Traum\u00e1tica",
+      "classe": "evidencia",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "r-rpt-04: se edema de barbela ou peito e febre entao reticulopericardite traumatica",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "id": "regra:R-RPT-05",
+      "label": "R-RPT-05: SE Apetite E Queda de produ\u00e7\u00e3o de leite E Febre ENT\u00c3O Reticulopericardite Traum\u00e1tica",
+      "classe": "evidencia",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "r-rpt-05: se apetite e queda de producao de leite e febre entao reticulopericardite traumatica",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "id": "regra:R-RPT-06",
+      "label": "R-RPT-06: SE Ping no flanco esquerdo ENT\u00c3O Reticulopericardite Traum\u00e1tica",
+      "classe": "evidencia",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "r-rpt-06: se ping no flanco esquerdo entao reticulopericardite traumatica",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "id": "regra:R-TES-01",
+      "label": "R-TES-01: SE Barriga estufada do lado esquerdo E Pasto de leguminosa recente E Apetite ENT\u00c3O Timpanismo Espumoso",
+      "classe": "evidencia",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "r-tes-01: se barriga estufada do lado esquerdo e pasto de leguminosa recente e apetite entao timpanismo espumoso",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "id": "regra:R-TES-02",
+      "label": "R-TES-02: SE Outros animais estufados E Apetite ENT\u00c3O Timpanismo Espumoso",
+      "classe": "evidencia",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "r-tes-02: se outros animais estufados e apetite entao timpanismo espumoso",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "id": "regra:R-TES-03",
+      "label": "R-TES-03: SE Conte\u00fado espumoso na sonda ENT\u00c3O Timpanismo Espumoso",
+      "classe": "evidencia",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "r-tes-03: se conteudo espumoso na sonda entao timpanismo espumoso",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "id": "regra:R-TES-04",
+      "label": "R-TES-04: SE Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Timpanismo Espumoso",
+      "classe": "evidencia",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "r-tes-04: se apetite e queda de producao de leite entao timpanismo espumoso",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "id": "regra:R-TES-05",
+      "label": "R-TES-05: SE G\u00e1s livre na sonda ENT\u00c3O Timpanismo Espumoso",
+      "classe": "evidencia",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "r-tes-05: se gas livre na sonda entao timpanismo espumoso",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "id": "regra:R-TGA-01",
+      "label": "R-TGA-01: SE Barriga estufada do lado esquerdo E Engasgo ou dificuldade de engolir E Apetite ENT\u00c3O Timpanismo Gasoso",
+      "classe": "evidencia",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "r-tga-01: se barriga estufada do lado esquerdo e engasgo ou dificuldade de engolir e apetite entao timpanismo gasoso",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "id": "regra:R-TGA-03",
+      "label": "R-TGA-03: SE G\u00e1s livre na sonda ENT\u00c3O Timpanismo Gasoso",
+      "classe": "evidencia",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "r-tga-03: se gas livre na sonda entao timpanismo gasoso",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "id": "regra:R-TGA-04",
+      "label": "R-TGA-04: SE Apetite E Apatia ENT\u00c3O Timpanismo Gasoso",
+      "classe": "evidencia",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "r-tga-04: se apetite e apatia entao timpanismo gasoso",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "id": "regra:R-TGA-05",
+      "label": "R-TGA-05: SE Conte\u00fado espumoso na sonda ENT\u00c3O Timpanismo Gasoso",
+      "classe": "evidencia",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "r-tga-05: se conteudo espumoso na sonda entao timpanismo gasoso",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "id": "regra:R-TPB-01",
+      "label": "R-TPB-01: SE Febre E Urina escura ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
+      "classe": "evidencia",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "r-tpb-01: se febre e urina escura entao tristeza parasitaria bovina",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "id": "regra:R-TPB-02",
+      "label": "R-TPB-02: SE Mucosas p\u00e1lidas ou amareladas ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
+      "classe": "evidencia",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "r-tpb-02: se mucosas palidas ou amareladas entao tristeza parasitaria bovina",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "id": "regra:R-TPB-03",
+      "label": "R-TPB-03: SE Exposi\u00e7\u00e3o recente a carrapatos E Febre ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
+      "classe": "evidencia",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "r-tpb-03: se exposicao recente a carrapatos e febre entao tristeza parasitaria bovina",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
+      "id": "regra:R-TPB-04",
+      "label": "R-TPB-04: SE Hemoparasitas no esfrega\u00e7o ENT\u00c3O Tristeza Parasit\u00e1ria Bovina",
+      "classe": "evidencia",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "r-tpb-04: se hemoparasitas no esfregaco entao tristeza parasitaria bovina",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
       "id": "regra:R-TUB-01",
       "label": "R-TUB-01: SE Emagrecimento progressivo E Tosse E Queda de produ\u00e7\u00e3o de leite E Apetite ENT\u00c3O Tuberculose",
       "classe": "evidencia",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "r-tub-01: se emagrecimento progressivo e tosse e queda de producao de leite e apetite entao tuberculose",
@@ -730,7 +980,7 @@
       "id": "regra:R-TUB-02",
       "label": "R-TUB-02: SE \u00cdnguas aumentadas E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Tuberculose",
       "classe": "evidencia",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "r-tub-02: se inguas aumentadas e queda de producao de leite entao tuberculose",
@@ -740,7 +990,7 @@
       "id": "regra:R-TUB-03",
       "label": "R-TUB-03: SE Tuberculiniza\u00e7\u00e3o reagente ENT\u00c3O Tuberculose",
       "classe": "evidencia",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "r-tub-03: se tuberculinizacao reagente entao tuberculose",
@@ -750,7 +1000,7 @@
       "id": "regra:R-TUB-04",
       "label": "R-TUB-04: SE Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Tuberculose",
       "classe": "evidencia",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "r-tub-04: se apetite e queda de producao de leite entao tuberculose",
@@ -760,11 +1010,71 @@
       "id": "regra:R-TUB-05",
       "label": "R-TUB-05: SE Febre ENT\u00c3O Tuberculose",
       "classe": "evidencia",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "r-tub-05: se febre entao tuberculose",
       "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "id": "regra:R-ULC-01",
+      "label": "R-ULC-01: SE Claudica\u00e7\u00e3o E Manqueira de pata traseira sem incha\u00e7o ENT\u00c3O \u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "classe": "evidencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-ulc-01: se claudicacao e manqueira de pata traseira sem inchaco entao ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "id": "regra:R-ULC-02",
+      "label": "R-ULC-02: SE Claudica\u00e7\u00e3o E Dor \u00e0 pin\u00e7a na sola ou na linha branca ENT\u00c3O \u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "classe": "evidencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-ulc-02: se claudicacao e dor a pinca na sola ou na linha branca entao ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "id": "regra:R-ULC-03",
+      "label": "R-ULC-03: SE Claudica\u00e7\u00e3o E Les\u00e3o caracter\u00edstica no tal\u00e3o ENT\u00c3O \u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "classe": "evidencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-ulc-03: se claudicacao e lesao caracteristica no talao entao ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "id": "regra:R-ULC-04",
+      "label": "R-ULC-04: SE Claudica\u00e7\u00e3o E Incha\u00e7o entre as unhas com mau cheiro ENT\u00c3O \u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "classe": "evidencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-ulc-04: se claudicacao e inchaco entre as unhas com mau cheiro entao ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "id": "regra:R-ULC-05",
+      "label": "R-ULC-05: SE Claudica\u00e7\u00e3o ENT\u00c3O \u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "classe": "evidencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-ulc-05: se claudicacao entao ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "id": "regra:R-ULC-06",
+      "label": "R-ULC-06: SE Claudica\u00e7\u00e3o E Dor na regi\u00e3o do tal\u00e3o ENT\u00c3O \u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "classe": "evidencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-ulc-06: se claudicacao e dor na regiao do talao entao ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
     },
     {
       "id": "regra:R-BVD-01",
@@ -877,10 +1187,50 @@
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
+      "id": "regra:R-CIS-01",
+      "label": "R-CIS-01: SE Dias em lacta\u00e7\u00e3o E Apetite E Cio irregular ou constante ENT\u00c3O Cisto Ovariano",
+      "classe": "evidencia",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "r-cis-01: se dias em lactacao e apetite e cio irregular ou constante entao cisto ovariano",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "id": "regra:R-CIS-02",
+      "label": "R-CIS-02: SE Dias em lacta\u00e7\u00e3o E Estrutura ovariana maior que 25 mm ENT\u00c3O Cisto Ovariano",
+      "classe": "evidencia",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "r-cis-02: se dias em lactacao e estrutura ovariana maior que 25 mm entao cisto ovariano",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "id": "regra:R-CIS-03",
+      "label": "R-CIS-03: SE Dias em lacta\u00e7\u00e3o E Corrimento vaginal ENT\u00c3O Cisto Ovariano",
+      "classe": "evidencia",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "r-cis-03: se dias em lactacao e corrimento vaginal entao cisto ovariano",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "id": "regra:R-CIS-04",
+      "label": "R-CIS-04: SE Dias em lacta\u00e7\u00e3o E Apetite E Cio irregular ou constante ENT\u00c3O Cisto Ovariano",
+      "classe": "evidencia",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "r-cis-04: se dias em lactacao e apetite e cio irregular ou constante entao cisto ovariano",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
       "id": "regra:R-DD-01",
       "label": "R-DD-01: SE Claudica\u00e7\u00e3o ENT\u00c3O Dermatite Digital Bovina",
       "classe": "evidencia",
-      "community": 5,
+      "community": 6,
       "community_name": "Dermatite Digital Bovina",
       "file_type": "concept",
       "norm_label": "r-dd-01: se claudicacao entao dermatite digital bovina",
@@ -890,7 +1240,7 @@
       "id": "regra:R-DD-02",
       "label": "R-DD-02: SE Claudica\u00e7\u00e3o E Dor na regi\u00e3o do tal\u00e3o ENT\u00c3O Dermatite Digital Bovina",
       "classe": "evidencia",
-      "community": 5,
+      "community": 6,
       "community_name": "Dermatite Digital Bovina",
       "file_type": "concept",
       "norm_label": "r-dd-02: se claudicacao e dor na regiao do talao entao dermatite digital bovina",
@@ -900,17 +1250,27 @@
       "id": "regra:R-DD-03",
       "label": "R-DD-03: SE Les\u00e3o caracter\u00edstica no tal\u00e3o ENT\u00c3O Dermatite Digital Bovina",
       "classe": "evidencia",
-      "community": 5,
+      "community": 6,
       "community_name": "Dermatite Digital Bovina",
       "file_type": "concept",
       "norm_label": "r-dd-03: se lesao caracteristica no talao entao dermatite digital bovina",
       "source_file": "base/fonte/doencas/dermatite_digital.json"
     },
     {
+      "id": "regra:R-DD-04",
+      "label": "R-DD-04: SE Claudica\u00e7\u00e3o E Incha\u00e7o entre as unhas com mau cheiro ENT\u00c3O Dermatite Digital Bovina",
+      "classe": "evidencia",
+      "community": 6,
+      "community_name": "Dermatite Digital Bovina",
+      "file_type": "concept",
+      "norm_label": "r-dd-04: se claudicacao e inchaco entre as unhas com mau cheiro entao dermatite digital bovina",
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
       "id": "regra:R-DAD-01",
       "label": "R-DAD-01: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Pouco esterco ENT\u00c3O Deslocamento de Abomaso \u00e0 Direita",
       "classe": "evidencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-dad-01: se inicio da lactacao e apetite e pouco esterco entao deslocamento de abomaso a direita",
@@ -920,7 +1280,7 @@
       "id": "regra:R-DAD-02",
       "label": "R-DAD-02: SE Barriga estufada do lado direito E Apetite ENT\u00c3O Deslocamento de Abomaso \u00e0 Direita",
       "classe": "evidencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-dad-02: se barriga estufada do lado direito e apetite entao deslocamento de abomaso a direita",
@@ -930,7 +1290,7 @@
       "id": "regra:R-DAD-03",
       "label": "R-DAD-03: SE Ping no flanco direito ENT\u00c3O Deslocamento de Abomaso \u00e0 Direita",
       "classe": "evidencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-dad-03: se ping no flanco direito entao deslocamento de abomaso a direita",
@@ -940,7 +1300,7 @@
       "id": "regra:R-DAD-04",
       "label": "R-DAD-04: SE Desidrata\u00e7\u00e3o E Apetite ENT\u00c3O Deslocamento de Abomaso \u00e0 Direita",
       "classe": "evidencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-dad-04: se desidratacao e apetite entao deslocamento de abomaso a direita",
@@ -950,7 +1310,7 @@
       "id": "regra:R-DAD-05",
       "label": "R-DAD-05: SE Apetite E Apatia ENT\u00c3O Deslocamento de Abomaso \u00e0 Direita",
       "classe": "evidencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-dad-05: se apetite e apatia entao deslocamento de abomaso a direita",
@@ -960,7 +1320,7 @@
       "id": "regra:R-DAD-06",
       "label": "R-DAD-06: SE Ping no flanco esquerdo ENT\u00c3O Deslocamento de Abomaso \u00e0 Direita",
       "classe": "evidencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-dad-06: se ping no flanco esquerdo entao deslocamento de abomaso a direita",
@@ -970,7 +1330,7 @@
       "id": "regra:R-DAE-01",
       "label": "R-DAE-01: SE In\u00edcio da lacta\u00e7\u00e3o E Apetite E Queda de produ\u00e7\u00e3o de leite ENT\u00c3O Deslocamento de Abomaso \u00e0 Esquerda",
       "classe": "evidencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-dae-01: se inicio da lactacao e apetite e queda de producao de leite entao deslocamento de abomaso a esquerda",
@@ -980,7 +1340,7 @@
       "id": "regra:R-DAE-02",
       "label": "R-DAE-02: SE In\u00edcio da lacta\u00e7\u00e3o E Flanco esquerdo afundado ENT\u00c3O Deslocamento de Abomaso \u00e0 Esquerda",
       "classe": "evidencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-dae-02: se inicio da lactacao e flanco esquerdo afundado entao deslocamento de abomaso a esquerda",
@@ -990,7 +1350,7 @@
       "id": "regra:R-DAE-03",
       "label": "R-DAE-03: SE Ping no flanco esquerdo ENT\u00c3O Deslocamento de Abomaso \u00e0 Esquerda",
       "classe": "evidencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-dae-03: se ping no flanco esquerdo entao deslocamento de abomaso a esquerda",
@@ -1000,7 +1360,7 @@
       "id": "regra:R-DAE-04",
       "label": "R-DAE-04: SE Apetite ENT\u00c3O Deslocamento de Abomaso \u00e0 Esquerda",
       "classe": "evidencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-dae-04: se apetite entao deslocamento de abomaso a esquerda",
@@ -1010,7 +1370,7 @@
       "id": "regra:R-DAE-05",
       "label": "R-DAE-05: SE In\u00edcio da lacta\u00e7\u00e3o E Pouco esterco ENT\u00c3O Deslocamento de Abomaso \u00e0 Esquerda",
       "classe": "evidencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-dae-05: se inicio da lactacao e pouco esterco entao deslocamento de abomaso a esquerda",
@@ -1020,161 +1380,51 @@
       "id": "regra:R-DAE-06",
       "label": "R-DAE-06: SE Ping no flanco direito ENT\u00c3O Deslocamento de Abomaso \u00e0 Esquerda",
       "classe": "evidencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-dae-06: se ping no flanco direito entao deslocamento de abomaso a esquerda",
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
     },
     {
-      "id": "regra:R-DER-01",
-      "label": "R-DER-01: SE Dias em lacta\u00e7\u00e3o ENT\u00c3O Periparto imediato",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-der-01: se dias em lactacao entao periparto imediato",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-DER-05",
-      "label": "R-DER-05: SE Temperatura retal ENT\u00c3O Hipotermia",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-der-05: se temperatura retal entao hipotermia",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-DER-06",
-      "label": "R-DER-06: SE Temperatura ao toque das extremidades ENT\u00c3O Hipotermia",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-der-06: se temperatura ao toque das extremidades entao hipotermia",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-DER-09",
-      "label": "R-DER-09: SE Temperatura retal ENT\u00c3O Hipotermia",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-der-09: se temperatura retal entao hipotermia",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HIP-01",
-      "label": "R-HIP-01: SE Dec\u00fabito E Periparto imediato ENT\u00c3O Hipocalcemia Puerperal",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-hip-01: se decubito e periparto imediato entao hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HIP-02",
-      "label": "R-HIP-02: SE Periparto imediato E Desvio cervical em S E Hipotermia ENT\u00c3O Hipocalcemia Puerperal",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-hip-02: se periparto imediato e desvio cervical em s e hipotermia entao hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HIP-03",
-      "label": "R-HIP-03: SE C\u00e1lcio s\u00e9rico total ENT\u00c3O Hipocalcemia Puerperal",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-hip-03: se calcio serico total entao hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HIP-04",
-      "label": "R-HIP-04: SE Febre ENT\u00c3O Hipocalcemia Puerperal",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-hip-04: se febre entao hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HIP-05",
-      "label": "R-HIP-05: SE Dec\u00fabito E Dias em lacta\u00e7\u00e3o ENT\u00c3O Hipocalcemia Puerperal",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-hip-05: se decubito e dias em lactacao entao hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HIP-06",
-      "label": "R-HIP-06: SE Hipotermia E Dias em lacta\u00e7\u00e3o ENT\u00c3O Hipocalcemia Puerperal",
-      "classe": "evidencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-hip-06: se hipotermia e dias em lactacao entao hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-HMG-01",
-      "label": "R-HMG-01: SE Tremores musculares E Agita\u00e7\u00e3o ou rea\u00e7\u00e3o exagerada E Apetite ENT\u00c3O Hipomagnesemia",
+      "id": "regra:R-END-01",
+      "label": "R-END-01: SE Corrimento vaginal E Dias em lacta\u00e7\u00e3o E Corrimento com pus ap\u00f3s 21 dias do parto ENT\u00c3O Endometrite Cl\u00ednica",
       "classe": "evidencia",
       "community": 9,
-      "community_name": "Hipomagnesemia",
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "r-hmg-01: se tremores musculares e agitacao ou reacao exagerada e apetite entao hipomagnesemia",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+      "norm_label": "r-end-01: se corrimento vaginal e dias em lactacao e corrimento com pus apos 21 dias do parto entao endometrite clinica",
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
-      "id": "regra:R-HMG-02",
-      "label": "R-HMG-02: SE Pasto novo e adubado E Apetite ENT\u00c3O Hipomagnesemia",
+      "id": "regra:R-END-02",
+      "label": "R-END-02: SE Corrimento vaginal E Dias em lacta\u00e7\u00e3o E Conte\u00fado purulento ao exame vaginal ENT\u00c3O Endometrite Cl\u00ednica",
       "classe": "evidencia",
       "community": 9,
-      "community_name": "Hipomagnesemia",
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "r-hmg-02: se pasto novo e adubado e apetite entao hipomagnesemia",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+      "norm_label": "r-end-02: se corrimento vaginal e dias em lactacao e conteudo purulento ao exame vaginal entao endometrite clinica",
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
-      "id": "regra:R-HMG-03",
-      "label": "R-HMG-03: SE Magn\u00e9sio s\u00e9rico ENT\u00c3O Hipomagnesemia",
+      "id": "regra:R-END-03",
+      "label": "R-END-03: SE Corrimento vaginal E Dias em lacta\u00e7\u00e3o E Febre ENT\u00c3O Endometrite Cl\u00ednica",
       "classe": "evidencia",
       "community": 9,
-      "community_name": "Hipomagnesemia",
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "r-hmg-03: se magnesio serico entao hipomagnesemia",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+      "norm_label": "r-end-03: se corrimento vaginal e dias em lactacao e febre entao endometrite clinica",
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
-      "id": "regra:R-HMG-04",
-      "label": "R-HMG-04: SE Dec\u00fabito E Temperatura ao toque das extremidades ENT\u00c3O Hipomagnesemia",
+      "id": "regra:R-END-04",
+      "label": "R-END-04: SE Corrimento vaginal E Dias em lacta\u00e7\u00e3o ENT\u00c3O Endometrite Cl\u00ednica",
       "classe": "evidencia",
       "community": 9,
-      "community_name": "Hipomagnesemia",
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "r-hmg-04: se decubito e temperatura ao toque das extremidades entao hipomagnesemia",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json"
-    },
-    {
-      "id": "regra:R-HMG-05",
-      "label": "R-HMG-05: SE Magn\u00e9sio s\u00e9rico ENT\u00c3O Hipomagnesemia",
-      "classe": "evidencia",
-      "community": 9,
-      "community_name": "Hipomagnesemia",
-      "file_type": "concept",
-      "norm_label": "r-hmg-05: se magnesio serico entao hipomagnesemia",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+      "norm_label": "r-end-04: se corrimento vaginal e dias em lactacao entao endometrite clinica",
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
       "id": "regra:R-URG-07",
@@ -1187,10 +1437,40 @@
       "source_file": "base/fonte/doencas/acidose.json"
     },
     {
+      "id": "regra:R-URG-22",
+      "label": "R-URG-22: SE Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco) ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
+      "classe": "urgencia",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "r-urg-22: se flegmao interdigital (podridao do casco) entao monitoramento clinico continuo",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "id": "regra:R-URG-01",
+      "label": "R-URG-01: SE Hipocalcemia Puerperal ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "r-urg-01: se hipocalcemia puerperal entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "id": "regra:R-URG-15",
+      "label": "R-URG-15: SE Hipomagnesemia ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "r-urg-15: se hipomagnesemia entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
       "id": "regra:R-URG-18",
       "label": "R-URG-18: SE Rinotraque\u00edte Infecciosa Bovina (IBR) ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
       "classe": "urgencia",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "r-urg-18: se rinotraqueite infecciosa bovina (ibr) entao monitoramento clinico continuo",
@@ -1200,17 +1480,27 @@
       "id": "regra:R-URG-17",
       "label": "R-URG-17: SE Leptospirose ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
       "classe": "urgencia",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "r-urg-17: se leptospirose entao atendimento veterinario imediato",
       "source_file": "base/fonte/doencas/leptospirose.json"
     },
     {
+      "id": "regra:R-URG-25",
+      "label": "R-URG-25: SE Lipidose Hep\u00e1tica (F\u00edgado Gorduroso) ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "r-urg-25: se lipidose hepatica (figado gorduroso) entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
       "id": "regra:R-URG-05",
       "label": "R-URG-05: SE Mastite ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
       "classe": "urgencia",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "r-urg-05: se mastite entao monitoramento clinico continuo",
@@ -1220,7 +1510,7 @@
       "id": "regra:R-URG-04",
       "label": "R-URG-04: SE Metrite Puerperal ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
       "classe": "urgencia",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "r-urg-04: se metrite puerperal entao atendimento veterinario imediato",
@@ -1230,7 +1520,7 @@
       "id": "regra:R-URG-13",
       "label": "R-URG-13: SE Pneumonia ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
       "classe": "urgencia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "r-urg-13: se pneumonia entao monitoramento clinico continuo",
@@ -1240,51 +1530,11 @@
       "id": "regra:R-URG-12",
       "label": "R-URG-12: SE Reten\u00e7\u00e3o de Placenta ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
       "classe": "urgencia",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "r-urg-12: se retencao de placenta entao monitoramento clinico continuo",
       "source_file": "base/fonte/doencas/retencao_placenta.json"
-    },
-    {
-      "id": "regra:R-URG-14",
-      "label": "R-URG-14: SE Reticulopericardite Traum\u00e1tica ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
-      "classe": "urgencia",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "r-urg-14: se reticulopericardite traumatica entao atendimento veterinario imediato",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
-    },
-    {
-      "id": "regra:R-URG-10",
-      "label": "R-URG-10: SE Timpanismo Espumoso ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
-      "classe": "urgencia",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "r-urg-10: se timpanismo espumoso entao atendimento veterinario imediato",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
-    },
-    {
-      "id": "regra:R-URG-11",
-      "label": "R-URG-11: SE Timpanismo Gasoso ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
-      "classe": "urgencia",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "r-urg-11: se timpanismo gasoso entao atendimento veterinario imediato",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
-    },
-    {
-      "id": "regra:R-URG-02",
-      "label": "R-URG-02: SE Tristeza Parasit\u00e1ria Bovina ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
-      "classe": "urgencia",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "r-urg-02: se tristeza parasitaria bovina entao atendimento veterinario imediato",
-      "source_file": "base/fonte/doencas/tpb.json"
     },
     {
       "id": "regra:R-URG-16",
@@ -1297,14 +1547,64 @@
       "source_file": "base/fonte/doencas/brucelose.json"
     },
     {
+      "id": "regra:R-URG-14",
+      "label": "R-URG-14: SE Reticulopericardite Traum\u00e1tica ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "r-urg-14: se reticulopericardite traumatica entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "id": "regra:R-URG-10",
+      "label": "R-URG-10: SE Timpanismo Espumoso ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "r-urg-10: se timpanismo espumoso entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json"
+    },
+    {
+      "id": "regra:R-URG-11",
+      "label": "R-URG-11: SE Timpanismo Gasoso ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "r-urg-11: se timpanismo gasoso entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "id": "regra:R-URG-02",
+      "label": "R-URG-02: SE Tristeza Parasit\u00e1ria Bovina ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "classe": "urgencia",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "r-urg-02: se tristeza parasitaria bovina entao atendimento veterinario imediato",
+      "source_file": "base/fonte/doencas/tpb.json"
+    },
+    {
       "id": "regra:R-URG-20",
       "label": "R-URG-20: SE Tuberculose ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
       "classe": "urgencia",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "r-urg-20: se tuberculose entao atendimento veterinario imediato",
       "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "id": "regra:R-URG-21",
+      "label": "R-URG-21: SE \u00dalcera de Sola / Doen\u00e7a da Linha Branca ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
+      "classe": "urgencia",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "r-urg-21: se ulcera de sola / doenca da linha branca entao monitoramento clinico continuo",
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
     },
     {
       "id": "regra:R-URG-19",
@@ -1327,10 +1627,20 @@
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
+      "id": "regra:R-URG-24",
+      "label": "R-URG-24: SE Cisto Ovariano ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
+      "classe": "urgencia",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "r-urg-24: se cisto ovariano entao monitoramento clinico continuo",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
       "id": "regra:R-URG-08",
       "label": "R-URG-08: SE Dermatite Digital Bovina ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
       "classe": "urgencia",
-      "community": 5,
+      "community": 6,
       "community_name": "Dermatite Digital Bovina",
       "file_type": "concept",
       "norm_label": "r-urg-08: se dermatite digital bovina entao monitoramento clinico continuo",
@@ -1340,7 +1650,7 @@
       "id": "regra:R-URG-09",
       "label": "R-URG-09: SE Deslocamento de Abomaso \u00e0 Direita ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
       "classe": "urgencia",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "r-urg-09: se deslocamento de abomaso a direita entao atendimento veterinario imediato",
@@ -1350,31 +1660,21 @@
       "id": "regra:R-URG-03",
       "label": "R-URG-03: SE Deslocamento de Abomaso \u00e0 Esquerda ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
       "classe": "urgencia",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "r-urg-03: se deslocamento de abomaso a esquerda entao atendimento veterinario imediato",
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
     },
     {
-      "id": "regra:R-URG-01",
-      "label": "R-URG-01: SE Hipocalcemia Puerperal ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
-      "classe": "urgencia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "r-urg-01: se hipocalcemia puerperal entao atendimento veterinario imediato",
-      "source_file": "base/fonte/doencas/hipocalcemia.json"
-    },
-    {
-      "id": "regra:R-URG-15",
-      "label": "R-URG-15: SE Hipomagnesemia ENT\u00c3O Atendimento Veterin\u00e1rio Imediato",
+      "id": "regra:R-URG-23",
+      "label": "R-URG-23: SE Endometrite Cl\u00ednica ENT\u00c3O Monitoramento Cl\u00ednico Cont\u00ednuo",
       "classe": "urgencia",
       "community": 9,
-      "community_name": "Hipomagnesemia",
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "r-urg-15: se hipomagnesemia entao atendimento veterinario imediato",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json"
+      "norm_label": "r-urg-23: se endometrite clinica entao monitoramento clinico continuo",
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
       "id": "sim:aborto_recente",
@@ -1425,6 +1725,16 @@
       "norm_label": "atendimento veterinario imediato",
       "source_file": "base/fonte/comum.json",
       "tipo": "urgencia"
+    },
+    {
+      "id": "sim:claudicacao",
+      "label": "Claudica\u00e7\u00e3o",
+      "community": 0,
+      "community_name": "Comum: bandeiras, triagem e sinais compartilhados",
+      "file_type": "concept",
+      "norm_label": "claudicacao",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
     },
     {
       "id": "sim:corrimento_vaginal",
@@ -1557,6 +1867,16 @@
       "tipo": "ficha"
     },
     {
+      "id": "sim:inchaco_entre_unhas_mau_cheiro",
+      "label": "Incha\u00e7o entre as unhas com mau cheiro",
+      "community": 0,
+      "community_name": "Comum: bandeiras, triagem e sinais compartilhados",
+      "file_type": "concept",
+      "norm_label": "inchaco entre as unhas com mau cheiro",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
       "id": "sim:inicio_lactacao",
       "label": "In\u00edcio da lacta\u00e7\u00e3o",
       "community": 0,
@@ -1565,6 +1885,26 @@
       "norm_label": "inicio da lactacao",
       "source_file": "base/fonte/comum.json",
       "tipo": "derivado"
+    },
+    {
+      "id": "sim:lesao_erosiva_talao_morango",
+      "label": "Les\u00e3o caracter\u00edstica no tal\u00e3o",
+      "community": 0,
+      "community_name": "Comum: bandeiras, triagem e sinais compartilhados",
+      "file_type": "concept",
+      "norm_label": "lesao caracteristica no talao",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:mancar_pata_traseira_sem_inchaco",
+      "label": "Manqueira de pata traseira sem incha\u00e7o",
+      "community": 0,
+      "community_name": "Comum: bandeiras, triagem e sinais compartilhados",
+      "file_type": "concept",
+      "norm_label": "manqueira de pata traseira sem inchaco",
+      "source_file": "base/fonte/comum.json",
+      "tipo": "pergunta"
     },
     {
       "id": "sim:observar",
@@ -1697,9 +2037,129 @@
       "tipo": "pergunta"
     },
     {
+      "id": "sim:fissura_interdigital_necrotica",
+      "label": "Fissura interdigital necr\u00f3tica",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "fissura interdigital necrotica",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:flegmao_interdigital",
+      "label": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "community": 10,
+      "community_name": "Flegm\u00e3o Interdigital (Podrid\u00e3o do Casco)",
+      "file_type": "concept",
+      "norm_label": "flegmao interdigital (podridao do casco)",
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:calcio_serico",
+      "label": "C\u00e1lcio s\u00e9rico total",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "calcio serico total",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:hipocalcemia",
+      "label": "Hipocalcemia Puerperal",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "hipocalcemia puerperal",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:hipotermia",
+      "label": "Hipotermia",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "hipotermia",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:periparto_imediato",
+      "label": "Periparto imediato",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "periparto imediato",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "derivado"
+    },
+    {
+      "id": "sim:pescoco_em_s",
+      "label": "Desvio cervical em S",
+      "community": 11,
+      "community_name": "Hipocalcemia Puerperal",
+      "file_type": "concept",
+      "norm_label": "desvio cervical em s",
+      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:agitacao",
+      "label": "Agita\u00e7\u00e3o ou rea\u00e7\u00e3o exagerada",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "agitacao ou reacao exagerada",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:hipomagnesemia",
+      "label": "Hipomagnesemia",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "hipomagnesemia",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:magnesio_serico",
+      "label": "Magn\u00e9sio s\u00e9rico",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "magnesio serico",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pasto_novo_adubado",
+      "label": "Pasto novo e adubado",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "pasto novo e adubado",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:tremores",
+      "label": "Tremores musculares",
+      "community": 12,
+      "community_name": "Hipomagnesemia",
+      "file_type": "concept",
+      "norm_label": "tremores musculares",
+      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "tipo": "pergunta"
+    },
+    {
       "id": "sim:focinho_avermelhado",
       "label": "Focinho muito vermelho",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "focinho muito vermelho",
@@ -1709,7 +2169,7 @@
     {
       "id": "sim:ibr",
       "label": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "rinotraqueite infecciosa bovina (ibr)",
@@ -1719,7 +2179,7 @@
     {
       "id": "sim:olhos_lacrimejando",
       "label": "Olhos lacrimejando",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "olhos lacrimejando",
@@ -1729,7 +2189,7 @@
     {
       "id": "sim:pcr_bohv1",
       "label": "BoHV-1 detectado",
-      "community": 10,
+      "community": 13,
       "community_name": "Rinotraque\u00edte Infecciosa Bovina (IBR)",
       "file_type": "concept",
       "norm_label": "bohv-1 detectado",
@@ -1739,7 +2199,7 @@
     {
       "id": "sim:leite_com_sangue",
       "label": "Leite rosado ou com sangue",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "leite rosado ou com sangue",
@@ -1749,7 +2209,7 @@
     {
       "id": "sim:leptospirose",
       "label": "Leptospirose",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "leptospirose",
@@ -1759,7 +2219,7 @@
     {
       "id": "sim:sorologia_leptospirose_reagente",
       "label": "Sorologia para leptospirose reagente",
-      "community": 11,
+      "community": 14,
       "community_name": "Leptospirose",
       "file_type": "concept",
       "norm_label": "sorologia para leptospirose reagente",
@@ -1767,9 +2227,39 @@
       "tipo": "pergunta"
     },
     {
+      "id": "sim:enzimas_hepaticas_elevadas",
+      "label": "Enzimas hep\u00e1ticas elevadas",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "enzimas hepaticas elevadas",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:lipidose_hepatica",
+      "label": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "lipidose hepatica (figado gorduroso)",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:vaca_gorda_no_parto",
+      "label": "Vaca gorda no parto",
+      "community": 15,
+      "community_name": "Lipidose Hep\u00e1tica (F\u00edgado Gorduroso)",
+      "file_type": "concept",
+      "norm_label": "vaca gorda no parto",
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json",
+      "tipo": "pergunta"
+    },
+    {
       "id": "sim:cmt_reagente",
       "label": "CMT reagente",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "cmt reagente",
@@ -1779,7 +2269,7 @@
     {
       "id": "sim:evidencia_alteracao_leite",
       "label": "Evid\u00eancia agrupada de altera\u00e7\u00e3o do leite",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "evidencia agrupada de alteracao do leite",
@@ -1789,7 +2279,7 @@
     {
       "id": "sim:leite_alterado",
       "label": "Altera\u00e7\u00e3o vis\u00edvel do leite",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "alteracao visivel do leite",
@@ -1799,7 +2289,7 @@
     {
       "id": "sim:mastite",
       "label": "Mastite",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "mastite",
@@ -1809,7 +2299,7 @@
     {
       "id": "sim:teste_caneca_grumos",
       "label": "Grumos na caneca",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "grumos na caneca",
@@ -1819,7 +2309,7 @@
     {
       "id": "sim:ubere_inflamado",
       "label": "Inflama\u00e7\u00e3o do \u00fabere",
-      "community": 12,
+      "community": 16,
       "community_name": "Mastite",
       "file_type": "concept",
       "norm_label": "inflamacao do ubere",
@@ -1829,7 +2319,7 @@
     {
       "id": "sim:corrimento_fetido",
       "label": "Corrimento vaginal f\u00e9tido",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "corrimento vaginal fetido",
@@ -1839,7 +2329,7 @@
     {
       "id": "sim:metrite",
       "label": "Metrite Puerperal",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "metrite puerperal",
@@ -1849,7 +2339,7 @@
     {
       "id": "sim:utero_aumentado_palpacao",
       "label": "Aumento uterino \u00e0 palpa\u00e7\u00e3o",
-      "community": 13,
+      "community": 17,
       "community_name": "Metrite Puerperal",
       "file_type": "concept",
       "norm_label": "aumento uterino a palpacao",
@@ -1859,7 +2349,7 @@
     {
       "id": "sim:pneumonia",
       "label": "Pneumonia",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "pneumonia",
@@ -1869,7 +2359,7 @@
     {
       "id": "sim:respiracao_ofegante",
       "label": "Respira\u00e7\u00e3o com esfor\u00e7o",
-      "community": 14,
+      "community": 18,
       "community_name": "Pneumonia",
       "file_type": "concept",
       "norm_label": "respiracao com esforco",
@@ -1879,7 +2369,7 @@
     {
       "id": "sim:membranas_expostas_vulva",
       "label": "Restos de placenta na vulva",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "restos de placenta na vulva",
@@ -1889,7 +2379,7 @@
     {
       "id": "sim:palpacao_membranas_retidas",
       "label": "Membranas retidas ao exame",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "membranas retidas ao exame",
@@ -1899,7 +2389,7 @@
     {
       "id": "sim:placenta_nao_expulsa_24h",
       "label": "Placenta n\u00e3o saiu em 24 horas",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "placenta nao saiu em 24 horas",
@@ -1909,141 +2399,11 @@
     {
       "id": "sim:retencao_placenta",
       "label": "Reten\u00e7\u00e3o de Placenta",
-      "community": 15,
+      "community": 19,
       "community_name": "Reten\u00e7\u00e3o de Placenta",
       "file_type": "concept",
       "norm_label": "retencao de placenta",
       "source_file": "base/fonte/doencas/retencao_placenta.json",
-      "tipo": "doenca"
-    },
-    {
-      "id": "sim:costas_arqueadas",
-      "label": "Costas arqueadas",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "costas arqueadas",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:edema_barbela",
-      "label": "Edema de barbela ou peito",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "edema de barbela ou peito",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:gemido",
-      "label": "Gemido",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "gemido",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:prova_dor_reticular",
-      "label": "Prova de dor reticular",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "prova de dor reticular",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:reticulopericardite_traumatica",
-      "label": "Reticulopericardite Traum\u00e1tica",
-      "community": 16,
-      "community_name": "Reticulopericardite Traum\u00e1tica",
-      "file_type": "concept",
-      "norm_label": "reticulopericardite traumatica",
-      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
-      "tipo": "doenca"
-    },
-    {
-      "id": "sim:outros_animais_estufados",
-      "label": "Outros animais estufados",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "outros animais estufados",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:pasto_leguminosa_recente",
-      "label": "Pasto de leguminosa recente",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "pasto de leguminosa recente",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:timpanismo_espumoso",
-      "label": "Timpanismo Espumoso",
-      "community": 17,
-      "community_name": "Timpanismo Espumoso",
-      "file_type": "concept",
-      "norm_label": "timpanismo espumoso",
-      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
-      "tipo": "doenca"
-    },
-    {
-      "id": "sim:engasgo",
-      "label": "Engasgo ou dificuldade de engolir",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "engasgo ou dificuldade de engolir",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:timpanismo_gasoso",
-      "label": "Timpanismo Gasoso",
-      "community": 18,
-      "community_name": "Timpanismo Gasoso",
-      "file_type": "concept",
-      "norm_label": "timpanismo gasoso",
-      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
-      "tipo": "doenca"
-    },
-    {
-      "id": "sim:carrapatos_historico_recente",
-      "label": "Exposi\u00e7\u00e3o recente a carrapatos",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "exposicao recente a carrapatos",
-      "source_file": "base/fonte/doencas/tpb.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:mucosas_palidas_ou_ictericas",
-      "label": "Mucosas p\u00e1lidas ou amareladas",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "mucosas palidas ou amareladas",
-      "source_file": "base/fonte/doencas/tpb.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:tpb",
-      "label": "Tristeza Parasit\u00e1ria Bovina",
-      "community": 19,
-      "community_name": "Tristeza Parasit\u00e1ria Bovina",
-      "file_type": "concept",
-      "norm_label": "tristeza parasitaria bovina",
-      "source_file": "base/fonte/doencas/tpb.json",
       "tipo": "doenca"
     },
     {
@@ -2087,9 +2447,139 @@
       "tipo": "pergunta"
     },
     {
+      "id": "sim:costas_arqueadas",
+      "label": "Costas arqueadas",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "costas arqueadas",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:edema_barbela",
+      "label": "Edema de barbela ou peito",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "edema de barbela ou peito",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:gemido",
+      "label": "Gemido",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "gemido",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:prova_dor_reticular",
+      "label": "Prova de dor reticular",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "prova de dor reticular",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:reticulopericardite_traumatica",
+      "label": "Reticulopericardite Traum\u00e1tica",
+      "community": 20,
+      "community_name": "Reticulopericardite Traum\u00e1tica",
+      "file_type": "concept",
+      "norm_label": "reticulopericardite traumatica",
+      "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:outros_animais_estufados",
+      "label": "Outros animais estufados",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "outros animais estufados",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:pasto_leguminosa_recente",
+      "label": "Pasto de leguminosa recente",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "pasto de leguminosa recente",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:timpanismo_espumoso",
+      "label": "Timpanismo Espumoso",
+      "community": 21,
+      "community_name": "Timpanismo Espumoso",
+      "file_type": "concept",
+      "norm_label": "timpanismo espumoso",
+      "source_file": "base/fonte/doencas/timpanismo_espumoso.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:engasgo",
+      "label": "Engasgo ou dificuldade de engolir",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "engasgo ou dificuldade de engolir",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:timpanismo_gasoso",
+      "label": "Timpanismo Gasoso",
+      "community": 22,
+      "community_name": "Timpanismo Gasoso",
+      "file_type": "concept",
+      "norm_label": "timpanismo gasoso",
+      "source_file": "base/fonte/doencas/timpanismo_gasoso.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:carrapatos_historico_recente",
+      "label": "Exposi\u00e7\u00e3o recente a carrapatos",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "exposicao recente a carrapatos",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:mucosas_palidas_ou_ictericas",
+      "label": "Mucosas p\u00e1lidas ou amareladas",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "mucosas palidas ou amareladas",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:tpb",
+      "label": "Tristeza Parasit\u00e1ria Bovina",
+      "community": 23,
+      "community_name": "Tristeza Parasit\u00e1ria Bovina",
+      "file_type": "concept",
+      "norm_label": "tristeza parasitaria bovina",
+      "source_file": "base/fonte/doencas/tpb.json",
+      "tipo": "doenca"
+    },
+    {
       "id": "sim:emagrecimento_progressivo",
       "label": "Emagrecimento progressivo",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "emagrecimento progressivo",
@@ -2099,7 +2589,7 @@
     {
       "id": "sim:linfonodos_aumentados",
       "label": "\u00cdnguas aumentadas",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "inguas aumentadas",
@@ -2109,7 +2599,7 @@
     {
       "id": "sim:tuberculina_reagente",
       "label": "Tuberculiniza\u00e7\u00e3o reagente",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "tuberculinizacao reagente",
@@ -2119,11 +2609,31 @@
     {
       "id": "sim:tuberculose",
       "label": "Tuberculose",
-      "community": 20,
+      "community": 24,
       "community_name": "Tuberculose",
       "file_type": "concept",
       "norm_label": "tuberculose",
       "source_file": "base/fonte/doencas/tuberculose.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:lesao_sola_pinca_dor",
+      "label": "Dor \u00e0 pin\u00e7a na sola ou na linha branca",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "dor a pinca na sola ou na linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:ulcera_sola",
+      "label": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "community": 25,
+      "community_name": "\u00dalcera de Sola / Doen\u00e7a da Linha Branca",
+      "file_type": "concept",
+      "norm_label": "ulcera de sola / doenca da linha branca",
+      "source_file": "base/fonte/doencas/ulcera_sola.json",
       "tipo": "doenca"
     },
     {
@@ -2217,19 +2727,39 @@
       "tipo": "pergunta"
     },
     {
-      "id": "sim:claudicacao",
-      "label": "Claudica\u00e7\u00e3o",
+      "id": "sim:cio_irregular_ou_constante",
+      "label": "Cio irregular ou constante",
       "community": 5,
-      "community_name": "Dermatite Digital Bovina",
+      "community_name": "Cisto Ovariano",
       "file_type": "concept",
-      "norm_label": "claudicacao",
-      "source_file": "base/fonte/doencas/dermatite_digital.json",
+      "norm_label": "cio irregular ou constante",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "tipo": "pergunta"
+    },
+    {
+      "id": "sim:cisto_ovariano",
+      "label": "Cisto Ovariano",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "cisto ovariano",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
+      "tipo": "doenca"
+    },
+    {
+      "id": "sim:estrutura_ovariana_maior_25mm",
+      "label": "Estrutura ovariana maior que 25 mm",
+      "community": 5,
+      "community_name": "Cisto Ovariano",
+      "file_type": "concept",
+      "norm_label": "estrutura ovariana maior que 25 mm",
+      "source_file": "base/fonte/doencas/cisto_ovariano.json",
       "tipo": "pergunta"
     },
     {
       "id": "sim:dermatite_digital",
       "label": "Dermatite Digital Bovina",
-      "community": 5,
+      "community": 6,
       "community_name": "Dermatite Digital Bovina",
       "file_type": "concept",
       "norm_label": "dermatite digital bovina",
@@ -2239,7 +2769,7 @@
     {
       "id": "sim:dor_flexao_talao",
       "label": "Dor na regi\u00e3o do tal\u00e3o",
-      "community": 5,
+      "community": 6,
       "community_name": "Dermatite Digital Bovina",
       "file_type": "concept",
       "norm_label": "dor na regiao do talao",
@@ -2247,19 +2777,9 @@
       "tipo": "pergunta"
     },
     {
-      "id": "sim:lesao_erosiva_talao_morango",
-      "label": "Les\u00e3o caracter\u00edstica no tal\u00e3o",
-      "community": 5,
-      "community_name": "Dermatite Digital Bovina",
-      "file_type": "concept",
-      "norm_label": "lesao caracteristica no talao",
-      "source_file": "base/fonte/doencas/dermatite_digital.json",
-      "tipo": "pergunta"
-    },
-    {
       "id": "sim:desidratacao",
       "label": "Desidrata\u00e7\u00e3o",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "desidratacao",
@@ -2269,7 +2789,7 @@
     {
       "id": "sim:deslocamento_abomaso_direita",
       "label": "Deslocamento de Abomaso \u00e0 Direita",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "deslocamento de abomaso a direita",
@@ -2279,7 +2799,7 @@
     {
       "id": "sim:distensao_flanco_direito",
       "label": "Barriga estufada do lado direito",
-      "community": 6,
+      "community": 7,
       "community_name": "Deslocamento de Abomaso \u00e0 Direita",
       "file_type": "concept",
       "norm_label": "barriga estufada do lado direito",
@@ -2289,7 +2809,7 @@
     {
       "id": "sim:deslocamento_abomaso_esquerda",
       "label": "Deslocamento de Abomaso \u00e0 Esquerda",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "deslocamento de abomaso a esquerda",
@@ -2299,7 +2819,7 @@
     {
       "id": "sim:flanco_esquerdo_afundado",
       "label": "Flanco esquerdo afundado",
-      "community": 7,
+      "community": 8,
       "community_name": "Deslocamento de Abomaso \u00e0 Esquerda",
       "file_type": "concept",
       "norm_label": "flanco esquerdo afundado",
@@ -2307,107 +2827,73 @@
       "tipo": "pergunta"
     },
     {
-      "id": "sim:calcio_serico",
-      "label": "C\u00e1lcio s\u00e9rico total",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
+      "id": "sim:corrimento_com_pus_apos_21_dias",
+      "label": "Corrimento com pus ap\u00f3s 21 dias do parto",
+      "community": 9,
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "calcio serico total",
-      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "norm_label": "corrimento com pus apos 21 dias do parto",
+      "source_file": "base/fonte/doencas/endometrite.json",
       "tipo": "pergunta"
     },
     {
-      "id": "sim:hipocalcemia",
-      "label": "Hipocalcemia Puerperal",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
+      "id": "sim:endometrite",
+      "label": "Endometrite Cl\u00ednica",
+      "community": 9,
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "hipocalcemia puerperal",
-      "source_file": "base/fonte/doencas/hipocalcemia.json",
+      "norm_label": "endometrite clinica",
+      "source_file": "base/fonte/doencas/endometrite.json",
       "tipo": "doenca"
     },
     {
-      "id": "sim:hipotermia",
-      "label": "Hipotermia",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "hipotermia",
-      "source_file": "base/fonte/doencas/hipocalcemia.json",
-      "tipo": "derivado"
-    },
-    {
-      "id": "sim:periparto_imediato",
-      "label": "Periparto imediato",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "periparto imediato",
-      "source_file": "base/fonte/doencas/hipocalcemia.json",
-      "tipo": "derivado"
-    },
-    {
-      "id": "sim:pescoco_em_s",
-      "label": "Desvio cervical em S",
-      "community": 8,
-      "community_name": "Hipocalcemia Puerperal",
-      "file_type": "concept",
-      "norm_label": "desvio cervical em s",
-      "source_file": "base/fonte/doencas/hipocalcemia.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:agitacao",
-      "label": "Agita\u00e7\u00e3o ou rea\u00e7\u00e3o exagerada",
+      "id": "sim:metricheck_purulento",
+      "label": "Conte\u00fado purulento ao exame vaginal",
       "community": 9,
-      "community_name": "Hipomagnesemia",
+      "community_name": "Endometrite Cl\u00ednica",
       "file_type": "concept",
-      "norm_label": "agitacao ou reacao exagerada",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:hipomagnesemia",
-      "label": "Hipomagnesemia",
-      "community": 9,
-      "community_name": "Hipomagnesemia",
-      "file_type": "concept",
-      "norm_label": "hipomagnesemia",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json",
-      "tipo": "doenca"
-    },
-    {
-      "id": "sim:magnesio_serico",
-      "label": "Magn\u00e9sio s\u00e9rico",
-      "community": 9,
-      "community_name": "Hipomagnesemia",
-      "file_type": "concept",
-      "norm_label": "magnesio serico",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:pasto_novo_adubado",
-      "label": "Pasto novo e adubado",
-      "community": 9,
-      "community_name": "Hipomagnesemia",
-      "file_type": "concept",
-      "norm_label": "pasto novo e adubado",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json",
-      "tipo": "pergunta"
-    },
-    {
-      "id": "sim:tremores",
-      "label": "Tremores musculares",
-      "community": 9,
-      "community_name": "Hipomagnesemia",
-      "file_type": "concept",
-      "norm_label": "tremores musculares",
-      "source_file": "base/fonte/doencas/hipomagnesemia.json",
+      "norm_label": "conteudo purulento ao exame vaginal",
+      "source_file": "base/fonte/doencas/endometrite.json",
       "tipo": "pergunta"
     }
   ],
   "links": [
+    {
+      "source": "regra:R-CIS-03",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "cf": -0.2,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-ULC-03",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "cf": -0.2,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-DD-04",
+      "target": "sim:dermatite_digital",
+      "relation": "conclui",
+      "cf": -0.3,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "regra:R-FLE-06",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "cf": -0.3,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
     {
       "source": "regra:R-IBR-05",
       "target": "sim:ibr",
@@ -2416,6 +2902,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-LIP-03",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "cf": -0.3,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
     },
     {
       "source": "regra:R-PNE-06",
@@ -2434,6 +2929,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-ULC-06",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "cf": -0.3,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
     },
     {
       "source": "regra:R-BRU-05",
@@ -2463,6 +2967,24 @@
       "source_file": "base/fonte/comum.json"
     },
     {
+      "source": "regra:R-END-03",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "cf": -0.4,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-FLE-04",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "cf": -0.4,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
       "source": "regra:R-HIP-04",
       "target": "sim:hipocalcemia",
       "relation": "conclui",
@@ -2479,6 +3001,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-ULC-04",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "cf": -0.4,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
     },
     {
       "source": "regra:R-LEP-05",
@@ -2589,6 +3120,15 @@
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
+      "source": "regra:R-CIS-04",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
       "source": "regra:R-DAD-05",
       "target": "sim:deslocamento_abomaso_direita",
       "relation": "conclui",
@@ -2607,6 +3147,24 @@
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
     },
     {
+      "source": "regra:R-END-04",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-FLE-05",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
       "source": "regra:R-HMG-04",
       "target": "sim:hipomagnesemia",
       "relation": "conclui",
@@ -2623,6 +3181,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/ibr.json"
+    },
+    {
+      "source": "regra:R-LIP-04",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
     },
     {
       "source": "regra:R-TES-04",
@@ -2650,6 +3217,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "regra:R-ULC-05",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "cf": 0.05,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
     },
     {
       "source": "regra:R-BVD-04",
@@ -2713,6 +3289,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "regra:R-FLE-03",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "cf": 0.2,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
     },
     {
       "source": "regra:R-HIP-05",
@@ -3012,6 +3597,24 @@
       "source_file": "base/fonte/doencas/acidose.json"
     },
     {
+      "source": "regra:R-LIP-01",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "cf": 0.55,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "regra:R-ULC-01",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "cf": 0.55,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "regra:R-BVD-01",
       "target": "sim:bvd",
       "relation": "conclui",
@@ -3019,6 +3622,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "regra:R-CIS-01",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "cf": 0.6,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
     },
     {
       "source": "regra:R-DER-06",
@@ -3093,6 +3705,24 @@
       "source_file": "base/fonte/doencas/tpb.json"
     },
     {
+      "source": "regra:R-URG-24",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "cf": 0.6,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "regra:R-FLE-01",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "cf": 0.65,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
       "source": "regra:R-HIP-01",
       "target": "sim:hipocalcemia",
       "relation": "conclui",
@@ -3118,6 +3748,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-END-01",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "cf": 0.7,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
       "source": "regra:R-RPL-02",
@@ -3165,6 +3804,24 @@
       "source_file": "base/fonte/doencas/dermatite_digital.json"
     },
     {
+      "source": "regra:R-URG-21",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "cf": 0.7,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "regra:R-URG-23",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "cf": 0.7,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
       "source": "regra:R-DAD-02",
       "target": "sim:deslocamento_abomaso_direita",
       "relation": "conclui",
@@ -3190,6 +3847,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/hipocalcemia.json"
+    },
+    {
+      "source": "regra:R-LIP-02",
+      "target": "sim:lipidose_hepatica",
+      "relation": "conclui",
+      "cf": 0.8,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
     },
     {
       "source": "regra:R-PNE-03",
@@ -3264,6 +3930,15 @@
       "source_file": "base/fonte/doencas/ibr.json"
     },
     {
+      "source": "regra:R-URG-22",
+      "target": "sim:observar",
+      "relation": "conclui",
+      "cf": 0.8,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
       "source": "regra:R-CET-04",
       "target": "sim:cetose",
       "relation": "conclui",
@@ -3271,6 +3946,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/cetose.json"
+    },
+    {
+      "source": "regra:R-CIS-02",
+      "target": "sim:cisto_ovariano",
+      "relation": "conclui",
+      "cf": 0.85,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
     },
     {
       "source": "regra:R-DD-03",
@@ -3291,6 +3975,24 @@
       "source_file": "base/fonte/doencas/hipocalcemia.json"
     },
     {
+      "source": "regra:R-END-02",
+      "target": "sim:endometrite",
+      "relation": "conclui",
+      "cf": 0.85,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "regra:R-FLE-02",
+      "target": "sim:flegmao_interdigital",
+      "relation": "conclui",
+      "cf": 0.85,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
       "source": "regra:R-LEP-03",
       "target": "sim:leptospirose",
       "relation": "conclui",
@@ -3307,6 +4009,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/reticulopericardite_traumatica.json"
+    },
+    {
+      "source": "regra:R-ULC-02",
+      "target": "sim:ulcera_sola",
+      "relation": "conclui",
+      "cf": 0.85,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
     },
     {
       "source": "regra:R-ACI-04",
@@ -3642,6 +4353,15 @@
       "source_file": "base/fonte/doencas/tuberculose.json"
     },
     {
+      "source": "regra:R-URG-25",
+      "target": "sim:chamar_agora",
+      "relation": "conclui",
+      "cf": 0.99,
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
       "source": "sim:aborto_recente",
       "target": "regra:R-BRU-01",
       "relation": "condicao_de",
@@ -3779,6 +4499,22 @@
     },
     {
       "source": "sim:apetite",
+      "target": "regra:R-CIS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-CIS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:apetite",
       "target": "regra:R-DAD-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -3840,6 +4576,38 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/hipomagnesemia.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:apetite",
+      "target": "regra:R-LIP-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
     },
     {
       "source": "sim:apetite",
@@ -4010,6 +4778,30 @@
       "source_file": "base/fonte/doencas/cetose.json"
     },
     {
+      "source": "sim:cio_irregular_ou_constante",
+      "target": "regra:R-CIS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:cio_irregular_ou_constante",
+      "target": "regra:R-CIS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:cisto_ovariano",
+      "target": "regra:R-URG-24",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
       "source": "sim:claudicacao",
       "target": "regra:R-DD-01",
       "relation": "condicao_de",
@@ -4026,12 +4818,124 @@
       "source_file": "base/fonte/doencas/dermatite_digital.json"
     },
     {
+      "source": "sim:claudicacao",
+      "target": "regra:R-DD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-FLE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-05",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:claudicacao",
+      "target": "regra:R-ULC-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "sim:cmt_reagente",
       "target": "regra:R-MAS-04",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/mastite.json"
+    },
+    {
+      "source": "sim:corrimento_com_pus_apos_21_dias",
+      "target": "regra:R-END-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
       "source": "sim:corrimento_fetido",
@@ -4048,6 +4952,46 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/brucelose.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-CIS-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:corrimento_vaginal",
+      "target": "regra:R-END-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
       "source": "sim:corrimento_vaginal",
@@ -4203,6 +5147,70 @@
     },
     {
       "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-CIS-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
+      "target": "regra:R-END-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:dias_em_lactacao",
       "target": "regra:R-DER-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
@@ -4274,6 +5282,14 @@
       "source_file": "base/fonte/doencas/dermatite_digital.json"
     },
     {
+      "source": "sim:dor_flexao_talao",
+      "target": "regra:R-ULC-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "sim:edema_barbela",
       "target": "regra:R-RPT-04",
       "relation": "condicao_de",
@@ -4290,12 +5306,28 @@
       "source_file": "base/fonte/doencas/tuberculose.json"
     },
     {
+      "source": "sim:endometrite",
+      "target": "regra:R-URG-23",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
       "source": "sim:engasgo",
       "target": "regra:R-TGA-01",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "sim:enzimas_hepaticas_elevadas",
+      "target": "regra:R-LIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
     },
     {
       "source": "sim:esfregaco_hemoparasitas",
@@ -4328,6 +5360,14 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/timpanismo_gasoso.json"
+    },
+    {
+      "source": "sim:estrutura_ovariana_maior_25mm",
+      "target": "regra:R-CIS-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/cisto_ovariano.json"
     },
     {
       "source": "sim:evidencia_alteracao_leite",
@@ -4400,6 +5440,22 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/bvd.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-END-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
+    },
+    {
+      "source": "sim:febre",
+      "target": "regra:R-FLE-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
     },
     {
       "source": "sim:febre",
@@ -4538,6 +5594,14 @@
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
     },
     {
+      "source": "sim:fissura_interdigital_necrotica",
+      "target": "regra:R-FLE-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
       "source": "sim:fita_urina_corpos_cetonicos",
       "target": "regra:R-CET-05",
       "relation": "condicao_de",
@@ -4552,6 +5616,14 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
+    },
+    {
+      "source": "sim:flegmao_interdigital",
+      "target": "regra:R-URG-22",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
     },
     {
       "source": "sim:focinho_avermelhado",
@@ -4674,6 +5746,30 @@
       "source_file": "base/fonte/doencas/ibr.json"
     },
     {
+      "source": "sim:inchaco_entre_unhas_mau_cheiro",
+      "target": "regra:R-DD-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/dermatite_digital.json"
+    },
+    {
+      "source": "sim:inchaco_entre_unhas_mau_cheiro",
+      "target": "regra:R-FLE-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:inchaco_entre_unhas_mau_cheiro",
+      "target": "regra:R-ULC-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "sim:inicio_lactacao",
       "target": "regra:R-CET-01",
       "relation": "condicao_de",
@@ -4730,6 +5826,30 @@
       "source_file": "base/fonte/doencas/deslocamento_abomaso_esquerda.json"
     },
     {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-LIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-LIP-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:inicio_lactacao",
+      "target": "regra:R-LIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
       "source": "sim:leite_alterado",
       "target": "regra:R-LEP-02",
       "relation": "condicao_de",
@@ -4770,12 +5890,44 @@
       "source_file": "base/fonte/doencas/dermatite_digital.json"
     },
     {
+      "source": "sim:lesao_erosiva_talao_morango",
+      "target": "regra:R-FLE-06",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:lesao_erosiva_talao_morango",
+      "target": "regra:R-ULC-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
+      "source": "sim:lesao_sola_pinca_dor",
+      "target": "regra:R-ULC-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "sim:linfonodos_aumentados",
       "target": "regra:R-TUB-02",
       "relation": "condicao_de",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/tuberculose.json"
+    },
+    {
+      "source": "sim:lipidose_hepatica",
+      "target": "regra:R-URG-25",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
     },
     {
       "source": "sim:magnesio_serico",
@@ -4794,6 +5946,22 @@
       "source_file": "base/fonte/doencas/hipomagnesemia.json"
     },
     {
+      "source": "sim:mancar_pata_traseira_sem_inchaco",
+      "target": "regra:R-FLE-04",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/flegmao_interdigital.json"
+    },
+    {
+      "source": "sim:mancar_pata_traseira_sem_inchaco",
+      "target": "regra:R-ULC-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "sim:mastite",
       "target": "regra:R-URG-05",
       "relation": "condicao_de",
@@ -4808,6 +5976,14 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "base/fonte/doencas/retencao_placenta.json"
+    },
+    {
+      "source": "sim:metricheck_purulento",
+      "target": "regra:R-END-02",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/endometrite.json"
     },
     {
       "source": "sim:metrite",
@@ -5322,6 +6498,14 @@
       "source_file": "base/fonte/doencas/mastite.json"
     },
     {
+      "source": "sim:ulcera_sola",
+      "target": "regra:R-URG-21",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/ulcera_sola.json"
+    },
+    {
       "source": "sim:urina_escura",
       "target": "regra:R-BV-02",
       "relation": "condicao_de",
@@ -5354,6 +6538,22 @@
       "source_file": "base/fonte/doencas/metrite.json"
     },
     {
+      "source": "sim:vaca_gorda_no_parto",
+      "target": "regra:R-LIP-01",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
+      "source": "sim:vaca_gorda_no_parto",
+      "target": "regra:R-LIP-03",
+      "relation": "condicao_de",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/doencas/lipidose_hepatica.json"
+    },
+    {
       "source": "sim:vacinada_brucelose",
       "target": "regra:R-BRU-05",
       "relation": "condicao_de",
@@ -5370,6 +6570,14 @@
       "source_file": "base/fonte/comum.json"
     },
     {
+      "source": "sim:metrite",
+      "target": "sim:endometrite",
+      "relation": "exclui",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "base/fonte/comum.json"
+    },
+    {
       "source": "sim:timpanismo_espumoso",
       "target": "sim:timpanismo_gasoso",
       "relation": "exclui",
@@ -5379,5 +6587,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e62030cee043f374814fdf5b4d520dca95b8e2ef"
+  "built_at_commit": "773f29d9f35377f2e45e909e72805cf43dfda5ad"
 }

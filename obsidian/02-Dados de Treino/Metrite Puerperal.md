@@ -11,6 +11,7 @@ tags:
 # Metrite Puerperal
 
 ## Connections
+- [[Endometrite Clínica]] - `exclui` [EXTRACTED]
 - [[R-MET-01 SE Puerpério E Corrimento vaginal fétido E Corrimento vaginal ENTÃO Metrite Puerperal]] - `conclui` [EXTRACTED]
 - [[R-MET-02 SE Corrimento vaginal E Puerpério E Febre ENTÃO Metrite Puerperal]] - `conclui` [EXTRACTED]
 - [[R-MET-03 SE Puerpério E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal]] - `conclui` [EXTRACTED]

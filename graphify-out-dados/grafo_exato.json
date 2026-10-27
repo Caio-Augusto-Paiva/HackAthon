@@ -125,6 +125,14 @@
         ],
         "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/digestive-system/doen%C3%A7as-do-pr%C3%A9-est%C3%B4mago-em-ruminantes/timpanismo-em-ruminantes; CF e tradução para regra: suposição do projeto a validar",
         "nota": "O gás fica preso em espuma ou livre, não os dois ao mesmo tempo."
+      },
+      {
+        "doencas": [
+          "metrite",
+          "endometrite"
+        ],
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+        "nota": "Metrite é do puerpério (até 21 dias); endometrite clínica, depois disso."
       }
     ]
   },
@@ -2890,6 +2898,401 @@
       }
     },
     {
+      "id": "cio_irregular_ou_constante",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "cio_irregular_ou_constante",
+        "tipo": "pergunta",
+        "nome": "Cio irregular ou constante",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca está com cio irregular ou quase constante desde o parto?",
+          "veterinario": "Cios frequentes, irregulares ou comportamento de ninfomania após o período voluntário de espera?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a cio irregular ou constante.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a cio irregular ou constante."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "estrutura_ovariana_maior_25mm",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "estrutura_ovariana_maior_25mm",
+        "tipo": "pergunta",
+        "nome": "Estrutura ovariana maior que 25 mm",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Estrutura ovariana com líquido maior que 25 mm, à palpação retal ou ao ultrassom, persistente e sem corpo lúteo?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a estrutura ovariana maior que 25 mm."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "cisto_ovariano",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "cisto_ovariano",
+        "tipo": "doenca",
+        "nome": "Cisto Ovariano",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "baixa",
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": {
+          "titulo": "Doença do ovário cístico folicular em vacas (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas"
+        }
+      }
+    },
+    {
+      "id": "corrimento_com_pus_apos_21_dias",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "corrimento_com_pus_apos_21_dias",
+        "tipo": "pergunta",
+        "nome": "Corrimento com pus após 21 dias do parto",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A secreção da vulva tem pus (grossa, amarelada ou esbranquiçada)?",
+          "veterinario": "Corrimento vaginal purulento ou mucopurulento após 21 dias do parto?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a corrimento com pus após 21 dias do parto.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a corrimento com pus após 21 dias do parto."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "metricheck_purulento",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "metricheck_purulento",
+        "tipo": "pergunta",
+        "nome": "Conteúdo purulento ao exame vaginal",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Exame vaginal (Metricheck ou espéculo) com conteúdo purulento ou mucopurulento?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a conteúdo purulento ao exame vaginal."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "endometrite",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "endometrite",
+        "tipo": "doenca",
+        "nome": "Endometrite Clínica",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": {
+          "titulo": "Endometrite em animais de produção (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o"
+        }
+      }
+    },
+    {
+      "id": "inchaco_entre_unhas_mau_cheiro",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "inchaco_entre_unhas_mau_cheiro",
+        "tipo": "pergunta",
+        "nome": "Inchaço entre as unhas com mau cheiro",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "O pé está inchado entre as unhas, com cheiro ruim?",
+          "veterinario": "Aumento de volume interdigital, simétrico, com odor fétido?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a inchaço entre as unhas com mau cheiro.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a inchaço entre as unhas com mau cheiro."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "fissura_interdigital_necrotica",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "fissura_interdigital_necrotica",
+        "tipo": "pergunta",
+        "nome": "Fissura interdigital necrótica",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Fissura na pele interdigital com tecido necrótico e odor fétido?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a fissura interdigital necrótica."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "flegmao_interdigital",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "flegmao_interdigital",
+        "tipo": "doenca",
+        "nome": "Flegmão Interdigital (Podridão do Casco)",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": {
+          "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "vaca_gorda_no_parto",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "vaca_gorda_no_parto",
+        "tipo": "pergunta",
+        "nome": "Vaca gorda no parto",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca estava muito gorda quando pariu?",
+          "veterinario": "Escore de condição corporal elevado no parto (3,75 ou mais, em 5)?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a vaca gorda no parto.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a vaca gorda no parto."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "enzimas_hepaticas_elevadas",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "enzimas_hepaticas_elevadas",
+        "tipo": "pergunta",
+        "nome": "Enzimas hepáticas elevadas",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Enzimas hepáticas elevadas no sangue (AST ou GGT acima da referência)?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a enzimas hepáticas elevadas."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "lipidose_hepatica",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "lipidose_hepatica",
+        "tipo": "doenca",
+        "nome": "Lipidose Hepática (Fígado Gorduroso)",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "alta",
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": {
+          "titulo": "Doença do fígado gorduroso em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos"
+        }
+      }
+    },
+    {
+      "id": "mancar_pata_traseira_sem_inchaco",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "mancar_pata_traseira_sem_inchaco",
+        "tipo": "pergunta",
+        "nome": "Manqueira de pata traseira sem inchaço",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "produtor": "A vaca manca de uma pata de trás, sem inchaço visível no pé?",
+          "veterinario": "Claudicação de membro pélvico sem aumento de volume digital ou interdigital?"
+        },
+        "por_que": {
+          "produtor": "Esclarecer as hipóteses relacionadas a manqueira de pata traseira sem inchaço.",
+          "veterinario": "Esclarecer as hipóteses relacionadas a manqueira de pata traseira sem inchaço."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "lesao_sola_pinca_dor",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "lesao_sola_pinca_dor",
+        "tipo": "pergunta",
+        "nome": "Dor à pinça na sola ou na linha branca",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {
+          "veterinario": "Dor à pinça de casco na sola ou na linha branca, com lesão visível após o casqueamento?"
+        },
+        "por_que": {
+          "veterinario": "Esclarecer as hipóteses relacionadas a dor à pinça na sola ou na linha branca."
+        },
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": null,
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": null
+      }
+    },
+    {
+      "id": "ulcera_sola",
+      "tipo_no": "simbolo",
+      "triagem": false,
+      "dados": {
+        "id": "ulcera_sola",
+        "tipo": "doenca",
+        "nome": "Úlcera de Sola / Doença da Linha Branca",
+        "dominio": {
+          "tipo": "booleano"
+        },
+        "pergunta": {},
+        "por_que": {},
+        "campo_ficha": null,
+        "fonte": null,
+        "gravidade": "media",
+        "combinacao": "mycin",
+        "dispensada_se": null,
+        "nota": null,
+        "tratamento": {
+          "titulo": "Claudicação com origem no casco em bovinos (Manual MSD de Veterinária)",
+          "url": "https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos"
+        }
+      }
+    },
+    {
       "id": "R-DER-01",
       "tipo_no": "regra",
       "triagem": false,
@@ -3303,6 +3706,19 @@
         "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/musculoskeletal-system/lameness-in-cattle/lameness-originating-in-the-hoof-in-cattle; CF e tradução para regra: suposição do projeto a validar",
         "status": "suposicao_a_validar",
         "nota": "Lesão ulcerativa circunscrita e granulomatosa no espaço interdigital/talão com aspecto de framboesa/morango."
+      }
+    },
+    {
+      "id": "R-DD-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-DD-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: inchaço entre as unhas com mau cheiro aponta para flegmão interdigital; não exclui dermatite digital em outra unha."
       }
     },
     {
@@ -4669,6 +5085,383 @@
         "status": "suposicao_a_validar",
         "nota": "Aplica a política de gravidade do projeto quando o CF de tuberculose é pelo menos 0,50. Doença de notificação obrigatória (PNCEBT, MAPA). Não prescreve tratamento nem estabelece diagnóstico definitivo."
       }
+    },
+    {
+      "id": "R-CIS-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CIS-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Cio irregular ou constante depois de 40 dias do parto, em vaca que come normalmente, é a queixa típica do cisto folicular; anestro também ocorre. Só se pergunta à vaca sem perda de apetite: com apetite reduzido, outras hipóteses vêm antes no limite de perguntas do produtor."
+      }
+    },
+    {
+      "id": "R-CIS-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CIS-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Estrutura ovariana com líquido maior que 25 mm, persistente e sem corpo lúteo, caracteriza a doença do ovário cístico."
+      }
+    },
+    {
+      "id": "R-CIS-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CIS-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico/doen%C3%A7a-do-ov%C3%A1rio-c%C3%ADstico-folicular-em-vacas; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: corrimento vaginal anormal aponta para o útero (endometrite), não para o ovário."
+      }
+    },
+    {
+      "id": "R-CIS-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-CIS-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Cio irregular ou constante depois de 40 dias do parto em vaca com apetite reduzido ou ausente é sinal inespecífico de cisto ovariano; com apetite normal vale a R-CIS-01."
+      }
+    },
+    {
+      "id": "R-URG-24",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-24",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de cisto_ovariano é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-END-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-END-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Corrimento com pus depois de 21 dias do parto, sem sinais sistêmicos, define endometrite clínica. Só vale com corrimento observado na triagem."
+      }
+    },
+    {
+      "id": "R-END-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-END-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Conteúdo purulento ou mucopurulento ao exame vaginal depois de 21 dias do parto sustenta endometrite clínica."
+      }
+    },
+    {
+      "id": "R-END-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-END-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/reproductive-system/doen%C3%A7as-uterinas-em-animais-de-produ%C3%A7%C3%A3o/endometrite-em-animais-de-produ%C3%A7%C3%A3o; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: a endometrite clínica não tem sinais sistêmicos; febre aponta para outro quadro infeccioso."
+      }
+    },
+    {
+      "id": "R-END-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-END-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Corrimento vaginal depois de 21 dias do parto, sozinho, é sinal inespecífico de endometrite."
+      }
+    },
+    {
+      "id": "R-URG-23",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-23",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de endometrite é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-FLE-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-FLE-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Manqueira aguda com inchaço entre as unhas e mau cheiro é o quadro típico da podridão do casco."
+      }
+    },
+    {
+      "id": "R-FLE-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-FLE-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Fissura interdigital com necrose e odor fétido sustenta flegmão interdigital."
+      }
+    },
+    {
+      "id": "R-FLE-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-FLE-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Febre com manqueira apoia infecção de tecidos moles do pé; é sinal inespecífico."
+      }
+    },
+    {
+      "id": "R-FLE-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-FLE-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: manqueira sem inchaço do pé contraria flegmão interdigital, que incha o espaço entre as unhas."
+      }
+    },
+    {
+      "id": "R-FLE-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-FLE-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Claudicação, sozinha, é sinal inespecífico de flegmão interdigital."
+      }
+    },
+    {
+      "id": "R-FLE-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-FLE-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: lesão em morango no talão, sem inchaço, aponta para dermatite digital."
+      }
+    },
+    {
+      "id": "R-URG-22",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-22",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de flegmao_interdigital é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-LIP-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LIP-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Vaca gorda no parto que perde o apetite no início da lactação tem risco alto de fígado gorduroso; costuma vir junto com cetose."
+      }
+    },
+    {
+      "id": "R-LIP-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LIP-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Enzimas hepáticas elevadas com apetite reduzido no início da lactação apoiam lipidose hepática; a confirmação é a biópsia hepática."
+      }
+    },
+    {
+      "id": "R-LIP-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LIP-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/metabolic-disorders/lipidose-hep%C3%A1tica/doen%C3%A7a-do-f%C3%ADgado-gorduroso-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: vaca sem excesso de condição corporal no parto tem risco menor de fígado gorduroso."
+      }
+    },
+    {
+      "id": "R-LIP-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-LIP-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Apetite reduzido ou ausente, sozinho, é sinal inespecífico de lipidose hepática."
+      }
+    },
+    {
+      "id": "R-URG-25",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-25",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de lipidose_hepatica é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
+    },
+    {
+      "id": "R-ULC-01",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ULC-01",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Manqueira de pata traseira sem inchaço do pé é o quadro típico de lesão de sola ou da linha branca; não substitui o exame do casco."
+      }
+    },
+    {
+      "id": "R-ULC-02",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ULC-02",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Dor à pinça localizada na sola ou na linha branca, com lesão após o casqueamento, sustenta úlcera de sola ou doença da linha branca."
+      }
+    },
+    {
+      "id": "R-ULC-03",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ULC-03",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: lesão em morango no talão aponta para dermatite digital; não exclui lesão de sola em outra unha. Peso −0,2 (e não −0,3): com −0,3 a úlcera caía abaixo do limiar de descarte antes de se perguntar a manqueira sem inchaço."
+      }
+    },
+    {
+      "id": "R-ULC-04",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ULC-04",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial: inchaço entre as unhas com mau cheiro aponta para flegmão interdigital, não para lesão de sola."
+      }
+    },
+    {
+      "id": "R-ULC-05",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ULC-05",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Política do projeto: sinal isolado com peso baixo, para o parecer refletir evidência parcial; CF e regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Claudicação, sozinha, é sinal inespecífico de úlcera de sola."
+      }
+    },
+    {
+      "id": "R-ULC-06",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-ULC-06",
+        "classe": "evidencia",
+        "prioridade": 10,
+        "fonte": "Referência clínica contextual: https://www.msdvetmanual.com/pt/musculoskeletal-system/claudica%C3%A7%C3%A3o-em-bovinos/claudica%C3%A7%C3%A3o-com-origem-no-casco-em-bovinos; CF e tradução para regra: suposição do projeto a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Diferencial no modo produtor: dor na região do talão aponta para dermatite digital, não para lesão da sola."
+      }
+    },
+    {
+      "id": "R-URG-21",
+      "tipo_no": "regra",
+      "triagem": false,
+      "dados": {
+        "id": "R-URG-21",
+        "classe": "urgencia",
+        "prioridade": 50,
+        "fonte": "Política de triagem do projeto, Seções 1 e 3; suposição a validar",
+        "status": "suposicao_a_validar",
+        "nota": "Aplica a política de gravidade do projeto quando o CF de ulcera_sola é pelo menos 0,50. Não prescreve tratamento nem estabelece diagnóstico definitivo."
+      }
     }
   ],
   "arestas": [
@@ -5411,6 +6204,33 @@
       "origem": "R-DD-03",
       "destino": "dermatite_digital",
       "cf": 0.85
+    },
+    {
+      "id": "R-DD-04:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-DD-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DD-04:se:1",
+      "papel": "condicao",
+      "origem": "inchaco_entre_unhas_mau_cheiro",
+      "destino": "R-DD-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-DD-04:entao",
+      "papel": "conclusao",
+      "origem": "R-DD-04",
+      "destino": "dermatite_digital",
+      "cf": -0.3
     },
     {
       "id": "R-HIP-03:se:0",
@@ -7866,6 +8686,809 @@
       "origem": "R-URG-20",
       "destino": "chamar_agora",
       "cf": 0.99
+    },
+    {
+      "id": "R-CIS-01:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-CIS-01",
+      "ordem": 0,
+      "op": ">",
+      "valor": 40.0,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-CIS-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": "normal",
+      "negado": false
+    },
+    {
+      "id": "R-CIS-01:se:2",
+      "papel": "condicao",
+      "origem": "cio_irregular_ou_constante",
+      "destino": "R-CIS-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-01:entao",
+      "papel": "conclusao",
+      "origem": "R-CIS-01",
+      "destino": "cisto_ovariano",
+      "cf": 0.6
+    },
+    {
+      "id": "R-CIS-02:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-CIS-02",
+      "ordem": 0,
+      "op": ">",
+      "valor": 40.0,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-02:se:1",
+      "papel": "condicao",
+      "origem": "estrutura_ovariana_maior_25mm",
+      "destino": "R-CIS-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-02:entao",
+      "papel": "conclusao",
+      "origem": "R-CIS-02",
+      "destino": "cisto_ovariano",
+      "cf": 0.85
+    },
+    {
+      "id": "R-CIS-03:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-CIS-03",
+      "ordem": 0,
+      "op": ">",
+      "valor": 40.0,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-03:se:1",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-CIS-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-03:entao",
+      "papel": "conclusao",
+      "origem": "R-CIS-03",
+      "destino": "cisto_ovariano",
+      "cf": -0.2
+    },
+    {
+      "id": "R-CIS-04:se:0",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-CIS-04",
+      "ordem": 0,
+      "op": ">",
+      "valor": 40.0,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-04:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-CIS-04",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-CIS-04:se:2",
+      "papel": "condicao",
+      "origem": "cio_irregular_ou_constante",
+      "destino": "R-CIS-04",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-CIS-04:entao",
+      "papel": "conclusao",
+      "origem": "R-CIS-04",
+      "destino": "cisto_ovariano",
+      "cf": 0.05
+    },
+    {
+      "id": "R-URG-24:se:0",
+      "papel": "condicao",
+      "origem": "cisto_ovariano",
+      "destino": "R-URG-24",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-24:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-24",
+      "destino": "observar",
+      "cf": 0.6
+    },
+    {
+      "id": "R-END-01:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-END-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-01:se:1",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-END-01",
+      "ordem": 1,
+      "op": ">",
+      "valor": 21.0,
+      "negado": false
+    },
+    {
+      "id": "R-END-01:se:2",
+      "papel": "condicao",
+      "origem": "corrimento_com_pus_apos_21_dias",
+      "destino": "R-END-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-01:entao",
+      "papel": "conclusao",
+      "origem": "R-END-01",
+      "destino": "endometrite",
+      "cf": 0.7
+    },
+    {
+      "id": "R-END-02:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-END-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-02:se:1",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-END-02",
+      "ordem": 1,
+      "op": ">",
+      "valor": 21.0,
+      "negado": false
+    },
+    {
+      "id": "R-END-02:se:2",
+      "papel": "condicao",
+      "origem": "metricheck_purulento",
+      "destino": "R-END-02",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-02:entao",
+      "papel": "conclusao",
+      "origem": "R-END-02",
+      "destino": "endometrite",
+      "cf": 0.85
+    },
+    {
+      "id": "R-END-03:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-END-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-03:se:1",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-END-03",
+      "ordem": 1,
+      "op": ">",
+      "valor": 21.0,
+      "negado": false
+    },
+    {
+      "id": "R-END-03:se:2",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-END-03",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-03:entao",
+      "papel": "conclusao",
+      "origem": "R-END-03",
+      "destino": "endometrite",
+      "cf": -0.4
+    },
+    {
+      "id": "R-END-04:se:0",
+      "papel": "condicao",
+      "origem": "corrimento_vaginal",
+      "destino": "R-END-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-END-04:se:1",
+      "papel": "condicao",
+      "origem": "dias_em_lactacao",
+      "destino": "R-END-04",
+      "ordem": 1,
+      "op": ">",
+      "valor": 21.0,
+      "negado": false
+    },
+    {
+      "id": "R-END-04:entao",
+      "papel": "conclusao",
+      "origem": "R-END-04",
+      "destino": "endometrite",
+      "cf": 0.05
+    },
+    {
+      "id": "R-URG-23:se:0",
+      "papel": "condicao",
+      "origem": "endometrite",
+      "destino": "R-URG-23",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-23:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-23",
+      "destino": "observar",
+      "cf": 0.7
+    },
+    {
+      "id": "R-FLE-01:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-FLE-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-01:se:1",
+      "papel": "condicao",
+      "origem": "inchaco_entre_unhas_mau_cheiro",
+      "destino": "R-FLE-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-01:entao",
+      "papel": "conclusao",
+      "origem": "R-FLE-01",
+      "destino": "flegmao_interdigital",
+      "cf": 0.65
+    },
+    {
+      "id": "R-FLE-02:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-FLE-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-02:se:1",
+      "papel": "condicao",
+      "origem": "fissura_interdigital_necrotica",
+      "destino": "R-FLE-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-02:entao",
+      "papel": "conclusao",
+      "origem": "R-FLE-02",
+      "destino": "flegmao_interdigital",
+      "cf": 0.85
+    },
+    {
+      "id": "R-FLE-03:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-FLE-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-03:se:1",
+      "papel": "condicao",
+      "origem": "febre",
+      "destino": "R-FLE-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-03:entao",
+      "papel": "conclusao",
+      "origem": "R-FLE-03",
+      "destino": "flegmao_interdigital",
+      "cf": 0.2
+    },
+    {
+      "id": "R-FLE-04:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-FLE-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-04:se:1",
+      "papel": "condicao",
+      "origem": "mancar_pata_traseira_sem_inchaco",
+      "destino": "R-FLE-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-04:entao",
+      "papel": "conclusao",
+      "origem": "R-FLE-04",
+      "destino": "flegmao_interdigital",
+      "cf": -0.4
+    },
+    {
+      "id": "R-FLE-05:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-FLE-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-05:entao",
+      "papel": "conclusao",
+      "origem": "R-FLE-05",
+      "destino": "flegmao_interdigital",
+      "cf": 0.05
+    },
+    {
+      "id": "R-FLE-06:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-FLE-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-06:se:1",
+      "papel": "condicao",
+      "origem": "lesao_erosiva_talao_morango",
+      "destino": "R-FLE-06",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-FLE-06:entao",
+      "papel": "conclusao",
+      "origem": "R-FLE-06",
+      "destino": "flegmao_interdigital",
+      "cf": -0.3
+    },
+    {
+      "id": "R-URG-22:se:0",
+      "papel": "condicao",
+      "origem": "flegmao_interdigital",
+      "destino": "R-URG-22",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-22:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-22",
+      "destino": "observar",
+      "cf": 0.8
+    },
+    {
+      "id": "R-LIP-01:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-LIP-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LIP-01:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-LIP-01",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-LIP-01:se:2",
+      "papel": "condicao",
+      "origem": "vaca_gorda_no_parto",
+      "destino": "R-LIP-01",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LIP-01:entao",
+      "papel": "conclusao",
+      "origem": "R-LIP-01",
+      "destino": "lipidose_hepatica",
+      "cf": 0.55
+    },
+    {
+      "id": "R-LIP-02:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-LIP-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LIP-02:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-LIP-02",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-LIP-02:se:2",
+      "papel": "condicao",
+      "origem": "enzimas_hepaticas_elevadas",
+      "destino": "R-LIP-02",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LIP-02:entao",
+      "papel": "conclusao",
+      "origem": "R-LIP-02",
+      "destino": "lipidose_hepatica",
+      "cf": 0.8
+    },
+    {
+      "id": "R-LIP-03:se:0",
+      "papel": "condicao",
+      "origem": "inicio_lactacao",
+      "destino": "R-LIP-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-LIP-03:se:1",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-LIP-03",
+      "ordem": 1,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-LIP-03:se:2",
+      "papel": "condicao",
+      "origem": "vaca_gorda_no_parto",
+      "destino": "R-LIP-03",
+      "ordem": 2,
+      "op": "=",
+      "valor": true,
+      "negado": true
+    },
+    {
+      "id": "R-LIP-03:entao",
+      "papel": "conclusao",
+      "origem": "R-LIP-03",
+      "destino": "lipidose_hepatica",
+      "cf": -0.3
+    },
+    {
+      "id": "R-LIP-04:se:0",
+      "papel": "condicao",
+      "origem": "apetite",
+      "destino": "R-LIP-04",
+      "ordem": 0,
+      "op": "em",
+      "valor": [
+        "reduzido",
+        "ausente"
+      ],
+      "negado": false
+    },
+    {
+      "id": "R-LIP-04:entao",
+      "papel": "conclusao",
+      "origem": "R-LIP-04",
+      "destino": "lipidose_hepatica",
+      "cf": 0.05
+    },
+    {
+      "id": "R-URG-25:se:0",
+      "papel": "condicao",
+      "origem": "lipidose_hepatica",
+      "destino": "R-URG-25",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-25:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-25",
+      "destino": "chamar_agora",
+      "cf": 0.99
+    },
+    {
+      "id": "R-ULC-01:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-ULC-01",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-01:se:1",
+      "papel": "condicao",
+      "origem": "mancar_pata_traseira_sem_inchaco",
+      "destino": "R-ULC-01",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-01:entao",
+      "papel": "conclusao",
+      "origem": "R-ULC-01",
+      "destino": "ulcera_sola",
+      "cf": 0.55
+    },
+    {
+      "id": "R-ULC-02:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-ULC-02",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-02:se:1",
+      "papel": "condicao",
+      "origem": "lesao_sola_pinca_dor",
+      "destino": "R-ULC-02",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-02:entao",
+      "papel": "conclusao",
+      "origem": "R-ULC-02",
+      "destino": "ulcera_sola",
+      "cf": 0.85
+    },
+    {
+      "id": "R-ULC-03:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-ULC-03",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-03:se:1",
+      "papel": "condicao",
+      "origem": "lesao_erosiva_talao_morango",
+      "destino": "R-ULC-03",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-03:entao",
+      "papel": "conclusao",
+      "origem": "R-ULC-03",
+      "destino": "ulcera_sola",
+      "cf": -0.2
+    },
+    {
+      "id": "R-ULC-04:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-ULC-04",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-04:se:1",
+      "papel": "condicao",
+      "origem": "inchaco_entre_unhas_mau_cheiro",
+      "destino": "R-ULC-04",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-04:entao",
+      "papel": "conclusao",
+      "origem": "R-ULC-04",
+      "destino": "ulcera_sola",
+      "cf": -0.4
+    },
+    {
+      "id": "R-ULC-05:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-ULC-05",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-05:entao",
+      "papel": "conclusao",
+      "origem": "R-ULC-05",
+      "destino": "ulcera_sola",
+      "cf": 0.05
+    },
+    {
+      "id": "R-ULC-06:se:0",
+      "papel": "condicao",
+      "origem": "claudicacao",
+      "destino": "R-ULC-06",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-06:se:1",
+      "papel": "condicao",
+      "origem": "dor_flexao_talao",
+      "destino": "R-ULC-06",
+      "ordem": 1,
+      "op": "=",
+      "valor": true,
+      "negado": false
+    },
+    {
+      "id": "R-ULC-06:entao",
+      "papel": "conclusao",
+      "origem": "R-ULC-06",
+      "destino": "ulcera_sola",
+      "cf": -0.3
+    },
+    {
+      "id": "R-URG-21:se:0",
+      "papel": "condicao",
+      "origem": "ulcera_sola",
+      "destino": "R-URG-21",
+      "ordem": 0,
+      "op": "=",
+      "valor": true,
+      "negado": false,
+      "cf_minimo": 0.5
+    },
+    {
+      "id": "R-URG-21:entao",
+      "papel": "conclusao",
+      "origem": "R-URG-21",
+      "destino": "observar",
+      "cf": 0.7
     }
   ],
   "layout": {}

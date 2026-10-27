@@ -28,10 +28,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_Comum bandeiras, triagem e sinais compartilhados]]
+- 1 edge to [[_COMMUNITY_Endometrite Clínica]]
 
 ## Top bridge nodes
+- [[Metrite Puerperal]] - degree 6, connects to 1 community
 - [[R-MET-02 SE Corrimento vaginal E Puerpério E Febre ENTÃO Metrite Puerperal]] - degree 4, connects to 1 community
 - [[R-MET-03 SE Puerpério E Aumento uterino à palpação E Corrimento vaginal ENTÃO Metrite Puerperal]] - degree 4, connects to 1 community
 - [[R-MET-01 SE Puerpério E Corrimento vaginal fétido E Corrimento vaginal ENTÃO Metrite Puerperal]] - degree 4, connects to 1 community
 - [[R-MET-04 SE Histórico de retenção de placenta E Puerpério ENTÃO Metrite Puerperal]] - degree 3, connects to 1 community
-- [[R-URG-04 SE Metrite Puerperal ENTÃO Atendimento Veterinário Imediato]] - degree 2, connects to 1 community

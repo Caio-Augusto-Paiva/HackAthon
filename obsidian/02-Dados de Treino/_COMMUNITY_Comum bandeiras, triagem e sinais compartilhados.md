@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.03
-members: 41
+members: 45
 ---
 
 # Comum: bandeiras, triagem e sinais compartilhados
 
 **Cohesion:** 0.03 - loosely connected
-**Members:** 41 nodes
+**Members:** 45 nodes
 
 ## Members
 - [[Aborto recente]] - concept - base/fonte/comum.json
@@ -15,6 +15,7 @@ members: 41
 - [[Apetite]] - concept - base/fonte/comum.json
 - [[Atendimento Veterinário Imediato]] - concept - base/fonte/comum.json
 - [[Barriga estufada do lado esquerdo]] - concept - base/fonte/comum.json
+- [[Claudicação]] - concept - base/fonte/comum.json
 - [[Conteúdo espumoso na sonda]] - concept - base/fonte/comum.json
 - [[Corrimento vaginal]] - concept - base/fonte/comum.json
 - [[Crepitações à auscultação pulmonar]] - concept - base/fonte/comum.json
@@ -26,7 +27,10 @@ members: 41
 - [[Gás livre na sonda]] - concept - base/fonte/comum.json
 - [[Hemoparasitas no esfregaço]] - concept - base/fonte/comum.json
 - [[Histórico de retenção de placenta]] - concept - base/fonte/comum.json
+- [[Inchaço entre as unhas com mau cheiro]] - concept - base/fonte/comum.json
 - [[Início da lactação]] - concept - base/fonte/comum.json
+- [[Lesão característica no talão]] - concept - base/fonte/comum.json
+- [[Manqueira de pata traseira sem inchaço]] - concept - base/fonte/comum.json
 - [[Monitoramento Clínico Contínuo]] - concept - base/fonte/comum.json
 - [[Ping no flanco direito]] - concept - base/fonte/comum.json
 - [[Ping no flanco esquerdo]] - concept - base/fonte/comum.json
@@ -61,10 +65,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_Pneumonia]]
+- 11 edges to [[_COMMUNITY_Flegmão Interdigital (Podridão do Casco)]]
 - 11 edges to [[_COMMUNITY_Hipocalcemia Puerperal]]
 - 10 edges to [[_COMMUNITY_Deslocamento de Abomaso à Direita]]
 - 10 edges to [[_COMMUNITY_Deslocamento de Abomaso à Esquerda]]
+- 10 edges to [[_COMMUNITY_Úlcera de Sola  Doença da Linha Branca]]
+- 10 edges to [[_COMMUNITY_Endometrite Clínica]]
 - 10 edges to [[_COMMUNITY_Metrite Puerperal]]
+- 8 edges to [[_COMMUNITY_Cisto Ovariano]]
+- 8 edges to [[_COMMUNITY_Lipidose Hepática (Fígado Gorduroso)]]
 - 8 edges to [[_COMMUNITY_Timpanismo Espumoso]]
 - 8 edges to [[_COMMUNITY_Tuberculose]]
 - 8 edges to [[_COMMUNITY_Retenção de Placenta]]
@@ -75,15 +84,15 @@ SORT file.name ASC
 - 7 edges to [[_COMMUNITY_Leptospirose]]
 - 7 edges to [[_COMMUNITY_Rinotraqueíte Infecciosa Bovina (IBR)]]
 - 6 edges to [[_COMMUNITY_Acidose Ruminal]]
+- 6 edges to [[_COMMUNITY_Dermatite Digital Bovina]]
 - 5 edges to [[_COMMUNITY_Hipomagnesemia]]
 - 5 edges to [[_COMMUNITY_Tristeza Parasitária Bovina]]
 - 4 edges to [[_COMMUNITY_Brucelose]]
 - 2 edges to [[_COMMUNITY_Mastite]]
-- 1 edge to [[_COMMUNITY_Dermatite Digital Bovina]]
 
 ## Top bridge nodes
-- [[Atendimento Veterinário Imediato]] - degree 19, connects to 13 communities
-- [[Apetite]] - degree 26, connects to 10 communities
-- [[Febre]] - degree 19, connects to 9 communities
+- [[Atendimento Veterinário Imediato]] - degree 20, connects to 14 communities
+- [[Apetite]] - degree 32, connects to 12 communities
+- [[Febre]] - degree 21, connects to 11 communities
+- [[Monitoramento Clínico Contínuo]] - degree 11, connects to 11 communities
 - [[Queda de produção de leite]] - degree 10, connects to 7 communities
-- [[Monitoramento Clínico Contínuo]] - degree 7, connects to 7 communities
