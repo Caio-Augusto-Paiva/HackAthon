@@ -11,7 +11,9 @@
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "gerar-tipos": "openapi-typescript ../contratos/openapi.json -o src/api/tipos.gerado.ts",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "build:navegador": "python ../scripts/empacotar_navegador.py && tsc --noEmit && vite build --mode navegador --outDir dist-navegador",
+    "publicar": "npm run build:navegador && npx wrangler@4 deploy"
   },
   "dependencies": {
     "@fontsource/nunito-sans": "^5.2.0",

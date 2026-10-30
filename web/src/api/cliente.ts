@@ -31,7 +31,10 @@ export async function chamar<T>(
 ): Promise<T> {
   let resposta: Response;
   try {
-    resposta = await fetch(`/api${caminho}`, {
+    resposta = import.meta.env.VITE_MODO_NAVEGADOR === '1'
+      ? await (await import('./navegador')).chamarNoNavegador(metodo, caminho,
+        corpo === undefined ? undefined : JSON.stringify(corpo))
+      : await fetch(`/api${caminho}`, {
       method: metodo,
       headers: { Accept: 'application/json', ...(corpo === undefined ? {} : { 'Content-Type': 'application/json' }) },
       body: corpo === undefined ? undefined : JSON.stringify(corpo),

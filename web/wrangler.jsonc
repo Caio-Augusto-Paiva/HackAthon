@@ -1,0 +1,10 @@
+// Site publicado na Cloudflare (Workers Static Assets, plano gratuito): só arquivos estáticos.
+// O motor roda no navegador de quem acessa (Pyodide); ver src/api/navegador.ts.
+{
+  "name": "anamnese-bovina",
+  "compatibility_date": "2026-10-29",
+  "assets": {
+    "directory": "./dist-navegador",
+    "not_found_handling": "single-page-application"
+  }
+}
