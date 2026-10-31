@@ -47,6 +47,7 @@ export function Inicio() {
           disabled={carregando !== null} carregando={carregando === 'veterinario'}>
           Iniciar verificação como especialista
         </Botao>
+        {carregando !== null && <p className={estilos.preparando} role="status">Preparando o sistema…</p>}
         <div className={estilos.aviso}>
           <img src={alerta} alt="" width={22} height={22} />
           <p id="aviso-especialista">{avisoEspecialista}</p>
